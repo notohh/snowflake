@@ -1,5 +1,5 @@
 {
-  description = "Your new nix config";
+  description = "notohh's flake";
 
   inputs = {
     # Nixpkgs
@@ -17,7 +17,6 @@
     home-manager.url = "github:nix-community/home-manager";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
 
-    # TODO: Add any other flake you might need
     # hardware.url = "github:nixos/nixos-hardware";
 
     # Shameless plug: looking for a way to nixify your themes and make
@@ -29,29 +28,26 @@
     # NixOS configuration entrypoint
     # Available through 'nixos-rebuild --flake .#your-hostname'
     nixosConfigurations = {
-      # FIXME replace with your hostname
       nixos = nixpkgs.lib.nixosSystem {
-        specialArgs = { inherit inputs; }; # Pass flake inputs to our config
+        specialArgs = { inherit inputs; flake-self = self; }; # Pass flake inputs to our config
         # > Our main nixos configuration file <
-        modules = [ ./configuration.nix 
+     modules = [ ./configuration.nix 
     
         hyprland.nixosModules.default
         { programs.hyprland.enable = true; }
 
-	];
+	      ];
       };
-    };
+    }; 
 
     # Standalone home-manager configuration entrypoint
     # Available through 'home-manager --flake .#your-username@your-hostname'
     homeConfigurations = {
-      # FIXME replace with your username@hostname
       "notoh@nixos" = home-manager.lib.homeManagerConfiguration {
         pkgs = nixpkgs.legacyPackages.x86_64-linux; # Home-manager requires 'pkgs' instance
         extraSpecialArgs = { inherit inputs; }; # Pass flake inputs to our config
         # > Our main home-manager configuration file <
-        modules = [
-	./home-manager/home.nix ];
+        modules = [./home-manager/home.nix ];
       };
     };
   };
