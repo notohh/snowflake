@@ -63,7 +63,7 @@
     xkbVariant = "";
   };
 
-   services.printing.enable = true;
+  services.printing.enable = true;
 
   sound.enable = true;
   hardware.pulseaudio.enable = false;
@@ -74,17 +74,21 @@
     alsa.support32Bit = true;
     pulse.enable = true;
   };
-
+ 
+  # enable fish
   programs.fish.enable = true;
   users.defaultUserShell = pkgs.fish;
 
+  #polkit
   security.polkit.enable = true;
 
+  #users
   users.users.notoh = {
     isNormalUser = true;
     description = "notoh";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "disk" "video" ];
     packages = with pkgs; [
+   # essential
       firefox
       neovim 
       neofetch
@@ -92,8 +96,28 @@
       spotify
       discord
       waybar
-      obsidian
+            
+   # utility
+
+      hyprpaper
+      streamlink
+      ranger
       btop
+      obsidian
+      lazygit
+
+   # gaming
+      steam
+      wine
+      lutris
+      bottles
+
+   # fun stuff
+
+      cbonsai
+      pipes-rs
+      cmatrix
+
     ];
   };
 
@@ -104,7 +128,6 @@
    git
    alacritty
    gcc
-   kitty
    stow
    starship
    rustup
@@ -114,6 +137,8 @@
    nodejs
    polkit_gnome
    appimage-run
+   wlogout
+   dunst
   ];
 
   system.stateVersion = "23.05"; # Did you read the comment?

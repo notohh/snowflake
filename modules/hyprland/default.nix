@@ -41,8 +41,8 @@ in
     glib
     gnome3.adwaita-icon-theme
     grim
+    slurp
     wl-clipboard
-    bemenu
     wlr-randr
     wofi
   ];
