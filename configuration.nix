@@ -8,7 +8,7 @@
   imports =
     [ # Include the results of the hardware scan.
     ./hardware-configuration.nix
-    ./modules/hyprland/default.nix
+    ./modules/hyprland/default.nix 
     ];
 
   # Bootloader.
@@ -16,6 +16,9 @@
   boot.loader.systemd-boot.configurationLimit = 5;
   boot.loader.efi.canTouchEfiVariables = true;
   boot.loader.efi.efiSysMountPoint = "/boot/efi";
+  boot.extraModulePackages = with config.boot.kernelPackages;
+  [ v4l2loopback.out ];
+  boot.kernelModules = [ "v4l2loopback" ];
 
   networking.hostName = "nixos"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
@@ -64,6 +67,7 @@
   };
 
   services.printing.enable = true;
+  services.spotifyd.enable = true;
 
   sound.enable = true;
   hardware.pulseaudio.enable = false;
@@ -73,6 +77,7 @@
     alsa.enable = true;
     alsa.support32Bit = true;
     pulse.enable = true;
+    wireplumber.enable = true;
   };
  
   # enable fish
@@ -81,6 +86,8 @@
 
   #polkit
   security.polkit.enable = true;
+
+  programs.steam.enable = true;
 
   #users
   users.users.notoh = {
@@ -93,27 +100,30 @@
       neovim 
       neofetch
       bitwarden
-      spotify
       discord
-      waybar
-            
+      spotify-tui
+      spotifyd
+      mpv
+      ani-cli
+      trackma
    # utility
-
       hyprpaper
+      waybar
       streamlink
       ranger
       btop
       obsidian
       lazygit
-
+      obs-studio
+      pavucontrol
    # gaming
       steam
       wine
       lutris
       bottles
+      gamescope
 
    # fun stuff
-
       cbonsai
       pipes-rs
       cmatrix
@@ -138,7 +148,17 @@
    polkit_gnome
    appimage-run
    wlogout
+   wireplumber
    dunst
+   appimage-run
+   qt6.qtwayland
+   qt5.qtwayland
+   qt6.full
+   qt5.full
+   cmake
+   meson
+   python3
+   python3.pkgs.pip
   ];
 
   system.stateVersion = "23.05"; # Did you read the comment?
@@ -199,6 +219,10 @@
       hinting.style = "hintfull";
     };
   };
+
+  nixpkgs.config.permittedInsecurePackages = [
+       "qtwebkit-5.212.0-alpha4"
+  ];
 
 }
 
