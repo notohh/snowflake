@@ -73,9 +73,13 @@ in
     WLR_NO_HARDWARE_CURSORS = "1";
     MOZ_ENABLE_WAYLAND = "1";
     PATH = [
-      "$HOME/bin/swww"
-      "$HOME/bin/swww-daemon"
+      "$HOME/bin/:$PATH"
     ];
+
+    #SWW
+    SWWW_TRANSITION_TYPE = "center";
+    SWWW_TRANSITION_FPS = "60";
+
 
   };
 

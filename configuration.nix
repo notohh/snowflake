@@ -151,6 +151,7 @@
    qemu_kvm
    cmake
    meson
+   lz4
    python3
    python3.pkgs.pip
 
