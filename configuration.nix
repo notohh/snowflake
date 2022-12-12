@@ -1,14 +1,10 @@
-# Edit this configuration file to define what should be installed on
-# your system.  Help is available in the configuration.nix(5) man page
-# and in the NixOS manual (accessible by running ‘nixos-help’).
-
-{ config, pkgs, flake-self, inputs, ... }:
+{ config, pkgs, inputs, ... }:
 
 {
   imports =
-    [ # Include the results of the hardware scan.
+    [ 
     ./hardware-configuration.nix
-    ./modules/hyprland/default.nix 
+    ./modules/hyprland/default.nix
     ];
 
   # Bootloader.
@@ -17,23 +13,17 @@
   boot.loader.efi.canTouchEfiVariables = true;
   boot.loader.efi.efiSysMountPoint = "/boot/efi";
   boot.extraModulePackages = with config.boot.kernelPackages;
-  [ v4l2loopback.out ];
-  boot.kernelModules = [ "v4l2loopback" ];
+    [ v4l2loopback.out ];
+  boot.kernelModules = [ "v4l2loopback" "kvm-intel" ];
 
-  networking.hostName = "nixos"; # Define your hostname.
-  # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
+  virtualisation.libvirtd.enable = true;
 
-  # Configure network proxy if necessary
-  # networking.proxy.default = "http://user:password@proxy:port/";
-  # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
+  networking.hostName = "nixos";
 
-  # Enable networking
   networking.networkmanager.enable = true;
 
-  # Set your time zone.
-  time.timeZone = "America/New_York";
+    time.timeZone = "America/New_York";
 
-  # Select internationalisation properties.
   i18n.defaultLocale = "en_US.UTF-8";
 
   i18n.extraLocaleSettings = {
@@ -87,8 +77,6 @@
   #polkit
   security.polkit.enable = true;
 
-  programs.steam.enable = true;
-
   #users
   users.users.notoh = {
     isNormalUser = true;
@@ -106,6 +94,7 @@
       mpv
       ani-cli
       trackma
+
    # utility
       hyprpaper
       waybar
@@ -116,6 +105,10 @@
       lazygit
       obs-studio
       pavucontrol
+      unzip
+      etcher
+      virt-manager
+
    # gaming
       steam
       wine
@@ -127,11 +120,10 @@
       cbonsai
       pipes-rs
       cmatrix
+      cava
 
     ];
   };
-
-  nixpkgs.config.allowUnfree = true;
 
   environment.systemPackages = with pkgs; [
    wget
@@ -155,13 +147,17 @@
    qt5.qtwayland
    qt6.full
    qt5.full
+   libvirt
+   qemu_kvm
    cmake
    meson
    python3
    python3.pkgs.pip
-  ];
 
-  system.stateVersion = "23.05"; # Did you read the comment?
+ ];
+
+ # programs
+  programs.steam.enable = true;
 
   nix = {
      package = pkgs.nixFlakes;
@@ -221,8 +217,11 @@
   };
 
   nixpkgs.config.permittedInsecurePackages = [
-       "qtwebkit-5.212.0-alpha4"
-  ];
+    "qtwebkit-5.212.0-alpha4"
+    "electron-12.2.3"
+     ];
+
+nixpkgs.config.allowUnfree = true;
+system.stateVersion = "23.05";
 
 }
-

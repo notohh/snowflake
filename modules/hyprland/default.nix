@@ -44,7 +44,7 @@ in
     slurp
     wl-clipboard
     wlr-randr
-    wofi
+    rofi-wayland
   ];
 
   services.dbus.enable = true;
@@ -72,6 +72,11 @@ in
     GDK_BACKEND = "wayland";
     WLR_NO_HARDWARE_CURSORS = "1";
     MOZ_ENABLE_WAYLAND = "1";
+    PATH = [
+      "$HOME/bin/swww"
+      "$HOME/bin/swww-daemon"
+    ];
+
   };
 
   services.greetd = {
