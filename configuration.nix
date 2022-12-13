@@ -21,6 +21,11 @@
   networking.hostName = "nixos";
 
   networking.networkmanager.enable = true;
+  networking.nameservers = [ "192.168.1.45" ];
+
+    environment.etc = {
+    "resolv.conf".text = "nameserver 192.168.1.45\n";
+  };
 
     time.timeZone = "America/New_York";
 
@@ -104,10 +109,13 @@
       obsidian
       lazygit
       obs-studio
+      obs-studio-plugins.wlrobs
       pavucontrol
       unzip
       etcher
       virt-manager
+      killall
+      playerctl
 
    # gaming
       steam
@@ -204,6 +212,9 @@
       font-awesome
       powerline-fonts
       fira-code-symbols
+      dejavu_fonts
+      kochi-substitute
+      ipafont
     ];
 
     fontconfig = {
@@ -220,8 +231,8 @@
   nixpkgs.config.permittedInsecurePackages = [
     "qtwebkit-5.212.0-alpha4"
     "electron-12.2.3"
-     ];
-
+  ];
+   
 nixpkgs.config.allowUnfree = true;
 system.stateVersion = "23.05";
 
