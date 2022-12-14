@@ -22,12 +22,13 @@
 
   networking.networkmanager.enable = true;
   networking.nameservers = [ "192.168.1.45" ];
-
+    
+  # pihole
     environment.etc = {
     "resolv.conf".text = "nameserver 192.168.1.45\n";
   };
 
-    time.timeZone = "America/New_York";
+  time.timeZone = "America/New_York";
 
   i18n.defaultLocale = "en_US.UTF-8";
 
@@ -97,8 +98,6 @@
       spotify-tui
       spotifyd
       mpv
-      ani-cli
-      trackma
 
    # utility
       hyprpaper
@@ -116,6 +115,10 @@
       virt-manager
       killall
       playerctl
+
+   # entertainment
+     ani-cli
+     trackma
 
    # gaming
       steam
