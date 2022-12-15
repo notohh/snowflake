@@ -91,7 +91,7 @@
     packages = with pkgs; [
    # essential
       firefox
-      neovim 
+      neovim
       neofetch
       bitwarden
       discord
@@ -99,16 +99,18 @@
       spotifyd
       mpv
 
+   # coding
+      jetbrains.pycharm-community
+      lazygit
+
    # utility
-      hyprpaper
+      eww
       waybar
       streamlink
       ranger
       btop
       obsidian
-      lazygit
       obs-studio
-      obs-studio-plugins.wlrobs
       pavucontrol
       unzip
       etcher
@@ -117,8 +119,8 @@
       playerctl
 
    # entertainment
-     ani-cli
-     trackma
+      ani-cli
+      trackma
 
    # gaming
       steam
@@ -126,6 +128,11 @@
       lutris
       bottles
       gamescope
+
+   # theming
+      catppuccin-gtk
+      catppuccin-cursors
+      papirus-folders
 
    # fun stuff
       cbonsai
@@ -165,6 +172,8 @@
    lz4
    python3
    python3.pkgs.pip
+   gnome-themes-extra
+   gtk-engine-murrine
 
  ];
 

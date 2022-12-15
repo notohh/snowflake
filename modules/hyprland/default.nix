@@ -1,4 +1,4 @@
-{ config, pkgs, lib, ... }:
+{ config, pkgs, lib, inputs, ... }:
 
 let 
   dbus-hyprland-environment = pkgs.writeTextFile {
@@ -23,7 +23,7 @@ let
       in ''
         export XDG_DATA_DIRS=${datadir}:$XDG_DATA_DIRS
         gnome_schema=org.gnome.desktop.interface
-        gesettings set $gnome_schema gtk-theme 'Adwaita'
+        gesettings set $gnome_schema gtk-theme 'Catppuccin-Mocha-Pink-Dark'
         '';
     };
 
@@ -51,7 +51,10 @@ in
   xdg.portal = {
     enable = true;
     wlr.enable = true;
-    extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
+    extraPortals = [ 
+      pkgs.xdg-desktop-portal-gtk 
+      
+  ];
     gtkUsePortal = true;
   };
 
@@ -76,8 +79,10 @@ in
       "$HOME/bin/:$PATH"
     ];
 
+    GTK_THEME = "Catppuccin-Pink-Dark"; 
+
     #SWW
-    SWWW_TRANSITION_TYPE = "center";
+    SWWW_TRANSITION_TYPE = "";
     SWWW_TRANSITION_FPS = "60";
 
 
