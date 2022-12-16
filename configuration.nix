@@ -53,7 +53,7 @@
        gdm.enable = true;
        gdm.wayland = true;
    };
-    desktopManager.plasma5.enable = true;
+    desktopManager.plasma5.enable = false;
   };
 }; 
 
@@ -104,7 +104,7 @@
       lazygit
 
    # utility
-      eww
+      gnome.nautilus
       waybar
       streamlink
       ranger
@@ -117,6 +117,7 @@
       virt-manager
       killall
       playerctl
+      drawio
 
    # entertainment
       ani-cli

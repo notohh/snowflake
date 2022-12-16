@@ -8,8 +8,8 @@ let
 
     text = ''
       dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=hyprland
-      systemctl --user stop pipewire pipewire-media-session xdg-desktop-portal xdg-desktop-portal-wlr
-      systemctl --user start pipewire pipewire-media-session xdg-desktop-portal xdg-desktop-portal-wlr
+      systemctl --user stop pipewire pipewire-media-session xdg-desktop-portal xdg-desktop-portal-wlr xdg-desktop-portal-kde
+      systemctl --user start pipewire wireplumber pipewire-media-session xdg-desktop-portal xdg-desktop-portal-hyprland
     '';
   };
 
@@ -51,9 +51,9 @@ in
   xdg.portal = {
     enable = true;
     wlr.enable = true;
-    extraPortals = [ 
-      pkgs.xdg-desktop-portal-gtk 
-      
+    extraPortals = with pkgs; [ 
+     xdg-desktop-portal-gtk 
+     xdg-desktop-portal-wlr
   ];
     gtkUsePortal = true;
   };
@@ -79,12 +79,7 @@ in
       "$HOME/bin/:$PATH"
     ];
 
-    GTK_THEME = "Catppuccin-Pink-Dark"; 
-
-    #SWW
-    SWWW_TRANSITION_TYPE = "";
-    SWWW_TRANSITION_FPS = "60";
-
+    GTK_THEME = "Catppuccin-Pink-Dark";  
 
   };
 
