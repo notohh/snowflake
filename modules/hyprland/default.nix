@@ -52,10 +52,9 @@ in
     enable = true;
     wlr.enable = true;
     extraPortals = with pkgs; [ 
-     xdg-desktop-portal-gtk 
-     xdg-desktop-portal-wlr
+
   ];
-    gtkUsePortal = true;
+
   };
 
   programs.hyprland.enable = true;

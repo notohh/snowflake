@@ -64,7 +64,7 @@
   };
 
   services.printing.enable = true;
-  services.spotifyd.enable = true;
+  services.fstrim.enable = true;
 
   sound.enable = true;
   hardware.pulseaudio.enable = false;
