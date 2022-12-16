@@ -181,7 +181,10 @@
 
   nix = {
      package = pkgs.nixFlakes;
-     extraOptions = "experimental-features = nix-command flakes";
+     extraOptions = ''
+      experimental-features = nix-command flakes
+      warn-dirty = false
+      '';
      settings.auto-optimise-store = true;
      gc = {
       automatic = true;
