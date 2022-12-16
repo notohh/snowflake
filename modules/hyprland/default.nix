@@ -43,6 +43,7 @@ in
     grim
     slurp
     wl-clipboard
+    wlogout
     wlr-randr
     rofi-wayland
   ];

@@ -54,7 +54,6 @@
        gdm.enable = true;
        gdm.wayland = true;
    };
-    desktopManager.plasma5.enable = false;
   };
 }; 
 
@@ -110,13 +109,13 @@
       streamlink
       ranger
       btop
+      nvtop
       obsidian
       obs-studio
       pavucontrol
       unzip
       etcher
       virt-manager
-      killall
       playerctl
       drawio
 
@@ -146,7 +145,6 @@
    wget
    git
    alacritty
-   gcc
    stow
    starship
    rustup
@@ -156,19 +154,13 @@
    nodejs
    polkit_gnome
    appimage-run
-   wlogout
    wireplumber
    dunst
    appimage-run
    qt6.qtwayland
    qt5.qtwayland
-   qt6.full
-   qt5.full
    libvirt
    qemu_kvm
-   cmake
-   meson
-   lz4
    python3
    python3.pkgs.pip
    gnome-themes-extra
@@ -220,13 +212,9 @@
       jetbrains-mono
       nerdfonts
       noto-fonts-cjk-sans
-      recursive
-      rubik
       twemoji-color-font
       font-awesome
-      powerline-fonts
       fira-code-symbols
-      dejavu_fonts
       kochi-substitute
       ipafont
     ];
