@@ -235,7 +235,7 @@
       enable = true;
       allowBitmaps = true;
       defaultFonts = {
-        monospace = ["Maple Mono NF"];
+        monospace = ["JetBrains Mono"];
         sansSerif = ["Google Sans Text"];
       };
       hinting.style = "hintfull";

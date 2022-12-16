@@ -6,7 +6,6 @@
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable"; 
      
     # Call hyprland
-
     hyprland = {
       url = "github:hyprwm/Hyprland";
 
@@ -19,7 +18,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
 
     };
-    
 
   };
 
@@ -36,8 +34,6 @@
 	      ];
       };
     };
-
-
 
     homeConfigurations = {
       "notoh@nixos" = home-manager.lib.homeManagerConfiguration {
