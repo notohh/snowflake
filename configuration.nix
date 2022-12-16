@@ -170,6 +170,33 @@
 
  ];
 
+    fonts = {
+    enableDefaultFonts = true;
+    fontDir.enable = true;
+
+    fonts = with pkgs; [
+      inter
+      jetbrains-mono
+      nerdfonts
+      noto-fonts-cjk-sans
+      twemoji-color-font
+      font-awesome
+      fira-code-symbols
+      kochi-substitute
+      ipafont
+    ];
+
+    fontconfig = {
+      enable = true;
+      allowBitmaps = true;
+      defaultFonts = {
+        monospace = ["JetBrains Mono"];
+        sansSerif = ["Google Sans Text"];
+      };
+      hinting.style = "hintfull";
+    };
+  };
+
  # programs
   programs.steam.enable = true;
 
@@ -203,33 +230,6 @@
     nix.settings = {
     substituters = ["https://hyprland.cachix.org"];
     trusted-public-keys = ["hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc="];
-  };
-
-   fonts = {
-    enableDefaultFonts = true;
-    fontDir.enable = true;
-
-    fonts = with pkgs; [
-      inter
-      jetbrains-mono
-      nerdfonts
-      noto-fonts-cjk-sans
-      twemoji-color-font
-      font-awesome
-      fira-code-symbols
-      kochi-substitute
-      ipafont
-    ];
-
-    fontconfig = {
-      enable = true;
-      allowBitmaps = true;
-      defaultFonts = {
-        monospace = ["JetBrains Mono"];
-        sansSerif = ["Google Sans Text"];
-      };
-      hinting.style = "hintfull";
-    };
   };
 
   nixpkgs.config.permittedInsecurePackages = [
