@@ -159,6 +159,8 @@
    appimage-run
    qt6.qtwayland
    qt5.qtwayland
+   qt6.full
+   qt5.full
    libvirt
    qemu_kvm
    python3
