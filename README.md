@@ -3,9 +3,9 @@
 snowflake
 </h1>
 <br>
-<p align="center">welcome to my custom nix config!</p>
+<p align="center">:snowflake: a flake or crystal of snow :snowflake:</p>
 
-<h2>Table of contents</h2>
+<h2>:open_book: Table of contents</h2>
 
 
 
