@@ -12,6 +12,7 @@
   boot.loader.systemd-boot.configurationLimit = 5;
   boot.loader.efi.canTouchEfiVariables = true;
   boot.loader.efi.efiSysMountPoint = "/boot/efi";
+  boot.kernelPackages = pkgs.linuxPackages_latest;
   boot.extraModulePackages = with config.boot.kernelPackages;
     [ v4l2loopback.out ];
   boot.kernelModules = [ "v4l2loopback" "kvm-intel" ];
@@ -87,7 +88,7 @@
   users.users.notoh = {
     isNormalUser = true;
     description = "notoh";
-    extraGroups = [ "networkmanager" "wheel" "disk" "video" ];
+    extraGroups = [ "networkmanager" "wheel" "disk" "video" "input" ];
     packages = with pkgs; [
    # essential
       firefox
@@ -128,12 +129,9 @@
       wine
       lutris
       bottles
-      gamescope
 
    # theming
       catppuccin-gtk
-      catppuccin-cursors
-      papirus-folders
 
    # fun stuff
       cbonsai
