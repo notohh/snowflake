@@ -104,10 +104,9 @@
       lazygit
 
    # utility
-      gnome.nautilus
       waybar
       streamlink
-      ranger
+      xplr
       btop
       nvtop
       obsidian
