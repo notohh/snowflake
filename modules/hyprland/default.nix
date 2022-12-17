@@ -46,6 +46,8 @@ in
     wlogout
     wlr-randr
     rofi-wayland
+    swayidle
+    swaylock-effects
   ];
 
   services.dbus.enable = true;
@@ -67,6 +69,7 @@ in
     __GL_VRR_ALLOWED = "0";
     WLR_DRM_NO_ATOMIC = "1";
     __GLX_VENDOR_LIBRARY_NAME = "nvidia";
+    SDL_VIDEODRIVER= "wayland";
 
     # Will break SDDM if running X11
     QT_QPA_PLATFORM = "wayland";

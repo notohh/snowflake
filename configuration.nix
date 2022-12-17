@@ -23,6 +23,8 @@
 
   networking.networkmanager.enable = true;
   networking.nameservers = [ "192.168.1.45" ];
+
+  hardware.opentabletdriver.enable = true;
     
   # pihole
     environment.etc = {
@@ -82,12 +84,17 @@
 
   #polkit
   security.polkit.enable = true;
+  security.pam.services.swaylock = {
+    text = ''
+      auth include login
+      '';
+  };
 
   #users
   users.users.notoh = {
     isNormalUser = true;
     description = "notoh";
-    extraGroups = [ "networkmanager" "wheel" "disk" "video" "input" ];
+    extraGroups = [ "networkmanager" "wheel" "disk" "video" ];
     packages = with pkgs; [
    # essential
       firefox
@@ -117,6 +124,8 @@
       virt-manager
       playerctl
       drawio
+      imv
+      opentabletdriver
 
    # entertainment
       ani-cli
@@ -127,6 +136,7 @@
       wine
       lutris
       bottles
+      osu-lazer      
 
    # theming
       catppuccin-gtk
@@ -143,6 +153,7 @@
   environment.systemPackages = with pkgs; [
    wget
    git
+   gh
    alacritty
    stow
    starship
