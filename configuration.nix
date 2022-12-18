@@ -7,8 +7,7 @@
     ./modules/hyprland/default.nix
     ];
 
-  # Bootloader.
-  
+  # Bootloader. 
   boot.loader = {
     systemd-boot = {
       enable = true;
@@ -87,21 +86,13 @@
     pulse.enable = true;
     wireplumber.enable = true;
   };
- 
-  # enable fish
-  programs.fish = {
-    enable = true;
-    shellAliases = {
-      v = "nvim";
-    };
-  };
 
   # enable steam
   programs.steam = {
     enable = true;
   };
 
-  users.defaultUserShell = pkgs.fish;
+  users.defaultUserShell = pkgs.nushell;
 
   #polkit
   security.polkit.enable = true;
@@ -145,6 +136,7 @@
       virt-manager 
       drawio
       imv
+      zathura
       opentabletdriver
 
    # entertainment
@@ -177,6 +169,7 @@
    alacritty
    stow
    starship
+   nushell
    rustup
    cargo
    jre
