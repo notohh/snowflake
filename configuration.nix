@@ -8,10 +8,18 @@
     ];
 
   # Bootloader.
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.systemd-boot.configurationLimit = 5;
-  boot.loader.efi.canTouchEfiVariables = true;
-  boot.loader.efi.efiSysMountPoint = "/boot/efi";
+  
+  boot.loader = {
+    systemd-boot = {
+      enable = true;
+      configurationLimit = 5;
+    };
+    efi = {
+      canTouchEfiVariables = true;
+      efiSysMountPoint = "/boot/efi";
+    };
+  };
+
   boot.kernelPackages = pkgs.linuxPackages_latest;
   boot.extraModulePackages = with config.boot.kernelPackages;
     [ v4l2loopback.out ];
@@ -47,25 +55,27 @@
     LC_TIME = "en_US.UTF-8";
   };
 
-
   services = {
+    fstrim = {
+      enable = true;
+    };
+    printing = {
+      enable = true;
+    };
     xserver = {
      enable = true;
      videoDrivers = [ "nvidia" ];
      displayManager = {
        gdm.enable = true;
        gdm.wayland = true;
+     };
    };
-  };
 }; 
 
   services.xserver = {
     layout = "us";
     xkbVariant = "";
   };
-
-  services.printing.enable = true;
-  services.fstrim.enable = true;
 
   sound.enable = true;
   hardware.pulseaudio.enable = false;
@@ -79,7 +89,18 @@
   };
  
   # enable fish
-  programs.fish.enable = true;
+  programs.fish = {
+    enable = true;
+    shellAliases = {
+      v = "nvim";
+    };
+  };
+
+  # enable steam
+  programs.steam = {
+    enable = true;
+  };
+
   users.defaultUserShell = pkgs.fish;
 
   #polkit
@@ -121,8 +142,7 @@
       pavucontrol
       unzip
       etcher
-      virt-manager
-      playerctl
+      virt-manager 
       drawio
       imv
       opentabletdriver
@@ -180,7 +200,7 @@
 
  ];
 
-    fonts = {
+  fonts = {
     enableDefaultFonts = true;
     fontDir.enable = true;
 
@@ -207,9 +227,6 @@
     };
   };
 
- # programs
-  programs.steam.enable = true;
-
   nix = {
      package = pkgs.nixFlakes;
      extraOptions = ''
@@ -221,6 +238,10 @@
       automatic = true;
       dates = "weekly";
       options = "--delete-older-than 7d";
+    };
+     settings = {
+      substituters = ["https://hyprland.cachix.org"];
+      trusted-public-keys = ["hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc="];
      };
    };
 
@@ -235,11 +256,6 @@
       modesetting.enable = true;
     };
     opengl.extraPackages = with pkgs; [nvidia-vaapi-driver];
-  };
-
-    nix.settings = {
-    substituters = ["https://hyprland.cachix.org"];
-    trusted-public-keys = ["hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc="];
   };
 
   nixpkgs.config.permittedInsecurePackages = [
