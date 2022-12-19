@@ -7,7 +7,7 @@
     ./modules/hyprland/default.nix
     ];
 
-  # Bootloader. 
+  # bootloader 
   boot.loader = {
     systemd-boot = {
       enable = true;
@@ -87,14 +87,12 @@
     wireplumber.enable = true;
   };
 
-  # enable steam
   programs.steam = {
     enable = true;
   };
 
   users.defaultUserShell = pkgs.nushell;
 
-  #polkit
   security.polkit.enable = true;
   security.pam.services.swaylock = {
     text = ''
@@ -102,7 +100,6 @@
       '';
   };
 
-  #users
   users.users.notoh = {
     isNormalUser = true;
     description = "notoh";
@@ -122,7 +119,7 @@
       jetbrains.pycharm-community
       lazygit
 
-   # utility
+   # utility 
       waybar
       streamlink
       xplr
@@ -148,7 +145,7 @@
       wine
       lutris
       bottles
-      osu-lazer      
+      osu-lazer 
 
    # theming
       catppuccin-gtk
@@ -166,8 +163,8 @@
    wget
    git
    gh
-   alacritty
    stow
+   wezterm
    starship
    nushell
    rustup
@@ -239,7 +236,7 @@
    };
 
    system.autoUpgrade = {
-    enable = true;
+    enable = false;
     channel = "https://nixos.org/channel/nixos-unstable";
   };
 
