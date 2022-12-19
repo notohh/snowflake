@@ -1,48 +1,37 @@
 {
-  description = "notohh's flake";
-
   inputs = {
-    # Nixpkgs
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable"; 
-     
-    # Call hyprland
-    hyprland = {
-      url = "github:hyprwm/Hyprland";
-
-      inputs.nixpkgs.follows = "nixpkgs";
-      };
-
-    # Home manager
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
-
-    };
-
+     };  
+    hyprland.url = "github:hyprwm/Hyprland";
   };
-
-  outputs = { nixpkgs, home-manager, self, hyprland, ... }@inputs: {
-
-    nixosConfigurations = {
-      nixos = nixpkgs.lib.nixosSystem {
-        specialArgs = { inherit inputs; flake-self = self; };
-
-     modules = [ ./configuration.nix 
-    
-        hyprland.nixosModules.default
-        { programs.hyprland.enable = true; }
-	      ];
+  outputs = { self, nixpkgs, home-manager, hyprland, ... }:
+    let
+      system = "x86_64-linux";
+      pkgs = import nixpkgs {
+        inherit system;
+        config.allowUnfree = true;
       };
-    };
 
-    homeConfigurations = {
-      "notoh@nixos" = home-manager.lib.homeManagerConfiguration {
-        pkgs = nixpkgs.legacyPackages.x86_64-linux; 
-        extraSpecialArgs = { inherit inputs; }; 
-  
-        modules = [./home.nix];
+      lib = nixpkgs.lib;
+
+    in {
+      nixosConfigurations = {
+        nixos = lib.nixosSystem {
+          inherit system;
+          modules = [
+            ./configuration.nix
+            hyprland.nixosModules.default
+            {programs.hyprland.enable = true;}
+            home-manager.nixosModules.home-manager {
+            home-manager.useGlobalPkgs = true;
+            home-manager.useUserPackages = true;
+            home-manager.users.notoh = import ./modules/home/home.nix;
+          }
+        ];
       };
-    };
+    }; 
   };
-  
 }

@@ -7,26 +7,6 @@
 
   ];
 
-  nixpkgs = {
-
-    overlays = [
- 
-    ];
-
-    config = {
-
-      allowUnfree = true;
-     
-      allowUnfreePredicate = (_: true);
-    };
-  };
-
-
-  home = {
-    username = "notoh";
-    homeDirectory = "/home/notoh/";
-  };
-
   programs.home-manager.enable = true;
   programs.git.enable = true;
 

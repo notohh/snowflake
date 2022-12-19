@@ -82,7 +82,7 @@ in
       "$HOME/bin/:$PATH"
     ];
 
-    GTK_THEME = "Catppuccin-Pink-Dark";  
+    GTK_THEME = "Catppuccin-Pink-Dark";
 
   };
 

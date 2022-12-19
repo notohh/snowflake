@@ -134,6 +134,7 @@
       drawio
       imv
       zathura
+      playerctl
       opentabletdriver
 
    # entertainment
@@ -144,11 +145,14 @@
       steam
       wine
       lutris
+      gamemode
       bottles
-      osu-lazer 
+      osu-lazer
+      prismlauncher
 
    # theming
       catppuccin-gtk
+      catppuccin-cursors
 
    # fun stuff
       cbonsai
@@ -171,6 +175,7 @@
    cargo
    jre
    jdk
+   jdk17
    jq
    nodejs
    polkit_gnome
