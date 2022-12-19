@@ -59,7 +59,7 @@
       enable = true;
     };
     printing = {
-      enable = true;
+      enable = false;
     };
     xserver = {
      enable = true;
@@ -171,6 +171,7 @@
    cargo
    jre
    jdk
+   jq
    nodejs
    polkit_gnome
    appimage-run
