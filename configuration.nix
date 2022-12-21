@@ -107,7 +107,7 @@
     packages = with pkgs; [
    # essential
       firefox
-      neovim
+      helix
       neofetch
       bitwarden
       discord
@@ -125,7 +125,6 @@
       xplr
       btop
       nvtop
-      obsidian
       obs-studio
       pavucontrol
       unzip
@@ -133,6 +132,7 @@
       virt-manager 
       drawio
       imv
+      nb
       zathura
       playerctl
       opentabletdriver
