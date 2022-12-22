@@ -175,7 +175,6 @@
    cargo
    jre
    jdk
-   jdk17
    jq
    nodejs
    polkit_gnome
