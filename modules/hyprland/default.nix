@@ -70,6 +70,7 @@ in
     WLR_DRM_NO_ATOMIC = "1";
     __GLX_VENDOR_LIBRARY_NAME = "nvidia";
     SDL_VIDEODRIVER= "wayland";
+    _JAVA_AWT_WM_NONREPARENTING = "1";
 
     # Will break SDDM if running X11
     QT_QPA_PLATFORM = "wayland";
@@ -83,6 +84,8 @@ in
     ];
 
     GTK_THEME = "Catppuccin-Pink-Dark";
+    XCURSOR_THEME = "Catppuccin-Mocha-Pink";
+    XCURSOR_SIZE = "24";
 
   };
 
