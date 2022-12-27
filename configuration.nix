@@ -21,7 +21,7 @@
 
   boot.kernelPackages = pkgs.linuxPackages_latest;
   boot.extraModulePackages = with config.boot.kernelPackages;
-    [ v4l2loopback.out ];
+  [ v4l2loopback.out ];
   boot.kernelModules = [ "v4l2loopback" "kvm-intel" ];
 
   virtualisation.libvirtd.enable = true;
@@ -118,7 +118,6 @@
    # coding
       jetbrains.pycharm-community
       lazygit
-      lazydocker
 
    # utility 
       waybar
@@ -137,6 +136,7 @@
       zathura
       playerctl
       opentabletdriver
+      onefetch
 
    # entertainment
       ani-cli
@@ -191,7 +191,7 @@
    cmake
    libvirt
    qemu_kvm
-   python3
+   python3Full
    python3.pkgs.pip
    gnome-themes-extra
    gtk-engine-murrine
@@ -218,7 +218,7 @@
       enable = true;
       allowBitmaps = true;
       defaultFonts = {
-        monospace = ["JetBrains Mono"];
+        monospace = ["JetBrainsMono Nerd Font Regular"];
         sansSerif = ["Google Sans Text"];
       };
       hinting.style = "hintfull";
@@ -238,11 +238,13 @@
       options = "--delete-older-than 7d";
     };
      settings = {
-      substituters = ["https://hyprland.cachix.org"];
+      substituters = [
+      "https://hyprland.cachix.org"
+      "https://cache.nixos.org?priority=10"
+      ];
       trusted-public-keys = [
       "hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc="
       "cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY="
-      "nix-community.cachix.org-1:mB9FSh9qf2dCimDSUo8Zy7bkq5CX+/rkCWyvRCYg3Fs="
       ];
      };
    };
@@ -257,7 +259,9 @@
       powerManagement.enable = true;
       modesetting.enable = true;
     };
-    opengl.extraPackages = with pkgs; [nvidia-vaapi-driver];
+    opengl.extraPackages = with pkgs; [
+    nvidia-vaapi-driver
+    ];
   };
 
   nixpkgs.config.permittedInsecurePackages = [
