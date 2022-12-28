@@ -39,7 +39,6 @@ in
     configure-gtk
     wayland
     glib
-    gnome3.adwaita-icon-theme
     grim
     slurp
     wl-clipboard
@@ -69,7 +68,7 @@ in
     __GL_VRR_ALLOWED = "0";
     WLR_DRM_NO_ATOMIC = "1";
     __GLX_VENDOR_LIBRARY_NAME = "nvidia";
-    SDL_VIDEODRIVER= "wayland";
+    SDL_VIDEODRIVER = "wayland";
     _JAVA_AWT_WM_NONREPARENTING = "1";
 
     # Will break SDDM if running X11
