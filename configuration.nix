@@ -93,9 +93,7 @@
   programs.steam = {
     enable = true;
   };
-
-  users.defaultUserShell = pkgs.nushell;
-
+  
   security.polkit.enable = true;
   security.pam.services.swaylock = {
     text = ''
@@ -103,7 +101,9 @@
       '';
   };
 
-  users.users.notoh = {
+  users = {
+  defaultUserShell = pkgs.nushell;  
+  users.notoh = {
     isNormalUser = true;
     description = "notoh";
     extraGroups = [ "networkmanager" "wheel" "disk" "video" ];
@@ -167,6 +167,7 @@
 
     ];
   };
+};
 
   environment.systemPackages = with pkgs; [
    wget
