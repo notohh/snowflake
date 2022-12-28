@@ -68,6 +68,9 @@
        gdm.enable = true;
        gdm.wayland = true;
      };
+    desktopManager = {
+      plasma5.enable = true;
+    };
    };
 }; 
 
@@ -111,8 +114,7 @@
       neofetch
       bitwarden
       discord
-      spotify-tui
-      spotifyd
+      spotify
       mpv
 
    # coding
@@ -147,6 +149,8 @@
       wine
       lutris
       gamemode
+      gamescope
+      mangohud
       bottles
       osu-lazer
       prismlauncher
@@ -258,10 +262,14 @@
     nvidia = {
       powerManagement.enable = true;
       modesetting.enable = true;
+      package = config.boot.kernelPackages.nvidiaPackages.stable;
     };
-    opengl.extraPackages = with pkgs; [
+    opengl = {
+    enable = true;
+    extraPackages = with pkgs; [
     nvidia-vaapi-driver
     ];
+   };
   };
 
   nixpkgs.config.permittedInsecurePackages = [
