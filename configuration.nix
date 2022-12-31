@@ -150,9 +150,8 @@
       lutris
       gamemode
       gamescope
-      mangohud
       bottles
-      osu-lazer
+      osu-lazer-bin
       prismlauncher
 
    # theming
@@ -187,7 +186,6 @@
    appimage-run
    wireplumber
    dunst
-   appimage-run
    qt6.qtwayland
    qt5.qtwayland
    qt6.full
