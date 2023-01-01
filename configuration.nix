@@ -30,8 +30,6 @@
 
   networking.networkmanager.enable = true;
   networking.nameservers = [ "192.168.1.45" ];
-
-  hardware.opentabletdriver.enable = true;
     
   # pihole
     environment.etc = {
@@ -99,6 +97,24 @@
     text = ''
       auth include login
       '';
+  };
+  
+ hardware = {
+    nvidia = {
+      powerManagement.enable = true;
+      modesetting.enable = true;
+      package = config.boot.kernelPackages.nvidiaPackages.stable;
+    };
+    opengl = {
+    enable = true;
+    extraPackages = with pkgs; [
+    nvidia-vaapi-driver
+    ];
+   };
+   opentabletdriver = {
+    enable = true;
+    daemon.enable = true;
+   };
   };
 
   users = {
@@ -255,20 +271,6 @@
    system.autoUpgrade = {
     enable = false;
     channel = "https://nixos.org/channel/nixos-unstable";
-  };
-
- hardware = {
-    nvidia = {
-      powerManagement.enable = true;
-      modesetting.enable = true;
-      package = config.boot.kernelPackages.nvidiaPackages.stable;
-    };
-    opengl = {
-    enable = true;
-    extraPackages = with pkgs; [
-    nvidia-vaapi-driver
-    ];
-   };
   };
 
   nixpkgs.config.permittedInsecurePackages = [
