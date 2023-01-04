@@ -154,11 +154,10 @@
       zathura
       playerctl
       opentabletdriver
-      onefetch
-
-   # entertainment
       ani-cli
       trackma
+      appimage-run
+      qbittorrent
 
    # gaming
       steam
@@ -166,13 +165,13 @@
       lutris
       gamemode
       gamescope
+      mangohud
       bottles
       osu-lazer-bin
       prismlauncher
 
    # theming
       catppuccin-gtk
-      catppuccin-cursors
 
    # fun stuff
       cbonsai
@@ -199,7 +198,6 @@
    jq
    nodejs
    polkit_gnome
-   appimage-run
    wireplumber
    dunst
    qt6.qtwayland
@@ -213,7 +211,7 @@
    python3Full
    python3.pkgs.pip
    gnome-themes-extra
-   gtk-engine-murrine
+   gtk-engine-murrine  
 
  ];
 
