@@ -158,6 +158,7 @@
       trackma
       appimage-run
       qbittorrent
+      gdu
 
    # gaming
       steam
@@ -167,6 +168,7 @@
       gamescope
       mangohud
       bottles
+      runelite
       osu-lazer-bin
       prismlauncher
 
@@ -178,7 +180,8 @@
       pipes-rs
       cmatrix
       cava
-
+      hollywood
+      cowsay
     ];
   };
 };
@@ -211,7 +214,7 @@
    python3Full
    python3.pkgs.pip
    gnome-themes-extra
-   gtk-engine-murrine  
+   gtk-engine-murrine
 
  ];
 
