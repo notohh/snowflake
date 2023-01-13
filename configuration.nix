@@ -67,7 +67,7 @@
        gdm.wayland = true;
      };
     desktopManager = {
-      plasma5.enable = true;
+      plasma5.enable = false;
     };
    };
 }; 
@@ -168,6 +168,7 @@
       gamescope
       mangohud
       bottles
+      osu-lazer-bin
       runelite
       prismlauncher
 
