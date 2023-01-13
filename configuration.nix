@@ -129,7 +129,7 @@
       helix
       neofetch
       bitwarden
-      discord
+      discord-ptb
       spotify
       mpv
 
@@ -169,7 +169,6 @@
       mangohud
       bottles
       runelite
-      osu-lazer-bin
       prismlauncher
 
    # theming
