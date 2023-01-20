@@ -66,9 +66,6 @@
        gdm.enable = true;
        gdm.wayland = true;
      };
-    desktopManager = {
-      plasma5.enable = false;
-    };
    };
 }; 
 
@@ -111,12 +108,7 @@
     nvidia-vaapi-driver
     ];
    };
-   opentabletdriver = {
-    enable = true;
-    daemon.enable = true;
-   };
-  };
-
+ };
   users = {
   defaultUserShell = pkgs.nushell;  
   users.notoh = {
@@ -139,29 +131,26 @@
 
    # utility 
       waybar
-      streamlink
       xplr
       btop
       nvtop
       obs-studio
       pavucontrol
       unzip
+      p7zip
       etcher
       virt-manager 
-      drawio
       imv
-      nb
       zathura
       playerctl
-      opentabletdriver
       ani-cli
       trackma
       appimage-run
       qbittorrent
       gdu
+      veracrypt
 
    # gaming
-      steam
       wine
       lutris
       gamemode
