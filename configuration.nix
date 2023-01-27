@@ -148,7 +148,7 @@
       appimage-run
       qbittorrent
       gdu
-      veracrypt
+      cryptomator
       chromium
       
    # gaming
