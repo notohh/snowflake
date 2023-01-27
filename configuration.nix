@@ -110,7 +110,7 @@
    };
  };
   users = {
-  defaultUserShell = pkgs.nushell;  
+  defaultUserShell = pkgs.nushell;
   users.notoh = {
     isNormalUser = true;
     description = "notoh";
@@ -149,7 +149,8 @@
       qbittorrent
       gdu
       veracrypt
-
+      chromium
+      
    # gaming
       wine
       lutris
@@ -160,9 +161,6 @@
       osu-lazer-bin
       runelite
       prismlauncher
-
-   # theming
-      catppuccin-gtk
 
    # fun stuff
       cbonsai
@@ -192,8 +190,6 @@
    polkit_gnome
    wireplumber
    dunst
-   qt6.qtwayland
-   qt5.qtwayland
    qt6.full
    qt5.full
    gcc
@@ -202,7 +198,6 @@
    qemu_kvm
    python3Full
    python3.pkgs.pip
-   gnome-themes-extra
    gtk-engine-murrine
 
  ];
