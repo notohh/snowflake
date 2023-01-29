@@ -122,7 +122,6 @@
       neofetch
       bitwarden
       discord-ptb
-      spotify
       mpv
 
    # coding
@@ -149,7 +148,6 @@
       qbittorrent
       gdu
       cryptomator
-      chromium
       
    # gaming
       wine
