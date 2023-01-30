@@ -22,13 +22,13 @@
         nixos = lib.nixosSystem {
           inherit system;
           modules = [
-            ./configuration.nix
+            ./nixos/configuration.nix
             hyprland.nixosModules.default
             {programs.hyprland.enable = true;}
             home-manager.nixosModules.home-manager {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
-            home-manager.users.notoh = import ./modules/home/home.nix;
+            home-manager.users.notoh = import ./home/home.nix;
           }
         ];
       };

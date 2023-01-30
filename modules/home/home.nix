@@ -1,15 +1,23 @@
-{ inputs, outputs, lib, config, pkgs, ... }: {
-  # You can import other home-manager modules here
-  imports = [
+{config, pkgs, ...}:
 
-  ];
+{
 
-  programs.home-manager.enable = true;
+imports = [
+  ./gtk/default.nix
+];
 
+ programs.home-manager.enable = true;
 
-  systemd.user.startServices = "sd-switch";
+  home = {
+    username = "notoh";
+    homeDirectory = "/home/notoh";
+    stateVersion = "23.05";
+    packages = [
+      pkgs.alsa-lib
+      pkgs.boost
+      pkgs.qt5.full
+      pkgs.openssl
+    ];
+  };
 
-
-  home.stateVersion = "23.05";
 }
-

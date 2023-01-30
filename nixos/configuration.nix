@@ -4,7 +4,7 @@
   imports =
     [ 
     ./hardware-configuration.nix
-    ./modules/hyprland/default.nix
+    ../modules/hyprland/default.nix
     ];
 
   # bootloader 
@@ -55,9 +55,6 @@
   services = {
     fstrim = {
       enable = true;
-    };
-    printing = {
-      enable = false;
     };
     xserver = {
      enable = true;
@@ -189,7 +186,6 @@
    wireplumber
    dunst
    qt6.full
-   qt5.full
    gcc
    cmake
    libvirt
