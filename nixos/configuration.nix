@@ -71,6 +71,13 @@
     xkbVariant = "";
   };
 
+  programs.gnupg.agent = {
+    enable = true;
+    enableSSHSupport = true;
+    pinentryFlavor = "gtk2";
+  };
+  services.pcscd.enable = true;
+
   sound.enable = true;
   hardware.pulseaudio.enable = false;
   security.rtkit.enable = true;
@@ -115,7 +122,6 @@
     packages = with pkgs; [
    # essential
       firefox
-      helix
       neofetch
       bitwarden
       discord-ptb
@@ -135,9 +141,8 @@
       unzip
       p7zip
       etcher
-      virt-manager 
+      virt-manager
       imv
-      zathura
       playerctl
       ani-cli
       trackma
@@ -170,12 +175,8 @@
 
   environment.systemPackages = with pkgs; [
    wget
-   git
-   gh
    stow
-   wezterm
    starship
-   nushell
    rustup
    cargo
    jre
@@ -184,7 +185,6 @@
    nodejs
    polkit_gnome
    wireplumber
-   dunst
    qt6.full
    gcc
    cmake
@@ -193,6 +193,7 @@
    python3Full
    python3.pkgs.pip
    gtk-engine-murrine
+   pinentry-gtk2
 
  ];
 
