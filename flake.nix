@@ -28,7 +28,7 @@
             home-manager.nixosModules.home-manager {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
-            home-manager.users.notoh = import ./home/home.nix;
+            home-manager.users.notoh = import ./modules/home/home.nix;
           }
         ];
       };
