@@ -8,6 +8,7 @@
     format = lib.concatStrings [
     "[░▒▓](#f5c2e7)"
     "$username"
+    "$hostname"
     "[](bg:#f38ba8 fg:#f5c2e7)"
     "$directory"
     "[](fg:#f38ba8 bg:#eb7c92)"
@@ -27,7 +28,14 @@
     show_always = true;
     style_user = "bg:#f5c2e7 fg:#11111b";
     style_root = "bg:#f5c2e7 fg:#11111b";
-    format = "[$user ]($style)";
+    format = "[ $user ]($style)";
+  };
+  hostname = {
+    ssh_symbol = "";
+    style = "bg:#f5c2e7 fg:#11111b";
+    format = "[on $hostname]($style)";
+    ssh_only = false;
+    disabled = false;
   };
   directory = {
     style = "bg:#f38ba8 fg:#11111b";
@@ -74,14 +82,12 @@
     symbol = "";
     style = "bg:#e6657f fg:#11111b";
     format = "[ $symbol ($version) ]($style)";
-
   };
   time = {
   disabled = false;
   time_format = "%R"; # Hour:Minute Format
   style = "bg:#e05a75 fg:#11111b";
   format = "[ $time ]($style)";
-    
   };
 
     };
