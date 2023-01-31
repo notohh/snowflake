@@ -13,7 +13,6 @@ snowflake
 + [modules](modules)
   - [home](modules/home) - hosts my dots
   - [hyprland](modules/hyprland) - hosts hyprland stuff, will be moved eventually
-+ [nixos](nixos) - houses my main nix configs
 + [overlays](overlays) - will house overlays eventually
 + [pkgs](pkgs) - will house pkgs eventually
 
