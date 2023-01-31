@@ -168,7 +168,6 @@
       cmatrix
       cava
       hollywood
-      cowsay
     ];
   };
 };
