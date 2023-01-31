@@ -22,7 +22,7 @@
         nixos = lib.nixosSystem {
           inherit system;
           modules = [
-            ./nixos/configuration.nix
+            ./hosts/tsuki/default.nix
             hyprland.nixosModules.default
             {programs.hyprland.enable = true;}
             home-manager.nixosModules.home-manager {
