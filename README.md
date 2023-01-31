@@ -8,8 +8,8 @@ snowflake
 ### :open_book: Table of contents
 ##### will be expanded as i tack on more modules and things get more complex obviously
 + [hosts](hosts)
-  - [tsuki](hosts/tsuki) - will eventually be my main machine config
-  - [hime](hosts/hime) - will eventually be my server config
+  - [tsuki](hosts/tsuki) - my main machine config
+  - [hime](hosts/hime) - my server config
 + [modules](modules)
   - [home](modules/home) - hosts my dots
   - [hyprland](modules/hyprland) - hosts hyprland stuff, will be moved eventually
