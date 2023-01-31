@@ -167,7 +167,6 @@
       pipes-rs
       cmatrix
       cava
-      hollywood
     ];
   };
 };
