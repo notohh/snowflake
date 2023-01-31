@@ -17,3 +17,4 @@ snowflake
 + [fufexan](https://github.com/fufexan) - a ton of home manager stuff
 + [Misterio77](https://github.com/Misterio77) - flake boilerplate
 + [NobbZ](https://github.com/NobbZ) - general nix assistance
++ [MatthiasBenaets](https://github.com/MatthiasBenaets) - amazing nixos introduction video
