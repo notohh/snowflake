@@ -194,13 +194,11 @@
    python3.pkgs.pip
    gtk-engine-murrine
    pinentry-gtk2
-
  ];
 
   fonts = {
     enableDefaultFonts = true;
     fontDir.enable = true;
-
     fonts = with pkgs; [
       inter
       jetbrains-mono
