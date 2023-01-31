@@ -10,6 +10,9 @@ snowflake
 + [modules](modules)
   - [home](modules/home) - hosts my dots
   - [hyprland](modules/hyprland) - hosts hyprland stuff, will be moved eventually
++ [hosts](hosts)
+  - [tsuki](hosts/tsuki) - will eventually be my main machine config
+  - [hime](hosts/hime) - will eventually be my server config
 + [nixos](nixos) - houses my main nix configs
 
 ### :busts_in_silhouette: Credit
