@@ -3,7 +3,7 @@
 snowflake
 </h1>
 <p align="center">:snowflake: a flake or crystal of snow :snowflake:</p>
-<br>
+<img width="1280" height="720" src="https://files.catbox.moe/vnzqum.png"></img>
 
 ### :open_book: Table of contents
 #### will be expanded as i tack on more modules and things get more complex obviously
