@@ -6,8 +6,8 @@
     userEmail = "github@notohh.dev";
     userName = "notohh";
   signing = {
-    key = "";
-    signByDefault = false;
+    key = "BD47506D475EE86D";
+    signByDefault = true;
    };
   ignores = ["*result*" ".direnv" "node_modules"];
 };
