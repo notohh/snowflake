@@ -174,7 +174,6 @@
   environment.systemPackages = with pkgs; [
    wget
    stow
-   starship
    rustup
    cargo
    jre
@@ -183,7 +182,6 @@
    nodejs
    polkit_gnome
    wireplumber
-   qt6.full
    gcc
    cmake
    libvirt
@@ -191,7 +189,19 @@
    python3Full
    python3.pkgs.pip
    gtk-engine-murrine
+   gnupg
    pinentry-gtk2
+  
+  # LSPS
+   nil
+   rust-analyzer
+   gopls
+   sumneko-lua-language-server
+   marksman
+   nodePackages_latest.vscode-html-languageserver-bin
+   nodePackages_latest.vscode-css-languageserver-bin
+   nodePackages_latest.yaml-language-server
+  
  ];
 
   fonts = {

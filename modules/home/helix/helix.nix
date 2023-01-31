@@ -1,8 +1,7 @@
-{config, pkgs, inputs, ...}: {
+{pkgs, inputs, ...}: {
   programs.helix = {
   enable = true;
-  # langauges = import ./languages.nix args;
-  settings = {
+   settings = {
     theme = "catppuccin_mocha";
     editor = {
         true-color = true;
@@ -16,8 +15,39 @@
         indent-guides = {
           render = true;
           rainbow = "dim";
+        
+   languages = [
+      {
+        name = "nix";
+        auto-format = true;
+      }
+      {
+        name = "rust";
+      }
+      {
+        name = "go";
+      }
+      {
+        name = "lua";
+      }
+      {
+        name = "python";
+      }
+      {
+        name = "markdown";
+      }
+      {
+        name = "html";
+      }
+      {
+        name = "css";
+      }
+      {
+        name = "yaml";
+      }
+     ];
     };
+   };
   };
-};
-};
+ };
 }
