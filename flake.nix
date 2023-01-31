@@ -19,7 +19,7 @@
 
     in {
       nixosConfigurations = {
-        nixos = lib.nixosSystem {
+        tsuki = lib.nixosSystem {
           inherit system;
           modules = [
             ./hosts/tsuki/default.nix
