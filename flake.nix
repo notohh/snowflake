@@ -33,5 +33,13 @@
         ];
       };
     };
+      nixosConfigurations = {
+        hime = lib.nixosSystem {
+          inherit system;
+          modules = [
+            ./hosts/hime/default.nix
+        ];
+      };
+    };
   };
 }
