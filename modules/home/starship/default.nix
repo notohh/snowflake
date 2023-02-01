@@ -33,7 +33,7 @@
   hostname = {
     ssh_symbol = "";
     style = "bg:#f5c2e7 fg:#11111b";
-    format = "[on $hostname]($style)";
+    format = "[@ $hostname]($style)";
     ssh_only = false;
     disabled = false;
   };

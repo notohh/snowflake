@@ -3,14 +3,14 @@
 {
 
 imports = [
-  ./gtk/gtk.nix
-  ./wezterm/wezterm.nix
-  ./zathura/zathura.nix
-  ./nushell/nushell.nix
-  ./starship/starship.nix
-  ./dunst/dunst.nix
-  ./helix/helix.nix
-  ./git/git.nix
+  ./gtk
+  ./wezterm
+  ./zathura
+  ./nushell
+  ./starship
+  ./dunst
+  ./helix
+  ./git
 ];
  systemd.user.startServices = "sd-switch";
  programs.home-manager.enable = true;
