@@ -56,11 +56,9 @@ let
     WLR_NO_HARDWARE_CURSORS = "1";
     MOZ_ENABLE_WAYLAND = "1";
     PATH = [
-      "$HOME/bin/:$PATH"
+      "$HOME/.local/bin/:$PATH"
     ];
-
-    GTK_THEME = "Catppuccin-Pink-Dark";
-    XCURSOR_THEME = "Catppuccin-Mocha-Pink";
+    
     XCURSOR_SIZE = "24";
 
   };
