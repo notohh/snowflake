@@ -7,14 +7,14 @@ snowflake
 
 ### :open_book: Table of contents
 ##### will be expanded as i tack on more modules and things get more complex obviously
-+ [hosts](hosts)
-  - [tsuki](hosts/tsuki) - my main machine config
-  - [hime](hosts/hime) - my server config
-+ [modules](modules)
-  - [home](modules/home) - hosts my dots
-  - [hyprland](modules/hyprland) - hosts hyprland stuff, will be moved eventually
-+ [overlays](overlays) - will house overlays eventually
-+ [pkgs](pkgs) - will house pkgs eventually
++ :computer: [hosts](hosts)
+  - :full_moon: [tsuki](hosts/tsuki) - my main machine config
+  - :princess: [hime](hosts/hime) - my server config
++ :electric_plug: [modules](modules)
+  - :house_with_garden: [home](modules/home) - houses my dots
+  - :droplet: [wayland](modules/wayland) - houses hyprland stuff for now
++ :airplane: [overlays](overlays) - will house overlays eventually
++ :package: [pkgs](pkgs) - will house pkgs eventually
 
 ### :busts_in_silhouette: Credit
 ##### people who inspired me to dive into nix, and i've stolen stuff from (you guys are awesome!)
