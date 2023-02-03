@@ -12,6 +12,7 @@ imports = [
   ./helix
   ./git
   ./lf
+  ./waybar
 ];
  systemd.user.startServices = "sd-switch";
  programs.home-manager.enable = true;

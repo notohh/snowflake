@@ -4,7 +4,7 @@
   imports =
     [ 
     ./hardware-configuration.nix
-    ../../modules/hyprland/default.nix
+    ../../modules/home/wayland
     ];
 
   # bootloader 
@@ -63,6 +63,7 @@
        gdm.enable = true;
        gdm.wayland = true;
      };
+    desktopManager.plasma5.enable = false;
    };
 }; 
 
@@ -76,6 +77,7 @@
     enableSSHSupport = true;
     pinentryFlavor = "gtk2";
   };
+
   services.pcscd.enable = true;
 
   sound.enable = true;
@@ -113,6 +115,7 @@
     ];
    };
  };
+
   users = {
   defaultUserShell = pkgs.nushell;
   users.notoh = {
@@ -122,19 +125,17 @@
     packages = with pkgs; [
    # essential
       firefox
-      neofetch
       bitwarden
       spotify-player
       discord-ptb
       mpv
 
-   # coding
+   # dev
       jetbrains.pycharm-community
       lazygit
 
    # utility 
       waybar
-      xplr
       btop
       nvtop
       obs-studio
@@ -144,7 +145,6 @@
       etcher
       virt-manager
       imv
-      playerctl
       ani-cli
       trackma
       appimage-run
@@ -168,6 +168,7 @@
       pipes-rs
       cmatrix
       cava
+      hollywood
     ];
   };
 };
@@ -178,29 +179,19 @@
    rustup
    cargo
    jre
-   jdk
-   jq
    nodejs
    polkit_gnome
-   wireplumber
-   gcc
-   cmake
    libvirt
    qemu_kvm
    python3Full
    python3.pkgs.pip
    gtk-engine-murrine
-   gnupg
    pinentry-gtk2
-  
-  # LSPS
    nil
    rust-analyzer
    gopls
    sumneko-lua-language-server
    marksman
-   nodePackages_latest.vscode-html-languageserver-bin
-   nodePackages_latest.vscode-css-languageserver-bin
    nodePackages_latest.yaml-language-server
   
  ];
