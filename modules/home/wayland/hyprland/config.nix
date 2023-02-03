@@ -175,5 +175,5 @@ exec-once=swww img ~/Pictures/wallpapers/annystartingshort.gif
 # swayidle / lock
 exec-once=~/bin/lock
 
-  ''
+  '';
 }
