@@ -12,7 +12,6 @@ snowflake
   - :princess: [hime](hosts/hime) - my server config
 + :electric_plug: [modules](modules)
   - :house_with_garden: [home](modules/home) - houses my dots
-  - :droplet: [wayland](modules/wayland) - houses hyprland stuff for now
 + :airplane: [overlays](overlays) - will house overlays eventually
 + :package: [pkgs](pkgs) - will house pkgs eventually
 
