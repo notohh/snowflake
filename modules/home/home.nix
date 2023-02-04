@@ -11,8 +11,10 @@ imports = [
   ./dunst
   ./helix
   ./git
+  ./lazygit
   ./lf
   ./waybar
+  ./wayland/hyprland
 ];
  systemd.user.startServices = "sd-switch";
  programs.home-manager.enable = true;

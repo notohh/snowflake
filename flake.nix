@@ -6,8 +6,9 @@
       inputs.nixpkgs.follows = "nixpkgs";
      };  
     hyprland.url = "github:hyprwm/Hyprland";
+    flake-utils.url = "github:numtide/flake-utils";
   };
-  outputs = { self, nixpkgs, home-manager, hyprland, ... }:
+  outputs = { self, nixpkgs, home-manager, hyprland, flake-utils, ... }:
     let
       system = "x86_64-linux";
       pkgs = import nixpkgs {
@@ -22,13 +23,18 @@
         tsuki = lib.nixosSystem {
           inherit system;
           modules = [
-            ./hosts/tsuki/default.nix
+            ./hosts/tsuki
             hyprland.nixosModules.default
             {programs.hyprland.enable = true;}
             home-manager.nixosModules.home-manager {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
-            home-manager.users.notoh = import ./modules/home/home.nix;
+            home-manager.users.notoh = {
+              imports = [
+                hyprland.homeManagerModules.default
+                ./modules/home/home.nix
+              ];
+            };
           }
         ];
       };
@@ -37,7 +43,7 @@
         hime = lib.nixosSystem {
           inherit system;
           modules = [
-            ./hosts/hime/default.nix
+            ./hosts/hime
         ];
       };
     };

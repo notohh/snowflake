@@ -1,7 +1,5 @@
 {
   config,
-  pkgs,
-  default,
   ...
 }: {
   wayland.windowManager.hyprland.extraConfig = ''
