@@ -59,12 +59,8 @@
     xserver = {
      enable = true;
      videoDrivers = [ "nvidia" ];
-  };
-};
-
-  services.xserver = {
-    layout = "us";
-    xkbVariant = "";
+     layout = "us";
+     xkbVariant = "";
     displayManager = {
       gdm = {
         enable = true;
@@ -72,6 +68,7 @@
       };
     };
   };
+};
 
   programs.gnupg.agent = {
     enable = true;
@@ -151,6 +148,7 @@
       qbittorrent
       gdu
       cryptomator
+      gimp
       
    # gaming
       wine
