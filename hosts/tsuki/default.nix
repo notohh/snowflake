@@ -61,12 +61,6 @@
      videoDrivers = [ "nvidia" ];
      layout = "us";
      xkbVariant = "";
-    displayManager = {
-      gdm = {
-        enable = true;
-        wayland = true;
-      };
-    };
   };
 };
 
@@ -173,7 +167,7 @@
 
   environment.systemPackages = with pkgs; [
    wget
-   stow
+   dconf
    rustup
    cargo
    jre
