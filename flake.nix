@@ -38,7 +38,6 @@
         ];
       };
     };
-      nixosConfigurations = {
         hime = lib.nixosSystem {
           inherit system;
           modules = [
@@ -46,5 +45,4 @@
         ];
       };
     };
-  };
 }
