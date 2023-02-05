@@ -59,17 +59,18 @@
     xserver = {
      enable = true;
      videoDrivers = [ "nvidia" ];
-     displayManager = {
-       gdm.enable = true;
-       gdm.wayland = true;
-     };
-    desktopManager.plasma5.enable = false;
-   };
-}; 
+  };
+};
 
   services.xserver = {
     layout = "us";
     xkbVariant = "";
+    displayManager = {
+      gdm = {
+        enable = true;
+        wayland = true;
+      };
+    };
   };
 
   programs.gnupg.agent = {
@@ -125,6 +126,7 @@
     packages = with pkgs; [
    # essential
       firefox
+      neofetch
       bitwarden
       spotify-player
       discord-ptb
@@ -132,10 +134,8 @@
 
    # dev
       jetbrains.pycharm-community
-      lazygit
 
    # utility 
-      waybar
       btop
       nvtop
       obs-studio
