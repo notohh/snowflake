@@ -5,8 +5,8 @@ snowflake
 <p align="center">:snowflake: a flake or crystal of snow :snowflake:</p>
 <img src="https://files.catbox.moe/hqpr0u.png"></img>
 
-### :open_book: Table of contents
-##### will be expanded as i tack on more modules and things get more complex obviously
+## :open_book: Table of contents
+#### will be expanded as i tack on more modules and things get more complex obviously
 + :computer: [hosts](hosts)
   - :full_moon: [tsuki](hosts/tsuki) - my main machine config
   - :princess: [hime](hosts/hime) - my server config
@@ -15,8 +15,8 @@ snowflake
 + :airplane: [overlays](overlays) - will house overlays eventually
 + :package: [pkgs](pkgs) - will house pkgs eventually
 
-### :busts_in_silhouette: Credit
-##### people who inspired me to dive into nix, and i've stolen stuff from (you guys are awesome!)
+## :busts_in_silhouette: Credit
+#### people who inspired me to dive into nix, and i've stolen stuff from (you guys are awesome!)
 + [fufexan](https://github.com/fufexan) - a ton of home manager stuff
 + [Misterio77](https://github.com/Misterio77) - flake, and some other boilerplate
 + [NobbZ](https://github.com/NobbZ) - general nix assistance
