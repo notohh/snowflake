@@ -1,5 +1,6 @@
 {
   default,
+  pkgs,
   ...
 }: {
   imports = [./config.nix];
