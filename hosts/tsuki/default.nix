@@ -61,6 +61,11 @@
      videoDrivers = [ "nvidia" ];
      layout = "us";
      xkbVariant = "";
+     displayManager = {
+      lightdm = {
+        enable = true;
+      };
+    };
   };
 };
 
@@ -143,6 +148,7 @@
       gdu
       cryptomator
       gimp
+      chromium
       
    # gaming
       wine
@@ -185,6 +191,7 @@
    sumneko-lua-language-server
    marksman
    nodePackages_latest.yaml-language-server
+   python310Packages.python-lsp-server
   
  ];
 
