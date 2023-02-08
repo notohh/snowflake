@@ -13,6 +13,7 @@ imports = [
   ./git
   ./lazygit
   ./lf
+  ./mpv
   ./waybar
   ./wayland/hyprland
 ];
