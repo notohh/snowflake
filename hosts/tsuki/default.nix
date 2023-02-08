@@ -63,7 +63,7 @@
      xkbVariant = "";
      displayManager = {
       lightdm = {
-        enable = true;
+        enable = false;
       };
     };
   };
@@ -126,7 +126,6 @@
       bitwarden
       spotify-player
       discord-ptb
-      mpv
 
    # dev
       jetbrains.pycharm-community
