@@ -40,6 +40,10 @@
    kbdInteractiveAuthentication = false;
   };
 
+  services.fstrim = {
+    enable = true;
+  };
+
   virtualisation.docker.enable = true;
   users.users.oh = {
     isNormalUser = true;
