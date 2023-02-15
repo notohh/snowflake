@@ -148,6 +148,7 @@
       cryptomator
       gimp
       chromium
+      ventoy-bin-full
       
    # gaming
       wine
@@ -173,7 +174,10 @@
   environment.systemPackages = with pkgs; [
    wget
    dconf
+   rustc
    rustup
+   rustfmt
+   go
    cargo
    jre
    nodejs
