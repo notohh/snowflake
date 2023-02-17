@@ -66,6 +66,7 @@
      python3.pkgs.pip
      git
      gh
+     nfs-utils
   ];
 
   nix = {
