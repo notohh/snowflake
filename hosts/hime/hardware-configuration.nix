@@ -15,7 +15,7 @@
       fsType = "ext4";
     };
   fileSystems."/home/oh/nas" = 
-  { device = "192.168.1.71:/volume1/nextcloud";
+  { device = "192.168.1.71:/volume1/hime";
     fsType = "nfs";
   };
 
