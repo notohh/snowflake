@@ -148,6 +148,7 @@
       cryptomator
       gimp
       chromium
+      obsidian
       ventoy-bin-full
       
    # gaming
@@ -188,6 +189,7 @@
    python3.pkgs.pip
    gtk-engine-murrine
    pinentry-gtk2
+   nfs-utils
    nil
    rust-analyzer
    gopls
