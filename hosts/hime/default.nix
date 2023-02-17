@@ -6,9 +6,14 @@
     ./hardware-configuration.nix
     ];
 
-  boot.loader.grub.enable = true;
-  boot.loader.grub.device = "/dev/sda";
-  boot.loader.grub.useOSProber = true;
+  boot.loader = {
+    grub = {
+      enable = true;
+      configurationLimit = 5;
+      device = "/dev/sda";
+      useOSProber = false;
+    };
+  };
 
   networking.hostName = "hime";
   networking.networkmanager.enable = true;
