@@ -14,6 +14,10 @@
     { device = "/dev/disk/by-uuid/154e6059-35f9-49bb-b049-085b325ac997";
       fsType = "ext4";
     };
+  fileSystems."/home/oh/nas" = 
+  { device = "192.168.1.71:/volume1/hime";
+    fsType = "nfs";
+  };
 
   swapDevices =
     [ { device = "/dev/disk/by-uuid/15978bb3-da9b-4ec2-bd35-1716dd97812b"; }
