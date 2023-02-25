@@ -59,6 +59,7 @@
      helix
      lazygit
      hugo
+     yt-dlp
    ];
   };
 
