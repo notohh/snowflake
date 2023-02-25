@@ -18,6 +18,14 @@
   { device = "192.168.1.71:/volume1/hime";
     fsType = "nfs";
   };
+  fileSystems."/home/oh/docker/nextcloud" =
+  { device = "192.168.1.71:/volume1/nextcloud";
+    fsType = "nfs";
+  };
+  fileSystems."/home/oh/docker/stash/data" = 
+  { device = "192.168.1.71:/volume1/stash";
+    fsType = "nfs";
+  };
 
   swapDevices =
     [ { device = "/dev/disk/by-uuid/15978bb3-da9b-4ec2-bd35-1716dd97812b"; }
