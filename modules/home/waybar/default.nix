@@ -36,7 +36,7 @@
           size = 24;
         };
         "user" ={
-          format = "{user} (up {work_H} hrs, {work_d} days ↑)";
+          format = "{user} (up {work_d} days, {work_H} hrs ↑)";
           interval = 60;
           icon = false;
         };
