@@ -125,7 +125,7 @@
       neofetch
       bitwarden
       spotify-player
-      discord-ptb
+      webcord
 
    # dev
       jetbrains.pycharm-community
