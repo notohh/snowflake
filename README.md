@@ -22,3 +22,4 @@ snowflake
 + [NobbZ](https://github.com/NobbZ) - general nix assistance
 + [MatthiasBenaets](https://github.com/MatthiasBenaets) - amazing nixos introduction video
 + [sioodmy](https://github.com/sioodmy) - general dotfile stuff
++ p[hlissner](https://github.com/hlissner) - security.nix

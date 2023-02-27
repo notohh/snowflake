@@ -5,6 +5,7 @@
     [ 
     ./hardware-configuration.nix
     ../../modules/home/wayland
+    ../../modules/security.nix
     ];
 
   # bootloader 
@@ -111,7 +112,7 @@
     nvidia-vaapi-driver
     ];
    };
-
+ };
   users = {
   defaultUserShell = pkgs.nushell;
   users.notoh = {
