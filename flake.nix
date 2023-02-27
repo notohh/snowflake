@@ -24,7 +24,6 @@
           inherit system;
           modules = [
             ./hosts/tsuki
-            hyprland.nixosModules.default
             home-manager.nixosModules.home-manager {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
