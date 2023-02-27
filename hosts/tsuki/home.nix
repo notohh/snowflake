@@ -3,19 +3,19 @@
 {
 
 imports = [
-  ./gtk
-  ./wezterm
-  ./zathura
-  ./nushell
-  ./starship
-  ./dunst
-  ./helix
-  ./git
-  ./lazygit
-  ./lf
-  ./mpv
-  ./waybar
-  ./wayland/hyprland
+  ../../modules/home/gtk
+  ../../modules/home/wezterm
+  ../../modules/home/zathura
+  ../../modules/home/nushell
+  ../../modules/home/starship
+  ../../modules/home/dunst
+  ../../modules/home/helix
+  ../../modules/home/git
+  ../../modules/home/lazygit
+  ../../modules/home/lf
+  ../../modules/home/mpv
+  ../../modules/home/waybar
+  ../../modules/home/wayland/hyprland
 ];
 
  systemd.user.startServices = "sd-switch";

@@ -30,7 +30,7 @@
             home-manager.users.notoh = {
               imports = [
                 hyprland.homeManagerModules.default
-                ./modules/home/home.nix
+                ./hosts/tsuki/home.nix
               ];
             };
           }
@@ -40,6 +40,15 @@
           inherit system;
           modules = [
             ./hosts/hime
+            home-manager.nixosModules.home-manager {
+            home-manager.useGlobalPkgs = true;
+            home-manager.useUserPackages = true;
+            home-manager.users.oh = {
+              imports = [
+                ./hosts/hime/home.nix
+              ];
+            };
+          }
         ];
       };
     };
