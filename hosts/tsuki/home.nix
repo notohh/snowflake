@@ -3,15 +3,12 @@
 {
 
 imports = [
-  ../../modules/home/gtk
+  ../../modules/common.nix
   ../../modules/home/wezterm
   ../../modules/home/zathura
-  ../../modules/home/nushell
-  ../../modules/home/starship
+  ../../modules/home/gtk
   ../../modules/home/dunst
   ../../modules/home/helix
-  ../../modules/home/git
-  ../../modules/home/lazygit
   ../../modules/home/lf
   ../../modules/home/mpv
   ../../modules/home/waybar
