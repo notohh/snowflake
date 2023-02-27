@@ -50,8 +50,9 @@
   };
 
   virtualisation.docker.enable = true;
-  users.users.oh = {
-    defaultUserShell = pkgs.nushell;
+  users ={
+  defaultUserShell = pkgs.nushell;
+  users.oh = {
     isNormalUser = true;
     description = "oh";
     extraGroups = [ "networkmanager" "wheel" ];
@@ -63,6 +64,7 @@
      yt-dlp
    ];
   };
+}
 
   nixpkgs.config.allowUnfree = true;
 
