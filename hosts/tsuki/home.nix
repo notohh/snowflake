@@ -8,7 +8,6 @@ imports = [
   ../../modules/home/zathura
   ../../modules/home/gtk
   ../../modules/home/dunst
-  ../../modules/home/helix
   ../../modules/home/lf
   ../../modules/home/mpv
   ../../modules/home/waybar

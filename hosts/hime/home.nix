@@ -13,5 +13,4 @@ imports = [
     homeDirectory = "/home/oh";
     stateVersion = "23.05";
   };
-
 }
