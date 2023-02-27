@@ -28,12 +28,12 @@
     show_always = true;
     style_user = "bg:#f5c2e7 fg:#11111b";
     style_root = "bg:#f5c2e7 fg:#11111b";
-    format = "[ $user ]($style)";
+    format = "[ $user]($style)";
   };
   hostname = {
     ssh_symbol = "";
     style = "bg:#f5c2e7 fg:#11111b";
-    format = "[@ $hostname]($style)";
+    format = "[@$hostname]($style)";
     ssh_only = false;
     disabled = false;
   };
