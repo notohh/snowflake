@@ -64,7 +64,7 @@
      yt-dlp
    ];
   };
-}
+};
 
   nixpkgs.config.allowUnfree = true;
 
