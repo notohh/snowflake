@@ -17,13 +17,13 @@ imports = [
   ./waybar
   ./wayland/hyprland
 ];
+
  systemd.user.startServices = "sd-switch";
  programs.home-manager.enable = true;
 
   home = {
     username = "notoh";
     homeDirectory = "/home/notoh";
-    stateVersion = "23.05";
     packages = with pkgs; [
       firefox
       neofetch
@@ -31,7 +31,6 @@ imports = [
       discord
       spotify-player
       btop
-      nvtop
       obs-studio
       pavucontrol
       unzip
@@ -62,6 +61,7 @@ imports = [
       cava
       hollywood
     ];
+    
+    stateVersion = "23.05";
   };
-
 }
