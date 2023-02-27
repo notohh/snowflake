@@ -51,6 +51,7 @@
 
   virtualisation.docker.enable = true;
   users.users.oh = {
+    defaultUserShell = pkgs.nushell;
     isNormalUser = true;
     description = "oh";
     extraGroups = [ "networkmanager" "wheel" ];
