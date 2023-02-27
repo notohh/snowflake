@@ -111,7 +111,6 @@
     nvidia-vaapi-driver
     ];
    };
- };
 
   users = {
   defaultUserShell = pkgs.nushell;
@@ -119,56 +118,6 @@
     isNormalUser = true;
     description = "notoh";
     extraGroups = [ "networkmanager" "wheel" "disk" "video" ];
-    packages = with pkgs; [
-   # essential
-      firefox
-      neofetch
-      bitwarden
-      spotify-player
-      webcord
-
-   # dev
-      jetbrains.pycharm-community
-
-   # utility 
-      btop
-      nvtop
-      obs-studio
-      pavucontrol
-      unzip
-      p7zip
-      etcher
-      virt-manager
-      imv
-      ani-cli
-      trackma
-      appimage-run
-      qbittorrent
-      gdu
-      cryptomator
-      gimp
-      chromium
-      obsidian
-      ventoy-bin-full
-      
-   # gaming
-      wine
-      lutris
-      gamemode
-      gamescope
-      mangohud
-      bottles
-      osu-lazer-bin
-      runelite
-      prismlauncher
-
-   # fun stuff
-      cbonsai
-      pipes-rs
-      cmatrix
-      cava
-      hollywood
-    ];
   };
 };
 
