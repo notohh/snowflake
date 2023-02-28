@@ -51,6 +51,21 @@
           }
         ];
       };
+       sutakku = lib.nixosSystem {
+        inherit system;
+        modules = [
+          ./hosts/sutakku
+          home-manager.nixosModules.home-manager {
+            home-manager.useGlobalPkgs = true;
+            home-manager.useUserPackages = true;
+            home-manager.users.oh = {
+              imports = [
+                ./hosts/sutakku/home.nix
+              ];
+            };
+          }
+        ];
+      };
     };
   };    
 }
