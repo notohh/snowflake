@@ -42,6 +42,7 @@ imports = [
       obsidian
       ventoy-bin-full
       yt-dlp
+      plex-media-player
       wine
       lutris
       gamemode
