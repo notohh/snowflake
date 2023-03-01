@@ -41,8 +41,8 @@
 
   services.openssh = {
    enable = true;
-   passwordAuthentication = true;
-   kbdInteractiveAuthentication = false;
+   PasswordAuthentication = true;
+   KbdInteractiveAuthentication = false;
   };
 
   services.fstrim = {
@@ -58,8 +58,6 @@
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
      neofetch
-     helix
-     lazygit
      hugo
      yt-dlp
    ];
