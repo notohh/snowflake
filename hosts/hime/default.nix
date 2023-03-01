@@ -84,6 +84,12 @@
      experimental-features = nix-command flakes
      warn-dirty = false
     '';
+    settings.auto-optimise-store = true;
+    gc = {
+      automatic = true;
+      dates = "weekly";
+      options = "--delete-older-than 7d";
+    };
   };
 
   system.stateVersion = "23.05";
