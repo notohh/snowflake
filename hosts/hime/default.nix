@@ -41,9 +41,11 @@
 
   services.openssh = {
    enable = true;
+  settings = {
    PasswordAuthentication = true;
    KbdInteractiveAuthentication = false;
   };
+};
 
   services.fstrim = {
     enable = true;
