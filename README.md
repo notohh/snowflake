@@ -10,11 +10,12 @@ snowflake
 + :computer: [hosts](hosts)
   - :full_moon: [tsuki](hosts/tsuki) - my main machine config
   - :princess: [hime](hosts/hime) - my server config
+  - :white_flower: [sutakku](hosts/sutakku) - *arr stack vm
 + :electric_plug: [modules](modules)
   - :house_with_garden: [home](modules/home) - houses my dots
 + :airplane: [overlays](overlays) - will house overlays eventually
 + :package: [pkgs](pkgs) - will house pkgs eventually
-+ 🔒 [secrets](secrets) - houses my secrets
++ :lock: [secrets](secrets) - houses my secrets
 
 ## :busts_in_silhouette: Credit
 #### people who've inspired me to dive into nix, and i've stolen stuff from (you guys are awesome!)
