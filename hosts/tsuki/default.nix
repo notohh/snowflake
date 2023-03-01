@@ -5,7 +5,8 @@
     [ 
     ./hardware-configuration.nix
     ../../modules/home/wayland
-    ../../modules/security.nix
+    ../common/security.nix
+    ../common/tailscale.nix
     ];
 
   # bootloader 

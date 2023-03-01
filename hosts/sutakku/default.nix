@@ -4,6 +4,8 @@
   imports =
     [ 
     ./hardware-configuration.nix
+    ../common/tailscale.nix
+    ../common/security.nix
     ];
 
   boot.loader = {

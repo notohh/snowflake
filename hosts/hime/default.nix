@@ -4,6 +4,8 @@
   imports =
     [
     ./hardware-configuration.nix
+    ../common/tailscale.nix
+    ../common/security.nix
     ];
 
   boot.loader = {
@@ -41,9 +43,9 @@
 
   services.openssh = {
    enable = true;
-  settings = {
-   PasswordAuthentication = true;
-   KbdInteractiveAuthentication = false;
+   settings = {
+    PasswordAuthentication = true;
+    KbdInteractiveAuthentication = false;
   };
 };
 
