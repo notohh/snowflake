@@ -105,11 +105,6 @@ device:epic mouse V1 {
     sensitivity = -0.5
 }
 
-misc {
-    animate_manual_resizes = false
-    animate_mouse_windowdragging = false    
-}
-
 # Example windowrule v1
 # windowrule = float, ^(kitty)$
 # Example windowrule v2
