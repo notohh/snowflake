@@ -60,6 +60,7 @@ let
     ];
     
     XCURSOR_SIZE = "24";
+    NIXOS_OZONE_WL = "1";
 
   };
 

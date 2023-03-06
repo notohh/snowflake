@@ -68,7 +68,7 @@
       };
     };
   };
-};
+ };
 
   programs.gnupg.agent = {
     enable = true;
@@ -189,9 +189,10 @@
       options = "--delete-older-than 7d";
     };
      settings = {
+      builders-use-substitutes = true;
       substituters = [
       "https://hyprland.cachix.org"
-      "https://cache.nixos.org?priority=10"
+      "https://cache.nixos.org"
       ];
       trusted-public-keys = [
       "hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc="
@@ -205,12 +206,13 @@
     channel = "https://nixos.org/channel/nixos-unstable";
   };
 
-  nixpkgs.config.permittedInsecurePackages = [
+  nixpkgs.config = {
+    permittedInsecurePackages = [
     "qtwebkit-5.212.0-alpha4"
     "electron-12.2.3"
   ];
-   
-nixpkgs.config.allowUnfree = true;
+  allowUnfree = true;
+};
 system.stateVersion = "23.05";
 
 }
