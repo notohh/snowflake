@@ -5,6 +5,12 @@
      local wezterm = require 'wezterm'
 
      return {
+       front_end = "WebGpu",
+       webgpu_preferred_adapter = {
+        backend="Vulkan",
+        device_type="DiscreteGpu",
+        name="NVIDIA GeForce GTX 1070 Ti"
+   },
        enable_wayland = false,
        font = wezterm.font 'Comic Code Ligatures',
        font_size = 12.0,
