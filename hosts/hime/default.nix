@@ -4,7 +4,7 @@
   imports =
     [
     ./hardware-configuration.nix
-    ../common
+    ../../modules/services
     ];
 
   boot.loader = {

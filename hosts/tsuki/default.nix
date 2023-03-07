@@ -4,8 +4,8 @@
   imports =
     [ 
     ./hardware-configuration.nix
-    ../../modules/home/wayland
-    ../common
+    ../../home/wayland
+    ../../modules/services
     ];
 
   # bootloader 

@@ -3,15 +3,15 @@
 {
 
 imports = [
-  ../../modules/common.nix
-  ../../modules/home/wezterm
-  ../../modules/home/zathura
-  ../../modules/home/gtk
-  ../../modules/home/dunst
-  ../../modules/home/lf
-  ../../modules/home/mpv
-  ../../modules/home/waybar
-  ../../modules/home/wayland/hyprland
+  ../../home
+  ../../home/wezterm
+  ../../home/zathura
+  ../../home/gtk
+  ../../home/dunst
+  ../../home/lf
+  ../../home/mpv
+  ../../home/waybar
+  ../../home/wayland/hyprland
 ];
 
  systemd.user.startServices = "sd-switch";

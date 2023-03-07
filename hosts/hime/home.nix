@@ -3,7 +3,7 @@
 {
 
 imports = [
-  ../../modules/common.nix
+  ../../home
 ];
  systemd.user.startServices = "sd-switch";
  programs.home-manager.enable = true;

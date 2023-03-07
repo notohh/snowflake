@@ -2,8 +2,8 @@
   default,
   ...
 }: {
-   imports = [
+  imports = [
     ./tailscale.nix
     ./security.nix
-  ]; 
+  ];
 }

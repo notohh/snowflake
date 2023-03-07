@@ -7,12 +7,13 @@ snowflake
 
 ## :open_book: Table of contents
 #### will be expanded as i tack on more modules and things get more complex obviously
++ :house_with_garden: [home](home) - houses my dots
 + :computer: [hosts](hosts)
   - :full_moon: [tsuki](hosts/tsuki) - my main machine config
   - :princess: [hime](hosts/hime) - my server config
-  - :white_flower: [sutakku](hosts/sutakku) - *arr stack vm
+  - :white_flower: [sutakku](hosts/sutakku) - (currently) my *arr stack vm
 + :electric_plug: [modules](modules)
-  - :house_with_garden: [home](modules/home) - houses my dots
+  - :scroll: [services](modules/services) - houses services
 + :airplane: [overlays](overlays) - will house overlays eventually
 + :package: [pkgs](pkgs) - will house pkgs eventually
 + :lock: [secrets](secrets) - houses my secrets
@@ -24,4 +25,4 @@ snowflake
 + [NobbZ](https://github.com/NobbZ) - general nix assistance
 + [MatthiasBenaets](https://github.com/MatthiasBenaets) - amazing nixos introduction video
 + [sioodmy](https://github.com/sioodmy) - general dotfile stuff
-+ [hlissner](https://github.com/hlissner) - [security.nix](modules/security.nix)
++ [hlissner](https://github.com/hlissner) - [security.nix](modules/services/security.nix)
