@@ -35,8 +35,7 @@ let
     extraPortals = with pkgs; [ 
 
   ];
-
-  };
+ };
 
   programs.xwayland.enable = true;
 
@@ -47,21 +46,18 @@ let
     WLR_DRM_NO_ATOMIC = "1";
     __GLX_VENDOR_LIBRARY_NAME = "nvidia";
     _JAVA_AWT_WM_NONREPARENTING = "1";
-
-    # Will break SDDM if running X11
     QT_QPA_PLATFORM = "wayland";
     QT_WAYLAND_DISABLE_WINDOWDECORATION = "1";
-
     GDK_BACKEND = "wayland";
     WLR_NO_HARDWARE_CURSORS = "1";
     MOZ_ENABLE_WAYLAND = "1";
+    WLR_BACKEND = "vulkan";
+    WLR_RENDERER = "vulkan";
+    XCURSOR_SIZE = "24";
+    NIXOS_OZONE_WL = "1";
     PATH = [
       "$HOME/.local/bin/:$PATH"
     ];
-    
-    XCURSOR_SIZE = "24";
-    NIXOS_OZONE_WL = "1";
-
   };
 
   services.greetd = {
