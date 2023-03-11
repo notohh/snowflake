@@ -8,6 +8,7 @@
     ./helix
     ./git
     ./lazygit
+    ./zellij
   ];
   
 }
