@@ -10,6 +10,7 @@ imports = [
   ../../home/dunst
   ../../home/lf
   ../../home/mpv
+  ../../home/zellij
   ../../home/waybar
   ../../home/wayland/hyprland
 ];
