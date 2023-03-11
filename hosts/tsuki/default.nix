@@ -145,6 +145,7 @@
    gopls
    sumneko-lua-language-server
    marksman
+   texlab
    nodePackages_latest.yaml-language-server
    python310Packages.python-lsp-server
   

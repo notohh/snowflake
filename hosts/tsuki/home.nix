@@ -10,7 +10,6 @@ imports = [
   ../../home/dunst
   ../../home/lf
   ../../home/mpv
-  ../../home/zellij
   ../../home/waybar
   ../../home/wayland/hyprland
 ];
@@ -37,10 +36,10 @@ imports = [
       appimage-run
       qbittorrent
       gdu
+      nb
       cryptomator
       jetbrains.pycharm-community
       chromium
-      obsidian
       ventoy-bin-full
       yt-dlp
       plex-media-player
