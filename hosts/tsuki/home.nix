@@ -9,6 +9,7 @@ imports = [
   ../../home/gtk
   ../../home/dunst
   ../../home/lf
+  ../../home/zellij
   ../../home/mpv
   ../../home/waybar
   ../../home/wayland/hyprland
