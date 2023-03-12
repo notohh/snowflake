@@ -1,6 +1,7 @@
-{config, pkgs, ...}:
-
 {
+  default,
+  ...
+}: {
   programs.lf = {
     enable = true;
     settings = {

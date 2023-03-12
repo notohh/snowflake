@@ -2,7 +2,7 @@
   default,
   ...
 }: {
-  home.file.".config/zellij/dev.kdl".text = ''
+  home.file.".config/zellij/snowflake.kdl".text = ''
   layout {
     tab name="main" {
         pane size=1 borderless=true {

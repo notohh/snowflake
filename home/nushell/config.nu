@@ -538,5 +538,6 @@ let-env config = {
 
 source ~/.cache/starship/init.nu
 
-alias v = nvim
-
+alias ze = zellij
+alias zed = zellij --layout ../.config/zellij/snowflake.kdl
+alias zes = zellij --layout ./config/zellij/ssh.kdl

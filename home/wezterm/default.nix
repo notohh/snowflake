@@ -1,5 +1,8 @@
-{default, ...}: {
-  programs.wezterm = {
+{
+  default,
+  ...
+}: {
+    programs.wezterm = {
     enable = true;
     extraConfig = ''
      local wezterm = require 'wezterm'

@@ -1,4 +1,7 @@
-{pkgs, inputs, ...}: {
+{
+  default,
+  ...
+}: {
   programs.helix = {
   enable = true;
    settings = {
