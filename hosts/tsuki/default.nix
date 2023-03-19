@@ -37,6 +37,8 @@
     "resolv.conf".text = "nameserver 192.168.1.45\n";
   };
 
+  systemd.services.systemd-udevd.restartIfChanged = false;
+
   time.timeZone = "America/New_York";
 
   i18n.defaultLocale = "en_US.UTF-8";
@@ -112,6 +114,10 @@
     nvidia-vaapi-driver
     ];
    };
+  opentabletdriver = {
+    enable = true;
+    daemon.enable = true;
+  };
  };
   users = {
   defaultUserShell = pkgs.nushell;

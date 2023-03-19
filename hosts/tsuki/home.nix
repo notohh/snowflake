@@ -23,7 +23,6 @@ imports = [
     homeDirectory = "/home/notoh";
     packages = with pkgs; [
       firefox
-      neofetch
       bitwarden
       discord
       spotify-player
