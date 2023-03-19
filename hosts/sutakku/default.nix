@@ -52,11 +52,7 @@
    nixpkgs.config.allowUnfree = true;
 
   environment.systemPackages = with pkgs; [
-    helix
     wget
-    git
-    gh
-    lazygit
     nfs-utils
     pinentry-curses
   ];

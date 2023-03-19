@@ -59,7 +59,6 @@
     description = "oh";
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
-     neofetch
      hugo
      yt-dlp
    ];
@@ -72,9 +71,6 @@
      docker-compose
      wget
      python3Full
-     python3.pkgs.pip
-     git
-     gh
      nfs-utils
   ];
 
