@@ -12,7 +12,7 @@
   boot.loader = {
     systemd-boot = {
       enable = true;
-      configurationLimit = 5;
+      configurationLimit = 8;
     };
     efi = {
       canTouchEfiVariables = true;
@@ -36,8 +36,6 @@
     environment.etc = {
     "resolv.conf".text = "nameserver 192.168.1.45\n";
   };
-
-  systemd.services.systemd-udevd.restartIfChanged = false;
 
   time.timeZone = "America/New_York";
 
@@ -136,13 +134,10 @@
    rustfmt
    go
    cargo
-   jre
    nodejs
    polkit_gnome
    libvirt
    qemu_kvm
-   python3Full
-   python3.pkgs.pip
    gtk-engine-murrine
    pinentry-gtk2
    nfs-utils
@@ -188,14 +183,14 @@
      extraOptions = ''
       experimental-features = nix-command flakes
       warn-dirty = false
-      '';
-     settings.auto-optimise-store = true;
-     gc = {
+      ''; 
+    gc = {
       automatic = true;
       dates = "weekly";
       options = "--delete-older-than 7d";
     };
      settings = {
+      auto-optimise-store = true;
       builders-use-substitutes = true;
       substituters = [
       "https://hyprland.cachix.org"
@@ -208,11 +203,6 @@
      };
    };
 
-   system.autoUpgrade = {
-    enable = false;
-    channel = "https://nixos.org/channel/nixos-unstable";
-  };
-
   nixpkgs.config = {
     permittedInsecurePackages = [
     "qtwebkit-5.212.0-alpha4"
@@ -220,6 +210,7 @@
   ];
   allowUnfree = true;
 };
+
 system.stateVersion = "23.05";
 
 }
