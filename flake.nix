@@ -3,14 +3,14 @@
   
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    hyprland.url = "github:hyprwm/Hyprland";
+    deploy-rs.url = "github:serokell/deploy-rs";
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
      };  
-    hyprland.url = "github:hyprwm/Hyprland";
-    flake-utils.url = "github:numtide/flake-utils";
   };
-  outputs = { self, nixpkgs, home-manager, hyprland, flake-utils, ... }:
+  outputs = { self, nixpkgs, home-manager, hyprland, deploy-rs, ... }:
     let
       system = "x86_64-linux";
       pkgs = import nixpkgs {
