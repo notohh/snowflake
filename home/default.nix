@@ -3,6 +3,7 @@
   ...
 }: {
   imports = [
+    ./neofetch
     ./nushell
     ./starship
     ./helix
