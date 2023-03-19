@@ -1,5 +1,6 @@
 {
   default,
+  pkgs,
   ...
 }: {
   imports = [
@@ -10,5 +11,9 @@
     ./git
     ./lazygit
   ];
-  
+
+  home.packages = with pkgs; [
+    bat
+    zoxide
+  ];
 }

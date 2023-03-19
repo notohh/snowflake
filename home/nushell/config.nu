@@ -1,5 +1,14 @@
 # Nushell Config File
 
+source ~/.cache/starship/init.nu
+source ~/.zoxide.nu
+
+alias zj = zellij
+alias zjd = zellij --layout ../.config/zellij/snowflake.kdl
+alias zjs = zellij --layout ./config/zellij/ssh.kdl
+alias lg = lazygit
+alias cat = bat
+
 module completions {
   # Custom completions for external commands (those outside of Nushell)
   # Each completions has two parts: the form of the external command, including its flags and parameters
@@ -264,7 +273,7 @@ let-env config = {
     }
   }
   history: {
-    max_size: 1000 # Session has to be reloaded for this to take effect
+    max_size: 10000 # Session has to be reloaded for this to take effect
     sync_on_enter: true # Enable to share history between multiple sessions, else you have to close the session to write history to file
     file_format: "plaintext" # "sqlite" or "plaintext"
   }
@@ -535,9 +544,3 @@ let-env config = {
   ]
 
 }
-
-source ~/.cache/starship/init.nu
-
-alias ze = zellij
-alias zed = zellij --layout ../.config/zellij/snowflake.kdl
-alias zes = zellij --layout ./config/zellij/ssh.kdl
