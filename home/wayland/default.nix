@@ -32,15 +32,13 @@ let
     rofi-wayland
     swayidle
     swaylock-effects
+    swww
   ];
 
   services.dbus.enable = true;
   xdg.portal = {
     enable = true;
     wlr.enable = true;
-    extraPortals = with pkgs; [ 
-
-  ];
  };
 
   programs.xwayland.enable = true;

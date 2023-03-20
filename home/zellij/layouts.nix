@@ -9,7 +9,7 @@
           plugin location="zellij:tab-bar"
         }
         pane split_direction="vertical" {
-          pane size="120"
+          pane size="110"
           pane split_direction="horizontal" {
             pane
             pane
