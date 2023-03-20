@@ -24,4 +24,3 @@ jobs:
           pr-labels: |                  # Labels to be set on the PR
             dependencies
             automated
-            automerge
