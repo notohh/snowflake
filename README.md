@@ -7,16 +7,16 @@ snowflake
 
 ## :open_book: Table of contents
 #### will be expanded as i tack on more modules and things get more complex obviously
-+ :house_with_garden: [home](home) - houses my dots
++ :house_with_garden: [home](home)
 + :computer: [hosts](hosts)
-  - :full_moon: [tsuki](hosts/tsuki) - my main machine config
-  - :princess: [hime](hosts/hime) - my server config
-  - :white_flower: [sutakku](hosts/sutakku) - (currently) my *arr stack vm
+  - :full_moon: [tsuki](hosts/tsuki)
+  - :princess: [hime](hosts/hime)
+  - :white_flower: [sutakku](hosts/sutakku)
 + :electric_plug: [modules](modules)
-  - :scroll: [services](modules/services) - houses services
-+ :airplane: [overlays](overlays) - will house overlays eventually
-+ :package: [pkgs](pkgs) - will house pkgs eventually
-+ :lock: [secrets](secrets) - houses my secrets
+  - :scroll: [services](modules/services)
++ :airplane: [overlays](overlays)
++ :package: [pkgs](pkgs)
++ :lock: [secrets](secrets)
 
 ## :busts_in_silhouette: Credit
 #### people who've inspired me to dive into nix, and i've stolen stuff from (you guys are awesome!)
