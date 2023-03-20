@@ -14,7 +14,7 @@ name            | description
 `mpv`           | media player
 `neofetch`      | fetch program
 `nushell`       | my shell of choice, written in rust
-`starship`      | terminal prompt, written in rust
+`starship`      | shell prompt, written in rust
 `waybar`        | wayland-specific bar
 `wayland`       | has my hyprland config, along with session variables for wayland
 `wezterm`       | my terminal of choice, written in rust
