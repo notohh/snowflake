@@ -1,6 +1,6 @@
 <h1 align="center">:house_with_garden: home</h1>
 
-this directory is where all of my dotfiles live, with everything being managed by home-manager.
+the home of my dotfiles, everything configured and managed by home-manager.
 
 name            | description
 --------------- | -----------
