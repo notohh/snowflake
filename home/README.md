@@ -1,6 +1,6 @@
 <h1 align="center">:house_with_garden: home</h1>
 
-the home of my dotfiles, everything configured and managed by home-manager.
+the home of my dotfiles, configured and managed by home-manager.
 
 name            | description
 --------------- | -----------
