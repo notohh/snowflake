@@ -6,7 +6,10 @@ snowflake
 <img src="https://files.catbox.moe/hqpr0u.png"></img>
 
 ## :open_book: Table of contents
-#### will be expanded as i tack on more modules and things get more complex obviously
+
+<h4 align="center">:warning: this config is a constant WIP, 
+and will change constantly as i continue to learn about nix. stuff will be updated, restructed, added, and removed quite often. please also note that everything hosted here is what works best for me, and could totally be ineffecient, or just a dead wrong way of doing something.</h4>
+
 + :house_with_garden: [home](home)
 + :computer: [hosts](hosts)
   - :full_moon: [tsuki](hosts/tsuki)
