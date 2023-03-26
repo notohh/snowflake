@@ -1,8 +1,5 @@
 {
-  config,
   pkgs,
-  lib,
-  inputs,
   ...
 }:
 
@@ -20,6 +17,11 @@ let
   };
   in
 {
+
+  imports = [
+   ../../modules/greetd.nix 
+  ];
+  
   environment.systemPackages = with pkgs; [
     dbus-hyprland-environment
     wayland
@@ -62,17 +64,6 @@ let
     PATH = [
       "$HOME/.local/bin/:$PATH"
     ];
-  };
-
-  services.greetd = {
-    enable = true;
-    settings = rec {
-      initial_session = {
-        command = "Hyprland";
-        user = "notoh";
-      };
-      default_session = initial_session;
-    };
   };
 
   environment.etc."greetd/environments".text = ''

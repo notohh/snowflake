@@ -13,6 +13,7 @@ imports = [
   ../../home/mpv
   ../../home/waybar
   ../../home/wayland/hyprland
+  ../../modules/swayidle.nix
 ];
 
  systemd.user.startServices = "sd-switch";
@@ -23,6 +24,7 @@ imports = [
     homeDirectory = "/home/notoh";
     packages = with pkgs; [
       firefox
+      chromium
       bitwarden
       discord
       spotify-player
@@ -36,10 +38,8 @@ imports = [
       appimage-run
       qbittorrent
       gdu
-      nb
+      eww-wayland
       cryptomator
-      jetbrains.pycharm-community
-      chromium
       ventoy-bin-full
       yt-dlp
       plex-media-player

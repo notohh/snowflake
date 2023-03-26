@@ -5,7 +5,7 @@
     [ 
     ./hardware-configuration.nix
     ../../home/wayland
-    ../../modules/services
+    ../../modules
     ];
 
   # bootloader 
@@ -21,8 +21,7 @@
   };
 
   boot.kernelPackages = pkgs.linuxPackages_latest;
-  boot.extraModulePackages = with config.boot.kernelPackages;
-  [ v4l2loopback.out ];
+  boot.extraModulePackages = with config.boot.kernelPackages; [ v4l2loopback.out ];
   boot.kernelModules = [ "v4l2loopback" "kvm-intel" ];
 
   virtualisation.libvirtd.enable = true;
@@ -147,9 +146,11 @@
    sumneko-lua-language-server
    marksman
    texlab
+   jre8
+   jdk17
+   jdk8
    nodePackages_latest.yaml-language-server
    python310Packages.python-lsp-server
-  
  ];
 
   fonts = {
@@ -171,7 +172,7 @@
       enable = true;
       allowBitmaps = true;
       defaultFonts = {
-        monospace = ["JetBrainsMono Nerd Font Regular"];
+        monospace = ["JetBrainsMono Nerd Font"];
         sansSerif = ["Google Sans Text"];
       };
       hinting.style = "hintfull";
