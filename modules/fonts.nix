@@ -7,13 +7,12 @@
     enableDefaultFonts = false;
     fontDir.enable = true;
     fonts = with pkgs; [
-      inter
       jetbrains-mono
       nerdfonts
-      noto-fonts-cjk-sans
+      noto-fonts
+      noto-fonts-cjk
       twemoji-color-font
       font-awesome
-      fira-code-symbols
       kochi-substitute
       ipafont
     ];
@@ -22,9 +21,10 @@
       enable = true;
       allowBitmaps = true;
       defaultFonts = {
-        monospace = ["JetBrainsMono Nerd Font"];
-        sansSerif = ["Noto Sans" "Noto Color Emoji"];
-        emoji = ["Twitter Color Emoji"];
+        monospace = [ "JetBrainsMono Nerd Font" "Twitter Color Emoji" ];
+        serif = [ "Noto Serif" "Twitter Color Emoji" ];
+        sansSerif = [ "Noto Sans" "Twitter Color Emoji" ];
+        emoji = [ "Twitter Color Emoji" ];
       };
       
       hinting.style = "hintfull";
