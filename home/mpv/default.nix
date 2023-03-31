@@ -1,12 +1,11 @@
 {
- config,
- pkgs,
- ...
+  pkgs,
+  ...
 }: {
   programs.mpv = {
     enable = true;
-    scripts = [
-      pkgs.mpvScripts.mpris
+    scripts = with pkgs; [
+      mpvScripts.mpris
     ];
     bindings = {
       WHEEL_UP = "volume 10";

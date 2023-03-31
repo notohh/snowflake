@@ -1,5 +1,4 @@
 {
-  default,
   pkgs,
   ...
 }: {
@@ -15,5 +14,6 @@
   home.packages = with pkgs; [
     bat
     zoxide
+    croc
   ];
 }

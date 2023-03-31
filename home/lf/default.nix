@@ -1,5 +1,4 @@
 {
-  default,
   ...
 }: {
   programs.lf = {

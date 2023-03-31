@@ -1,5 +1,4 @@
 {
-  default,
   ...
 }: {
   home.file.".config/zellij/snowflake.kdl".text = ''

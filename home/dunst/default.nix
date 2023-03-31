@@ -1,5 +1,4 @@
 {
-  default,
   ...
 }: {
   services.dunst.enable = true;

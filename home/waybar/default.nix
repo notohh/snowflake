@@ -1,6 +1,4 @@
 {
-  default,
-  config,
   ...
 }:
 
