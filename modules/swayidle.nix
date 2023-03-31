@@ -1,5 +1,4 @@
 {
-  pkgs,
   ...
 }: {
   home.file.".local/bin/lock" = {
