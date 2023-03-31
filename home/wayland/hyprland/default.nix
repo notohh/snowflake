@@ -1,6 +1,4 @@
 {
-  default,
-  pkgs,
   ...
 }: {
   imports = [./config.nix];
@@ -11,7 +9,7 @@
   };
 
   services.wlsunset = {
-    enable = true;
+    enable = false; #not working on my nvidia card currently
     latitude = "40.712776";
     longitude = "-74.005974";
     temperature = {
