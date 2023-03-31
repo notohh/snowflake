@@ -1,6 +1,8 @@
-{ config, pkgs, inputs, ... }:
-
-{
+{ 
+  config, 
+  pkgs, 
+  ... 
+}: {
   imports =
     [ 
     ./hardware-configuration.nix
@@ -26,11 +28,15 @@
 
   virtualisation.libvirtd.enable = true;
 
-  networking.hostName = "tsuki";
+  networking = {
+    networkmanager.enable = true;
+    nameservers = [ "192.168.1.45" ];
+    hostName = "tsuki";
+    firewall = {
+      enable = true;
+    };
+  };
 
-  networking.networkmanager.enable = true;
-  networking.nameservers = [ "192.168.1.45" ];
-    
   # pihole
     environment.etc = {
     "resolv.conf".text = "nameserver 192.168.1.45\n";
@@ -61,11 +67,6 @@
      videoDrivers = [ "nvidia" ];
      layout = "us";
      xkbVariant = "";
-     displayManager = {
-      lightdm = {
-        enable = false;
-      };
-    };
   };
  };
 
@@ -153,33 +154,7 @@
    python310Packages.python-lsp-server
  ];
 
-  fonts = {
-    enableDefaultFonts = true;
-    fontDir.enable = true;
-    fonts = with pkgs; [
-      inter
-      jetbrains-mono
-      nerdfonts
-      noto-fonts-cjk-sans
-      twemoji-color-font
-      font-awesome
-      fira-code-symbols
-      kochi-substitute
-      ipafont
-    ];
-
-    fontconfig = {
-      enable = true;
-      allowBitmaps = true;
-      defaultFonts = {
-        monospace = ["JetBrainsMono Nerd Font"];
-        sansSerif = ["Google Sans Text"];
-      };
-      hinting.style = "hintfull";
-    };
-  };
-
-  nix = {
+   nix = {
      package = pkgs.nixFlakes;
      extraOptions = ''
       experimental-features = nix-command flakes
