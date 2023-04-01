@@ -15,7 +15,6 @@ and will change constantly as i continue to learn about nix. stuff will be updat
   - :princess: [hime](hosts/hime)
   - :white_flower: [sutakku](hosts/sutakku)
 + :electric_plug: [modules](modules)
-  - :scroll: [services](modules/services)
 + :airplane: [overlays](overlays)
 + :package: [pkgs](pkgs)
 + :lock: [secrets](secrets)
