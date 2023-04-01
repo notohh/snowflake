@@ -7,13 +7,13 @@
       windowSize = "normal";
       gui.theme = {
        lightTheme = false;
-       activeBorderColor = [ "#a6d189" "bold" ];
-       inactiveBorderColor = [ "#c6d0f5" ];
-       optionsTextColor = [ "#8caae" ];
-       selectedLineBgColor = [ "#414559" ];
-       selectedRangeByColor = [ "414559" ];
-       cherryPickedCommitBgColor =  [ "81c8be" ];
-       cherryPickedCommitFgColor = [ "#8caaee" ];
+       activeBorderColor = [ "#a6e3a1" "bold" ];
+       inactiveBorderColor = [ "#cdd6f4" ];
+       optionsTextColor = [ "#89b4fa" ];
+       selectedLineBgColor = [ "#313244" ];
+       selectedRangeByColor = [ "#313244" ];
+       cherryPickedCommitBgColor =  [ "#94e2d5" ];
+       cherryPickedCommitFgColor = [ "#89b4fa" ];
        unstagedChangesColor = [ "red" ];
       };
     };
