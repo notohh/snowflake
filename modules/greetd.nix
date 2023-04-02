@@ -1,8 +1,7 @@
 {
   ...
 }: {
-  
-services.greetd = {
+  services.greetd = {
     enable = true;
     settings = rec {
       initial_session = {

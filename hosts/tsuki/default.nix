@@ -8,6 +8,7 @@
     ./hardware-configuration.nix
     ../../home/wayland
     ../../modules
+    ../../modules/fonts.nix
     ];
 
   # bootloader 
