@@ -76,7 +76,7 @@
   networking = {
     hostName = "hime";
     networkmanager.enable = true;
-    firework ={
+    firewall ={
       enable = true;
     };
     nameservers = [ "192.168.1.86" ];
