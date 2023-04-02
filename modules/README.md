@@ -4,7 +4,7 @@ this directory hosts some common modules / services / security tweaks used on (m
 
 name            | description
 --------------- | -----------
-`default`       | used for commonly shared modules, for multiple home-manager configs
+`default`       | used for commonly shared modules
 `fonts`         | font handling
 `greetd`        | login manager
 `networking`    | common network configuration
