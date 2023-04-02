@@ -1,5 +1,4 @@
 { 
-  config, 
   pkgs, 
   ... 
 }: {
@@ -16,6 +15,10 @@
       device = "/dev/sda";
       useOSProber = false;
     };
+  };
+  
+  networking = {
+    hostName = "hime";
   };
 
   time.timeZone = "America/New_York";
@@ -73,15 +76,6 @@
      nfs-utils
   ];
 
-  networking = {
-    hostName = "hime";
-    networkmanager.enable = true;
-    firewall ={
-      enable = true;
-    };
-    nameservers = [ "192.168.1.86" ];
-  };
-  
   nix = {
     package = pkgs.nixFlakes;
     extraOptions = ''

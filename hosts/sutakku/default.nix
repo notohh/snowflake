@@ -16,6 +16,10 @@
     };
   };
   
+   networking = {
+    hostName = "sutakku";
+  };
+  
   time.timeZone = "America/New_York";
 
   i18n.defaultLocale = "en_US.UTF-8";
@@ -61,15 +65,6 @@
    };
 
    services.openssh.enable = true;
-
-   networking = {
-    hostName = "sutakku";
-    networkmanager.enable = true;
-    firewall = {
-      enable = true;
-    };
-    nameservers = [ "192.168.1.86" ];
-  };
 
   nix = {
     package = pkgs.nixFlakes;
