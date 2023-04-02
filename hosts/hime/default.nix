@@ -18,9 +18,6 @@
     };
   };
 
-  networking.hostName = "hime";
-  networking.networkmanager.enable = true;
-
   time.timeZone = "America/New_York";
 
   i18n.defaultLocale = "en_US.UTF-8";
@@ -75,10 +72,16 @@
      python3Full
      nfs-utils
   ];
-  
-  networking.firewall.enable = true;
-  networking.nameservers = [ "192.168.1.83" ];
 
+  networking = {
+    hostName = "hime";
+    networkmanager.enable = true;
+    firework ={
+      enable = true;
+    };
+    nameservers = [ "192.168.1.86" ];
+  };
+  
   nix = {
     package = pkgs.nixFlakes;
     extraOptions = ''
