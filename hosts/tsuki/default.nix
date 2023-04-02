@@ -31,7 +31,7 @@
 
   networking = {
     networkmanager.enable = true;
-    nameservers = [ "192.168.1.45" ];
+    nameservers = [ "192.168.1.83" ];
     hostName = "tsuki";
     firewall = {
       enable = true;
@@ -40,7 +40,7 @@
 
   # pihole
     environment.etc = {
-    "resolv.conf".text = "nameserver 192.168.1.45\n";
+    "resolv.conf".text = "nameserver 192.168.1.83\n";
   };
 
   time.timeZone = "America/New_York";

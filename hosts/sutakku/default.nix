@@ -66,7 +66,7 @@
    services.openssh.enable = true;
 
    networking.firewall.enable = true;
-   networking.nameservers = [ "192.168.1.45" ];
+   networking.nameservers = [ "192.168.1.83" ];
   
   nix = {
     package = pkgs.nixFlakes;

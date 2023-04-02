@@ -75,6 +75,9 @@
      python3Full
      nfs-utils
   ];
+  
+  networking.firewall.enable = true;
+  networking.nameservers = [ "192.168.1.83" ];
 
   nix = {
     package = pkgs.nixFlakes;
