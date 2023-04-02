@@ -7,6 +7,7 @@
     enableDefaultFonts = false;
     fontDir.enable = true;
     fonts = with pkgs; [
+      corefonts
       jetbrains-mono
       nerdfonts
       noto-fonts
