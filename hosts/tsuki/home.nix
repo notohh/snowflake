@@ -4,6 +4,7 @@
 
 imports = [
   ../../home
+  ../../home/librewolf
   ../../home/wezterm
   ../../home/zathura
   ../../home/gtk
@@ -23,7 +24,6 @@ imports = [
     username = "notoh";
     homeDirectory = "/home/notoh";
     packages = with pkgs; [
-      firefox
       chromium
       bitwarden
       discord
