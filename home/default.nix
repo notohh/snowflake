@@ -9,11 +9,11 @@
     ./helix
     ./git
     ./lazygit
+    ./zoxide
   ];
 
   home.packages = with pkgs; [
     bat
-    zoxide
     croc
   ];
 }
