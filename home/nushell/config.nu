@@ -1,7 +1,6 @@
 # Nushell Config File
 
 source ~/.cache/starship/init.nu
-source ~/.zoxide.nu
 
 alias zj = zellij
 alias zjd = zellij --layout ../.config/zellij/snowflake.kdl
