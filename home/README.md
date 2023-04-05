@@ -8,17 +8,17 @@ name            | description
 `dunst`         | notification daemon
 `git`           | version control system
 `gtk`           | themes
-`helix`         | modal text editor, written in rust
+`helix`         | modal text editor
 `lazygit`       | terminal based git command system
 `lf`            | terminal based file manager
 `librewolf`     | a hardened firefox fork, and my browser of choice
 `mpv`           | media player
 `neofetch`      | fetch program
-`nushell`       | my shell of choice, written in rust
-`starship`      | shell prompt, written in rust
+`nushell`       | my shell of choice
+`starship`      | shell prompt
 `waybar`        | wayland-specific bar
 `wayland`       | has my hyprland config, along with session variables for wayland
-`wezterm`       | my terminal of choice, written in rust
+`wezterm`       | my terminal of choice
 `zathura`       | pdf viewer
-`zellij`        | terminal multiplexer, written in rust
+`zellij`        | terminal multiplexer
 `zoxide`        | smarter cd command
