@@ -9,7 +9,7 @@
     };
   };
     environment.etc = {
-    "resolv.conf".text = "nameserver 192.168.1.86\n";
+    "resolv.conf".text = "nameserver 192.168.1.89\n";
   };
 
   services.tailscale = {
