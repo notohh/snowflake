@@ -21,3 +21,4 @@ name            | description
 `wezterm`       | my terminal of choice, written in rust
 `zathura`       | pdf viewer
 `zellij`        | terminal multiplexer, written in rust
+`zoxide`        | smarter cd command
