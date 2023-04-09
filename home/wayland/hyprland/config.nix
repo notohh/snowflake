@@ -93,10 +93,9 @@ device:epic mouse V1 {
     sensitivity = -0.5
 }
 
-exec-once = eww open bar & dunst
+exec-once = waybar & dunst
 
 exec-once = swww init
-exec-once = swww img ./wallpapers/annystartingshort.gif
 
 exec-once = dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
 exec-once = /nix/store/gjbi20m2wz9xhm18ifmcdl45cpgd7hpz-polkit-gnome-0.105/libexec/polkit-gnome-authentication-agent-1
@@ -113,8 +112,6 @@ windowrulev2 = move 500 300, title:^(RuneLite)$
 windowrulev2 = size 810 580, title:^(RuneLite)$
 windowrulev2 = float, title:^(Steam)$
 windowrulev2 = float, title:^(Cryptomator)$
-windowrulev2 = float, title:^(Firefox — Sharing Indicator)$
-windowrulev2 = move 0 0, title:^(Firefox — Sharing Indicator)$
 
 #binds
 $mainMod = SUPER
