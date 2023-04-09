@@ -81,6 +81,8 @@ image {
   border: 3px solid $pink;
 }
 
+/* workspaces */
+
 #workspaces {
   button {
     min-width: 28px;
@@ -90,6 +92,8 @@ image {
   }
   border: 3px solid $red;
 }
+
+/* end workspaces */
 
 #window {
   border-radius: 16px;
@@ -108,9 +112,33 @@ image {
   border: 3px solid $yellow;
 }
 
+/* tray */
+
 #tray {
   border: 3px solid $overlay1;
+  menu {
+    background: $base;
+    border-radius: 8px;
+    border: 3px solid $overlay1;
+    padding: 1.0rem;
+  }
 }
+
+#tray.passive {
+  border-bottom: 2px solid $base;
+}
+
+#tray.active {
+  border-bottom: 2px solid $green;
+}
+
+#tray.needs-attention {
+  border-bottom: 2px solid $red;
+}
+
+/* end tray */
+
+/* custom modules */
 
 #custom-wlogout {
   border: 3px solid $overlay1;

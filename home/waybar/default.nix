@@ -4,7 +4,7 @@
   lib,
   ...
 }: 
-  let
+  let  
   compileSCSS = name: source: "${pkgs.runCommandLocal name {} ''
     mkdir -p $out
     ${lib.getExe pkgs.sassc} -t expanded '${source}' > $out/${name}.css
