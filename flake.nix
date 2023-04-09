@@ -10,7 +10,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
      };  
   };
-  outputs = { self, nixpkgs, home-manager, hyprland, deploy-rs, ... }:
+  outputs = { self, nixpkgs, home-manager, hyprland, deploy-rs, ... }@inputs:
     let
       system = "x86_64-linux";
       pkgs = import nixpkgs {
@@ -29,6 +29,9 @@
             home-manager.nixosModules.home-manager {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
+            home-manager.extraSpecialArgs = {
+              inherit inputs;
+            };
             home-manager.users.notoh = {
               imports = [
                 hyprland.homeManagerModules.default
