@@ -7,7 +7,7 @@
 
   programs.starship = {
     enable = true;
-    enableNushellIntegration = true;
+    enableNushellIntegration = false; #integration broken since nushell 0.78
     settings = {
     format = lib.concatStrings [
     "[░▒▓](#f5c2e7)"
