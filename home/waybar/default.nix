@@ -3,7 +3,7 @@
   pkgs,
   lib,
   ...
-}: 
+}:
   let  
   compileSCSS = name: source: "${pkgs.runCommandLocal name {} ''
     mkdir -p $out
@@ -66,9 +66,11 @@
         "cpu" = {
           format = "{usage}% ";
           tooltip = "false";
+          interval = "2";
         };
         "memory" = {
           format = "{}% ";
+          interval = "15";
         };
         "clock" = {
           tooltip-format = "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>";
