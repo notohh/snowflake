@@ -3,7 +3,8 @@
 snowflake
 </h1>
 <p align="center">:snowflake: a flake or crystal of snow :snowflake:</p>
-<img src="https://files.catbox.moe/hqpr0u.png"></img>
+<img src="https://files.catbox.moe/gfh6dd.png"></img>
+<p>Screenshot updated: 2023-04-09</p>
 <h4 align="center">:warning: this config is a constant WIP, 
 and will change constantly as i continue to learn about nix. stuff will be updated, restructed, added, and removed quite often. please also note that everything hosted here is what works best for me, and could totally be ineffecient, or just a dead wrong way of doing something.</h4>
 
