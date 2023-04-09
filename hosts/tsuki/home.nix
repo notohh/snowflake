@@ -38,7 +38,6 @@ imports = [
       appimage-run
       qbittorrent
       gdu
-      eww-wayland
       cryptomator
       ventoy-bin-full
       yt-dlp
