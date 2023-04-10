@@ -1,6 +1,9 @@
 {
   ...
 }: {
+  imports = [
+    ./catppuccin_mocha.nix
+  ];
   programs.helix = {
   enable = true;
    settings = {
