@@ -16,8 +16,8 @@
        enable_wayland = false,
        font = wezterm.font 'Comic Code Ligatures',
        font_size = 12.0,
-       window_background_opacity = 0.9,
-       text_background_opacity = 0.9,
+       window_background_opacity = 0.6,
+       text_background_opacity = 1.0,
        enable_tab_bar = false,
        color_scheme = 'Catppuccin Mocha',
 
