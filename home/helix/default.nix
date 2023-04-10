@@ -2,7 +2,7 @@
   ...
 }: {
   imports = [
-    ./catppuccin_mocha.nix
+    ./themes/catppuccin_mocha.nix
   ];
   programs.helix = {
   enable = true;
