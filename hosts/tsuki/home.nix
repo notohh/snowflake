@@ -11,7 +11,6 @@ imports = [
   ../../home/dunst
   ../../home/lf
   ../../home/zellij
-  ../../home/mpv
   ../../home/waybar
   ../../home/wayland/hyprland
   ../../modules/swayidle.nix
@@ -35,6 +34,7 @@ imports = [
       p7zip
       virt-manager
       imv
+      mpv
       appimage-run
       qbittorrent
       gdu
