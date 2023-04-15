@@ -1,6 +1,7 @@
-{config, pkgs, ...}:
-
 {
+  pkgs,
+  ...
+}: {
 
 imports = [
   ../../home
@@ -23,6 +24,7 @@ imports = [
     username = "notoh";
     homeDirectory = "/home/notoh";
     packages = with pkgs; [
+      (callPackage ../../pkgs/chatterino7 {})
       chromium
       bitwarden
       discord
