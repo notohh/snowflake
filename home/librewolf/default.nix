@@ -5,6 +5,8 @@
     enable = true;
     settings = {
       "webgl.disabled" = false;
+      "webgl.force-enabled" = true;
+      "webgl.enable-webgl2" = true;
       "privacy.resistFingerprinting" = false;
       "browser.warnOnQuitShortcut" = false;
       "identity.fxaccounts.enabled" = false;
