@@ -40,7 +40,7 @@
         "image/nixos" = {
           path = "/home/notoh/snowflake/home/waybar/assets/nixos.png";
           size = 24;
-        };
+          };
         "user" = {
           format = "{user} up {work_d} days | {work_H} hrs | {work_M} min ↑";
           interval = 60;
