@@ -64,9 +64,6 @@ let
     WLR_RENDERER = "vulkan";
     XCURSOR_SIZE = "24";
     NIXOS_OZONE_WL = "1";
-    PATH = [
-      "$HOME/.local/bin/:$PATH"
-    ];
   };
 
   environment.etc."greetd/environments".text = ''
