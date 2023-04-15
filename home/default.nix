@@ -10,6 +10,7 @@
     ./git
     ./lazygit
     ./zoxide
+    ./direnv
   ];
 
   home.packages = with pkgs; [
