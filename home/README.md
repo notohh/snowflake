@@ -12,7 +12,6 @@ name            | description
 `lazygit`       | terminal based git command system
 `lf`            | terminal based file manager
 `librewolf`     | a hardened firefox fork, and my browser of choice
-`mpv`           | media player
 `neofetch`      | fetch program
 `nushell`       | my shell of choice
 `starship`      | shell prompt
