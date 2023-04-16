@@ -40,8 +40,3 @@ let-env NU_LIB_DIRS = [
 let-env NU_PLUGIN_DIRS = [
     ($nu.config-path | path dirname | path join 'plugins')
 ]
-
-starship init nu
-| str replace --string 'PROMPT_COMMAND = {' 'PROMPT_COMMAND = { ||'
-| str replace --string 'PROMPT_COMMAND_RIGHT = {' 'PROMPT_COMMAND_RIGHT = { ||'
-| save -f ~/.cache/starship/init.nu
