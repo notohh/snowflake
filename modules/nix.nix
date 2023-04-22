@@ -38,9 +38,5 @@
       "cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY="
       ];
      };
-   };  
-  
-  system.autoUpgrade.enable = false;
-  system.stateVersion = "23.05"; # no touchy
-  
+   };    
 }
