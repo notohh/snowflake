@@ -3,13 +3,13 @@
 }: {
   networking = {
     networkmanager.enable = true;
-    nameservers = [ "192.168.1.86" ];
+    nameservers = [ "1.1.1.1" ];
     firewall = {
       enable = true;
     };
   };
     environment.etc = {
-    "resolv.conf".text = "nameserver 192.168.1.89\n";
+    "resolv.conf".text = "nameserver 1.1.1.1\n";
   };
 
   services.tailscale = {
