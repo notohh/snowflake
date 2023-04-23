@@ -1,8 +1,4 @@
-{
-  pkgs,
-  ...
-}: {
-
+{pkgs, ...}: {
   home.pointerCursor = {
     package = pkgs.bibata-cursors;
     name = "Bibata-Modern-Classic";
@@ -11,7 +7,7 @@
     x11.enable = true;
   };
 
-   gtk = {
+  gtk = {
     enable = true;
     theme = {
       name = "Catppuccin-Mocha-Standard-Pink-Dark";

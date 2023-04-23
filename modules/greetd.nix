@@ -1,6 +1,4 @@
-{
-  ...
-}: {
+{...}: {
   services.greetd = {
     enable = true;
     settings = rec {
@@ -12,5 +10,3 @@
     };
   };
 }
-
-

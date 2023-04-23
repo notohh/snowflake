@@ -1,8 +1,4 @@
-{
-  pkgs,
-  ...
-}: {
-  
+{pkgs, ...}: {
   fonts = {
     enableDefaultFonts = false;
     fontDir.enable = true;
@@ -22,14 +18,13 @@
       enable = true;
       allowBitmaps = true;
       defaultFonts = {
-        monospace = [ "JetBrainsMono Nerd Font" "Twitter Color Emoji" ];
-        serif = [ "Noto Serif" "Twitter Color Emoji" ];
-        sansSerif = [ "Noto Sans" "Twitter Color Emoji" ];
-        emoji = [ "Twitter Color Emoji" ];
+        monospace = ["JetBrainsMono Nerd Font" "Twitter Color Emoji"];
+        serif = ["Noto Serif" "Twitter Color Emoji"];
+        sansSerif = ["Noto Sans" "Twitter Color Emoji"];
+        emoji = ["Twitter Color Emoji"];
       };
-      
+
       hinting.style = "hintfull";
-    
     };
   };
 }

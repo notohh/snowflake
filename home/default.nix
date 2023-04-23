@@ -1,7 +1,4 @@
-{
-  pkgs,
-  ...
-}: {
+{pkgs, ...}: {
   imports = [
     ./neofetch
     ./nushell
@@ -16,5 +13,6 @@
   home.packages = with pkgs; [
     bat
     croc
+    alejandra
   ];
 }

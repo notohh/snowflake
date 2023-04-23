@@ -1,6 +1,4 @@
-{
-  ...
-}: {
+{...}: {
   programs.librewolf = {
     enable = true;
     settings = {
@@ -20,7 +18,7 @@
       "browser.startup.homepage" = "http://dashboard.lab/";
     };
   };
-  
+
   # enable librewolf as the default browser, with some extra config
   xdg.mimeApps = {
     enable = true;
@@ -38,6 +36,6 @@
       "application/xhtml+xml" = ["librewolf.desktop"];
       "application/x-extension-xhtml" = ["librewolf.desktop"];
       "application/x-extension-xht" = ["librewolf.desktop"];
-    };   
+    };
   };
- }
+}

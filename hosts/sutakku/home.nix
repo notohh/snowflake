@@ -1,13 +1,14 @@
-{config, pkgs, ...}:
-
 {
+  config,
+  pkgs,
+  ...
+}: {
+  imports = [
+    ../../home
+  ];
 
-imports = [
-  ../../home
-];
-
- systemd.user.startServices = "sd-switch";
- programs.home-manager.enable = true;
+  systemd.user.startServices = "sd-switch";
+  programs.home-manager.enable = true;
 
   home = {
     username = "oh";

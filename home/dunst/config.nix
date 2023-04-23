@@ -1,6 +1,4 @@
-{
-  ...
-}: {
+{...}: {
   global = {
     frame_color = "#f5c2e7";
     frame_width = "4";
@@ -20,7 +18,7 @@
     background = "#1E1E2E";
     foreground = "#CDD6F4";
   };
-  urgency_critical ={
+  urgency_critical = {
     background = "#1E1E2E";
     foreground = "#CDD6F4";
     frame_color = "#FAB387";

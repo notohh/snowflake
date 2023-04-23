@@ -6,5 +6,5 @@
   home.packages = with pkgs; [
     neofetch
   ];
-  xdg.configFile."neofetch/config.conf".source =./config.conf;
+  xdg.configFile."neofetch/config.conf".source = ./config.conf;
 }

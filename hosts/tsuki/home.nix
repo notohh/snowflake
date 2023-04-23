@@ -1,24 +1,20 @@
-{
-  pkgs,
-  ...
-}: {
+{pkgs, ...}: {
+  imports = [
+    ../../home
+    ../../home/librewolf
+    ../../home/wezterm
+    ../../home/zathura
+    ../../home/gtk
+    ../../home/dunst
+    ../../home/lf
+    ../../home/zellij
+    ../../home/waybar
+    ../../home/wayland/hyprland
+    ../../modules/swayidle.nix
+  ];
 
-imports = [
-  ../../home
-  ../../home/librewolf
-  ../../home/wezterm
-  ../../home/zathura
-  ../../home/gtk
-  ../../home/dunst
-  ../../home/lf
-  ../../home/zellij
-  ../../home/waybar
-  ../../home/wayland/hyprland
-  ../../modules/swayidle.nix
-];
-
- systemd.user.startServices = "sd-switch";
- programs.home-manager.enable = true;
+  systemd.user.startServices = "sd-switch";
+  programs.home-manager.enable = true;
 
   home = {
     username = "notoh";
@@ -59,7 +55,7 @@ imports = [
       cava
       hollywood
     ];
-    
+
     stateVersion = "23.05";
   };
 }

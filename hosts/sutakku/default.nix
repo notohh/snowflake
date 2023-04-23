@@ -1,11 +1,12 @@
-{ config, pkgs, ... }:
-
 {
-  imports =
-    [ 
+  config,
+  pkgs,
+  ...
+}: {
+  imports = [
     ./hardware-configuration.nix
     ../../modules
-    ];
+  ];
 
   boot.loader = {
     grub = {
@@ -15,25 +16,25 @@
       useOSProber = false;
     };
   };
-  
-   networking = {
+
+  networking = {
     hostName = "sutakku";
   };
-  
+
   services.xserver = {
     layout = "us";
     xkbVariant = "";
   };
-  
+
   virtualisation.docker.enable = true;
   users = {
-  defaultUserShell = pkgs.nushell;
-  users.oh = {
-    isNormalUser = true;
-    description = "oh";
-    extraGroups = [ "networkmanager" "wheel" ];
+    defaultUserShell = pkgs.nushell;
+    users.oh = {
+      isNormalUser = true;
+      description = "oh";
+      extraGroups = ["networkmanager" "wheel"];
+    };
   };
-};
 
   environment.systemPackages = with pkgs; [
     wget
@@ -41,11 +42,11 @@
     pinentry-curses
   ];
 
-   programs.gnupg.agent = {
-     enable = true;
-     enableSSHSupport = true;
-     pinentryFlavor = "curses";
-   };
+  programs.gnupg.agent = {
+    enable = true;
+    enableSSHSupport = true;
+    pinentryFlavor = "curses";
+  };
 
-   services.openssh.enable = true;
+  services.openssh.enable = true;
 }

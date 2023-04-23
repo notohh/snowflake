@@ -1,9 +1,4 @@
-{
-  pkgs,
-  ...
-}:
-
-let 
+{pkgs, ...}: let
   dbus-hyprland-environment = pkgs.writeTextFile {
     name = "dbus-hyprland-environment";
     destination = "/bin/dbus-hyprland-environment";
@@ -14,13 +9,11 @@ let
       systemctl --user start pipewire wireplumber pipewire-media-session xdg-desktop-portal xdg-desktop-portal-hyprland
     '';
   };
-  in
-{
-
+in {
   imports = [
-   ../../modules/greetd.nix 
+    ../../modules/greetd.nix
   ];
-  
+
   environment.systemPackages = with pkgs; [
     dbus-hyprland-environment
     wayland
@@ -44,7 +37,7 @@ let
       xdg-desktop-portal-hyprland
       xdg-desktop-portal-gtk
     ];
- };
+  };
 
   programs.xwayland.enable = true;
 
@@ -69,5 +62,4 @@ let
   environment.etc."greetd/environments".text = ''
     Hyprland
   '';
-
 }

@@ -1,17 +1,16 @@
-{ 
+{
   config,
   pkgs,
   ...
 }: {
-  imports =
-    [ 
+  imports = [
     ./hardware-configuration.nix
     ../../home/wayland
     ../../modules
     ../../modules/fonts.nix
-    ];
+  ];
 
-  # bootloader 
+  # bootloader
   boot.loader = {
     systemd-boot = {
       enable = true;
@@ -24,8 +23,8 @@
   };
 
   boot.kernelPackages = pkgs.linuxPackages_latest;
-  boot.extraModulePackages = with config.boot.kernelPackages; [ v4l2loopback.out ];
-  boot.kernelModules = [ "v4l2loopback" "kvm-intel" ];
+  boot.extraModulePackages = with config.boot.kernelPackages; [v4l2loopback.out];
+  boot.kernelModules = ["v4l2loopback" "kvm-intel"];
 
   virtualisation.libvirtd.enable = true;
 
@@ -35,12 +34,12 @@
 
   services = {
     xserver = {
-     enable = true;
-     videoDrivers = [ "nvidia" ];
-     layout = "us";
-     xkbVariant = "";
+      enable = true;
+      videoDrivers = ["nvidia"];
+      layout = "us";
+      xkbVariant = "";
+    };
   };
- };
 
   programs.gnupg.agent = {
     enable = true;
@@ -64,65 +63,65 @@
   programs.steam = {
     enable = true;
   };
-  
+
   security.polkit.enable = true;
   security.pam.services.swaylock = {
     text = ''
       auth include login
-      '';
+    '';
   };
-  
- hardware = {
+
+  hardware = {
     nvidia = {
       powerManagement.enable = true;
       modesetting.enable = true;
       package = config.boot.kernelPackages.nvidiaPackages.stable;
     };
     opengl = {
-    enable = true;
-    extraPackages = with pkgs; [
-    nvidia-vaapi-driver
-    ];
-   };
-  opentabletdriver = {
-    enable = true;
-    daemon.enable = true;
+      enable = true;
+      extraPackages = with pkgs; [
+        nvidia-vaapi-driver
+      ];
+    };
+    opentabletdriver = {
+      enable = true;
+      daemon.enable = true;
+    };
   };
- };
   users = {
-  defaultUserShell = pkgs.nushell;
-  users.notoh = {
-    isNormalUser = true;
-    description = "notoh";
-    extraGroups = [ "networkmanager" "wheel" "disk" "video" ];
+    defaultUserShell = pkgs.nushell;
+    users.notoh = {
+      isNormalUser = true;
+      description = "notoh";
+      extraGroups = ["networkmanager" "wheel" "disk" "video"];
+    };
   };
-};
 
   environment.systemPackages = with pkgs; [
-   wget
-   dconf
-   rustc
-   rustup
-   rustfmt
-   go
-   cargo
-   nodejs
-   polkit_gnome
-   libvirt
-   qemu_kvm
-   gtk-engine-murrine
-   pinentry-gtk2
-   nfs-utils
-   nil
-   rust-analyzer
-   gopls
-   sumneko-lua-language-server
-   marksman
-   texlab
-   jre8
-   jdk17
-   jdk8
-   nodePackages_latest.yaml-language-server
-   python310Packages.python-lsp-server
- ];
+    wget
+    dconf
+    rustc
+    rustup
+    rustfmt
+    go
+    cargo
+    nodejs
+    polkit_gnome
+    libvirt
+    qemu_kvm
+    gtk-engine-murrine
+    pinentry-gtk2
+    nfs-utils
+    nil
+    rust-analyzer
+    gopls
+    sumneko-lua-language-server
+    marksman
+    texlab
+    jre8
+    jdk17
+    jdk8
+    nodePackages_latest.yaml-language-server
+    python310Packages.python-lsp-server
+  ];
 }

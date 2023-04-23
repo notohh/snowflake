@@ -3,13 +3,12 @@
   pkgs,
   lib,
   ...
-}:
-  let  
+}: let
   compileSCSS = name: source: "${pkgs.runCommandLocal name {} ''
     mkdir -p $out
     ${lib.getExe pkgs.sassc} -t expanded '${source}' > $out/${name}.css
   ''}/${name}.css";
- in {
+in {
   programs.waybar = {
     enable = true;
     package = inputs.hyprland.packages.${pkgs.system}.waybar-hyprland;
@@ -23,9 +22,9 @@
         spacing = 10;
         margin-top = 8;
         modules-left = [
-         "image/nixos"
-         "user"
-         "wlr/workspaces"
+          "image/nixos"
+          "user"
+          "wlr/workspaces"
         ];
         modules-center = [
           "hyprland/window"
@@ -40,7 +39,7 @@
         "image/nixos" = {
           path = "/home/notoh/snowflake/home/waybar/assets/nixos.png";
           size = 24;
-          };
+        };
         "user" = {
           format = "{user} up {work_d} days | {work_H} hrs | {work_M} min ↑";
           interval = 60;

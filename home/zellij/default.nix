@@ -1,10 +1,8 @@
-{
-  ...
-}: {
+{...}: {
   imports = [
     ./layouts.nix
   ];
-  
+
   programs.zellij = {
     enable = true;
     settings = {
@@ -25,7 +23,7 @@
         cyan = "#89dceb";
         black = "#181825";
         white = "#cdd6f4";
-     };
-   };
- };
+      };
+    };
+  };
 }

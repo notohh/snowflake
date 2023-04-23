@@ -1,12 +1,8 @@
-{ 
-  pkgs, 
-  ... 
-}: {
-  imports =
-    [
+{pkgs, ...}: {
+  imports = [
     ./hardware-configuration.nix
     ../../modules
-    ];
+  ];
 
   boot.loader = {
     grub = {
@@ -16,43 +12,41 @@
       useOSProber = false;
     };
   };
-  
+
   networking = {
     hostName = "hime";
   };
- 
-   services.xserver = {
+
+  services.xserver = {
     layout = "us";
     xkbVariant = "";
   };
 
   services.openssh = {
-   enable = true;
-   settings = {
-    PasswordAuthentication = true;
+    enable = true;
+    settings = {
+      PasswordAuthentication = true;
+    };
   };
-};
 
   virtualisation.docker.enable = true;
-  users ={
-  defaultUserShell = pkgs.nushell;
-  users.oh = {
-    isNormalUser = true;
-    description = "oh";
-    extraGroups = [ "networkmanager" "wheel" ];
-    packages = with pkgs; [
-     hugo
-     yt-dlp
-   ];
+  users = {
+    defaultUserShell = pkgs.nushell;
+    users.oh = {
+      isNormalUser = true;
+      description = "oh";
+      extraGroups = ["networkmanager" "wheel"];
+      packages = with pkgs; [
+        hugo
+        yt-dlp
+      ];
+    };
   };
-};
-
 
   environment.systemPackages = with pkgs; [
-     docker-compose
-     wget
-     python3Full
-     nfs-utils
+    docker-compose
+    wget
+    python3Full
+    nfs-utils
   ];
-
 }

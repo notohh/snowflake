@@ -1,6 +1,4 @@
-{
-  ...
-}: {
+{...}: {
   services.dunst = {
     enable = true;
     waylandDisplay = "DP-2";

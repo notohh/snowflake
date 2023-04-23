@@ -48,4 +48,3 @@
     defaults.email = "github@notohh.dev";
   };
 }
-
