@@ -62,8 +62,8 @@
           {
             home-manager = {
               useGlobalPkgs = true;
-              home-manager.useUserPackages = true;
-              home-manager.users.oh = {
+              useUserPackages = true;
+              users.oh = {
                 imports = [./hosts/sutakku/home.nix];
               };
             };
