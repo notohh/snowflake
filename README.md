@@ -22,7 +22,7 @@ and will change constantly as i continue to learn about nix. stuff will be updat
 
 ## :busts_in_silhouette: Credit
 #### people who've inspired me to dive into nix, and i've stolen stuff from (you guys are awesome!)
-+ [fufexan](https://github.com/fufexan) - a ton of home manager, and hyprland stuff
++ [fufexan](https://github.com/fufexan) - a ton of home manager, hyprland stuff, and some gh workflows.
 + [Misterio77](https://github.com/Misterio77) - flake, and some other boilerplate
 + [NobbZ](https://github.com/NobbZ) - general nix assistance
 + [MatthiasBenaets](https://github.com/MatthiasBenaets) - amazing nixos introduction video
