@@ -124,8 +124,7 @@ bind = $mainMod, V, togglefloating,
 bind = $mainMod, R, exec, rofi -modi run -show drun
 bind = $mainMod, P, pseudo, # dwindle
 bind = $mainMod, J, togglesplit, # dwindle
-bind =, Print, exec, grim -g "$(slurp -d)" | wl-copy
-
+bind =, Print, exec, grim -g "$(slurp -d)"
 bind = $mainMod, left, movefocus, l
 bind = $mainMod, right, movefocus, r
 bind = $mainMod, up, movefocus, u
