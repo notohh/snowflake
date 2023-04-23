@@ -1,4 +1,5 @@
 {
+  pkgs,
   ...
 }: {
   programs.lf = {
@@ -9,10 +10,7 @@
       icons = true;
       drawbox = true;
       ignorecase = true;
+      color256 = true;
     };
-    extraConfig = ''
-      
-  '';
   };
-  
 }
