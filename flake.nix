@@ -26,14 +26,16 @@
           ./hosts/tsuki
           home-manager.nixosModules.home-manager
           {
-            home-manager.useGlobalPkgs = true;
-            home-manager.useUserPackages = true;
-            home-manager.extraSpecialArgs = {inherit inputs;};
-            home-manager.users.notoh = {
-              imports = [
-                hyprland.homeManagerModules.default
-                ./hosts/tsuki/home.nix
-              ];
+            home-manager = {
+              useGlobalPkgs = true;
+              useUserPackages = true;
+              extraSpecialArgs = {inherit inputs;};
+              users.notoh = {
+                imports = [
+                  hyprland.homeManagerModules.default
+                  ./hosts/tsuki/home.nix
+                ];
+              };
             };
           }
         ];
@@ -44,9 +46,11 @@
           ./hosts/hime
           home-manager.nixosModules.home-manager
           {
-            home-manager.useGlobalPkgs = true;
-            home-manager.useUserPackages = true;
-            home-manager.users.oh = {imports = [./hosts/hime/home.nix];};
+            home-manager = {
+              useGlobalPkgs = true;
+              useUserPackages = true;
+              users.oh = {imports = [./hosts/hime/home.nix];};
+            };
           }
         ];
       };
@@ -56,10 +60,12 @@
           ./hosts/sutakku
           home-manager.nixosModules.home-manager
           {
-            home-manager.useGlobalPkgs = true;
-            home-manager.useUserPackages = true;
-            home-manager.users.oh = {
-              imports = [./hosts/sutakku/home.nix];
+            home-manager = {
+              useGlobalPkgs = true;
+              home-manager.useUserPackages = true;
+              home-manager.users.oh = {
+                imports = [./hosts/sutakku/home.nix];
+              };
             };
           }
         ];
