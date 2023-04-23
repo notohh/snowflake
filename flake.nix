@@ -4,22 +4,15 @@
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     hyprland.url = "github:hyprwm/Hyprland";
-    deploy-rs.url = "github:serokell/deploy-rs";
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
      };  
   };
-  outputs = { self, nixpkgs, home-manager, hyprland, deploy-rs, ... }@inputs:
+  outputs = { self, nixpkgs, home-manager, hyprland, ... }@inputs:
     let
       system = "x86_64-linux";
-      pkgs = import nixpkgs {
-        inherit system;
-        config.allowUnfree = true;
-      };
-
       lib = nixpkgs.lib;
-
     in {
       nixosConfigurations = {
         tsuki = lib.nixosSystem {
