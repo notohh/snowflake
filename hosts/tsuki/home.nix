@@ -36,6 +36,7 @@
       appimage-run
       qbittorrent
       gdu
+      alejandra
       cryptomator
       ventoy-bin-full
       yt-dlp
