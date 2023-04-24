@@ -20,6 +20,7 @@ in {
     glib
     grim
     slurp
+    swappy
     wl-clipboard
     wlogout
     wlr-randr
