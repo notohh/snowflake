@@ -100,28 +100,11 @@
   environment.systemPackages = with pkgs; [
     wget
     dconf
-    rustc
-    rustup
-    rustfmt
-    go
-    cargo
-    nodejs
     polkit_gnome
     libvirt
     qemu_kvm
-    gtk-engine-murrine
     pinentry-gtk2
     nfs-utils
-    nil
-    rust-analyzer
-    gopls
-    sumneko-lua-language-server
-    marksman
-    texlab
-    jre8
     jdk17
-    jdk8
-    nodePackages_latest.yaml-language-server
-    python310Packages.python-lsp-server
   ];
 }
