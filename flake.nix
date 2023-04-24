@@ -22,7 +22,20 @@
   } @ inputs: let
     system = "x86_64-linux";
     lib = nixpkgs.lib;
+    pkgs = import nixpkgs {
+      inherit system;
+    };
   in {
+    devShells.${system}.default = pkgs.mkShell {
+      name = "snowflake";
+      packages = with pkgs; [
+        nil
+        yaml-language-server
+        alejandra
+        git
+      ];
+    };
+    formatter.${system} = pkgs.alejandra;
     nixosConfigurations = {
       tsuki = lib.nixosSystem {
         inherit system;
