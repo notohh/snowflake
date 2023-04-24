@@ -8,6 +8,7 @@ alias zjs = zellij --layout ./config/zellij/ssh.kdl
 alias lg = lazygit
 alias la = ls -a
 alias cat = bat
+alias fmt = alejandra *
 
 let-env config = {
 
