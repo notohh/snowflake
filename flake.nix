@@ -30,7 +30,6 @@
       name = "snowflake";
       packages = with pkgs; [
         nil
-        yaml-language-server
         alejandra
         git
       ];
