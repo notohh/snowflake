@@ -6,8 +6,7 @@ inputs: {
         user = "root";
         path = activate.nixos inputs.self.nixosConfigurations.hime;
       };
-      sshOpts = ["-i" "/etc/ssh/ssh_host_ed25519_key"];
       sshUser = "root";
     };
   };
- }
+}

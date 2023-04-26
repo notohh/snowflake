@@ -4,5 +4,6 @@
     ./networking.nix
     ./nix.nix
     ./system.nix
+    ./openssh.nix
   ];
 }

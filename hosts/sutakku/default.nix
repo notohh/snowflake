@@ -48,5 +48,4 @@
     pinentryFlavor = "curses";
   };
 
-  services.openssh.enable = true;
 }

@@ -22,10 +22,6 @@
     xkbVariant = "";
   };
 
-  services.openssh = {
-    enable = true;
-  };
-
   virtualisation.docker.enable = true;
   users = {
     defaultUserShell = pkgs.nushell;
