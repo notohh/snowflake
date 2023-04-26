@@ -12,8 +12,12 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    deploy-rs.url = "github:serokell/deploy-rs";
-    sops-nix.url = "github:Mic92/sops-nix";
+    deploy-rs = {
+      url = "github:serokell/deploy-rs";
+    };
+    sops-nix = {
+      url = "github:Mic92/sops-nix";
+    };
   };
   outputs = {
     self,

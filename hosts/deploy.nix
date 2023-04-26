@@ -6,7 +6,15 @@ inputs: {
         user = "root";
         path = activate.nixos inputs.self.nixosConfigurations.hime;
       };
-      sshUser = "root";
+      sshUser = "oh";
+    };
+    sutakku = {
+      hostname = "sutakku";
+      profiles.system = {
+        user = "root";
+        path = activate.nixos inputs.self.nixosConfigurations.sutakku;
+      };
+      sshUser = "oh";
     };
   };
 }

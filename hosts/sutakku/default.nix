@@ -47,5 +47,4 @@
     enableSSHSupport = true;
     pinentryFlavor = "curses";
   };
-
 }
