@@ -24,9 +24,6 @@
 
   services.openssh = {
     enable = true;
-    settings = {
-      PasswordAuthentication = true;
-    };
   };
 
   virtualisation.docker.enable = true;

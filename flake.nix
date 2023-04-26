@@ -12,12 +12,15 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    deploy-rs.url = "github:serokell/deploy-rs";
+    sops-nix.url = "github:Mic92/sops-nix";
   };
   outputs = {
     self,
     nixpkgs,
     home-manager,
     hyprland,
+    sops-nix,
     ...
   } @ inputs: let
     system = "x86_64-linux";
@@ -32,8 +35,10 @@
         nil
         alejandra
         git
+        deploy-rs
       ];
     };
+    deploy = import ./hosts/deploy.nix inputs;
     formatter.${system} = pkgs.alejandra;
     nixosConfigurations = {
       tsuki = lib.nixosSystem {
