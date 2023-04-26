@@ -3,6 +3,7 @@
     enable = true;
     settings = {
       PasswordAuthentication = false;
+      PubkeyAuthentication = true;
       PermitRootLogin = "yes";
       StreamLocalBindUnlink = "yes";
       GatewayPorts = "clientspecified";
