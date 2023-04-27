@@ -37,9 +37,11 @@
       name = "snowflake";
       packages = with pkgs; [
         nil
+        yaml-language-server
         alejandra
         git
         deploy-rs
+        sops
       ];
     };
     deploy = import ./hosts/deploy.nix inputs;
