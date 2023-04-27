@@ -5,7 +5,7 @@
       KbdInteractiveAuthentication = false;
       PasswordAuthentication = false;
       PubkeyAuthentication = true;
-      PermitRootLogin = "no";
+      PermitRootLogin = "yes";
       StreamLocalBindUnlink = "yes";
       GatewayPorts = "clientspecified";
     };
