@@ -47,5 +47,4 @@
     acceptTerms = true;
     defaults.email = "github@notohh.dev";
   };
-  security.sudo.wheelNeedsPassword = false;
 }
