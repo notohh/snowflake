@@ -7,6 +7,8 @@ inputs: {
         path = activate.nixos inputs.self.nixosConfigurations.hime;
       };
       sshUser = "oh";
+      sshOpts = ["-t"];
+      magicRollback = false;
     };
     sutakku = {
       hostname = "sutakku";
@@ -15,6 +17,8 @@ inputs: {
         path = activate.nixos inputs.self.nixosConfigurations.sutakku;
       };
       sshUser = "oh";
+      sshOpts = ["-t"];
+      magicRollback = false;
     };
   };
 }
