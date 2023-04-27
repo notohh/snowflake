@@ -4,11 +4,10 @@
     settings = {
       PasswordAuthentication = false;
       PubkeyAuthentication = true;
-      PermitRootLogin = "yes";
+      PermitRootLogin = "no";
       StreamLocalBindUnlink = "yes";
       GatewayPorts = "clientspecified";
     };
-
     hostKeys = [
       {
         path = "/etc/ssh/ssh_host_ed25519_key";
