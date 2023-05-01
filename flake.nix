@@ -24,7 +24,6 @@
     nixpkgs,
     home-manager,
     hyprland,
-    sops-nix,
     ...
   } @ inputs: let
     system = "x86_64-linux";
