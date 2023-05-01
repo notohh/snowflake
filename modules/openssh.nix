@@ -1,11 +1,11 @@
-{...}: {
+{lib, ...}: {
   services.openssh = {
     enable = true;
     settings = {
       KbdInteractiveAuthentication = false;
-      PasswordAuthentication = false;
+      PasswordAuthentication = lib.mkForce false;
       PubkeyAuthentication = true;
-      PermitRootLogin = "no";
+      PermitRootLogin = lib.mkForce "no";
       StreamLocalBindUnlink = "yes";
       GatewayPorts = "clientspecified";
     };
