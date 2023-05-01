@@ -1,4 +1,4 @@
-<h1 align="center">:electric_plug: modules</h1>
+# :electric_plug: modules
 
 this directory hosts some common modules / services / security tweaks used on (most) hosts.
 

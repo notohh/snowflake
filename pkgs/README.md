@@ -1,4 +1,4 @@
-<h1 align="center">:package: pkgs</h1>
+# :package: pkgs
 
 this directory hosts derivations of packages not found in nixpkgs, and overrides.
 

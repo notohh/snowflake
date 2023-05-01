@@ -1,4 +1,4 @@
-<h1 align="center">:house_with_garden: home</h1>
+# :house_with_garden: home
 
 the home of my dotfiles, configured and managed by home-manager.
 

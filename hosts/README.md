@@ -1,4 +1,4 @@
-<h1 align="center">:computer: hosts</h1>
+# :computer: hosts
 
 my different hosts, each with their own unique configurations and purposes.
 
