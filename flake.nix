@@ -41,6 +41,8 @@
         git
         deploy-rs
         sops
+        file
+        inlyne
       ];
     };
     deploy = import ./hosts/deploy.nix inputs;
