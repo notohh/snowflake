@@ -27,7 +27,6 @@
     ...
   } @ inputs: let
     system = "x86_64-linux";
-    lib = nixpkgs.lib;
     pkgs = import nixpkgs {
       inherit system;
     };
@@ -47,57 +46,6 @@
     };
     deploy = import ./hosts/deploy.nix inputs;
     formatter.${system} = pkgs.alejandra;
-    nixosConfigurations = {
-      tsuki = lib.nixosSystem {
-        inherit system;
-        modules = [
-          ./hosts/tsuki
-          home-manager.nixosModules.home-manager
-          {
-            home-manager = {
-              useGlobalPkgs = true;
-              useUserPackages = true;
-              extraSpecialArgs = {inherit inputs;};
-              users.notoh = {
-                imports = [
-                  hyprland.homeManagerModules.default
-                  ./hosts/tsuki/home.nix
-                ];
-              };
-            };
-          }
-        ];
-      };
-      hime = lib.nixosSystem {
-        inherit system;
-        modules = [
-          ./hosts/hime
-          home-manager.nixosModules.home-manager
-          {
-            home-manager = {
-              useGlobalPkgs = true;
-              useUserPackages = true;
-              users.oh = {imports = [./hosts/hime/home.nix];};
-            };
-          }
-        ];
-      };
-      sutakku = lib.nixosSystem {
-        inherit system;
-        modules = [
-          ./hosts/sutakku
-          home-manager.nixosModules.home-manager
-          {
-            home-manager = {
-              useGlobalPkgs = true;
-              useUserPackages = true;
-              users.oh = {
-                imports = [./hosts/sutakku/home.nix];
-              };
-            };
-          }
-        ];
-      };
-    };
+    nixosConfigurations = import ./hosts/systems.nix inputs;
   };
 }
