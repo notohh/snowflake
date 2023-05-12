@@ -32,7 +32,7 @@
     users.oh = {
       isNormalUser = true;
       description = "oh";
-      extraGroups = ["networkmanager" "wheel"];
+      extraGroups = ["networkmanager" "wheel" "docker"];
     };
   };
 

@@ -28,7 +28,7 @@
     users.oh = {
       isNormalUser = true;
       description = "oh";
-      extraGroups = ["networkmanager" "wheel"];
+      extraGroups = ["networkmanager" "wheel" "docker"];
       packages = with pkgs; [
         hugo
         yt-dlp

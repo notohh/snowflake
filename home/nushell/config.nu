@@ -6,6 +6,7 @@ alias zj = zellij
 alias zjd = zellij --layout ../.config/zellij/snowflake.kdl
 alias zjs = zellij --layout ./config/zellij/ssh.kdl
 alias lg = lazygit
+alias ld = lazydocker
 alias la = ls -a
 alias cat = bat
 alias fmt = alejandra *
