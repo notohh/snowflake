@@ -22,7 +22,6 @@
     xkbVariant = "";
   };
 
-  virtualisation.docker.enable = true;
   users = {
     defaultUserShell = pkgs.nushell;
     users.oh = {
@@ -33,7 +32,6 @@
   };
 
   environment.systemPackages = with pkgs; [
-    docker-compose
     hugo
     wget
     python3Full
