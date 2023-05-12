@@ -20,5 +20,15 @@ inputs: {
       sshOpts = ["-t"];
       magicRollback = false;
     };
+    sakura = {
+      hostname = "192.168.1.25";
+      profiles.system = {
+        user = "root";
+        path = activate.nixos inputs.self.nixosConfigurations.sakura;
+      };     
+      sshUser = "notoh";
+      sshOpts = ["-t"];
+      magicRollback = false;
+    };
   };
 }
