@@ -38,7 +38,7 @@
 
   '';
 
-  home.file.".config/zellij/ssh.kdl".text = ''
+  home.file."./.config/zellij/ssh.kdl".text = ''
       layout {
         tab name="ssh" {
             pane size=1 borderless=true {

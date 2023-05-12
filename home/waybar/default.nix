@@ -63,7 +63,7 @@ in {
           };
         };
         "cpu" = {
-          format = "{usage}% ";
+          format = "{usage}% ";
           tooltip = "false";
           interval = "2";
         };
