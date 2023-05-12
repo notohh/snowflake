@@ -14,5 +14,6 @@
     bat
     croc
     lazydocker
+    yt-dlp
   ];
 }

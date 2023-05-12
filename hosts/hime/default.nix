@@ -29,15 +29,12 @@
       isNormalUser = true;
       description = "oh";
       extraGroups = ["networkmanager" "wheel" "docker"];
-      packages = with pkgs; [
-        hugo
-        yt-dlp
-      ];
     };
   };
 
   environment.systemPackages = with pkgs; [
     docker-compose
+    hugo
     wget
     python3Full
     nfs-utils

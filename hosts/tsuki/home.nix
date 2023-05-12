@@ -21,7 +21,6 @@
     homeDirectory = "/home/notoh";
     packages = with pkgs; [
       (callPackage ../../pkgs/chatterino7 {})
-      chromium
       bitwarden
       discord
       spotify-player
@@ -39,7 +38,6 @@
       alejandra
       cryptomator
       ventoy-bin-full
-      yt-dlp
       plex-media-player
       wine
       lutris
