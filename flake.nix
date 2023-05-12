@@ -46,6 +46,6 @@
     };
     deploy = import ./hosts/deploy.nix inputs;
     formatter.${system} = pkgs.alejandra;
-    nixosConfigurations = import ./hosts/systems.nix inputs;
+    nixosConfigurations = import ./hosts inputs;
   };
 }
