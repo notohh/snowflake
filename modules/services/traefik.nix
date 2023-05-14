@@ -23,9 +23,14 @@
             service = "searxng@docker";
           };
           hugo = {
-            rule = "Host(``)";
+            rule = "Host(`hugo.lab`)";
             entryPoints = ["websecure"];
             service = "hugo@docker";
+          };
+          stash = {
+            rule = "Host(`stash.lab`)";
+            entrypoints = ["web"];
+            service = "stash@docker";
           };
         };
       };
