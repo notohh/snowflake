@@ -58,6 +58,7 @@ in {
     WLR_RENDERER = "vulkan";
     XCURSOR_SIZE = "24";
     NIXOS_OZONE_WL = "1";
+    EDITOR = "hx";
   };
 
   environment.etc."greetd/environments".text = ''
