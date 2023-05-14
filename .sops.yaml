@@ -1,0 +1,7 @@
+keys:
+  - &notoh age1ckvmyqkwk69j64ev3fmckytz6k2dv79z4gn5qf6gxqyevp5yjfesdfkxmn
+creation_rules:
+  - path_regex: secrets/[^/]+\.yaml$
+    key_groups:
+      - age:
+        - *notoh
