@@ -5,12 +5,12 @@
 }:
 stdenv.mkDerivation rec {
   pname = "chatterino7";
-  version = "7.4.3";
+  version = "7.4.4";
   src = pkgs.fetchFromGitHub {
     owner = "SevenTV";
     repo = pname;
-    rev = "a86fa75325a5ff697f71dad0ba55a0c02674cf8d";
-    sha256 = "sha256-I9c0KfNZC2gXDylDe2zMDa9PPQTRgxNwD5xcwsYVFZU=";
+    rev = "90ee0afdf92bf6a7b383fda446ebeb88e214048b";
+    sha256 = "sha256-PNl130u7Oau6MMUb9TAWtI30i1mfcF6lM+PJWPSdEqE=";
     fetchSubmodules = true;
   };
   nativeBuildInputs = with pkgs; [cmake pkg-config libsForQt5.qt5.wrapQtAppsHook];
