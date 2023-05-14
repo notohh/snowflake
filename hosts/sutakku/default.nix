@@ -26,7 +26,6 @@
     xkbVariant = "";
   };
 
-  virtualisation.docker.enable = true;
   users = {
     defaultUserShell = pkgs.nushell;
     users.oh = {

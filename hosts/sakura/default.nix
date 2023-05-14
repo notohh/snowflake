@@ -6,6 +6,7 @@
   imports = [
     ./hardware-configuration.nix
     ../../modules
+    ../../modules/services
   ];
 
   boot.loader = {
@@ -16,7 +17,6 @@
       useOSProber = false;
     };
   };
-
   networking = {
     hostName = "sakura";
   };
@@ -26,7 +26,6 @@
     xkbVariant = "";
   };
 
-  virtualisation.docker.enable = true;
   users = {
     defaultUserShell = pkgs.nushell;
     users.notoh = {
