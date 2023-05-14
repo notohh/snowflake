@@ -7,7 +7,7 @@ inputs: {
         path = activate.nixos inputs.self.nixosConfigurations.hime;
       };
       sshUser = "oh";
-      sshOpts = ["-t"];
+      sshOpts = ["-t" "-i" "~/.ssh/hime"];
       magicRollback = false;
     };
     sutakku = {
@@ -17,7 +17,7 @@ inputs: {
         path = activate.nixos inputs.self.nixosConfigurations.sutakku;
       };
       sshUser = "oh";
-      sshOpts = ["-t"];
+      sshOpts = ["-t" "-i" "~/.ssh/sutakku"];
       magicRollback = false;
     };
     sakura = {
@@ -27,7 +27,7 @@ inputs: {
         path = activate.nixos inputs.self.nixosConfigurations.sakura;
       };
       sshUser = "notoh";
-      sshOpts = ["-t"];
+      sshOpts = ["-t" "-i" "~/.ssh/sakura"];
       magicRollback = false;
     };
   };
