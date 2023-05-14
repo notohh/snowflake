@@ -15,3 +15,4 @@ name            | description
 `swayidle`      | idle manager daemon
 `system.nix`    | commonly shared system settings
 `udevd`         | fixes an issue when using `nixos-rebuild`, tracked [here](https://github.com/NixOS/nixpkgs/issues/180175)
+`virtualisation`| basic docker configuration
