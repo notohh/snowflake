@@ -6,7 +6,6 @@
   imports = [
     ./hardware-configuration.nix
     ../../modules
-    ../../modules/services
   ];
 
   boot.loader = {
@@ -17,6 +16,7 @@
       useOSProber = false;
     };
   };
+
   networking = {
     hostName = "sakura";
   };
