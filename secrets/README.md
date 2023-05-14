@@ -1,3 +1,3 @@
 # :lock: secrets
 
-not in use yet, will host my encrypted secrets once i learn how to use either sops or agenix
+houses my secrets, managed with (sops-nix)[https://github.com/Mic92/sops-nix]
