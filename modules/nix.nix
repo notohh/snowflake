@@ -12,7 +12,6 @@
   nix = {
     package = pkgs.nixFlakes;
     extraOptions = ''
-      experimental-features = nix-command flakes
       warn-dirty = false
     '';
     gc = {
@@ -21,10 +20,12 @@
       options = "--delete-older-than 7d";
     };
     settings = {
+      extra-experimental-features = ["flakes" "nix-command"];
       auto-optimise-store = true;
       builders-use-substitutes = true;
       keep-derivations = true;
       keep-outputs = true;
+      allowed-users = ["@wheel"];
       trusted-users = ["root" "@wheel"];
       substituters = [
         "https://hyprland.cachix.org"
