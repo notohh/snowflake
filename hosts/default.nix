@@ -4,8 +4,10 @@ inputs: let
 in {
   tsuki = nixosSystem {
     inherit system;
+    specialArgs = {inherit inputs;};
     modules = [
       ./tsuki
+      inputs.sops-nix.nixosModules.sops
       inputs.home-manager.nixosModules.home-manager
       {
         home-manager = {
@@ -14,8 +16,8 @@ in {
           extraSpecialArgs = {inherit inputs;};
           users.notoh = {
             imports = [
-              inputs.hyprland.homeManagerModules.default
               ./tsuki/home.nix
+              inputs.hyprland.homeManagerModules.default
             ];
           };
         };
@@ -26,12 +28,18 @@ in {
     inherit system;
     modules = [
       ./hime
+      inputs.sops-nix.nixosModules.sops
       inputs.home-manager.nixosModules.home-manager
       {
         home-manager = {
           useGlobalPkgs = true;
           useUserPackages = true;
-          users.oh = {imports = [./hime/home.nix];};
+          extraSpecialArgs = {inherit inputs;};
+          users.oh = {
+            imports = [
+              ./hime/home.nix
+            ];
+          };
         };
       }
     ];
@@ -40,13 +48,16 @@ in {
     inherit system;
     modules = [
       ./sutakku
+      inputs.sops-nix.nixosModules.sops
       inputs.home-manager.nixosModules.home-manager
       {
         home-manager = {
           useGlobalPkgs = true;
           useUserPackages = true;
           users.oh = {
-            imports = [./sutakku/home.nix];
+            imports = [
+              ./sutakku/home.nix
+            ];
           };
         };
       }
@@ -54,15 +65,19 @@ in {
   };
   sakura = nixosSystem {
     inherit system;
+    specialArgs = {inherit inputs;};
     modules = [
       ./sakura
+      inputs.sops-nix.nixosModules.sops
       inputs.home-manager.nixosModules.home-manager
       {
         home-manager = {
           useGlobalPkgs = true;
           useUserPackages = true;
           users.notoh = {
-            imports = [./sakura/home.nix];
+            imports = [
+              ./sakura/home.nix
+            ];
           };
         };
       }

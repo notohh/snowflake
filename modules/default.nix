@@ -6,5 +6,6 @@
     ./system.nix
     ./openssh.nix
     ./virtualisation.nix
+    ./sops.nix
   ];
 }
