@@ -11,14 +11,14 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
       - name: Install Nix
-        uses: cachix/install-nix-action@v16
+        uses: cachix/install-nix-action@v20
         with:
           extra_nix_config: |
             auto-optimise-store = true
             access-tokens = github.com=${{ secrets.GITHUB_TOKEN }}
             experimental-features = nix-command flakes
       - name: Update flake.lock
-        uses: DeterminateSystems/update-flake-lock@v16
+        uses: DeterminateSystems/update-flake-lock@v19
         with:
           pr-title: "flake.lock: Update "
           pr-labels: |                  
