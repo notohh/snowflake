@@ -22,9 +22,9 @@
 
 + :house_with_garden: [home](home)
 + :computer: [hosts](hosts)
-  - :full_moon: [tsuki](hosts/tsuki)
-  - :princess: [hime](hosts/hime)
+  - :cherry_blossom: [sakura](hosts/sakura)
   - :white_flower: [sutakku](hosts/sutakku)
+  - :full_moon: [tsuki](hosts/tsuki)
 + :electric_plug: [modules](modules)
 + :package: [pkgs](pkgs)
 + :lock: [secrets](secrets)

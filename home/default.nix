@@ -21,10 +21,6 @@
   programs.ssh = {
     enable = true;
     extraConfig = ''
-      Host hime
-        HostName 192.168.1.66
-        User oh
-        IdentityFile /home/notoh/.ssh/hime
       Host sutakku
         HostName 192.168.1.72
         User oh
