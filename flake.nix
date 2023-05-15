@@ -38,6 +38,7 @@
         yaml-language-server
         alejandra
         git
+        sops
         deploy-rs
       ];
     };
