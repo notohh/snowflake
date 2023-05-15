@@ -12,9 +12,16 @@
   };
   services.traefik = {
     enable = true;
-    group = "docker";
     dynamicConfigOptions = {
       http = {
+        services = {
+          homepage.loadBalancer.servers = [{url = "http://localhost:3005";}];
+          searxng.loadBalancer.servers = [{url = "http://localhost:8085";}];
+          hugo.loadBalancer.servers = [{url = "http://localhost:1313";}];
+          stash.loadBalancer.servers = [{url = "http://localhost:9999";}];
+          foundryvtt.loadBalancer.servers = [{url = "http://localhost:30000";}];
+          gitea.loadBalancer.servers = [{url = "http://localhost:3000";}];
+        };
         routers = {
           api = {
             rule = "PathPrefix(`/api/`)";
@@ -24,29 +31,36 @@
           homepage = {
             rule = "Host(`dashboard.lab`)";
             entrypoints = ["web"];
-            service = "homepage@docker";
+            service = "homepage";
           };
           searxng = {
             rule = "Host(`searxng.lab`)";
             entrypoints = ["web"];
-            service = "searxng@docker";
-          };
-          hugo = {
-            rule = "Host(`notohh.dev`)";
-            entryPoints = ["websecure"];
-            service = "hugo@docker";
-            tls.domains = [{main = "*.notohh.dev";}];
-            tls.certresolver = "staging";
+            service = "searxng";
           };
           stash = {
             rule = "Host(`stash.lab`)";
             entrypoints = ["web"];
-            service = "stash@docker";
+            service = "stash";
+          };
+          hugo = {
+            rule = "Host(`notohh.dev`)";
+            entryPoints = ["websecure"];
+            service = "hugo";
+            tls.domains = [{main = "*.notohh.dev";}];
+            tls.certresolver = "staging";
           };
           foundryvtt = {
             rule = "Host(`foundry.notohh.dev`)";
             entrypoints = ["websecure"];
-            service = "foundryvtt@docker";
+            service = "foundryvtt";
+            tls.domains = [{main = "*.notohh.dev";}];
+            tls.certresolver = "staging";
+          };
+          gitea = {
+            rule = "Host(`git.notohh.dev`)";
+            entrypoints = ["websecure"];
+            service = "gitea";
             tls.domains = [{main = "*.notohh.dev";}];
             tls.certresolver = "staging";
           };
@@ -57,7 +71,6 @@
       log.level = "DEBUG";
       api.dashboard = true;
       api.insecure = true;
-      providers.docker = true;
       global = {
         checkNewVersion = false;
         sendAnonymousUsage = false;
@@ -73,6 +86,7 @@
           caServer = "https://acme-staging-v02.api.letsencrypt.org/directory";
           dnsChallenge = {
             provider = "cloudflare";
+            resolvers = ["1.1.1.1:53" "1.0.0.1:53"];
             delayBeforeCheck = "0";
           };
         };
@@ -82,6 +96,7 @@
           caServer = "https://acme-v02.api.letsencrypt.org/directory";
           dnsChallenge = {
             provider = "cloudflare";
+            resolvers = ["1.1.1.1:53" "1.0.0.1:53"];
             delayBeforeCheck = "0";
           };
         };

@@ -7,5 +7,8 @@
     environment = {
       INSTANCE_NAME = "SearXNG";
     };
+    ports = [
+      "8085:8080"
+    ];
   };
 }

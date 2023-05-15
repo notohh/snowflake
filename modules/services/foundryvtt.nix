@@ -10,5 +10,8 @@
       /run/secrets/foundry-username
       /run/secrets/foundry-password
     ];
+    ports = [
+      "30000:30000"
+    ];
   };
 }

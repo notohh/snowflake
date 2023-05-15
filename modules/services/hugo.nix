@@ -6,5 +6,8 @@
     volumes = [
       "/home/notoh/docker/hugo:/src"
     ];
+    ports = [
+      "1313:1313"
+    ];
   };
 }

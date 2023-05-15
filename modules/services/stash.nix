@@ -16,5 +16,8 @@
       "/home/notoh/docker/stash/cache:/cache"
       "/home/notoh/docker/stash/generated:/generated"
     ];
+    ports = [
+      "9999:9999"
+    ];
   };
 }
