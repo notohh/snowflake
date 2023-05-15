@@ -37,8 +37,6 @@
 
   environment.systemPackages = with pkgs; [
     wget
-    nfs-utils
-    pinentry-curses
   ];
 
   programs.gnupg.agent = {

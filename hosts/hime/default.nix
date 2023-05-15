@@ -32,9 +32,6 @@
   };
 
   environment.systemPackages = with pkgs; [
-    hugo
     wget
-    python3Full
-    nfs-utils
   ];
 }

@@ -104,7 +104,6 @@
     libvirt
     qemu_kvm
     pinentry-gtk2
-    nfs-utils
     jdk17
   ];
 }
