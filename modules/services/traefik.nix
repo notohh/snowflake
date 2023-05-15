@@ -48,29 +48,29 @@
             entryPoints = ["websecure"];
             service = "hugo";
             tls.domains = [{main = "*.notohh.dev";}];
-            tls.certresolver = "staging";
+            tls.certresolver = "production";
           };
           foundryvtt = {
             rule = "Host(`foundry.notohh.dev`)";
             entrypoints = ["websecure"];
             service = "foundryvtt";
             tls.domains = [{main = "*.notohh.dev";}];
-            tls.certresolver = "staging";
+            tls.certresolver = "production";
           };
           gitea = {
             rule = "Host(`git.notohh.dev`)";
             entrypoints = ["websecure"];
             service = "gitea";
             tls.domains = [{main = "*.notohh.dev";}];
-            tls.certresolver = "staging";
+            tls.certresolver = "production";
           };
         };
       };
     };
     staticConfigOptions = {
       log.level = "DEBUG";
-      api.dashboard = true;
-      api.insecure = true;
+      api.dashboard = false;
+      api.insecure = false;
       global = {
         checkNewVersion = false;
         sendAnonymousUsage = false;
