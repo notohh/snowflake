@@ -1,4 +1,6 @@
-{config, ...}: {
+{...}: {
+  sops.secrets.foundry-username = {};
+  sops.secrets.foundry-password = {};
   virtualisation.oci-containers.containers.foundryvtt = {
     image = "felddy/foundryvtt:release";
     volumes = [

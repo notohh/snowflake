@@ -1,6 +1,6 @@
 {config, ...}: {
+  sops.secrets.cloudflare-api-key = {};
   networking.firewall.allowedTCPPorts = [80 443 8080];
-
   systemd.user.services.traefik.after = ["docker.service"];
   systemd.services.traefik = {
     environment = {
