@@ -24,26 +24,6 @@ in {
       }
     ];
   };
-  hime = nixosSystem {
-    inherit system;
-    modules = [
-      ./hime
-      inputs.sops-nix.nixosModules.sops
-      inputs.home-manager.nixosModules.home-manager
-      {
-        home-manager = {
-          useGlobalPkgs = true;
-          useUserPackages = true;
-          extraSpecialArgs = {inherit inputs;};
-          users.oh = {
-            imports = [
-              ./hime/home.nix
-            ];
-          };
-        };
-      }
-    ];
-  };
   sutakku = nixosSystem {
     inherit system;
     modules = [
