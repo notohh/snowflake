@@ -1,4 +1,4 @@
-{pkgs, ...}: {
+{pkgs, lib, ...}: {
   imports = [
     ./hardware-configuration.nix
     ../../modules
@@ -24,9 +24,9 @@
 
   users = {
     defaultUserShell = pkgs.nushell;
-    users.oh = {
+    users.notoh = lib.mkForce {
       isNormalUser = true;
-      description = "oh";
+      description = "notoh";
       extraGroups = ["networkmanager" "wheel" "docker"];
     };
   };

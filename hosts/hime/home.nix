@@ -1,6 +1,7 @@
 {
   config,
   pkgs,
+  lib,
   ...
 }: {
   imports = [
@@ -10,8 +11,8 @@
   programs.home-manager.enable = true;
 
   home = {
-    username = "oh";
-    homeDirectory = "/home/oh";
+    username = lib.mkDefault "notoh";
+    homeDirectory = lib.mkDefault "/home/notoh";
     stateVersion = "23.05";
   };
 }
