@@ -39,13 +39,10 @@
         alejandra
         git
         deploy-rs
-        sops
-        file
-        inlyne
       ];
     };
-    deploy = import ./hosts/deploy.nix inputs;
     formatter.${system} = pkgs.alejandra;
+    deploy = import ./hosts/deploy.nix inputs;
     nixosConfigurations = import ./hosts inputs;
   };
 }
