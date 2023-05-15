@@ -4,7 +4,7 @@
     package = pkgs.forgejo;
     stateDir = "/sakura/forjo";
     settings = {
-      # service.DISABLE_REGISTRATION = true;
+      service.DISABLE_REGISTRATION = true;
       server = {
         HTTP_PORT = 3000;
         DOMAIN = "git.notohh.dev";
