@@ -6,6 +6,9 @@
     volumes = [
       "/home/notoh/docker/foundryvtt:/data"
     ];
+    environment = {
+      CONTAINER_PRESERVE_CONFIG = "true";
+    };
     environmentFiles = [
       /run/secrets/foundry-username
       /run/secrets/foundry-password
