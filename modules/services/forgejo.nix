@@ -2,7 +2,8 @@
   services.gitea = {
     enable = true;
     package = pkgs.forgejo;
-    stateDir = "/sakura/forjo";
+    appName = "forgejo";
+    stateDir = "/sakura/forgejo";
     settings = {
       service.DISABLE_REGISTRATION = true;
       server = {
