@@ -15,7 +15,7 @@ alias cp = cp -i
 alias mv = mv -i
 alias fmt = alejandra *
 alias sakura = deploy ".#sakura"
-alias sutakku = deploy ".#sutakku"
+alias kariru = deploy ".#kariru"
 alias download = yt-dlp -P ~/Videos/downloaded
 
 let-env config = {
