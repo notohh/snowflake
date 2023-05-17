@@ -4,12 +4,17 @@ source ~/.cache/starship/init.nu
 
 alias zj = zellij
 alias zjd = zellij --layout ../.config/zellij/snowflake.kdl
-alias zjs = zellij --layout ./config/zellij/ssh.kdl
 alias lg = lazygit
 alias ld = lazydocker
-alias la = ls -a
+alias l = exa -ughH --icons
+alias la = exa -alughH --git --icons
+alias c = clear
 alias cat = bat
+alias rm = rm -i
+alias cp = cp -i
+alias mv = mv -i
 alias fmt = alejandra *
+alias download = yt-dlp -P ~/Videos/downloaded
 
 let-env config = {
 
@@ -35,7 +40,7 @@ let-env config = {
   history: {
     max_size: 10000 # Session has to be reloaded for this to take effect
     sync_on_enter: true # Enable to share history between multiple sessions, else you have to close the session to write history to file
-    file_format: "plaintext" # "sqlite" or "plaintext"
+    file_format: "sqlite" # "sqlite" or "plaintext"
   }
   completions: {
     case_sensitive: false # set to true to enable case-sensitive completions
