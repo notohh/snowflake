@@ -36,4 +36,4 @@
 + [NobbZ](https://github.com/NobbZ) - general nix assistance
 + [MatthiasBenaets](https://github.com/MatthiasBenaets) - amazing nixos introduction video
 + [sioodmy](https://github.com/sioodmy) - general dotfile, readme badges, and hyprland stuff
-+ [hlissner](https://github.com/hlissner) - [security.nix](modules/services/security.nix)
++ [hlissner](https://github.com/hlissner) - [security.nix](modules/security.nix)
