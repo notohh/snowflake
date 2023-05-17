@@ -6,6 +6,7 @@
   imports = [
     ./hardware-configuration.nix
     ../../modules
+    ../../modules/services/arr
   ];
 
   boot.loader = {
@@ -34,10 +35,6 @@
       extraGroups = ["networkmanager" "wheel" "docker"];
     };
   };
-
-  environment.systemPackages = with pkgs; [
-    wget
-  ];
 
   programs.gnupg.agent = {
     enable = true;

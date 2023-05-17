@@ -6,7 +6,7 @@
   imports = [
     ./hardware-configuration.nix
     ../../modules
-    ../../modules/services
+    ../../modules/services/arr
   ];
 
   boot.loader = {
@@ -19,7 +19,7 @@
   };
 
   networking = {
-    hostName = "sakura";
+    hostName = "kariru";
   };
 
   services.xserver = {

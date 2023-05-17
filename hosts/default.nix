@@ -71,4 +71,25 @@ in {
       }
     ];
   };
+  kariru = nixosSystem {
+    inherit system;
+    specialArgs = {inherit inputs;};
+    modules = [
+      ./kariru
+      sopsModule
+      diskoModule
+      hmModule
+      {
+        home-manager = {
+          useGlobalPkgs = true;
+          useUserPackages = true;
+          users.notoh = {
+            imports = [
+              ./kariru/home.nix
+            ];
+          };
+        };
+      }
+    ];
+  };
 }
