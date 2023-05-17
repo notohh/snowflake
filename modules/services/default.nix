@@ -7,5 +7,6 @@
     ./stash.nix
     ./foundryvtt.nix
     ./forgejo.nix
+    ./jellyfin.nix
   ];
 }
