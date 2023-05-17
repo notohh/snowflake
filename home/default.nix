@@ -23,14 +23,14 @@
   programs.ssh = {
     enable = true;
     extraConfig = ''
-      Host sutakku
-        HostName 192.168.1.72
-        User oh
-        IdentityFile /home/notoh/.ssh/sutakku
       Host sakura
         HostName 192.168.1.25
         User notoh
         IdentityFile /home/notoh/.ssh/sakura
+      Host kariru
+        HostName 192.168.1.54
+        User notoh
+        IdentityFile /home/notoh/.ssh/kariru
       Host pihole
         Hostname 192.168.1.221
         User root
@@ -39,6 +39,7 @@
         User root
     '';
   };
+
   programs.bat = {
     enable = true;
     config = {
@@ -54,6 +55,7 @@
         + "/Catppuccin-mocha.tmTheme");
     };
   };
+
   programs.zoxide = {
     enable = true;
     enableNushellIntegration = true;

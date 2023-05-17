@@ -29,27 +29,6 @@ in {
       }
     ];
   };
-  sutakku = nixosSystem {
-    inherit system;
-    specialArgs = {inherit inputs;};
-    modules = [
-      ./sutakku
-      sopsModule
-      diskoModule
-      hmModule
-      {
-        home-manager = {
-          useGlobalPkgs = true;
-          useUserPackages = true;
-          users.oh = {
-            imports = [
-              ./sutakku/home.nix
-            ];
-          };
-        };
-      }
-    ];
-  };
   sakura = nixosSystem {
     inherit system;
     specialArgs = {inherit inputs;};
