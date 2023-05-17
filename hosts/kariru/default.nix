@@ -27,15 +27,6 @@
     xkbVariant = "";
   };
 
-  users = {
-    defaultUserShell = pkgs.nushell;
-    users.notoh = {
-      isNormalUser = true;
-      description = "notoh";
-      extraGroups = ["networkmanager" "wheel" "docker"];
-    };
-  };
-
   programs.gnupg.agent = {
     enable = true;
     enableSSHSupport = true;

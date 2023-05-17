@@ -88,15 +88,7 @@
       daemon.enable = true;
     };
   };
-  users = {
-    defaultUserShell = pkgs.nushell;
-    users.notoh = {
-      isNormalUser = true;
-      description = "notoh";
-      extraGroups = ["networkmanager" "wheel" "disk" "video"];
-    };
-  };
-
+  
   environment.systemPackages = with pkgs; [
     wget
     dconf
