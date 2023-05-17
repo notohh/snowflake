@@ -88,7 +88,7 @@
       daemon.enable = true;
     };
   };
-  
+
   environment.systemPackages = with pkgs; [
     wget
     dconf
