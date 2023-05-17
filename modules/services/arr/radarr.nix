@@ -2,6 +2,6 @@
   services.radarr = {
     enable = true;
     openFirewall = true;
-    dataDir = "/home/notoh/radarr";
+    dataDir = "/var/lib/radarr";
   };
 }

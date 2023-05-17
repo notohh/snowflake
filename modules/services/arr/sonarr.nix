@@ -2,6 +2,6 @@
   services.sonarr = {
     enable = true;
     openFirewall = true;
-    dataDir = "/home/notoh/sonarr";
+    dataDir = "/var/lib/sonarr";
   };
 }
