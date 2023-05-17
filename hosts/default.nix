@@ -1,5 +1,9 @@
 inputs: let
   system = "x86_64-linux";
+  sopsModule = inputs.sops-nix.nixosModules.sops;
+  hmModule = inputs.home-manager.nixosModules.home-manager;
+  diskoModule = inputs.disko.nixosModules.disko;
+  hyprlandModule = inputs.hyprland.homeManagerModules.default;
   inherit (inputs.nixpkgs.lib) nixosSystem;
 in {
   tsuki = nixosSystem {
@@ -7,8 +11,9 @@ in {
     specialArgs = {inherit inputs;};
     modules = [
       ./tsuki
-      inputs.sops-nix.nixosModules.sops
-      inputs.home-manager.nixosModules.home-manager
+      sopsModule
+      diskoModule
+      hmModule
       {
         home-manager = {
           useGlobalPkgs = true;
@@ -17,7 +22,7 @@ in {
           users.notoh = {
             imports = [
               ./tsuki/home.nix
-              inputs.hyprland.homeManagerModules.default
+              hyprlandModule
             ];
           };
         };
@@ -26,10 +31,12 @@ in {
   };
   sutakku = nixosSystem {
     inherit system;
+    specialArgs = {inherit inputs;};
     modules = [
       ./sutakku
-      inputs.sops-nix.nixosModules.sops
-      inputs.home-manager.nixosModules.home-manager
+      sopsModule
+      diskoModule
+      hmModule
       {
         home-manager = {
           useGlobalPkgs = true;
@@ -48,8 +55,9 @@ in {
     specialArgs = {inherit inputs;};
     modules = [
       ./sakura
-      inputs.sops-nix.nixosModules.sops
-      inputs.home-manager.nixosModules.home-manager
+      sopsModule
+      diskoModule
+      hmModule
       {
         home-manager = {
           useGlobalPkgs = true;
