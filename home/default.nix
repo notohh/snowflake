@@ -6,12 +6,14 @@
     ./helix
     ./git
     ./lazygit
-    ./zoxide
+    ./lf
     ./direnv
   ];
 
   home.packages = with pkgs; [
     croc
+    exa
+    ripgrep
     lazydocker
     yt-dlp
     nfs-utils
@@ -51,5 +53,12 @@
         }
         + "/Catppuccin-mocha.tmTheme");
     };
+  };
+  programs.zoxide = {
+    enable = true;
+    enableNushellIntegration = true;
+    options = [
+      "--cmd cdd"
+    ];
   };
 }

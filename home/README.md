@@ -21,4 +21,3 @@ name            | description
 `wezterm`       | my terminal of choice
 `zathura`       | pdf viewer
 `zellij`        | terminal multiplexer
-`zoxide`        | smarter cd command
