@@ -27,7 +27,6 @@
   - :full_moon: [tsuki](hosts/tsuki)
 + :electric_plug: [modules](modules)
   - :satellite: [services](modules/services)
-    - :anchor: [arr](modules/services/arr)
 + :package: [pkgs](pkgs)
 + :lock: [secrets](secrets)
 
