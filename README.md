@@ -1,6 +1,6 @@
 <div align="center">
 <h1>
-<img src="https://files.catbox.moe/i4twd5.png"></img> <br>
+<img width="96" src="https://files.artturin.com/files/nixoscolorful.svg"></img> <br>
   snowflake
 </h1>
 </h2><img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/palette/macchiato.png" width="500" />
@@ -38,4 +38,5 @@
 + [NobbZ](https://github.com/NobbZ) - general nix assistance
 + [MatthiasBenaets](https://github.com/MatthiasBenaets) - amazing nixos introduction video
 + [sioodmy](https://github.com/sioodmy) - general dotfile, readme badges, and hyprland stuff
++ [MatthewCroughan](https://github.com/MatthewCroughan) - traefik config used as reference
 + [hlissner](https://github.com/hlissner) - [security.nix](modules/security.nix)
