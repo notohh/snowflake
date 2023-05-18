@@ -5,7 +5,7 @@ the home of my dotfiles, configured and managed by home-manager.
 name            | description
 --------------- | -----------
 `direnv`        | a shell extension, that loads environment variables in certain directories
-`default.nix`   | used for commonly shared modules, for multiple home-manager configs
+`default`       | used for commonly shared modules, for multiple home-manager configs
 `dunst`         | notification daemon
 `git`           | version control system
 `gtk`           | themes

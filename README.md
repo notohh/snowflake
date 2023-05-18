@@ -22,10 +22,12 @@
 
 + :house_with_garden: [home](home)
 + :computer: [hosts](hosts)
+  - :wind_chime: [kariru](hosts/kariru)
   - :cherry_blossom: [sakura](hosts/sakura)
-  - :white_flower: [sutakku](hosts/sutakku)
   - :full_moon: [tsuki](hosts/tsuki)
 + :electric_plug: [modules](modules)
+  - :satellite: [services](modules/services)
+    - :anchor: [arr](modules/services/arr)
 + :package: [pkgs](pkgs)
 + :lock: [secrets](secrets)
 

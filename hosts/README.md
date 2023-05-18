@@ -4,6 +4,8 @@ my different hosts, each with their own unique configurations and purposes.
 
 Name            | Description
 --------------- | -----------
-`sakura`        | my WIP new main vm
-`sutakku`       | (currently) my *arr stack / seedbox vm
-`tsuki`         | my main machine running hyprland
+`kariru`        | *arr stack / seedbox vm
+`sakura`        | WIP new main vm
+`tsuki`         | main machine running hyprland
+`default`       | defines `nixosConfigurations`
+`deploy`        | defines deployment nodes for deploy-rs
