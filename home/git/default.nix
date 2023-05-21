@@ -1,6 +1,4 @@
 {pkgs, ...}: {
-  home.packages = with pkgs; [gh];
-
   programs.git = {
     enable = true;
     userEmail = "github@notohh.dev";
@@ -10,5 +8,13 @@
       signByDefault = true;
     };
     ignores = ["*result*" ".direnv" "node_modules"];
+  };
+  programs.gh = {
+    enable = true;
+    enableGitCredentialHelper = true;
+    settings = {
+      editor = "hx";
+      prompt = "enabled";
+    };
   };
 }

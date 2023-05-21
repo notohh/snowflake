@@ -8,6 +8,7 @@
     ./lazygit
     ./lf
     ./direnv
+    ./btop
   ];
 
   home.packages = with pkgs; [
