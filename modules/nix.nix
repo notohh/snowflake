@@ -4,7 +4,7 @@
       allowUnfree = true;
       permittedInsecurePackages = [
         "qtwebkit-5.212.0-alpha4"
-        "electron-12.2.3"
+        "nodejs-16.20.0"
       ];
     };
   };
