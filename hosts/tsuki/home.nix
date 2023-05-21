@@ -22,9 +22,8 @@
     packages = with pkgs; [
       (callPackage ../../pkgs/chatterino7 {})
       bitwarden
-      discord
+      webcord
       spotify-player
-      btop
       obs-studio
       pavucontrol
       unzip
@@ -38,7 +37,6 @@
       alejandra
       cryptomator
       ventoy-bin-full
-      plex-media-player
       wine
       lutris
       gamemode
@@ -48,11 +46,6 @@
       osu-lazer-bin
       runelite
       prismlauncher
-      cbonsai
-      pipes-rs
-      cmatrix
-      cava
-      hollywood
     ];
 
     stateVersion = "23.05";
