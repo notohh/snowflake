@@ -4,6 +4,7 @@ the home of my dotfiles, configured and managed by home-manager.
 
 name            | description
 --------------- | -----------
+`btop`          | system monitor program
 `direnv`        | a shell extension, that loads environment variables in certain directories
 `default`       | used for commonly shared modules, for multiple home-manager configs
 `dunst`         | notification daemon
