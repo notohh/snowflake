@@ -34,11 +34,11 @@
       Host sakura
         HostName 192.168.1.25
         User notoh
-        IdentityFile /home/notoh/.ssh/sakura
+        IdentityFile ~/.ssh/sakura
       Host kariru
         HostName 192.168.1.54
         User notoh
-        IdentityFile /home/notoh/.ssh/kariru
+        IdentityFile ~/.ssh/kariru
       Host pihole
         Hostname 192.168.1.221
         User root
@@ -48,7 +48,7 @@
     '';
   };
 
-   programs.zoxide = {
+  programs.zoxide = {
     enable = true;
     enableNushellIntegration = true;
     options = [

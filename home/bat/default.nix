@@ -1,9 +1,5 @@
-{
-  pkgs,
-  ...
-}: {
-  
- programs.bat = {
+{pkgs, ...}: {
+  programs.bat = {
     enable = true;
     config = {
       theme = "catppuccin-mocha";
@@ -18,5 +14,4 @@
         + "/Catppuccin-mocha.tmTheme");
     };
   };
-
 }
