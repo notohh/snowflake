@@ -1,6 +1,6 @@
 {config, ...}: {
   sops.secrets.cloudflare-api-key = {};
-  networking.firewall.allowedTCPPorts = [80 443 8080];
+  networking.firewall.allowedTCPPorts = [80 443 8080 8000];
   systemd.user.services.traefik.after = ["docker.service"];
   systemd.services.traefik = {
     environment = {
@@ -22,6 +22,7 @@
           jellyfin.loadBalancer.servers = [{url = "http://localhost:8096";}];
           foundryvtt.loadBalancer.servers = [{url = "http://localhost:30000";}];
           gitea.loadBalancer.servers = [{url = "http://localhost:3000";}];
+          rustypaste.loadBalancer.servers = [{url = "http://localhost:8000";}];
         };
         routers = {
           api = {
@@ -67,6 +68,13 @@
             rule = "Host(`git.notohh.dev`)";
             entrypoints = ["websecure"];
             service = "gitea";
+            tls.domains = [{main = "*.notohh.dev";}];
+            tls.certresolver = "production";
+          };
+          rustypaste = {
+            rule = "Host(`img.notohh.dev`)";
+            entrypoints = ["websecure"];
+            service = "rustypaste";
             tls.domains = [{main = "*.notohh.dev";}];
             tls.certresolver = "production";
           };

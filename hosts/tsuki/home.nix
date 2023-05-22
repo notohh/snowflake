@@ -21,6 +21,7 @@
     homeDirectory = "/home/notoh";
     packages = with pkgs; [
       (callPackage ../../pkgs/chatterino7 {})
+      (callPackage ../../pkgs/rustypaste-cli {})
       bitwarden
       webcord
       spotify-player

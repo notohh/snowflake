@@ -8,5 +8,6 @@
     ./foundryvtt.nix
     ./forgejo.nix
     ./jellyfin.nix
+    ./rustypaste.nix
   ];
 }
