@@ -1,4 +1,5 @@
 {
+  lib,
   rustPlatform,
   fetchFromGitHub,
   ...
@@ -12,5 +13,13 @@
       rev = "v${version}";
       sha256 = "sha256-GPQEo9nYcw2Xowh0f2fqj4Ya5kUApB4GSdaSZkVb4R0=";
     };
+    
     cargoHash = "sha256-uwAiNrpObirtxGXaNz3prXFIygcf0b8t/Z9N99Gcrtk=";
+    
+    meta = with lib; {
+      description = "A CLI tool for rustypaste ";
+      homepage = "https://github.com/orhun/rustypaste-cli";
+      license = licenses.mit;
+      maintainers = with maintainers; [ notohh ];
+    }
   }
