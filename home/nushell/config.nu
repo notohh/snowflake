@@ -17,6 +17,7 @@ alias fmt = alejandra *
 alias sakura = deploy ".#sakura"
 alias kariru = deploy ".#kariru"
 alias download = yt-dlp -P ~/Videos/downloaded
+alias upload = rpaste -s "https://img.notohh.dev/" -e 1day
 
 let-env config = {
 
