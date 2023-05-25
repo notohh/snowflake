@@ -14,6 +14,6 @@ name            | description
 `security`      | stolen from [hlissner](https://github.com/hlissner)
 `sops`          | configures sops-nix
 `swayidle`      | idle manager daemon
-`system.nix`    | commonly shared system settings
-`users.nix`     | defines all hosts users & groups
+`system`        | commonly shared system settings
+`users`         | defines all hosts users & groups
 `virtualisation`| basic docker configuration
