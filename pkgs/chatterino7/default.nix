@@ -2,6 +2,8 @@
   stdenv,
   cmake,
   pkgs,
+  lib,
+  makeDesktopItem,
 }:
 stdenv.mkDerivation rec {
   pname = "chatterino7";
@@ -25,10 +27,28 @@ stdenv.mkDerivation rec {
   installPhase =
     ''
       mkdir -p "$out/bin"
-      mv "bin/chatterino" "$out/bin"
+      cp "bin/chatterino" "$out/bin"
     ''
     + ''
       mkdir -p $out/share/icons/hicolor/256x256/apps
       cp $src/resources/icon.png $out/share/icons/hicolor/256x256/apps/chatterino.png
     '';
+  postFixup = ''
+    mkdir -p $out/share/applications
+    ln -s ${desktopFile}/share/applications/* $out/share/applications
+  '';
+  desktopFile = makeDesktopItem {
+    name = "Chatterino7";
+    desktopName = "Chatterino7";
+    exec = "chatterino";
+    icon = "chatterino";
+    comment = meta.description;
+    categories = ["Social Media"];
+  };
+  meta = with lib; {
+    description = "Chat client for twitch.tv";
+    homepage = "https://github.com/SevenTV/chatterino7";
+    license = licenses.mit;
+    maintainers = with maintainers; [notohh];
+  };
 }
