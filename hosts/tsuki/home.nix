@@ -20,9 +20,6 @@
     username = "notoh";
     homeDirectory = "/home/notoh";
     packages = with pkgs; [
-      (callPackage ../../pkgs/chatterino7 {})
-      (callPackage ../../pkgs/rustypaste-cli {})
-      bitwarden
       webcord
       spotify-player
       obs-studio
@@ -32,9 +29,7 @@
       virt-manager
       imv
       mpv
-      appimage-run
       qbittorrent
-      gdu
       cryptomator
       ventoy-bin-full
       wine
@@ -46,6 +41,8 @@
       osu-lazer-bin
       runelite
       prismlauncher
+      (callPackage ../../pkgs/chatterino7 {})
+      (callPackage ../../pkgs/rustypaste-cli {})
     ];
 
     stateVersion = "23.05";
