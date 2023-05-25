@@ -15,6 +15,7 @@
   home.packages = with pkgs; [
     croc
     exa
+    gdu
     ripgrep
     lazydocker
     yt-dlp
