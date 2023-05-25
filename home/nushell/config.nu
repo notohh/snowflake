@@ -13,7 +13,6 @@ alias cat = bat
 alias rm = rm -i
 alias cp = cp -i
 alias mv = mv -i
-alias fmt = alejandra *
 alias sakura = deploy ".#sakura"
 alias kariru = deploy ".#kariru"
 alias download = yt-dlp -P ~/Videos/downloaded
