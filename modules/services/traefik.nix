@@ -14,16 +14,6 @@
     enable = true;
     dynamicConfigOptions = {
       http = {
-        services = {
-          homepage.loadBalancer.servers = [{url = "http://localhost:3005";}];
-          searxng.loadBalancer.servers = [{url = "http://localhost:8085";}];
-          hugo.loadBalancer.servers = [{url = "http://localhost:1313";}];
-          stash.loadBalancer.servers = [{url = "http://localhost:9999";}];
-          jellyfin.loadBalancer.servers = [{url = "http://localhost:8096";}];
-          foundryvtt.loadBalancer.servers = [{url = "http://localhost:30000";}];
-          gitea.loadBalancer.servers = [{url = "http://localhost:3000";}];
-          rustypaste.loadBalancer.servers = [{url = "http://localhost:8000";}];
-        };
         routers = {
           api = {
             rule = "PathPrefix(`/api/`)";
@@ -78,6 +68,16 @@
             tls.domains = [{main = "*.notohh.dev";}];
             tls.certresolver = "production";
           };
+        };
+        services = {
+          homepage.loadBalancer.servers = [{url = "http://localhost:3005";}];
+          searxng.loadBalancer.servers = [{url = "http://localhost:8085";}];
+          hugo.loadBalancer.servers = [{url = "http://localhost:1313";}];
+          stash.loadBalancer.servers = [{url = "http://localhost:9999";}];
+          jellyfin.loadBalancer.servers = [{url = "http://localhost:8096";}];
+          foundryvtt.loadBalancer.servers = [{url = "http://localhost:30000";}];
+          gitea.loadBalancer.servers = [{url = "http://localhost:3000";}];
+          rustypaste.loadBalancer.servers = [{url = "http://localhost:8000";}];
         };
       };
     };
