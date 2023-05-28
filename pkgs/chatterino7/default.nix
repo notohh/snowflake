@@ -43,7 +43,6 @@ stdenv.mkDerivation rec {
     exec = "chatterino";
     icon = "chatterino";
     comment = meta.description;
-    categories = ["Social Media"];
   };
   meta = with lib; {
     description = "Chat client for twitch.tv";
