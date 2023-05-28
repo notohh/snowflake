@@ -8,14 +8,14 @@
     ./lazygit
     ./lf
     ./direnv
-    ./btop
     ./bat
   ];
 
   home.packages = with pkgs; [
     croc
     exa
-    gdu
+    du-dust
+    bottom
     ripgrep
     lazydocker
     yt-dlp
