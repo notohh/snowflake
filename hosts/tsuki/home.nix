@@ -8,6 +8,7 @@
     ../../home/dunst
     ../../home/lf
     ../../home/zellij
+    ../../home/rofi
     ../../home/waybar
     ../../home/wayland/hyprland
     ../../modules/swayidle.nix
