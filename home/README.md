@@ -16,6 +16,7 @@ name            | description
 `librewolf`     | a hardened firefox fork, and my browser of choice
 `neofetch`      | fetch program
 `nushell`       | my shell of choice
+`rofi`          | application launcher
 `starship`      | shell prompt
 `waybar`        | wayland-specific bar
 `wayland`       | has my hyprland config, along with session variables for wayland
