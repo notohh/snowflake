@@ -5,8 +5,8 @@
 }: {
   imports = [
     ./hardware-configuration.nix
+    ./services
     ../../modules
-    ../../modules/services/arr
   ];
 
   boot.loader = {
