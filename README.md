@@ -26,7 +26,6 @@
   - :cherry_blossom: [sakura](hosts/sakura)
   - :full_moon: [tsuki](hosts/tsuki)
 + :electric_plug: [modules](modules)
-  - :satellite: [services](modules/services)
 + :package: [pkgs](pkgs)
 + :lock: [secrets](secrets)
 

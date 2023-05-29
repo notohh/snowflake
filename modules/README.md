@@ -4,7 +4,6 @@ this directory hosts some common modules / services / security tweaks used on (m
 
 name            | description
 --------------- | -----------
-`services`      | houses my oci containers, and other services
 `default`       | used for commonly shared modules
 `fonts`         | font handling
 `greetd`        | login manager
