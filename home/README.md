@@ -1,6 +1,6 @@
 # :house_with_garden: home
 
-the home of my dotfiles, configured and managed by home-manager.
+the home of my dotfiles. configured in, and managed by home-manager.
 
 name            | description
 --------------- | -----------
