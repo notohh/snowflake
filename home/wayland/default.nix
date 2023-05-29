@@ -24,7 +24,6 @@ in {
     wl-clipboard
     wlogout
     wlr-randr
-    rofi-wayland
     swayidle
     swaylock-effects
     swww
