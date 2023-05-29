@@ -14,8 +14,10 @@
   home.packages = with pkgs; [
     croc
     exa
+    eva
     du-dust
     bottom
+    gping
     ripgrep
     lazydocker
     yt-dlp
