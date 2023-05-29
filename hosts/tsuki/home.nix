@@ -30,7 +30,7 @@
       virt-manager
       imv
       mpv
-      qbittorrent
+      logseq
       cryptomator
       ventoy-bin-full
       wine
