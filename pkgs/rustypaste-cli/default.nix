@@ -6,15 +6,15 @@
 }:
 rustPlatform.buildRustPackage rec {
   pname = "rustypaste-cli";
-  version = "0.3.0";
+  version = "0.4.0";
   src = fetchFromGitHub {
     owner = "orhun";
     repo = pname;
     rev = "v${version}";
-    sha256 = "sha256-GPQEo9nYcw2Xowh0f2fqj4Ya5kUApB4GSdaSZkVb4R0=";
+    sha256 = "sha256-Jl7fytDIW6MLY6VX7rDuX9PcZaIqENQbUTMUJKCa8Mg=";
   };
 
-  cargoHash = "sha256-uwAiNrpObirtxGXaNz3prXFIygcf0b8t/Z9N99Gcrtk=";
+  cargoHash = "sha256-hICwrgzNpyYmNW1gEKgTsSjWyqCaOHc4X37O0R2oSzY=";
 
   meta = with lib; {
     description = "A CLI tool for rustypaste ";
