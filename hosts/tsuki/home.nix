@@ -21,7 +21,7 @@
     username = "notoh";
     homeDirectory = "/home/notoh";
     packages = with pkgs; [
-      webcord
+      discord
       spotify-player
       obs-studio
       pavucontrol

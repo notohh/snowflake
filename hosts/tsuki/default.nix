@@ -5,6 +5,7 @@
 }: {
   imports = [
     ./hardware-configuration.nix
+    ./services
     ../../home/wayland
     ../../modules
     ../../modules/fonts.nix
