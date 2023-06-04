@@ -75,6 +75,7 @@ in {
     inherit system;
     specialArgs = {inherit inputs;};
     modules = [
+      ./yuki
       sopsModule
       diskoModule
       hmModule

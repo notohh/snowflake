@@ -25,6 +25,7 @@
   - :wind_chime: [kariru](hosts/kariru)
   - :cherry_blossom: [sakura](hosts/sakura)
   - :full_moon: [tsuki](hosts/tsuki)
+  - :snowflake: [yuki](hosts/yuki)
 + :electric_plug: [modules](modules)
 + :package: [pkgs](pkgs)
 + :lock: [secrets](secrets)
