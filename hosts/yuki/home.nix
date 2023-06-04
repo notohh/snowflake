@@ -1,7 +1,6 @@
 {
   config,
   pkgs,
-  lib,
   ...
 }: {
   imports = [
@@ -11,7 +10,7 @@
   systemd.user.startServices = "sd-switch";
   programs.home-manager.enable = true;
 
-  home = lib.mkForce {
+  home = {
     username = "notoh";
     homeDirectory = "/home/notoh";
     stateVersion = "23.05";
