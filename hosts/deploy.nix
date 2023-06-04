@@ -20,5 +20,15 @@ inputs: {
       sshOpts = ["-t" "-i" "~/.ssh/kariru"];
       magicRollback = false;
     };
+    yuki = {
+      hostname = "yuki";
+      profiles.system = {
+        user = "root";
+        path = activate.nixos inputs.self.nixosConfigurations.yuki;
+      };
+      sshUser = "notoh";
+      sshOpts = ["-t" "-i" "~/.ssh/yuki"];
+      magicRollback = false;
+    };
   };
 }

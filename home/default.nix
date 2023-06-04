@@ -42,6 +42,14 @@
         HostName 192.168.1.54
         User notoh
         IdentityFile ~/.ssh/kariru
+      Host yuki
+        HostName 192.168.1.36
+        User notoh
+        IdentityFile ~/.ssh/yuki
+      Host hetzner
+        HostName 5.161.181.184
+        User root
+        IdentityFile ~/.ssh/kumo
       Host pihole
         Hostname 192.168.1.221
         User root

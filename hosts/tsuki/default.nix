@@ -11,7 +11,6 @@
     ../../modules/fonts.nix
   ];
 
-  # bootloader
   boot.loader = {
     systemd-boot = {
       enable = true;

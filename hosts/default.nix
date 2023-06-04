@@ -71,4 +71,24 @@ in {
       }
     ];
   };
+  yuki = nixosSystem {
+    inherit system;
+    specialArgs = {inherit inputs;};
+    modules = [
+      sopsModule
+      diskoModule
+      hmModule
+      {
+        home-manager = {
+          useGlobalPkgs = true;
+          useUserPackages = true;
+          users.notoh = {
+            imports = [
+              ./yuki/home.nix
+            ];
+          };
+        };
+      }
+    ];
+  };
 }
