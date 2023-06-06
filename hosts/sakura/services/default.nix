@@ -9,5 +9,7 @@
     ./forgejo.nix
     ./jellyfin.nix
     ./rustypaste.nix
+    ./grafana.nix
+    ./prometheus.nix
   ];
 }

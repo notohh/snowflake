@@ -68,6 +68,13 @@
             tls.domains = [{main = "*.notohh.dev";}];
             tls.certresolver = "production";
           };
+          grafana = {
+            rule = "Host(`metrics.notohh.dev`)";
+            entrypoints = ["websecure"];
+            service = "grafana";
+            tls.domains = [{main = "*.notohh.dev";}];
+            tls.certresolver = "production";
+          };
         };
         services = {
           homepage.loadBalancer.servers = [{url = "http://localhost:3005";}];
@@ -78,6 +85,7 @@
           foundryvtt.loadBalancer.servers = [{url = "http://localhost:30000";}];
           gitea.loadBalancer.servers = [{url = "http://localhost:3000";}];
           rustypaste.loadBalancer.servers = [{url = "http://localhost:8000";}];
+          grafana.loadBalancer.servers = [{url = "http://localhost:3100";}];
         };
       };
     };
