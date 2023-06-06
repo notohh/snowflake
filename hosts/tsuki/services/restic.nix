@@ -12,24 +12,26 @@
           "/home"
         ];
         exclude = [
+          "*.qcow2"
+          "*.iso"
           "/home/*/Downloads"
           "/home/*/Games"
           "/home/*/Videos"
-          "/home/*/cryptomator"
           "/home/*/.cache"
           "/home/*/.wine"
           "/home/*/.rustup"
           "/home/*/.cargo"
+          "/home/*/.factorio"
+          "/home/*/.mplayer"
+          "/home/*/.steam"
           "/home/*/.local/share/Trash"
           "/home/*/.local/share/Steam"
           "/home/*/.local/share/.var"
-          "*.qcow2"
-          "*.iso"
         ];
         pruneOpts = [
-          "--keep-daily=5"
-          "--keep-weekly=3"
-          "--keep-monthly=2"
+          "--keep-daily=8"
+          "--keep-weekly=6"
+          "--keep-monthly=5"
         ];
         initialize = true;
         repository = "/nas/home";
