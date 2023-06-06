@@ -5,7 +5,7 @@
     ../../home/wezterm
     ../../home/zathura
     ../../home/gtk
-    ../../home/dunst
+    ../../home/mako
     ../../home/lf
     ../../home/zellij
     ../../home/rofi
