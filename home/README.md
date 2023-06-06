@@ -7,13 +7,13 @@ name            | description
 `bat`           | cat replacement
 `direnv`        | a shell extension, that loads environment variables in certain directories
 `default`       | used for commonly shared modules, for multiple home-manager configs
-`dunst`         | notification daemon
 `git`           | version control system
 `gtk`           | themes
 `helix`         | modal text editor
 `lazygit`       | terminal based git command system
 `lf`            | terminal based file manager
 `librewolf`     | a hardened firefox fork, and my browser of choice
+`mako`          | a lightweight wayland notification daemon
 `neofetch`      | fetch program
 `nushell`       | my shell of choice
 `rofi`          | application launcher

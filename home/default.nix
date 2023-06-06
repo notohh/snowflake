@@ -53,8 +53,8 @@
       Host pihole
         Hostname 192.168.1.221
         User root
-      Host pve1
-        Hostname 192.168.1.36
+      Host pve
+        Hostname 192.168.1.37
         User root
     '';
   };
