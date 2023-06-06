@@ -4,7 +4,7 @@
     fontDir.enable = true;
     fonts = with pkgs; [
       corefonts
-      jetbrains-mono
+      jost
       nerdfonts
       noto-fonts
       noto-fonts-cjk
