@@ -13,8 +13,10 @@ in {
     systemd = true;
     style = builtins.readFile (compileSCSS "style" ./style.scss);
     config = let
-      nixlogo = {
+      nixlogo = rec {
         type = "custom";
+        name = "nixlogo";
+        class = name;
         bar = [
           {
             type = "image";
@@ -23,8 +25,10 @@ in {
           }
         ];
       };
-      pfp = {
+      pfp = rec {
         type = "custom";
+        name = "pfp";
+        class = name;
         bar = [
           {
             type = "image";
@@ -37,13 +41,41 @@ in {
         type = "sys_info";
         format = ["{uptime}"];
       };
+      music = {
+        type = "music";
+        player_type = "mpris";
+        format = "{title} - {artist}";
+        show_status_icon = false;
+        icons.play = "";
+        icons.pause = "";
+        truncate = {
+          mode = "end";
+          max_length = 36;
+        };
+      };
+      music_img = rec {
+        type = "custom";
+        name = "music-img";
+        class = name;
+        bar = [
+          {
+            type = "image";
+            class = name + "-img";
+            src = ''{{poll:5000:playerctl metadata mpris:artUrl}}'';
+          }
+        ];
+      };
+      spacer = {
+        type = "label";
+        label = "|";
+      };
       focused = {
         type = "focused";
         show_icon = true;
         icon_size = 24;
         truncate = {
           mode = "end";
-          length = 12;
+          max_length = 24;
         };
       };
       sys-info = {
@@ -54,7 +86,7 @@ in {
           "{net_up:enp2s0}  {net_down:enp2s0}"
         ];
       };
-      tray = {type = "tray";};
+      #  tray = {type = "tray";}; tray currently broken - issue 166
       clock = {type = "clock";};
     in {
       monitors = {
@@ -62,7 +94,7 @@ in {
           position = "top";
           anchor_to_edges = true;
           start = [nixlogo];
-          center = [focused];
+          center = [music_img music spacer focused];
           end = [sys-info clock];
         };
       };
