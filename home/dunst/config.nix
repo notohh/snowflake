@@ -7,8 +7,9 @@
     width = "300";
     min_icon_size = 32;
     max_icon_size = 128;
-    offset = "0";
-    font = "JetBrainsMono Nerd Font 10";
+    origin = "top-right";
+    offset = "14x61";
+    font = "jost 10";
   };
   urgency_low = {
     background = "#1E1E2E";
