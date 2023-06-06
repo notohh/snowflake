@@ -46,7 +46,7 @@ in {
           icon = false;
         };
         "hyprland/window" = {
-          format = " {}";
+          format = "{}";
           seperate-outputs = true;
           max-length = 35;
         };
