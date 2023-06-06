@@ -37,10 +37,6 @@ in {
           }
         ];
       };
-      uptime = {
-        type = "sys_info";
-        format = ["{uptime}"];
-      };
       music = {
         type = "music";
         player_type = "mpris";
@@ -61,7 +57,7 @@ in {
           {
             type = "image";
             class = name + "-img";
-            src = ''{{poll:5000:playerctl metadata mpris:artUrl}}'';
+            src = ''{{poll:2000:playerctl metadata mpris:artUrl}}'';
           }
         ];
       };
@@ -77,6 +73,12 @@ in {
           mode = "end";
           max_length = 24;
         };
+      };
+      uptime = rec {
+        type = "sys_info";
+        name = "uptime";
+        class = name;
+        format = ["   {uptime}"];
       };
       sys-info = {
         type = "sys_info";
@@ -94,7 +96,7 @@ in {
           position = "top";
           anchor_to_edges = true;
           start = [nixlogo];
-          center = [music_img music spacer focused];
+          center = [music spacer focused spacer uptime];
           end = [sys-info clock];
         };
       };

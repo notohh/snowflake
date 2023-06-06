@@ -112,6 +112,11 @@ $crust:       #11111b;
     .title {
       padding-top: 0.8rem;
     }
+    .volume * {
+      border-radius: 0;
+      background-color: transparent;
+      color: $base;
+    }
     .controls {
       .btn-prev {
         padding: 0.3rem;
@@ -135,5 +140,9 @@ $crust:       #11111b;
 }
 
 .focused {
+  padding-left: 0.8rem;
+  padding-right: 0.8rem;
+}
+.uptime {
   padding-left: 0.8rem;
 }
