@@ -9,11 +9,11 @@
     anchor = "top-right";
     output = "DP-3";
     font = "jost 10";
-    padding = "10";
+    padding = "6";
     margin = "18,22,0";
     backgroundColor = "#1e1e2e";
     textColor = "#cdd6f4";
-    borderColor = "#f5c2e7";
+    borderColor = "#74c7ec";
     progressColor = "over #313244";
   };
 }
