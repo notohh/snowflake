@@ -30,6 +30,7 @@
       virt-manager
       imv
       mpv
+      playerctl
       logseq
       cryptomator
       ventoy-bin-full
