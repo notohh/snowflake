@@ -10,6 +10,7 @@ name            | description
 `git`           | version control system
 `gtk`           | themes
 `helix`         | modal text editor
+`ironbar`       | wayland specific bar, written in Rust
 `lazygit`       | terminal based git command system
 `lf`            | terminal based file manager
 `librewolf`     | a hardened firefox fork, and my browser of choice
@@ -18,7 +19,6 @@ name            | description
 `nushell`       | my shell of choice
 `rofi`          | application launcher
 `starship`      | shell prompt
-`waybar`        | wayland-specific bar
 `wayland`       | has my hyprland config, along with session variables for wayland
 `wezterm`       | my terminal of choice
 `zathura`       | pdf viewer

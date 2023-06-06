@@ -90,9 +90,6 @@
 
         sensitivity = -0.5
     }
-
-    exec-once = waybar & dunst
-
     exec-once = swww init
 
     exec-once = dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP

@@ -1,0 +1,98 @@
+
+$rosewater:   #f5e0dc;
+$flamingo:    #f2cdcd;
+$pink:        #f5c2e7;
+$mauve:       #cba6f7;
+$red:         #f38ba8;
+$maroon:      #eba0ac;
+$peach:       #fab387;
+$yellow:      #f9e2af;
+$green:       #a6e3a1;
+$teal:        #94e2d5;
+$sky:         #89dceb;
+$sapphire:    #74c7ec;
+$blue:        #89b4fa;
+$lavender:    #b4befe;
+
+$text:        #cdd6f4;
+$subtext1:    #bac2de;
+$subtext0:    #a6adc8;
+$overlay2:    #9399b2;
+$overlay1:    #7f849c;
+$overlay0:    #6c7086;
+
+$surface2:    #585b70;
+$surface1:    #45475a;
+$surface0:    #313244;
+
+$base:        #1e1e2e;
+$mantle:      #181825;
+$crust:       #11111b;
+
+* {
+  all: unset;
+  font-family: jost;
+  font-size: 13px;
+  font-weight: bold;
+  color: $text;
+}
+
+#bar {
+ /* padding-top: 0.6rem; */
+  padding-left: 1.4rem;
+  padding-right: 1.4rem;
+}
+
+#bar {
+  #start {
+    background-color: $base;
+    border-radius: 8px;
+    border: 3px solid $sky;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+}
+
+#bar {
+  #center {
+    background-color: $base;
+    border-radius: 18px;
+    border: 3px solid $pink;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+#bar {
+  #end {
+    background-color: $base;
+    border-radius: 8px;
+    border: 3px solid $sky;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+}
+
+.sys-info {
+  padding: 0.8rem;
+}
+
+.clock {
+ padding-left: 0.8rem; 
+}
+
+.popup-clock {
+  .calendar {
+    background-color: $base;
+    border-radius: 8px;
+    border: 3px solid $sky;
+    padding-left: 0.2rem;
+    padding-right: 0.2rem;
+    .header {
+      border: none;
+    }
+  }
+  .calendar:selected {
+    background-color: $overlay1;
+  }
+}
