@@ -15,6 +15,7 @@ alias cp = cp -i
 alias mv = mv -i
 alias sakura = deploy ".#sakura"
 alias kariru = deploy ".#kariru"
+alias yuki = deploy ".#yuki"
 alias download = yt-dlp -P ~/Videos/downloaded
 alias upload = rpaste -s "https://img.notohh.dev/" -e 1day
 
