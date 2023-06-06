@@ -4,6 +4,7 @@ inputs: let
   hmModule = inputs.home-manager.nixosModules.home-manager;
   diskoModule = inputs.disko.nixosModules.disko;
   hyprlandModule = inputs.hyprland.homeManagerModules.default;
+  ironbarModule = inputs.ironbar.homeManagerModules.default;
   inherit (inputs.nixpkgs.lib) nixosSystem;
 in {
   tsuki = nixosSystem {
@@ -23,6 +24,7 @@ in {
             imports = [
               ./tsuki/home.nix
               hyprlandModule
+              ironbarModule
             ];
           };
         };
