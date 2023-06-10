@@ -20,10 +20,7 @@
     };
   };
 
-  boot.kernelPackages = pkgs.linuxPackages_latest;
-
   networking.hostName = "ame";
-  networking.wireless.enable = true;
   services.xserver.enable = true;
 
   services.xserver.displayManager.sddm.enable = true;

@@ -16,8 +16,6 @@
     };
   };
 
-  boot.kernelPackages = pkgs.linuxPackages_latest;
-
   networking.hostName = "yuki";
 
   networking.networkmanager.enable = true;

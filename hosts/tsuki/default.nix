@@ -22,7 +22,6 @@
     };
   };
 
-  boot.kernelPackages = pkgs.linuxPackages_latest;
   boot.extraModulePackages = with config.boot.kernelPackages; [v4l2loopback.out];
   boot.kernelModules = ["v4l2loopback" "kvm-intel"];
 
