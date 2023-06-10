@@ -41,7 +41,7 @@ in {
 
   programs.xwayland.enable = true;
 
-  environment.sessionVariables = rec {
+  environment.sessionVariables = {
     GBM_BACKEND = "nvidia-drm";
     __GL_GSYNC_ALLOWED = "0";
     __GL_VRR_ALLOWED = "0";
@@ -58,6 +58,7 @@ in {
     XCURSOR_SIZE = "24";
     NIXOS_OZONE_WL = "1";
     EDITOR = "hx";
+    TERMINAL = "wezterm";
   };
 
   environment.etc."greetd/environments".text = ''
