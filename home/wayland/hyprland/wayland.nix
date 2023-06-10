@@ -11,7 +11,7 @@
   };
 in {
   imports = [
-    ../../modules/greetd.nix
+    ../../../modules/greetd.nix
   ];
 
   environment.systemPackages = with pkgs; [
@@ -27,6 +27,7 @@ in {
     swayidle
     swaylock-effects
     swww
+    hyprpicker
   ];
 
   services.dbus.enable = true;
@@ -46,6 +47,7 @@ in {
     __GL_GSYNC_ALLOWED = "0";
     __GL_VRR_ALLOWED = "0";
     WLR_DRM_NO_ATOMIC = "1";
+    XDG_SESSION_TYPE = "wayland";
     __GLX_VENDOR_LIBRARY_NAME = "nvidia";
     _JAVA_AWT_WM_NONREPARENTING = "1";
     QT_QPA_PLATFORM = "wayland";

@@ -6,7 +6,7 @@
   imports = [
     ./hardware-configuration.nix
     ./services
-    ../../home/wayland
+    ../../home/wayland/hyprland/wayland.nix
     ../../modules
     ../../modules/fonts.nix
   ];
