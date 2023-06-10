@@ -1,4 +1,4 @@
-{...}: {
+{pkgs, ...}: {
   documentation = {
     enable = true;
     doc.enable = false;
@@ -28,6 +28,8 @@
       LC_TIME = "en_US.UTF-8";
     };
   };
+
+  boot.kernelPackages = pkgs.linuxPackages_latest;
 
   systemd.services.systemd-udevd.restartIfChanged = false;
 
