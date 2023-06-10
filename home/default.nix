@@ -17,6 +17,7 @@
     eva
     du-dust
     bottom
+    gnupg
     gping
     ripgrep
     lazydocker
