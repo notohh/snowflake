@@ -1,0 +1,5 @@
+{...}: {
+  imports = [
+    ./kanboard.nix
+  ];
+}

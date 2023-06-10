@@ -1,12 +1,10 @@
-{
-  config,
-  pkgs,
-  ...
-}: {
+{...}: {
   imports = [
     ./hardware-configuration.nix
+    ./services
     ../../modules
   ];
+
   boot.loader = {
     systemd-boot = {
       enable = true;
@@ -26,5 +24,4 @@
     layout = "us";
     xkbVariant = "";
   };
-  services.openssh.enable = true;
 }
