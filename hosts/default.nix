@@ -94,4 +94,25 @@ in {
       }
     ];
   };
+  ame = nixosSystem {
+    inherit system;
+    specialArgs = {inherit inputs;};
+    modules = [
+      ./ame
+      sopsModule
+      diskoModule
+      hmModule
+      {
+        home-manager = {
+          useGlobalPkgs = true;
+          useUserPackages = true;
+          users.notoh = {
+            imports = [
+              ./ame/home.nix
+            ];
+          };
+        };
+      }
+    ];
+  };
 }

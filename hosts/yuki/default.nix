@@ -1,4 +1,4 @@
-{...}: {
+{pkgs, ...}: {
   imports = [
     ./hardware-configuration.nix
     ./services
@@ -15,6 +15,8 @@
       efiSysMountPoint = "/boot/efi";
     };
   };
+
+  boot.kernelPackages = pkgs.linuxPackages_latest;
 
   networking.hostName = "yuki";
 

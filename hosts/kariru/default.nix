@@ -1,4 +1,4 @@
-{...}: {
+{pkgs, ...}: {
   imports = [
     ./hardware-configuration.nix
     ./services
@@ -13,6 +13,8 @@
       useOSProber = false;
     };
   };
+
+  boot.kernelPackages = pkgs.linuxPackages_latest;
 
   networking = {
     hostName = "kariru";
