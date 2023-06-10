@@ -21,6 +21,7 @@
     username = "notoh";
     homeDirectory = "/home/notoh";
     packages = with pkgs; [
+      webcord
       discord
       spotify-player
       obs-studio
@@ -30,6 +31,7 @@
       virt-manager
       imv
       mpv
+      rustypaste-cli
       playerctl
       logseq
       cryptomator
@@ -44,7 +46,6 @@
       runelite
       prismlauncher
       (callPackage ../../pkgs/chatterino7 {})
-      (callPackage ../../pkgs/rustypaste-cli {})
     ];
 
     stateVersion = "23.05";
