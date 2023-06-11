@@ -11,7 +11,7 @@
       };
       service.DISABLE_REGISTRATION = true;
       server = {
-        HTTP_PORT = 3000;
+        HTTP_PORT = 3200;
         DOMAIN = "git.notohh.dev";
         ROOT_URL = "https://git.notohh.dev";
         LANDING_PAGE = "/explore/repos";
