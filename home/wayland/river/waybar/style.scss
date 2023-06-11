@@ -36,7 +36,7 @@ $crust:       #11111b;
 * {
   all: unset;
   font-family: JetBrainsMono Nerd Font;
-  font-size: 10px;
+  font-size: 13px;
   color: $text;
 }
 
@@ -47,17 +47,16 @@ window#waybar {
 #tags {
   button {
     padding: 0.5rem;
-    focused {
-      color: $overlay2;
-    }
-    urgent {
-      color: $red;
-    }
   }
-}
-
-#window {
-  
+  button.focused {
+    border-radius: 3px;
+    border: 1px solid;
+    border-color: $red;
+  }
+  button.urgent {
+    border-radius: 3px;
+    background-color: $red;
+  }
 }
 
 #cpu,

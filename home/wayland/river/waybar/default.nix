@@ -22,6 +22,7 @@ in {
       };
       "river/tags" = {
         num-tags = 5;
+        tag-labels = ["" "" "" "" ""];
       };
       "river/window" = {
         format = "{}";
@@ -30,27 +31,24 @@ in {
         interval = 10;
         format = "{}%";
         max-length = 10;
+        tooltip = false;
       };
       "memory" = {
         interval = 10;
         format = "{}%";
         max-length = 10;
+        tooltip = false;
       };
       "battery" = {
-        format = "{capacity}% {icon}";
-        format-icons = [
-          ""
-          ""
-          ""
-          ""
-          ""
-        ];
+        format = "{capacity}%";
         interval = 60;
+        tooltip = false;
       };
       "clock" = {
         interval = 60;
         format = "{:%H:%M}";
         max-length = 25;
+        tooltip = false;
       };
       "tray" = {
         icon-size = 21;
