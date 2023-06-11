@@ -48,7 +48,6 @@
         alejandra
         git
         sops
-        deploy-rs
       ];
     };
     formatter.${system} = pkgs.alejandra;
