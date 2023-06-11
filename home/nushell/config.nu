@@ -13,9 +13,9 @@ alias cat = bat
 alias rm = rm -i
 alias cp = cp -i
 alias mv = mv -i
-alias sakura = deploy ".#sakura"
-alias kariru = deploy ".#kariru"
-alias yuki = deploy ".#yuki"
+alias sakura = nix run github:serokell/deploy-rs ".#sakura"
+alias kariru = nix run github:serokell/deploy-rs ".#kariru"
+alias yuki = nix run github:serokell/deploy-rs ".#yuki"
 alias download = yt-dlp -P ~/Videos/downloaded
 alias upload = rpaste -s "https://img.notohh.dev/" -e 1day
 
