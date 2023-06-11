@@ -17,22 +17,22 @@ _: {
             service = "api@internal";
           };
           homepage = {
-            rule = "Host(`dashboard.lab`)";
+            rule = "Host(`dashboard.home.arpa`)";
             entrypoints = ["web"];
             service = "homepage";
           };
           searxng = {
-            rule = "Host(`searxng.lab`)";
+            rule = "Host(`searxng.home.arpa`)";
             entrypoints = ["web"];
             service = "searxng";
           };
           stash = {
-            rule = "Host(`stash.lab`)";
+            rule = "Host(`stash.home.arpa`)";
             entrypoints = ["web"];
             service = "stash";
           };
           jellyfin = {
-            rule = "Host(`jellyfin.lab`)";
+            rule = "Host(`jellyfin.home.arpa`)";
             entrypoints = ["web"];
             service = "jellyfin";
           };
@@ -86,7 +86,7 @@ _: {
           stash.loadBalancer.servers = [{url = "http://localhost:9999";}];
           jellyfin.loadBalancer.servers = [{url = "http://localhost:8096";}];
           foundryvtt.loadBalancer.servers = [{url = "http://localhost:30000";}];
-          gitea.loadBalancer.servers = [{url = "http://localhost:3000";}];
+          gitea.loadBalancer.servers = [{url = "http://localhost:3200";}];
           rustypaste.loadBalancer.servers = [{url = "http://localhost:8000";}];
           grafana.loadBalancer.servers = [{url = "http://localhost:3100";}];
           woodpecker-server.loadBalancer.servers = [{url = "http://localhost:8006";}];
