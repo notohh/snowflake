@@ -5,6 +5,7 @@
     fonts = with pkgs; [
       corefonts
       jost
+      jetbrains-mono
       nerdfonts
       noto-fonts
       noto-fonts-cjk
