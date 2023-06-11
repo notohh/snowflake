@@ -21,6 +21,7 @@
     username = "notoh";
     homeDirectory = "/home/notoh";
     packages = with pkgs; [
+      brave
       webcord
       discord
       spotify-player

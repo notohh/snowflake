@@ -1,4 +1,4 @@
-{...}: {
+_: {
   virtualisation.oci-containers.containers.kanboard = {
     image = "kanboard/kanboard";
     ports = [

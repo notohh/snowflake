@@ -1,4 +1,4 @@
-{...}: {
+_: {
   services.mako = {
     enable = true;
     icons = true;

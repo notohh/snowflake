@@ -1,4 +1,4 @@
-{...}: {
+_: {
   programs.helix = {
     themes.catppuccin_mocha = let
       transparent = "none";

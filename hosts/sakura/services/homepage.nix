@@ -1,4 +1,4 @@
-{...}: {
+_: {
   virtualisation.oci-containers.containers.homepage = {
     image = "ghcr.io/benphelps/homepage";
     volumes = [

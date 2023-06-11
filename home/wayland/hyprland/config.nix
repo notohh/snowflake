@@ -1,4 +1,4 @@
-{...}: {
+_: {
   wayland.windowManager.hyprland.extraConfig = ''
 
     monitor = HDMI-A-1,1920x1080,5760x0,1 #right

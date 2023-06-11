@@ -1,4 +1,4 @@
-{...}: {
+_: {
   home.file.".config/zellij/snowflake.kdl".text = ''
       layout {
         tab name="main" {

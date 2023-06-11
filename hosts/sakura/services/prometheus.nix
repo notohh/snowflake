@@ -1,4 +1,4 @@
-{...}: {
+_: {
   services.prometheus = {
     enable = true;
     scrapeConfigs = [

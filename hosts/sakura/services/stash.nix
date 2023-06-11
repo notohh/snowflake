@@ -1,4 +1,4 @@
-{...}: {
+_: {
   virtualisation.oci-containers.containers.stash = {
     image = "stashapp/stash";
     environment = {

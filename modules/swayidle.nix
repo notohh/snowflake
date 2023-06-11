@@ -1,4 +1,4 @@
-{...}: {
+_: {
   home.file.".local/bin/lock" = {
     executable = true;
     text = ''
