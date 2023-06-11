@@ -22,6 +22,7 @@
     ripgrep
     lazydocker
     yt-dlp
+    cachix
     nfs-utils
   ];
 
