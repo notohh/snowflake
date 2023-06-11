@@ -9,7 +9,7 @@
   <img src="https://img.shields.io/github/repo-size/notohh/snowflake?color=fab387&labelColor=303446&style=for-the-badge&logo=github&logoColor=fab387">
   <img src="https://img.shields.io/static/v1.svg?style=for-the-badge&label=License&message=MIT&colorA=313244&colorB=cba6f7&logo=unlicense&logoColor=ca9ee6&"/>
  <p></p>
-<img src="https://img.notohh.dev/NhmJA90B.png"></img>
+<img src="https://i.imgur.com/23Gv6Gh.png"></img>
 <p>
   Screenshot updated: 2023-06-07
 </p>
