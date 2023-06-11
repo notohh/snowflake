@@ -1,5 +1,6 @@
 {config, ...}: {
   sops.secrets.woodpecker-server = {};
+  sops.secrets.woodpecker-agent-secret = {};
   services.woodpecker-server = {
     enable = true;
     environment = {
@@ -15,5 +16,14 @@
 
   services.woodpecker-agents.agents.nix = {
     enable = true;
+    environment = {
+      DOCKER_HOST = "unix:///var/run/docker.sock";
+      WOODPECKER_BACKEND = "docker";
+      WOODPECKER_SERVER = "localhost:8006";
+      WOODPECKER_AGENT_SECRET = config.sops.secrets.woodpecker-agent-secret.path;
+    };
+    extraGroups = [
+      "docker"
+    ];
   };
 }
