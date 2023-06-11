@@ -16,6 +16,9 @@ alias mv = mv -i
 alias sakura = nix run github:serokell/deploy-rs ".#sakura"
 alias kariru = nix run github:serokell/deploy-rs ".#kariru"
 alias yuki = nix run github:serokell/deploy-rs ".#yuki"
+alias deadnix = nix run "nixpkgs#deadnix"
+alias statix = nix run "nixpkgs#statix" -- check
+alias statix-fix = nix run "nixpkgs#statix" -- fix
 alias download = yt-dlp -P ~/Videos/downloaded
 alias upload = rpaste -s "https://img.notohh.dev/" -e 1day
 
