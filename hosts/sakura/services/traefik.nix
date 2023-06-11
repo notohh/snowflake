@@ -1,9 +1,12 @@
-_: {
+{config, ...}: {
   sops.secrets.cloudflare-api-key = {};
   networking.firewall.allowedTCPPorts = [80 443];
   systemd.services.traefik = {
     environment = {
       CLOUDFLARE_EMAIL = "jch0tm2e@notohh.dev";
+    };
+    serviceConfig = {
+      EnvironmentFile = [config.sops.secrets.cloudflare-api-key.path];
     };
   };
   services.traefik = {
