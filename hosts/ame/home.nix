@@ -8,7 +8,7 @@
     ../../home/rofi
     ../../home/zellij
     ../../home/mako
-    ../../home/wayland/river
+    ../../home/gtk/catppuccin-red.nix
     ../../home/wayland/river/waybar
   ];
 
