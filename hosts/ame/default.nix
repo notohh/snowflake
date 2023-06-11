@@ -1,10 +1,7 @@
-{
-  config,
-  pkgs,
-  ...
-}: {
+{...}: {
   imports = [
     ./hardware-configuration.nix
+    ./services
     ../../modules
     ../../modules/fonts.nix
   ];

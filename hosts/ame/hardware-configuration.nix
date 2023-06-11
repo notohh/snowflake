@@ -19,6 +19,11 @@
     fsType = "ext4";
   };
 
+  fileSystems."/nas" = {
+    device = "192.168.1.71:/volume1/ame";
+    fsType = "nfs";
+  };
+
   fileSystems."/boot/efi" = {
     device = "/dev/disk/by-uuid/4D09-1D57";
     fsType = "vfat";

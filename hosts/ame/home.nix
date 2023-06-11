@@ -1,7 +1,6 @@
 {pkgs, ...}: {
   imports = [
     ../../home
-    ../../home/librewolf
     ../../home/wezterm
     ../../home/zathura
     ../../home/lf
@@ -19,6 +18,7 @@
     username = "notoh";
     homeDirectory = "/home/notoh";
     packages = with pkgs; [
+      brave
       webcord
       discord
       spotify-player
