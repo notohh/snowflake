@@ -11,5 +11,6 @@
     ./rustypaste.nix
     ./grafana.nix
     ./prometheus.nix
+    ./woodpecker.nix
   ];
 }
