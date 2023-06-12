@@ -12,5 +12,6 @@
     ./grafana.nix
     ./prometheus.nix
     ./woodpecker.nix
+    ./atticd.nix
   ];
 }

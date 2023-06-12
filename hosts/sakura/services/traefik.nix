@@ -81,6 +81,13 @@
             tls.domains = [{main = "*.notohh.dev";}];
             tls.certresolver = "production";
           };
+          atticd = {
+            rule = "Host(`cache.notohh.dev`)";
+            entrypoints = ["websecure"];
+            service = "atticd";
+            tls.domains = [{main = "*.notohh.dev";}];
+            tls.certresolver = "production";
+          };
         };
         services = {
           homepage.loadBalancer.servers = [{url = "http://localhost:3005";}];
@@ -92,7 +99,8 @@
           gitea.loadBalancer.servers = [{url = "http://localhost:3200";}];
           rustypaste.loadBalancer.servers = [{url = "http://localhost:8000";}];
           grafana.loadBalancer.servers = [{url = "http://localhost:3100";}];
-          woodpecker-server.loadBalancer.servers = [{url = "http://localhost:8006";}];
+          woodpecker-server.loadBalancer.servers = [{url = "http://localhost:8200";}];
+          atticd.loadBalancer.servers = [{url = "http://localhost:8100";}];
         };
       };
     };

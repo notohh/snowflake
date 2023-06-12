@@ -5,6 +5,7 @@ inputs: let
   diskoModule = inputs.disko.nixosModules.disko;
   hyprlandModule = inputs.hyprland.homeManagerModules.default;
   ironbarModule = inputs.ironbar.homeManagerModules.default;
+  atticdModule = inputs.attic.nixosModules.atticd;
   inherit (inputs.nixpkgs.lib) nixosSystem;
 in {
   tsuki = nixosSystem {
@@ -39,6 +40,7 @@ in {
       sopsModule
       diskoModule
       hmModule
+      atticdModule
       {
         home-manager = {
           useGlobalPkgs = true;
