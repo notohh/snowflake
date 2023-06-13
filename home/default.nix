@@ -12,6 +12,7 @@
   ];
 
   home.packages = with pkgs; [
+    wget
     croc
     exa
     eva
