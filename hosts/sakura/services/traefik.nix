@@ -83,6 +83,13 @@
             tls.domains = [{main = "*.notohh.dev";}];
             tls.certresolver = "production";
           };
+          hedgedoc = {
+            rule = "Host(`scratch.notohh.dev`)";
+            entrypoints = ["websecure"];
+            service = "hedgedoc";
+            tls.domains = [{main = "*.notohh.dev";}];
+            tls.certresolver = "production";
+          };
         };
         services = {
           homepage.loadBalancer.servers = [{url = "http://localhost:3005";}];
@@ -95,6 +102,7 @@
           grafana.loadBalancer.servers = [{url = "http://localhost:3100";}];
           woodpecker-server.loadBalancer.servers = [{url = "http://localhost:8200";}];
           atticd.loadBalancer.servers = [{url = "http://localhost:8100";}];
+          hedgedoc.loadBalancer.servers = [{url = "http://localhost:3300";}];
         };
       };
     };
