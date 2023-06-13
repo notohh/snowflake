@@ -29,11 +29,6 @@
             entrypoints = ["web"];
             service = "searxng";
           };
-          stash = {
-            rule = "Host(`stash.home.arpa`)";
-            entrypoints = ["web"];
-            service = "stash";
-          };
           jellyfin = {
             rule = "Host(`jellyfin.home.arpa`)";
             entrypoints = ["web"];
@@ -93,7 +88,6 @@
           homepage.loadBalancer.servers = [{url = "http://localhost:3005";}];
           searxng.loadBalancer.servers = [{url = "http://localhost:8085";}];
           hugo.loadBalancer.servers = [{url = "http://localhost:1313";}];
-          stash.loadBalancer.servers = [{url = "http://localhost:9999";}];
           jellyfin.loadBalancer.servers = [{url = "http://localhost:8096";}];
           foundryvtt.loadBalancer.servers = [{url = "http://localhost:30000";}];
           gitea.loadBalancer.servers = [{url = "http://localhost:3200";}];

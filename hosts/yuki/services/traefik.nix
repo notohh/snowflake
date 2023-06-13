@@ -1,4 +1,5 @@
 _: {
+  networking.firewall.allowedTCPPorts = [80 443];
   services.traefik = {
     enable = true;
     dynamicConfigOptions = {
@@ -14,9 +15,15 @@ _: {
             entryPoints = ["web"];
             service = "kanboard";
           };
+          stash = {
+            rule = "Host(`stash.home.arpa`)";
+            entrypoints = ["web"];
+            service = "stash";
+          };
         };
         services = {
           kanboard.loadBalancer.servers = [{url = "http://localhost:8080";}];
+          stash.loadBalancer.servers = [{url = "http://localhost:9999";}];
         };
       };
     };

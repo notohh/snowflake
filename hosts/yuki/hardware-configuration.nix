@@ -23,6 +23,16 @@
     fsType = "vfat";
   };
 
+  fileSystems."/nas" = {
+    device = "192.168.1.71:/volume1/yuki";
+    fsType = "nfs";
+  };
+
+  fileSystems."/home/notoh/docker/stash/data" = {
+    device = "192.168.1.71:/volume1/stash";
+    fsType = "nfs";
+  };
+
   swapDevices = [
     {device = "/dev/disk/by-uuid/34a9e234-35da-4140-b231-2bb983a5204b";}
   ];
