@@ -16,6 +16,7 @@
     device = "/dev/disk/by-uuid/f5a0738c-d027-4ffb-82ec-9901ca6b310b";
     fsType = "ext4";
   };
+
   fileSystems."/media" = {
     device = "192.168.1.71:/volume1/media";
     fsType = "nfs";

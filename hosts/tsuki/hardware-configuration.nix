@@ -32,6 +32,7 @@
     device = "/dev/disk/by-uuid/9e5a189d-7435-45d7-aef6-cdee4de2428d";
     fsType = "ext4";
   };
+
   fileSystems."/nas" = {
     device = "192.168.1.71:/volume1/tsuki";
     fsType = "nfs";
