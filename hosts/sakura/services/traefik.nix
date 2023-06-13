@@ -113,8 +113,12 @@
         sendAnonymousUsage = false;
       };
       entryPoints = {
-        websecure.address = ":443";
-        web.address = ":80";
+        websecure = {
+          address = ":443";
+        };
+        web = {
+          address = ":80";
+        };
       };
       certificatesResolvers = {
         staging.acme = {
