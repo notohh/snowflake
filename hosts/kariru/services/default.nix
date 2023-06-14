@@ -1,4 +1,7 @@
 _: {
+  imports = [
+    ./traefik.nix
+  ];
   services.radarr = {
     enable = true;
     openFirewall = true;
