@@ -24,6 +24,11 @@
             entrypoints = ["web"];
             service = "jellyfin";
           };
+          jellyseerr = {
+            rule = "Host(`jellyseerr.home.arpa`)";
+            entrypoints = ["web"];
+            service = "jellyseerr";
+          };
           dashdot = {
             rule = "Host(`dashdot.sakura.home.arpa`)";
             entrypoints = ["web"];
@@ -90,6 +95,7 @@
           dashdot.loadBalancer.servers = [{url = "http://localhost:4000";}];
           hugo.loadBalancer.servers = [{url = "http://localhost:1313";}];
           jellyfin.loadBalancer.servers = [{url = "http://localhost:8096";}];
+          jellyseerr.loadBalancer.servers = [{url = "http://localhost:5055";}];
           foundryvtt.loadBalancer.servers = [{url = "http://localhost:30000";}];
           gitea.loadBalancer.servers = [{url = "http://localhost:3200";}];
           rustypaste.loadBalancer.servers = [{url = "http://localhost:8000";}];
