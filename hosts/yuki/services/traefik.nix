@@ -10,6 +10,16 @@ _: {
             entryPoints = ["websecure"];
             service = "api@internal";
           };
+          homarr = {
+            rule = "Host(`dashboard.home.arpa`)";
+            entrypoints = ["web"];
+            service = "homarr";
+          };
+          searxng = {
+            rule = "Host(`searxng.home.arpa`)";
+            entryPoints = ["web"];
+            service = "searxng";
+          };
           kanboard = {
             rule = "Host(`kanboard.home.arpa`)";
             entryPoints = ["web"];
@@ -19,11 +29,6 @@ _: {
             rule = "Host(`stash.home.arpa`)";
             entrypoints = ["web"];
             service = "stash";
-          };
-          homarr = {
-            rule = "Host(`dashboard.home.arpa`)";
-            entrypoints = ["web"];
-            service = "homarr";
           };
           dashdot = {
             rule = "Host(`dashdot.yuki.home.arpa`)";
@@ -36,6 +41,7 @@ _: {
           stash.loadBalancer.servers = [{url = "http://localhost:9999";}];
           homarr.loadBalancer.servers = [{url = "http://localhost:7575";}];
           dashdot.loadBalancer.servers = [{url = "http://localhost:4000";}];
+          searxng.loadBalancer.servers = [{url = "http://localhost:8100";}];
         };
       };
     };
