@@ -87,9 +87,9 @@
           };
         };
         services = {
+          dashdot.loadBalancer.servers = [{url = "http://localhost:4000";}];
           hugo.loadBalancer.servers = [{url = "http://localhost:1313";}];
           jellyfin.loadBalancer.servers = [{url = "http://localhost:8096";}];
-          dashdot.loadBalancer.servers = [{url = "http://localhost:4000";}];
           foundryvtt.loadBalancer.servers = [{url = "http://localhost:30000";}];
           gitea.loadBalancer.servers = [{url = "http://localhost:3200";}];
           rustypaste.loadBalancer.servers = [{url = "http://localhost:8000";}];
