@@ -7,7 +7,7 @@
   environment.systemPackages = [pkgs.restic];
   services.restic = {
     backups = {
-      ame = {
+      yuki = {
         paths = [
           "/home"
         ];
