@@ -47,4 +47,14 @@
     acceptTerms = true;
     defaults.email = "github@notohh.dev";
   };
+  services.fail2ban = {
+    enable = true;
+    maxretry = 3;
+    bantime = "10m";
+    ignoreIP = [
+      "192.168.0.0/16"
+      "172.16.0.0/12"
+      "10.0.0.0/8"
+    ];
+  };
 }
