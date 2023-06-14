@@ -19,20 +19,15 @@
             entryPoints = ["websecure"];
             service = "api@internal";
           };
-          homepage = {
-            rule = "Host(`dashboard.home.arpa`)";
-            entrypoints = ["web"];
-            service = "homepage";
-          };
-          searxng = {
-            rule = "Host(`searxng.home.arpa`)";
-            entrypoints = ["web"];
-            service = "searxng";
-          };
           jellyfin = {
             rule = "Host(`jellyfin.home.arpa`)";
             entrypoints = ["web"];
             service = "jellyfin";
+          };
+          dashdot = {
+            rule = "Host(`dashdot.sakura.home.arpa`)";
+            entrypoints = ["web"];
+            service = "dashdot";
           };
           hugo = {
             rule = "Host(`notohh.dev`)";
@@ -92,10 +87,9 @@
           };
         };
         services = {
-          homepage.loadBalancer.servers = [{url = "http://localhost:3005";}];
-          searxng.loadBalancer.servers = [{url = "http://localhost:8085";}];
           hugo.loadBalancer.servers = [{url = "http://localhost:1313";}];
           jellyfin.loadBalancer.servers = [{url = "http://localhost:8096";}];
+          dashdot.loadBalancer.servers = [{url = "http://localhost:4000";}];
           foundryvtt.loadBalancer.servers = [{url = "http://localhost:30000";}];
           gitea.loadBalancer.servers = [{url = "http://localhost:3200";}];
           rustypaste.loadBalancer.servers = [{url = "http://localhost:8000";}];
@@ -120,6 +114,7 @@
         };
         web = {
           address = ":80";
+          forwardedHeaders.insecure = true;
         };
       };
       certificatesResolvers = {

@@ -8,7 +8,7 @@ _: {
       INSTANCE_NAME = "SearXNG";
     };
     ports = [
-      "8085:8080"
+      "8100:8080"
     ];
   };
 }
