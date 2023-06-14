@@ -44,10 +44,10 @@
       name = "snowflake";
       packages = with pkgs; [
         nil
-        yaml-language-server
-        alejandra
         git
         sops
+        alejandra
+        yaml-language-server
       ];
     };
     formatter.${system} = pkgs.alejandra;
