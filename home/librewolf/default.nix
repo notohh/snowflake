@@ -1,6 +1,6 @@
 _: {
   programs.librewolf = {
-    enable = true;
+    enable = false;
     settings = {
       "webgl.disabled" = false;
       "webgl.force-enabled" = true;
@@ -26,16 +26,16 @@ _: {
       "x-scheme-handler/discord-409416265891971072" = ["discord-409416265891971072.desktop"];
       "x-scheme-handler/discord-402572971681644545" = ["discord-402572971681644545.desktop"];
       "x-scheme-handler/discord-696343075731144724" = ["discord-696343075731144724.desktop"];
-      "x-scheme-handler/http" = ["librewolf.desktop"];
-      "x-scheme-handler/https" = ["librewolf.desktop"];
-      "x-scheme-handler/chrome" = ["librewolf.desktop"];
-      "text/html" = ["librewolf.desktop"];
-      "application/x-extension-htm" = ["librewolf.desktop"];
-      "application/x-extension-html" = ["librewolf.desktop"];
-      "application/x-extension-shtml" = ["librewolf.desktop"];
-      "application/xhtml+xml" = ["librewolf.desktop"];
-      "application/x-extension-xhtml" = ["librewolf.desktop"];
-      "application/x-extension-xht" = ["librewolf.desktop"];
+      "x-scheme-handler/http" = ["brave.desktop"];
+      "x-scheme-handler/https" = ["brave.desktop"];
+      "x-scheme-handler/chrome" = ["brave.desktop"];
+      "text/html" = ["brave.desktop"];
+      "application/x-extension-htm" = ["brave.desktop"];
+      "application/x-extension-html" = ["brave.desktop"];
+      "application/x-extension-shtml" = ["brave.desktop"];
+      "application/xhtml+xml" = ["brave.desktop"];
+      "application/x-extension-xhtml" = ["brave.desktop"];
+      "application/x-extension-xht" = ["brave.desktop"];
     };
   };
 }
