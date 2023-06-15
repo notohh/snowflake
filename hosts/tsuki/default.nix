@@ -31,6 +31,8 @@
     hostName = "tsuki";
   };
 
+  services.snowflake-proxy.enable = true;
+
   services = {
     xserver = {
       enable = true;

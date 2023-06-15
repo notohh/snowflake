@@ -18,7 +18,7 @@
 
   networking.hostName = "yuki";
 
-  networking.networkmanager.enable = true;
+  services.snowflake-proxy.enable = true;
 
   services.xserver = {
     layout = "us";

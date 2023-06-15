@@ -18,6 +18,8 @@
     hostName = "sakura";
   };
 
+  services.snowflake-proxy.enable = true;
+
   services.xserver = {
     layout = "us";
     xkbVariant = "";
