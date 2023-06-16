@@ -8,7 +8,7 @@
   boot.loader = {
     grub = {
       enable = true;
-      configurationLimit = 3;
+      configurationLimit = 5;
       device = "/dev/sda";
       useOSProber = false;
     };
