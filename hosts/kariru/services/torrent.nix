@@ -2,7 +2,7 @@
   sops.secrets.gluetun = {};
   virtualisation.oci-containers.containers = {
     gluetun = {
-      image = "qmcgaw/gluetun";
+      image = "qmcgaw/gluetun:pr-1616";
       ports = [
         "8888:8888/tcp" # HTTP proxy
         "8388:8388/tcp" # Shadowsocks
@@ -15,7 +15,7 @@
       extraOptions = ["--cap-add=NET_ADMIN"];
     };
     qbittorrent = {
-      image = "linuxserver/qbittorrent:latest";
+      image = "linuxserver/qbittorrent:4.5.3";
       dependsOn = ["gluetun"];
       environment = {
         PUID = "1001";
