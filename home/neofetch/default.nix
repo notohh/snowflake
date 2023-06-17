@@ -1,6 +1,4 @@
 {pkgs, ...}: {
-  home.packages = with pkgs; [
-    neofetch
-  ];
+  home.packages = [pkgs.neofetch];
   xdg.configFile."neofetch/config.conf".source = ./config.conf;
 }
