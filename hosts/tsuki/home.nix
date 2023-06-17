@@ -10,6 +10,7 @@
     ../../home/zellij
     ../../home/rofi
     ../../home/ironbar
+    ../../home/spotify
     ../../home/wayland/hyprland
     ../../modules/swayidle.nix
   ];
@@ -24,7 +25,6 @@
       brave
       webcord
       discord
-      spotify-player
       obs-studio
       pavucontrol
       unzip
@@ -35,6 +35,8 @@
       rustypaste-cli
       playerctl
       logseq
+      drawio
+      gimp
       cryptomator
       ventoy-bin-full
       wine
