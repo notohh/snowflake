@@ -10,7 +10,7 @@
     ../../home/zellij
     ../../home/rofi
     ../../home/ironbar
-    ../../home/spotify
+    ../../home/spotify-player
     ../../home/wayland/hyprland
     ../../modules/swayidle.nix
   ];
