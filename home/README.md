@@ -18,7 +18,7 @@ name            | description
 `neofetch`      | fetch program
 `nushell`       | my shell of choice
 `rofi`          | application launcher
-`spotify`       | terminal music player for spotify
+`spotify-player`| terminal music player for spotify
 `starship`      | shell prompt
 `wayland`       | has my hyprland config, along with session variables for wayland
 `wezterm`       | my terminal of choice
