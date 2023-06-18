@@ -4,16 +4,8 @@ pipeline:
     commands:      
       - echo 'experimental-features = flakes nix-command' >> /etc/nix/nix.conf
       - nix flake check
-    when:
-      path:
-        include: [ '*.nix' ]
-        exclude: [ '*.md', '*.yml' ]
   fmt:
     image: nixos/nix
     commands:
       - echo 'experimental-features = flakes nix-command' >> /etc/nix/nix.conf
       - nix run nixpkgs#alejandra -- -c .
-    when:
-      path:
-        include: [ '*.nix' ]
-        exclude: [ '*.md', '*.yml' ]
