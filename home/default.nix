@@ -49,6 +49,10 @@
         HostName 192.168.1.36
         User notoh
         IdentityFile ~/.ssh/yuki
+      Host arashi
+        HostName 192.168.1.211
+        User notoh
+        IdentityFile ~/.ssh/arashi
       Host hetzner
         HostName 5.161.181.184
         User root

@@ -30,5 +30,15 @@ inputs: {
       sshOpts = ["-t" "-i" "~/.ssh/yuki"];
       magicRollback = false;
     };
+    arashi = {
+      hostname = "arashi";
+      profiles.system = {
+        user = "root";
+        path = activate.nixos inputs.self.nixosConfigurations.arashi;
+      };
+      sshUser = "notoh";
+      sshOpts = ["-t" "-i" "~/.ssh/arashi"];
+      magicRollback = false;
+    };
   };
 }

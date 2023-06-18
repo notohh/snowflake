@@ -117,4 +117,24 @@ in {
       }
     ];
   };
+  arashi = nixosSystem {
+    inherit system;
+    specialArgs = {inherit inputs;};
+    modules = [
+      ./arashi
+      sopsModule
+      hmModule
+      {
+        home-manager = {
+          useGlobalPkgs = true;
+          useUserPackages = true;
+          users.notoh = {
+            imports = [
+              ./arashi/home.nix
+            ];
+          };
+        };
+      }
+    ];
+  };
 }
