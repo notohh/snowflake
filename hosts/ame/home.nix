@@ -20,6 +20,7 @@
     packages = with pkgs; [
       brave
       webcord
+      session-desktop
       spotify-player
       pavucontrol
       unzip
