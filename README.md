@@ -11,7 +11,7 @@
  <p></p>
 <img src="https://i.imgur.com/23Gv6Gh.png"></img>
 <p>
-  Screenshot updated: 2023-06-07
+  Screenshot updated: 2023-06-08
 </p>
 <h4>
   :warning: this config is a constant WIP, 
