@@ -14,6 +14,9 @@ _: {
         cherryPickedCommitFgColor = ["#89b4fa"];
         unstagedChangesColor = ["red"];
       };
+      services = {
+        "git.notohh.dev" = "gitea:git.notohh.dev";
+      };
     };
   };
 }
