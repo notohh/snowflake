@@ -8,10 +8,7 @@ _: {
       allowAnonymous = true;
       allowFreeURL = true;
       allowEmailRegister = false;
-      db = {
-        dialect = "sqlite";
-        storage = "/var/lib/hedgedoc/db.sqlite";
-      };
+      dbURL = "postgres://hedgedoc:hedgedoc@192.168.1.211:5432/hedgedoc";
     };
   };
 }
