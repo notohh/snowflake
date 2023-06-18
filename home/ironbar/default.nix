@@ -88,7 +88,7 @@ in {
           "{net_up:enp2s0}  {net_down:enp2s0}"
         ];
       };
-      #  tray = {type = "tray";}; tray currently broken - issue 166
+      tray = {type = "tray";}; # tray currently broken - issue 166
       clock = {type = "clock";};
     in {
       monitors = {
@@ -97,7 +97,7 @@ in {
           anchor_to_edges = true;
           start = [nixlogo];
           center = [music spacer focused spacer uptime];
-          end = [sys-info clock];
+          end = [sys-info clock tray];
         };
       };
     };
