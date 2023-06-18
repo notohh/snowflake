@@ -11,7 +11,7 @@ _: {
     ignores = ["*result*" ".direnv" "node_modules"];
   };
   programs.gh = {
-    enable = true;
+    enable = false;
     enableGitCredentialHelper = true;
     settings = {
       editor = "hx";
