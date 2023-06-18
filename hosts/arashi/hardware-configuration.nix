@@ -1,7 +1,5 @@
 {
-  config,
   lib,
-  pkgs,
   modulesPath,
   ...
 }: {
@@ -17,6 +15,11 @@
   fileSystems."/" = {
     device = "/dev/disk/by-uuid/3fd88f1f-cec3-4737-b9d0-6c8f026c3927";
     fsType = "ext4";
+  };
+
+  fileSystems."/nas" = {
+    device = "192.168.1.71:/volume1/arashi";
+    fsType = "nfs";
   };
 
   swapDevices = [

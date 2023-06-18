@@ -1,5 +1,5 @@
 _: {
   imports = [
-    ./traefik.nix
+    ./postgresql.nix
   ];
 }
