@@ -5,11 +5,14 @@
     appName = "forgejo";
     stateDir = "/sakura/forgejo";
     settings = {
+      service.DISABLE_REGISTRATION = true;
+      ui = {
+        DEFAULT_THEME = "forgejo-dark";
+      };
       actions = {
         ENABLED = true;
         DEFAULT_ACTIONS_URL = "https://gitea.com";
       };
-      service.DISABLE_REGISTRATION = true;
       server = {
         HTTP_PORT = 3200;
         DOMAIN = "git.notohh.dev";
