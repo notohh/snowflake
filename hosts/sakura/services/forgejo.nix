@@ -1,11 +1,17 @@
-{pkgs, ...}: {
+{
+  pkgs,
+  config,
+  lib,
+  ...
+}: {
+  sops.secrets.forgejo-db = {};
   services.gitea = {
     enable = true;
     package = pkgs.forgejo;
     appName = "forgejo";
-    stateDir = "/sakura/forgejo";
+    stateDir = "/var/lib/forgejo";
     settings = {
-      service.DISABLE_REGISTRATION = true;
+      service.DISABLE_REGISTRATION = false;
       ui = {
         DEFAULT_THEME = "forgejo-dark";
       };
@@ -18,6 +24,13 @@
         DOMAIN = "git.notohh.dev";
         ROOT_URL = "https://git.notohh.dev";
         LANDING_PAGE = "/explore/repos";
+      };
+      database = {
+        DB_TYPE = lib.mkForce "postgres";
+        HOST = "192.168.1.211:5432";
+        NAME = "forgejo";
+        USER = "forgejo";
+        PASSWD = "forgejo";
       };
     };
   };
