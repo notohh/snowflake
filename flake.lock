@@ -168,11 +168,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1687041769,
-        "narHash": "sha256-lPDVNMrDF/hOVy+P8pEtKzvSN/Akk9RbDcyNuvW1T+M=",
+        "lastModified": 1687098182,
+        "narHash": "sha256-kBys+Cwmcxzh7UNVWTrunOgaR02zl2XN3feA8fSlqVo=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "edf9cf65238609db16680be74fe28d4d4858476e",
+        "rev": "0480dabc99e1b669ebe909949180fa2786e733cd",
         "type": "github"
       },
       "original": {
@@ -191,11 +191,11 @@
         "xdph": "xdph"
       },
       "locked": {
-        "lastModified": 1687020577,
-        "narHash": "sha256-FUKfxkQtuFVN17vIDDykEPQobEcY5i8LAw6BiDABsYI=",
+        "lastModified": 1687104892,
+        "narHash": "sha256-+lREsqQwjprY4eXxfqsRChy2lVnjn8JE37MQ1dFwNwA=",
         "owner": "hyprwm",
         "repo": "Hyprland",
-        "rev": "74ca81cc7942aa93e796ca794185675bae57003d",
+        "rev": "2295bbdd80b48f580977fc80e9643841fbc9a496",
         "type": "github"
       },
       "original": {
@@ -233,11 +233,11 @@
         "rust-overlay": "rust-overlay_2"
       },
       "locked": {
-        "lastModified": 1687043269,
-        "narHash": "sha256-9+32kk/EbJssXbhyO1HiLP/iQCfdM6MBc5kCuOrp8OM=",
+        "lastModified": 1687107092,
+        "narHash": "sha256-jF/cWgpe5z4wGCQ0F/iCwg6ZYZSbDXrFTUlMzOWeasw=",
         "owner": "JakeStanger",
         "repo": "ironbar",
-        "rev": "18b36423e2ffc80836aaecbca6760b0cab1ae863",
+        "rev": "93baf8f56859577b8be44f77cb81449d408d0b7b",
         "type": "github"
       },
       "original": {
