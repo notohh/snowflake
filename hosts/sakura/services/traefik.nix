@@ -1,6 +1,6 @@
 {config, ...}: {
   sops.secrets.cloudflare-api-key = {};
-  networking.firewall.allowedTCPPorts = [80 443 8080];
+  networking.firewall.allowedTCPPorts = [80 443];
   systemd.services.traefik = {
     environment = {
       CLOUDFLARE_EMAIL = "jch0tm2e@notohh.dev";
