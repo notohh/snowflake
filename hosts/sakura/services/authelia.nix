@@ -14,7 +14,7 @@
       default_2fa_method = "totp";
       default_redirection_url = "https://passport.notohh.dev/";
       authentication_backend = {
-        file.path = "/etc/authelia/user.yml";
+        file.path = "/var/lib/authelia-default/user.yml";
       };
       session = {
         domain = "notohh.dev";
@@ -51,8 +51,13 @@
       notifier.filesystem = {
         filename = "/var/lib/authelia-default/notif.txt";
       };
-      storage.local = {
-        path = "/var/lib/authelia-default/db.sqlite3";
+      storage.postgres = {
+        host = "192.168.1.211";
+        port = 5432;
+        database = "authelia";
+        schema = "public";
+        username = "authelia";
+        password = "authelia";
       };
     };
   };
