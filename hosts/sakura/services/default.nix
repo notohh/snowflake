@@ -1,6 +1,7 @@
 {...}: {
   imports = [
     ./traefik.nix
+    ./authelia.nix
     ./hugo.nix
     ./foundryvtt.nix
     ./forgejo.nix

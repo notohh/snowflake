@@ -1,6 +1,6 @@
 {config, ...}: {
   sops.secrets.cloudflare-api-key = {};
-  networking.firewall.allowedTCPPorts = [80 443];
+  networking.firewall.allowedTCPPorts = [80 443 8080];
   systemd.services.traefik = {
     environment = {
       CLOUDFLARE_EMAIL = "jch0tm2e@notohh.dev";
@@ -12,6 +12,12 @@
   services.traefik = {
     enable = true;
     dynamicConfigOptions = {
+      http.middlewares.authelia = {
+        forwardauth = {
+          address = "http://localhost:9091/api/verify?rd=https://passport.notohh.dev/";
+          trustForwardHeader = true;
+        };
+      };
       http = {
         routers = {
           api = {
@@ -34,12 +40,20 @@
             entrypoints = ["web"];
             service = "dashdot";
           };
+          authelia = {
+            rule = "Host(`passport.notohh.dev`)";
+            entrypoints = ["websecure"];
+            service = "authelia";
+            tls.domains = [{main = "*.notohh.dev";}];
+            tls.certresolver = "production";
+          };
           hugo = {
             rule = "Host(`notohh.dev`)";
-            entryPoints = ["websecure"];
+            entrypoints = ["websecure"];
             service = "hugo";
             tls.domains = [{main = "*.notohh.dev";}];
             tls.certresolver = "production";
+            middlewares = "authelia";
           };
           foundryvtt = {
             rule = "Host(`foundry.notohh.dev`)";
@@ -92,6 +106,7 @@
           };
         };
         services = {
+          authelia.loadBalancer.servers = [{url = "http://localhost:9091";}];
           dashdot.loadBalancer.servers = [{url = "http://localhost:4000";}];
           hugo.loadBalancer.servers = [{url = "http://localhost:1313";}];
           jellyfin.loadBalancer.servers = [{url = "http://localhost:8096";}];
@@ -121,6 +136,11 @@
         web = {
           address = ":80";
           forwardedHeaders.insecure = true;
+        };
+      };
+      metrics = {
+        prometheus = {
+          addServicesLabels = true;
         };
       };
       certificatesResolvers = {
