@@ -8,5 +8,6 @@
     ./openssh.nix
     ./virtualisation.nix
     ./sops.nix
+    ./prometheus.nix
   ];
 }
