@@ -32,10 +32,15 @@
         name = "forgejo";
         ensurePermissions."DATABASE forgejo" = "ALL PRIVILEGES";
       }
+      {
+        name = "miniflux";
+        ensurePermissions."DATABASE miniflux" = "ALL PRIVILEGES";
+      }
     ];
     ensureDatabases = [
       "forgejo"
       "hedgedoc"
+      "miniflux"
     ];
   };
 }
