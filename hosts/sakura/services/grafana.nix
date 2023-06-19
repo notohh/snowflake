@@ -9,14 +9,10 @@ _: {
         http_addr = "0.0.0.0";
         http_port = 3100;
       };
-      auth = {
-        disable_login_form = false;
-      };
+      "auth.anonymous".enabled = true;
+      "auth.basic".enabled = false;
       users = {
         allow_signup = false;
-      };
-      feature_toggles = {
-        publicDashboards = true;
       };
       database = {
         type = "postgres";
