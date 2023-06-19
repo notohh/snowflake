@@ -149,11 +149,12 @@ $crust:       #11111b;
 
 .tray {
   padding-left: 0.8rem;
-  padding-right: 0.4rem;
+  .item {
+    padding: 0.3rem;
+  }
   .popup {
     background-color: $base;
     border-radius: 8px;
     border: 1px solid $sapphire;
-    padding: 0.2rem;
   }
 }
