@@ -2,7 +2,6 @@ _: {
   imports = [
     ./traefik.nix
     ./torrent.nix
-    ./prometheus.nix
   ];
   services.radarr = {
     enable = true;

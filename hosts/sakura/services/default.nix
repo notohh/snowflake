@@ -10,6 +10,5 @@
     ./hedgedoc.nix
     ./dashdot.nix
     ./grafana.nix
-    ./prometheus.nix
   ];
 }

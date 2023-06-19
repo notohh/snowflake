@@ -31,6 +31,11 @@
         USER = "forgejo";
         PASSWD = "forgejo";
       };
+      metrics = {
+        ENABLED = true;
+        ENABLED_ISSUE_BY_REPOSITORY = true;
+        ENABLED_ISSUE_BY_LABEL = true;
+      };
     };
   };
 }
