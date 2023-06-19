@@ -118,18 +118,12 @@ $crust:       #11111b;
       color: $base;
     }
     .controls {
-      .btn-prev {
-        padding: 0.3rem;
-      }
-      .btn-play {
-        padding: 0.3rem;
-      }
-      .btn-pause {
-        padding: 0.3rem;
-        
-      }
+      .btn-prev,
+      .btn-play,
+      .btn-pause,
       .btn-next {
-        padding: 0.3rem;  
+        padding: 0.3rem;
+        margin-left: 0.6rem;
       }
     }
 }
