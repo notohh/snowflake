@@ -146,3 +146,14 @@ $crust:       #11111b;
 .uptime {
   padding-left: 0.8rem;
 }
+
+.tray {
+  padding-left: 0.8rem;
+  padding-right: 0.4rem;
+  .popup {
+    background-color: $base;
+    border-radius: 8px;
+    border: 1px solid $sapphire;
+    padding: 0.2rem;
+  }
+}
