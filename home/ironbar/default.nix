@@ -88,7 +88,7 @@ in {
           "{net_up:enp2s0}  {net_down:enp2s0}"
         ];
       };
-      tray = {type = "tray";}; # tray currently broken - issue 166
+      tray = {type = "tray";};
       clock = {type = "clock";};
     in {
       monitors = {
