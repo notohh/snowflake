@@ -40,12 +40,17 @@
         name = "grafana";
         ensurePermissions."DATABASE grafana" = "ALL PRIVILEGES";
       }
+      {
+        name = "authelia";
+        ensurePermissions."DATABASE authelia" = "ALL PRIVILEGES";
+      }
     ];
     ensureDatabases = [
       "forgejo"
       "hedgedoc"
       "miniflux"
       "grafana"
+      "authelia"
     ];
   };
 }
