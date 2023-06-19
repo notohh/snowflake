@@ -35,6 +35,11 @@ _: {
             entrypoints = ["web"];
             service = "dashdot";
           };
+          miniflux = {
+            rule = "Host(`news.home.arpa`)";
+            entrypoints = ["web"];
+            service = "miniflux";
+          };
         };
         services = {
           kanboard.loadBalancer.servers = [{url = "http://localhost:8080";}];
@@ -42,6 +47,7 @@ _: {
           homarr.loadBalancer.servers = [{url = "http://localhost:7575";}];
           dashdot.loadBalancer.servers = [{url = "http://localhost:4000";}];
           searxng.loadBalancer.servers = [{url = "http://localhost:8100";}];
+          miniflux.loadBalancer.servers = [{url = "http://localhost:8200";}];
         };
       };
     };

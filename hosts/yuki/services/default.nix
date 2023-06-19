@@ -7,5 +7,6 @@
     ./searxng.nix
     ./homarr.nix
     ./dashdot.nix
+    ./miniflux.nix
   ];
 }
