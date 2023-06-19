@@ -8,5 +8,6 @@
     ./homarr.nix
     ./dashdot.nix
     ./miniflux.nix
+    ./prometheus.nix
   ];
 }

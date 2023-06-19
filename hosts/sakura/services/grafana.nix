@@ -14,15 +14,15 @@ _: {
       };
       users = {
         allow_signup = false;
-        auto_assign_org = true;
-        auto_assign_org_role = "Viewer";
+      };
+      feature_toggles = {
+        publicDashboards = true;
       };
       database = {
         type = "postgres";
         host = "192.168.1.211:5432";
         name = "grafana";
         user = "grafana";
-        password = "grafana";
         ssl_mode = "disable";
       };
     };
@@ -32,7 +32,25 @@ _: {
           {
             name = "Prometheus";
             type = "prometheus";
-            url = "http://127.0.0.0:9090";
+            url = "http://localhost:9090";
+            orgId = 1;
+          }
+          {
+            name = "Prometheus-kariru";
+            type = "prometheus";
+            url = "http://192.168.1.54:9090";
+            orgId = 1;
+          }
+          {
+            name = "Prometheus-yuki";
+            type = "prometheus";
+            url = "http://192.168.1.36:9090";
+            orgId = 1;
+          }
+          {
+            name = "Prometheus-arashi";
+            type = "prometheus";
+            url = "http://192.168.1.211:9090";
             orgId = 1;
           }
         ];
