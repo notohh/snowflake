@@ -7,9 +7,6 @@
 
   nix = {
     package = pkgs.nixFlakes;
-    extraOptions = ''
-      warn-dirty = false
-    '';
     gc = {
       automatic = true;
       dates = "weekly";
@@ -17,6 +14,7 @@
     };
     settings = {
       extra-experimental-features = ["flakes" "nix-command"];
+      warn-dirty = false;
       auto-optimise-store = true;
       builders-use-substitutes = true;
       keep-derivations = true;
