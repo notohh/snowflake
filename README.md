@@ -23,6 +23,7 @@
 + :house_with_garden: [home](home)
 + :computer: [hosts](hosts)
   - :cloud_with_rain: [ame](hosts/ame)
+  - :cloud_with_lightning_and_rain: [arashi](hosts/arashi)
   - :wind_chime: [kariru](hosts/kariru)
   - :cherry_blossom: [sakura](hosts/sakura)
   - :full_moon: [tsuki](hosts/tsuki)
