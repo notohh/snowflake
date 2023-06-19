@@ -4,7 +4,6 @@
   lib,
   ...
 }: {
-  sops.secrets.forgejo-db = {};
   services.gitea = {
     enable = true;
     package = pkgs.forgejo;

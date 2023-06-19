@@ -7,8 +7,9 @@
     ./jellyfin.nix
     ./rustypaste.nix
     ./woodpecker.nix
-    ./atticd.nix
     ./hedgedoc.nix
     ./dashdot.nix
+    ./grafana.nix
+    ./prometheus.nix
   ];
 }

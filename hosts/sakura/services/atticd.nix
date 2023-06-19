@@ -1,8 +1,8 @@
 {config, ...}: {
-  sops.secrets.attic-jwt-secret = {};
+  sops.secrets.attic-secret = {};
   services.atticd = {
     enable = true;
-    credentialsFile = config.sops.secrets.attic-jwt-secret.path;
+    credentialsFile = config.sops.secrets.attic-secret.path;
     settings = {
       listen = "[::]:8100";
       allowed-hosts = ["cache.notohh.dev"];
