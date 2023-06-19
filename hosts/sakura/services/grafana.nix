@@ -17,6 +17,14 @@ _: {
         auto_assign_org = true;
         auto_assign_org_role = "Viewer";
       };
+      database = {
+        type = "postgres";
+        host = "192.168.1.211:5432";
+        name = "grafana";
+        user = "grafana";
+        password = "grafana";
+        ssl_mode = "disable";
+      };
     };
     provision = {
       datasources.settings = {
