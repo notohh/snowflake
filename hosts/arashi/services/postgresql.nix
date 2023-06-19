@@ -36,11 +36,16 @@
         name = "miniflux";
         ensurePermissions."DATABASE miniflux" = "ALL PRIVILEGES";
       }
+      {
+        name = "grafana";
+        ensurePermissions."DATABASE grafana" = "ALL PRIVILEGES";
+      }
     ];
     ensureDatabases = [
       "forgejo"
       "hedgedoc"
       "miniflux"
+      "grafana"
     ];
   };
 }
