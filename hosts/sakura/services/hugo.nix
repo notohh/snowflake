@@ -1,7 +1,7 @@
 {pkgs, ...}: {
   environment.systemPackages = with pkgs; [hugo];
   virtualisation.oci-containers.containers.hugo = {
-    image = "klakegg/hugo:0.111.3";
+    image = "klakegg/hugo:0.111.3-ext-ubuntu";
     cmd = ["server"];
     volumes = [
       "/home/notoh/docker/hugo:/src"
