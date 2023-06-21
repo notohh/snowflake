@@ -11,5 +11,6 @@
     ./hedgedoc.nix
     ./dashdot.nix
     ./grafana.nix
+    ./conduit.nix
   ];
 }
