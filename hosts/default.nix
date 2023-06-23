@@ -141,7 +141,8 @@ in {
     inherit system;
     specialArgs = {inherit inputs;};
     modules = [
-      ./arashi
+      ./sora
+      sopsModule
       hmModule
       {
         home-manager = {
