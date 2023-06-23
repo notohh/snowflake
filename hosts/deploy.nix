@@ -40,5 +40,15 @@ inputs: {
       sshOpts = ["-t" "-i" "~/.ssh/arashi"];
       magicRollback = false;
     };
+    sora = {
+      hostname = "sora";
+      profiles.system = {
+        user = "root";
+        path = activate.nixos inputs.self.nixosConfigurations.sora;
+      };
+      sshUser = "notoh";
+      sshOpts = ["-t" "-i" "~/.ssh/kumo"];
+      magicRollback = false;
+    };
   };
 }

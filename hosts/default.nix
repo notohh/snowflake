@@ -137,4 +137,23 @@ in {
       }
     ];
   };
+  sora = nixosSystem {
+    inherit system;
+    specialArgs = {inherit inputs;};
+    modules = [
+      ./arashi
+      hmModule
+      {
+        home-manager = {
+          useGlobalPkgs = true;
+          useUserPackages = true;
+          users.notoh = {
+            imports = [
+              ./sora/home.nix
+            ];
+          };
+        };
+      }
+    ];
+  };
 }
