@@ -2,16 +2,11 @@
   imports = [
     ./hardware-configuration.nix
     ./networking.nix
+    ./services
     ../../modules
   ];
 
-  environment.systemPackages = with pkgs; [
-    git
-    croc
-    helix
-  ];
-
-  boot.cleanTmpDir = true;
+  boot.tmp.cleanOnBoot = true;
   zramSwap.enable = true;
   networking.hostName = "sora";
   networking.domain = "";
