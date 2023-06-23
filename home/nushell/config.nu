@@ -18,6 +18,7 @@ alias sakura = nix run github:serokell/deploy-rs ".#sakura"
 alias kariru = nix run github:serokell/deploy-rs ".#kariru"
 alias yuki = nix run github:serokell/deploy-rs ".#yuki"
 alias arashi = nix run github:serokell/deploy-rs ".#arashi"
+alias sora = nix run github:serokell/deploy-rs ".#sora"
 alias dx = nix run "nixpkgs#deadnix"
 alias sx = nix run "nixpkgs#statix" -- check
 alias sxfix = nix run "nixpkgs#statix" -- fix
