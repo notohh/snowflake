@@ -3,6 +3,9 @@
     nameservers = [
       "8.8.8.8"
     ];
+    environment.etc = {
+      "resolv.conf".text = "nameserver 8.8.8.8\n";
+    };
     defaultGateway = "172.31.1.1";
     defaultGateway6 = {
       address = "fe80::1";
