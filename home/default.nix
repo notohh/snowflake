@@ -53,9 +53,9 @@
         HostName 192.168.1.211
         User notoh
         IdentityFile ~/.ssh/arashi
-      Host hetzner
+      Host sora
         HostName 5.161.181.184
-        User root
+        User notoh
         IdentityFile ~/.ssh/kumo
       Host pihole
         Hostname 192.168.1.221
