@@ -8,6 +8,7 @@ Name            | Description
 `arashi`        | postgres / redis vm
 `kariru`        | *arr stack / seedbox vm
 `sakura`        | WIP new main vm
+`sora`          | hetzner vps
 `tsuki`         | main machine running hyprland
 `yuki`          | my old proxmox machine, now running pure nix
 `default`       | defines `nixosConfigurations`
