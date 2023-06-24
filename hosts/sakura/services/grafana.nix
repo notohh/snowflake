@@ -49,6 +49,12 @@ _: {
             url = "http://192.168.1.211:9090";
             orgId = 1;
           }
+          {
+            name = "Prometheus-sora";
+            type = "prometheus";
+            url = "http://100.87.54.48:9090";
+            orgId = 1;
+          }
         ];
       };
     };
