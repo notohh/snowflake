@@ -25,11 +25,6 @@ _: {
             entrypoints = ["web"];
             service = "prowlarr";
           };
-          bazarr = {
-            rule = "Host(`bazarr.home.arpa`)";
-            entrypoints = ["web"];
-            service = "bazarr";
-          };
           qbittorrent = {
             rule = "Host(`torrent.home.arpa`)";
             entrypoints = ["web"];
@@ -40,7 +35,6 @@ _: {
           sonarr.loadBalancer.servers = [{url = "http://localhost:8989";}];
           radarr.loadBalancer.servers = [{url = "http://localhost:7878";}];
           prowlarr.loadBalancer.servers = [{url = "http://localhost:9696";}];
-          bazarr.loadBalancer.servers = [{url = "http://localhost:6767";}];
           qbittorrent.loadBalancer.servers = [{url = "http://localhost:8080";}];
         };
       };
