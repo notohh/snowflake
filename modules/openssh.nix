@@ -4,7 +4,7 @@
     settings = {
       KbdInteractiveAuthentication = false;
       PasswordAuthentication = lib.mkForce false;
-      PubkeyAuthentication = true;
+      PubkeyAuthentication = lib.mkForce true;
       PermitRootLogin = lib.mkForce "no";
       StreamLocalBindUnlink = "yes";
       GatewayPorts = "clientspecified";
