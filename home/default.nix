@@ -56,7 +56,7 @@
       Host sora
         HostName 5.161.181.184
         User notoh
-        IdentityFile ~/.ssh/kumo
+        IdentityFile ~/.ssh/sora
       Host pihole
         Hostname 192.168.1.221
         User root
