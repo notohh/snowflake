@@ -1,4 +1,4 @@
-{...}: {
+_: {
   virtualisation.oci-containers.containers.dashdot = {
     image = "mauricenino/dashdot:sha-207b2df";
     ports = [

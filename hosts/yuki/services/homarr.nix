@@ -1,4 +1,4 @@
-{...}: {
+_: {
   virtualisation.oci-containers.containers.homarr = {
     image = "ghcr.io/ajnart/homarr:0.12.3";
     ports = [
