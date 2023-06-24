@@ -23,7 +23,6 @@
     homeDirectory = "/home/notoh";
     packages = with pkgs; [
       brave
-      webcord
       discord
       obs-studio
       pavucontrol
