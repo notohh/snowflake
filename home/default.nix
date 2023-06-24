@@ -54,7 +54,7 @@
         User notoh
         IdentityFile ~/.ssh/arashi
       Host sora
-        HostName 5.161.181.184
+        HostName 100.87.54.48
         User notoh
         IdentityFile ~/.ssh/sora
       Host pihole
