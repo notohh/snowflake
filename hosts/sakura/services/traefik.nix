@@ -12,17 +12,17 @@
   services.traefik = {
     enable = true;
     dynamicConfigOptions = {
-      http.middlewares.authelia = {
-        forwardauth = {
-          address = "http://localhost:9091/api/verify?rd=https://passport.notohh.dev/";
-          trustForwardHeader = true;
-        };
-      };
       http = {
+        middlewares.authelia = {
+          forwardauth = {
+            address = "http://localhost:9091/api/verify?rd=https://passport.notohh.dev/";
+            trustForwardHeader = true;
+          };
+        };
         routers = {
           api = {
             rule = "PathPrefix(`/api/`)";
-            entryPoints = ["websecure"];
+            entrypoints = ["websecure"];
             service = "api@internal";
           };
           jellyfin = {
@@ -104,13 +104,6 @@
             tls.domains = [{main = "*.notohh.dev";}];
             tls.certresolver = "production";
           };
-          conduit = {
-            rule = "Host(`artoria.notohh.dev`)";
-            entrypoints = ["websecure"];
-            service = "conduit";
-            tls.domains = [{main = "*.notohh.dev";}];
-            tls.certresolver = "production";
-          };
         };
         services = {
           authelia.loadBalancer.servers = [{url = "http://localhost:9091";}];
@@ -125,7 +118,6 @@
           woodpecker-server.loadBalancer.servers = [{url = "http://localhost:8200";}];
           atticd.loadBalancer.servers = [{url = "http://localhost:8100";}];
           hedgedoc.loadBalancer.servers = [{url = "http://localhost:3300";}];
-          conduit.loadBalancer.servers = [{url = "http://localhost:6167";}];
         };
       };
     };
