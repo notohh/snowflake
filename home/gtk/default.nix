@@ -9,6 +9,7 @@
 
   gtk = {
     enable = true;
+    font.name = "jost";
     theme = {
       name = "Catppuccin-Mocha-Standard-Pink-Dark";
       package = pkgs.catppuccin-gtk.override {
