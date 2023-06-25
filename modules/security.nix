@@ -49,13 +49,17 @@
   };
   services.fail2ban = {
     enable = true;
-    maxretry = 3;
-    bantime = "10m";
     ignoreIP = [
       "192.168.0.0/16"
       "172.16.0.0/12"
       "10.0.0.0/8"
       "5.161.181.184"
     ];
+    extraSettings = {
+      findtime = 100000;
+      bantime = 100000;
+      maxretry = 1;
+      mode = "aggressive";
+    };
   };
 }
