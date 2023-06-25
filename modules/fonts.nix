@@ -25,7 +25,7 @@
         emoji = ["Twitter Color Emoji"];
       };
 
-      hinting.style = "hintfull";
+      hinting.style = "full";
     };
   };
 }
