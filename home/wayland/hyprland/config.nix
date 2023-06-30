@@ -101,7 +101,7 @@ _: {
     #windowrules
     windowrulev2 = noshadow, floating:0
     windowrulev2 = float, title:^(Volume Control)$
-    windowrulev2 = float, title:^(Picture-in-Picture)$
+    windowrulev2 = float, title:^(Picture in picture)$
     windowrulev2 = float, title:^(RuneLite)$
     windowrulev2 = move 500 300, title:^(RuneLite)$
     windowrulev2 = size 810 580, title:^(RuneLite)$
