@@ -44,6 +44,10 @@
         name = "authelia";
         ensurePermissions."DATABASE authelia" = "ALL PRIVILEGES";
       }
+      {
+        name = "atticd";
+        ensurePermissions."DATABASE atticd" = "ALL PRIVILEGES";
+      }
     ];
     ensureDatabases = [
       "forgejo"
@@ -51,6 +55,7 @@
       "miniflux"
       "grafana"
       "authelia"
+      "atticd"
     ];
   };
 }
