@@ -2,8 +2,8 @@
   imports = [
     ./traefik.nix
     ./authelia.nix
+    ./atticd.nix
     ./hugo.nix
-    ./foundryvtt.nix
     ./forgejo.nix
     ./jellyfin.nix
     ./rustypaste.nix
