@@ -49,6 +49,8 @@
   };
   services.fail2ban = {
     enable = true;
+    bantime = "1h";
+    maxretry = 1;
     ignoreIP = [
       "192.168.0.0/16"
       "172.16.0.0/12"
@@ -57,8 +59,6 @@
     ];
     extraSettings = {
       findtime = 100000;
-      bantime = 100000;
-      maxretry = 1;
       mode = "aggressive";
     };
   };
