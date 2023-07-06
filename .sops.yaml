@@ -2,7 +2,6 @@ keys:
   - &users
     - &notoh age1ckvmyqkwk69j64ev3fmckytz6k2dv79z4gn5qf6gxqyevp5yjfesdfkxmn
   - &hosts
-    - &sakura age1vzjyhapn9mqs6x0xwf2xfqaxtlts2dkxt3uudmv7p5868f4jcgrqgqdts
     - &tsuki age19l9yutk47w8hdqyzy8p3ygxv7ql6dk42rswshxe7kj0kd28wxsyqxtscl7
 
 creation_rules:
