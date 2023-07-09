@@ -57,9 +57,11 @@
       "10.0.0.0/8"
       "5.161.181.184"
     ];
-    extraSettings = {
-      findtime = 100000;
-      mode = "aggressive";
+    jails.DEFAULT = {
+      settings = {
+        findtime = 100000;
+        mode = "aggressive";
+      };
     };
   };
 }
