@@ -10,9 +10,10 @@
   gtk = {
     enable = true;
     theme = {
-      name = "Catppuccin-Mocha-Standard-Red-Dark";
+      name = "Catppuccin-Mocha-Standard-Red-dark";
       package = pkgs.catppuccin-gtk.override {
         accents = ["red"];
+        size = "standard";
         variant = "mocha";
       };
     };
