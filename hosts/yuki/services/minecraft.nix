@@ -4,7 +4,7 @@
     image = "marctv/minecraft-papermc-server:latest";
     ports = ["25565:25565"];
     environment = {
-      MEMORYSIZE = "6G";
+      MEMORYSIZE = "10G";
     };
     volumes = [
       "/home/notoh/docker/mcserver:/data:rw"
