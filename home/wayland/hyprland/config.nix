@@ -1,9 +1,10 @@
 _: {
   wayland.windowManager.hyprland.extraConfig = ''
 
-    monitor = HDMI-A-1,1920x1080@60, 3840x0, 1 #right
-    monitor = DP-2,1920x1080@60, 0x0, 1 #left
-    monitor = DP-3,1920x1080@144, 1920x0, 1 #middle
+    monitor = HDMI-A-1,1920x1080@60, 3640x560, 1, transform, 3 #right
+    monitor = DP-1,1920x1080@60, 0x560, 1, transform, 1 #left
+    monitor = DP-2,2560x1440@144, 1080x1080, 1 #middle
+    monitor = DP-3,1920x1080@144, 1400x0, auto #top
 
     input {
 
@@ -90,6 +91,7 @@ _: {
 
         sensitivity = -0.5
     }
+
     exec-once = swww init
 
     exec-once = dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
