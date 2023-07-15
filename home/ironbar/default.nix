@@ -92,12 +92,12 @@ in {
       clock = {type = "clock";};
     in {
       monitors = {
-        "DP-3" = {
+        "DP-2" = {
           position = "top";
           anchor_to_edges = true;
           start = [nixlogo];
           center = [music spacer focused spacer uptime];
-          end = [sys-info clock tray];
+          end = [sys-info clock];
         };
       };
     };
