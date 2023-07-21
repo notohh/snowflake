@@ -114,8 +114,10 @@ _: {
         "$mod SHIFT, 8, movetoworkspace, 8"
         "$mod SHIFT, 9, movetoworkspace, 9"
         "$mod SHIFT, 10, movetoworkspace, 10"
-        ", Print, exec, grim -g $(slurp) - | swappy -f -"
       ];
     };
+    extraConfig = ''
+      bind =, Print, exec, grim -g "$(slurp)" - | swappy -f -
+    '';
   };
 }
