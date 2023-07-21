@@ -39,8 +39,6 @@ in {
     ];
   };
 
-  programs.xwayland.enable = true;
-
   environment.sessionVariables = {
     GBM_BACKEND = "nvidia-drm";
     __GL_GSYNC_ALLOWED = "0";
