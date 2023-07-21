@@ -3,7 +3,6 @@ inputs: let
   sopsModule = inputs.sops-nix.nixosModules.sops;
   hmModule = inputs.home-manager.nixosModules.home-manager;
   diskoModule = inputs.disko.nixosModules.disko;
-  hyprlandModule = inputs.hyprland.homeManagerModules.default;
   ironbarModule = inputs.ironbar.homeManagerModules.default;
   atticdModule = inputs.attic.nixosModules.atticd;
   inherit (inputs.nixpkgs.lib) nixosSystem;
@@ -24,7 +23,6 @@ in {
           users.notoh = {
             imports = [
               ./tsuki/home.nix
-              hyprlandModule
               ironbarModule
             ];
           };
