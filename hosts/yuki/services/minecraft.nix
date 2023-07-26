@@ -1,13 +1,13 @@
 {...}: {
   networking.firewall.allowedTCPPorts = [25565];
   virtualisation.oci-containers.containers.minecraft = {
-    image = "marctv/minecraft-papermc-server:latest";
+    image = "als3bas/zulu-purpurmc:latest";
     ports = ["25565:25565"];
     environment = {
       MEMORYSIZE = "10G";
     };
     volumes = [
-      "/home/notoh/docker/mcserver:/data:rw"
+      "/home/notoh/docker/purpur:/data:rw"
     ];
   };
 }
