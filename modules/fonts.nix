@@ -1,8 +1,8 @@
 {pkgs, ...}: {
   fonts = {
-    enableDefaultFonts = false;
+    enableDefaultPackages = false;
     fontDir.enable = true;
-    fonts = with pkgs; [
+    packages = with pkgs; [
       corefonts
       jost
       jetbrains-mono
