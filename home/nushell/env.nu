@@ -16,13 +16,13 @@ def create_right_prompt [] {
     $time_segment
 }
 
-let-env PROMPT_COMMAND = {|| create_left_prompt }
-let-env PROMPT_COMMAND_RIGHT = {|| create_right_prompt }
-let-env PROMPT_INDICATOR = {|| "〉" }
-let-env PROMPT_INDICATOR_VI_INSERT = {|| ": " }
-let-env PROMPT_INDICATOR_VI_NORMAL = {|| "〉" }
-let-env PROMPT_MULTILINE_INDICATOR = {|| "::: " }
-let-env ENV_CONVERSIONS = {
+$env.PROMPT_COMMAND = {|| create_left_prompt }
+$env.PROMPT_COMMAND_RIGHT = {|| create_right_prompt }
+$env.PROMPT_INDICATOR = {|| "〉" }
+$env.PROMPT_INDICATOR_VI_INSERT = {|| ": " }
+$env.PROMPT_INDICATOR_VI_NORMAL = {|| "〉" }
+$env.PROMPT_MULTILINE_INDICATOR = {|| "::: " }
+$env.ENV_CONVERSIONS = {
   "PATH": {
     from_string: { |s| $s | split row (char esep) | path expand -n }
     to_string: { |v| $v | path expand -n | str join (char esep) }
@@ -33,10 +33,10 @@ let-env ENV_CONVERSIONS = {
   }
 }
 
-let-env NU_LIB_DIRS = [
+$env.NU_LIB_DIRS = [
     ($nu.config-path | path dirname | path join 'scripts')
 ]
 
-let-env NU_PLUGIN_DIRS = [
+$env.NU_PLUGIN_DIRS = [
     ($nu.config-path | path dirname | path join 'plugins')
 ]

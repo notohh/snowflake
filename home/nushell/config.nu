@@ -26,7 +26,7 @@ alias dl = yt-dlp -P ~/Videos/downloaded
 alias dlcd = yt-dlp
 alias up = rpaste -s "https://img.notohh.dev/" -e 1day
 
-let-env config = {
+$env.config = {
 
   ls: {
     use_ls_colors: true # use the LS_COLORS environment variable to colorize output
