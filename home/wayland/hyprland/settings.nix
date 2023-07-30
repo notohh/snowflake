@@ -74,8 +74,6 @@ _: {
         "float, title:^(RuneLite)"
         "move 500 300, title:^(RuneLite)"
         "size 810 580, title:^(RuneLite)"
-        "idleinhibit focus, class:^(firefox)$, title:^(.*YouTube.*)$"
-        "idleinhibit fullscreen, class:^(firefox)$"
       ];
       bindm = [
         "$mod, mouse_down, workspace e+1"
