@@ -72,8 +72,8 @@ _: {
         "float, title:^(Cryptomator)$"
         "float, title:^(wlogout)$"
         "float, title:^(RuneLite)"
-        "move 500 300, title:^(RuneLite)"
-        "size 810 580, title:^(RuneLite)"
+        "move 850 360, title:^(RuneLite)"
+        "size 830 600, title:^(RuneLite)"
       ];
       bindm = [
         "$mod, mouse_down, workspace e+1"
