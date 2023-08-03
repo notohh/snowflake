@@ -9,7 +9,7 @@ _: {
         "DP-3,1920x1080@144, 1400x0, auto" #top
       ];
       exec-once = [
-        "sww init"
+        "swww init"
         "/nix/store/gjbi20m2wz9xhm18ifmcdl45cpgd7hpz-polkit-gnome-0.105/libexec/polkit-gnome-authentication-agent-1"
         "~/.local/bin/lock"
       ];
