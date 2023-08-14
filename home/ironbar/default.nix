@@ -97,7 +97,7 @@ in {
           anchor_to_edges = true;
           start = [nixlogo];
           center = [music spacer focused spacer uptime];
-          end = [sys-info clock];
+          end = [sys-info clock tray];
         };
       };
     };
