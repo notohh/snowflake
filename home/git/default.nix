@@ -1,4 +1,4 @@
-_: {
+{pkgs, ...}: {
   programs.git = {
     enable = true;
     delta.enable = true;
@@ -11,8 +11,8 @@ _: {
     ignores = ["*result*" ".direnv" "node_modules"];
   };
   programs.gh = {
-    enable = false;
-    enableGitCredentialHelper = true;
+    enable = true;
+    gitCredentialHelper.enable = true;
     settings = {
       editor = "hx";
       prompt = "enabled";
