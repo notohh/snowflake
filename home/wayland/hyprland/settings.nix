@@ -28,11 +28,14 @@ _: {
         layout = "dwindle";
       };
       decoration = {
+        blur = {
+          enabled = true;
+          passes = 3;
+          new_optimizations = true;
+          brightness = 1.0;
+          noise = 0.02;
+        };
         rounding = 8;
-        blur = true;
-        blur_size = 5;
-        blur_passes = 3;
-        blur_new_optimizations = true;
         multisample_edges = true;
         inactive_opacity = 1;
         active_opacity = 1;
