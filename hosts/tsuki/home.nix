@@ -24,6 +24,7 @@
     packages = with pkgs; [
       brave
       discord
+      signal-desktop
       obs-studio
       pavucontrol
       unzip
