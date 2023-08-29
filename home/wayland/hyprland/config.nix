@@ -7,89 +7,78 @@ _: {
     monitor = DP-3,1920x1080@144, 1400x0, auto #top
 
     input {
+      kb_layout = us
+      kb_variant =
+      kb_model =
+      kb_options =
+      kb_rules =
 
-        kb_layout = us
-        kb_variant =
-        kb_model =
-        kb_options =
-        kb_rules =
+      follow_mouse = 1
 
-        follow_mouse = 1
-
-        sensitivity = -0.5 # -1.0 - 1.0, 0 means no modification.
-        force_no_accel = true
+      sensitivity = -0.5
+      force_no_accel = true
     }
 
     general {
+      gaps_in = 6
+      gaps_out = 15
+      border_size = 4
+      col.active_border = rgb(f5c2e7)
+      col.inactive_border = rgb(6c7086)
 
-        gaps_in = 6
-        gaps_out = 15
-        border_size = 4
-        col.active_border = rgb(f5c2e7)
-        col.inactive_border = rgb(6c7086)
-
-        layout = dwindle
+      layout = dwindle
     }
 
     decoration {
-        rounding = 8
-        blur {
-          enabled = true
-          size = 5
-          passes = 3
-          new_optimizations = true
+      rounding = 8
+      blur {
+        enabled = true
+        size = 5
+        passes = 3
+        new_optimizations = true
       }
 
-        multisample_edges = true
+      multisample_edges = true
 
-        #opactity
-        inactive_opacity = 1.0
-        active_opacity = 1.0
-        fullscreen_opacity = 1.0
+      inactive_opacity = 1.0
+      active_opacity = 1.0
+      fullscreen_opacity = 1.0
 
-        # shadow
-        drop_shadow = yes
-        shadow_range = 60
-        shadow_offset = 0 5
-        shadow_render_power = 4
-        col.shadow = rgba(00000099)
+      drop_shadow = yes
+      shadow_range = 60
+      shadow_offset = 0 5
+      shadow_render_power = 4
+      col.shadow = rgba(00000099)
     }
 
     animations {
+      enabled = yes
 
-        enabled = yes
+      bezier = myBezier, 0.05, 0.9, 0.1, 1.05
 
-        bezier = myBezier, 0.05, 0.9, 0.1, 1.05
-
-        animation = windows, 1, 7, myBezier
-        animation = windowsOut, 1, 7, default, popin 80%
-        animation = border, 1, 10, default
-        animation = fade, 1, 7, default
-        animation = workspaces, 1, 6, default
+      animation = windows, 1, 7, myBezier
+      animation = windowsOut, 1, 7, default, popin 80%
+      animation = border, 1, 10, default
+      animation = fade, 1, 7, default
+      animation = workspaces, 1, 6, default
     }
 
     dwindle {
-
-        pseudotile = yes
-        preserve_split = yes
+      pseudotile = yes
+      preserve_split = yes
 
     }
 
     master {
-
-        new_is_master = true
-
+      new_is_master = true
     }
 
     gestures {
-
-        workspace_swipe = off
-
+      workspace_swipe = off
     }
 
     device:epic mouse V1 {
-
-        sensitivity = -0.5
+      sensitivity = -0.5
     }
 
     exec-once = swww init
@@ -104,14 +93,12 @@ _: {
     windowrulev2 = noshadow, floating:0
     windowrulev2 = float, title:^(Volume Control)$
     windowrulev2 = float, title:^(Picture in picture)$
-    windowrulev2 = float, title:^(RuneLite)$
-    windowrulev2 = move 500 300, title:^(RuneLite)$
-    windowrulev2 = size 810 580, title:^(RuneLite)$
     windowrulev2 = float, title:^(Steam)$
     windowrulev2 = float, title:^(Friends List)$
     windowrulev2 = float, title:^(Cryptomator)$
-    windowrulev2 = fullscreen, title:^(wlogout)$
-    windowrulev2 = float, title:^(wlogout)$
+    windowrulev2 = float, title:^(RuneLite)$
+    windowrulev2 = move 850 360, title:^(RuneLite)$
+    windowrulev2 = size 830 600, title:^(RuneLite)$
 
     #binds
     $mainMod = SUPER
