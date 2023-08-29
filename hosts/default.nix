@@ -2,7 +2,7 @@ inputs: let
   system = "x86_64-linux";
   sopsModule = inputs.sops-nix.nixosModules.sops;
   hmModule = inputs.home-manager.nixosModules.home-manager;
-  diskoModule = inputs.disko.nixosModules.disko;
+  hyprlandModule = inputs.hyprland.homeManagerModules.default;
   ironbarModule = inputs.ironbar.homeManagerModules.default;
   atticdModule = inputs.attic.nixosModules.atticd;
   inherit (inputs.nixpkgs.lib) nixosSystem;
@@ -13,7 +13,6 @@ in {
     modules = [
       ./tsuki
       sopsModule
-      diskoModule
       hmModule
       {
         home-manager = {
@@ -23,6 +22,7 @@ in {
           users.notoh = {
             imports = [
               ./tsuki/home.nix
+              hyprlandModule
               ironbarModule
             ];
           };
@@ -36,7 +36,6 @@ in {
     modules = [
       ./sakura
       sopsModule
-      diskoModule
       hmModule
       atticdModule
       {
@@ -58,7 +57,6 @@ in {
     modules = [
       ./kariru
       sopsModule
-      diskoModule
       hmModule
       {
         home-manager = {
@@ -79,7 +77,6 @@ in {
     modules = [
       ./yuki
       sopsModule
-      diskoModule
       hmModule
       {
         home-manager = {
@@ -100,7 +97,6 @@ in {
     modules = [
       ./ame
       sopsModule
-      diskoModule
       hmModule
       {
         home-manager = {
