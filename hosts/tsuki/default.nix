@@ -41,6 +41,7 @@
   };
 
   services.pcscd.enable = true;
+  services.davfs2.enable = true;
 
   sound.enable = true;
   hardware.pulseaudio.enable = false;
