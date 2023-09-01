@@ -10,7 +10,7 @@ steps:
       ssh_key:
         from_secret: ssh_key
       branch: master
-      remote: ssh://gitea@git.notohh.dev:notohh/snowflake.git
+      remote: ssh://woodpecker-ci@git.notohh.dev:notohh/snowflake.git
       force: false
       commit: true
       commit_message: "flake.lock: update"
