@@ -1,7 +1,7 @@
-pipeline:
+steps:
   check:
     image: nixos/nix
-    commands:      
+    commands:
       - echo 'experimental-features = flakes nix-command' >> /etc/nix/nix.conf
       - nix flake check
   fmt:
