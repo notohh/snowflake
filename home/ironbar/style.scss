@@ -107,7 +107,7 @@ $crust:       #11111b;
     padding-left: 0.2rem;
     padding-right: 0.2rem;
     .album-art {
-      padding: 0.8rem;
+      padding: 1.2rem;
     }
     .title {
       padding-top: 0.8rem;
@@ -117,14 +117,10 @@ $crust:       #11111b;
       background-color: transparent;
       color: $base;
     }
-    .controls {
-      .btn-prev,
-      .btn-play,
-      .btn-pause,
-      .btn-next {
-        padding: 0.3rem;
-        margin-left: 0.6rem;
-      }
+    .controls * {
+      border-radius: 0;
+      background-color: transparent;
+      color: $base;
     }
 }
 

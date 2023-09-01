@@ -25,18 +25,6 @@ in {
           }
         ];
       };
-      pfp = rec {
-        type = "custom";
-        name = "pfp";
-        class = name;
-        bar = [
-          {
-            type = "image";
-            src = "https://img.notohh.dev/JoYRnUdM.png";
-            size = 24;
-          }
-        ];
-      };
       music = {
         type = "music";
         player_type = "mpris";
@@ -44,6 +32,7 @@ in {
         show_status_icon = false;
         icons.play = "";
         icons.pause = "";
+        cover_image_size = 256;
         truncate = {
           mode = "end";
           max_length = 36;
