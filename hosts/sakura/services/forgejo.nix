@@ -1,6 +1,5 @@
 {
   pkgs,
-  config,
   lib,
   ...
 }: {
@@ -10,7 +9,7 @@
     appName = "forgejo";
     stateDir = "/var/lib/forgejo";
     settings = {
-      service.DISABLE_REGISTRATION = false;
+      service.DISABLE_REGISTRATION = true;
       ui = {
         DEFAULT_THEME = "forgejo-dark";
       };
