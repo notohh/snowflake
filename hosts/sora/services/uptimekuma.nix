@@ -1,4 +1,5 @@
 _: {
+  networking.firewall.allowedTCPPorts = [4000];
   services.uptime-kuma = {
     enable = true;
     settings = {
