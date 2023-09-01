@@ -20,11 +20,6 @@ _: {
             entryPoints = ["web"];
             service = "searxng";
           };
-          kanboard = {
-            rule = "Host(`kanboard.home.arpa`)";
-            entryPoints = ["web"];
-            service = "kanboard";
-          };
           stash = {
             rule = "Host(`stash.home.arpa`)";
             entrypoints = ["web"];
@@ -35,19 +30,12 @@ _: {
             entrypoints = ["web"];
             service = "dashdot";
           };
-          miniflux = {
-            rule = "Host(`news.home.arpa`)";
-            entrypoints = ["web"];
-            service = "miniflux";
-          };
         };
         services = {
-          kanboard.loadBalancer.servers = [{url = "http://localhost:8080";}];
           stash.loadBalancer.servers = [{url = "http://localhost:9999";}];
           homarr.loadBalancer.servers = [{url = "http://localhost:7575";}];
           dashdot.loadBalancer.servers = [{url = "http://localhost:4000";}];
           searxng.loadBalancer.servers = [{url = "http://localhost:8100";}];
-          miniflux.loadBalancer.servers = [{url = "http://localhost:8200";}];
         };
       };
     };
