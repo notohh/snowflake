@@ -27,6 +27,7 @@
       signal-desktop
       obs-studio
       pavucontrol
+      vscode-fhs
       unzip
       p7zip
       virt-manager
