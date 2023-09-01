@@ -1,0 +1,18 @@
+steps:
+  update:
+    image: nixos/nix
+    commands:
+      - echo 'experimental-features = flakes nix-command' >> /etc/nix/nix.conf
+      - nix flake update
+  push:
+    image: appleboy/drone-git-push
+    settings:
+      ssh_key:
+        from_secret: ssh_key
+      branch: master
+      remote: ssh://gitea@git.notohh.dev:woodpecker-ci/snowflake.git
+      force: false
+      commit: true
+      commit_message: "flake.lock: update"
+      author_name: woodpecker-ci
+      author_email: woodpecker@local.com
