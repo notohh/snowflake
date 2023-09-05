@@ -25,6 +25,7 @@
       brave
       discord
       signal-desktop
+      jellyfin-media-player
       obs-studio
       pavucontrol
       vscode-fhs
@@ -50,6 +51,7 @@
       runelite
       prismlauncher
       (callPackage ../../pkgs/chatterino7 {})
+      (callPackage ../../pkgs/jellyfin-rpc {})
     ];
 
     stateVersion = "23.05";
