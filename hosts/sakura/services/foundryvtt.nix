@@ -2,7 +2,7 @@ _: {
   sops.secrets.foundry-username = {};
   sops.secrets.foundry-password = {};
   virtualisation.oci-containers.containers.foundryvtt = {
-    image = "felddy/foundryvtt:11.300.0";
+    image = "felddy/foundryvtt:v11.308.0";
     volumes = [
       "/home/notoh/docker/foundryvtt:/data"
     ];
