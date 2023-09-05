@@ -1,6 +1,6 @@
 _: {
   virtualisation.oci-containers.containers.homarr = {
-    image = "ghcr.io/ajnart/homarr:0.13.2";
+    image = "ghcr.io/ajnart/homarr:0.13.3";
     ports = [
       "7575:7575"
     ];
