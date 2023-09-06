@@ -38,30 +38,27 @@
     enable = true;
     extraConfig = ''
       Host sakura
-        HostName 192.168.1.25
+        HostName 100.121.201.47
         User notoh
         IdentityFile ~/.ssh/sakura
       Host kariru
-        HostName 192.168.1.54
+        HostName 100.126.229.95
         User notoh
         IdentityFile ~/.ssh/kariru
       Host yuki
-        HostName 192.168.1.36
+        HostName 100.110.140.130
         User notoh
         IdentityFile ~/.ssh/yuki
       Host arashi
-        HostName 192.168.1.211
+        HostName 100.94.214.100
         User notoh
         IdentityFile ~/.ssh/arashi
       Host sora
         HostName 100.87.54.48
         User notoh
         IdentityFile ~/.ssh/sora
-      Host pihole
-        Hostname 192.168.1.221
-        User root
       Host pve
-        Hostname 192.168.1.37
+        Hostname 100.115.234.69
         User root
     '';
   };
