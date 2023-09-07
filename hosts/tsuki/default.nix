@@ -84,8 +84,6 @@
   };
 
   environment.systemPackages = with pkgs; [
-    alejandra
-    nil
     wget
     dconf
     polkit_gnome
