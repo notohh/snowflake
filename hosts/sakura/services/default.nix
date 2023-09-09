@@ -10,5 +10,6 @@
     ./hedgedoc.nix
     ./dashdot.nix
     ./grafana.nix
+    ./vaultwarden.nix
   ];
 }
