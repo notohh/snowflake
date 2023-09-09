@@ -48,6 +48,10 @@
         name = "atticd";
         ensurePermissions."DATABASE atticd" = "ALL PRIVILEGES";
       }
+      {
+        name = "vaultwarden";
+        ensurePermissions."DATABASE vaultwarden" = "ALL PRIVILEGES";
+      }
     ];
     ensureDatabases = [
       "forgejo"
@@ -56,6 +60,7 @@
       "grafana"
       "authelia"
       "atticd"
+      "vaultwarden"
     ];
   };
 }
