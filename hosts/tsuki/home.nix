@@ -44,7 +44,6 @@
       wine
       lutris
       gamemode
-      gamescope
       mangohud
       bottles
       osu-lazer-bin
