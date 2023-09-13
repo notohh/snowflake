@@ -4,7 +4,7 @@
     package = pkgs.vaultwarden-postgresql;
     dbBackend = "postgresql";
     config = {
-      SIGNUPS_ALLOWED = true;
+      SIGNUPS_ALLOWED = false;
       DATABASE_URL = "postgresql://vaultwarden:vaultwarden@192.168.1.211:5432/vaultwarden";
       LOG_LEVEL = "Info";
       ROCKET_ADDRESS = "0.0.0.0";
