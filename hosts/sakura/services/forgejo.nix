@@ -3,13 +3,12 @@
   lib,
   ...
 }: {
-  services.gitea = {
+  services.forgejo = {
     enable = true;
-    package = pkgs.forgejo;
-    appName = "forgejo";
     stateDir = "/var/lib/forgejo";
     settings = {
       service.DISABLE_REGISTRATION = true;
+      DEFAULT.APP_NAME = "forgejo";
       ui = {
         DEFAULT_THEME = "forgejo-dark";
       };
