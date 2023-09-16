@@ -17,7 +17,6 @@
       ExecStart = "${pkgs.rustypaste}/bin/rustypaste";
       Restart = "always";
       RestartSec = 30;
-      StandardOutput = "syslog";
       WorkingDirectory = "/var/lib/rustypaste";
     };
   };
