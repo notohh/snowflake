@@ -36,7 +36,7 @@
       mpv
       rustypaste-cli
       playerctl
-      logseq
+      obsidian
       drawio
       gimp
       cryptomator
