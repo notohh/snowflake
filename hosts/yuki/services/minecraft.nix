@@ -1,4 +1,4 @@
-{...}: {
+_: {
   networking.firewall.allowedTCPPorts = [25565];
   virtualisation.oci-containers.containers.minecraft = {
     image = "als3bas/zulu-purpurmc:latest";
