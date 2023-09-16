@@ -29,6 +29,10 @@
     };
   };
 
+  environment.etc."mdadm.conf".text = ''
+    MAILADDR root
+  '';
+
   boot.kernelPackages = pkgs.linuxPackages_latest;
 
   systemd.services.systemd-udevd.restartIfChanged = false;
