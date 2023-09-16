@@ -14,7 +14,7 @@
   home.packages = with pkgs; [
     wget
     croc
-    exa
+    eza
     eva
     du-dust
     bottom
@@ -60,6 +60,10 @@
       Host pve
         Hostname 100.115.234.69
         User root
+      Host basegbot
+        HostName 100.94.41.43
+        User notoh
+        IdentityFile ~/.ssh/basegot
     '';
   };
 
