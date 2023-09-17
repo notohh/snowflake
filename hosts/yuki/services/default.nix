@@ -6,5 +6,6 @@
     ./searxng.nix
     ./homarr.nix
     ./dashdot.nix
+    ./jellyfin.nix
   ];
 }

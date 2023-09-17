@@ -4,7 +4,6 @@
     ./authelia.nix
     ./hugo.nix
     ./forgejo.nix
-    ./jellyfin.nix
     ./rustypaste.nix
     ./woodpecker.nix
     ./hedgedoc.nix

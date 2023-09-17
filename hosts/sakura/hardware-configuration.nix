@@ -17,11 +17,6 @@
     fsType = "ext4";
   };
 
-  fileSystems."/media" = {
-    device = "192.168.1.71:/volume1/media";
-    fsType = "nfs";
-  };
-
   swapDevices = [
     {device = "/dev/disk/by-uuid/c5afba13-f1af-4e7f-994b-f565c52d92fc";}
   ];

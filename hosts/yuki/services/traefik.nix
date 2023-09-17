@@ -30,12 +30,24 @@ _: {
             entrypoints = ["web"];
             service = "dashdot";
           };
+          jellyfin = {
+            rule = "Host(`jellyfin.home.arpa`)";
+            entrypoints = ["web"];
+            service = "jellyfin";
+          };
+          jellyseerr = {
+            rule = "Host(`jellyseerr.home.arpa`)";
+            entrypoints = ["web"];
+            service = "jellyseerr";
+          };
         };
         services = {
           stash.loadBalancer.servers = [{url = "http://localhost:9999";}];
           homarr.loadBalancer.servers = [{url = "http://localhost:7575";}];
           dashdot.loadBalancer.servers = [{url = "http://localhost:4000";}];
           searxng.loadBalancer.servers = [{url = "http://localhost:8100";}];
+          jellyfin.loadBalancer.servers = [{url = "http://localhost:8096";}];
+          jellyseerr.loadBalancer.servers = [{url = "http://localhost:5055";}];
         };
       };
     };
