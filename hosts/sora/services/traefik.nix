@@ -32,9 +32,17 @@
             tls.domains = [{main = "*.notohh.dev";}];
             tls.certresolver = "production";
           };
+          neko = {
+            rule = "Host(`neko.notohh.dev`)";
+            entrypoints = ["websecure"];
+            service = "neko";
+            tls.domains = [{main = "neko.notohh.dev";}];
+            tls.certresolver = "production";
+          };
         };
         services = {
           uptime-kuma.loadBalancer.servers = [{url = "http://100.87.54.48:4000";}];
+          neko.loadBalancer.servers = [{url = "http://100.110.140.130:8080";}];
         };
       };
     };
