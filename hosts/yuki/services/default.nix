@@ -7,5 +7,6 @@
     ./homarr.nix
     ./dashdot.nix
     ./jellyfin.nix
+    ./neko.nix
   ];
 }
