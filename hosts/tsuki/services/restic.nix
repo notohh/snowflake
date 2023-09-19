@@ -17,6 +17,7 @@
           "/home/*/Downloads"
           "/home/*/Games"
           "/home/*/Videos"
+          "/home/*/osu!"
           "/home/*/.cache"
           "/home/*/.wine"
           "/home/*/.rustup"
