@@ -11,8 +11,8 @@ stdenv.mkDerivation rec {
   src = pkgs.fetchFromGitHub {
     owner = "SevenTV";
     repo = pname;
-    rev = "97bc0d8efdfcb5fa02719d6e126d4fbfa86cbc35";
-    sha256 = "sha256-/uv1shCCimkzshtch/tXoJQ9TkUIvTCn8nmFqpj0qz0=";
+    rev = "907aa7447b7bbfbc37fc6ffd4c92328b0ada48ed";
+    sha256 = "sha256-ZkWSo1ZLTPwFPxmd5RviWExkbkrlHFBPPRUMr4JJYCc=";
     fetchSubmodules = true;
   };
   nativeBuildInputs = with pkgs; [cmake pkg-config libsForQt5.qt5.wrapQtAppsHook];
