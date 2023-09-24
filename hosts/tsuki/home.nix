@@ -26,7 +26,6 @@
       discord
       signal-desktop
       jellyfin-media-player
-      jetbrains.rust-rover
       obs-studio
       pavucontrol
       vscode-fhs
