@@ -25,6 +25,7 @@
     yt-dlp
     cachix
     nfs-utils
+    fd
   ];
 
   services.gpg-agent = {
@@ -61,9 +62,9 @@
         Hostname 100.115.234.69
         User root
       Host basegbot
-        HostName 100.94.41.43
-        User notoh
-        IdentityFile ~/.ssh/basegot
+        HostName 100.83.81.116
+        User basegbot
+        IdentityFile ~/.ssh/basegbot
     '';
   };
 
