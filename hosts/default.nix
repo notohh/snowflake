@@ -5,6 +5,7 @@ inputs: let
   hyprlandModule = inputs.hyprland.homeManagerModules.default;
   ironbarModule = inputs.ironbar.homeManagerModules.default;
   atticdModule = inputs.attic.nixosModules.atticd;
+  nix-index-Module = inputs.nix-index-database.hmModules.nix-index;
   inherit (inputs.nixpkgs.lib) nixosSystem;
 in {
   tsuki = nixosSystem {
@@ -24,6 +25,7 @@ in {
               ./tsuki/home.nix
               hyprlandModule
               ironbarModule
+              nix-index-Module
             ];
           };
         };
