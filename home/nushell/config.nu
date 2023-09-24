@@ -14,6 +14,7 @@ alias cat = bat
 alias rm = rm -i
 alias cp = cp -i
 alias mv = mv -i
+alias tsuki = nh os switch . -a --nom
 alias sakura = nix run github:serokell/deploy-rs ".#sakura"
 alias kariru = nix run github:serokell/deploy-rs ".#kariru"
 alias yuki = nix run github:serokell/deploy-rs ".#yuki"
