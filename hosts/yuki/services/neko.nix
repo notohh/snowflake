@@ -15,6 +15,8 @@ _: {
       NEKO_BIND = "0.0.0.0:8080";
       NEKO_CONTROL_PROTECTION = "true";
       NEKO_VIDEO_CODEC = "h264";
+      NEKO_ICELITE = "true";
+      NEKO_ICESERVER = "stun:stun.l.google.com:19302";
     };
   };
 }
