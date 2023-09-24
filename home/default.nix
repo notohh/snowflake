@@ -16,6 +16,8 @@
     croc
     eza
     eva
+    comma
+    fd
     du-dust
     bottom
     gnupg
@@ -25,7 +27,6 @@
     yt-dlp
     cachix
     nfs-utils
-    fd
   ];
 
   services.gpg-agent = {
