@@ -92,5 +92,6 @@
     pinentry-gtk2
     jdk17
     attic-client
+    comma
   ];
 }
