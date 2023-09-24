@@ -33,6 +33,10 @@
       url = "github:Mic92/nix-index-database";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    nh = {
+      url = "github:viperML/nh";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
   outputs = {nixpkgs, ...} @ inputs: let
     system = "x86_64-linux";
