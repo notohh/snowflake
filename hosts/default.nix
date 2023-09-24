@@ -15,6 +15,7 @@ in {
       ./tsuki
       sopsModule
       hmModule
+      atticdModule
       {
         home-manager = {
           useGlobalPkgs = true;
