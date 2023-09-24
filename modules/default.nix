@@ -1,5 +1,6 @@
-{...}: {
+{inputs, ...}: {
   imports = [
+    inputs.nh.nixosModules.default
     ./security.nix
     ./networking.nix
     ./users.nix

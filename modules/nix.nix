@@ -1,8 +1,13 @@
-{pkgs, ...}: {
+_: {
   nixpkgs = {
     config = {
       allowUnfree = true;
     };
+  };
+
+  nh = {
+    enable = true;
+    clean.enable = true;
   };
 
   nix = {
