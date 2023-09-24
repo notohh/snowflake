@@ -16,7 +16,6 @@
     croc
     eza
     eva
-    comma
     fd
     du-dust
     bottom
