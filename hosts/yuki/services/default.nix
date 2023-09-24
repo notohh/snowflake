@@ -8,5 +8,6 @@
     ./dashdot.nix
     ./jellyfin.nix
     ./neko.nix
+    ./conduit.nix
   ];
 }
