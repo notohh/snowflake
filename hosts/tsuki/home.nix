@@ -26,6 +26,7 @@
       discord
       signal-desktop
       jellyfin-media-player
+      thunderbird
       obs-studio
       pavucontrol
       vscode-fhs
