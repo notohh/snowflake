@@ -31,6 +31,8 @@
     hostName = "tsuki";
   };
 
+  programs.sniffnet.enable = true;
+
   services = {
     xserver = {
       enable = true;
