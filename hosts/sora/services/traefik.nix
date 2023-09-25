@@ -46,11 +46,19 @@
             tls.domains = [{main = "neko.notohh.dev";}];
             tls.certresolver = "production";
           };
+          conduit = {
+            rule = "Host(`matrix.notohh.dev`)";
+            entrypoints = ["websecure"];
+            service = "conduit";
+            tls.domains = [{main = "matrix.notohh.dev";}];
+            tls.certresolver = "production";
+          };
         };
         services = {
           uptime-kuma.loadBalancer.servers = [{url = "http://100.87.54.48:4000";}];
           gotify.loadBalancer.servers = [{url = "http://100.87.54.48:3000";}];
           neko.loadBalancer.servers = [{url = "http://100.110.140.130:8080";}];
+          conduit.loadBalancer.servers = [{url = "http://100.110.140.130:6167";}];
         };
       };
     };
