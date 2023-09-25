@@ -1,7 +1,6 @@
 {pkgs, ...}: {
   imports = [
     ../../home
-    ../../home/librewolf
     ../../home/wezterm
     ../../home/zathura
     ../../home/gtk
