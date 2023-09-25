@@ -9,7 +9,7 @@
       nerdfonts
       noto-fonts
       noto-fonts-cjk
-      twemoji-color-font
+      twitter-color-emoji
       font-awesome
       kochi-substitute
       ipafont
