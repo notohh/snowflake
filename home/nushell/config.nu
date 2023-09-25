@@ -15,6 +15,7 @@ alias rm = rm -i
 alias cp = cp -i
 alias mv = mv -i
 alias rebuild = nh os switch . --nom
+alias clean = sudo nh clean all
 alias sakura = nix run github:serokell/deploy-rs ".#sakura"
 alias kariru = nix run github:serokell/deploy-rs ".#kariru"
 alias yuki = nix run github:serokell/deploy-rs ".#yuki"
