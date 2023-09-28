@@ -58,7 +58,7 @@
           uptime-kuma.loadBalancer.servers = [{url = "http://100.87.54.48:4000";}];
           gotify.loadBalancer.servers = [{url = "http://100.87.54.48:3000";}];
           neko.loadBalancer.servers = [{url = "http://100.110.140.130:8080";}];
-          conduit.loadBalancer.servers = [{url = "http://100.110.140.130:6167";}];
+          conduit.loadBalancer.servers = [{url = "http://100.121.201.47:6167";}];
         };
       };
     };
