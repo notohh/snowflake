@@ -10,5 +10,7 @@
     ./dashdot.nix
     ./grafana.nix
     ./vaultwarden.nix
+    ./atticd.nix
+    ./conduit.nix
   ];
 }
