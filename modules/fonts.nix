@@ -24,8 +24,10 @@
         sansSerif = ["Noto Sans" "Twitter Color Emoji"];
         emoji = ["Twitter Color Emoji"];
       };
-
-      hinting.style = "full";
+      hinting = {
+        enable = true;
+        style = "full";
+      };
     };
   };
 }
