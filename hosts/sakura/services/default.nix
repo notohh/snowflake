@@ -12,5 +12,6 @@
     ./vaultwarden.nix
     ./atticd.nix
     ./conduit.nix
+    ./cloudflareddns.nix
   ];
 }
