@@ -25,6 +25,7 @@
       discord
       signal-desktop
       jellyfin-media-player
+      cinny-desktop
       thunderbird
       obs-studio
       pavucontrol
