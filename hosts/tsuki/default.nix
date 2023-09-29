@@ -1,6 +1,7 @@
 {
   config,
   pkgs,
+  inputs,
   ...
 }: {
   imports = [
@@ -95,5 +96,6 @@
     jdk17
     attic-client
     comma
+    inputs.matugen.packages.x86_64-linux.default
   ];
 }
