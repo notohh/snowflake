@@ -8,10 +8,6 @@ _: {
 
     input {
       kb_layout = us
-      kb_variant =
-      kb_model =
-      kb_options =
-      kb_rules =
 
       follow_mouse = 1
 
@@ -20,8 +16,8 @@ _: {
     }
 
     general {
-      gaps_in = 6
-      gaps_out = 15
+      gaps_in = 10
+      gaps_out = 20
       border_size = 4
       col.active_border = rgb(f5c2e7)
       col.inactive_border = rgb(6c7086)
@@ -30,16 +26,13 @@ _: {
     }
 
     decoration {
-      rounding = 8
+      rounding = 12
       blur {
         enabled = true
-        size = 5
+        size = 6
         passes = 3
         new_optimizations = true
       }
-
-      multisample_edges = true
-
       inactive_opacity = 1.0
       active_opacity = 1.0
       fullscreen_opacity = 1.0
@@ -54,19 +47,18 @@ _: {
     animations {
       enabled = yes
 
-      bezier = myBezier, 0.05, 0.9, 0.1, 1.05
+      bezier = fastBezier, 0.05, 1.1, 0.2, 1.0
 
-      animation = windows, 1, 7, myBezier
-      animation = windowsOut, 1, 7, default, popin 80%
-      animation = border, 1, 10, default
-      animation = fade, 1, 7, default
-      animation = workspaces, 1, 6, default
+      animation = windows, 1, 7, fastBezier, slide
+      animation = windowsOut, 1, 7, fastBezier, slide
+      animation = border, 1, 10, fastBezier
+      animation = fade, 1, 7, fastBezier
+      animation = workspaces, 1, 6, fastBezier
     }
 
     dwindle {
       pseudotile = yes
       preserve_split = yes
-
     }
 
     master {
