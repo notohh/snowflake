@@ -5,4 +5,4 @@ this directory hosts derivations of packages not found in nixpkgs, and overrides
 name            | description
 --------------- | -----------
 `chatterino7`   | [7tv fork](https://github.com/SevenTV/chatterino7) of chatterino2, a chat client for twitch.tv
-`rustypaste-cli`| cli tool for [rustypaste](https://github.com/orhun/rustypaste)
+`jellyfin-rpc`| discord rpc program for jellyfin [jellyfin-rpc](https://github.com/Radiicall/jellyfin-rpc)

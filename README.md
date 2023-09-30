@@ -35,6 +35,15 @@
 + :package: [pkgs](pkgs)
 + :lock: [secrets](secrets)
 
+## :spiral_notepad: Features
+
++ multi-config repo, with configs for servers, laptop, and desktop
++ multi-system home-manager setup
++ secrets provisioning with [sops-nix](https://github.com/Mic92/sops-nix)
++ multiple fully declarative self hosted services (and some containerized ones, with a docker backend)
++ wayland configs for hyprland and river
++ custom packages not found in nixpkgs
+
 ## :busts_in_silhouette: Credit
 #### people who've inspired me to dive into nix, and i've stolen stuff from (you guys are awesome!)
 + [fufexan](https://github.com/fufexan) - a ton of home manager, hyprland stuff, and some gh workflows
