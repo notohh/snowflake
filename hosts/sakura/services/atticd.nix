@@ -1,9 +1,11 @@
 {config, ...}: {
   sops.secrets.attic-secret = {};
+  sops.secrets.s3-keyid = {};
+  sops.secrets.s3-secret-key = {};
 
   services.atticd = {
     enable = true;
-    credentialsFile = "/etc/attic/atticd.env";
+    credentialsFile = config.sops.secrets.attic-secret.path;
     settings = {
       listen = "[::]:8100";
       allowed-hosts = ["cache.notohh.dev"];
@@ -18,6 +20,12 @@
         avg-size = 64 * 1024; # 64 KiB
 
         max-size = 256 * 1024; # 256 KiB
+      };
+      storage = {
+        type = "s3";
+        region = "us-east-005";
+        bucket = "notoh-binary-cache";
+        endpoint = "https://s3.us-east-005.backblazeb2.com";
       };
       garbage-collection = {
         interval = "12 hours";
