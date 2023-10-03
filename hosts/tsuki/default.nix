@@ -94,7 +94,6 @@
     qemu_kvm
     pinentry-gtk2
     jdk17
-    attic-client
     comma
     inputs.matugen.packages.x86_64-linux.default
   ];

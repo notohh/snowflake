@@ -19,7 +19,7 @@
       server = {
         HTTP_PORT = 3200;
         DOMAIN = "git.notohh.dev";
-        ROOT_URL = "https://git.notohh.dev";
+        ROOT_URL = "https://git.flake.sh";
         LANDING_PAGE = "/explore/repos";
       };
       database = {

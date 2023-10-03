@@ -46,59 +46,52 @@
             middlewares = "authelia";
           };
           foundryvtt = {
-            rule = "Host(`foundry.notohh.dev`)";
+            rule = "Host(`foundry.flake.sh`)";
             entrypoints = ["websecure"];
             service = "foundryvtt";
-            tls.domains = [{main = "*.notohh.dev";}];
+            tls.domains = [{main = "*.flake.sh";}];
             tls.certresolver = "production";
           };
-          gitea = {
-            rule = "Host(`git.notohh.dev`)";
+          forgejo = {
+            rule = "Host(`git.flake.sh`)";
             entrypoints = ["websecure"];
-            service = "gitea";
-            tls.domains = [{main = "*.notohh.dev";}];
+            service = "forgejo";
+            tls.domains = [{main = "*.flake.sh";}];
             tls.certresolver = "production";
           };
           rustypaste = {
-            rule = "Host(`img.notohh.dev`)";
+            rule = "Host(`i.flake.sh`)";
             entrypoints = ["websecure"];
             service = "rustypaste";
-            tls.domains = [{main = "*.notohh.dev";}];
+            tls.domains = [{main = "*.flake.sh";}];
             tls.certresolver = "production";
           };
           grafana = {
-            rule = "Host(`metrics.notohh.dev`)";
+            rule = "Host(`metrics.flake.sh`)";
             entrypoints = ["websecure"];
             service = "grafana";
-            tls.domains = [{main = "*.notohh.dev";}];
+            tls.domains = [{main = "*.flake.sh";}];
             tls.certresolver = "production";
           };
           woodpecker-server = {
-            rule = "Host(`ci.notohh.dev`)";
+            rule = "Host(`ci.flake.sh`)";
             entrypoints = ["websecure"];
             service = "woodpecker-server";
-            tls.domains = [{main = "*.notohh.dev";}];
-            tls.certresolver = "production";
-          };
-          atticd = {
-            rule = "Host(`cache.notohh.dev`)";
-            entrypoints = ["websecure"];
-            service = "atticd";
-            tls.domains = [{main = "*.notohh.dev";}];
+            tls.domains = [{main = "*.flake.sh";}];
             tls.certresolver = "production";
           };
           hedgedoc = {
-            rule = "Host(`scratch.notohh.dev`)";
+            rule = "Host(`scratch.flake.sh`)";
             entrypoints = ["websecure"];
             service = "hedgedoc";
-            tls.domains = [{main = "*.notohh.dev";}];
+            tls.domains = [{main = "*.flake.sh";}];
             tls.certresolver = "production";
           };
           vaultwarden = {
-            rule = "Host(`vault.notohh.dev`)";
+            rule = "Host(`vault.flake.sh`)";
             entrypoints = ["websecure"];
             service = "vaultwarden";
-            tls.domains = [{main = "*.notohh.dev";}];
+            tls.domains = [{main = "*.flake.sh";}];
             tls.certresolver = "production";
           };
         };
@@ -107,11 +100,10 @@
           dashdot.loadBalancer.servers = [{url = "http://localhost:4000";}];
           hugo.loadBalancer.servers = [{url = "http://localhost:1313";}];
           foundryvtt.loadBalancer.servers = [{url = "http://localhost:30000";}];
-          gitea.loadBalancer.servers = [{url = "http://localhost:3200";}];
+          forgejo.loadBalancer.servers = [{url = "http://localhost:3200";}];
           rustypaste.loadBalancer.servers = [{url = "http://localhost:8000";}];
           grafana.loadBalancer.servers = [{url = "http://localhost:3100";}];
           woodpecker-server.loadBalancer.servers = [{url = "http://localhost:8200";}];
-          atticd.loadBalancer.servers = [{url = "http://localhost:8100";}];
           hedgedoc.loadBalancer.servers = [{url = "http://localhost:3300";}];
           vaultwarden.loadBalancer.servers = [{url = "http://localhost:8222";}];
         };

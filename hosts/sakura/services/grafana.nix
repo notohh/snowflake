@@ -3,8 +3,8 @@ _: {
     enable = true;
     settings = {
       server = {
-        root_url = "https://metrics.notohh.dev";
-        domain = "metrics.notohh.dev";
+        root_url = "https://metrics.flake.sh";
+        domain = "metrics.flake.sh";
         enforce_domain = true;
         http_addr = "0.0.0.0";
         http_port = 3100;

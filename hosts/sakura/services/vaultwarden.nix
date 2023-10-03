@@ -4,7 +4,7 @@
     package = pkgs.vaultwarden-postgresql;
     dbBackend = "postgresql";
     config = {
-      DOMAIN = "https://vault.notohh.dev/";
+      DOMAIN = "https://vault.flake.sh/";
       SIGNUPS_ALLOWED = false;
       DATABASE_URL = "postgresql://vaultwarden:vaultwarden@192.168.1.211:5432/vaultwarden";
       LOG_LEVEL = "Info";

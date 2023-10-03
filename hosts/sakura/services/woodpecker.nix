@@ -6,10 +6,10 @@
     environment = {
       WOODPECKER_SERVER_ADDR = ":8200";
       WOODPECKER_GRPC_ADDR = ":8300";
-      WOODPECKER_HOST = "https://ci.notohh.dev";
+      WOODPECKER_HOST = "https://ci.flake.sh";
       WOODPECKER_OPEN = "false";
       WOODPECKER_GITEA = "true";
-      WOODPECKER_GITEA_URL = "https://git.notohh.dev";
+      WOODPECKER_GITEA_URL = "https://git.flake.sh";
       WOODPECKER_ADMIN = "notohh";
       WOODPECKER_AGENT_SECRET = config.sops.secrets.woodpecker-agent-secret.path;
       WOODPECKER_LOG_LEVEL = "debug";

@@ -5,7 +5,7 @@
     settings = {
       global = {
         address = "0.0.0.0";
-        server_name = "matrix.notohh.dev";
+        server_name = "matrix.flake.sh";
         allow_registration = true;
         allow_federation = false;
         allow_encryption = true;

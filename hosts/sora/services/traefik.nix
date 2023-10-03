@@ -26,38 +26,30 @@
             service = "api@internal";
           };
           uptime-kuma = {
-            rule = "Host(`status.notohh.dev`)";
+            rule = "Host(`status.flake.sh`)";
             entrypoints = ["websecure"];
             service = "uptime-kuma";
-            tls.domains = [{main = "*.notohh.dev";}];
+            tls.domains = [{main = "*.flake.sh";}];
             tls.certresolver = "production";
           };
           gotify = {
-            rule = "Host(`gotify.notohh.dev`)";
+            rule = "Host(`gotify.flake.sh`)";
             entrypoints = ["websecure"];
             service = "gotify";
-            tls.domains = [{main = "*.notohh.dev";}];
-            tls.certresolver = "production";
-          };
-          neko = {
-            rule = "Host(`neko.notohh.dev`)";
-            entrypoints = ["websecure"];
-            service = "neko";
-            tls.domains = [{main = "neko.notohh.dev";}];
+            tls.domains = [{main = "*.flake.sh";}];
             tls.certresolver = "production";
           };
           conduit = {
-            rule = "Host(`matrix.notohh.dev`)";
+            rule = "Host(`matrix.flake.sh`)";
             entrypoints = ["websecure"];
             service = "conduit";
-            tls.domains = [{main = "matrix.notohh.dev";}];
+            tls.domains = [{main = "*.flake.sh";}];
             tls.certresolver = "production";
           };
         };
         services = {
           uptime-kuma.loadBalancer.servers = [{url = "http://100.87.54.48:4000";}];
           gotify.loadBalancer.servers = [{url = "http://100.87.54.48:3000";}];
-          neko.loadBalancer.servers = [{url = "http://100.110.140.130:8080";}];
           conduit.loadBalancer.servers = [{url = "http://100.121.201.47:6167";}];
         };
       };

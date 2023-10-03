@@ -3,8 +3,8 @@ _: {
     enable = true;
     settings = {
       port = 3300;
-      domain = "scratch.notohh.dev";
-      allowOrigin = ["scratch.notohh.dev"];
+      domain = "scratch.flake.sh";
+      allowOrigin = ["scratch.flake.sh"];
       allowAnonymous = true;
       allowFreeURL = true;
       allowEmailRegister = false;

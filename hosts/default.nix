@@ -4,7 +4,6 @@ inputs: let
   hmModule = inputs.home-manager.nixosModules.home-manager;
   hyprlandModule = inputs.hyprland.homeManagerModules.default;
   ironbarModule = inputs.ironbar.homeManagerModules.default;
-  atticdModule = inputs.attic.nixosModules.atticd;
   nix-index-Module = inputs.nix-index-database.hmModules.nix-index;
   inherit (inputs.nixpkgs.lib) nixosSystem;
 in {
@@ -15,7 +14,6 @@ in {
       ./tsuki
       sopsModule
       hmModule
-      atticdModule
       {
         home-manager = {
           useGlobalPkgs = true;
@@ -40,7 +38,6 @@ in {
       ./sakura
       sopsModule
       hmModule
-      atticdModule
       {
         home-manager = {
           useGlobalPkgs = true;
