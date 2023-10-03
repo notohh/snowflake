@@ -8,6 +8,5 @@
     ./dashdot.nix
     ./jellyfin.nix
     ./neko.nix
-    ./vikunja.nix
   ];
 }

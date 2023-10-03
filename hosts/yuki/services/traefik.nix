@@ -40,11 +40,6 @@ _: {
             entrypoints = ["web"];
             service = "jellyseerr";
           };
-          vikunja-frontend = {
-            rule = "Host(`vikunja.home.arpa`)";
-            entrypoints = ["web"];
-            service = "vikunja-frontend";
-          };
         };
         services = {
           stash.loadBalancer.servers = [{url = "http://localhost:9999";}];
@@ -53,7 +48,6 @@ _: {
           searxng.loadBalancer.servers = [{url = "http://localhost:8100";}];
           jellyfin.loadBalancer.servers = [{url = "http://localhost:8096";}];
           jellyseerr.loadBalancer.servers = [{url = "http://localhost:5055";}];
-          vikunja-frontend.loadBalancer.servers = [{url = "http://localhost:6789";}];
         };
       };
     };
