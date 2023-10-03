@@ -25,10 +25,6 @@
       url = "github:JakeStanger/ironbar";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    attic = {
-      url = "github:zhaofengli/attic";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
     nix-index-database = {
       url = "github:Mic92/nix-index-database";
       inputs.nixpkgs.follows = "nixpkgs";
