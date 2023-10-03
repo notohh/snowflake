@@ -26,7 +26,7 @@
             service = "api@internal";
           };
           dashdot = {
-            rule = "Host(`dashdot.sakura.home.arpa`)";
+            rule = "Host(`dashdot.sakura.internal.flake.sh`)";
             entrypoints = ["web"];
             service = "dashdot";
           };

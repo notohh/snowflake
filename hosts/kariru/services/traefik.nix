@@ -11,31 +11,25 @@ _: {
             service = "api@internal";
           };
           sonarr = {
-            rule = "Host(`sonarr.home.arpa`)";
+            rule = "Host(`sonarr.internal.flake.sh`)";
             entryPoints = ["web"];
             service = "sonarr";
           };
           radarr = {
-            rule = "Host(`radarr.home.arpa`)";
+            rule = "Host(`radarr.internal.flake.sh`)";
             entryPoints = ["web"];
             service = "radarr";
           };
           prowlarr = {
-            rule = "Host(`prowlarr.home.arpa`)";
+            rule = "Host(`prowlarr.internal.flake.sh`)";
             entrypoints = ["web"];
             service = "prowlarr";
-          };
-          qbittorrent = {
-            rule = "Host(`torrent.home.arpa`)";
-            entrypoints = ["web"];
-            service = "qbittorrent";
           };
         };
         services = {
           sonarr.loadBalancer.servers = [{url = "http://localhost:8989";}];
           radarr.loadBalancer.servers = [{url = "http://localhost:7878";}];
           prowlarr.loadBalancer.servers = [{url = "http://localhost:9696";}];
-          qbittorrent.loadBalancer.servers = [{url = "http://localhost:8080";}];
         };
       };
     };

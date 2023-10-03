@@ -11,32 +11,32 @@ _: {
             service = "api@internal";
           };
           homarr = {
-            rule = "Host(`dashboard.home.arpa`)";
+            rule = "Host(`dashboard.internal.flake.sh`)";
             entrypoints = ["web"];
             service = "homarr";
           };
           searxng = {
-            rule = "Host(`searxng.home.arpa`)";
+            rule = "Host(`searxng.internal.flake.sh`)";
             entryPoints = ["web"];
             service = "searxng";
           };
           stash = {
-            rule = "Host(`stash.home.arpa`)";
+            rule = "Host(`stash.internal.flake.sh`)";
             entrypoints = ["web"];
             service = "stash";
           };
           dashdot = {
-            rule = "Host(`dashdot.yuki.home.arpa`)";
+            rule = "Host(`dashdot.yuki.internal.flake.sh`)";
             entrypoints = ["web"];
             service = "dashdot";
           };
           jellyfin = {
-            rule = "Host(`jellyfin.home.arpa`)";
+            rule = "Host(`jellyfin.internal.flake.sh`)";
             entrypoints = ["web"];
             service = "jellyfin";
           };
           jellyseerr = {
-            rule = "Host(`jellyseerr.home.arpa`)";
+            rule = "Host(`jellyseerr.internal.flake.sh`)";
             entrypoints = ["web"];
             service = "jellyseerr";
           };
