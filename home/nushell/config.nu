@@ -26,7 +26,7 @@ alias sx = nix run "nixpkgs#statix" -- check
 alias sxfix = nix run "nixpkgs#statix" -- fix
 alias dl = yt-dlp -P ~/Videos/downloaded
 alias dlcd = yt-dlp
-alias up = rpaste -s "https://img.notohh.dev/" -e 1day
+alias up = rpaste -s "https://i.flake.sh/" -e 1day
 
 $env.config = {
 
