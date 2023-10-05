@@ -1,4 +1,5 @@
 {
+  pkgs,
   lib,
   config,
   ...
@@ -46,6 +47,15 @@
       "debian-latest:docker://node:18-bullseye"
       "ubuntu-latest:docker://node:18-bullseye"
       #"native:host"
+    ];
+    hostPackages = with pkgs; [
+      sudo
+      bash
+      curl
+      coreutils
+      wget
+      gitMinimal
+      wget
     ];
   };
 }
