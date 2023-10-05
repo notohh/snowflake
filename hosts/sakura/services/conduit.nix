@@ -1,4 +1,4 @@
-{lib, ...}: {
+_: {
   networking.firewall.allowedTCPPorts = [6167 8448];
   services.matrix-conduit = {
     enable = true;
