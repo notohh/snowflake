@@ -3,6 +3,7 @@
   config,
   ...
 }: {
+  sops.secrets.forgejo-runner-token = {owner = "forgejo";};
   services.forgejo = {
     enable = true;
     stateDir = "/var/lib/forgejo";
@@ -40,7 +41,7 @@
     enable = true;
     name = config.networking.hostName;
     url = "https://git.flake.sh";
-    token = "WJXKbVSyfUVpeJYiFpRlf04CyxDS0mYG7at8B9kX";
+    token = config.sops.secrets.forgejo-runner-token.path;
     labels = [
       "debian-latest:docker://node:18-bullseye"
       "ubuntu-latest:docker://node:18-bullseye"
