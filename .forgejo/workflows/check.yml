@@ -4,7 +4,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - uses: https://github.com/DeterminateSystems/nix-installer-action@main
+      - name: install nix action
+        uses: https://github.com/DeterminateSystems/nix-installer-action@main
         with:
-          - github-token: ${{ secrets.GH_TOKEN }}
+          github-token: ${{ secrets.GH_TOKEN }}
       - run: nix flake check
