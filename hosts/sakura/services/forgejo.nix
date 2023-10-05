@@ -49,7 +49,6 @@
       #"native:host"
     ];
     hostPackages = with pkgs; [
-      sudo
       bash
       curl
       coreutils
