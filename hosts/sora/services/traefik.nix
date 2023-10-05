@@ -46,11 +46,19 @@
             tls.domains = [{main = "*.flake.sh";}];
             tls.certresolver = "production";
           };
+          authelia = {
+            rule = "Host(`passport.notohh.dev`)";
+            entrypoints = ["websecure"];
+            service = "authelia";
+            tls.domains = [{main = "*.notohh.dev";}];
+            tls.certresolver = "production";
+          };
         };
         services = {
           uptime-kuma.loadBalancer.servers = [{url = "http://100.87.54.48:4000";}];
           gotify.loadBalancer.servers = [{url = "http://100.87.54.48:3000";}];
           conduit.loadBalancer.servers = [{url = "http://100.121.201.47:6167";}];
+          authelia.loadBalancer.servers = [{url = "http://100.121.201.47:9091";}];
         };
       };
     };
