@@ -1,0 +1,21 @@
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 4 1 * *"
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: install nix action
+        uses: https://github.com/DeterminateSystems/nix-installer-action@main
+        with:
+          github-token: ${{ secrets.GH_TOKEN }}
+      - name: update flake.lock
+        uses: DeterminateSystems/update-flake-lock@v20
+        with:
+          pr-title: "flake.lock: Update"
+          pr-labels: |
+            nix
+            dependencies
+            automated
