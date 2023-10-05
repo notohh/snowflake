@@ -9,10 +9,10 @@ jobs:
         with:
           github-token: ${{ secrets.GH_TOKEN }}
       - name: update flake.lock
-        uses: https://github.com/DeterminateSystems/update-flake-lock@v20
+        run: nix flake update
+      - name: create PR
+        uses: https://github.com/peter-evans/create-pull-request@v5
         with:
-          pr-title: "flake.lock: Update"
-          pr-labels: |
-            nix
-            dependencies
-            automated
+          token: ${{ secrets.TOKEN_FOR_UPDATES }}
+          committer: forgejo <dev@notohh.dev>
+          author: notohh <github@notohh.dev>
