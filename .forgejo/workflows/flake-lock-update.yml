@@ -14,8 +14,6 @@ jobs:
         uses: https://github.com/peter-evans/create-pull-request@v5
         with:
           token: ${{ secrets.UPDATE_TOKEN }}
-          committer: forgejo <dev@notohh.dev>
-          author: notohh <github@notohh.dev>
+          committer: notohh <github@notohh.dev>
+          author: forgejo <dev@notohh.dev
           branch: flake-lock-update
-          branch-suffix: short-commit-hash
-          
