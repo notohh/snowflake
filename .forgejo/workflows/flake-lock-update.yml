@@ -9,7 +9,7 @@ jobs:
         with:
           github-token: ${{ secrets.GH_TOKEN }}
       - name: update flake.lock
-        uses: DeterminateSystems/update-flake-lock@v20
+        uses: https://github.com/DeterminateSystems/update-flake-lock@v20
         with:
           pr-title: "flake.lock: Update"
           pr-labels: |
