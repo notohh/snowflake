@@ -7,5 +7,5 @@ jobs:
       - uses: https://github.com/DeterminateSystems/nix-installer-action@main
         with:
           - extra-conf: |
-              access-tokens = github.com=${{ secrets.GH_TOKEN }}
+              github-token = ${{ secrets.GH_TOKEN }}
       - run: nix flake check
