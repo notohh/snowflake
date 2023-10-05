@@ -20,7 +20,6 @@ _: {
       warn-dirty = false;
       auto-optimise-store = true;
       builders-use-substitutes = true;
-      keep-derivations = true;
       keep-outputs = true;
       allowed-users = ["@wheel"];
       trusted-users = ["root" "@wheel"];
