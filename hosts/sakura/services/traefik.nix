@@ -58,13 +58,6 @@
             tls.domains = [{main = "*.flake.sh";}];
             tls.certresolver = "production";
           };
-          woodpecker-server = {
-            rule = "Host(`ci.flake.sh`)";
-            entrypoints = ["websecure"];
-            service = "woodpecker-server";
-            tls.domains = [{main = "*.flake.sh";}];
-            tls.certresolver = "production";
-          };
           hedgedoc = {
             rule = "Host(`scratch.flake.sh`)";
             entrypoints = ["websecure"];
@@ -86,7 +79,6 @@
           forgejo.loadBalancer.servers = [{url = "http://localhost:3200";}];
           rustypaste.loadBalancer.servers = [{url = "http://localhost:8000";}];
           grafana.loadBalancer.servers = [{url = "http://localhost:3100";}];
-          woodpecker-server.loadBalancer.servers = [{url = "http://localhost:8200";}];
           hedgedoc.loadBalancer.servers = [{url = "http://localhost:3300";}];
           vaultwarden.loadBalancer.servers = [{url = "http://localhost:8222";}];
         };
