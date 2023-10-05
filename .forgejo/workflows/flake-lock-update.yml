@@ -13,6 +13,9 @@ jobs:
       - name: create PR
         uses: https://github.com/peter-evans/create-pull-request@v5
         with:
-          token: ${{ secrets.TOKEN_FOR_UPDATES }}
+          token: ${{ secrets.UPDATE_TOKEN }}
           committer: forgejo <dev@notohh.dev>
           author: notohh <github@notohh.dev>
+          branch: flake-lock-update
+          branch-suffix: short-commit-hash
+          
