@@ -1,4 +1,8 @@
-{lib, ...}: {
+{
+  lib,
+  config,
+  ...
+}: {
   services.forgejo = {
     enable = true;
     stateDir = "/var/lib/forgejo";
@@ -10,7 +14,7 @@
       };
       actions = {
         ENABLED = true;
-        DEFAULT_ACTIONS_URL = "https://gitea.com";
+        DEFAULT_ACTIONS_URL = "https://code.forgejo.org";
       };
       server = {
         HTTP_PORT = 3200;
@@ -31,5 +35,16 @@
         ENABLED_ISSUE_BY_LABEL = true;
       };
     };
+  };
+  services.gitea-actions-runner.instances.main = {
+    enable = true;
+    name = config.networking.hostName;
+    url = "https://git.flake.sh";
+    token = "WJXKbVSyfUVpeJYiFpRlf04CyxDS0mYG7at8B9kX";
+    labels = [
+      "debian-latest:docker://node:18-bullseye"
+      "ubuntu-latest:docker://node:18-bullseye"
+      #"native:host"
+    ];
   };
 }
