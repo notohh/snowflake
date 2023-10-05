@@ -3,12 +3,6 @@ jobs:
   check:
     runs-on: ubuntu-latest
     steps:
-      - uses: https://code.forgejo.org/actions/checkout@v3
-      - uses: https://github.com/cachix/install-nix-action@v22
-        with:
-          install_url: https://nixos.org/nix/install
-          extra_nix_config: |
-            auto-optimise-store = true
-            access-tokens = ${{ secrets.FORGEJO_TOKEN }}
-            experimental-features = nix-command flakes
+      - uses: actions/checkout@v3
+      - uses: https://github.com/DeterminateSystems/nix-installer-action@main
       - run: nix flake check
