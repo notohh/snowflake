@@ -30,21 +30,6 @@
             entrypoints = ["web"];
             service = "dashdot";
           };
-          authelia = {
-            rule = "Host(`passport.notohh.dev`)";
-            entrypoints = ["websecure"];
-            service = "authelia";
-            tls.domains = [{main = "*.notohh.dev";}];
-            tls.certresolver = "production";
-          };
-          hugo = {
-            rule = "Host(`notohh.dev`)";
-            entrypoints = ["websecure"];
-            service = "hugo";
-            tls.domains = [{main = "*.notohh.dev";}];
-            tls.certresolver = "production";
-            middlewares = "authelia";
-          };
           foundryvtt = {
             rule = "Host(`foundry.flake.sh`)";
             entrypoints = ["websecure"];
@@ -96,9 +81,7 @@
           };
         };
         services = {
-          authelia.loadBalancer.servers = [{url = "http://localhost:9091";}];
           dashdot.loadBalancer.servers = [{url = "http://localhost:4000";}];
-          hugo.loadBalancer.servers = [{url = "http://localhost:1313";}];
           foundryvtt.loadBalancer.servers = [{url = "http://localhost:30000";}];
           forgejo.loadBalancer.servers = [{url = "http://localhost:3200";}];
           rustypaste.loadBalancer.servers = [{url = "http://localhost:8000";}];
@@ -123,7 +106,6 @@
         };
         web = {
           address = ":80";
-          forwardedHeaders.insecure = true;
         };
       };
       metrics = {
