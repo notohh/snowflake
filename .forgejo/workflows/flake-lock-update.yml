@@ -1,7 +1,4 @@
-on:
-  workflow_dispatch:
-  schedule:
-    - cron: "0 4 1 * *"
+on: [push]
 jobs:
   check:
     runs-on: ubuntu-latest
