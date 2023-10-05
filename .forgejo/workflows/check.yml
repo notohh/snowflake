@@ -5,7 +5,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: install nix action
-        uses: https://github.com/DeterminateSystems/nix-installer-action@main
+        uses: https://github.com/DeterminateSystems/nix-installer-action@v5
         with:
           github-token: ${{ secrets.GH_TOKEN }}
       - run: nix flake check
