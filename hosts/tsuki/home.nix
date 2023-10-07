@@ -38,7 +38,6 @@
       rustypaste-cli
       playerctl
       obsidian
-      drawio
       gimp
       cryptomator
       ventoy-bin-full
