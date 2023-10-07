@@ -26,6 +26,7 @@
     yt-dlp
     cachix
     nfs-utils
+    dig
   ];
 
   services.gpg-agent = {
