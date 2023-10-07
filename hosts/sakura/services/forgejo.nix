@@ -40,7 +40,7 @@
   };
   services.gitea-actions-runner = {
     package = pkgs.forgejo-actions-runner;
-    instances.sakura = {
+    instances.main = {
       enable = true;
       name = config.networking.hostName;
       url = "https://git.flake.sh";
