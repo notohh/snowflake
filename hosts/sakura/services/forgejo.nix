@@ -4,7 +4,6 @@
   config,
   ...
 }: {
-  sops.secrets.forgejo-runner-token = {owner = "forgejo";};
   services.forgejo = {
     enable = true;
     stateDir = "/var/lib/forgejo";
@@ -41,27 +40,6 @@
         ENABLED_ISSUE_BY_REPOSITORY = true;
         ENABLED_ISSUE_BY_LABEL = true;
       };
-    };
-  };
-  services.gitea-actions-runner = {
-    package = pkgs.forgejo-actions-runner;
-    instances.main = {
-      enable = true;
-      name = config.networking.hostName;
-      url = "https://git.flake.sh";
-      token = config.sops.secrets.forgejo-runner-token.path;
-      labels = [
-        "debian-latest:docker://node:18-bullseye"
-        "ubuntu-latest:docker://node:18-bullseye"
-        #"native:host"
-      ];
-      hostPackages = with pkgs; [
-        bash
-        curl
-        coreutils
-        wget
-        gitMinimal
-      ];
     };
   };
 }
