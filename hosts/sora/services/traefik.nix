@@ -12,6 +12,16 @@
   services.traefik = {
     enable = true;
     dynamicConfigOptions = {
+      tcp = {
+        routers = {
+          gitssh = {
+            rule = "HostSNI(`*`)";
+            entrypoints = ["gitssh"];
+            service = "gitssh";
+            tls.passthrough = true;
+          };
+        };
+      };
       http = {
         middlewares.authelia = {
           forwardauth = {
@@ -107,6 +117,7 @@
           grafana.loadBalancer.servers = [{url = "http://100.121.201.47:3100";}];
           hedgedoc.loadBalancer.servers = [{url = "http://100.121.201.47:3300";}];
           vaultwarden.loadBalancer.servers = [{url = "http://100.121.201.47:8222";}];
+          gitssh.loadBalancer.servers = [{url = "tcp://100.121.201.47:2222";}];
         };
       };
     };
@@ -124,6 +135,9 @@
         };
         web = {
           address = ":80";
+        };
+        gitssh = {
+          address = ":2222";
         };
       };
       metrics = {
