@@ -38,23 +38,25 @@
       };
     };
   };
-  services.gitea-actions-runner.instances.main = {
-    enable = true;
-    name = config.networking.hostName;
-    url = "https://git.flake.sh";
-    token = config.sops.secrets.forgejo-runner-token.path;
-    labels = [
-      "debian-latest:docker://node:18-bullseye"
-      "ubuntu-latest:docker://node:18-bullseye"
-      #"native:host"
-    ];
-    hostPackages = with pkgs; [
-      bash
-      curl
-      coreutils
-      wget
-      gitMinimal
-      wget
-    ];
+  services.gitea-actions-runner = {
+    package = pkgs.forgejo-actions-runner;
+    instances.sakura = {
+      enable = true;
+      name = config.networking.hostName;
+      url = "https://git.flake.sh";
+      token = config.sops.secrets.forgejo-runner-token.path;
+      labels = [
+        "debian-latest:docker://node:18-bullseye"
+        "ubuntu-latest:docker://node:18-bullseye"
+        #"native:host"
+      ];
+      hostPackages = with pkgs; [
+        bash
+        curl
+        coreutils
+        wget
+        gitMinimal
+      ];
+    };
   };
 }
