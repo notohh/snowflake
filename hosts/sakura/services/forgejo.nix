@@ -4,7 +4,6 @@
   config,
   ...
 }: {
-  sops.secrets.forgejo-runner-token = {owner = "forgejo";};
   services.forgejo = {
     enable = true;
     stateDir = "/var/lib/forgejo";
@@ -20,9 +19,14 @@
       };
       server = {
         HTTP_PORT = 3200;
-        DOMAIN = "git.notohh.dev";
+        DOMAIN = "git.flake.sh";
         ROOT_URL = "https://git.flake.sh";
         LANDING_PAGE = "/explore/repos";
+        START_SSH_SERVER = true;
+        SSH_DOMAIN = "git.flake.sh";
+        SSH_PORT = 2222;
+        SSH_LISTEN_PORT = 2222;
+        SSH_LISTEN_HOST = "100.121.201.47";
       };
       database = {
         DB_TYPE = lib.mkForce "postgres";
@@ -36,27 +40,6 @@
         ENABLED_ISSUE_BY_REPOSITORY = true;
         ENABLED_ISSUE_BY_LABEL = true;
       };
-    };
-  };
-  services.gitea-actions-runner = {
-    package = pkgs.forgejo-actions-runner;
-    instances.main = {
-      enable = true;
-      name = config.networking.hostName;
-      url = "https://git.flake.sh";
-      token = config.sops.secrets.forgejo-runner-token.path;
-      labels = [
-        "debian-latest:docker://node:18-bullseye"
-        "ubuntu-latest:docker://node:18-bullseye"
-        #"native:host"
-      ];
-      hostPackages = with pkgs; [
-        bash
-        curl
-        coreutils
-        wget
-        gitMinimal
-      ];
     };
   };
 }
