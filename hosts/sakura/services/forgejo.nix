@@ -4,6 +4,7 @@
   config,
   ...
 }: {
+  networking.firewall.allowedTCPPorts = [2222];
   services.forgejo = {
     enable = true;
     stateDir = "/var/lib/forgejo";
