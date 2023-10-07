@@ -1,10 +1,9 @@
 on: [push]
 jobs:
   check:
-    runs-on: docker
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-        with:
       - name: install nix action
         uses: https://github.com/DeterminateSystems/nix-installer-action@v5
         with:
