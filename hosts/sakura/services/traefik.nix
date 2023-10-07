@@ -1,6 +1,5 @@
 {config, ...}: {
   sops.secrets.cloudflare-api-key = {};
-  networking.firewall.allowedTCPPorts = [80 443];
   systemd.services.traefik = {
     environment = {
       CLOUDFLARE_EMAIL = "jch0tm2e@notohh.dev";
@@ -30,57 +29,9 @@
             entrypoints = ["web"];
             service = "dashdot";
           };
-          foundryvtt = {
-            rule = "Host(`foundry.flake.sh`)";
-            entrypoints = ["websecure"];
-            service = "foundryvtt";
-            tls.domains = [{main = "*.flake.sh";}];
-            tls.certresolver = "production";
-          };
-          forgejo = {
-            rule = "Host(`git.flake.sh`)";
-            entrypoints = ["websecure"];
-            service = "forgejo";
-            tls.domains = [{main = "*.flake.sh";}];
-            tls.certresolver = "production";
-          };
-          rustypaste = {
-            rule = "Host(`i.flake.sh`)";
-            entrypoints = ["websecure"];
-            service = "rustypaste";
-            tls.domains = [{main = "*.flake.sh";}];
-            tls.certresolver = "production";
-          };
-          grafana = {
-            rule = "Host(`metrics.flake.sh`)";
-            entrypoints = ["websecure"];
-            service = "grafana";
-            tls.domains = [{main = "*.flake.sh";}];
-            tls.certresolver = "production";
-          };
-          hedgedoc = {
-            rule = "Host(`scratch.flake.sh`)";
-            entrypoints = ["websecure"];
-            service = "hedgedoc";
-            tls.domains = [{main = "*.flake.sh";}];
-            tls.certresolver = "production";
-          };
-          vaultwarden = {
-            rule = "Host(`vault.flake.sh`)";
-            entrypoints = ["websecure"];
-            service = "vaultwarden";
-            tls.domains = [{main = "*.flake.sh";}];
-            tls.certresolver = "production";
-          };
         };
         services = {
           dashdot.loadBalancer.servers = [{url = "http://localhost:4000";}];
-          foundryvtt.loadBalancer.servers = [{url = "http://localhost:30000";}];
-          forgejo.loadBalancer.servers = [{url = "http://localhost:3200";}];
-          rustypaste.loadBalancer.servers = [{url = "http://localhost:8000";}];
-          grafana.loadBalancer.servers = [{url = "http://localhost:3100";}];
-          hedgedoc.loadBalancer.servers = [{url = "http://localhost:3300";}];
-          vaultwarden.loadBalancer.servers = [{url = "http://localhost:8222";}];
         };
       };
     };

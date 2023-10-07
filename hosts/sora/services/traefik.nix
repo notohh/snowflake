@@ -1,6 +1,6 @@
 {config, ...}: {
   sops.secrets.cloudflare-api-key = {};
-  networking.firewall.allowedTCPPorts = [80 443];
+  networking.firewall.allowedTCPPorts = [80 443 2222];
   systemd.services.traefik = {
     environment = {
       CLOUDFLARE_EMAIL = "jch0tm2e@notohh.dev";
@@ -53,12 +53,60 @@
             tls.domains = [{main = "*.notohh.dev";}];
             tls.certresolver = "production";
           };
+          foundryvtt = {
+            rule = "Host(`foundry.flake.sh`)";
+            entrypoints = ["websecure"];
+            service = "foundryvtt";
+            tls.domains = [{main = "*.flake.sh";}];
+            tls.certresolver = "production";
+          };
+          forgejo = {
+            rule = "Host(`git.flake.sh`)";
+            entrypoints = ["websecure"];
+            service = "forgejo";
+            tls.domains = [{main = "*.flake.sh";}];
+            tls.certresolver = "production";
+          };
+          rustypaste = {
+            rule = "Host(`i.flake.sh`)";
+            entrypoints = ["websecure"];
+            service = "rustypaste";
+            tls.domains = [{main = "*.flake.sh";}];
+            tls.certresolver = "production";
+          };
+          grafana = {
+            rule = "Host(`metrics.flake.sh`)";
+            entrypoints = ["websecure"];
+            service = "grafana";
+            tls.domains = [{main = "*.flake.sh";}];
+            tls.certresolver = "production";
+          };
+          hedgedoc = {
+            rule = "Host(`scratch.flake.sh`)";
+            entrypoints = ["websecure"];
+            service = "hedgedoc";
+            tls.domains = [{main = "*.flake.sh";}];
+            tls.certresolver = "production";
+          };
+          vaultwarden = {
+            rule = "Host(`vault.flake.sh`)";
+            entrypoints = ["websecure"];
+            service = "vaultwarden";
+            tls.domains = [{main = "*.flake.sh";}];
+            tls.certresolver = "production";
+          };
         };
         services = {
           uptime-kuma.loadBalancer.servers = [{url = "http://100.87.54.48:4000";}];
           gotify.loadBalancer.servers = [{url = "http://100.87.54.48:3000";}];
           conduit.loadBalancer.servers = [{url = "http://100.121.201.47:6167";}];
           authelia.loadBalancer.servers = [{url = "http://100.121.201.47:9091";}];
+          foundryvtt.loadBalancer.servers = [{url = "http://100.121.201.47:30000";}];
+          forgejo.loadBalancer.servers = [{url = "http://100.121.201.47:3200";}];
+          rustypaste.loadBalancer.servers = [{url = "http://100.121.201.47:8000";}];
+          grafana.loadBalancer.servers = [{url = "http://100.121.201.47:3100";}];
+          hedgedoc.loadBalancer.servers = [{url = "http://100.121.201.47:3300";}];
+          vaultwarden.loadBalancer.servers = [{url = "http://100.121.201.47:8222";}];
         };
       };
     };
