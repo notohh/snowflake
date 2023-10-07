@@ -20,9 +20,14 @@
       };
       server = {
         HTTP_PORT = 3200;
-        DOMAIN = "git.notohh.dev";
+        DOMAIN = "git.flake.sh";
         ROOT_URL = "https://git.flake.sh";
         LANDING_PAGE = "/explore/repos";
+        START_SSH_SERVER = true;
+        SSH_DOMAIN = "git.flake.sh";
+        SSH_PORT = 2222;
+        SSH_LISTEN_PORT = 2222;
+        SSH_LISTEN_HOST = "100.121.201.47";
       };
       database = {
         DB_TYPE = lib.mkForce "postgres";
