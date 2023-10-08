@@ -9,7 +9,6 @@
     ./grafana.nix
     ./vaultwarden.nix
     ./conduit.nix
-    ./cloudflareddns.nix
     ./tailscale.nix
   ];
 }
