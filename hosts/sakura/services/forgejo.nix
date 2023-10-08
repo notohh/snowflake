@@ -36,6 +36,11 @@
         USER = "forgejo";
         PASSWD = "forgejo";
       };
+      cache = {
+        ENABLED = true;
+        ADAPTER = lib.mkForce "redis";
+        HOST = "redis://:forgejo@100.94.214.100:6379";
+      };
       metrics = {
         ENABLED = true;
         ENABLED_ISSUE_BY_REPOSITORY = true;
