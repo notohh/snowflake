@@ -18,7 +18,6 @@
             rule = "HostSNI(`*`)";
             entrypoints = ["gitssh"];
             service = "gitssh";
-            tls.passthrough = true;
           };
         };
       };
@@ -105,8 +104,16 @@
             tls.domains = [{main = "*.flake.sh";}];
             tls.certresolver = "production";
           };
+          searxng = {
+            rule = "Host(`search.flake.sh`)";
+            entrypoints = ["websecure"];
+            service = "searxng";
+            tls.domains = [{main = "*.flake.sh";}];
+            tls.certresolver = "production";
+          };
         };
         services = {
+          gitssh.loadBalancer.servers = [{url = "tcp://100.121.201.47:2222";}];
           uptime-kuma.loadBalancer.servers = [{url = "http://100.87.54.48:4000";}];
           gotify.loadBalancer.servers = [{url = "http://100.87.54.48:3000";}];
           conduit.loadBalancer.servers = [{url = "http://100.121.201.47:6167";}];
@@ -117,7 +124,7 @@
           grafana.loadBalancer.servers = [{url = "http://100.121.201.47:3100";}];
           hedgedoc.loadBalancer.servers = [{url = "http://100.121.201.47:3300";}];
           vaultwarden.loadBalancer.servers = [{url = "http://100.121.201.47:8222";}];
-          gitssh.loadBalancer.servers = [{url = "tcp://100.121.201.47:2222";}];
+          searxng.loadBalancer.servers = [{url = "http://100.110.140.130:8100";}];
         };
       };
     };
