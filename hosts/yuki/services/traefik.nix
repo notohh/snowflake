@@ -15,11 +15,6 @@ _: {
             entrypoints = ["web"];
             service = "homarr";
           };
-          searxng = {
-            rule = "Host(`searxng.internal.flake.sh`)";
-            entryPoints = ["web"];
-            service = "searxng";
-          };
           stash = {
             rule = "Host(`stash.internal.flake.sh`)";
             entrypoints = ["web"];
@@ -45,7 +40,6 @@ _: {
           stash.loadBalancer.servers = [{url = "http://localhost:9999";}];
           homarr.loadBalancer.servers = [{url = "http://localhost:7575";}];
           dashdot.loadBalancer.servers = [{url = "http://localhost:4000";}];
-          searxng.loadBalancer.servers = [{url = "http://localhost:8100";}];
           jellyfin.loadBalancer.servers = [{url = "http://localhost:8096";}];
           jellyseerr.loadBalancer.servers = [{url = "http://localhost:5055";}];
         };
