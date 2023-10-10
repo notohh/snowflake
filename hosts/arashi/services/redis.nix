@@ -13,5 +13,17 @@
         protected-mode = "no";
       };
     };
+    searxng = {
+      enable = true;
+      openFirewall = true;
+      port = 6380;
+      bind = null;
+      databases = 16;
+      logLevel = "debug";
+      requirePass = "searxng";
+      settings = {
+        protected-mode = "no";
+      };
+    };
   };
 }
