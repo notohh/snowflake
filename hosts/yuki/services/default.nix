@@ -7,7 +7,7 @@
     ./homarr.nix
     ./dashdot.nix
     ./jellyfin.nix
-    ./neko.nix
     ./forgejo-runners.nix
+    ./minecraft.nix
   ];
 }
