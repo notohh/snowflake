@@ -87,7 +87,6 @@
   };
 
   environment.systemPackages = with pkgs; [
-    wget
     dconf
     polkit_gnome
     libvirt
