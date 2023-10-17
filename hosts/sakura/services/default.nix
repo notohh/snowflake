@@ -10,5 +10,6 @@
     ./vaultwarden.nix
     ./conduit.nix
     ./tailscale.nix
+    ./searxng.nix
   ];
 }

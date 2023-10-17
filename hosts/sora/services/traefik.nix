@@ -196,7 +196,7 @@
           grafana.loadBalancer.servers = [{url = "http://100.121.201.47:3100";}];
           hedgedoc.loadBalancer.servers = [{url = "http://100.121.201.47:3300";}];
           vaultwarden.loadBalancer.servers = [{url = "http://100.121.201.47:8222";}];
-          searxng.loadBalancer.servers = [{url = "http://100.110.140.130:8100";}];
+          searxng.loadBalancer.servers = [{url = "http://100.121.201.47:8100";}];
         };
       };
     };
