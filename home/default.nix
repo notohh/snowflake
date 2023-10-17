@@ -20,11 +20,9 @@
     du-dust
     bottom
     gnupg
-    gping
     ripgrep
     lazydocker
     yt-dlp
-    cachix
     nfs-utils
     dig
   ];
