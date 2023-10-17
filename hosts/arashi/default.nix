@@ -3,6 +3,8 @@
     ./hardware-configuration.nix
     ./services
     ../../modules
+    ../../modules/prometheus/exporters/redis.nix
+    ../../modules/prometheus/exporters/postgres.nix
   ];
 
   boot.loader = {
