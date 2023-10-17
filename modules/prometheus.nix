@@ -13,6 +13,11 @@ _: {
         scrape_interval = "30s";
         static_configs = [{targets = ["localhost:9100"];}];
       }
+      {
+        job_name = "traefik";
+        scrape_interval = "30s";
+        static_configs = [{targets = ["100.87.54.48:8080"];}];
+      }
     ];
     exporters = {
       node = {
