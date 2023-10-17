@@ -4,6 +4,7 @@ this directory hosts some common modules / services / security tweaks used on (m
 
 name            | description
 --------------- | -----------
+`prometheus`    | has default prometheus config for all hosts, along with exporters for select hosts
 `default`       | used for commonly shared modules
 `fonts`         | font handling
 `greetd`        | login manager

@@ -1,6 +1,7 @@
 {inputs, ...}: {
   imports = [
     inputs.nh.nixosModules.default
+    ./prometheus
     ./security.nix
     ./networking.nix
     ./users.nix
@@ -9,6 +10,5 @@
     ./openssh.nix
     ./virtualisation.nix
     ./sops.nix
-    ./prometheus.nix
   ];
 }

@@ -5,18 +5,28 @@ _: {
     scrapeConfigs = [
       {
         job_name = "prometheus";
-        scrape_interval = "30s";
+        scrape_interval = "15s";
         static_configs = [{targets = ["localhost:9090"];}];
       }
       {
         job_name = "node";
-        scrape_interval = "30s";
+        scrape_interval = "15s";
         static_configs = [{targets = ["localhost:9100"];}];
       }
       {
         job_name = "traefik";
-        scrape_interval = "30s";
+        scrape_interval = "15s";
         static_configs = [{targets = ["100.87.54.48:8080"];}];
+      }
+      {
+        job_name = "redis_exporter";
+        scrape_interval = "15s";
+        static_configs = [{targets = ["100.94.214.100:9002"];}];
+      }
+      {
+        job_name = "postgres";
+        scrape_interval = "15s";
+        static_configs = [{targets = ["100.94.214.100:9003"];}];
       }
     ];
     exporters = {
