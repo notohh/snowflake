@@ -8,7 +8,22 @@
   services.searx = {
     package = pkgs.searxng;
     enable = true;
+    runInUwsgi = true;
+    uwsgiConfig = {
+      http = ":8100";
+    };
     environmentFile = config.sops.secrets.searxng-secret.path;
+    limiterSettings = {
+      botdetection = {
+        ip_lists = {
+          pass_ip = [
+            "192.168.0.0/16"
+            "172.16.0.0/12"
+            "10.0.0.0/8"
+          ];
+        };
+      };
+    };
     settings = {
       general = {
         debug = false;
