@@ -33,20 +33,12 @@
         ensurePermissions."DATABASE forgejo" = "ALL PRIVILEGES";
       }
       {
-        name = "miniflux";
-        ensurePermissions."DATABASE miniflux" = "ALL PRIVILEGES";
-      }
-      {
         name = "grafana";
         ensurePermissions."DATABASE grafana" = "ALL PRIVILEGES";
       }
       {
         name = "authelia";
         ensurePermissions."DATABASE authelia" = "ALL PRIVILEGES";
-      }
-      {
-        name = "atticd";
-        ensurePermissions."DATABASE atticd" = "ALL PRIVILEGES";
       }
       {
         name = "vaultwarden";
@@ -56,10 +48,8 @@
     ensureDatabases = [
       "forgejo"
       "hedgedoc"
-      "miniflux"
       "grafana"
       "authelia"
-      "atticd"
       "vaultwarden"
     ];
   };
