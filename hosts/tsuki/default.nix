@@ -41,6 +41,29 @@
       layout = "us";
       xkbVariant = "";
     };
+    udev = {
+      extraRules = ''
+        SUBSYSTEM=="hidraw", ATTRS{idVendor}=="03eb", ATTRS{idProduct}=="ff01", TAG+="uaccess"
+        SUBSYSTEM=="usb", ATTRS{idVendor}=="03eb", ATTRS{idProduct}=="ff01", TAG+="uaccess"
+        SUBSYSTEM=="hidraw", ATTRS{idVendor}=="03eb", ATTRS{idProduct}=="2402", TAG+="uaccess"
+        SUBSYSTEM=="hidraw", ATTRS{idVendor}=="03eb", ATTRS{idProduct}=="ff02", TAG+="uaccess"
+        SUBSYSTEM=="usb", ATTRS{idVendor}=="03eb", ATTRS{idProduct}=="ff02", TAG+="uaccess"
+        SUBSYSTEM=="hidraw", ATTRS{idVendor}=="03eb", ATTRS{idProduct}=="2403", TAG+="uaccess"
+        SUBSYSTEM=="hidraw", ATTRS{idVendor}=="31e3", TAG+="uaccess"
+        SUBSYSTEM=="usb", ATTRS{idVendor}=="31e3", TAG+="uaccess"
+      '';
+    };
+  };
+
+  environment.etc = {
+    "pipewire/pipewire.conf.d/92-low-latency.conf".text = ''
+      context.properties = {
+        default.clock.rate = 48000
+        default.clock.quantum = 1024
+        default.clock.min-quantum = 16
+        default.clock.max-quantum = 2048
+      }
+    '';
   };
 
   services.pcscd.enable = true;
