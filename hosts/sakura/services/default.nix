@@ -1,6 +1,5 @@
 {...}: {
   imports = [
-    ./traefik.nix
     ./authelia.nix
     ./forgejo.nix
     ./rustypaste.nix
