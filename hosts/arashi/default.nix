@@ -3,8 +3,6 @@
     ./hardware-configuration.nix
     ./services
     ../../modules
-    ../../modules/prometheus/exporters/redis.nix
-    ../../modules/prometheus/exporters/postgres.nix
   ];
 
   boot.loader = {
@@ -14,6 +12,10 @@
       device = "/dev/sda";
       useOSProber = false;
     };
+  };
+
+  boot.kernel.sysctl = {
+    "kernel.shmmax" = 100663296;
   };
 
   networking = {
