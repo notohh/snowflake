@@ -15,5 +15,6 @@ name            | description
 `sops`          | configures sops-nix
 `swayidle`      | idle manager daemon
 `system`        | commonly shared system settings
+`time`          | force sets the time on all systems
 `users`         | defines all hosts users & groups
 `virtualisation`| basic docker configuration

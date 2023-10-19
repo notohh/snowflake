@@ -10,5 +10,6 @@
     ./openssh.nix
     ./virtualisation.nix
     ./sops.nix
+    ./time.nix
   ];
 }
