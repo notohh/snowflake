@@ -11,6 +11,8 @@
     port = 5432;
     settings = {
       listen_addresses = lib.mkForce "*";
+      max_connections = "300";
+      shared_buffers = "80MB";
     };
     authentication = ''
       local all all trust
