@@ -151,4 +151,24 @@ in {
       }
     ];
   };
+  tsuru = nixosSystem {
+    inherit system;
+    specialArgs = {inherit inputs;};
+    modules = [
+      ./tsuru
+      sopsModule
+      hmModule
+      {
+        home-manager = {
+          useGlobalPkgs = true;
+          useUserPackages = true;
+          users.notoh = {
+            imports = [
+              ./tsuru/home.nix
+            ];
+          };
+        };
+      }
+    ];
+  };
 }

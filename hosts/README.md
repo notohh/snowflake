@@ -10,6 +10,7 @@ Name            | Description
 `sakura`        | main vm, hosting most internet connected services
 `sora`          | hetzner vps
 `tsuki`         | main machine running hyprland
+`tsuru`         | vm for ci/cd runners, and (potentially) a binary cache
 `yuki`          | my old proxmox machine, now running pure nix
 `default`       | defines `nixosConfigurations`
 `deploy`        | defines deployment nodes for deploy-rs
