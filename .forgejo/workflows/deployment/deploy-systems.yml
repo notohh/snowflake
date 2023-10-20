@@ -11,5 +11,4 @@ jobs:
         with:
           github-token: ${{ secrets.GH_TOKEN }}
       - name: deploy
-        use: |
-          ssh -i ${secrets.TSURU_SSH_KEY} root@100.82.146.40 'uname -a'
+        run: ssh -i ${secrets.TSURU_SSH_KEY} root@100.82.146.40 'uname -a'
