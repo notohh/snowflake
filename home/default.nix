@@ -57,6 +57,10 @@
         HostName 100.87.54.48
         User notoh
         IdentityFile ~/.ssh/sora
+      Host tsuru
+        HostName 100.82.146.40
+        User notoh
+        IdentityFile ~/.ssh/tsuru
       Host pve
         Hostname 100.115.234.69
         User root
