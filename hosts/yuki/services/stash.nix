@@ -1,6 +1,6 @@
 _: {
   virtualisation.oci-containers.containers.stash = {
-    image = "stashapp/stash:v0.21.0";
+    image = "stashapp/stash:v0.23.1";
     environment = {
       STASH_STASH = "/data/";
       STASH_GENERATED = "/generated/";
@@ -15,6 +15,7 @@ _: {
       "/home/notoh/docker/stash/.metadata:/metadata"
       "/home/notoh/docker/stash/cache:/cache"
       "/home/notoh/docker/stash/generated:/generated"
+      "/home/notoh/docker/stash/blobs:/blobs"
     ];
     ports = [
       "9999:9999"
