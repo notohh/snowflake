@@ -1,0 +1,15 @@
+name: deploy systems
+
+on: [push]
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: install nix action
+        uses: https://github.com/DeterminateSystems/nix-installer-action@v5
+        with:
+          github-token: ${{ secrets.GH_TOKEN }}
+      - name: deploy
+        use: |
+          ssh -i ${secrets.TSURU_SSH_KEY} root@100.82.146.40 'uname -a'
