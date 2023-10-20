@@ -6,9 +6,9 @@ inputs: {
         user = "root";
         path = activate.nixos inputs.self.nixosConfigurations.sakura;
       };
-      sshUser = "notoh";
+      sshUser = "root";
       sshOpts = ["-t" "-i" "~/.ssh/sakura"];
-      magicRollback = false;
+      magicRollback = true;
     };
     kariru = {
       hostname = "kariru";
@@ -16,9 +16,9 @@ inputs: {
         user = "root";
         path = activate.nixos inputs.self.nixosConfigurations.kariru;
       };
-      sshUser = "notoh";
+      sshUser = "root";
       sshOpts = ["-t" "-i" "~/.ssh/kariru"];
-      magicRollback = false;
+      magicRollback = true;
     };
     yuki = {
       hostname = "yuki";
@@ -26,9 +26,9 @@ inputs: {
         user = "root";
         path = activate.nixos inputs.self.nixosConfigurations.yuki;
       };
-      sshUser = "notoh";
+      sshUser = "root";
       sshOpts = ["-t" "-i" "~/.ssh/yuki"];
-      magicRollback = false;
+      magicRollback = true;
     };
     arashi = {
       hostname = "arashi";
@@ -36,9 +36,9 @@ inputs: {
         user = "root";
         path = activate.nixos inputs.self.nixosConfigurations.arashi;
       };
-      sshUser = "notoh";
+      sshUser = "root";
       sshOpts = ["-t" "-i" "~/.ssh/arashi"];
-      magicRollback = false;
+      magicRollback = true;
     };
     sora = {
       hostname = "sora";
@@ -46,9 +46,19 @@ inputs: {
         user = "root";
         path = activate.nixos inputs.self.nixosConfigurations.sora;
       };
-      sshUser = "notoh";
+      sshUser = "root";
       sshOpts = ["-t" "-i" "~/.ssh/kumo"];
-      magicRollback = false;
+      magicRollback = true;
+    };
+    tsuru = {
+      hostname = "tsuru";
+      profiles.system = {
+        user = "root";
+        path = activate.nixos inputs.self.nixosConfigurations.tsuru;
+      };
+      sshUser = "root";
+      sshOpts = ["-t" "-i" "~/.ssh/tsuru"];
+      magicRollback = true;
     };
   };
 }
