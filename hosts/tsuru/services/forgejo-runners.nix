@@ -3,7 +3,7 @@
   config,
   ...
 }: {
-  sops.secrets.forgejo-runner-token = {};
+  sops.secrets.snowflake-runner-token = {};
   sops.secrets.basegbot-runner-token = {};
   services.gitea-actions-runner = {
     package = pkgs.forgejo-actions-runner;
@@ -15,7 +15,7 @@
       };
       enable = true;
       name = config.networking.hostName;
-      token = config.sops.secrets.forgejo-runner-token.path;
+      token = config.sops.secrets.snowflake-runner-token.path;
       url = "https://git.flake.sh";
       labels = [
         "debian-latest:docker://node:18-bullseye"
