@@ -1,3 +1,5 @@
+name: flake check
+
 on: [push]
 jobs:
   check:
