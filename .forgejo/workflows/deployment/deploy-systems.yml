@@ -14,6 +14,5 @@ jobs:
         uses: https://github.com/appleboy/ssh-action@v1.0.0
         with:
           host: "100.121.201.47"
-          key_path: ${{secrets.DEPLOY_SSH}}
           script: |
             uname -a
