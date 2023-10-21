@@ -12,6 +12,4 @@ jobs:
           github-token: ${{ secrets.GH_TOKEN }}
       - name: deploy
         run: |
-          mkdir .ssh
-          cat ${{secrets.TEST_SSH_DEPLOY_KEY}} >> forgejo && cd .ssh
-          nix run github:serokell/deploy-rs -- --ssh-opts="-i ./forgejo"  --targets .#sakura .#yuki .#arashi .#kariru .#sora
+          nix run github:serokell/deploy-rs -- --ssh-opts="-i ${{secrets.TEST_SSH_DEPLOY_KEY}}"  --targets .#sakura .#yuki .#arashi .#kariru .#sora
