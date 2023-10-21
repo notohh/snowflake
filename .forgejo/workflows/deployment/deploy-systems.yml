@@ -14,9 +14,11 @@ jobs:
         run: |
           mkdir -p .ssh && cd .ssh
           echo "$SSH_KEY" > forgejo
+          echo "$SSH_KNOWN_HOSTS" > known_hosts
         shell: bash
         env:
           SSH_KEY: ${{secrets.SSH_DEPLOY_KEY}}
+          SSH_KNOWN_HOSTS: ${{secrets.SSH_KNOWN_HOSTS}}
       - name: deploy
         run: |
           cd .ssh
