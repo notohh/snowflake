@@ -20,6 +20,5 @@ jobs:
           SSH_KEY: ${{secrets.SSH_DEPLOY_KEY}}
       - name: deploy
         run: |
-          bash
           cd .ssh
-          nix run github:serokell/deploy-rs -- --ssh-opts="-i forgejo -o StrictHostKeyChecking=no UserKnownHostsFile=/dev/null" --skip-checks --targets .#sakura
+          nix run github:serokell/deploy-rs -- --ssh-opts="-i forgejo -o StrictHostKeyChecking=no" --skip-checks --targets .#sakura
