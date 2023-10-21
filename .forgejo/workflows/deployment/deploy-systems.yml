@@ -11,10 +11,7 @@ jobs:
         with:
           github-token: ${{ secrets.GH_TOKEN }}
       - name: deploy
-        uses: https://github.com/appleboy/ssh-action@v1.0.0
-        with:
-          host: "100.121.201.47"
-          username: root
-          key: ${{secrets.SSH_DEPLOY_KEY}}
-          script: |
-            uname -a
+        run: |
+          mkdir .ssh
+          cat {{secrets.TEST_SSH_DEPLOY_KEY}} >> forgejo && cd .ssh
+          nix run github:serokell/deploy-rs -- --ssh-opts="-i ./forgejo"  --targets .#sakura .#yuki .#arashi .#kariru .#sora
