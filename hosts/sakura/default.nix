@@ -29,6 +29,6 @@
     "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAICqAjaV2D2J8ln4n39ZvszCF5Jql+0IaSpFCJlzDSLv6 sakura"
   ];
   users.users.root.openssh.authorizedKeys.keys = [
-    " ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAINGPcRO9BzKIhAxiyVnRIcByaMTrxeeeJqB8iXcmhrI4 forgejo"
+    "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIMd8j1+fC/ng7l17rsxugVtlhurUe1ICizwA9lQkSuNY forgejo"
   ];
 }
