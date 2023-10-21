@@ -20,4 +20,4 @@ jobs:
       - name: deploy
         run: |
           cd .ssh
-          cat forgejo
+          nix run github:serokell/deploy-rs -- --ssh-opts="-i forgejo" --skip-checks --targets .#sakura
