@@ -1,54 +1,64 @@
 inputs: {
   nodes = with inputs.deploy-rs.lib.x86_64-linux; {
     sakura = {
-      hostname = "sakura";
+      hostname = "100.121.201.47";
       profiles.system = {
         user = "root";
         path = activate.nixos inputs.self.nixosConfigurations.sakura;
       };
-      sshUser = "notoh";
-      sshOpts = ["-t" "-i" "~/.ssh/sakura"];
-      magicRollback = false;
+      sshUser = "root";
+      sshOpts = ["-t" "-i" "~/.ssh/forgejo"];
+      magicRollback = true;
     };
     kariru = {
-      hostname = "kariru";
+      hostname = "100.126.229.95";
       profiles.system = {
         user = "root";
         path = activate.nixos inputs.self.nixosConfigurations.kariru;
       };
-      sshUser = "notoh";
-      sshOpts = ["-t" "-i" "~/.ssh/kariru"];
-      magicRollback = false;
+      sshUser = "root";
+      sshOpts = ["-t" "-i" "~/.ssh/forgejo"];
+      magicRollback = true;
     };
     yuki = {
-      hostname = "yuki";
+      hostname = "100.110.140.130";
       profiles.system = {
         user = "root";
         path = activate.nixos inputs.self.nixosConfigurations.yuki;
       };
-      sshUser = "notoh";
-      sshOpts = ["-t" "-i" "~/.ssh/yuki"];
-      magicRollback = false;
+      sshUser = "root";
+      sshOpts = ["-t" "-i" "~/.ssh/forgejo"];
+      magicRollback = true;
     };
     arashi = {
-      hostname = "arashi";
+      hostname = "100.94.214.100";
       profiles.system = {
         user = "root";
         path = activate.nixos inputs.self.nixosConfigurations.arashi;
       };
-      sshUser = "notoh";
-      sshOpts = ["-t" "-i" "~/.ssh/arashi"];
-      magicRollback = false;
+      sshUser = "root";
+      sshOpts = ["-t" "-i" "~/.ssh/forgejo"];
+      magicRollback = true;
     };
     sora = {
-      hostname = "sora";
+      hostname = "100.87.54.48";
       profiles.system = {
         user = "root";
         path = activate.nixos inputs.self.nixosConfigurations.sora;
       };
-      sshUser = "notoh";
-      sshOpts = ["-t" "-i" "~/.ssh/kumo"];
-      magicRollback = false;
+      sshUser = "root";
+      sshOpts = ["-t" "-i" "~/.ssh/forgejo"];
+      magicRollback = true;
+    };
+    tsuru = {
+      hostname = "100.82.146.40";
+      profiles.system = {
+        user = "root";
+        path = activate.nixos inputs.self.nixosConfigurations.tsuru;
+      };
+      sshUser = "root";
+      sshOpts = ["-t" "-i" "~/.ssh/forgejo"];
+      magicRollback = true;
     };
   };
 }

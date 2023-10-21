@@ -1,0 +1,27 @@
+name: deploy systems
+
+on:
+  push:
+    paths:
+      - "**.lock"
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: install nix action
+        uses: https://github.com/DeterminateSystems/nix-installer-action@v5
+        with:
+          github-token: ${{ secrets.GH_TOKEN }}
+      - name: write private key
+        run: |
+          mkdir -p .ssh && cd .ssh
+          echo "$SSH_KEY" > forgejo
+          chmod 400 forgejo
+        shell: bash
+        env:
+          SSH_KEY: ${{secrets.SSH_DEPLOY_KEY}}
+      - name: deploy
+        run: |
+          cd .ssh
+          nix run github:serokell/deploy-rs -- --ssh-opts="-i forgejo -o StrictHostKeyChecking=no" --skip-checks --targets .#arashi .#kariru .#sakura .#sora .#yuki
