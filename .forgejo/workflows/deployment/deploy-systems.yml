@@ -15,6 +15,6 @@ jobs:
         with:
           host: "100.121.201.47"
           username: root
-          key: ${{secrets.DEPLOY_SSH}}
+          key: ${{secrets.SSH_DEPLOY_KEY}}
           script: |
             uname -a
