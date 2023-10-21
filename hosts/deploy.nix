@@ -1,7 +1,7 @@
 inputs: {
   nodes = with inputs.deploy-rs.lib.x86_64-linux; {
     sakura = {
-      hostname = "192.168.1.25";
+      hostname = "100.121.201.47";
       profiles.system = {
         user = "root";
         path = activate.nixos inputs.self.nixosConfigurations.sakura;
@@ -17,7 +17,7 @@ inputs: {
         path = activate.nixos inputs.self.nixosConfigurations.kariru;
       };
       sshUser = "root";
-      sshOpts = ["-t" "-i" ''~/.ssh/forgejo''];
+      sshOpts = ["-t" "-i" "~/.ssh/forgejo"];
       magicRollback = true;
     };
     yuki = {
