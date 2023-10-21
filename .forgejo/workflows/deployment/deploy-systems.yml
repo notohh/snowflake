@@ -13,5 +13,5 @@ jobs:
       - name: deploy
         run: |
           mkdir .ssh
-          cat {{secrets.TEST_SSH_DEPLOY_KEY}} >> forgejo && cd .ssh
+          cat ${{secrets.TEST_SSH_DEPLOY_KEY}} >> forgejo && cd .ssh
           nix run github:serokell/deploy-rs -- --ssh-opts="-i ./forgejo"  --targets .#sakura .#yuki .#arashi .#kariru .#sora
