@@ -19,4 +19,5 @@ jobs:
           SSH_KEY: ${{secrets.TEST_SSH_DEPLOY_KEY}}
       - name: deploy
         run: |
-          nix run github:serokell/deploy-rs -- --ssh-opts="-i forgejo" --skip-checks --targets .#sakura
+          cd .ssh
+          cat forgejo
