@@ -15,6 +15,7 @@ jobs:
           mkdir -p .ssh && cd .ssh
           echo "$SSH_KEY" > forgejo
           echo "$SSH_KNOWN_HOSTS" > known_hosts
+          chmod 400 forgejo
         shell: bash
         env:
           SSH_KEY: ${{secrets.SSH_DEPLOY_KEY}}
