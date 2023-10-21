@@ -10,6 +10,13 @@ jobs:
         uses: https://github.com/DeterminateSystems/nix-installer-action@v5
         with:
           github-token: ${{ secrets.GH_TOKEN }}
+      - name: write private key
+        run: |
+          mkdir -p .ssh && cd .ssh
+          echo "$SSH_KEY" > forgejo
+        shell: bash
+        env:
+          SSH_KEY: ${{secrets.TEST_SSH_DEPLOY_KEY}}
       - name: deploy
         run: |
-          nix run github:serokell/deploy-rs -- --ssh-opts="-i ${{secrets.TEST_SSH_DEPLOY_KEY}}"  --targets .#sakura .#yuki .#arashi .#kariru .#sora
+          nix run github:serokell/deploy-rs -- --ssh-opts="-i forgejo" --skip-checks --targets .#sakura
