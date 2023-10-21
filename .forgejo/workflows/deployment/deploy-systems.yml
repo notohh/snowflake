@@ -21,4 +21,4 @@ jobs:
       - name: deploy
         run: |
           cd .ssh
-          nix run github:serokell/deploy-rs -- --ssh-opts="-i forgejo -o StrictHostKeyChecking=no" --skip-checks --targets .#sakura
+          nix run github:serokell/deploy-rs -- --ssh-opts="-i forgejo -o StrictHostKeyChecking=no" --skip-checks --targets .#arashi .#kariru .#sakura .#sora .#yuki
