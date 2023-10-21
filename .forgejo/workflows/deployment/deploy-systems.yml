@@ -14,14 +14,12 @@ jobs:
         run: |
           mkdir -p .ssh && cd .ssh
           echo "$SSH_KEY" > forgejo
-          echo "$SSH_KNOWN_HOSTS" > known_hosts
           chmod 400 forgejo
         shell: bash
         env:
           SSH_KEY: ${{secrets.SSH_DEPLOY_KEY}}
-          SSH_KNOWN_HOSTS: ${{secrets.SSH_KNOWN_HOSTS}}
       - name: deploy
         run: |
+          bash
           cd .ssh
           nix run github:serokell/deploy-rs -- --ssh-opts="-i forgejo -o StrictHostKeyChecking=no UserKnownHostsFile=/dev/null" --skip-checks --targets .#sakura
-        shell: bash
