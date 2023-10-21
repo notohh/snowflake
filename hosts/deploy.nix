@@ -1,63 +1,63 @@
 inputs: {
   nodes = with inputs.deploy-rs.lib.x86_64-linux; {
     sakura = {
-      hostname = "sakura";
+      hostname = "100.121.201.47";
       profiles.system = {
         user = "root";
         path = activate.nixos inputs.self.nixosConfigurations.sakura;
       };
       sshUser = "root";
-      sshOpts = ["-t" "-i" "~/.ssh/sakura"];
+      sshOpts = ["-t" "-i" "~/.ssh/forgejo"];
       magicRollback = true;
     };
     kariru = {
-      hostname = "kariru";
+      hostname = "100.126.229.95";
       profiles.system = {
         user = "root";
         path = activate.nixos inputs.self.nixosConfigurations.kariru;
       };
       sshUser = "root";
-      sshOpts = ["-t" "-i" "~/.ssh/kariru"];
+      sshOpts = ["-t" "-i" ''~/.ssh/forgejo''];
       magicRollback = true;
     };
     yuki = {
-      hostname = "yuki";
+      hostname = "100.110.140.130";
       profiles.system = {
         user = "root";
         path = activate.nixos inputs.self.nixosConfigurations.yuki;
       };
       sshUser = "root";
-      sshOpts = ["-t" "-i" "~/.ssh/yuki"];
+      sshOpts = ["-t" "-i" "~/.ssh/forgejo"];
       magicRollback = true;
     };
     arashi = {
-      hostname = "arashi";
+      hostname = "100.94.214.100";
       profiles.system = {
         user = "root";
         path = activate.nixos inputs.self.nixosConfigurations.arashi;
       };
       sshUser = "root";
-      sshOpts = ["-t" "-i" "~/.ssh/arashi"];
+      sshOpts = ["-t" "-i" "~/.ssh/forgejo"];
       magicRollback = true;
     };
     sora = {
-      hostname = "sora";
+      hostname = "100.87.54.48";
       profiles.system = {
         user = "root";
         path = activate.nixos inputs.self.nixosConfigurations.sora;
       };
       sshUser = "root";
-      sshOpts = ["-t" "-i" "~/.ssh/kumo"];
+      sshOpts = ["-t" "-i" "~/.ssh/forgejo"];
       magicRollback = true;
     };
     tsuru = {
-      hostname = "tsuru";
+      hostname = "100.82.146.40";
       profiles.system = {
         user = "root";
         path = activate.nixos inputs.self.nixosConfigurations.tsuru;
       };
       sshUser = "root";
-      sshOpts = ["-t" "-i" "~/.ssh/tsuru"];
+      sshOpts = ["-t" "-i" "~/.ssh/forgejo"];
       magicRollback = true;
     };
   };
