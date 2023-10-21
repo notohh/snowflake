@@ -24,6 +24,9 @@
   };
 
   users.users.notoh.openssh.authorizedKeys.keys = [
-    ''ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIPmWafzbhah18nm2z1epc6139XVlcKT0ndAI0wbLj+/6 kariru''
+    "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIPmWafzbhah18nm2z1epc6139XVlcKT0ndAI0wbLj+/6 kariru"
+  ];
+  users.users.root.openssh.authorizedKeys.keys = [
+    "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAINGPcRO9BzKIhAxiyVnRIcByaMTrxeeeJqB8iXcmhrI4 forgejo"
   ];
 }
