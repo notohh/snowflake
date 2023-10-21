@@ -1,7 +1,7 @@
 inputs: {
   nodes = with inputs.deploy-rs.lib.x86_64-linux; {
     sakura = {
-      hostname = "100.121.201.47";
+      hostname = "192.168.1.25";
       profiles.system = {
         user = "root";
         path = activate.nixos inputs.self.nixosConfigurations.sakura;
