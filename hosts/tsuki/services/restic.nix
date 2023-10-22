@@ -18,6 +18,8 @@
           "/home/*/Games"
           "/home/*/Videos"
           "/home/*/osu!"
+          "/home/*/mounted"
+          "/home/*/cryptomator/mounted"
           "/home/*/.cache"
           "/home/*/.wine"
           "/home/*/.rustup"
