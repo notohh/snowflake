@@ -49,7 +49,7 @@
       osu-lazer-bin
       runelite
       prismlauncher
-      (callPackage ../../pkgs/chatterino7 {})
+      (libsForQt5.callPackage ../../pkgs/chatterino7 {})
       (callPackage ../../pkgs/jellyfin-rpc {})
     ];
 
