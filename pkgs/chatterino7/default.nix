@@ -1,30 +1,35 @@
 {
   stdenv,
-  cmake,
-  pkgs,
   lib,
-  makeDesktopItem,
+  cmake,
+  pkg-config,
+  fetchFromGitHub,
+  qtbase,
+  qtsvg,
+  qtmultimedia,
+  qtimageformats,
+  qttools,
+  boost,
+  openssl,
+  wrapQtAppsHook,
+  libsecret,
 }:
 stdenv.mkDerivation rec {
   pname = "chatterino7";
   version = "7.4.6";
-  src = pkgs.fetchFromGitHub {
+
+  src = fetchFromGitHub {
     owner = "SevenTV";
     repo = pname;
-    rev = "9fd5cf1cb2b2f1c5c6e67d3428ed4a578e13ed9f";
+    rev = "v${version}";
     sha256 = "sha256-WFmv15rZPnTFruoYpXHUBj1NduppNE3dt5S/ArWL1Wg=";
     fetchSubmodules = true;
   };
-  nativeBuildInputs = with pkgs; [cmake pkg-config libsForQt5.qt5.wrapQtAppsHook];
-  buildInputs = with pkgs; [libsForQt5.qt5.qtbase libsForQt5.qt5.qtsvg libsForQt5.qt5.qtmultimedia libsForQt5.qt5.qtimageformats libsForQt5.qt5.qttools boost openssl libsecret];
-  configurationPhase = ''
-    mkdir build && cd build
-    cmake ..
-  '';
-  buildPhase = ''
-    make
-  '';
-  installPhase =
+
+  nativeBuildInputs = [cmake pkg-config wrapQtAppsHook];
+  buildInputs = [qtbase qtsvg qtmultimedia qtimageformats qttools boost openssl libsecret];
+
+  postInstall =
     ''
       mkdir -p "$out/bin"
       cp "bin/chatterino" "$out/bin"
@@ -33,19 +38,13 @@ stdenv.mkDerivation rec {
       mkdir -p $out/share/icons/hicolor/256x256/apps
       cp $src/resources/icon.png $out/share/icons/hicolor/256x256/apps/chatterino.png
     '';
-  postFixup = ''
-    mkdir -p $out/share/applications
-    ln -s ${desktopFile}/share/applications/* $out/share/applications
-  '';
-  desktopFile = makeDesktopItem {
-    name = "Chatterino7";
-    desktopName = "Chatterino7";
-    exec = "chatterino";
-    icon = "chatterino";
-    comment = meta.description;
-  };
   meta = with lib; {
     description = "Chat client for twitch.tv";
+    longDescription = ''
+      Chatterino7 is a fork of Chatterino 2.
+      This fork mainly contains features that aren't accepted into Chatterino 2,
+      most notably 7TV subscriber features.
+    '';
     homepage = "https://github.com/SevenTV/chatterino7";
     license = licenses.mit;
     maintainers = with maintainers; [notohh];
