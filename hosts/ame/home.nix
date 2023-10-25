@@ -43,7 +43,7 @@
       swaylock-effects
       swww
       hyprpicker
-      (callPackage ../../pkgs/chatterino7 {})
+      (libsForQt5.callPackage ../../pkgs/chatterino7 {})
     ];
 
     stateVersion = "23.05";
