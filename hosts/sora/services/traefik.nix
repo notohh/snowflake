@@ -33,6 +33,11 @@
             redirectscheme.scheme = "https";
             redirectscheme.permanent = true;
           };
+          cors = {
+            headers = {
+              accessControlAllowOriginList = "https://daphbot.notohh.dev";
+            };
+          };
         };
         routers = {
           api = {
@@ -117,6 +122,7 @@
             service = "forgejo";
             tls.domains = [{main = "*.flake.sh";}];
             tls.certresolver = "production";
+            middlewares = "cors";
           };
           rustypaste-insecure = {
             rule = "Host(`i.flake.sh`)";
