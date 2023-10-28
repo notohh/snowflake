@@ -1,7 +1,6 @@
 {
   config,
   pkgs,
-  inputs,
   ...
 }: {
   imports = [
@@ -31,8 +30,6 @@
   networking = {
     hostName = "tsuki";
   };
-
-  programs.sniffnet.enable = true;
 
   services = {
     xserver = {
@@ -110,6 +107,7 @@
   };
 
   environment.systemPackages = with pkgs; [
+    nil
     dconf
     polkit_gnome
     libvirt
@@ -117,6 +115,5 @@
     pinentry-gtk2
     jdk17
     comma
-    inputs.matugen.packages.x86_64-linux.default
   ];
 }
