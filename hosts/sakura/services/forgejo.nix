@@ -1,9 +1,4 @@
-{
-  pkgs,
-  lib,
-  config,
-  ...
-}: {
+{lib, ...}: {
   networking.firewall.allowedTCPPorts = [2222];
   services.forgejo = {
     enable = true;
@@ -11,6 +6,7 @@
     settings = {
       service.DISABLE_REGISTRATION = true;
       DEFAULT.APP_NAME = "forgejo";
+      log.LEVEL = "Debug";
       ui = {
         DEFAULT_THEME = "forgejo-dark";
       };
