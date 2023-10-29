@@ -2,6 +2,9 @@
   nixpkgs = {
     config = {
       allowUnfree = true;
+      permittedInsecurePackages = [
+        "electron-24.8.6"
+      ];
     };
     overlays = [inputs.prismlauncher.overlays.default];
   };
