@@ -5,10 +5,8 @@
     nixpkgs = {
       url = "github:nixos/nixpkgs/nixos-unstable";
     };
-    hyprland = {
-      url = "github:hyprwm/Hyprland";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    hyprland.url = "github:hyprwm/Hyprland";
+    prismlauncher.url = "github:PrismLauncher/PrismLauncher";
     deploy-rs = {
       url = "github:serokell/deploy-rs";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -33,13 +31,6 @@
       url = "github:viperML/nh";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    matugen = {
-      url = "github:/InioX/Matugen";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-    prismlauncher = {
-      url = "github:PrismLauncher/PrismLauncher";
-    };
   };
   outputs = {nixpkgs, ...} @ inputs: let
     system = "x86_64-linux";
@@ -50,7 +41,6 @@
     devShells.${system}.default = pkgs.mkShell {
       name = "snowflake";
       packages = with pkgs; [
-        nil
         git
         sops
         alejandra
