@@ -56,3 +56,4 @@
 + [seqizz](https://github.com/seqizz/nixos-config/blob/3ee51f406a8c7aa3afde9cdee97a43641b2ed2ef/modules/server/rustypaste.nix) - rustypaste config
 + [Yavko](https://github.com/yavko) - ironbar config used as reference
 + [hlissner](https://github.com/hlissner) - [security.nix](modules/security.nix)
++ [noc](https://git.flake.sh/noc) - networking diagram + a ton of other stuff
