@@ -21,7 +21,7 @@
     username = "notoh";
     homeDirectory = "/home/notoh";
     packages = with pkgs; [
-      brave
+      floorp
       discord
       signal-desktop
       jellyfin-media-player
