@@ -31,4 +31,4 @@ jobs:
           host: 100.82.146.40
           username: root
           key: ${{secrets.SSH_DEPLOY_KEY}}
-        run: nh clean all
+          script: nh clean all
