@@ -25,3 +25,10 @@ jobs:
         run: |
           cd .ssh
           nix run github:serokell/deploy-rs -- --ssh-opts="-i forgejo -o StrictHostKeyChecking=no" --skip-checks --targets .#arashi .#kariru .#sakura .#sora .#yuki
+      - name: garbage collect
+        uses: https://github.com/appleboy/ssh-action@1.0.0
+        with:
+          host: 100.82.146.40
+          username: root
+          key: ${{secrets.SSH_DEPLOY_KEY}}
+        run: nh clean all
