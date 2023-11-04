@@ -25,6 +25,7 @@
     yt-dlp
     nfs-utils
     dig
+    tailspin
   ];
 
   services.gpg-agent = {
