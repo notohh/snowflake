@@ -2,8 +2,8 @@ name: deploy systems
 
 on:
   push:
-    paths:
-      - "**.lock"
+    branches:
+      - main
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -26,7 +26,7 @@ jobs:
           cd .ssh
           nix run github:serokell/deploy-rs -- --ssh-opts="-i forgejo -o StrictHostKeyChecking=no" --skip-checks --targets .#arashi .#kariru .#sakura .#sora .#yuki
       - name: garbage collect
-        uses: https://github.com/appleboy/ssh-action@1.0.0
+        uses: https://github.com/appleboy/ssh-action@v1.0.0
         with:
           host: 100.82.146.40
           username: root
