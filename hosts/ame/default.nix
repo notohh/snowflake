@@ -17,9 +17,7 @@
     };
   };
 
-  programs.river = {
-    enable = true;
-  };
+  programs.hyprland.enable = true;
 
   networking.hostName = "ame";
   services.xserver.enable = true;
