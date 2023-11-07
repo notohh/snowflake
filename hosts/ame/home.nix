@@ -8,7 +8,6 @@
     ../../home/zellij
     ../../home/mako
     ../../home/gtk/catppuccin-red.nix
-    ../../home/wayland/river/waybar
   ];
 
   systemd.user.startServices = "sd-switch";
@@ -19,9 +18,10 @@
     homeDirectory = "/home/notoh";
     packages = with pkgs; [
       brave
-      webcord
-      session-desktop
+      floorp
+      discord
       spotify-player
+      cinny-desktop
       pavucontrol
       unzip
       p7zip
@@ -29,7 +29,7 @@
       mpv
       rustypaste-cli
       playerctl
-      logseq
+      obsidian
       cryptomator
       wayland
       glib
