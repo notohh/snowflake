@@ -21,9 +21,8 @@
     username = "notoh";
     homeDirectory = "/home/notoh";
     packages = with pkgs; [
-      floorp
+      brave
       discord
-      signal-desktop
       jellyfin-media-player
       cinny-desktop
       thunderbird
@@ -36,7 +35,6 @@
       imv
       mpv
       rustypaste-cli
-      playerctl
       obsidian
       gimp
       cryptomator
