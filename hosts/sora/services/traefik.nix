@@ -209,7 +209,7 @@
     staticConfigOptions = {
       log.level = "DEBUG";
       api.dashboard = true;
-      api.insecure = false;
+      api.insecure = true;
       global = {
         checkNewVersion = false;
         sendAnonymousUsage = false;
