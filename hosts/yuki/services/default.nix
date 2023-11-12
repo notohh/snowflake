@@ -3,9 +3,10 @@
     ./restic.nix
     ./traefik.nix
     ./stash.nix
-    ./homarr.nix
-    ./dashdot.nix
     ./jellyfin.nix
     ./minecraft.nix
+    ./wallos.nix
+    ./homepage.nix
+    ./glances.nix
   ];
 }
