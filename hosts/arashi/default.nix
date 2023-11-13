@@ -3,6 +3,7 @@
     ./hardware-configuration.nix
     ./services
     ../../modules
+    ../../modules/prometheus/exporters/postgres.nix
   ];
 
   boot.loader = {
