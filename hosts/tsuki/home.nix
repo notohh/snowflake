@@ -1,4 +1,8 @@
-{pkgs, ...}: {
+{
+  inputs,
+  pkgs,
+  ...
+}: {
   imports = [
     ../../home
     ../../home/wezterm
@@ -44,9 +48,9 @@
       gamemode
       mangohud
       bottles
-      osu-lazer-bin
       runelite
       prismlauncher
+      inputs.nix-gaming.packages.${pkgs.system}.osu-lazer-bin
       (libsForQt5.callPackage ../../pkgs/chatterino7 {})
       (callPackage ../../pkgs/jellyfin-rpc {})
     ];
