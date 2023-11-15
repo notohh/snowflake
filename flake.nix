@@ -8,7 +8,6 @@
     hyprland.url = "github:hyprwm/Hyprland";
     prismlauncher.url = "github:PrismLauncher/PrismLauncher";
     ags.url = "github:Aylur/ags";
-    matugen.url = "github:/InioX/Matugen";
     nix-gaming.url = "github:fufexan/nix-gaming";
     hyprland-plugins = {
       url = "github:hyprwm/hyprland-plugins";
