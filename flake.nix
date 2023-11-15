@@ -7,6 +7,13 @@
     };
     hyprland.url = "github:hyprwm/Hyprland";
     prismlauncher.url = "github:PrismLauncher/PrismLauncher";
+    ags.url = "github:Aylur/ags";
+    matugen.url = "github:/InioX/Matugen";
+    nix-gaming.url = "github:fufexan/nix-gaming";
+    hyprland-plugins = {
+      url = "github:hyprwm/hyprland-plugins";
+      inputs.hyprland.follows = "hyprland";
+    };
     deploy-rs = {
       url = "github:serokell/deploy-rs";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -31,6 +38,10 @@
       url = "github:viperML/nh";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    anyrun = {
+      url = "github:Kirottu/anyrun";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
   outputs = {nixpkgs, ...} @ inputs: let
     system = "x86_64-linux";
@@ -45,6 +56,7 @@
         sops
         alejandra
         yaml-language-server
+        lua-language-server
       ];
     };
     formatter.${system} = pkgs.alejandra;
