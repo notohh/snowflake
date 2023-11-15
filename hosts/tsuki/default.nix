@@ -115,6 +115,5 @@
     pinentry-gtk2
     jdk17
     comma
-    inputs.matugen.packages.${system}.default
   ];
 }
