@@ -14,12 +14,8 @@
       package = pkgs.jost;
     };
     theme = {
-      name = "Catppuccin-Mocha-Standard-Pink-Dark";
-      package = pkgs.catppuccin-gtk.override {
-        accents = ["pink"];
-        size = "standard";
-        variant = "mocha";
-      };
+      name = "Tokyonight-Dark-BL";
+      package = pkgs.tokyo-night-gtk;
     };
   };
 }
