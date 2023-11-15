@@ -91,6 +91,7 @@ _: {
     windowrulev2 = float, title:^(RuneLite)$
     windowrulev2 = move 850 360, title:^(RuneLite)$
     windowrulev2 = size 830 600, title:^(RuneLite)$
+    windowrulev2 = fullscreen, title:^(cs2)$
 
     #binds
     $mainMod = SUPER
