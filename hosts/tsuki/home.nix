@@ -14,7 +14,6 @@
     ../../home/mako
     ../../home/lf
     ../../home/zellij
-    ../../home/ironbar
     ../../home/spotify-player
     ../../home/wayland/hyprland
     ../../modules/swayidle.nix
