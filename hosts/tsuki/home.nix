@@ -5,13 +5,15 @@
 }: {
   imports = [
     ../../home
+    ../../home/ags
+    ../../home/anyrun
+    ../../home/cava
     ../../home/wezterm
     ../../home/zathura
     ../../home/gtk
     ../../home/mako
     ../../home/lf
     ../../home/zellij
-    ../../home/rofi
     ../../home/ironbar
     ../../home/spotify-player
     ../../home/wayland/hyprland
@@ -39,6 +41,7 @@
       imv
       mpv
       rustypaste-cli
+      drawio
       obsidian
       gimp
       cryptomator
