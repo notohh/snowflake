@@ -2,8 +2,8 @@ name: deploy systems
 
 on:
   push:
-    branches:
-      - master
+    paths:
+      - "**.lock"
 jobs:
   deploy:
     runs-on: ubuntu-latest
