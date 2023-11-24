@@ -4,7 +4,6 @@
     ../../home/wezterm
     ../../home/zathura
     ../../home/lf
-    ../../home/rofi
     ../../home/zellij
     ../../home/mako
     ../../home/gtk/catppuccin-red.nix
