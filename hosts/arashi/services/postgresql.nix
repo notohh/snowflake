@@ -21,30 +21,24 @@
     '';
     ensureUsers = [
       {
-        name = "postgres";
-        ensurePermissions = {
-          "ALL TABLES IN SCHEMA public" = "ALL PRIVILEGES";
-        };
-      }
-      {
         name = "hedgedoc";
-        ensurePermissions."DATABASE hedgedoc" = "ALL PRIVILEGES";
+        ensureDBOwnership = true;
       }
       {
         name = "forgejo";
-        ensurePermissions."DATABASE forgejo" = "ALL PRIVILEGES";
+        ensureDBOwnership = true;
       }
       {
         name = "grafana";
-        ensurePermissions."DATABASE grafana" = "ALL PRIVILEGES";
+        ensureDBOwnership = true;
       }
       {
         name = "authelia";
-        ensurePermissions."DATABASE authelia" = "ALL PRIVILEGES";
+        ensureDBOwnership = true;
       }
       {
         name = "vaultwarden";
-        ensurePermissions."DATABASE vaultwarden" = "ALL PRIVILEGES";
+        ensureDBOwnership = true;
       }
     ];
     ensureDatabases = [
