@@ -3,11 +3,9 @@ inputs: let
   sopsModule = inputs.sops-nix.nixosModules.sops;
   hmModule = inputs.home-manager.nixosModules.home-manager;
   hyprlandModule = inputs.hyprland.homeManagerModules.default;
-  ironbarModule = inputs.ironbar.homeManagerModules.default;
   nix-index-Module = inputs.nix-index-database.hmModules.nix-index;
   anyrunModule = inputs.anyrun.homeManagerModules.default;
   agsModule = inputs.ags.homeManagerModules.default;
-  stylixModule = inputs.stylix.homeManagerModules.stylix;
   inherit (inputs.nixpkgs.lib) nixosSystem;
 in {
   tsuki = nixosSystem {
@@ -26,7 +24,6 @@ in {
             imports = [
               ./tsuki/home.nix
               hyprlandModule
-              ironbarModule
               nix-index-Module
               anyrunModule
               agsModule
