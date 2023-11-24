@@ -10,8 +10,8 @@
   gtk = {
     enable = true;
     font = {
-      name = "jost";
-      package = pkgs.jost;
+      name = "Monaspace Krypton";
+      package = pkgs.monaspace;
     };
     theme = {
       name = "Tokyonight-Dark-BL";
