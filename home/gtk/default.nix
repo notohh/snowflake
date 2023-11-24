@@ -10,16 +10,12 @@
   gtk = {
     enable = true;
     font = {
-      name = "jost";
-      package = pkgs.jost;
+      name = "Monaspace Krypton";
+      package = pkgs.monaspace;
     };
     theme = {
-      name = "Catppuccin-Mocha-Standard-Pink-Dark";
-      package = pkgs.catppuccin-gtk.override {
-        accents = ["pink"];
-        size = "standard";
-        variant = "mocha";
-      };
+      name = "Tokyonight-Dark-BL";
+      package = pkgs.tokyo-night-gtk;
     };
   };
 }

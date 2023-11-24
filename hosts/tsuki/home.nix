@@ -1,13 +1,19 @@
-{pkgs, ...}: {
+{
+  inputs,
+  pkgs,
+  ...
+}: {
   imports = [
     ../../home
+    ../../home/ags
+    ../../home/anyrun
+    ../../home/cava
     ../../home/wezterm
     ../../home/zathura
     ../../home/gtk
     ../../home/mako
     ../../home/lf
     ../../home/zellij
-    ../../home/rofi
     ../../home/ironbar
     ../../home/spotify-player
     ../../home/wayland/hyprland
@@ -35,6 +41,7 @@
       imv
       mpv
       rustypaste-cli
+      drawio
       obsidian
       gimp
       cryptomator
@@ -44,9 +51,9 @@
       gamemode
       mangohud
       bottles
-      osu-lazer-bin
       runelite
       prismlauncher
+      inputs.nix-gaming.packages.${pkgs.system}.osu-lazer-bin
       (libsForQt5.callPackage ../../pkgs/chatterino7 {})
       (callPackage ../../pkgs/jellyfin-rpc {})
     ];

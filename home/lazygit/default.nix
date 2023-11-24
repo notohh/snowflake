@@ -5,14 +5,16 @@ _: {
       windowSize = "normal";
       gui.theme = {
         lightTheme = false;
-        activeBorderColor = ["#a6e3a1" "bold"];
-        inactiveBorderColor = ["#cdd6f4"];
-        optionsTextColor = ["#89b4fa"];
-        selectedLineBgColor = ["#313244"];
-        selectedRangeByColor = ["#313244"];
+        activeBorderColor = ["#2ac3de" "bold"];
+        inactiveBorderColor = ["#f7768e"];
+        optionsTextColor = [" #c0caf5"];
+        selectedLineBgColor = ["#24283b"];
+        selectedRangeByColor = ["#24283b"];
         cherryPickedCommitBgColor = ["#94e2d5"];
         cherryPickedCommitFgColor = ["#89b4fa"];
         unstagedChangesColor = ["red"];
+        showRandomTip = false;
+        animateExplosion = true;
       };
     };
   };

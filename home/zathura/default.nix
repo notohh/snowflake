@@ -2,44 +2,35 @@ _: {
   programs.zathura = {
     enable = true;
     extraConfig = ''
-      set default-fg                "#CDD6F4"
-      set default-bg 			          "#1E1E2E"
-
-      set completion-bg		          "#313244"
-      set completion-fg		          "#CDD6F4"
-      set completion-highlight-bg	  "#575268"
-      set completion-highlight-fg	  "#CDD6F4"
-      set completion-group-bg		    "#313244"
-      set completion-group-fg		    "#89B4FA"
-
-      set statusbar-fg		          "#CDD6F4"
-      set statusbar-bg		          "#313244"
-
-      set notification-bg		        "#313244"
-      set notification-fg		        "#CDD6F4"
-      set notification-error-bg	    "#313244"
-      set notification-error-fg	    "#F38BA8"
-      set notification-warning-bg	  "#313244"
-      set notification-warning-fg	  "#FAE3B0"
-
-      set inputbar-fg			          "#CDD6F4"
-      set inputbar-bg 		          "#313244"
-
-      set recolor-lightcolor		    "#1E1E2E"
-      set recolor-darkcolor		      "#CDD6F4"
-
-      set index-fg			            "#CDD6F4"
-      set index-bg			            "#1E1E2E"
-      set index-active-fg		        "#CDD6F4"
-      set index-active-bg		        "#313244"
-
-      set render-loading-bg		      "#1E1E2E"
-      set render-loading-fg		      "#CDD6F4"
-
-      set highlight-color		        "#575268"
-      set highlight-fg              "#F5C2E7"
-      set highlight-active-color	  "#F5C2E7"
-
+      set notification-error-bg "#f7768e"
+      set notification-error-fg "#c0caf5"
+      set notification-warning-bg "#e0af68"
+      set notification-warning-fg "#414868"
+      set notification-bg "#1a1b26"
+      set notification-fg "#c0caf5"
+      set completion-bg "#1a1b26"
+      set completion-fg "#a9b1d6"
+      set completion-group-bg "#1a1b26"
+      set completion-group-fg "#a9b1d6"
+      set completion-highlight-bg "#414868"
+      set completion-highlight-fg "#c0caf5"
+      set index-bg "#1a1b26"
+      set index-fg "#c0caf5"
+      set index-active-bg "#414868"
+      set index-active-fg "#c0caf5"
+      set inputbar-bg "#1a1b26"
+      set inputbar-fg "#c0caf5"
+      set statusbar-bg "#1a1b26"
+      set statusbar-fg "#c0caf5"
+      set highlight-color "#e0af68"
+      set highlight-active-color "#9ece6a"
+      set default-bg "#1a1b26"
+      set default-fg "#c0caf5"
+      set render-loading true
+      set render-loading-fg "#1a1b26"
+      set render-loading-bg "#c0caf5"
+      set recolor-lightcolor "#1a1b26"
+      set recolor-darkcolor "#c0caf5"
     '';
   };
 }

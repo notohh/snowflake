@@ -10,8 +10,8 @@
       simplified_ui = false;
       default_layout = "default";
       ui.pane_frames.rounded_corners = true;
-      theme = "catppuccin-mocha";
-      themes.catppuccin-mocha = {
+      theme = "tokyonight";
+      themes.catppuccin-mocha = { 
         bg = "#585b70";
         fg = "#cdd6f4";
         red = "#f38ba8";

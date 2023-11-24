@@ -1,9 +1,12 @@
 {
+  inputs,
   config,
   pkgs,
   ...
 }: {
   imports = [
+    inputs.nix-gaming.nixosModules.steamCompat
+    inputs.nix-gaming.nixosModules.pipewireLowLatency
     ./hardware-configuration.nix
     ./services
     ../../home/wayland/hyprland/wayland.nix
@@ -52,17 +55,6 @@
     };
   };
 
-  environment.etc = {
-    "pipewire/pipewire.conf.d/92-low-latency.conf".text = ''
-      context.properties = {
-        default.clock.rate = 48000
-        default.clock.quantum = 1024
-        default.clock.min-quantum = 16
-        default.clock.max-quantum = 2048
-      }
-    '';
-  };
-
   services.pcscd.enable = true;
   services.davfs2.enable = true;
 
@@ -75,10 +67,18 @@
     alsa.support32Bit = true;
     pulse.enable = true;
     wireplumber.enable = true;
+    lowLatency = {
+      enable = true;
+      quantum = 64;
+      rate = 48000;
+    };
   };
 
   programs.steam = {
     enable = true;
+    extraCompatPackages = [
+      inputs.nix-gaming.packages.${pkgs.system}.proton-ge
+    ];
   };
 
   security.polkit.enable = true;
@@ -92,7 +92,7 @@
     nvidia = {
       powerManagement.enable = true;
       modesetting.enable = true;
-      package = config.boot.kernelPackages.nvidiaPackages.stable;
+      package = config.boot.kernelPackages.nvidiaPackages.production;
     };
     opengl = {
       enable = true;

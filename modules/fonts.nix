@@ -4,6 +4,7 @@
     fontDir.enable = true;
     packages = with pkgs; [
       corefonts
+      monaspace
       jost
       jetbrains-mono
       nerdfonts

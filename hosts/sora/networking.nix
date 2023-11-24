@@ -1,10 +1,10 @@
 {lib, ...}: {
   environment.etc = {
-    "resolv.conf".text = "nameserver 8.8.8.8\n";
+    "resolv.conf".text = "nameserver 1.1.1.1\n";
   };
   networking = {
     nameservers = [
-      "8.8.8.8"
+      "1.1.1.1"
     ];
     defaultGateway = "172.31.1.1";
     defaultGateway6 = {

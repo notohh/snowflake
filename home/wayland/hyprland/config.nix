@@ -19,7 +19,7 @@ _: {
       gaps_in = 10
       gaps_out = 20
       border_size = 4
-      col.active_border = rgb(f5c2e7)
+      col.active_border = rgb(f7768e) rgb(2ac3de)
       col.inactive_border = rgb(6c7086)
 
       layout = dwindle
@@ -48,12 +48,17 @@ _: {
       enabled = yes
 
       bezier = fastBezier, 0.05, 1.1, 0.2, 1.0
+      bezier = linear, 0.0, 0.0, 1.0, 1.0
+      bezier = liner, 1, 1, 1, 1
 
       animation = windows, 1, 7, fastBezier, slide
       animation = windowsOut, 1, 7, fastBezier, slide
       animation = border, 1, 10, fastBezier
       animation = fade, 1, 7, fastBezier
       animation = workspaces, 1, 6, fastBezier
+      animation = border, 1, 1, liner
+      animation = borderangle, 1, 40, liner, loop
+      animation = borderangle, 1, 100, linear, loop
     }
 
     dwindle {
@@ -71,6 +76,10 @@ _: {
 
     device:epic mouse V1 {
       sensitivity = -0.5
+    }
+
+    misc {
+      disable_hyprland_logo = true
     }
 
     exec-once = swww init
@@ -91,6 +100,7 @@ _: {
     windowrulev2 = float, title:^(RuneLite)$
     windowrulev2 = move 850 360, title:^(RuneLite)$
     windowrulev2 = size 830 600, title:^(RuneLite)$
+    windowrulev2 = fullscreen, title:^(cs2)$
 
     #binds
     $mainMod = SUPER
@@ -98,7 +108,7 @@ _: {
     bind = $mainMod, Return, exec, wezterm
     bind = $mainMod, Q, killactive,
     bind = $mainMod, V, togglefloating,
-    bind = $mainMod, R, exec, rofi -modi run -show drun
+    bind = $mainMod, R, exec, anyrun
     bind = $mainMod, P, pseudo, # dwindle
     bind = $mainMod, J, togglesplit, # dwindle
     bind =, Print, exec, grim -g "$(slurp)" - | swappy -f -

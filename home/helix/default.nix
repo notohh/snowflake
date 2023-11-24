@@ -6,7 +6,7 @@
   programs.helix = {
     enable = true;
     settings = {
-      theme = "catppuccin_mocha";
+      theme = "tokyonight";
       editor = {
         auto-save = true;
         true-color = true;

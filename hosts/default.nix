@@ -5,6 +5,9 @@ inputs: let
   hyprlandModule = inputs.hyprland.homeManagerModules.default;
   ironbarModule = inputs.ironbar.homeManagerModules.default;
   nix-index-Module = inputs.nix-index-database.hmModules.nix-index;
+  anyrunModule = inputs.anyrun.homeManagerModules.default;
+  agsModule = inputs.ags.homeManagerModules.default;
+  stylixModule = inputs.stylix.homeManagerModules.stylix;
   inherit (inputs.nixpkgs.lib) nixosSystem;
 in {
   tsuki = nixosSystem {
@@ -25,6 +28,8 @@ in {
               hyprlandModule
               ironbarModule
               nix-index-Module
+              anyrunModule
+              agsModule
             ];
           };
         };
