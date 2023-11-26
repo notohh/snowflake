@@ -7,7 +7,7 @@ _: {
         address = "0.0.0.0";
         server_name = "matrix.flake.sh";
         allow_registration = true;
-        allow_federation = false;
+        allow_federation = true;
         allow_encryption = true;
         log = "warn";
         max_concurrent_requests = 100;
