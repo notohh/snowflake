@@ -42,7 +42,7 @@
 + multi-system home-manager setup
 + secrets provisioning with [sops-nix](https://github.com/Mic92/sops-nix)
 + multiple fully declarative self hosted services (and some containerized ones, with a docker backend)
-+ wayland configs for hyprland and river
++ wayland config for hyprland
 + custom packages not found in nixpkgs
 
 ## :busts_in_silhouette: Credit

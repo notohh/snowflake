@@ -4,7 +4,10 @@ the home of my dotfiles. configured in, and managed by home-manager.
 
 name            | description
 --------------- | -----------
+`ags`           | aylurs gtk shell
+`anyrun`        | wayland native application launcher
 `bat`           | cat replacement
+`cava`          | terminal audio visualizer 
 `direnv`        | a shell extension, that loads environment variables in certain directories
 `default`       | used for commonly shared modules, for multiple home-manager configs
 `git`           | version control system
@@ -17,7 +20,6 @@ name            | description
 `mako`          | a lightweight wayland notification daemon
 `neofetch`      | fetch program
 `nushell`       | my shell of choice
-`rofi`          | application launcher
 `spotify-player`| terminal music player for spotify
 `starship`      | shell prompt
 `wayland`       | has my hyprland config, along with session variables for wayland
