@@ -1,4 +1,12 @@
-_: {
+{pkgs, ...}: {
+  xdg.configFile."hypr/hyprpaper.conf".text = ''
+    preload = ~/Pictures/wallpapers/city.png
+    wallpaper = HDMI-A-1,~/Pictures/wallpapers/city.png
+    wallpaper = DP-1,~/Pictures/wallpapers/city.png
+    wallpaper = DP-2,~/Pictures/wallpapers/city.png
+    wallpaper = DP-3,~/Pictures/wallpapers/city.png
+  '';
+
   wayland.windowManager.hyprland.extraConfig = ''
 
     monitor = HDMI-A-1,1920x1080@60, 3640x560, auto, transform, 3 #right
@@ -82,10 +90,9 @@ _: {
       disable_hyprland_logo = true
     }
 
-    exec-once = swww init
-
+    exec-once = hyprpaper
     exec-once = dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
-    exec-once = /nix/store/gjbi20m2wz9xhm18ifmcdl45cpgd7hpz-polkit-gnome-0.105/libexec/polkit-gnome-authentication-agent-1
+    exec-once = ${pkgs.polkit_gnome}/libexec/polkit-gnome-authentication-agent-1
 
     # swayidle / lock
     exec-once = ~/.local/bin/lock
@@ -98,6 +105,7 @@ _: {
     windowrulev2 = float, title:^(Friends List)$
     windowrulev2 = float, title:^(Cryptomator)$
     windowrulev2 = float, title:^(RuneLite)$
+    windowrulev2 = float, title:^(Lutris)$
     windowrulev2 = move 850 360, title:^(RuneLite)$
     windowrulev2 = size 830 600, title:^(RuneLite)$
     windowrulev2 = fullscreen, title:^(cs2)$

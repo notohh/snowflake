@@ -26,12 +26,11 @@ in {
     slurp
     swappy
     wl-clipboard
-    wlogout
     wlr-randr
     swayidle
     swaylock-effects
-    swww
     hyprpicker
+    hyprpaper
   ];
 
   services.dbus.enable = true;
