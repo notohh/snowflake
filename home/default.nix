@@ -26,6 +26,7 @@
     nfs-utils
     dig
     tailspin
+    nitch
   ];
 
   services.gpg-agent = {
