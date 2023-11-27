@@ -15,5 +15,5 @@ return {
     enable_tab_bar = false,
     color_scheme = 'tokyonight',
 
-    window_padding = { top = 0, bottom = 0, left = 0, right = 0 }
+    window_padding = { top = 20, bottom = 20, left = 20, right = 20 }
 }
