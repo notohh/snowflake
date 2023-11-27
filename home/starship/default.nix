@@ -9,43 +9,62 @@
     enable = true;
     enableNushellIntegration = true;
     settings = {
+      palette = "tokyonight";
+      add_newline = false;
+      palettes.tokyonight = {
+        red = "#f7768e";
+        orange = "#ff9e64";
+        yellow = "#e0af68";
+        light-green = "#9ece6a";
+        green = "#73daca";
+        turquoise = "#89ddff";
+        light-cyan = "#b4f9f8";
+        teal = "#2ac3de";
+        cyan = "#7dcfff";
+        blue = "#7aa2f7";
+        magenta = "#bb9af7";
+        white = "#c0caf5";
+        light-gray = "#9aa5ce";
+        parameters = "#cfc9c2";
+        comment = "#565f89";
+        black = "#414868";
+        foreground = "#a9b1d6";
+        background = "#1a1b26";
+      };
       format = lib.concatStrings [
-        "[░▒▓](#f5c2e7)"
-        "$username"
+        "$character"
         "$hostname"
-        "[](bg:#f38ba8 fg:#f5c2e7)"
         "$directory"
-        "[](fg:#f38ba8 bg:#eb7c92)"
         "$git_branch"
         "$git_status"
-        "[](fg:#eb7c92 bg:#e6657f)"
-        "$c"
-        "$golang"
-        "$nodejs"
         "$rust"
-        "$docker_context"
-        "[](fg:#e6657f bg:#e05a75)"
-        "$time"
-        "[](fg:#e05a75)"
+        "$golang"
       ];
+      right_format = lib.concatStrings [
+        "$nix_shell"
+      ];
+      character = {
+        error_symbol = "[](bold red)";
+        success_symbol = "[](bold teal)";
+      };
       username = {
-        show_always = true;
-        style_user = "bg:#f5c2e7 fg:#11111b";
-        style_root = "bg:#f5c2e7 fg:#11111b";
-        format = "[ $user]($style)";
+        show_always = false;
+        format = "[$user]($style)";
+        style_user = "red";
       };
       hostname = {
-        ssh_symbol = "";
-        style = "bg:#f5c2e7 fg:#11111b";
-        format = "[@$hostname]($style)";
-        ssh_only = false;
+        ssh_symbol = "🌐";
+        format = "[on $hostname $ssh_symbol]($style)";
+        ssh_only = true;
         disabled = false;
       };
       directory = {
-        style = "bg:#f38ba8 fg:#11111b";
-        format = "[ $path ]($style)";
+        format = "[$path ]($style)";
         truncation_length = 3;
         truncation_symbol = "…/";
+        read_only = "🔒";
+        style = "teal";
+        home_symbol = "";
       };
       directory.substitutions = {
         "Documents" = " ";
@@ -53,45 +72,33 @@
         "Music" = " ";
         "Pictures" = " ";
       };
-      c = {
-        symbol = " ";
-        style = "bg:#e6657f fg:#11111b";
-        format = "[ $symbol ($version) ]($style)";
-      };
-      docker_context = {
-        symbol = " ";
-        style = "bg:#e6657f fg:#11111b";
-        format = "[ $symbol $context ]($style) $path";
+      nix_shell = {
+        disabled = false;
+        impure_msg = "[impure shell](bold red)";
+        pure_msg = "[pure shell](bold green)";
+        unknown_msg = "[unknown shell](bold yellow)";
+        format = "via [ $state( \($name\))](bold teal)";
       };
       git_branch = {
         symbol = "";
-        style = "bg:#eb7c92 fg:#11111b";
-        format = "[ $symbol $branch ]($style)";
+        format = "[$symbol $branch ]($style)";
       };
       git_status = {
-        style = "bg:#eb7c92 fg:#11111b";
         format = "[$all_status$ahead_behind ]($style)";
       };
       golang = {
         symbol = " ";
-        style = "bg:#e6657f fg:#11111b";
-        format = "[ $symbol ($version) ]($style)";
-      };
-      nodejs = {
-        symbol = "";
-        style = "bg:#e6657f fg:#11111b";
-        format = "[ $symbol ($version) ]($style)";
+        format = "[$symbol ($version) ]($style)";
       };
       rust = {
         symbol = "";
-        style = "bg:#e6657f fg:#11111b";
-        format = "[ $symbol ($version) ]($style)";
+        format = "[$symbol ($version) ]($style)";
       };
       time = {
         disabled = false;
-        time_format = "%R"; # Hour:Minute Format
-        style = "bg:#e05a75 fg:#11111b";
+        time_format = "%R";
         format = "[ $time ]($style)";
+        style = "red";
       };
     };
   };
