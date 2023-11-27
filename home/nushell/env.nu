@@ -18,10 +18,10 @@ def create_right_prompt [] {
 
 $env.PROMPT_COMMAND = {|| create_left_prompt }
 $env.PROMPT_COMMAND_RIGHT = {|| create_right_prompt }
-$env.PROMPT_INDICATOR = {|| "〉" }
-$env.PROMPT_INDICATOR_VI_INSERT = {|| ": " }
-$env.PROMPT_INDICATOR_VI_NORMAL = {|| "〉" }
-$env.PROMPT_MULTILINE_INDICATOR = {|| "::: " }
+$env.PROMPT_INDICATOR = {|| "" }
+$env.PROMPT_INDICATOR_VI_INSERT = {|| "" }
+$env.PROMPT_INDICATOR_VI_NORMAL = {|| "" }
+$env.PROMPT_MULTILINE_INDICATOR = {|| "" }
 $env.ENV_CONVERSIONS = {
   "PATH": {
     from_string: { |s| $s | split row (char esep) | path expand -n }

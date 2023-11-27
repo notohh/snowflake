@@ -28,7 +28,8 @@ alias sxfix = nix run "nixpkgs#statix" -- fix
 alias dl = yt-dlp -P ~/Videos/downloaded
 alias dlcd = yt-dlp
 alias up = rpaste -s "https://i.flake.sh/" -e 1day
-alias tail = spin
+alias tail = tspin
+nitch
 
 $env.config = {
 
