@@ -15,7 +15,6 @@ name            | description
 `helix`         | modal text editor
 `ironbar`       | wayland specific bar, written in Rust
 `lazygit`       | terminal based git command system
-`lf`            | terminal based file manager
 `librewolf`     | a hardened firefox fork, and my browser of choice
 `mako`          | a lightweight wayland notification daemon
 `neofetch`      | fetch program
