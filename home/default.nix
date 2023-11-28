@@ -6,7 +6,6 @@
     ./helix
     ./git
     ./lazygit
-    ./lf
     ./direnv
     ./bat
   ];
@@ -27,6 +26,7 @@
     dig
     tailspin
     nitch
+    joshuto
   ];
 
   services.gpg-agent = {
