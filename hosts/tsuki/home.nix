@@ -12,7 +12,6 @@
     ../../home/zathura
     ../../home/gtk
     ../../home/mako
-    ../../home/lf
     ../../home/zellij
     ../../home/spotify-player
     ../../home/wayland/hyprland
@@ -26,7 +25,7 @@
     username = "notoh";
     homeDirectory = "/home/notoh";
     packages = with pkgs; [
-      brave
+      floorp
       discord
       jellyfin-media-player
       cinny-desktop

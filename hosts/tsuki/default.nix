@@ -17,7 +17,7 @@
   boot.loader = {
     systemd-boot = {
       enable = true;
-      configurationLimit = 8;
+      configurationLimit = 10;
     };
     efi = {
       canTouchEfiVariables = true;
@@ -58,7 +58,6 @@
   services.pcscd.enable = true;
   services.davfs2.enable = true;
 
-  sound.enable = true;
   hardware.pulseaudio.enable = false;
   security.rtkit.enable = true;
   services.pipewire = {
@@ -96,9 +95,7 @@
     };
     opengl = {
       enable = true;
-      extraPackages = with pkgs; [
-        nvidia-vaapi-driver
-      ];
+      extraPackages = [pkgs.nvidia-vaapi-driver];
     };
     opentabletdriver = {
       enable = true;
@@ -109,7 +106,6 @@
   environment.systemPackages = with pkgs; [
     nil
     dconf
-    polkit_gnome
     libvirt
     qemu_kvm
     pinentry-gtk2
