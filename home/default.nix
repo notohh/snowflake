@@ -56,7 +56,7 @@
         User notoh
         IdentityFile ~/.ssh/arashi
       Host sora
-        HostName 100.87.54.48
+        HostName 100.104.42.96
         User notoh
         IdentityFile ~/.ssh/sora
       Host daphbot
