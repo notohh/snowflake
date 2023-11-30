@@ -205,8 +205,8 @@
         };
         services = {
           gitssh.loadBalancer.servers = [{url = "tcp://100.121.201.47:2222";}];
-          uptime-kuma.loadBalancer.servers = [{url = "http://100.87.54.48:4000";}];
-          gotify.loadBalancer.servers = [{url = "http://100.87.54.48:3000";}];
+          uptime-kuma.loadBalancer.servers = [{url = "http://100.104.42.96:4000";}];
+          gotify.loadBalancer.servers = [{url = "http://100.104.42.96:3000";}];
           conduit.loadBalancer.servers = [{url = "http://100.121.201.47:6167";}];
           authelia.loadBalancer.servers = [{url = "http://100.121.201.47:9091";}];
           foundryvtt.loadBalancer.servers = [{url = "http://100.121.201.47:30000";}];
