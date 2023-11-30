@@ -1,5 +1,3 @@
-# Nushell Config File
-
 source ~/.cache/starship/init.nu
 
 alias zj = zellij
@@ -28,6 +26,7 @@ alias sxfix = nix run "nixpkgs#statix" -- fix
 alias dl = yt-dlp -P ~/Videos/downloaded
 alias dlcd = yt-dlp
 alias up = rpaste -s "https://i.flake.sh/" -e 1day
+alias shorten = rpaste -s "https://i.flake.sh/" -e 1day -u
 alias tail = tspin
 nitch
 
