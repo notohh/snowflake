@@ -41,7 +41,7 @@ inputs: {
       magicRollback = true;
     };
     sora = {
-      hostname = "100.87.54.48";
+      hostname = "100.104.42.96";
       profiles.system = {
         user = "root";
         path = activate.nixos inputs.self.nixosConfigurations.sora;

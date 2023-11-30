@@ -9,6 +9,7 @@
     inputs.nix-gaming.nixosModules.pipewireLowLatency
     ./hardware-configuration.nix
     ./services
+    ./networking.nix
     ../../home/wayland/hyprland/wayland.nix
     ../../modules
     ../../modules/fonts.nix

@@ -4,5 +4,6 @@
     ./uptimekuma.nix
     ./gotify.nix
     ./tailscale.nix
+    ./neko.nix
   ];
 }

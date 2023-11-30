@@ -2,6 +2,7 @@
   imports = [
     ./hardware-configuration.nix
     ./services
+    ./networking.nix
     ../../modules
     ../../modules/prometheus/exporters/postgres.nix
   ];

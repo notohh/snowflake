@@ -52,7 +52,7 @@ _: {
           {
             name = "Prometheus-sora";
             type = "prometheus";
-            url = "http://100.87.54.48:9090";
+            url = "http://100.104.42.96:9090";
             orgId = 1;
           }
         ];

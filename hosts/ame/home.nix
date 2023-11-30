@@ -3,7 +3,6 @@
     ../../home
     ../../home/wezterm
     ../../home/zathura
-    ../../home/lf
     ../../home/zellij
     ../../home/mako
     ../../home/gtk/catppuccin-red.nix

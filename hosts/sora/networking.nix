@@ -1,14 +1,12 @@
 {lib, ...}: {
-  environment.etc = {
-    "resolv.conf".text = "nameserver 1.1.1.1\n";
-  };
   networking = {
     nameservers = [
-      "1.1.1.1"
+      "185.12.64.2"
+      "185.12.64.1"
     ];
     defaultGateway = "172.31.1.1";
     defaultGateway6 = {
-      address = "fe80::1";
+      address = "";
       interface = "eth0";
     };
     dhcpcd.enable = false;
@@ -17,18 +15,8 @@
       eth0 = {
         ipv4.addresses = [
           {
-            address = "5.161.181.184";
+            address = "5.161.102.107";
             prefixLength = 32;
-          }
-        ];
-        ipv6.addresses = [
-          {
-            address = "2a01:4ff:f0:337a::1";
-            prefixLength = 64;
-          }
-          {
-            address = "fe80::9400:2ff:fe4e:83c1";
-            prefixLength = 64;
           }
         ];
         ipv4.routes = [
@@ -37,16 +25,11 @@
             prefixLength = 32;
           }
         ];
-        ipv6.routes = [
-          {
-            address = "fe80::1";
-            prefixLength = 128;
-          }
-        ];
       };
     };
   };
   services.udev.extraRules = ''
-    ATTR{address}=="96:00:02:4e:83:c1", NAME="eth0"
+    ATTR{address}=="96:00:02:c2:dc:83", NAME="eth0"
+
   '';
 }
