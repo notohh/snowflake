@@ -35,7 +35,7 @@
       fi
 
       # otherwise authenticate with tailscale
-      ${tailscale}/bin/tailscale up -authkey file:${config.sops.secrets.tsauth-sakura.path} --exit-node=100.87.54.48 --exit-node-allow-lan-access=true --accept-dns=false
+      ${tailscale}/bin/tailscale up -authkey file:${config.sops.secrets.tsauth-sakura.path} --exit-node=100.104.42.96 --exit-node-allow-lan-access=true --accept-dns=false
     '';
   };
 }
