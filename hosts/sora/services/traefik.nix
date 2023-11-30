@@ -189,6 +189,19 @@
             tls.domains = [{main = "*.flake.sh";}];
             tls.certresolver = "production";
           };
+          neko-insecure = {
+            rule = "Host(`neko.flake.sh`)";
+            entrypoints = ["web"];
+            service = "neko";
+            middlewares = "redirect-to-https";
+          };
+          neko = {
+            rule = "Host(`neko.flake.sh`)";
+            entrypoints = ["websecure"];
+            service = "neko";
+            tls.domains = [{main = "*.flake.sh";}];
+            tls.certresolver = "production";
+          };
         };
         services = {
           gitssh.loadBalancer.servers = [{url = "tcp://100.121.201.47:2222";}];
@@ -203,6 +216,7 @@
           hedgedoc.loadBalancer.servers = [{url = "http://100.121.201.47:3300";}];
           vaultwarden.loadBalancer.servers = [{url = "http://100.121.201.47:8222";}];
           searxng.loadBalancer.servers = [{url = "http://100.121.201.47:8100";}];
+          neko.loadBalancer.servers = [{url = "http://100.104.42.96:8085";}];
         };
       };
     };
