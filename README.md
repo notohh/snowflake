@@ -26,6 +26,7 @@
 + :computer: [hosts](hosts)
   - :cloud_with_rain: [ame](hosts/ame)
   - :cloud_with_lightning_and_rain: [arashi](hosts/arashi)
+  - :hibiscus: [haru](hosts/haru)
   - :wind_chime: [kariru](hosts/kariru)
   - :cherry_blossom: [sakura](hosts/sakura)
   - :milky_way: [sora](hosts/sora)

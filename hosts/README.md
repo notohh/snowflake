@@ -6,6 +6,7 @@ Name            | Description
 --------------- | -----------
 `ame`           | T480 laptop, mainly used for experimenting atm
 `arashi`        | postgres / redis vm
+`haru`          | adblocker / DNS proxy vm
 `kariru`        | *arr stack / seedbox vm
 `sakura`        | main vm, hosting most internet connected services
 `sora`          | hetzner vps
