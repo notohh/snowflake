@@ -16,7 +16,7 @@ _: {
       {
         job_name = "traefik";
         scrape_interval = "15s";
-        static_configs = [{targets = ["100.87.54.48:8080"];}];
+        static_configs = [{targets = ["100.104.42.96:8080"];}];
       }
       {
         job_name = "redis_exporter";
@@ -27,6 +27,11 @@ _: {
         job_name = "postgres";
         scrape_interval = "15s";
         static_configs = [{targets = ["100.94.214.100:9003"];}];
+      }
+      {
+        job_name = "blocky";
+        scrape_interval = "15s";
+        static_configs = [{targets = ["100.73.192.45:4000"];}];
       }
     ];
     exporters = {
