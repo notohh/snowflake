@@ -25,5 +25,17 @@
         protected-mode = "no";
       };
     };
+    blocky = {
+      enable = true;
+      openFirewall = true;
+      port = 6381;
+      bind = null;
+      databases = 16;
+      logLevel = "debug";
+      requirePass = "blocky";
+      settings = {
+        protected-mode = "no";
+      };
+    };
   };
 }
