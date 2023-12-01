@@ -173,4 +173,24 @@ in {
       }
     ];
   };
+  haru = nixosSystem {
+    inherit system;
+    specialArgs = {inherit inputs;};
+    modules = [
+      ./haru
+      sopsModule
+      hmModule
+      {
+        home-manager = {
+          useGlobalPkgs = true;
+          useUserPackages = true;
+          users.notoh = {
+            imports = [
+              ./haru/home.nix
+            ];
+          };
+        };
+      }
+    ];
+  };
 }

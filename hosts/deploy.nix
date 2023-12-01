@@ -60,5 +60,15 @@ inputs: {
       sshOpts = ["-t" "-i" "~/.ssh/forgejo"];
       magicRollback = true;
     };
+    haru = {
+      hostname = "100.73.192.45";
+      profiles.system = {
+        user = "root";
+        path = activate.nixos inputs.self.nixosConfigurations.haru;
+      };
+      sshUser = "root";
+      sshOpts = ["-t" "-i" "~/.ssh/forgejo"];
+      magicRollback = true;
+    };
   };
 }
