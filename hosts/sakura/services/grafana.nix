@@ -2,6 +2,8 @@ _: {
   services.grafana = {
     enable = true;
     settings = {
+      "auth.anonymous".enabled = true;
+      "auth.basic".enabled = false;
       server = {
         root_url = "https://metrics.flake.sh";
         domain = "metrics.flake.sh";
@@ -9,8 +11,6 @@ _: {
         http_addr = "0.0.0.0";
         http_port = 3100;
       };
-      "auth.anonymous".enabled = true;
-      "auth.basic".enabled = false;
       users = {
         allow_signup = false;
       };
@@ -20,6 +20,10 @@ _: {
         name = "grafana";
         user = "grafana";
         ssl_mode = "disable";
+      };
+      panels = {
+        disable_sanitize_html = false;
+        enable_alpha = true;
       };
     };
     provision = {
@@ -54,6 +58,17 @@ _: {
             type = "prometheus";
             url = "http://100.104.42.96:9090";
             orgId = 1;
+          }
+          {
+            name = "Prometheus-haru";
+            type = "prometheus";
+            url = "http://100.73.192.45:9090";
+            orgId = 1;
+            jsonData = {
+              graphiteVersion = "1.1";
+              tlsAuth = false;
+              tlsAuthWithCACert = false;
+            };
           }
         ];
       };
