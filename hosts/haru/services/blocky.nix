@@ -1,6 +1,8 @@
-{...}: {
+{pkgs, ...}: {
   networking.firewall.allowedTCPPorts = [53 4000];
   networking.firewall.allowedUDPPorts = [53];
+
+  environment.systemPackages = [pkgs.blocky];
 
   services.blocky = {
     enable = true;
