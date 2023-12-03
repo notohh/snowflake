@@ -176,19 +176,6 @@
             tls.domains = [{main = "*.flake.sh";}];
             tls.certresolver = "production";
           };
-          searxng-insecure = {
-            rule = "Host(`search.flake.sh`)";
-            entrypoints = ["web"];
-            service = "searxng";
-            middlewares = "redirect-to-https";
-          };
-          searxng = {
-            rule = "Host(`search.flake.sh`)";
-            entrypoints = ["websecure"];
-            service = "searxng";
-            tls.domains = [{main = "*.flake.sh";}];
-            tls.certresolver = "production";
-          };
           neko-insecure = {
             rule = "Host(`neko.flake.sh`)";
             entrypoints = ["web"];
