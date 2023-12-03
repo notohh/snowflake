@@ -34,7 +34,7 @@
   };
 
   fileSystems."/nas" = {
-    device = "192.168.1.71:/volume1/tsuki";
+    device = "192.168.1.199:/mnt/Sutoreji/tsuki";
     fsType = "nfs";
   };
 

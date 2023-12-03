@@ -18,7 +18,7 @@
   };
 
   fileSystems."/media" = {
-    device = "192.168.1.71:/volume1/media";
+    device = "192.168.1.199:/mnt/Sutoreji/media";
     fsType = "nfs";
   };
 

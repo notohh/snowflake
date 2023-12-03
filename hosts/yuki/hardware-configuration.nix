@@ -24,17 +24,17 @@
   };
 
   fileSystems."/nas" = {
-    device = "192.168.1.71:/volume1/yuki";
+    device = "192.168.1.199:/mnt/Sutoreji/yuki";
     fsType = "nfs";
   };
 
   fileSystems."/home/notoh/docker/stash/data" = {
-    device = "192.168.1.71:/volume1/stash";
+    device = "192.168.1.199:/mnt/Sutoreji/stash";
     fsType = "nfs";
   };
 
   fileSystems."/media" = {
-    device = "192.168.1.71:/volume1/media";
+    device = "192.168.1.199:/mnt/Sutoreji/media";
     fsType = "nfs";
   };
 
