@@ -1,6 +1,9 @@
 name: fmt check
 
-on: [push]
+on:
+  push:
+    paths:
+      - "**.nix"
 jobs:
   check:
     runs-on: ubuntu-latest
