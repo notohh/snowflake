@@ -47,8 +47,7 @@
         port = 8100;
         bind_address = "0.0.0.0";
         secret_key = "@SEARXNG_SECRET@";
-        base_url = "https://search.flake.sh/";
-        public_instance = true;
+        public_instance = false;
         infinite_scroll = true;
       };
       redis = {
