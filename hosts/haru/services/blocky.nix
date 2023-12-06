@@ -93,6 +93,7 @@
           "dashboard.internal.flake.sh" = "192.168.1.36";
           "udm.internal.flake.sh" = "192.168.1.1";
           "pve.internal.flake.sh" = "192.168.1.37";
+          "pbs.internal.flake.sh" = "192.168.1.38";
 
           # media
 
@@ -103,6 +104,7 @@
           "bazarr.internal.flake.sh" = "192.168.1.54";
           "prowlarr.internal.flake.sh" = "192.168.1.54";
           "stash.internal.flake.sh" = "192.168.1.36";
+          "nextcloud.internal.flake.sh" = "192.168.1.199";
 
           # misc
 
