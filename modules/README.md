@@ -8,7 +8,6 @@ name            | description
 `default`       | used for commonly shared modules
 `fonts`         | font handling
 `greetd`        | login manager
-`networking`    | common network configuration
 `nix`           | common nix configuration
 `openssh`       | configures openssh options
 `security`      | stolen from [hlissner](https://github.com/hlissner)

@@ -3,7 +3,6 @@
     inputs.nh.nixosModules.default
     ./prometheus
     ./security.nix
-    ./networking.nix
     ./users.nix
     ./nix.nix
     ./system.nix
@@ -12,4 +11,5 @@
     ./sops.nix
     ./time.nix
   ];
+  services.tailscale.enable = true;
 }
