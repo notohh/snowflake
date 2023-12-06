@@ -24,7 +24,7 @@ in {
     glib
     grim
     slurp
-    swappy
+    satty
     wl-clipboard
     wlr-randr
     swayidle

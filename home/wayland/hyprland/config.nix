@@ -106,6 +106,7 @@
     windowrulev2 = float, title:^(Cryptomator)$
     windowrulev2 = float, title:^(RuneLite)$
     windowrulev2 = float, title:^(Lutris)$
+    windowrulev2 = float, title:^(satty)$
     windowrulev2 = move 850 360, title:^(RuneLite)$
     windowrulev2 = size 830 600, title:^(RuneLite)$
     windowrulev2 = fullscreen, title:^(cs2)$
@@ -119,7 +120,7 @@
     bind = $mainMod, R, exec, anyrun
     bind = $mainMod, P, pseudo, # dwindle
     bind = $mainMod, J, togglesplit, # dwindle
-    bind =, Print, exec, grim -g "$(slurp)" - | swappy -f -
+    bind =, Print, exec, grim -g "$(slurp)" - | satty -f - --fullscreen --output-filename ~/Pictures/screenshots/$(date '+%Y%m%d-%H:%M:%S').png
     bind = $mainMod, left, movefocus, l
     bind = $mainMod, right, movefocus, r
     bind = $mainMod, up, movefocus, u
