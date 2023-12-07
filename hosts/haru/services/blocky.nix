@@ -90,25 +90,25 @@
 
           "truenas.internal.flake.sh" = "192.168.1.199";
           "assistant.internal.flake.sh" = "192.168.1.189";
-          "dashboard.internal.flake.sh" = "192.168.1.36";
+          "dashboard.internal.flake.sh" = "192.168.1.98";
           "udm.internal.flake.sh" = "192.168.1.1";
           "pve.internal.flake.sh" = "192.168.1.37";
           "pbs.internal.flake.sh" = "192.168.1.38";
 
           # media
 
-          "jellyfin.internal.flake.sh" = "192.168.1.36";
-          "jellyseerr.internal.flake.sh" = "192.168.1.36";
+          "jellyfin.internal.flake.sh" = "192.168.1.98";
+          "jellyseerr.internal.flake.sh" = "192.168.1.98";
           "sonarr.internal.flake.sh" = "192.168.1.54";
           "radarr.internal.flake.sh" = "192.168.1.54";
           "bazarr.internal.flake.sh" = "192.168.1.54";
           "prowlarr.internal.flake.sh" = "192.168.1.54";
-          "stash.internal.flake.sh" = "192.168.1.36";
+          "stash.internal.flake.sh" = "192.168.1.98";
           "nextcloud.internal.flake.sh" = "192.168.1.199";
 
           # misc
 
-          "wallos.internal.flake.sh" = "192.168.1.36";
+          "wallos.internal.flake.sh" = "192.168.1.98";
           "synology.internal.flake.sh" = "192.168.1.71";
         };
       };
