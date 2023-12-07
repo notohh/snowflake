@@ -48,7 +48,7 @@
         User notoh
         IdentityFile ~/.ssh/kariru
       Host yuki
-        HostName 100.110.140.130
+        HostName 100.108.113.89
         User notoh
         IdentityFile ~/.ssh/yuki
       Host arashi
