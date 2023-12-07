@@ -71,7 +71,7 @@
         whiteLists = {
           default = [
             "https://raw.githubusercontent.com/anudeepND/whitelist/master/domains/whitelist.txt"
-            # "https://raw.githubusercontent.com/anudeepND/whitelist/master/domains/optional-list.txt"
+            "https://raw.githubusercontent.com/anudeepND/whitelist/master/domains/optional-list.txt"
           ];
         };
         clientGroupsBlock = {
