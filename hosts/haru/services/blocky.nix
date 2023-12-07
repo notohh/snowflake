@@ -109,6 +109,7 @@
           # misc
 
           "wallos.internal.flake.sh" = "192.168.1.36";
+          "synology.internal.flake.sh" = "192.168.1.71";
         };
       };
       redis = {
