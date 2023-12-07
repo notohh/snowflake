@@ -1,31 +1,20 @@
 {
-  config,
   lib,
   modulesPath,
   ...
 }: {
   imports = [
-    (modulesPath + "/installer/scan/not-detected.nix")
+    (modulesPath + "/profiles/qemu-guest.nix")
   ];
 
-  boot.initrd.availableKernelModules = ["xhci_pci" "ahci" "usb_storage" "usbhid" "sd_mod" "sr_mod"];
+  boot.initrd.availableKernelModules = ["ata_piix" "uhci_hcd" "virtio_pci" "virtio_scsi" "sd_mod" "sr_mod"];
   boot.initrd.kernelModules = [];
-  boot.kernelModules = ["kvm-intel"];
+  boot.kernelModules = [];
   boot.extraModulePackages = [];
 
   fileSystems."/" = {
-    device = "/dev/disk/by-uuid/56f5b5b9-9ab5-4c05-be80-2e34405bfbd9";
+    device = "/dev/disk/by-uuid/625f557a-99a0-4e2d-9aef-f3aed7cea1c8";
     fsType = "ext4";
-  };
-
-  fileSystems."/boot/efi" = {
-    device = "/dev/disk/by-uuid/4E08-C711";
-    fsType = "vfat";
-  };
-
-  fileSystems."/nas" = {
-    device = "192.168.1.199:/mnt/Sutoreji/yuki";
-    fsType = "nfs";
   };
 
   fileSystems."/home/notoh/docker/stash/data" = {
@@ -39,12 +28,10 @@
   };
 
   swapDevices = [
-    {device = "/dev/disk/by-uuid/34a9e234-35da-4140-b231-2bb983a5204b";}
+    {device = "/dev/disk/by-uuid/5be1a83b-5b40-4068-ade3-fcf28ff07e35";}
   ];
 
   networking.useDHCP = lib.mkDefault true;
 
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
-  powerManagement.cpuFreqGovernor = lib.mkDefault "powersave";
-  hardware.cpu.intel.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
 }
