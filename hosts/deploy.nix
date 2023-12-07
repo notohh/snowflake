@@ -21,7 +21,7 @@ inputs: {
       magicRollback = true;
     };
     yuki = {
-      hostname = "100.110.140.130";
+      hostname = "100.108.113.89";
       profiles.system = {
         user = "root";
         path = activate.nixos inputs.self.nixosConfigurations.yuki;
