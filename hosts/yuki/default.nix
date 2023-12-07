@@ -7,17 +7,17 @@
   ];
 
   boot.loader = {
-    systemd-boot = {
+    grub = {
       enable = true;
-      configurationLimit = 8;
-    };
-    efi = {
-      canTouchEfiVariables = true;
-      efiSysMountPoint = "/boot/efi";
+      configurationLimit = 5;
+      device = "/dev/sda";
+      useOSProber = false;
     };
   };
 
-  networking.hostName = "yuki";
+  networking = {
+    hostName = "yuki";
+  };
 
   services.xserver = {
     layout = "us";
