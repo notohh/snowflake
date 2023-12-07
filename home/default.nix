@@ -86,6 +86,10 @@
       Host pve
         Hostname 100.115.234.69
         User root
+      Host truenas
+        Hostname 192.168.1.199
+        User root
+        IdentityFile ~/.ssh/truenas
     '';
   };
 
