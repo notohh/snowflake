@@ -13,7 +13,7 @@
   boot.extraModulePackages = [];
 
   fileSystems."/" = {
-    device = "/dev/disk/by-uuid/625f557a-99a0-4e2d-9aef-f3aed7cea1c8";
+    device = "/dev/disk/by-uuid/833959fb-de9d-4820-aa22-e6ce8bce6f6c";
     fsType = "ext4";
   };
 
@@ -28,9 +28,8 @@
   };
 
   swapDevices = [
-    {device = "/dev/disk/by-uuid/5be1a83b-5b40-4068-ade3-fcf28ff07e35";}
+    {device = "/dev/disk/by-uuid/bd7ccb73-6f85-4b3d-b37f-5cff58a6ab59";}
   ];
-
   networking.useDHCP = lib.mkDefault true;
 
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
