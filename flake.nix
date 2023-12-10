@@ -6,7 +6,6 @@
       url = "github:nixos/nixpkgs/nixos-unstable";
     };
     hyprland.url = "github:hyprwm/Hyprland";
-    prismlauncher.url = "github:PrismLauncher/PrismLauncher";
     ags.url = "github:Aylur/ags";
     nix-gaming.url = "github:fufexan/nix-gaming";
     hyprland-plugins = {
