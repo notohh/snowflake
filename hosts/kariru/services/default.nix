@@ -1,4 +1,4 @@
-_: {
+{...}: {
   imports = [
     ./traefik.nix
     ./torrent.nix
@@ -19,8 +19,18 @@ _: {
     enable = true;
     openFirewall = true;
   };
-  services.bazarr = {
+  services.readarr = {
     enable = true;
     openFirewall = true;
+  };
+  virtualisation.oci-containers.containers.whisparr = {
+    image = "hotio/whisparr";
+    ports = ["6969:6969"];
+    volumes = [
+      "/var/lib/whisparr:/config"
+      "/stash:/data/stash"
+      "/media/downloads:/data/downloads"
+    ];
+    extraOptions = ["--network=host"];
   };
 }

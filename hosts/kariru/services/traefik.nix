@@ -20,6 +20,16 @@ _: {
             entryPoints = ["web"];
             service = "radarr";
           };
+          readarr = {
+            rule = "Host(`readarr.internal.flake.sh`)";
+            entryPoints = ["web"];
+            service = "readarr";
+          };
+          whisparr = {
+            rule = "Host(`whisparr.internal.flake.sh`)";
+            entryPoints = ["web"];
+            service = "whisparr";
+          };
           prowlarr = {
             rule = "Host(`prowlarr.internal.flake.sh`)";
             entrypoints = ["web"];
@@ -29,6 +39,8 @@ _: {
         services = {
           sonarr.loadBalancer.servers = [{url = "http://localhost:8989";}];
           radarr.loadBalancer.servers = [{url = "http://localhost:7878";}];
+          readarr.loadBalancer.servers = [{url = "http://localhost:8787";}];
+          whisparr.loadBalancer.servers = [{url = "http://localhost:6969";}];
           prowlarr.loadBalancer.servers = [{url = "http://localhost:9696";}];
         };
       };

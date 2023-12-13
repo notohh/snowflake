@@ -22,6 +22,11 @@
     fsType = "nfs";
   };
 
+  fileSystems."/stash" = {
+    device = "192.168.1.199:/mnt/Sutoreji/stash";
+    fsType = "nfs";
+  };
+
   swapDevices = [
     {device = "/dev/disk/by-uuid/f28bad28-ae14-4aa7-85c5-47abe46bae56";}
   ];
