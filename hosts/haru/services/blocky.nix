@@ -101,7 +101,8 @@
           "jellyseerr.internal.flake.sh" = "192.168.1.98";
           "sonarr.internal.flake.sh" = "192.168.1.54";
           "radarr.internal.flake.sh" = "192.168.1.54";
-          "bazarr.internal.flake.sh" = "192.168.1.54";
+          "readarr.internal.flake.sh" = "192.168.1.54";
+          "whisparr.internal.flake.sh" = "192.168.1.54";
           "prowlarr.internal.flake.sh" = "192.168.1.54";
           "stash.internal.flake.sh" = "192.168.1.98";
           "nextcloud.internal.flake.sh" = "192.168.1.199";
