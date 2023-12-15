@@ -26,21 +26,20 @@
     homeDirectory = "/home/notoh";
     packages = with pkgs; [
       floorp
+      #brave
       discord
-      jellyfin-media-player
       cinny-desktop
       thunderbird
       obs-studio
       pavucontrol
       vscode-fhs
       unzip
+      unrar
       p7zip
       virt-manager
       imv
       mpv
       rustypaste-cli
-      drawio
-      obsidian
       gimp
       cryptomator
       ventoy-bin-full
@@ -51,7 +50,9 @@
       bottles
       runelite
       prismlauncher
+      yuzu
       inputs.nix-gaming.packages.${pkgs.system}.osu-lazer-bin
+      inputs.nix-gaming.packages.${pkgs.system}.wine-discord-ipc-bridge
       (libsForQt5.callPackage ../../pkgs/chatterino7 {})
       (callPackage ../../pkgs/jellyfin-rpc {})
     ];
