@@ -189,6 +189,19 @@
             tls.domains = [{main = "*.flake.sh";}];
             tls.certresolver = "production";
           };
+          justlog-insecure = {
+            rule = "Host(`logs.flake.sh`)";
+            entrypoints = ["web"];
+            service = "justlog";
+            middlewares = "redirect-to-https";
+          };
+          justlog = {
+            rule = "Host(`logs.flake.sh`)";
+            entrypoints = ["websecure"];
+            service = "justlog";
+            tls.domains = [{main = "*.flake.sh";}];
+            tls.certresolver = "production";
+          };
         };
         services = {
           gitssh.loadBalancer.servers = [{url = "tcp://100.121.201.47:2222";}];
@@ -204,6 +217,7 @@
           vaultwarden.loadBalancer.servers = [{url = "http://100.121.201.47:8222";}];
           searxng.loadBalancer.servers = [{url = "http://100.121.201.47:8100";}];
           neko.loadBalancer.servers = [{url = "http://100.104.42.96:8085";}];
+          justlog.loadBalancer.servers = [{url = "http://100.121.201.47:8025";}];
         };
       };
     };
