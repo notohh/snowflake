@@ -24,7 +24,7 @@
     openFirewall = true;
   };
   virtualisation.oci-containers.containers.whisparr = {
-    image = "hotio/whisparr";
+    image = "hotio/whisparr:nightly-7b7bdb9";
     ports = ["6969:6969"];
     volumes = [
       "/var/lib/whisparr:/config"
