@@ -9,5 +9,6 @@
     ./conduit.nix
     ./tailscale.nix
     ./searxng.nix
+    ./justlog.nix
   ];
 }

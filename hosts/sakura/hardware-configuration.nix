@@ -16,6 +16,10 @@
     device = "/dev/disk/by-uuid/db3e4722-35a6-44fb-8e4d-a75166b845cb";
     fsType = "ext4";
   };
+  fileSystems."/home/notoh/justlog/logs" = {
+    device = "192.168.1.199:/mnt/Sutoreji/twitchlogs";
+    fsType = "nfs";
+  };
 
   swapDevices = [
     {device = "/dev/disk/by-uuid/c5afba13-f1af-4e7f-994b-f565c52d92fc";}
