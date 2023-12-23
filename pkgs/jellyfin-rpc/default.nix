@@ -5,15 +5,15 @@
 }:
 rustPlatform.buildRustPackage rec {
   pname = "jellyfin-rpc";
-  version = "0.14.6";
+  version = "0.15.5";
 
   src = fetchFromGitHub {
     owner = "Radiicall";
     repo = "jellyfin-rpc";
-    rev = "04b412fb08268e9ee9e0aebfb72ea06e7284275a";
-    sha256 = "sha256-EcydqJoeLEfY40UHermU8jw7PHAAii8YQR/m4q9S1vo=";
+    rev = "fcb13733e049153a111d8d4116324c3b02be9530";
+    sha256 = "sha256-LQFXG5P4V2M6TVPyvCl2XMM70K61Z1sCyyLc05Twl4M=";
   };
-  cargoHash = "sha256-C+ZWYNW9tWol8n5y2q+qx0ava8fn3hqEzCxIEtCJDTw=";
+  cargoHash = "sha256-uswD0PAoJ6x6bu7766QPdWB0CnINBaRAlkeEdNrC9xw=";
 
   meta = with lib; {
     description = "Displays the content you're currently watching on Discord!";
