@@ -31,8 +31,10 @@
       cinny-desktop
       thunderbird
       obs-studio
+      signal-desktop
       pavucontrol
       vscode-fhs
+      obsidian
       unzip
       unrar
       p7zip
