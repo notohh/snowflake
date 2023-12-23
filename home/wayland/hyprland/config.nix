@@ -109,6 +109,7 @@
     windowrulev2 = float, title:^(satty)$
     windowrulev2 = move 850 360, title:^(RuneLite)$
     windowrulev2 = size 830 600, title:^(RuneLite)$
+    windowrulev2 = size 1200 600, title:^(satty)$
     windowrulev2 = fullscreen, title:^(cs2)$
 
     #binds
