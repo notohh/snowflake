@@ -1,4 +1,4 @@
-{config, ...}: {
+_: {
   sops.secrets.neko-admin = {};
   networking.firewall.allowedTCPPorts = [8085];
   networking.firewall.allowedUDPPorts = [52000 52100];
