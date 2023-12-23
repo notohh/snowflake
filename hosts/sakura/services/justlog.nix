@@ -1,4 +1,4 @@
-{...}: {
+_: {
   networking.firewall.allowedTCPPorts = [8025];
   virtualisation.oci-containers.containers.justlog = {
     image = "ghcr.io/gempir/justlog";
