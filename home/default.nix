@@ -32,8 +32,9 @@
   services.gpg-agent = {
     enable = true;
     defaultCacheTtl = 3600;
-    pinentryFlavor = "gtk2";
+    pinentryFlavor = "qt";
     enableSshSupport = true;
+    enableNushellIntegration = true;
   };
 
   programs.ssh = {
