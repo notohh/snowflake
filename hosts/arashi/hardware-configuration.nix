@@ -17,11 +17,6 @@
     fsType = "ext4";
   };
 
-  fileSystems."/nas" = {
-    device = "192.168.1.71:/volume1/arashi";
-    fsType = "nfs";
-  };
-
   swapDevices = [
     {device = "/dev/disk/by-uuid/e9eb4b6a-e9a1-4616-8c82-349d2f38d140";}
   ];
