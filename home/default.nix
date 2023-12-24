@@ -32,7 +32,7 @@
   services.gpg-agent = {
     enable = true;
     defaultCacheTtl = 3600;
-    pinentryFlavor = "qt";
+    pinentryFlavor = "curses";
     enableSshSupport = true;
     enableNushellIntegration = true;
   };
