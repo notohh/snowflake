@@ -15,7 +15,6 @@
     username = "notoh";
     homeDirectory = "/home/notoh";
     packages = with pkgs; [
-      brave
       floorp
       discord
       spotify-player
