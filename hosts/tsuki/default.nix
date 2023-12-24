@@ -109,7 +109,6 @@
     dconf
     libvirt
     qemu_kvm
-    pinentry-gtk2
     jdk17
     comma
   ];
