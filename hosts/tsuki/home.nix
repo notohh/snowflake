@@ -33,7 +33,7 @@
       obs-studio
       signal-desktop
       pavucontrol
-      vscode-fhs
+      vscodium-fhs
       obsidian
       unzip
       unrar
