@@ -30,6 +30,7 @@ alias up = rpaste -s "https://i.flake.sh/" -e 1day
 alias shorten = rpaste -s "https://i.flake.sh/" -e 1day -u
 alias tail = tspin
 alias grep = rg
+alias code = codium "."
 nitch
 
 $env.config = {
