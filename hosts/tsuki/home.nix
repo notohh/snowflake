@@ -26,7 +26,7 @@
     homeDirectory = "/home/notoh";
     packages = with pkgs; [
       floorp
-      #brave
+      chromium
       discord
       cinny-desktop
       thunderbird
@@ -34,7 +34,6 @@
       signal-desktop
       pavucontrol
       vscodium-fhs
-      obsidian
       unzip
       unrar
       p7zip
