@@ -34,6 +34,7 @@
       signal-desktop
       pavucontrol
       vscodium-fhs
+      # obsidian
       unzip
       unrar
       p7zip
