@@ -6,7 +6,6 @@ name            | description
 --------------- | -----------
 `ags`           | aylurs gtk shell
 `anyrun`        | wayland native application launcher
-`bat`           | cat replacement
 `cava`          | terminal audio visualizer 
 `direnv`        | a shell extension, that loads environment variables in certain directories
 `default`       | used for commonly shared modules, for multiple home-manager configs
@@ -15,7 +14,6 @@ name            | description
 `helix`         | modal text editor
 `ironbar`       | wayland specific bar, written in Rust
 `lazygit`       | terminal based git command system
-`librewolf`     | a hardened firefox fork, and my browser of choice
 `mako`          | a lightweight wayland notification daemon
 `neofetch`      | fetch program
 `nushell`       | my shell of choice
