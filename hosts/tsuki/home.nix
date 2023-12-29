@@ -65,23 +65,23 @@
     enable = true;
     extraConfig = ''
       Host sakura
-        HostName 100.121.201.47
+        Hostname 100.121.201.47
         User notoh
         IdentityFile ~/.ssh/sakura
       Host kariru
-        HostName 100.126.229.95
+        Hostname 100.126.229.95
         User notoh
         IdentityFile ~/.ssh/kariru
       Host yuki
-        HostName 100.108.113.89
+        Hostname 100.108.113.89
         User notoh
         IdentityFile ~/.ssh/yuki
       Host arashi
-        HostName 100.94.214.100
+        Hostname 100.94.214.100
         User notoh
         IdentityFile ~/.ssh/arashi
       Host sora
-        HostName 100.104.42.96
+        Hostname 100.104.42.96
         User notoh
         IdentityFile ~/.ssh/sora
       Host daphbot
@@ -89,19 +89,24 @@
         User root
         IdentityFile ~/.ssh/daphbot
       Host tsuru
-        HostName 100.82.146.40
+        Hostname 100.82.146.40
         User notoh
         IdentityFile ~/.ssh/tsuru
       Host haru
-        HostName 100.73.192.45
+        Hostname 100.73.192.45
         User notoh
         IdentityFile ~/.ssh/haru
       Host basegbot
         HostName 100.83.81.116
         User basegbot
         IdentityFile ~/.ssh/basegbot
+      Host git.flake.sh
+        Hostname git.flake.sh
+        User notohh
+        IdentityFile ~/.ssh/notohh-forgejo
+        Port 2222
       Host rpi4
-        HostName 100.92.145.147
+        Hostname 100.92.145.147
         User notoh
         IdentityFile ~/.ssh/rpi4
       Host pve
