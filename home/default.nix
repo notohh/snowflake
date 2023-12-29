@@ -7,7 +7,6 @@
     ./git
     ./lazygit
     ./direnv
-    ./bat
   ];
 
   home.packages = with pkgs; [
