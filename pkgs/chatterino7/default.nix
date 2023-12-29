@@ -21,8 +21,8 @@ stdenv.mkDerivation rec {
   src = fetchFromGitHub {
     owner = "SevenTV";
     repo = pname;
-    rev = "147f89b74cc42d99d962e9bc10cc002b59dcfb64";
-    sha256 = "sha256-3Z23LTjyH76Da9/amGWPvLpF8M1hPiqNJ8dmo8nI/88=";
+    rev = "a997941f822fae19a613799ff20de4d7a3f71e07";
+    sha256 = "sha256-m0IE6cZ+JSjghD3WaVOlSRABcbnafiW+VYaSGQ4CBqU=";
     fetchSubmodules = true;
   };
 
