@@ -37,6 +37,10 @@
     enableNushellIntegration = true;
   };
 
+  programs.bat = {
+    enable = true;
+  };
+
   programs.zoxide = {
     enable = true;
     enableNushellIntegration = true;
