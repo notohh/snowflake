@@ -103,8 +103,12 @@
       Host git.flake.sh
         Hostname git.flake.sh
         User notohh
-        IdentityFile ~/.ssh/notohh-forgejo
+        IdentityFile ~/.ssh/notohh-git
         Port 2222
+      Host github.com
+        Hostname github.com
+        User notohh
+        IdentityFile ~/.ssh/notohh-git
       Host rpi4
         Hostname 100.92.145.147
         User notoh
