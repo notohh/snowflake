@@ -1,6 +1,6 @@
 _: {
   imports = [
-    ./hardware-configuration.nix
+    ./hardware.nix
     ./services
     ./networking.nix
     ../../modules

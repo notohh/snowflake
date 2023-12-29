@@ -7,7 +7,7 @@
   imports = [
     inputs.nix-gaming.nixosModules.steamCompat
     inputs.nix-gaming.nixosModules.pipewireLowLatency
-    ./hardware-configuration.nix
+    ./hardware.nix
     ./services
     ./networking.nix
     ../../home/wayland/hyprland/wayland.nix

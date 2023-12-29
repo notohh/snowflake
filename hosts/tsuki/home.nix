@@ -100,10 +100,6 @@
         HostName 100.83.81.116
         User basegbot
         IdentityFile ~/.ssh/basegbot
-      Host pihole
-        HostName 192.168.1.221
-        User notoh
-        IdentityFile ~/.ssh/pihole
       Host rpi4
         HostName 100.92.145.147
         User notoh

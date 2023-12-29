@@ -12,6 +12,4 @@ _: {
       nameserver 1.1.1.1
     '';
   };
-
-  services.tailscale.enable = true;
 }
