@@ -16,9 +16,12 @@
         routers = {
           gitssh = {
             rule = "HostSNI(`*`)";
-            entrypoints = ["gitssh"];
+            entrypoints = ["ssh"];
             service = "gitssh";
           };
+        };
+        services = {
+          gitssh.loadBalancer.servers = [{address = "100.121.201.47:2222";}];
         };
       };
       http = {
@@ -204,7 +207,6 @@
           };
         };
         services = {
-          gitssh.loadBalancer.servers = [{url = "tcp://100.121.201.47:2222";}];
           uptime-kuma.loadBalancer.servers = [{url = "http://100.104.42.96:4000";}];
           gotify.loadBalancer.servers = [{url = "http://100.104.42.96:3000";}];
           conduit.loadBalancer.servers = [{url = "http://100.121.201.47:6167";}];
@@ -236,7 +238,7 @@
         web = {
           address = ":80";
         };
-        gitssh = {
+        ssh = {
           address = ":2222";
         };
       };
