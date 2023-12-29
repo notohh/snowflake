@@ -48,24 +48,12 @@
             entrypoints = ["websecure"];
             service = "api@internal";
           };
-          uptime-kuma-insecure = {
-            rule = "Host(`status.flake.sh`)";
-            entrypoints = ["web"];
-            service = "uptime-kuma";
-            middlewares = "redirect-to-https";
-          };
           uptime-kuma = {
             rule = "Host(`status.flake.sh`)";
             entrypoints = ["websecure"];
             service = "uptime-kuma";
             tls.domains = [{main = "*.flake.sh";}];
             tls.certresolver = "production";
-          };
-          gotify-insecure = {
-            rule = "Host(`gotify.flake.sh`)";
-            entrypoints = ["web"];
-            service = "gotify";
-            middlewares = "redirect-to-https";
           };
           gotify = {
             rule = "Host(`gotify.flake.sh`)";
@@ -74,24 +62,12 @@
             tls.domains = [{main = "*.flake.sh";}];
             tls.certresolver = "production";
           };
-          conduit-insecure = {
-            rule = "Host(`matrix.flake.sh`)";
-            entrypoints = ["web"];
-            service = "conduit";
-            middlewares = "redirect-to-https";
-          };
           conduit = {
             rule = "Host(`matrix.flake.sh`)";
             entrypoints = ["websecure"];
             service = "conduit";
             tls.domains = [{main = "*.flake.sh";}];
             tls.certresolver = "production";
-          };
-          authelia-insecure = {
-            rule = "Host(`passport.notohh.dev`)";
-            entrypoints = ["web"];
-            service = "authelia";
-            middlewares = "redirect-to-https";
           };
           authelia = {
             rule = "Host(`passport.notohh.dev`)";
@@ -100,24 +76,12 @@
             tls.domains = [{main = "*.notohh.dev";}];
             tls.certresolver = "production";
           };
-          foundryvtt-insecure = {
-            rule = "Host(`foundry.flake.sh`)";
-            entrypoints = ["web"];
-            service = "authelia";
-            middlewares = "redirect-to-https";
-          };
           foundryvtt = {
             rule = "Host(`foundry.flake.sh`)";
             entrypoints = ["websecure"];
             service = "foundryvtt";
             tls.domains = [{main = "*.flake.sh";}];
             tls.certresolver = "production";
-          };
-          forgejo-insecure = {
-            rule = "Host(`git.flake.sh`)";
-            entrypoints = ["web"];
-            service = "forgejo";
-            middlewares = "redirect-to-https";
           };
           forgejo = {
             rule = "Host(`git.flake.sh`)";
@@ -127,24 +91,12 @@
             tls.certresolver = "production";
             middlewares = "cors";
           };
-          rustypaste-insecure = {
-            rule = "Host(`i.flake.sh`)";
-            entrypoints = ["web"];
-            service = "rustypaste";
-            middlewares = "redirect-to-https";
-          };
           rustypaste = {
             rule = "Host(`i.flake.sh`)";
             entrypoints = ["websecure"];
             service = "rustypaste";
             tls.domains = [{main = "*.flake.sh";}];
             tls.certresolver = "production";
-          };
-          grafana-insecure = {
-            rule = "Host(`metrics.flake.sh`)";
-            entrypoints = ["web"];
-            service = "grafana";
-            middlewares = "redirect-to-https";
           };
           grafana = {
             rule = "Host(`metrics.flake.sh`)";
@@ -153,24 +105,12 @@
             tls.domains = [{main = "*.flake.sh";}];
             tls.certresolver = "production";
           };
-          hedgedoc-insecure = {
-            rule = "Host(`scratch.flake.sh`)";
-            entrypoints = ["web"];
-            service = "hedgedoc";
-            middlewares = "redirect-to-https";
-          };
           hedgedoc = {
             rule = "Host(`scratch.flake.sh`)";
             entrypoints = ["websecure"];
             service = "hedgedoc";
             tls.domains = [{main = "*.flake.sh";}];
             tls.certresolver = "production";
-          };
-          vaultwarden-insecure = {
-            rule = "Host(`vault.flake.sh`)";
-            entrypoints = ["web"];
-            service = "vaultwarden";
-            middlewares = "redirect-to-https";
           };
           vaultwarden = {
             rule = "Host(`vault.flake.sh`)";
@@ -179,24 +119,12 @@
             tls.domains = [{main = "*.flake.sh";}];
             tls.certresolver = "production";
           };
-          neko-insecure = {
-            rule = "Host(`neko.flake.sh`)";
-            entrypoints = ["web"];
-            service = "neko";
-            middlewares = "redirect-to-https";
-          };
           neko = {
             rule = "Host(`neko.flake.sh`)";
             entrypoints = ["websecure"];
             service = "neko";
             tls.domains = [{main = "*.flake.sh";}];
             tls.certresolver = "production";
-          };
-          justlog-insecure = {
-            rule = "Host(`logs.flake.sh`)";
-            entrypoints = ["web"];
-            service = "justlog";
-            middlewares = "redirect-to-https";
           };
           justlog = {
             rule = "Host(`logs.flake.sh`)";
@@ -237,6 +165,10 @@
         };
         web = {
           address = ":80";
+          http.redirections.entryPoint = {
+            to = "websecure";
+            scheme = "https";
+          };
         };
         ssh = {
           address = ":2222";
