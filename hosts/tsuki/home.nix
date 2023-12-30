@@ -100,15 +100,6 @@
         HostName 100.83.81.116
         User basegbot
         IdentityFile ~/.ssh/basegbot
-      Host git.flake.sh
-        Hostname git.flake.sh
-        User notohh
-        IdentityFile ~/.ssh/notohh-git
-        Port 2222
-      Host github.com
-        Hostname github.com
-        User notohh
-        IdentityFile ~/.ssh/notohh-git
       Host rpi4
         Hostname 100.92.145.147
         User notoh
@@ -120,6 +111,15 @@
         Hostname 192.168.1.199
         User root
         IdentityFile ~/.ssh/truenas
+      Host git.flake.sh
+        Hostname git.flake.sh
+        User notohh
+        IdentityFile ~/.ssh/notohh-git
+        Port 2222
+      Host github.com
+        Hostname github.com
+        User notohh
+        IdentityFile ~/.ssh/notohh-git
     '';
   };
 
