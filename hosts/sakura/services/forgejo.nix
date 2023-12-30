@@ -1,14 +1,20 @@
-{lib, ...}: {
+{
+  lib,
+  config,
+  ...
+}: {
+  sops.secrets.smtp2go-pwd = {owner = "forgejo";};
   networking.firewall.allowedTCPPorts = [2222];
   services.forgejo = {
     enable = true;
     stateDir = "/var/lib/forgejo";
     settings = {
-      service.DISABLE_REGISTRATION = true;
+      service.DISABLE_REGISTRATION = false;
       DEFAULT.APP_NAME = "forgejo";
       log.LEVEL = "Debug";
       ui = {
         DEFAULT_THEME = "forgejo-dark";
+        SHOW_USER_EMAIL = true;
       };
       actions = {
         ENABLED = true;
@@ -42,6 +48,15 @@
         ENABLED_ISSUE_BY_REPOSITORY = true;
         ENABLED_ISSUE_BY_LABEL = true;
       };
+      mailer = {
+        ENABLED = true;
+        FROM = "forgejo@flake.sh";
+        PROTOCOL = "smtp+starttls";
+        SMTP_ADDR = "mail.smtp2go.com";
+        SMTP_PORT = 587;
+        USER = "forgejo-mailer";
+      };
     };
+    mailerPasswordFile = config.sops.secrets.smtp2go-pwd.path;
   };
 }
