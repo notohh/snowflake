@@ -135,12 +135,15 @@
           };
         };
         services = {
+          forgejo.loadBalancer = {
+            passHostHeader = true;
+            servers = [{url = "http://100.121.201.47:3200";}];
+          };
           uptime-kuma.loadBalancer.servers = [{url = "http://100.104.42.96:4000";}];
           gotify.loadBalancer.servers = [{url = "http://100.104.42.96:3000";}];
           conduit.loadBalancer.servers = [{url = "http://100.121.201.47:6167";}];
           authelia.loadBalancer.servers = [{url = "http://100.121.201.47:9091";}];
           foundryvtt.loadBalancer.servers = [{url = "http://100.121.201.47:30000";}];
-          forgejo.loadBalancer.servers = [{url = "http://100.121.201.47:3200";}];
           rustypaste.loadBalancer.servers = [{url = "http://100.121.201.47:8000";}];
           grafana.loadBalancer.servers = [{url = "http://100.121.201.47:3100";}];
           hedgedoc.loadBalancer.servers = [{url = "http://100.121.201.47:3300";}];
