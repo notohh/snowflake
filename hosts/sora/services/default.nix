@@ -5,5 +5,7 @@
     ./gotify.nix
     ./tailscale.nix
     ./factorio.nix
+    # ./minecraft.nix
+    # ./foundryvtt.nix
   ];
 }
