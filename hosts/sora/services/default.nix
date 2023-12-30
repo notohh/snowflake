@@ -2,7 +2,7 @@
   imports = [
     ./traefik.nix
     ./uptimekuma.nix
-    ./gotify.nix
+    ./ntfy-sh.nix
     ./tailscale.nix
     ./factorio.nix
     # ./minecraft.nix

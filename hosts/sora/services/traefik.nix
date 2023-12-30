@@ -55,13 +55,6 @@
             tls.domains = [{main = "*.flake.sh";}];
             tls.certresolver = "production";
           };
-          gotify = {
-            rule = "Host(`gotify.flake.sh`)";
-            entrypoints = ["websecure"];
-            service = "gotify";
-            tls.domains = [{main = "*.flake.sh";}];
-            tls.certresolver = "production";
-          };
           conduit = {
             rule = "Host(`matrix.flake.sh`)";
             entrypoints = ["websecure"];
@@ -133,6 +126,13 @@
             tls.domains = [{main = "*.flake.sh";}];
             tls.certresolver = "production";
           };
+          ntfy = {
+            rule = "Host(`ntfy.flake.sh`)";
+            entrypoints = ["websecure"];
+            service = "ntfy-sh";
+            tls.domains = [{main = "*.flake.sh";}];
+            tls.certresolver = "production";
+          };
         };
         services = {
           forgejo.loadBalancer = {
@@ -140,7 +140,6 @@
             servers = [{url = "http://100.121.201.47:3200";}];
           };
           uptime-kuma.loadBalancer.servers = [{url = "http://100.104.42.96:4000";}];
-          gotify.loadBalancer.servers = [{url = "http://100.104.42.96:3000";}];
           conduit.loadBalancer.servers = [{url = "http://100.121.201.47:6167";}];
           authelia.loadBalancer.servers = [{url = "http://100.121.201.47:9091";}];
           foundryvtt.loadBalancer.servers = [{url = "http://100.121.201.47:30000";}];
@@ -151,6 +150,7 @@
           searxng.loadBalancer.servers = [{url = "http://100.121.201.47:8100";}];
           neko.loadBalancer.servers = [{url = "http://100.104.42.96:8085";}];
           justlog.loadBalancer.servers = [{url = "http://100.121.201.47:8025";}];
+          ntfy-sh.loadBalancer.servers = [{url = "http://100.104.42.96:8090";}];
         };
       };
     };
