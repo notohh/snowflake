@@ -31,6 +31,9 @@
         SSH_LISTEN_PORT = 2222;
         SSH_LISTEN_HOST = "100.121.201.47";
       };
+      session = {
+        COOKIE_SECURE = true;
+      };
       database = {
         DB_TYPE = lib.mkForce "postgres";
         HOST = "192.168.1.211:5432";
@@ -58,5 +61,22 @@
       };
     };
     mailerPasswordFile = config.sops.secrets.smtp2go-pwd.path;
+  };
+  services.fail2ban.jails.forgejo = {
+    settings = {
+      filter = "forgejo";
+      action = ''iptables-allports'';
+      mode = "aggressive";
+      maxretry = 3;
+      findtime = 3600;
+      bantime = 900;
+    };
+  };
+  environment.etc = {
+    "fail2ban/filter.d/forgejo.conf".text = ''
+      [Definition]
+      failregex = ^.*(Failed authentication attempt|invalid credentials|Attempted access of unknown user).* from <HOST>$
+      journalmatch = _SYSTEMD_UNIT=forgejo.service
+    '';
   };
 }
