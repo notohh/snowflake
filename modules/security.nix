@@ -40,13 +40,16 @@
     "net.ipv4.tcp_congestion_control" = "bbr";
     "net.core.default_qdisc" = "cake";
   };
+
   boot.kernelModules = ["tcp_bbr"];
 
-  # So we don't have to do this later...
+  services.openssh.settings.LogLevel = "VERBOSE";
+
   security.acme = {
     acceptTerms = true;
     defaults.email = "github@notohh.dev";
   };
+
   services.fail2ban = {
     enable = true;
     bantime = "1h";
@@ -55,14 +58,16 @@
       "192.168.0.0/16"
       "172.16.0.0/12"
       "10.0.0.0/8"
-      "5.161.181.184/32"
+      "5.161.102.107/32"
       "100.71.49.65/10"
       "100.82.146.40/10"
     ];
-    jails.DEFAULT = {
-      settings = {
-        findtime = 100000;
-        mode = "aggressive";
+    jails = {
+      DEFAULT = {
+        settings = {
+          findtime = 100000;
+          mode = "aggressive";
+        };
       };
     };
   };
