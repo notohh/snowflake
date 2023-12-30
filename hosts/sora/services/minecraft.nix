@@ -7,7 +7,7 @@ _: {
     environment = {
       EULA = "TRUE";
       VERSION = "1.19.2";
-      MEMORY = "8G";
+      MEMORY = "4G";
       TYPE = "FABRIC";
       FABRIC_LOADER_VERSION = "0.14.23";
       FABRIC_LAUNCHER_VERSION = "0.11.2";
