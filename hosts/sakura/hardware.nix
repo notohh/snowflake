@@ -21,7 +21,7 @@
     device = "192.168.1.199:/mnt/Sutoreji/twitchlogs";
     fsType = "nfs";
   };
-  
+
   fileSystems."/nas/restic" = {
     device = "192.168.1.199:/mnt/Sutoreji/nix-restic-data/sakura";
     fsType = "nfs";
@@ -30,7 +30,7 @@
   swapDevices = [
     {device = "/dev/disk/by-uuid/c5afba13-f1af-4e7f-994b-f565c52d92fc";}
   ];
-  
+
   networking.useDHCP = lib.mkDefault true;
 
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
