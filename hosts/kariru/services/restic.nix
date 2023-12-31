@@ -3,34 +3,31 @@
   config,
   ...
 }: {
-  sops.secrets = {
-    restic-sora = {
-      sopsFile = ../../../secrets/restic/secrets.yaml;
-    };
-    sora-b2 = {
-      sopsFile = ../../../secrets/b2/secrets.yaml;
-    };
+  sops.secrets.restic-kariru = {
+    sopsFile = ../../../secrets/restic/secrets.yaml;
   };
   environment.systemPackages = [pkgs.restic];
   services.restic = {
     backups = {
-      sora = {
+      kariru = {
         user = "root";
         paths = [
-          "/var/lib/private/uptime-kuma"
-          "/var/lib/private/ntfy-sh"
+          "/var/lib/radarr"
+          "/var/lib/sonarr"
+          "/var/lib/whisparr"
+          "/var/lib/private/prowlarr"
         ];
         pruneOpts = [
           "--keep-daily=7"
           "--keep-weekly=6"
           "--keep-monthly=5"
         ];
-        repository = "b2:sora-b2";
         initialize = true;
-        passwordFile = config.sops.secrets.restic-sora.path;
-        environmentFile = config.sops.secrets.sora-b2.path;
+        repository = "/nas/restic";
+        passwordFile = config.sops.secrets.restic-kariru.path;
         timerConfig = {
           OnCalendar = "daily";
+          RandomizedDelaySec = "20m";
           Persistent = true;
         };
       };

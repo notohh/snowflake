@@ -1,5 +1,6 @@
 {...}: {
   imports = [
+    ./restic.nix
     ./traefik.nix
     ./stash.nix
     ./jellyfin.nix

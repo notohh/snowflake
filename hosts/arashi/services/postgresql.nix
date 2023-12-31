@@ -49,4 +49,11 @@
       "vaultwarden"
     ];
   };
+  services.postgresqlBackup = {
+    enable = true;
+    databases = ["forgejo" "hedgedoc" "grafana" "authelia" "vaultwarden"];
+    compression = "zstd";
+    compressionLevel = 4;
+    startAt = "daily";
+  };
 }

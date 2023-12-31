@@ -3,7 +3,7 @@
   config,
   ...
 }: {
-  sops.secrets.restic-repo-pwd = {};
+  sops.secrets.restic-tsuki = {sopsFile = ../../../secrets/restic/secrets.yaml;};
   environment.systemPackages = [pkgs.restic];
   services.restic = {
     backups = {
@@ -34,13 +34,13 @@
           "/home/*/.local/share/.var"
         ];
         pruneOpts = [
-          "--keep-daily=8"
+          "--keep-daily=7"
           "--keep-weekly=6"
           "--keep-monthly=5"
         ];
         initialize = true;
         repository = "/nas/home";
-        passwordFile = config.sops.secrets.restic-repo-pwd.path;
+        passwordFile = config.sops.secrets.restic-tsuki.path;
         timerConfig = {
           OnCalendar = "daily";
           RandomizedDelaySec = "10m";
