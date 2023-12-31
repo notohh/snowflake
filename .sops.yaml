@@ -6,4 +6,12 @@ creation_rules:
   - path_regex: secrets/[^/]+\.yaml$
     key_groups:
       - age:
-        - *notoh
+          - *notoh
+  - path_regex: secrets/b2/[^/]+\.yaml$
+    key_groups:
+      - age:
+          - *notoh
+  - path_regex: secrets/restic/[^/]+\.yaml$
+    key_groups:
+      - age:
+          - *notoh
