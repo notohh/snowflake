@@ -54,6 +54,6 @@
     databases = ["forgejo" "hedgedoc" "grafana" "authelia" "vaultwarden"];
     compression = "zstd";
     compressionLevel = 4;
-    startAt = "daily";
+    startAt = "*-*-* 23:00:00";
   };
 }
