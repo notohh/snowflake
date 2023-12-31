@@ -9,7 +9,7 @@
     enable = true;
     stateDir = "/var/lib/forgejo";
     settings = {
-      service.DISABLE_REGISTRATION = false;
+      service.DISABLE_REGISTRATION = true;
       DEFAULT.APP_NAME = "forgejo";
       log.LEVEL = "Debug";
       ui = {
@@ -33,6 +33,9 @@
       };
       session = {
         COOKIE_SECURE = true;
+      };
+      security = {
+        LOGIN_REMEMBER_DAYS = 14;
       };
       database = {
         DB_TYPE = lib.mkForce "postgres";
