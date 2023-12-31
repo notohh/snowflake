@@ -27,6 +27,8 @@
           "/home/*/.factorio"
           "/home/*/.mplayer"
           "/home/*/.steam"
+          "/home/*/.eclipse"
+          "/home/*/.bundle"
           "/home/*/.local/share/Trash"
           "/home/*/.local/share/Steam"
           "/home/*/.local/share/.var"
@@ -41,6 +43,8 @@
         passwordFile = config.sops.secrets.restic-repo-pwd.path;
         timerConfig = {
           OnCalendar = "daily";
+          RandomizedDelaySec = "10m";
+          Persistent = true;
         };
       };
     };
