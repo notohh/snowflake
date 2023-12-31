@@ -39,7 +39,7 @@
           "--keep-monthly=5"
         ];
         initialize = true;
-        repository = "/nas/home";
+        repository = "/nas/restic";
         passwordFile = config.sops.secrets.restic-tsuki.path;
         timerConfig = {
           OnCalendar = "daily";

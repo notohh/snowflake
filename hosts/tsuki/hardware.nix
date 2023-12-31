@@ -33,8 +33,8 @@
     fsType = "ext4";
   };
 
-  fileSystems."/nas" = {
-    device = "192.168.1.199:/mnt/Sutoreji/tsuki";
+  fileSystems."/nas/restic" = {
+    device = "192.168.1.199:/mnt/Sutoreji/nix-restic-data/tsuki";
     fsType = "nfs";
   };
 
