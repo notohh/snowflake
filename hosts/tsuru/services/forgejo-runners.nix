@@ -3,8 +3,11 @@
   config,
   ...
 }: {
-  sops.secrets.snowflake-runner-token = {};
-  sops.secrets.basegbot-runner-token = {};
+  sops.secrets = {
+    snowflake-runner-token = {};
+    basegbot-runner-token = {};
+    nixgarden-runner-token = {};
+  };
   services.gitea-actions-runner = {
     package = pkgs.forgejo-actions-runner;
     instances.snowflake = {
@@ -53,7 +56,7 @@
         gitMinimal
       ];
     };
-    instances.nixgarden = {
+    instances.nix-garden = {
       settings = {
         container = {
           network = "host";
@@ -61,7 +64,7 @@
       };
       enable = true;
       name = config.networking.hostName;
-      token = "ufM3x5MANdcIg9qb7LTJrC7dAi9Kw6DmVXDDX3HL";
+      token = config.sops.secrets.nixgarden-runner-token.path;
       url = "https://git.flake.sh";
       labels = [
         "debian-latest:docker://node:18-bullseye"
@@ -74,8 +77,6 @@
         coreutils
         wget
         gitMinimal
-        python3
-        python311Packages.pip
       ];
     };
   };
