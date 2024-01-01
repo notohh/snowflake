@@ -8,6 +8,7 @@
   services.restic = {
     backups = {
       tsuki = {
+        user = "root";
         paths = [
           "/home"
         ];
