@@ -1,8 +1,8 @@
 {lib, ...}: {
   networking = {
     nameservers = [
-      "185.12.64.2"
-      "185.12.64.1"
+      "1.1.1.1"
+      "1.0.0.1"
     ];
     defaultGateway = "172.31.1.1";
     defaultGateway6 = {
