@@ -1,6 +1,7 @@
-local wezterm = require 'wezterm'
+local wezterm = require('wezterm')
 
-return {
+local config = {
+
     front_end = "WebGpu",
     webgpu_preferred_adapter = {
         backend = "Vulkan",
@@ -14,6 +15,12 @@ return {
     text_background_opacity = 1.0,
     enable_tab_bar = false,
     color_scheme = 'tokyonight',
-
-    window_padding = { top = 20, bottom = 20, left = 20, right = 20 }
+    window_padding = {
+        top = 20,
+        bottom = 20,
+        left = 20,
+        right = 20
+    }
 }
+
+return config
