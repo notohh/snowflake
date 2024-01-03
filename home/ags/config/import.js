@@ -7,6 +7,7 @@ import Audio from "resource:///com/github/Aylur/ags/service/audio.js";
 import Hyprland from "resource:///com/github/Aylur/ags/service/hyprland.js";
 import Network from "resource:///com/github/Aylur/ags/service/network.js";
 import SystemTray from "resource:///com/github/Aylur/ags/service/systemtray.js";
+import Mpris from 'resource:///com/github/Aylur/ags/service/mpris.js';
 
 export {
   App,
@@ -18,4 +19,5 @@ export {
   Utils,
   Variable,
   Widget,
+  Mpris,
 };

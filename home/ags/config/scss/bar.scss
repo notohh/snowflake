@@ -1,9 +1,5 @@
-* {
-    all: unset;
-    margin: 3px;
-    font-family: 'Monaspace Krypton';
-}
+@import 'colors.scss';
 
 window {
-    background-color: black;
+    background-color: $background;
 }

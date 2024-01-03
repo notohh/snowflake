@@ -7,7 +7,7 @@
 in {
   programs.ags = {
     enable = true;
-    extraPackages = with pkgs; [libsoup_3];
+    extraPackages = with pkgs; [libsoup_3 libdbusmenu-gtk3];
   };
   home.packages = with pkgs; [dart-sass];
   xdg.configFile = {

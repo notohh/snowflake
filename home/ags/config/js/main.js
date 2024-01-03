@@ -1,26 +1,31 @@
 import { Widget } from '../import.js';
 import { Time } from './widgets/time.js'
-import { nixosLogo } from './widgets/image.js';
+import { nixosLogo } from './widgets/images/image.js';
+import { Media } from './widgets/music.js';
+import { Workspaces } from './widgets/hyprland.js';
 
 const Start = () => Widget.Box({
     hpack: "start",
     children: [
-        nixosLogo()
+        nixosLogo(),
+        Workspaces(),
     ]
-})
+});
 const Center = () => Widget.Box({
-    children: []
-})
+    children: [
+        Media(),
+    ]
+});
 const End = () => Widget.Box({
     hpack: "end",
     children: [
-        Time()
+        Time(),
     ]
-})
+});
 
 const Bar = (monitor) => Widget.Window({
     monitor,
-    name: `bar-${monitor}`,
+    name: `bar`,
     anchor: ['top', 'left', 'right'],
     exclusivity: 'exclusive',
     child: Widget.CenterBox({
@@ -28,7 +33,7 @@ const Bar = (monitor) => Widget.Window({
         centerWidget: Center(),
         endWidget: End(),
     }),
-})
+});
 
 export {
     Bar

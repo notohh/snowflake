@@ -1,7 +1,7 @@
 import { Widget, Utils } from '../../import.js';
 
 
-const Time = () => Widget.EventBox({
+const Time = () => Widget.Box({
     child: Widget.Label({
         className: "date"
     }).poll(
