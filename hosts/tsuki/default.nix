@@ -10,7 +10,7 @@
     ./hardware.nix
     ./services
     ./networking.nix
-    ../../home/wayland/hyprland/wayland.nix
+    ../../home/wayland
     ../../modules
     ../../modules/fonts.nix
   ];
