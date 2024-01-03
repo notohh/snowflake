@@ -12,7 +12,7 @@
         "HDMI-A-1,1920x1080@60, 3640x560, auto, transform, 3" #right
         "DP-1,1920x1080@60, 0x560, auto, transform, 1" #left
         "DP-2,2560x1440@144, 1080x1080, auto" #middle
-        "monitor = DP-3,1920x1080@144, 1400x0, auto" #top
+        "DP-3,1920x1080@144, 1400x0, auto" #top
       ];
       exec-once = [
         "hyprpaper"
