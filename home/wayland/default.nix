@@ -15,7 +15,7 @@
   };
 in {
   imports = [
-    ../../../modules/greetd.nix
+    ../../modules/greetd.nix
   ];
 
   environment.systemPackages = with pkgs; [
