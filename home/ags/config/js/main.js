@@ -1,9 +1,12 @@
 import { Widget } from '../import.js';
 import { Time } from './widgets/time.js'
+import { nixosLogo } from './widgets/image.js';
 
 const Start = () => Widget.Box({
     hpack: "start",
-    children: []
+    children: [
+        nixosLogo()
+    ]
 })
 const Center = () => Widget.Box({
     children: []

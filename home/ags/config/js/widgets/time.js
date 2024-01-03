@@ -11,7 +11,7 @@ const Time = () => Widget.EventBox({
                 self.label = time
             ),
     ),
-})
+});
 
 export {
     Time
