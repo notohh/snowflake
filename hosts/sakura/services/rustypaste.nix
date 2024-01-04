@@ -1,5 +1,4 @@
 {pkgs, ...}: {
-  sops.secrets.rusty-auth-token = {};
   environment.systemPackages = with pkgs; [rustypaste];
 
   systemd.services.rustypaste = {
