@@ -8,6 +8,7 @@
     hyprland.url = "github:hyprwm/Hyprland";
     ags.url = "github:Aylur/ags";
     nix-gaming.url = "github:fufexan/nix-gaming";
+    attic.url = "github:zhaofengli/attic";
     hyprland-plugins = {
       url = "github:hyprwm/hyprland-plugins";
       inputs.hyprland.follows = "hyprland";
@@ -51,6 +52,7 @@
         alejandra
         yaml-language-server
         lua-language-server
+        nodePackages.typescript-language-server
       ];
     };
     formatter.${system} = pkgs.alejandra;
