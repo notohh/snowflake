@@ -41,6 +41,11 @@
               accessControlAllowOriginList = "https://daphbot.notohh.dev";
             };
           };
+          cors-allow-all = {
+            headers = {
+              accessControlAllowOriginList = "*";
+            };
+          };
         };
         routers = {
           api = {
@@ -133,6 +138,28 @@
             tls.domains = [{main = "*.flake.sh";}];
             tls.certresolver = "production";
           };
+          attic = {
+            rule = "Host(`cache.flake.sh`)";
+            entrypoints = ["websecure"];
+            service = "attic";
+            tls.domains = [{main = "*.flake.sh";}];
+            tls.certresolver = "production";
+          };
+          minio = {
+            rule = "Host(`s3.flake.sh`)";
+            entrypoints = ["websecure"];
+            service = "minio";
+            tls.domains = [{main = "*.flake.sh";}];
+            tls.certresolver = "production";
+            middlewares = "cors-allow-all";
+          };
+          minio-web = {
+            rule = "Host(`minio.flake.sh`)";
+            entrypoints = ["websecure"];
+            service = "minioadmin";
+            tls.domains = [{main = "*.flake.sh";}];
+            tls.certresolver = "production";
+          };
         };
         services = {
           forgejo.loadBalancer = {
@@ -151,6 +178,9 @@
           neko.loadBalancer.servers = [{url = "http://100.104.42.96:8085";}];
           justlog.loadBalancer.servers = [{url = "http://100.121.201.47:8025";}];
           ntfy-sh.loadBalancer.servers = [{url = "http://100.104.42.96:8090";}];
+          attic.loadBalancer.servers = [{url = "http://100.104.42.96:8200";}];
+          minio.loadBalancer.servers = [{url = "http://100.104.42.96:9005";}];
+          minio-web.loadBalancer.servers = [{url = "http://100.104.42.96:9006";}];
         };
       };
     };
