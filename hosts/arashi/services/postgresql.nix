@@ -40,6 +40,10 @@
         name = "vaultwarden";
         ensureDBOwnership = true;
       }
+      {
+        name = "attic";
+        ensureDBOwnership = true;
+      }
     ];
     ensureDatabases = [
       "forgejo"
@@ -47,6 +51,7 @@
       "grafana"
       "authelia"
       "vaultwarden"
+      "attic"
     ];
   };
   services.postgresqlBackup = {
