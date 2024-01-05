@@ -71,7 +71,7 @@ inputs: {
       magicRollback = true;
     };
     kaze = {
-      hostname = "";
+      hostname = "100.69.79.81";
       profiles.system = {
         user = "root";
         path = activate.nixos inputs.self.nixosConfigurations.kaze;
