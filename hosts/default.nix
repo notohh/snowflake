@@ -6,6 +6,7 @@ inputs: let
   nix-index-Module = inputs.nix-index-database.hmModules.nix-index;
   anyrunModule = inputs.anyrun.homeManagerModules.default;
   agsModule = inputs.ags.homeManagerModules.default;
+  atticModule = inputs.attic.nixosModules.atticd;
   inherit (inputs.nixpkgs.lib) nixosSystem;
 in {
   tsuki = nixosSystem {
@@ -15,6 +16,7 @@ in {
       ./tsuki
       sopsModule
       hmModule
+      atticModule
       {
         home-manager = {
           useGlobalPkgs = true;
@@ -140,6 +142,7 @@ in {
       ./sora
       sopsModule
       hmModule
+      atticModule
       {
         home-manager = {
           useGlobalPkgs = true;
@@ -187,6 +190,26 @@ in {
           users.notoh = {
             imports = [
               ./haru/home.nix
+            ];
+          };
+        };
+      }
+    ];
+  };
+  kaze = nixosSystem {
+    inherit system;
+    specialArgs = {inherit inputs;};
+    modules = [
+      ./kaze
+      sopsModule
+      hmModule
+      {
+        home-manager = {
+          useGlobalPkgs = true;
+          useUserPackages = true;
+          users.notoh = {
+            imports = [
+              ./kaze/home.nix
             ];
           };
         };

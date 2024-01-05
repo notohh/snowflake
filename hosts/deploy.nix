@@ -70,5 +70,15 @@ inputs: {
       sshOpts = ["-t" "-i" "~/.ssh/forgejo"];
       magicRollback = true;
     };
+    kaze = {
+      hostname = "";
+      profiles.system = {
+        user = "root";
+        path = activate.nixos inputs.self.nixosConfigurations.kaze;
+      };
+      sshUser = "root";
+      sshOpts = ["-t" "-i" "~/.ssh/forgejo"];
+      magicRollback = true;
+    };
   };
 }
