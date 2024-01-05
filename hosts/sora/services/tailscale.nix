@@ -4,7 +4,9 @@
   pkgs,
   ...
 }: {
-  sops.secrets.tsauth-sora = {};
+  sops.secrets.tsauth-sora = {
+    sopsFile = ../../../secrets/tailscale/secrets.yaml;
+  };
   environment.systemPackages = [pkgs.jq pkgs.tailscale];
   services.tailscale = {
     useRoutingFeatures = lib.mkDefault "server"; # important to make it a server, it sets sysctl for ip forwarding without intervention and reboot
