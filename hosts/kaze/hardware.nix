@@ -17,7 +17,7 @@
     fsType = "ext4";
   };
 
-  fileSystems."/var/lib/minio" = {
+  fileSystems."/var/lib/slab" = {
     device = "/dev/disk/by-uuid/733a3f7b-b232-4b34-8742-460a67d8f1d0";
     fsType = "ext4";
   };
