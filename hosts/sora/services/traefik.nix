@@ -171,7 +171,7 @@
           neko.loadBalancer.servers = [{url = "http://100.104.42.96:8085";}];
           justlog.loadBalancer.servers = [{url = "http://100.121.201.47:8025";}];
           ntfy-sh.loadBalancer.servers = [{url = "http://100.104.42.96:8090";}];
-          attic.loadBalancer.servers = [{url = "http://100.69.79.81:8200";}];
+          attic.loadBalancer.servers = [{url = "http://100.104.42.96:8200";}];
           minio.loadBalancer.servers = [{url = "http://100.69.79.81:9005";}];
         };
       };

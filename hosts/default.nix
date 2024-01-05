@@ -141,6 +141,7 @@ in {
     modules = [
       ./sora
       sopsModule
+      atticModule
       hmModule
       {
         home-manager = {
@@ -201,7 +202,6 @@ in {
     modules = [
       ./kaze
       sopsModule
-      atticModule
       hmModule
       {
         home-manager = {
