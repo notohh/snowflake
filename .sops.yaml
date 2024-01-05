@@ -15,3 +15,7 @@ creation_rules:
     key_groups:
       - age:
           - *notoh
+  - path_regex: secrets/tailscale/[^/]+\.yaml$
+    key_groups:
+      - age:
+          - *notoh
