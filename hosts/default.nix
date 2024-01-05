@@ -142,7 +142,6 @@ in {
       ./sora
       sopsModule
       hmModule
-      atticModule
       {
         home-manager = {
           useGlobalPkgs = true;
@@ -202,6 +201,7 @@ in {
     modules = [
       ./kaze
       sopsModule
+      atticModule
       hmModule
       {
         home-manager = {
