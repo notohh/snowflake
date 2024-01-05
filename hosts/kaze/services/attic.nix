@@ -36,7 +36,7 @@
       storage = {
         type = "s3";
         region = "us-east-1";
-        bucket = "flakesh-binary-cache";
+        bucket = "kyasshu";
         endpoint = "https://s3.flake.sh/";
       };
     };
