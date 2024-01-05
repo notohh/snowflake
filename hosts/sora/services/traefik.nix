@@ -153,13 +153,6 @@
             tls.certresolver = "production";
             middlewares = "cors-allow-all";
           };
-          minio-web = {
-            rule = "Host(`minio.flake.sh`)";
-            entrypoints = ["websecure"];
-            service = "minioadmin";
-            tls.domains = [{main = "*.flake.sh";}];
-            tls.certresolver = "production";
-          };
         };
         services = {
           forgejo.loadBalancer = {
@@ -178,9 +171,8 @@
           neko.loadBalancer.servers = [{url = "http://100.104.42.96:8085";}];
           justlog.loadBalancer.servers = [{url = "http://100.121.201.47:8025";}];
           ntfy-sh.loadBalancer.servers = [{url = "http://100.104.42.96:8090";}];
-          attic.loadBalancer.servers = [{url = "http://100.104.42.96:8200";}];
-          minio.loadBalancer.servers = [{url = "http://100.104.42.96:9005";}];
-          minio-web.loadBalancer.servers = [{url = "http://100.104.42.96:9006";}];
+          attic.loadBalancer.servers = [{url = "http://100.69.79.81:8200";}];
+          minio.loadBalancer.servers = [{url = "http://100.69.79.81:9005";}];
         };
       };
     };
