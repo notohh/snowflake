@@ -29,6 +29,7 @@ alias dl = yt-dlp -P ~/Videos/downloaded
 alias dlcd = yt-dlp
 alias up = rpaste -s "https://i.flake.sh/" -e 1day
 alias shorten = rpaste -s "https://i.flake.sh/" -e 1day -u
+alias send = croc --relay "100.104.42.96:9009" send
 alias tail = tspin
 alias grep = rg
 alias code = codium "."
