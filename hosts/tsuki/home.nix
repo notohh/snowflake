@@ -5,6 +5,7 @@
 }: {
   imports = [
     ../../home
+    ../../home/firefox
     ../../home/ags
     ../../home/anyrun
     ../../home/cava
@@ -25,7 +26,6 @@
     username = "notoh";
     homeDirectory = "/home/notoh";
     packages = with pkgs; [
-      floorp
       chromium
       discord
       cinny-desktop
@@ -126,24 +126,5 @@
         User notohh
         IdentityFile ~/.ssh/notohh-git
     '';
-  };
-
-  xdg.mimeApps = {
-    enable = true;
-    defaultApplications = {
-      "x-scheme-handler/discord-409416265891971072" = ["discord-409416265891971072.desktop"];
-      "x-scheme-handler/discord-402572971681644545" = ["discord-402572971681644545.desktop"];
-      "x-scheme-handler/discord-696343075731144724" = ["discord-696343075731144724.desktop"];
-      "x-scheme-handler/http" = ["floorp.desktop"];
-      "x-scheme-handler/https" = ["floorp.desktop"];
-      "x-scheme-handler/chrome" = ["floorp.desktop"];
-      "text/html" = ["floorp.desktop"];
-      "application/x-extension-htm" = ["floorp.desktop"];
-      "application/x-extension-html" = ["floorp.desktop"];
-      "application/x-extension-shtml" = ["floorp.desktop"];
-      "application/xhtml+xml" = ["floorp.desktop"];
-      "application/x-extension-xhtml" = ["floorp.desktop"];
-      "application/x-extension-xht" = ["floorp.desktop"];
-    };
   };
 }
