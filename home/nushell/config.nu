@@ -8,6 +8,7 @@ alias l = eza -ughH --icons
 alias la = eza -alughH --git --icons
 alias calc = eva
 alias c = clear
+alias f = joshuto
 alias cat = bat
 alias rm = rm -i
 alias cp = cp -i
