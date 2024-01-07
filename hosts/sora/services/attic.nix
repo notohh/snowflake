@@ -14,7 +14,7 @@
       listen = "[::]:8200";
       allowed-hosts = ["cache.flake.sh"];
       database.url = "postgres://attic:attic@100.94.214.100:5432/attic";
-      api-endpoint = "https://cache.flake.sh";
+      api-endpoint = "https://cache.flake.sh/";
       require-proof-of-possession = false;
       chunking = {
         nar-size-threshold = 0;
