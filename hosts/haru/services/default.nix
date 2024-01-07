@@ -1,5 +1,5 @@
 _: {
   imports = [
-    ./blocky.nix
+    ./adguardhome/adguardhome.nix
   ];
 }
