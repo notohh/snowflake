@@ -9,6 +9,7 @@
     ags.url = "github:Aylur/ags";
     nix-gaming.url = "github:fufexan/nix-gaming";
     attic.url = "github:zhaofengli/attic";
+    nur.url = "github:nix-community/NUR";
     hyprland-plugins = {
       url = "github:hyprwm/hyprland-plugins";
       inputs.hyprland.follows = "hyprland";
