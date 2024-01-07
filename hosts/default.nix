@@ -7,6 +7,7 @@ inputs: let
   anyrunModule = inputs.anyrun.homeManagerModules.default;
   agsModule = inputs.ags.homeManagerModules.default;
   atticModule = inputs.attic.nixosModules.atticd;
+  nurModule = inputs.nur.nixosModules.nur;
   inherit (inputs.nixpkgs.lib) nixosSystem;
 in {
   tsuki = nixosSystem {
@@ -17,6 +18,7 @@ in {
       sopsModule
       hmModule
       atticModule
+      nurModule
       {
         home-manager = {
           useGlobalPkgs = true;
