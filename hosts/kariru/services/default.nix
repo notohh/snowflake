@@ -20,10 +20,6 @@
     enable = true;
     openFirewall = true;
   };
-  services.readarr = {
-    enable = true;
-    openFirewall = true;
-  };
   virtualisation.oci-containers.containers.whisparr = {
     image = "hotio/whisparr:nightly-7b7bdb9";
     ports = ["6969:6969"];
