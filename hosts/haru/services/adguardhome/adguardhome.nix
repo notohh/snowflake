@@ -3,7 +3,7 @@ _: {
     ./filters.nix
     ./rewrites.nix
   ];
-  networking.firewall.allowedTCPPorts = [53 443 80 3000];
+  networking.firewall.allowedTCPPorts = [53 3000];
   networking.firewall.allowedUDPPorts = [53];
   services.adguardhome = {
     enable = true;

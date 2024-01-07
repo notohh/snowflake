@@ -18,7 +18,7 @@ _: {
         answer = "192.168.1.189";
       }
       {
-        domain = "udm.internal.flake.s";
+        domain = "udm.internal.flake.sh";
         answer = "192.168.1.1";
       }
       {
