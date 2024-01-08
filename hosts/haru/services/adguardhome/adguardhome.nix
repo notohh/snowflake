@@ -29,16 +29,24 @@
         upstream_dns_file = config.sops.secrets.nextdns.path;
         enable_dnssec = true;
         cache_optimistic = true;
+        bootstrap_dns = [
+          "9.9.9.10"
+          "149.112.112.10"
+          "2620:fe::10"
+          "2620:fe::fe:10"
+        ];
       };
       statistics = {
         enabled = true;
         interval = "336h";
         ignored = [
+          # i dont wanna see what people are watching
           "youporn.com"
           "pornhub.com"
           "xvideos.com"
           "onlyfans.com"
           "fansly.com"
+          "xnxx.com"
         ];
       };
     };
