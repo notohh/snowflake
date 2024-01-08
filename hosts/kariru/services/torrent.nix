@@ -2,7 +2,8 @@
   sops.secrets.gluetun = {};
   virtualisation.oci-containers.containers = {
     gluetun = {
-      image = "qmcgaw/gluetun:pr-1742";
+      image = "qmcgaw/gluetun:v3.37.0";
+      hostname = "gluetun";
       ports = [
         "8888:8888/tcp" # HTTP proxy
         "8388:8388/tcp" # Shadowsocks
