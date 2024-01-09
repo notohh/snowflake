@@ -38,8 +38,9 @@
       ];
       extraOptions = ["--network=host"];
     };
+
     sabnzbd = {
-      image = "linuxserver/sabnzbd";
+      image = "linuxserver/sabnzbd:nightly-version-8ef87881";
       ports = ["9292:9292"];
       environment = {
         PUID = "1000";
