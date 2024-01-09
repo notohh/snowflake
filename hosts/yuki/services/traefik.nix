@@ -35,6 +35,11 @@ _: {
             entrypoints = ["web"];
             service = "wallos";
           };
+          searxng = {
+            rule = "Host(`search.internal.flake.sh`)";
+            entrypoints = ["web"];
+            service = "searxng";
+          };
         };
         services = {
           stash.loadBalancer.servers = [{url = "http://localhost:9999";}];
@@ -42,6 +47,7 @@ _: {
           jellyfin.loadBalancer.servers = [{url = "http://localhost:8096";}];
           jellyseerr.loadBalancer.servers = [{url = "http://localhost:5055";}];
           wallos.loadBalancer.servers = [{url = "http://localhost:8282";}];
+          searxng.loadBalancer.servers = [{url = "http://localhost:8100";}];
         };
       };
     };

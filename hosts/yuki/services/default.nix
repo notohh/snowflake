@@ -6,5 +6,6 @@
     ./jellyfin.nix
     ./wallos.nix
     ./homepage.nix
+    ./searxng.nix
   ];
 }

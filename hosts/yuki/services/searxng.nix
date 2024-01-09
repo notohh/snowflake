@@ -8,10 +8,7 @@
   services.searx = {
     package = pkgs.searxng;
     enable = true;
-    runInUwsgi = true;
-    uwsgiConfig = {
-      http = ":8100";
-    };
+    runInUwsgi = false;
     environmentFile = config.sops.secrets.searxng-secret.path;
     limiterSettings = {
       botdetection = {
@@ -20,7 +17,6 @@
             "192.168.0.0/16"
             "172.16.0.0/12"
             "10.0.0.0/8"
-            "100.71.49.65/32"
           ];
         };
       };
@@ -28,9 +24,7 @@
     settings = {
       general = {
         debug = false;
-        instance_name = "SearXNG flake.sh";
-        enable_metrics = false;
-        contact_url = "mailto:contact@notohh.dev";
+        instance_name = "SearXNG";
       };
       ui = {
         default_theme = "simple";
