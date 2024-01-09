@@ -29,7 +29,7 @@
           "SearXNG" = {
             urls = [
               {
-                template = "http://100.121.201.47:8100";
+                template = "http://100.108.113.89:8100";
                 params = [
                   {
                     name = "q";
@@ -75,6 +75,7 @@
         #leisure
         darkreader
         mal-sync
+        stylus
 
         #utility
         new-tab-override
