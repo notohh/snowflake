@@ -46,6 +46,10 @@ _: {
         answer = "192.168.1.54";
       }
       {
+        domain = "bazarr.internal.flake.sh";
+        answer = "192.168.1.54";
+      }
+      {
         domain = "whisparr.internal.flake.sh";
         answer = "192.168.1.54";
       }
