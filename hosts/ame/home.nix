@@ -1,6 +1,7 @@
 {pkgs, ...}: {
   imports = [
     ../../home
+    ../../home/firefox
     ../../home/wezterm
     ../../home/zathura
     ../../home/zellij
@@ -15,7 +16,6 @@
     username = "notoh";
     homeDirectory = "/home/notoh";
     packages = with pkgs; [
-      floorp
       discord
       spotify-player
       cinny-desktop

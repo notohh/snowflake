@@ -1,7 +1,7 @@
 _: {
   networking = {
     networkmanager.enable = true;
-    nameservers = ["192.168.1.221"];
+    nameservers = ["192.168.1.103"];
     firewall = {
       enable = true;
     };

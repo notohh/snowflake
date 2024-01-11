@@ -23,11 +23,6 @@
     fsType = "vfat";
   };
 
-  fileSystems."/nas" = {
-    device = "192.168.1.199:/mnt/Sutoreji/ame";
-    fsType = "nfs";
-  };
-
   swapDevices = [
     {device = "/dev/disk/by-uuid/4f69ab31-f6a9-4799-92f1-5abbe0dc9180";}
   ];
