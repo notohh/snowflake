@@ -48,6 +48,7 @@ in {
         home-manager = {
           useGlobalPkgs = true;
           useUserPackages = true;
+          extraSpecialArgs = {inherit inputs;};
           users.notoh = {
             imports = [
               ./sakura/home.nix
@@ -68,6 +69,7 @@ in {
         home-manager = {
           useGlobalPkgs = true;
           useUserPackages = true;
+          extraSpecialArgs = {inherit inputs;};
           users.notoh = {
             imports = [
               ./kariru/home.nix
@@ -88,6 +90,7 @@ in {
         home-manager = {
           useGlobalPkgs = true;
           useUserPackages = true;
+          extraSpecialArgs = {inherit inputs;};
           users.notoh = {
             imports = [
               ./yuki/home.nix
@@ -108,9 +111,12 @@ in {
         home-manager = {
           useGlobalPkgs = true;
           useUserPackages = true;
+          extraSpecialArgs = {inherit inputs;};
           users.notoh = {
             imports = [
               ./ame/home.nix
+              anyrunModule
+              agsModule
             ];
           };
         };
@@ -128,6 +134,7 @@ in {
         home-manager = {
           useGlobalPkgs = true;
           useUserPackages = true;
+          extraSpecialArgs = {inherit inputs;};
           users.notoh = {
             imports = [
               ./arashi/home.nix
@@ -149,6 +156,7 @@ in {
         home-manager = {
           useGlobalPkgs = true;
           useUserPackages = true;
+          extraSpecialArgs = {inherit inputs;};
           users.notoh = {
             imports = [
               ./sora/home.nix
@@ -169,6 +177,7 @@ in {
         home-manager = {
           useGlobalPkgs = true;
           useUserPackages = true;
+          extraSpecialArgs = {inherit inputs;};
           users.notoh = {
             imports = [
               ./tsuru/home.nix
@@ -189,6 +198,7 @@ in {
         home-manager = {
           useGlobalPkgs = true;
           useUserPackages = true;
+          extraSpecialArgs = {inherit inputs;};
           users.notoh = {
             imports = [
               ./haru/home.nix
@@ -209,6 +219,7 @@ in {
         home-manager = {
           useGlobalPkgs = true;
           useUserPackages = true;
+          extraSpecialArgs = {inherit inputs;};
           users.notoh = {
             imports = [
               ./kaze/home.nix
