@@ -27,6 +27,16 @@
     openFirewall = true;
   };
 
+  services.readarr = {
+    enable = true;
+    openFirewall = true;
+  };
+
+  services.lidarr = {
+    enable = true;
+    openFirewall = true;
+  };
+
   virtualisation.oci-containers.containers = {
     whisparr = {
       image = "hotio/whisparr:nightly-7b7bdb9";
