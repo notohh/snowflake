@@ -8,8 +8,7 @@ _: {
   };
   environment.etc = {
     "resolv.conf".text = ''
-      nameserver 1.1.1.1
-      nameserver 1.0.0.1
+      nameserver 9.9.9.9
     '';
   };
 }
