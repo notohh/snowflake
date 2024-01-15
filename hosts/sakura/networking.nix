@@ -1,7 +1,6 @@
 _: {
   networking = {
     networkmanager.enable = true;
-    nameservers = ["192.168.1.221"];
     firewall = {
       enable = true;
     };
@@ -9,7 +8,7 @@ _: {
   environment.etc = {
     "resolv.conf".text = ''
       nameserver 192.168.1.103
-      nameserver 1.1.1.1
+      nameserver 9.9.9.9
     '';
   };
 }
