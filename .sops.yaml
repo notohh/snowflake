@@ -7,7 +7,7 @@ creation_rules:
     key_groups:
       - age:
           - *notoh
-  - path_regex: secrets/b2/[^/]+\.yaml$
+  - path_regex: secrets/s3/[^/]+\.yaml$
     key_groups:
       - age:
           - *notoh
