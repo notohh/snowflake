@@ -3,7 +3,9 @@
   config,
   ...
 }: {
-  sops.secrets.restic-repo-pwd = {};
+  sops.secrets.restic-ame = {
+    sopsFile = ../../../secrets/restic/secrets.yaml;
+  };
   environment.systemPackages = [pkgs.restic];
   services.restic = {
     backups = {
@@ -29,8 +31,8 @@
           "--keep-monthly=2"
         ];
         initialize = true;
-        repository = "/nas/home";
-        passwordFile = config.sops.secrets.restic-repo-pwd.path;
+        repository = "/nas/restic";
+        passwordFile = config.sops.secrets.restic-ame.path;
         timerConfig = {
           OnCalendar = "daily";
         };
