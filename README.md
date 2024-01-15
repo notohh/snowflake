@@ -11,9 +11,9 @@
  <p></p>
 <img src="https://builtwithnix.org/badge.svg">
  <p></p>
-<img src="https://i.imgur.com/23Gv6Gh.png"></img>
+<img src="https://i.imgur.com/z1EFyMr.png"></img>
 <p>
-  Screenshot updated: 2023-06-08
+  Screenshot updated: 2024-01-15 (bar is a heavy WIP)
 </p>
 <h4>
   :warning: this config is a constant WIP, 
