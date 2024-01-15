@@ -7,8 +7,8 @@
     restic-sora = {
       sopsFile = ../../../secrets/restic/secrets.yaml;
     };
-    sora-b2 = {
-      sopsFile = ../../../secrets/b2/secrets.yaml;
+    sora-s3 = {
+      sopsFile = ../../../secrets/s3/secrets.yaml;
     };
   };
   environment.systemPackages = [pkgs.restic];
@@ -25,10 +25,10 @@
           "--keep-weekly=6"
           "--keep-monthly=5"
         ];
-        repository = "b2:sora-b2";
+        repository = "s3:https://s3.flake.sh/restic-sora";
         initialize = true;
         passwordFile = config.sops.secrets.restic-sora.path;
-        environmentFile = config.sops.secrets.sora-b2.path;
+        environmentFile = config.sops.secrets.sora-s3.path;
         timerConfig = {
           OnCalendar = "daily";
           Persistent = true;
