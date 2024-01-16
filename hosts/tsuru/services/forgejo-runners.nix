@@ -4,9 +4,15 @@
   ...
 }: {
   sops.secrets = {
-    snowflake-runner-token = {};
-    basegbot-runner-token = {};
-    nixgarden-runner-token = {};
+    snowflake-runner-token = {
+      sopsFile = ../../../secrets/runners/secrets.yaml;
+    };
+    basegbot-runner-token = {
+      sopsFile = ../../../secrets/runners/secrets.yaml;
+    };
+    notohh-dev-runner-token = {
+      sopsFile = ../../../secrets/runners/secrets.yaml;
+    };
   };
   services.gitea-actions-runner = {
     package = pkgs.forgejo-actions-runner;
@@ -56,7 +62,7 @@
         gitMinimal
       ];
     };
-    instances.nix-garden = {
+    instances.notohh-dev = {
       settings = {
         container = {
           network = "host";
@@ -64,7 +70,7 @@
       };
       enable = true;
       name = config.networking.hostName;
-      token = config.sops.secrets.nixgarden-runner-token.path;
+      token = config.sops.secrets.notohh-dev-runner-token.path;
       url = "https://git.flake.sh";
       labels = [
         "debian-latest:docker://node:18-bullseye"
