@@ -20,7 +20,31 @@
         "browser.search.separatePrivateDefault" = false;
         "browser.search.separatePrivateDefault.ui.enabled" = true;
         "browser.startup.homepage" = "http://dashboard.internal.flake.sh/";
-        "network.trr.mode" = 2;
+        "network.trr.mode" = 3;
+        "network.trr.uri" = "https://dns.quad9.net/dns-query";
+        "dom.security.https_first" = true;
+        "dom.security.https_only_mode" = true;
+        "dom.security.https_only_mode_ever_enabled" = true;
+        "network.trr.excluded-domains" = ''
+          ,
+          pve.internal.flake.sh,
+          pbs.internal.flake.sh,
+          truenas.internal.flake.sh,
+          udm.internal.flake.sh,
+          dashboard.internal.flake.sh,
+          stash.internal.flake.sh,
+          synology.internal.flake.sh,
+          wallos.internal.flake.sh,
+          jellyfin.internal.flake.sh,
+          jellyseerr.internal.flake.sh,
+          sonarr.internal.flake.sh,
+          radarr.internal.flake.sh,
+          readarr.internal.flake.sh,
+          lidarr.internal.flake.sh,
+          bazarr.internal.flake.sh,
+          whisparr.internal.flake.sh,
+          prowlarr.internal.flake.sh
+        '';
       };
       extraConfig = builtins.readFile ./user.js/betterfox.js;
       search = {
