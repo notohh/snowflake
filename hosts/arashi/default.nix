@@ -4,7 +4,6 @@
     ./services
     ./networking.nix
     ../../modules
-    ../../modules/prometheus/exporters/postgres.nix
   ];
 
   boot.loader = {
