@@ -5,7 +5,10 @@
   ...
 }: {
   nixpkgs = {
-    overlays = [inputs.nur.overlay];
+    overlays = [
+      inputs.nur.overlay
+      inputs.yazi.overlays.default
+    ];
     config = {
       allowUnfree = true;
       permittedInsecurePackages = [
