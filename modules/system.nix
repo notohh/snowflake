@@ -10,6 +10,7 @@
     fstrim = {
       enable = true;
     };
+    tailscale.enable = true;
   };
 
   time.timeZone = "America/New_York";

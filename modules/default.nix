@@ -1,7 +1,7 @@
 {inputs, ...}: {
   imports = [
     inputs.nh.nixosModules.default
-    ./prometheus
+    ./prometheus.nix
     ./security.nix
     ./users.nix
     ./nix.nix
@@ -11,5 +11,4 @@
     ./sops.nix
     ./time.nix
   ];
-  services.tailscale.enable = true;
 }
