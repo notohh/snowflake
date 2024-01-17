@@ -12,7 +12,7 @@
     enableNushellIntegration = true;
     settings = {
       manager = {
-        ratio = [1 3 2];
+        ratio = [1 3 3];
         sort_by = "natural";
         sort_reverse = false;
         sort_dir_first = true;
