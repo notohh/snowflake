@@ -1,6 +1,6 @@
 _: {
   virtualisation.oci-containers.containers.stash = {
-    image = "stashapp/stash:v0.24.2";
+    image = "stashapp/stash:v0.24.3";
     environment = {
       STASH_STASH = "/data/";
       STASH_GENERATED = "/generated/";
