@@ -1,8 +1,4 @@
-{
-  pkgs,
-  config,
-  ...
-}: {
+{pkgs, ...}: {
   networking.firewall.allowedTCPPorts = [53 4000];
   networking.firewall.allowedUDPPorts = [53];
 
@@ -12,7 +8,7 @@
     enable = true;
     settings = {
       connectIPVersion = "v4";
-      upstreamTimeout = "30s";
+      upstreamTimeout = "5s";
       startVerifyUpstream = false;
       minTlsServeVersion = "1.2";
       log = {
@@ -23,12 +19,24 @@
         dns = 53;
         http = 4000;
         https = 443;
+        tls = 853;
       };
-      upstream.default = ["tcp+udp:127.0.0.1:5335"];
+      upstreams = {
+        strategy = "strict";
+        timeout = "30s";
+        groups = {
+          default = [
+            "tcp+udp:127.0.0.1:5335"
+            "tcp-tls:dns.quad9.net"
+          ];
+        };
+      };
       blocking = {
+        blockType = "nxDomain";
         loading = {
           strategy = "fast";
           concurrency = 8;
+          refreshPeriod = "4h";
         };
         blackLists = {
           ads = [
@@ -64,6 +72,9 @@
             "https://zerodot1.gitlab.io/CoinBlockerLists/hosts_browser"
             "https://raw.githubusercontent.com/StevenBlack/hosts/master/alternates/fakenews-only/hosts"
           ];
+          catchall = [
+            "https://big.oisd.nl/domainswild"
+          ];
         };
         whiteLists = {
           default = [
@@ -77,6 +88,7 @@
             "tracking"
             "malicious"
             "misc"
+            "catchall"
           ];
         };
       };
@@ -115,7 +127,7 @@
       redis = {
         address = "100.94.214.100:6381";
         password = "blocky";
-        database = 2;
+        database = 0;
         required = false;
         connectionAttempts = 10;
         connectionCooldown = "5s";
@@ -131,6 +143,9 @@
       prometheus = {
         enable = true;
         path = "/metrics";
+      };
+      queryLog = {
+        type = "console";
       };
     };
   };
