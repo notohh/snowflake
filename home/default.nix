@@ -7,6 +7,7 @@
     ./git
     ./lazygit
     ./direnv
+    ./yazi
   ];
 
   home.packages = with pkgs; [
@@ -25,7 +26,6 @@
     dig
     tailspin
     nitch
-    joshuto
   ];
 
   services.gpg-agent = {
