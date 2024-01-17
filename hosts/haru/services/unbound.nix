@@ -1,8 +1,8 @@
 _: {
   services.unbound = {
     enable = true;
-
     resolveLocalQueries = false;
+    enableRootTrustAnchor = true;
     settings = {
       server = {
         verbosity = 0;
