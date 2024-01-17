@@ -38,25 +38,37 @@ _: {
           {
             name = "Prometheus-kariru";
             type = "prometheus";
-            url = "http://192.168.1.54:9090";
+            url = "http://100.126.229.95:9090";
             orgId = 1;
           }
           {
             name = "Prometheus-yuki";
             type = "prometheus";
-            url = "http://192.168.1.36:9090";
+            url = "http://100.108.113.89:9090";
             orgId = 1;
           }
           {
             name = "Prometheus-arashi";
             type = "prometheus";
-            url = "http://192.168.1.211:9090";
+            url = "http://100.94.214.100:9090";
             orgId = 1;
           }
           {
             name = "Prometheus-sora";
             type = "prometheus";
             url = "http://100.104.42.96:9090";
+            orgId = 1;
+          }
+          {
+            name = "Prometheus-tsuru";
+            type = "prometheus";
+            url = "http://100.82.146.40:9090";
+            orgId = 1;
+          }
+          {
+            name = "Prometheus-kaze";
+            type = "prometheus";
+            url = "http://100.69.79.81:9090";
             orgId = 1;
           }
           {
