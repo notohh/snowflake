@@ -1,5 +1,6 @@
 {...}: {
   imports = [
+    ./hass
     ./restic.nix
     ./traefik.nix
     ./stash.nix
@@ -7,5 +8,6 @@
     ./wallos.nix
     ./homepage.nix
     ./searxng.nix
+    ./navidrome.nix
   ];
 }
