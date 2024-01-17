@@ -4,8 +4,7 @@
   ...
 }: {
   xdg.configFile."yazi/init.lua".source = ./init.lua;
-  # imports = [./keymap.nix];
-  home.packages = [pkgs.exiftool];
+  imports = [./keymap.nix ./openers.nix];
 
   programs.yazi = {
     enable = true;
@@ -25,21 +24,6 @@
         cache_dir = "${config.xdg.cacheHome}";
         max_height = 900;
         max_width = 600;
-      };
-      open.rules = [
-        {
-          mime = "image/*";
-          use = ["image"];
-        }
-      ];
-      opener = {
-        image = [
-          {
-            exec = ''imv "$@" '';
-            block = true;
-            for = "linux";
-          }
-        ];
       };
       log.enable = false;
     };
