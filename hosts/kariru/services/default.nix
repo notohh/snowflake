@@ -4,6 +4,7 @@
     ./restic.nix
     ./traefik.nix
     ./torrent.nix
+    ./flaresolverr.nix
   ];
   services.radarr = {
     enable = true;
