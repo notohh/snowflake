@@ -82,8 +82,11 @@ function Status:name()
 	if h == nil then
 		return ui.Span("")
 	end
-
-	return ui.Span(" " .. h.name)
+	local linked = ""
+	if h.link_to ~= nil then
+		linked = " -> " .. tostring(h.link_to)
+		end
+	return ui.Span(" " .. h.name .. linked)
 end
 
 function Status:permissions()
