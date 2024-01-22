@@ -4,6 +4,7 @@
   ...
 }: {
   imports = [
+    ./services/swayidle.nix
     ../../home
     ../../home/firefox
     ../../home/ags
@@ -16,7 +17,6 @@
     ../../home/zellij
     ../../home/spotify-player
     ../../home/wayland/hyprland
-    ../../modules/swayidle.nix
   ];
 
   systemd.user.startServices = "sd-switch";
@@ -35,6 +35,8 @@
       pavucontrol
       vscodium-fhs
       obsidian
+      supersonic-wayland
+      jellyfin-mpv-shim
       unzip
       unrar
       p7zip
