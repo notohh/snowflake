@@ -4,6 +4,11 @@
   ...
 }: {
   environment.systemPackages = [pkgs.minio-client];
+
+  systemd.services.minio.environment = {
+    MINIO_BROWSER_REDIRECT = "false";
+  };
+
   sops.secrets.minio = {
     owner = "minio";
     group = "minio";
