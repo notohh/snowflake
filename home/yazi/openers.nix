@@ -25,7 +25,7 @@
     opener = {
       text = [
         {
-          exec = ''hx "$@"'';
+          exec = ''hx "$@" '';
           for = "linux";
         }
       ];
@@ -38,7 +38,7 @@
       ];
       video = [
         {
-          exec = ''mpv "$@"'';
+          exec = ''mpv "$@" '';
           block = true;
           for = "linux";
         }
