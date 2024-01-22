@@ -21,5 +21,6 @@ name            | description
 `starship`      | shell prompt
 `wayland`       | has my hyprland config, along with session variables for wayland
 `wezterm`       | my terminal of choice
+`yazi`          | terminal file manager
 `zathura`       | pdf viewer
 `zellij`        | terminal multiplexer
