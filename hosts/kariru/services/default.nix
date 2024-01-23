@@ -1,11 +1,11 @@
-{...}: {
+{pkgs, ...}: {
   networking.firewall.allowedTCPPorts = [9292];
   imports = [
     ./restic.nix
     ./traefik.nix
     ./torrent.nix
-    ./flaresolverr.nix
   ];
+  environment.systemPackages = [pkgs.recyclarr];
   services.radarr = {
     enable = true;
     openFirewall = true;
@@ -62,6 +62,11 @@
         "/media/downloads:/media/downloads"
         "/media/incomplete-downloads:/media/incomplete-downloads"
       ];
+      extraOptions = ["--network=host"];
+    };
+    flaresolverr = {
+      image = "ghcr.io/flaresolverr/flaresolverr:v3.3.13";
+      ports = ["8191:8191"];
       extraOptions = ["--network=host"];
     };
   };
