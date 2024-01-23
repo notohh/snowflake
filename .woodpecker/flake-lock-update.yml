@@ -12,7 +12,7 @@ steps:
     image: nixos/nix
     commands: |
        echo 'experimental-features = flakes nix-command' >> /etc/nix/nix.conf
-       echo $${GH_PAT} >> /etc/nix/nix.conf
+       echo '$${GH_PAT}' >> /etc/nix/nix.conf
        cat /etc/nix/nix.conf
        nix flake update
     secrets: [ gh_pat ]
