@@ -1,0 +1,24 @@
+steps:
+  update:
+    image: nixos/nix
+    commands:
+      - echo 'experimental-features = flakes nix-command' >> /etc/nix/nix.conf
+      - nix flake update
+  make-pr:
+    image: johnwalkerx/gitea-pull-request-create-plugin:latest
+    pull: true
+    settings:
+      gitea_address: https://git.flake.sh/
+      gitea_token:
+        from_secret: forgejo_token
+      owner: ${CI_REPO_OWNER}
+      repo: ${CI_REPO_NAME}
+      branch: ${CI_COMMIT_BRANCH}
+      base_branch: main
+      pr_title: 'flake.lock: update'
+      pr_body: PR automatically created by Woodpecker CI
+      skip_on_missing_branch: true
+      close_pr_if_empty: true
+      delete_branch_if_pr_empty: true
+      merge_when_checks_succeed: false
+      delete_branch_after_merge: true
