@@ -10,9 +10,11 @@ when:
 steps:
   update:
     image: nixos/nix
-    commands:
-      - echo 'experimental-features = flakes nix-command' >> /etc/nix/nix.conf
-      - nix flake update
+    commands: |
+       echo 'experimental-features = flakes nix-command' >> /etc/nix/nix.conf
+       echo $GH_PAT >> /etc/nix/nix.conf
+       nix flake update
+    secrets: [ gh_pat ]
   push-changes:
     image: appleboy/drone-git-push
     settings:
