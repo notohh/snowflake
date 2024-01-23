@@ -12,14 +12,13 @@ steps:
     image: nixos/nix
     commands: |
        echo 'experimental-features = flakes nix-command' >> /etc/nix/nix.conf
-       echo "access-tokens = github.com=$${GH_PAT}" >> /etc/nix/nix.conf
+       echo 'access-tokens = github.com=$${GH_PAT}' >> /etc/nix/nix.conf
        nix flake update
     secrets: [ gh_pat ]
   push-changes:
     image: appleboy/drone-git-push
     settings:
       remote: ssh://forgejo@git.flake.sh/notohh/snowflake.git
-      remote_name: origin
       branch: flake-lock-update
       ssh_key:
         from_secret: forgejo_ssh_key
