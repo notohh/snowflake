@@ -1,18 +1,17 @@
+
+when:
+  - event: cron
+    cron: flake-lock-update
+
 steps:
   update:
     image: nixos/nix
-    when:
-      - event: cron
-        cron: flake-lock-update
     commands:
       - echo 'experimental-features = flakes nix-command' >> /etc/nix/nix.conf
       - nix flake update
   make-pr:
     image: johnwalkerx/gitea-pull-request-create-plugin:latest
     pull: true
-    when:
-      - event: cron
-        cron: flake-lock-update
     settings:
       gitea_address: https://git.flake.sh/
       gitea_token:

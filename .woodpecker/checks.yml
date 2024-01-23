@@ -1,19 +1,15 @@
+when:
+  - path:
+      include: ['*.nix']
+      exclude: ['*.md', 'docs/**', '.woodpecker/*.yaml', '*.js', '*.lua', '*.scss', '*.nu']
 steps:
   check:
     image: nixos/nix
-    when:
-      - path:
-          include: ['*.nix']
-          exclude: ['*.md', 'docs/**', '.woodpecker/*.yaml', '*.js', '*.lua', '*.scss', '*.nu']
     commands:
       - echo 'experimental-features = flakes nix-command' >> /etc/nix/nix.conf
       - nix flake check
   fmt:
     image: nixos/nix
-    when:
-      - path:
-          include: ['*.nix']
-          exclude: ['*.md', 'docs/**', '.woodpecker/*.yaml', '*.js', '*.lua', '*.scss', '*.nu']
     commands:
       - echo 'experimental-features = flakes nix-command' >> /etc/nix/nix.conf
       - nix run nixpkgs#alejandra -- -c .
