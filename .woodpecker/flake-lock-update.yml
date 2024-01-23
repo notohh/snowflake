@@ -4,6 +4,9 @@ steps:
     commands:
       - echo 'experimental-features = flakes nix-command' >> /etc/nix/nix.conf
       - nix flake update
+    when:
+      event: cron
+      cron: "flake-lock-update"
   make-pr:
     image: johnwalkerx/gitea-pull-request-create-plugin:latest
     pull: true
@@ -22,3 +25,6 @@ steps:
       delete_branch_if_pr_empty: true
       merge_when_checks_succeed: false
       delete_branch_after_merge: true
+    when:
+      event: cron
+      cron: "flake-lock-update"
