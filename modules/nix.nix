@@ -7,6 +7,7 @@
   nixpkgs = {
     overlays = [
       inputs.nur.overlay
+      inputs.helix.overlays.default
       inputs.yazi.overlays.default
     ];
     config = {
