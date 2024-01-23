@@ -13,6 +13,16 @@ steps:
     commands:
       - echo 'experimental-features = flakes nix-command' >> /etc/nix/nix.conf
       - nix flake update
+  push-changes:
+    image: appleboy/drone-git-push
+    settings:
+      branch: flake-lock-update
+      ssh_key:
+        from_secret: forgejo_ssh_key
+      commit: true
+      commit_message: "flake.lock: update"
+      author_name: "WoodpeckerCI"
+      author_email: "woodpecker@flake.sh"
   make-pr:
     image: johnwalkerx/gitea-pull-request-create-plugin:latest
     pull: true
@@ -26,7 +36,7 @@ steps:
       base_branch: main
       pr_title: "flake.lock: update"
       pr_body: PR automatically created by Woodpecker CI
-      skip_on_missing_branch: false
+      skip_on_missing_branch: true
       close_pr_if_empty: true
       delete_branch_if_pr_empty: true
       merge_when_checks_succeed: false
