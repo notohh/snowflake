@@ -22,7 +22,3 @@ steps:
       delete_branch_if_pr_empty: true
       merge_when_checks_succeed: false
       delete_branch_after_merge: true
-
-  when:
-    event: cron
-    cron: "flake-lock-update"
