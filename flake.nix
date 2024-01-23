@@ -9,6 +9,7 @@
     attic.url = "github:zhaofengli/attic";
     nur.url = "github:nix-community/NUR";
     yazi.url = "github:sxyazi/yazi";
+    helix.url = "github:helix-editor/helix";
     hyprland-plugins = {
       url = "github:hyprwm/hyprland-plugins";
       inputs.hyprland.follows = "hyprland";
