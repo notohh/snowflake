@@ -1,4 +1,8 @@
-
+clone:
+  git:
+    image: woodpeckerci/plugin-git
+    settings:
+      branch: flake-lock-update
 when:
   - event: cron
     cron: flake-lock-update
