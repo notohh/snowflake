@@ -13,7 +13,7 @@ steps:
         from_secret: forgejo_token
       owner: ${CI_REPO_OWNER}
       repo: ${CI_REPO_NAME}
-      branch: ${CI_COMMIT_BRANCH}
+      branch: flake-lock-update
       base_branch: main
       pr_title: 'flake.lock: update'
       pr_body: PR automatically created by Woodpecker CI
@@ -22,3 +22,7 @@ steps:
       delete_branch_if_pr_empty: true
       merge_when_checks_succeed: false
       delete_branch_after_merge: true
+
+  when:
+    event: cron
+    cron: "flake-lock-update"
