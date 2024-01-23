@@ -13,7 +13,7 @@
     config = {
       allowUnfree = true;
       permittedInsecurePackages = [
-        "electron-25.9.0"
+        "electron-24.8.6"
       ];
     };
   };
