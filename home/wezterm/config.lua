@@ -15,12 +15,7 @@ local config = {
     text_background_opacity = 1.0,
     enable_tab_bar = false,
     color_scheme = 'tokyonight',
-    window_padding = {
-        top = 20,
-        bottom = 20,
-        left = 20,
-        right = 20
-    }
+    window_padding = {top = 20, bottom = 20, left = 20, right = 20}
 }
 
 return config
