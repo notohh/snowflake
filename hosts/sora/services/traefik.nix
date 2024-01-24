@@ -153,6 +153,13 @@
             tls.certresolver = "production";
             middlewares = "cors-allow-all";
           };
+          woodpecker = {
+            rule = "Host(`ci.flake.sh`)";
+            entrypoints = ["websecure"];
+            service = "woodpecker";
+            tls.domains = [{main = "*.flake.sh";}];
+            tls.certresolver = "production";
+          };
         };
         services = {
           forgejo.loadBalancer = {
@@ -173,6 +180,7 @@
           ntfy-sh.loadBalancer.servers = [{url = "http://100.104.42.96:8090";}];
           attic.loadBalancer.servers = [{url = "http://100.104.42.96:8200";}];
           minio.loadBalancer.servers = [{url = "http://100.69.79.81:9005";}];
+          woodpecker.loadBalancer.servers = [{url = "http://100.82.146.40:8200";}];
         };
       };
     };
