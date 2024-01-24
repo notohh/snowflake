@@ -49,6 +49,7 @@
       extraConfig = builtins.readFile ./user.js/betterfox.js;
       search = {
         default = "SearXNG";
+        force = true;
         engines = {
           "SearXNG" = {
             urls = [
