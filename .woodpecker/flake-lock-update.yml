@@ -25,8 +25,6 @@ steps:
         from_secret: forgejo_ssh_key
       commit: true
       commit_message: "flake.lock: update"
-      author_name: "WoodpeckerCI"
-      author_email: "woodpecker@flake.sh"
   make-pr:
     image: johnwalkerx/gitea-pull-request-create-plugin:latest
     pull: true
