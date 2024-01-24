@@ -18,13 +18,15 @@ steps:
   push-changes:
     image: appleboy/drone-git-push
     settings:
-      remote_name: origin
+      remote: ssh://forgejo@git.flake.sh:2222/notohh/snowflake.git
       branch: flake-lock-update
       local_ref: flake-lock-update
       ssh_key:
         from_secret: forgejo_ssh_key
       commit: true
       commit_message: "flake.lock: update"
+      author_name: "WoodpeckerCI"
+      author_email: "woodpecker@flake.sh"
   make-pr:
     image: johnwalkerx/gitea-pull-request-create-plugin:latest
     pull: true
