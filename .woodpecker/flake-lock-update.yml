@@ -18,7 +18,7 @@ steps:
   push-changes:
     image: appleboy/drone-git-push
     settings:
-      remote: ssh://forgejo@git.flake.sh:2222/notohh/snowflake.git
+      remote: forgejo@git.flake.sh:2222/notohh/snowflake.git
       branch: flake-lock-update
       local_ref: flake-lock-update
       ssh_key:
