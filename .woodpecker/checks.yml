@@ -1,4 +1,5 @@
 when:
+  - event: [push]
   - path:
       include: ['**.nix']
       exclude: ['**.md', 'docs/**', '.woodpecker/*.yaml', '**.js', '**.lua', '**.scss', '**.nu']
