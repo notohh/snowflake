@@ -6,7 +6,7 @@ steps:
   attic-push:
     image: git.vdx.hu/voidcontext/woodpecker-plugin-nix-attic
     settings:
-      binary_cache: https://cache.flake.sh/kyasshu/
+      binary_cache: https://cache.flake.sh/
       binary_cache_public_key: kyasshu:g1heIgCgG7M4San6nRsz/omcVQ1GTc7+zKKm3L9Co7o=
       binary_cache_token:
         from_secret: kyasshu_access_token
