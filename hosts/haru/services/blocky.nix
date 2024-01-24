@@ -98,7 +98,7 @@
           # infra
 
           "truenas.internal.flake.sh" = "192.168.1.199";
-          "assistant.internal.flake.sh" = "192.168.1.189";
+          "hass.internal.flake.sh" = "192.168.1.98";
           "dashboard.internal.flake.sh" = "192.168.1.98";
           "udm.internal.flake.sh" = "192.168.1.1";
           "pve.internal.flake.sh" = "192.168.1.37";
