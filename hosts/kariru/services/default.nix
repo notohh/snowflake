@@ -40,7 +40,7 @@
 
   virtualisation.oci-containers.containers = {
     whisparr = {
-      image = "hotio/whisparr:nightly-7b7bdb9";
+      image = "ghcr.io/hotio/whisparr:v3-b7c95ec";
       ports = ["6969:6969"];
       volumes = [
         "/var/lib/whisparr:/config"
