@@ -40,6 +40,11 @@ _: {
             entrypoints = ["web"];
             service = "searxng";
           };
+          hass = {
+            rule = "Host(`hass.internal.flake.sh`)";
+            entrypoints = ["web"];
+            service = "hass";
+          };
         };
         services = {
           stash.loadBalancer.servers = [{url = "http://localhost:9999";}];
@@ -48,6 +53,7 @@ _: {
           jellyseerr.loadBalancer.servers = [{url = "http://localhost:5055";}];
           wallos.loadBalancer.servers = [{url = "http://localhost:8282";}];
           searxng.loadBalancer.servers = [{url = "http://localhost:8100";}];
+          hass.loadBalancer.servers = [{url = "http://localhost:8123";}];
         };
       };
     };
