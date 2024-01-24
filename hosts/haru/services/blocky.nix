@@ -24,6 +24,7 @@
       upstreams = {
         strategy = "strict";
         timeout = "30s";
+        init.strategy = "fast";
         groups = {
           default = [
             "tcp+udp:127.0.0.1:5335"
