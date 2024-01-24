@@ -1,5 +1,5 @@
 _: {
   imports = [
-    ./forgejo-runners.nix
+    ./woodpecker.nix
   ];
 }

@@ -1,0 +1,47 @@
+clone:
+  git:
+    image: woodpeckerci/plugin-git
+    settings:
+      branch: flake-lock-update
+when:
+  - event: cron
+    cron: flake-lock-update
+
+steps:
+  update:
+    image: nixos/nix
+    commands: |
+       echo 'experimental-features = flakes nix-command' >> /etc/nix/nix.conf
+       echo "access-tokens = github.com=$${GH_PAT}" >> /etc/nix/nix.conf
+       nix flake update
+    secrets: [ gh_pat ]
+  push-changes:
+    image: appleboy/drone-git-push
+    settings:
+      remote: ssh://forgejo@git.flake.sh:2222/notohh/snowflake.git
+      branch: flake-lock-update
+      local_ref: flake-lock-update
+      ssh_key:
+        from_secret: forgejo_ssh_key
+      commit: true
+      commit_message: "flake.lock: update"
+      author_name: "WoodpeckerCI"
+      author_email: "woodpecker@flake.sh"
+  make-pr:
+    image: johnwalkerx/gitea-pull-request-create-plugin:latest
+    pull: true
+    settings:
+      gitea_address: https://git.flake.sh/
+      gitea_token:
+        from_secret: forgejo_token
+      owner: ${CI_REPO_OWNER}
+      repo: ${CI_REPO_NAME}
+      branch: flake-lock-update
+      base_branch: main
+      pr_title: "flake.lock: update"
+      pr_body: PR automatically created by Woodpecker CI
+      skip_on_missing_branch: false
+      close_pr_if_empty: true
+      delete_branch_if_pr_empty: true
+      merge_when_checks_succeed: false
+      delete_branch_after_merge: true
