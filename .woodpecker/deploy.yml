@@ -23,5 +23,5 @@ steps:
        mkdir -p .ssh && cd .ssh
        echo "$${SSH_KEY}" > forgejo
        chmod 400 forgejo
-       nix run github:serokell/deploy-rs -- --ssh-opts="-i forgejo -o StrictHostKeyChecking=no" --skip-checks --targets .#arashi .#kariru .#sakura .#sora .#yuki .#haru .#kaze
+       nix run github:serokell/deploy-rs -- --ssh-opts="-i forgejo -o StrictHostKeyChecking=no" --skip-checks --targets .#arashi .#sakura .#sora .#yuki .#haru .#kaze
     secrets: [ssh_key, gh_pat]
