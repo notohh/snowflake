@@ -12,7 +12,6 @@ steps:
         from_secret: kyasshu_access_token
       script: |
        attic login kyasshu $PLUGIN_BINARY_CACHE_TOKEN
-       attic watch-store kyasshu
   deploy:
     image: nixos/nix
     commands: |
