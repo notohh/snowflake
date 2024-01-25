@@ -1,5 +1,4 @@
 _: {
-  networking.firewall.allowedTCPPorts = [61208 61209];
   virtualisation.oci-containers.containers.glances = {
     image = "nicolargo/glances";
     ports = [
