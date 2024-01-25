@@ -186,7 +186,7 @@
     };
     staticConfigOptions = {
       log.level = "DEBUG";
-      api.dashboard = true;
+      api.dashboard = false;
       api.insecure = true;
       global = {
         checkNewVersion = false;
