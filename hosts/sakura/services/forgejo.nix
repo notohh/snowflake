@@ -17,7 +17,7 @@
         SHOW_USER_EMAIL = true;
       };
       actions = {
-        ENABLED = true;
+        ENABLED = false;
         DEFAULT_ACTIONS_URL = "https://code.forgejo.org";
       };
       server = {
