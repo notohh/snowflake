@@ -38,29 +38,16 @@
     openFirewall = true;
   };
 
+  services.sabnzbd.enable = true;
+
   virtualisation.oci-containers.containers = {
     whisparr = {
       image = "ghcr.io/hotio/whisparr:v3-b7c95ec";
       ports = ["6969:6969"];
       volumes = [
         "/var/lib/whisparr:/config"
-        "/stash:/data/stash"
-        "/media/downloads:/data/downloads"
-      ];
-      extraOptions = ["--network=host"];
-    };
-
-    sabnzbd = {
-      image = "linuxserver/sabnzbd:nightly-version-8ef87881";
-      ports = ["9292:9292"];
-      environment = {
-        PUID = "1000";
-        PGID = "1000";
-      };
-      volumes = [
-        "/var/lib/sabnzbd:/config"
+        "/stash:/media/stash"
         "/media/downloads:/media/downloads"
-        "/media/incomplete-downloads:/media/incomplete-downloads"
       ];
       extraOptions = ["--network=host"];
     };
