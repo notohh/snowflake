@@ -1,11 +1,4 @@
 {pkgs, ...}: {
-  xdg.configFile."hypr/hyprpaper.conf".text = ''
-    preload = ~/Pictures/wallpapers/city.png
-    wallpaper = HDMI-A-1,~/Pictures/wallpapers/city.png
-    wallpaper = DP-1,~/Pictures/wallpapers/city.png
-    wallpaper = DP-2,~/Pictures/wallpapers/city.png
-    wallpaper = DP-3,~/Pictures/wallpapers/city.png
-  '';
   wayland.windowManager.hyprland = {
     settings = {
       monitor = [
@@ -15,7 +8,8 @@
         "DP-3,1920x1080@144, 1400x0, auto" #top
       ];
       exec-once = [
-        "hyprpaper"
+        "ags"
+        "swww init && swww img ~/Pictures/wallpapers/city.png"
         "dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
         "${pkgs.polkit_gnome}/libexec/polkit-gnome-authentication-agent-1"
         "~/.local/bin/lock"

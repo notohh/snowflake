@@ -30,7 +30,7 @@ in {
     swayidle
     swaylock-effects
     hyprpicker
-    hyprpaper
+    swww
   ];
 
   services.dbus.enable = true;
