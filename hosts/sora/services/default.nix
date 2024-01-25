@@ -7,6 +7,7 @@
     ./attic.nix
     ./tailscale.nix
     ./croc.nix
+    ./glances.nix
 
     ### game servers
     ./terraria.nix
