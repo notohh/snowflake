@@ -10,6 +10,7 @@ M.config = function()
     main_image = "file",
     client_id = "793271441293967371",
     buttons = true,
+    show_time = true,
     log_level = nil,
     debounce_timeout = 10,
     enable_line_number = true,                -- Displays the current line number instead of the current project
