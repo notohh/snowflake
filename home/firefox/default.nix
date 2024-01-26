@@ -104,8 +104,7 @@
 
         #utility
         new-tab-override
-        sponsorblock
-        return-youtube-dislikes
+        libredirect
 
         #misc
         tokyo-night-v2
