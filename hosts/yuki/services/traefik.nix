@@ -45,6 +45,11 @@ _: {
             entrypoints = ["web"];
             service = "hass";
           };
+          miniflux = {
+            rule = "Host(`news.internal.flake.sh`)";
+            entrypoints = ["web"];
+            service = "miniflux";
+          };
         };
         services = {
           stash.loadBalancer.servers = [{url = "http://localhost:9999";}];
@@ -54,6 +59,7 @@ _: {
           wallos.loadBalancer.servers = [{url = "http://localhost:8282";}];
           searxng.loadBalancer.servers = [{url = "http://localhost:8100";}];
           hass.loadBalancer.servers = [{url = "http://localhost:8123";}];
+          miniflux.loadBalancer.servers = [{url = "http://localhost:9000";}];
         };
       };
     };
