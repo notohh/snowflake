@@ -160,6 +160,13 @@
             tls.domains = [{main = "*.flake.sh";}];
             tls.certresolver = "production";
           };
+          miniflux = {
+            rule = "Host(`rss.flake.sh`)";
+            entrypoints = ["websecure"];
+            service = "miniflux";
+            tls.domains = [{main = "*.flake.sh";}];
+            tls.certresolver = "production";
+          };
         };
         services = {
           forgejo.loadBalancer = {
@@ -181,6 +188,7 @@
           attic.loadBalancer.servers = [{url = "http://100.104.42.96:8200";}];
           minio.loadBalancer.servers = [{url = "http://100.69.79.81:9005";}];
           woodpecker.loadBalancer.servers = [{url = "http://100.82.146.40:8200";}];
+          miniflux.loadBalancer.servers = [{url = "http://100.121.201.47:9000";}];
         };
       };
     };

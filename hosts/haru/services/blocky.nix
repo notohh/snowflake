@@ -118,7 +118,6 @@
           "prowlarr.internal.flake.sh" = "192.168.1.54";
           "stash.internal.flake.sh" = "192.168.1.98";
           "nextcloud.internal.flake.sh" = "192.168.1.199";
-          "news.internal.flake.sh" = "192.168.1.98";
 
           # misc
 

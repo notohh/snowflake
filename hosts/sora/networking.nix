@@ -30,6 +30,5 @@
   };
   services.udev.extraRules = ''
     ATTR{address}=="96:00:02:c2:dc:83", NAME="eth0"
-
   '';
 }

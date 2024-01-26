@@ -10,5 +10,6 @@
     ./conduit.nix
     ./tailscale.nix
     ./justlog.nix
+    ./miniflux.nix
   ];
 }
