@@ -20,6 +20,13 @@
           command = lib.getExe rustfmt;
         };
       }
+      {
+        name = "lua";
+        auto-format = true;
+        formatter = {
+          command = lib.getExe luaformatter;
+        };
+      }
     ];
     language-server = with pkgs; {
       nil = {
