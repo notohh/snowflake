@@ -1,9 +1,9 @@
 {pkgs, ...}: {
   imports = [
+    ./editors/helix
     ./neofetch
     ./nushell
     ./starship
-    ./helix
     ./git
     ./lazygit
     ./direnv
