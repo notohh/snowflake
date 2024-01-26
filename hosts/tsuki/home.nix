@@ -44,6 +44,7 @@
       tigervnc
       imv
       mpv
+      nom
       rustypaste-cli
       gimp
       cryptomator
