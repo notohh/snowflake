@@ -8,5 +8,6 @@
     ./wallos.nix
     ./homepage.nix
     ./searxng.nix
+    ./anki-sync-server.nix
   ];
 }
