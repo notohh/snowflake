@@ -14,7 +14,7 @@
       useOSProber = false;
     };
   };
-  
+
   services.xserver = {
     layout = "us";
     xkbVariant = "";
