@@ -8,10 +8,10 @@ name            | description
 `anyrun`        | wayland native application launcher
 `cava`          | terminal audio visualizer 
 `direnv`        | a shell extension, that loads environment variables in certain directories
+`editors`       | houses my main editors, helix and nvim
 `default`       | used for commonly shared modules, for multiple home-manager configs
 `git`           | version control system
 `gtk`           | themes
-`helix`         | modal text editor
 `ironbar`       | wayland specific bar, written in Rust
 `lazygit`       | terminal based git command system
 `mako`          | a lightweight wayland notification daemon
