@@ -1,6 +1,7 @@
 {pkgs, ...}: {
   imports = [
     ./editors/helix
+    ./editors/neovim
     ./neofetch
     ./nushell
     ./starship
@@ -26,6 +27,9 @@
     dig
     tailspin
     nitch
+    unzip
+    unrar
+    p7zip
   ];
 
   services.gpg-agent = {
@@ -36,9 +40,7 @@
     enableNushellIntegration = true;
   };
 
-  programs.bat = {
-    enable = true;
-  };
+  programs.bat.enable = true;
 
   programs.zoxide = {
     enable = true;
