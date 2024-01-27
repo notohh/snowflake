@@ -31,17 +31,12 @@
       cinny-desktop
       thunderbird
       obs-studio
-      signal-desktop
       pavucontrol
       vscodium-fhs
       obsidian-wayland
       supersonic-wayland
       jellyfin-mpv-shim
-      unzip
-      unrar
-      p7zip
       virt-manager
-      tigervnc
       imv
       mpv
       nom
@@ -51,7 +46,6 @@
       ventoy-bin-full
       wine
       lutris
-      gamemode
       mangohud
       bottles
       runelite
