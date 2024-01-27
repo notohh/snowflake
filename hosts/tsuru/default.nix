@@ -15,10 +15,6 @@
     };
   };
 
-  networking = {
-    hostName = "tsuru";
-  };
-
   services.xserver = {
     layout = "us";
     xkbVariant = "";

@@ -19,8 +19,7 @@
   };
 
   programs.hyprland.enable = true;
-
-  networking.hostName = "ame";
+  
   services.xserver.enable = true;
   services.xserver.displayManager.sddm.enable = true;
 

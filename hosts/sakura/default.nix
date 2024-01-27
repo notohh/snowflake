@@ -15,10 +15,6 @@ _: {
     };
   };
 
-  networking = {
-    hostName = "sakura";
-  };
-
   services.snowflake-proxy.enable = true;
 
   services.xserver = {

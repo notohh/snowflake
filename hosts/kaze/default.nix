@@ -15,10 +15,6 @@
     };
   };
 
-  networking = {
-    hostName = "kaze";
-  };
-
   services.xserver = {
     layout = "us";
     xkbVariant = "";

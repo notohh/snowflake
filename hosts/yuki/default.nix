@@ -15,10 +15,6 @@
     };
   };
 
-  networking = {
-    hostName = "yuki";
-  };
-
   services.xserver = {
     layout = "us";
     xkbVariant = "";

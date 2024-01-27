@@ -14,11 +14,7 @@
       useOSProber = false;
     };
   };
-
-  networking = {
-    hostName = "haru";
-  };
-
+  
   services.xserver = {
     layout = "us";
     xkbVariant = "";

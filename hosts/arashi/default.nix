@@ -19,10 +19,6 @@
     "kernel.shmmax" = 100663296;
   };
 
-  networking = {
-    hostName = "arashi";
-  };
-
   services.xserver = {
     layout = "us";
     xkbVariant = "";

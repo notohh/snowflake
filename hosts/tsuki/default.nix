@@ -32,10 +32,6 @@
 
   virtualisation.libvirtd.enable = true;
 
-  networking = {
-    hostName = "tsuki";
-  };
-
   services = {
     xserver = {
       enable = true;
@@ -75,6 +71,8 @@
     };
   };
 
+  programs.gamemode.enable = true;
+
   programs.steam = {
     enable = true;
     extraCompatPackages = [
@@ -99,10 +97,6 @@
       enable = true;
       extraPackages = [pkgs.nvidia-vaapi-driver];
     };
-    opentabletdriver = {
-      enable = true;
-      daemon.enable = true;
-    };
   };
 
   environment.systemPackages = with pkgs; [
@@ -111,6 +105,5 @@
     libvirt
     qemu_kvm
     jdk17
-    comma
   ];
 }

@@ -1,6 +1,7 @@
 _: {
   networking = {
     networkmanager.enable = true;
+    hostName = "arashi";
     firewall = {
       enable = true;
     };

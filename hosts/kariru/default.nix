@@ -15,10 +15,6 @@
     };
   };
 
-  networking = {
-    hostName = "kariru";
-  };
-
   services.xserver = {
     layout = "us";
     xkbVariant = "";
