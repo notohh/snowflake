@@ -32,6 +32,8 @@
       thunderbird
       obs-studio
       pavucontrol
+      rustdesk
+      anki
       vscodium-fhs
       obsidian-wayland
       supersonic-wayland
