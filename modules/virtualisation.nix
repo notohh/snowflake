@@ -1,6 +1,4 @@
-{pkgs, ...}: {
-  environment.systemPackages = with pkgs; [docker-compose];
-
+_: {
   virtualisation.oci-containers.backend = "docker";
   virtualisation.docker = {
     enable = true;
@@ -8,6 +6,9 @@
     autoPrune = {
       enable = true;
       dates = "weekly";
+      flags = [
+        "--all"
+      ];
     };
     listenOptions = [
       "/run/docker.sock"
