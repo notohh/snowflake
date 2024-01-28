@@ -1,9 +1,4 @@
-{
-  lib,
-  pkgs,
-  inputs,
-  ...
-}: {
+{inputs, ...}: {
   nixpkgs = {
     overlays = [
       inputs.nur.overlay
