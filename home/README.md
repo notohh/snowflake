@@ -12,6 +12,7 @@ name            | description
 `default`       | used for commonly shared modules, for multiple home-manager configs
 `git`           | version control system
 `gtk`           | themes
+`helix`         | modal text editor
 `ironbar`       | wayland specific bar, written in Rust
 `lazygit`       | terminal based git command system
 `mako`          | a lightweight wayland notification daemon

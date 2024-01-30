@@ -1,7 +1,6 @@
 {pkgs, ...}: {
   imports = [
-    ./editors/helix
-    ./editors/neovim
+    ./helix
     ./neofetch
     ./nushell
     ./starship

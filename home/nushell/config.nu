@@ -9,7 +9,6 @@ alias la = eza -alughH --git --icons
 alias calc = eva
 alias c = clear
 alias f = yazi
-alias v = lvim
 alias cat = bat
 alias rm = rm -i
 alias cp = cp -i
@@ -36,7 +35,6 @@ alias shorten = rpaste -s "https://i.flake.sh/" -e 1day -u
 alias send = croc --relay "100.104.42.96:9009" send
 alias tail = tspin
 alias grep = rg
-alias code = codium "."
 nitch
 
 $env.config = {
