@@ -97,6 +97,10 @@
       enable = true;
       extraPackages = [pkgs.nvidia-vaapi-driver];
     };
+    opentabletdriver = {
+      enable = true;
+      daemon.enable = true;
+    };
   };
 
   environment.systemPackages = with pkgs; [
