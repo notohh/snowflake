@@ -37,5 +37,17 @@
         protected-mode = "no";
       };
     };
+    paperless-ngx = {
+      enable = true;
+      openFirewall = true;
+      port = 6382;
+      bind = null;
+      databases = 16;
+      logLevel = "debug";
+      requirePass = "paperless-ngx";
+      settings = {
+        protected-mode = "no";
+      };
+    };
   };
 }
