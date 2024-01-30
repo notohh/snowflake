@@ -32,6 +32,11 @@
     fsType = "nfs";
   };
 
+  fileSystems."/var/lib/paperless-ngx/media" = {
+    device = "192.168.1.199:/mnt/Sutoreji/paperless-ngx/paperless-media ";
+    fsType = "nfs";
+  };
+
   swapDevices = [
     {device = "/dev/disk/by-uuid/bd7ccb73-6f85-4b3d-b37f-5cff58a6ab59";}
   ];
