@@ -34,13 +34,15 @@
       pavucontrol
       rustdesk
       anki
-      vscodium-fhs
+      distrobox
+      vscode-fhs
       obsidian-wayland
       supersonic-wayland
       jellyfin-mpv-shim
       virt-manager
       imv
       mpv
+      ffmpeg
       nom
       rustypaste-cli
       gimp
