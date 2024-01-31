@@ -109,13 +109,13 @@
 
           "jellyfin.internal.flake.sh" = "192.168.1.98";
           "jellyseerr.internal.flake.sh" = "192.168.1.98";
-          "sonarr.internal.flake.sh" = "192.168.1.54";
-          "radarr.internal.flake.sh" = "192.168.1.54";
-          "readarr.internal.flake.sh" = "192.168.1.54";
-          "lidarr.internal.flake.sh" = "192.168.1.54";
-          "whisparr.internal.flake.sh" = "192.168.1.54";
-          "bazarr.internal.flake.sh" = "192.168.1.54";
-          "prowlarr.internal.flake.sh" = "192.168.1.54";
+          "sonarr.internal.flake.sh" = "192.168.1.98";
+          "radarr.internal.flake.sh" = "192.168.1.98";
+          "readarr.internal.flake.sh" = "192.168.1.98";
+          "lidarr.internal.flake.sh" = "192.168.1.98";
+          "whisparr.internal.flake.sh" = "192.168.1.98";
+          "bazarr.internal.flake.sh" = "192.168.1.98";
+          "prowlarr.internal.flake.sh" = "192.168.1.98";
           "stash.internal.flake.sh" = "192.168.1.98";
           "nextcloud.internal.flake.sh" = "192.168.1.199";
 
@@ -127,7 +127,7 @@
         };
       };
       redis = {
-        address = "100.94.214.100:6381";
+        address = "192.168.1.211:6381";
         password = "blocky";
         database = 0;
         required = false;
@@ -143,7 +143,7 @@
         prefetchThreshold = 5;
       };
       prometheus = {
-        enable = true;
+        enable = false;
         path = "/metrics";
       };
       queryLog = {
