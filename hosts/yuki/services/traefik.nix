@@ -45,6 +45,11 @@ _: {
             entrypoints = ["web"];
             service = "hass";
           };
+          paperless = {
+            rule = "Host(`paperless.internal.flake.sh`)";
+            entrypoints = ["web"];
+            service = "paperless";
+          };
         };
         services = {
           stash.loadBalancer.servers = [{url = "http://localhost:9999";}];
@@ -54,6 +59,7 @@ _: {
           wallos.loadBalancer.servers = [{url = "http://localhost:8282";}];
           searxng.loadBalancer.servers = [{url = "http://localhost:8100";}];
           hass.loadBalancer.servers = [{url = "http://localhost:8123";}];
+          paperless.loadBalancer.servers = [{url = "http://100.108.113.89:28981";}];
         };
       };
     };
