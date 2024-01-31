@@ -2,7 +2,6 @@
   networking.firewall.allowedTCPPorts = [9292];
   imports = [
     ./restic.nix
-    ./traefik.nix
     ./torrent.nix
   ];
   environment.systemPackages = [pkgs.recyclarr];
