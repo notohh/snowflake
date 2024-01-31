@@ -195,10 +195,10 @@
     staticConfigOptions = {
       log.level = "DEBUG";
       api.dashboard = false;
-      api.insecure = true;
+      api.insecure = false;
       global = {
         checkNewVersion = false;
-        sendAnonymousUsage = false;
+        sendAnonymousUsage = true;
       };
       entryPoints = {
         websecure = {
