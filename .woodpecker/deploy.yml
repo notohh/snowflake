@@ -1,6 +1,6 @@
 when:
   - branch: flake-lock-update
-  - event: [pull_request]
+  - event: [pull_request_closed]
   
 steps:
   attic-push:
