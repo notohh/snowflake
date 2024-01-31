@@ -1,5 +1,6 @@
 when:
   - event: [push]
+  - branch: master
   - path:
       include: ['**.nix']
       exclude: ['**.md', 'docs/**', '.woodpecker/*.yaml', '**.js', '**.lua', '**.scss', '**.nu']
