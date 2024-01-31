@@ -143,7 +143,7 @@
         prefetchThreshold = 5;
       };
       prometheus = {
-        enable = false;
+        enable = true;
         path = "/metrics";
       };
       queryLog = {
