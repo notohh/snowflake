@@ -123,6 +123,7 @@
 
           "wallos.internal.flake.sh" = "192.168.1.98";
           "synology.internal.flake.sh" = "192.168.1.71";
+          "paperless.internal.flake.sh" = "192.168.1.98";
         };
       };
       redis = {
