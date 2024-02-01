@@ -76,6 +76,13 @@
             tls.domains = [{main = "*.internal.flake.sh";}];
             tls.certresolver = "production";
           };
+          miniflux = {
+            rule = "Host(`rss.internal.flake.sh`)";
+            entrypoints = ["websecure"];
+            service = "miniflux";
+            tls.domains = [{main = "*.internal.flake.sh";}];
+            tls.certresolver = "production";
+          };
           # kariru
           sonarr = {
             rule = "Host(`sonarr.internal.flake.sh`)";
@@ -137,6 +144,7 @@
           searxng.loadBalancer.servers = [{url = "http://localhost:8100";}];
           hass.loadBalancer.servers = [{url = "http://localhost:8123";}];
           paperless.loadBalancer.servers = [{url = "http://localhost:28981";}];
+          miniflux.loadBalancer.servers = [{url = "http://localhost:9000";}];
           # kariru
           sonarr.loadBalancer.servers = [{url = "http://192.168.1.54:8989";}];
           radarr.loadBalancer.servers = [{url = "http://192.168.1.54:7878";}];
