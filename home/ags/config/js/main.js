@@ -7,23 +7,16 @@ import { Workspaces } from "./widgets/hyprland.js";
 const Start = () =>
   Widget.Box({
     hpack: "start",
-    children: [
-      nixosLogo(),
-      Workspaces(),
-    ],
+    children: [nixosLogo(), Workspaces()]
   });
 const Center = () =>
   Widget.Box({
-    children: [
-      Media(),
-    ],
+    children: [Media()]
   });
 const End = () =>
   Widget.Box({
     hpack: "end",
-    children: [
-      Time(),
-    ],
+    children: [Time()]
   });
 
 const Bar = (monitor) =>
@@ -35,8 +28,8 @@ const Bar = (monitor) =>
     child: Widget.CenterBox({
       startWidget: Start(),
       centerWidget: Center(),
-      endWidget: End(),
-    }),
+      endWidget: End()
+    })
   });
 
 export { Bar };

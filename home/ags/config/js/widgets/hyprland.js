@@ -8,11 +8,12 @@ const Workspaces = () =>
         Widget.Button({
           on_clicked: () => Hyprland.sendMessage(`dispatch workspace ${id}`),
           child: Widget.Label(`${id}`),
-          class_name: Hyprland.active.workspace.bind("id")
-            .transform((i) => `${i === id ? "focused" : ""}`),
+          class_name: Hyprland.active.workspace
+            .bind("id")
+            .transform((i) => `${i === id ? "focused" : ""}`)
         })
       );
-    }),
+    })
   });
 
 export { Workspaces };
