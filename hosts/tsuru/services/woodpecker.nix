@@ -31,8 +31,6 @@
       WOODPECKER_KEEPALIVE_MIN_TIME = "10s";
       WOODPECKER_HEALTHCHECK = "true";
     };
-    extraGroups = [
-      "docker"
-    ];
+    extraGroups = ["docker"];
   };
 }

@@ -24,7 +24,7 @@
         name = "lua";
         auto-format = true;
         formatter = {
-          command = lib.getExe luaformatter;
+          command = lib.getExe stylua;
         };
       }
     ];

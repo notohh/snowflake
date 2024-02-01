@@ -3,9 +3,7 @@
   config,
   ...
 }: {
-  sops.secrets.restic-arashi = {
-    sopsFile = ../../../secrets/restic/secrets.yaml;
-  };
+  sops.secrets.restic-arashi = {sopsFile = ../../../secrets/restic/secrets.yaml;};
   environment.systemPackages = [pkgs.restic];
   services.restic = {
     backups = {

@@ -25,3 +25,4 @@ name            | description
 `yazi`          | terminal file manager
 `zathura`       | pdf viewer
 `zellij`        | terminal multiplexer
+`zoxide`        | a smarter cd command

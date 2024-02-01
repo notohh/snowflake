@@ -8,24 +8,38 @@
     (modulesPath + "/installer/scan/not-detected.nix")
   ];
 
-  boot.initrd.availableKernelModules = ["xhci_pci" "ahci" "usb_storage" "sd_mod"];
-  boot.initrd.kernelModules = [];
-  boot.kernelModules = ["kvm-intel"];
-  boot.extraModulePackages = [];
-
-  fileSystems."/" = {
-    device = "/dev/disk/by-uuid/57411820-f154-497e-9c7e-dfcb1f21c5cf";
-    fsType = "ext4";
+  boot = {
+    kernelModules = ["kvm-intel"];
+    extraModulePackages = [];
+    loader = {
+      systemd-boot = {
+        enable = true;
+        configurationLimit = 8;
+      };
+      efi = {
+        canTouchEfiVariables = true;
+        efiSysMountPoint = "/boot/efi";
+      };
+    };
+    initrd = {
+      availableKernelModules = ["xhci_pci" "ahci" "usb_storage" "sd_mod"];
+      kernelModules = [];
+    };
   };
 
-  fileSystems."/boot/efi" = {
-    device = "/dev/disk/by-uuid/4D09-1D57";
-    fsType = "vfat";
-  };
-
-  fileSystems."/nas/restic" = {
-    device = "192.168.1.199:/mnt/Sutoreji/nix-restic-data/ame";
-    fsType = "nfs";
+  fileSystems = {
+    "/" = {
+      device = "/dev/disk/by-uuid/57411820-f154-497e-9c7e-dfcb1f21c5cf";
+      fsType = "ext4";
+    };
+    "/boot/efi" = {
+      device = "/dev/disk/by-uuid/4D09-1D57";
+      fsType = "vfat";
+    };
+    "/nas/restic" = {
+      device = "192.168.1.199:/mnt/Sutoreji/nix-restic-data/ame";
+      fsType = "nfs";
+    };
   };
 
   swapDevices = [

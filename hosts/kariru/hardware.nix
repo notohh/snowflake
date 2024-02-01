@@ -7,29 +7,38 @@
     (modulesPath + "/profiles/qemu-guest.nix")
   ];
 
-  boot.initrd.availableKernelModules = ["ata_piix" "uhci_hcd" "virtio_pci" "virtio_scsi" "sd_mod" "sr_mod"];
-  boot.initrd.kernelModules = [];
-  boot.kernelModules = [];
-  boot.extraModulePackages = [];
-
-  fileSystems."/" = {
-    device = "/dev/disk/by-uuid/f5a0738c-d027-4ffb-82ec-9901ca6b310b";
-    fsType = "ext4";
+  boot = {
+    kernelModules = [];
+    extraModulePackages = [];
+    loader.grub = {
+      enable = true;
+      configurationLimit = 5;
+      device = "/dev/sda";
+      useOSProber = false;
+    };
+    initrd = {
+      availableKernelModules = ["ata_piix" "uhci_hcd" "virtio_pci" "virtio_scsi" "sd_mod" "sr_mod"];
+      kernelModules = [];
+    };
   };
 
-  fileSystems."/media" = {
-    device = "192.168.1.199:/mnt/Sutoreji/media";
-    fsType = "nfs";
-  };
-
-  fileSystems."/stash" = {
-    device = "192.168.1.199:/mnt/Sutoreji/stash";
-    fsType = "nfs";
-  };
-
-  fileSystems."/nas/restic" = {
-    device = "192.168.1.199:/mnt/Sutoreji/nix-restic-data/kariru";
-    fsType = "nfs";
+  fileSystems = {
+    "/" = {
+      device = "/dev/disk/by-uuid/f5a0738c-d027-4ffb-82ec-9901ca6b310b";
+      fsType = "ext4";
+    };
+    "/media" = {
+      device = "192.168.1.199:/mnt/Sutoreji/media";
+      fsType = "nfs";
+    };
+    "/stash" = {
+      device = "192.168.1.199:/mnt/Sutoreji/stash";
+      fsType = "nfs";
+    };
+    "/nas/restic" = {
+      device = "192.168.1.199:/mnt/Sutoreji/nix-restic-data/kariru";
+      fsType = "nfs";
+    };
   };
 
   swapDevices = [

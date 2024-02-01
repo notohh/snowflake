@@ -4,9 +4,7 @@
 
   systemd.services.hydroxide = {
     enable = true;
-    wantedBy = [
-      "multi-user.target"
-    ];
+    wantedBy = ["multi-user.target"];
     description = "A third-party, open-source ProtonMail bridge";
 
     serviceConfig = {

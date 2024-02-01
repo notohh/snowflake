@@ -43,7 +43,6 @@
       imv
       mpv
       ffmpeg
-      nom
       rustypaste-cli
       gimp
       cryptomator
@@ -56,7 +55,6 @@
       prismlauncher
       yuzu
       inputs.nix-gaming.packages.${pkgs.system}.osu-lazer-bin
-      inputs.nix-gaming.packages.${pkgs.system}.wine-discord-ipc-bridge
       (libsForQt5.callPackage ../../pkgs/chatterino7 {})
       (callPackage ../../pkgs/jellyfin-rpc {})
     ];

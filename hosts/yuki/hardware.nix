@@ -7,34 +7,42 @@
     (modulesPath + "/profiles/qemu-guest.nix")
   ];
 
-  boot.initrd.availableKernelModules = ["ata_piix" "uhci_hcd" "virtio_pci" "virtio_scsi" "sd_mod" "sr_mod"];
-  boot.initrd.kernelModules = [];
-  boot.kernelModules = [];
-  boot.extraModulePackages = [];
-
-  fileSystems."/" = {
-    device = "/dev/disk/by-uuid/833959fb-de9d-4820-aa22-e6ce8bce6f6c";
-    fsType = "ext4";
+  boot = {
+    kernelModules = [];
+    extraModulePackages = [];
+    loader.grub = {
+      enable = true;
+      configurationLimit = 5;
+      device = "/dev/sda";
+      useOSProber = false;
+    };
+    initrd = {
+      availableKernelModules = ["ata_piix" "uhci_hcd" "virtio_pci" "virtio_scsi" "sd_mod" "sr_mod"];
+      kernelModules = [];
+    };
   };
 
-  fileSystems."/home/notoh/docker/stash/data" = {
-    device = "192.168.1.199:/mnt/Sutoreji/stash";
-    fsType = "nfs";
-  };
-
-  fileSystems."/media" = {
-    device = "192.168.1.199:/mnt/Sutoreji/media";
-    fsType = "nfs";
-  };
-
-  fileSystems."/nas/restic" = {
-    device = "192.168.1.199:/mnt/Sutoreji/nix-restic-data/yuki";
-    fsType = "nfs";
-  };
-
-  fileSystems."/var/lib/paperless-ngx/media" = {
-    device = "192.168.1.199:/mnt/Sutoreji/paperless-ngx/paperless-media ";
-    fsType = "nfs";
+  fileSystems = {
+    "/" = {
+      device = "/dev/disk/by-uuid/833959fb-de9d-4820-aa22-e6ce8bce6f6c";
+      fsType = "ext4";
+    };
+    "/home/notoh/docker/stash/data" = {
+      device = "192.168.1.199:/mnt/Sutoreji/stash";
+      fsType = "nfs";
+    };
+    "/media" = {
+      device = "192.168.1.199:/mnt/Sutoreji/media";
+      fsType = "nfs";
+    };
+    "/nas/restic" = {
+      device = "192.168.1.199:/mnt/Sutoreji/nix-restic-data/yuki";
+      fsType = "nfs";
+    };
+    "/var/lib/paperless-ngx/media" = {
+      device = "192.168.1.199:/mnt/Sutoreji/paperless-ngx/paperless-media ";
+      fsType = "nfs";
+    };
   };
 
   swapDevices = [

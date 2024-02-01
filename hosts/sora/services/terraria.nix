@@ -1,4 +1,4 @@
-{...}: {
+_: {
   networking.firewall.allowedTCPPorts = [7777];
   virtualisation.oci-containers.containers.terraria = {
     image = "jacobsmile/tmodloader1.4:v2023.11.3.3";

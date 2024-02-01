@@ -6,15 +6,6 @@
     ../../modules
   ];
 
-  boot.loader = {
-    grub = {
-      enable = true;
-      configurationLimit = 5;
-      device = "/dev/vda";
-      useOSProber = true;
-    };
-  };
-
   services.xserver = {
     layout = "us";
     xkbVariant = "";

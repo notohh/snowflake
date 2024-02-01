@@ -6,19 +6,6 @@
     ../../modules
   ];
 
-  boot.loader = {
-    grub = {
-      enable = true;
-      configurationLimit = 5;
-      device = "/dev/sda";
-      useOSProber = false;
-    };
-  };
-
-  boot.kernel.sysctl = {
-    "kernel.shmmax" = 100663296;
-  };
-
   services.xserver = {
     layout = "us";
     xkbVariant = "";

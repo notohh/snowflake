@@ -7,19 +7,30 @@
     (modulesPath + "/profiles/qemu-guest.nix")
   ];
 
-  boot.initrd.availableKernelModules = ["ata_piix" "uhci_hcd" "virtio_pci" "virtio_scsi" "sd_mod" "sr_mod" "virtio_blk"];
-  boot.initrd.kernelModules = [];
-  boot.kernelModules = ["kvm-amd"];
-  boot.extraModulePackages = [];
-
-  fileSystems."/" = {
-    device = "/dev/disk/by-uuid/9cb414ab-0bb4-4db7-b77e-7d2a8cafd657";
-    fsType = "ext4";
+  boot = {
+    kernelModules = ["kvm-amd"];
+    extraModulePackages = [];
+    loader.grub = {
+      enable = true;
+      configurationLimit = 5;
+      device = "/dev/vda";
+      useOSProber = true;
+    };
+    initrd = {
+      availableKernelModules = ["ata_piix" "uhci_hcd" "virtio_pci" "virtio_scsi" "sd_mod" "sr_mod" "virtio_blk"];
+      kernelModules = [];
+    };
   };
 
-  fileSystems."/var/lib/slab" = {
-    device = "/dev/disk/by-uuid/733a3f7b-b232-4b34-8742-460a67d8f1d0";
-    fsType = "ext4";
+  fileSystems = {
+    "/" = {
+      device = "/dev/disk/by-uuid/9cb414ab-0bb4-4db7-b77e-7d2a8cafd657";
+      fsType = "ext4";
+    };
+    "/var/lib/slab" = {
+      device = "/dev/disk/by-uuid/733a3f7b-b232-4b34-8742-460a67d8f1d0";
+      fsType = "ext4";
+    };
   };
 
   swapDevices = [
