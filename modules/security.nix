@@ -43,30 +43,31 @@
 
   boot.kernelModules = ["tcp_bbr"];
 
-  services.openssh.settings.LogLevel = "VERBOSE";
-
   security.acme = {
     acceptTerms = true;
     defaults.email = "github@notohh.dev";
   };
 
-  services.fail2ban = {
-    enable = true;
-    bantime = "1h";
-    maxretry = 1;
-    ignoreIP = [
-      "192.168.0.0/16"
-      "172.16.0.0/12"
-      "10.0.0.0/8"
-      "5.161.102.107/32"
-      "100.71.49.65/10"
-      "100.82.146.40/10"
-    ];
-    jails = {
-      DEFAULT = {
-        settings = {
-          findtime = 100000;
-          mode = "aggressive";
+  services = {
+    openssh.settings.LogLevel = "VERBOSE";
+    fail2ban = {
+      enable = true;
+      bantime = "1h";
+      maxretry = 1;
+      ignoreIP = [
+        "192.168.0.0/16"
+        "172.16.0.0/12"
+        "10.0.0.0/8"
+        "5.161.102.107/32"
+        "100.71.49.65/10"
+        "100.82.146.40/10"
+      ];
+      jails = {
+        DEFAULT = {
+          settings = {
+            findtime = 100000;
+            mode = "aggressive";
+          };
         };
       };
     };
