@@ -25,8 +25,8 @@
 
 ## :open_book: Table of contents
 
-+ :house_with_garden: [home](src/branch/master/home)
-+ :computer: [hosts](src/branch/master/hosts)
+- :house_with_garden: [home](src/branch/master/home)
+- :computer: [hosts](src/branch/master/hosts)
   - :cloud_with_rain: [ame](src/branch/master/hosts/ame)
   - :cloud_with_lightning_and_rain: [arashi](src/branch/master/hosts/arashi)
   - :hibiscus: [haru](src/branch/master/hosts/haru)
@@ -37,29 +37,31 @@
   - :full_moon: [tsuki](src/branch/master/hosts/tsuki)
   - :building_construction: [tsuru](src/branch/master/hosts/tsuru)
   - :snowflake: [yuki](src/branch/master/hosts/yuki)
-+ :electric_plug: [modules](src/branch/master/modules)
-+ :package: [pkgs](src/branch/master/pkgs)
-+ :lock: [secrets](src/branch/master/secrets)
+- :electric_plug: [modules](src/branch/master/modules)
+- :package: [pkgs](src/branch/master/pkgs)
+- :lock: [secrets](src/branch/master/secrets)
 
 ## :spiral_notepad: Features
 
-+ multi-config repo, with configs for servers, laptop, and desktop
-+ multi-system home-manager setup
-+ secrets provisioning with [sops-nix](https://github.com/Mic92/sops-nix)
-+ multiple fully declarative self hosted services (and some containerized ones, with a docker backend)
-+ wayland config for hyprland
-+ custom packages not found in nixpkgs
-+ linted & styled with [alejandra](https://github.com/kamadorueda/alejandra), [deadnix](https://github.com/astro/deadnix), and [statix](https://github.com/nerdypepper/statix)
+- multi-config repo, with configs for servers, laptop, and desktop
+- multi-system home-manager setup
+- secrets provisioning with [sops-nix](https://github.com/Mic92/sops-nix)
+- multiple fully declarative self hosted services (and some containerized ones, with a docker backend)
+- wayland config for hyprland
+- custom packages not found in nixpkgs
+- linted & styled with [alejandra](https://github.com/kamadorueda/alejandra), [deadnix](https://github.com/astro/deadnix), and [statix](https://github.com/nerdypepper/statix)
 
 ## :busts_in_silhouette: Credit
+
 #### people who've inspired me to dive into nix, and i've stolen stuff from (you guys are awesome!)
-+ [fufexan](https://github.com/fufexan) - a ton of home manager, hyprland stuff, and some gh workflows
-+ [Misterio77](https://github.com/Misterio77) - flake, and some other boilerplate
-+ [NobbZ](https://github.com/NobbZ) - general nix assistance
-+ [MatthiasBenaets](https://github.com/MatthiasBenaets) - amazing nixos introduction video
-+ [sioodmy](https://github.com/sioodmy) - general dotfile, readme badges, and hyprland stuff
-+ [MatthewCroughan](https://github.com/MatthewCroughan) - traefik config used as reference
-+ [seqizz](https://github.com/seqizz/nixos-config/blob/3ee51f406a8c7aa3afde9cdee97a43641b2ed2ef/modules/server/rustypaste.nix) - rustypaste config
-+ [Yavko](https://github.com/yavko) - ironbar config used as reference
-+ [hlissner](https://github.com/hlissner) - [security.nix](modules/security.nix)
-+ [noc](https://git.flake.sh/noc) - networking diagram + a ton of other stuff
+
+- [fufexan](https://github.com/fufexan) - a ton of home manager, hyprland stuff, and some gh workflows
+- [Misterio77](https://github.com/Misterio77) - flake, and some other boilerplate
+- [NobbZ](https://github.com/NobbZ) - general nix assistance
+- [MatthiasBenaets](https://github.com/MatthiasBenaets) - amazing nixos introduction video
+- [sioodmy](https://github.com/sioodmy) - general dotfile, readme badges, and hyprland stuff
+- [MatthewCroughan](https://github.com/MatthewCroughan) - traefik config used as reference
+- [seqizz](https://github.com/seqizz/nixos-config/blob/3ee51f406a8c7aa3afde9cdee97a43641b2ed2ef/modules/server/rustypaste.nix) - rustypaste config
+- [Yavko](https://github.com/yavko) - ironbar config used as reference
+- [hlissner](https://github.com/hlissner) - [security.nix](modules/security.nix)
+- [noc](https://git.flake.sh/noc) - networking diagram + a ton of other stuff
