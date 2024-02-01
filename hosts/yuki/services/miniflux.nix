@@ -13,7 +13,6 @@
       PORT = 9000;
       BASE_URL = "https://rss.internal.flake.sh";
       HTTPS = "true";
-      WEBAUTHN = "true";
       DATABASE_URL = lib.mkForce "host=100.94.214.100 port=5432 user=miniflux password=miniflux dbname=miniflux sslmode=disable";
     };
   };
