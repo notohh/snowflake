@@ -12,7 +12,7 @@
   in {
     package = pkgs.paperless-ngx;
     enable = true;
-    address = "100.108.113.89";
+    address = "0.0.0.0";
     port = 28981;
     passwordFile = config.sops.secrets.paperless-pwd.path;
     dataDir = "${dataDir}";
