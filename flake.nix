@@ -63,6 +63,10 @@
             enable = true;
             excludes = ["overlays.nix"];
           };
+          prettier = {
+            enable = true;
+            files = "\\.(js|ts|md)$";
+          };
         };
       };
     };
@@ -72,13 +76,8 @@
       packages = with pkgs; [
         git
         sops
-        alejandra
-        statix
-        deadnix
-        stylua
         yaml-language-server
         lua-language-server
-        nodePackages.typescript-language-server
       ];
     };
     formatter.${system} = pkgs.alejandra;
