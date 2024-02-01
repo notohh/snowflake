@@ -61,7 +61,7 @@
   };
   services.postgresqlBackup = {
     enable = true;
-    databases = ["forgejo" "hedgedoc" "grafana" "authelia" "vaultwarden" "miniflux"];
+    databases = ["forgejo" "hedgedoc" "grafana" "authelia" "vaultwarden" "attic" "miniflux"];
     compression = "zstd";
     compressionLevel = 4;
     startAt = "*-*-* 23:00:00";
