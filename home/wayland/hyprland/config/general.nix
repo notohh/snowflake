@@ -9,7 +9,7 @@
       ];
       exec-once = [
         "ags"
-        "swww init && swww img ~/Pictures/wallpapers/city.png"
+        "swww init && swww img ~/Pictures/wallpapers/frieren.png"
         "dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
         "${pkgs.polkit_gnome}/libexec/polkit-gnome-authentication-agent-1"
         "~/.local/bin/lock"

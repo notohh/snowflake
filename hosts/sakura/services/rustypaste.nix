@@ -3,12 +3,9 @@
 
   systemd.services.rustypaste = {
     enable = true;
-    wantedBy = [
-      "multi-user.target"
-    ];
+    wantedBy = ["multi-user.target"];
     description = "A minimal file upload/pastebin service.";
     environment = {
-      # AUTH_TOKEN = config.sops.secrets.rusty-auth-token.path;
       CONFIG = "/var/lib/rustypaste/config.toml";
     };
     serviceConfig = {

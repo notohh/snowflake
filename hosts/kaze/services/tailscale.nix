@@ -4,9 +4,7 @@
   pkgs,
   ...
 }: {
-  sops.secrets.tsauth-kaze = {
-    sopsFile = ../../../secrets/tailscale/secrets.yaml;
-  };
+  sops.secrets.tsauth-kaze = {sopsFile = ../../../secrets/tailscale/secrets.yaml;};
   environment.systemPackages = [pkgs.jq pkgs.tailscale];
   services.tailscale = {
     useRoutingFeatures = lib.mkDefault "client";

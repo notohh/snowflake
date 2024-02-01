@@ -1,27 +1,18 @@
 when:
   - branch: flake-lock-update
   - event: [pull_request_closed]
-  
+
 steps:
-  attic-push:
-    image: git.vdx.hu/voidcontext/woodpecker-plugin-nix-attic
-    settings:
-      binary_cache: https://cache.flake.sh/
-      binary_cache_public_key: kyasshu:g1heIgCgG7M4San6nRsz/omcVQ1GTc7+zKKm3L9Co7o=
-      binary_cache_token:
-        from_secret: kyasshu_access_token
-      script: |
-       attic login kyasshu $PLUGIN_BINARY_CACHE_TOKEN
   deploy:
     image: nixos/nix
     commands: |
-       echo 'experimental-features = flakes nix-command' >> /etc/nix/nix.conf
-       echo "access-tokens = github.com=$${GH_PAT}" >> /etc/nix/nix.conf
-       echo 'builders-use-substitutes = true' >> /etc/nix/nix.conf
-       echo 'substituters = https://cache.flake.sh/kyasshu https://hyprland.cachix.org https://cache.nixos.org https://nix-gaming.cachix.org https://anyrun.cachix.org https://viperml.cachix.org https://nix-community.cachix.org https://cache.nixos.org/' >> /etc/nix/nix.conf
-       echo 'trusted-public-keys = cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY= kyasshu:g1heIgCgG7M4San6nRsz/omcVQ1GTc7+zKKm3L9Co7o= hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc= cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY= nix-gaming.cachix.org-1:nbjlureqMbRAxR1gJ/f3hxemL9svXaZF/Ees8vCUUs4= anyrun.cachix.org-1:pqBobmOjI7nKlsUMV25u9QHa9btJK65/C8vnO3p346s= viperml.cachix.org-1:qZhKBMTfmcLL+OG6fj/hzsMEedgKvZVFRRAhq7j8Vh8= nix-community.cachix.org-1:mB9FSh9qf2dCimDSUo8Zy7bkq5CX+/rkCWyvRCYg3Fs=' >> /etc/nix/nix.conf
-       mkdir -p .ssh && cd .ssh
-       echo "$${SSH_KEY}" > forgejo
-       chmod 400 forgejo
-       nix run github:serokell/deploy-rs -- --ssh-opts="-i forgejo -o StrictHostKeyChecking=no" --skip-checks --targets .#arashi .#kariru .#sakura .#sora .#yuki .#haru .#kaze
+      echo 'experimental-features = flakes nix-command' >> /etc/nix/nix.conf
+      echo "access-tokens = github.com=$${GH_PAT}" >> /etc/nix/nix.conf
+      echo 'builders-use-substitutes = true' >> /etc/nix/nix.conf
+      echo 'substituters = https://cache.flake.sh/kyasshu https://hyprland.cachix.org https://cache.nixos.org https://nix-gaming.cachix.org https://anyrun.cachix.org https://viperml.cachix.org https://nix-community.cachix.org https://cache.nixos.org/' >> /etc/nix/nix.conf
+      echo 'trusted-public-keys = cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY= kyasshu:g1heIgCgG7M4San6nRsz/omcVQ1GTc7+zKKm3L9Co7o= hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc= cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY= nix-gaming.cachix.org-1:nbjlureqMbRAxR1gJ/f3hxemL9svXaZF/Ees8vCUUs4= anyrun.cachix.org-1:pqBobmOjI7nKlsUMV25u9QHa9btJK65/C8vnO3p346s= viperml.cachix.org-1:qZhKBMTfmcLL+OG6fj/hzsMEedgKvZVFRRAhq7j8Vh8= nix-community.cachix.org-1:mB9FSh9qf2dCimDSUo8Zy7bkq5CX+/rkCWyvRCYg3Fs=' >> /etc/nix/nix.conf
+      mkdir -p .ssh && cd .ssh
+      echo "$${SSH_KEY}" > forgejo
+      chmod 400 forgejo
+      nix run github:serokell/deploy-rs -- --ssh-opts="-i forgejo -o StrictHostKeyChecking=no" --skip-checks --targets .#arashi .#kariru .#sakura .#sora .#yuki .#haru .#kaze
     secrets: [ssh_key, gh_pat]

@@ -1,18 +1,16 @@
-import { Widget, Utils } from '../../import.js';
+import { Utils, Widget } from "../../import.js";
 
-
-const Time = () => Widget.Box({
+const Time = () =>
+  Widget.Box({
     child: Widget.Label({
-        className: "date"
+      className: "date",
     }).poll(
-        1000,
-        (self) =>
-            Utils.execAsync(["date", "+%a %b %d  %H:%M"]).then((time) =>
-                self.label = time
-            ),
+      1000,
+      (self) =>
+        Utils.execAsync(["date", "+%a %b %d  %H:%M"]).then((time) =>
+          self.label = time
+        ),
     ),
-});
+  });
 
-export {
-    Time
-}
+export { Time };

@@ -1,41 +1,39 @@
 {pkgs, ...}: {
   networking.firewall.allowedTCPPorts = [9292];
+
   imports = [
     ./restic.nix
     ./torrent.nix
   ];
+
   environment.systemPackages = [pkgs.recyclarr];
-  services.radarr = {
-    enable = true;
-    openFirewall = true;
+  services = {
+    radarr = {
+      enable = true;
+      openFirewall = true;
+    };
+    sonarr = {
+      enable = true;
+      openFirewall = true;
+    };
+    prowlarr = {
+      enable = true;
+      openFirewall = true;
+    };
+    bazarr = {
+      enable = true;
+      openFirewall = true;
+    };
+    readarr = {
+      enable = true;
+      openFirewall = true;
+    };
+    lidarr = {
+      enable = true;
+      openFirewall = true;
+    };
+    sabnzbd.enable = true;
   };
-
-  services.sonarr = {
-    enable = true;
-    openFirewall = true;
-  };
-
-  services.prowlarr = {
-    enable = true;
-    openFirewall = true;
-  };
-
-  services.bazarr = {
-    enable = true;
-    openFirewall = true;
-  };
-
-  services.readarr = {
-    enable = true;
-    openFirewall = true;
-  };
-
-  services.lidarr = {
-    enable = true;
-    openFirewall = true;
-  };
-
-  services.sabnzbd.enable = true;
 
   virtualisation.oci-containers.containers = {
     whisparr = {

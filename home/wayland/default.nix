@@ -14,24 +14,46 @@
     '';
   };
 in {
-  imports = [
-    ./greetd.nix
-  ];
-
-  environment.systemPackages = with pkgs; [
-    dbus-hyprland-environment
-    wayland
-    glib
-    grim
-    slurp
-    satty
-    wl-clipboard
-    wlr-randr
-    swayidle
-    swaylock-effects
-    hyprpicker
-    swww
-  ];
+  imports = [./greetd.nix];
+  environment = {
+    systemPackages = with pkgs; [
+      dbus-hyprland-environment
+      wayland
+      glib
+      grim
+      slurp
+      satty
+      wl-clipboard
+      wlr-randr
+      swayidle
+      swaylock-effects
+      hyprpicker
+      swww
+    ];
+    sessionVariables = {
+      GBM_BACKEND = "nvidia-drm";
+      __GL_GSYNC_ALLOWED = "0";
+      __GL_VRR_ALLOWED = "0";
+      WLR_DRM_NO_ATOMIC = "1";
+      XDG_SESSION_TYPE = "wayland";
+      __GLX_VENDOR_LIBRARY_NAME = "nvidia";
+      _JAVA_AWT_WM_NONREPARENTING = "1";
+      QT_QPA_PLATFORM = "wayland";
+      QT_WAYLAND_DISABLE_WINDOWDECORATION = "1";
+      GDK_BACKEND = "wayland";
+      WLR_NO_HARDWARE_CURSORS = "1";
+      MOZ_ENABLE_WAYLAND = "1";
+      WLR_BACKEND = "vulkan";
+      WLR_RENDERER = "vulkan";
+      XCURSOR_SIZE = "24";
+      NIXOS_OZONE_WL = "1";
+      EDITOR = "hx";
+      TERMINAL = "wezterm";
+    };
+    etc."greetd/environments".text = ''
+      Hyprland
+    '';
+  };
 
   services.dbus.enable = true;
   xdg.portal = {
@@ -44,29 +66,4 @@ in {
       common.default = "*";
     };
   };
-
-  environment.sessionVariables = {
-    GBM_BACKEND = "nvidia-drm";
-    __GL_GSYNC_ALLOWED = "0";
-    __GL_VRR_ALLOWED = "0";
-    WLR_DRM_NO_ATOMIC = "1";
-    XDG_SESSION_TYPE = "wayland";
-    __GLX_VENDOR_LIBRARY_NAME = "nvidia";
-    _JAVA_AWT_WM_NONREPARENTING = "1";
-    QT_QPA_PLATFORM = "wayland";
-    QT_WAYLAND_DISABLE_WINDOWDECORATION = "1";
-    GDK_BACKEND = "wayland";
-    WLR_NO_HARDWARE_CURSORS = "1";
-    MOZ_ENABLE_WAYLAND = "1";
-    WLR_BACKEND = "vulkan";
-    WLR_RENDERER = "vulkan";
-    XCURSOR_SIZE = "24";
-    NIXOS_OZONE_WL = "1";
-    EDITOR = "hx";
-    TERMINAL = "wezterm";
-  };
-
-  environment.etc."greetd/environments".text = ''
-    Hyprland
-  '';
 }

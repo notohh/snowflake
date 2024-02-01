@@ -10,6 +10,7 @@
     nur.url = "github:nix-community/NUR";
     yazi.url = "github:sxyazi/yazi";
     helix.url = "github:helix-editor/helix";
+    pre-commit-hooks.url = "github:cachix/pre-commit-hooks.nix";
     hyprland-plugins = {
       url = "github:hyprwm/hyprland-plugins";
       inputs.hyprland.follows = "hyprland";
@@ -39,18 +40,42 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
-  outputs = {nixpkgs, ...} @ inputs: let
+  outputs = {
+    self,
+    nixpkgs,
+    pre-commit-hooks,
+    ...
+  } @ inputs: let
     system = "x86_64-linux";
     pkgs = import nixpkgs {
       inherit system;
     };
   in {
+    checks = {
+      pre-commit-check = pre-commit-hooks.lib.${system}.run {
+        src = ./.;
+        hooks = {
+          stylua.enable = true;
+          eslint.enable = true;
+          statix.enable = true;
+          alejandra.enable = true;
+          deadnix = {
+            enable = true;
+            excludes = ["overlays.nix"];
+          };
+        };
+      };
+    };
     devShells.${system}.default = pkgs.mkShell {
       name = "snowflake";
+      inherit (self.checks.pre-commit-check) shellHook;
       packages = with pkgs; [
         git
         sops
         alejandra
+        statix
+        deadnix
+        stylua
         yaml-language-server
         lua-language-server
         nodePackages.typescript-language-server

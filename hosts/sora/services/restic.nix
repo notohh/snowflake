@@ -4,12 +4,8 @@
   ...
 }: {
   sops.secrets = {
-    restic-sora = {
-      sopsFile = ../../../secrets/restic/secrets.yaml;
-    };
-    sora-s3 = {
-      sopsFile = ../../../secrets/s3/secrets.yaml;
-    };
+    restic-sora = {sopsFile = ../../../secrets/restic/secrets.yaml;};
+    sora-s3 = {sopsFile = ../../../secrets/s3/secrets.yaml;};
   };
   environment.systemPackages = [pkgs.restic];
   services.restic = {

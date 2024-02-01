@@ -1,9 +1,8 @@
-import { App, Utils } from './import.js';
-import { Bar } from './js/main.js'
+import { App, Utils } from "./import.js";
+import { Bar } from "./js/main.js";
 
-
-const scss = App.configDir + '/main.scss'
-const css = App.configDir + '/style.css'
+const scss = App.configDir + "/main.scss";
+const css = App.configDir + "/style.css";
 
 Utils.exec(`sass ${scss} ${css}`);
 
@@ -19,6 +18,6 @@ Utils.monitorFile(`${App.configDir}/scss`, reloadCss, "directory");
 export default {
     style: css,
     windows: [
-        Bar(2)
-    ]
-}
+        Bar(2),
+    ],
+};

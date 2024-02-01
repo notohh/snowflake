@@ -17,12 +17,11 @@
     username = "notoh";
     homeDirectory = "/home/notoh";
     packages = with pkgs; [
+      chromium
       discord
       spotify-player
       cinny-desktop
       pavucontrol
-      unzip
-      p7zip
       imv
       mpv
       rustypaste-cli
@@ -33,12 +32,7 @@
       glib
       grim
       slurp
-      swappy
       wl-clipboard
-      wlogout
-      wlr-randr
-      swayidle
-      swaylock-effects
       swww
       hyprpicker
       (libsForQt5.callPackage ../../pkgs/chatterino7 {})

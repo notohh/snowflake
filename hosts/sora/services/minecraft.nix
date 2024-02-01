@@ -12,8 +12,6 @@ _: {
       FABRIC_LOADER_VERSION = "0.14.23";
       FABRIC_LAUNCHER_VERSION = "0.11.2";
     };
-    volumes = [
-      "/home/notoh/docker/modded-mc:/data:rw"
-    ];
+    volumes = ["/home/notoh/docker/modded-mc:/data:rw"];
   };
 }

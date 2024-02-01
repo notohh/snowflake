@@ -7,24 +7,34 @@
     (modulesPath + "/profiles/qemu-guest.nix")
   ];
 
-  boot.initrd.availableKernelModules = ["ata_piix" "uhci_hcd" "virtio_pci" "virtio_scsi" "sd_mod" "sr_mod"];
-  boot.initrd.kernelModules = [];
-  boot.kernelModules = [];
-  boot.extraModulePackages = [];
-
-  fileSystems."/" = {
-    device = "/dev/disk/by-uuid/db3e4722-35a6-44fb-8e4d-a75166b845cb";
-    fsType = "ext4";
+  boot = {
+    kernelModules = [];
+    extraModulePackages = [];
+    loader.grub = {
+      enable = true;
+      configurationLimit = 5;
+      device = "/dev/sda";
+      useOSProber = false;
+    };
+    initrd = {
+      availableKernelModules = ["ata_piix" "uhci_hcd" "virtio_pci" "virtio_scsi" "sd_mod" "sr_mod"];
+      kernelModules = [];
+    };
   };
 
-  fileSystems."/home/notoh/justlog/logs" = {
-    device = "192.168.1.199:/mnt/Sutoreji/twitchlogs";
-    fsType = "nfs";
-  };
-
-  fileSystems."/nas/restic" = {
-    device = "192.168.1.199:/mnt/Sutoreji/nix-restic-data/sakura";
-    fsType = "nfs";
+  fileSystems = {
+    "/" = {
+      device = "/dev/disk/by-uuid/db3e4722-35a6-44fb-8e4d-a75166b845cb";
+      fsType = "ext4";
+    };
+    "/home/notoh/justlog/logs" = {
+      device = "192.168.1.199:/mnt/Sutoreji/twitchlogs";
+      fsType = "nfs";
+    };
+    "/nas/restic" = {
+      device = "192.168.1.199:/mnt/Sutoreji/nix-restic-data/sakura";
+      fsType = "nfs";
+    };
   };
 
   swapDevices = [

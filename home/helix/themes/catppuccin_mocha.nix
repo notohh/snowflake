@@ -1,7 +1,6 @@
 _: {
   programs.helix = {
     themes.catppuccin_mocha = let
-      transparent = "none";
       rosewater = "#f5e0dc";
       flamingo = "#f2cdcd";
       pink = "#f5c2e7";

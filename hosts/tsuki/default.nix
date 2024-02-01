@@ -16,23 +16,22 @@
     ../../pkgs/overlays.nix
   ];
 
-  boot.loader = {
-    systemd-boot = {
-      enable = true;
-      configurationLimit = 10;
-    };
-    efi = {
-      canTouchEfiVariables = true;
-      efiSysMountPoint = "/boot/efi";
-    };
-  };
-
-  boot.extraModulePackages = with config.boot.kernelPackages; [v4l2loopback.out];
-  boot.kernelModules = ["v4l2loopback" "kvm-intel"];
-
   virtualisation.libvirtd.enable = true;
 
   services = {
+    pcscd.enable = true;
+    pipewire = {
+      enable = true;
+      alsa.enable = true;
+      alsa.support32Bit = true;
+      pulse.enable = true;
+      wireplumber.enable = true;
+      lowLatency = {
+        enable = true;
+        quantum = 64;
+        rate = 48000;
+      };
+    };
     xserver = {
       enable = true;
       videoDrivers = ["nvidia"];
@@ -53,41 +52,28 @@
     };
   };
 
-  services.pcscd.enable = true;
-  services.davfs2.enable = true;
-
-  hardware.pulseaudio.enable = false;
-  security.rtkit.enable = true;
-  services.pipewire = {
-    enable = true;
-    alsa.enable = true;
-    alsa.support32Bit = true;
-    pulse.enable = true;
-    wireplumber.enable = true;
-    lowLatency = {
-      enable = true;
-      quantum = 64;
-      rate = 48000;
+  security = {
+    rtkit.enable = true;
+    polkit.enable = true;
+    pam.services.swaylock = {
+      text = ''
+        auth include login
+      '';
     };
   };
 
-  programs.gamemode.enable = true;
-
-  programs.steam = {
-    enable = true;
-    extraCompatPackages = [
-      inputs.nix-gaming.packages.${pkgs.system}.proton-ge
-    ];
-  };
-
-  security.polkit.enable = true;
-  security.pam.services.swaylock = {
-    text = ''
-      auth include login
-    '';
+  programs = {
+    gamemode.enable = true;
+    steam = {
+      enable = true;
+      extraCompatPackages = [
+        inputs.nix-gaming.packages.${pkgs.system}.proton-ge
+      ];
+    };
   };
 
   hardware = {
+    pulseaudio.enable = false;
     nvidia = {
       powerManagement.enable = true;
       modesetting.enable = true;
