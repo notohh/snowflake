@@ -34,11 +34,16 @@
 
   boot.kernelPackages = pkgs.linuxPackages_latest;
 
-  systemd.services.systemd-udevd.restartIfChanged = false;
-  systemd.extraConfig = ''
-    DefaultTimeoutStopSec=10s
-  '';
+  systemd = {
+    services.systemd-udevd.restartIfChanged = false;
 
-  system.autoUpgrade.enable = false;
-  system.stateVersion = "23.05"; # no touchy
+    extraConfig = ''
+      DefaultTimeoutStopSec=10s
+    '';
+  };
+
+  system = {
+    autoUpgrade.enable = false;
+    stateVersion = "23.05"; # no touchy
+  };
 }

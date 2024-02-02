@@ -7,7 +7,7 @@
   networking.firewall.allowedTCPPorts = [8100];
   services.searx = {
     package = pkgs.searxng;
-    enable = true;
+    enable = false;
     runInUwsgi = false;
     environmentFile = config.sops.secrets.searxng-secret.path;
     limiterSettings = {

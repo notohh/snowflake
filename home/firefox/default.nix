@@ -48,9 +48,23 @@
       };
       extraConfig = builtins.readFile ./user.js/betterfox.js;
       search = {
-        default = "SearXNG";
+        default = "Kagi";
         force = true;
         engines = {
+          "Kagi" = {
+            urls = [
+              {
+                template = "https://kagi.com/search";
+                params = [
+                  {
+                    name = "q";
+                    value = "{searchTerms}";
+                  }
+                ];
+              }
+            ];
+            definedAliases = ["@g"];
+          };
           "SearXNG" = {
             urls = [
               {

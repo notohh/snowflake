@@ -65,7 +65,7 @@
           };
           prettier = {
             enable = true;
-            files = "\\.(js|ts|md)$";
+            files = "\\.(js|ts|md|json)$";
           };
         };
       };
@@ -76,6 +76,7 @@
       packages = with pkgs; [
         git
         sops
+        alejandra
         yaml-language-server
         lua-language-server
       ];
