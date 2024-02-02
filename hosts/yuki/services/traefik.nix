@@ -55,13 +55,6 @@
             tls.domains = [{main = "*.internal.flake.sh";}];
             tls.certresolver = "production";
           };
-          searxng = {
-            rule = "Host(`search.internal.flake.sh`)";
-            entrypoints = ["websecure"];
-            service = "searxng";
-            tls.domains = [{main = "*.internal.flake.sh";}];
-            tls.certresolver = "production";
-          };
           hass = {
             rule = "Host(`hass.internal.flake.sh`)";
             entrypoints = ["websecure"];
@@ -141,7 +134,6 @@
           jellyfin.loadBalancer.servers = [{url = "http://localhost:8096";}];
           jellyseerr.loadBalancer.servers = [{url = "http://localhost:5055";}];
           wallos.loadBalancer.servers = [{url = "http://localhost:8282";}];
-          searxng.loadBalancer.servers = [{url = "http://localhost:8100";}];
           hass.loadBalancer.servers = [{url = "http://localhost:8123";}];
           paperless.loadBalancer.servers = [{url = "http://localhost:28981";}];
           miniflux.loadBalancer.servers = [{url = "http://localhost:9000";}];
