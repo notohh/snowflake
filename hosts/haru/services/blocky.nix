@@ -33,7 +33,6 @@
         };
       };
       blocking = {
-        blockType = "nxDomain";
         loading = {
           strategy = "fast";
           concurrency = 8;
@@ -77,11 +76,20 @@
             "https://big.oisd.nl/domainswild"
           ];
         };
-        whiteLists = {
-          default = [
+        whiteLists = let
+          customWhitelist = pkgs.writeText "misc.txt" ''
+            ax.phobos.apple.com.edgesuite.net
+            amp-api-edge.apps.apple.com
+            (\.|^)dscx\.akamaiedge\.net$
+            (\.|^)wac\.phicdn\.net$
+            *.flake.sh
+          '';
+        in {
+          ads = [
             "https://raw.githubusercontent.com/anudeepND/whitelist/master/domains/whitelist.txt"
             "https://raw.githubusercontent.com/anudeepND/whitelist/master/domains/optional-list.txt"
           ];
+          misc = [customWhitelist];
         };
         clientGroupsBlock = {
           default = [
