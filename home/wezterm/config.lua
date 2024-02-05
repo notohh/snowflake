@@ -9,7 +9,7 @@ local config = {
 		name = "NVIDIA GeForce GTX 1070 Ti",
 	},
 	enable_wayland = false,
-	font = wezterm.font("Monaspace Krypton"),
+	font = wezterm.font("JetBrainsMono NF Medium"),
 	font_size = 12.0,
 	window_background_opacity = 0.6,
 	text_background_opacity = 1.0,
