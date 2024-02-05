@@ -4,10 +4,8 @@
     fontDir.enable = true;
     packages = with pkgs; [
       corefonts
-      monaspace
-      jost
-      jetbrains-mono
       nerdfonts
+      jetbrains-mono
       noto-fonts
       noto-fonts-cjk
       twitter-color-emoji
@@ -20,7 +18,7 @@
       enable = true;
       allowBitmaps = true;
       defaultFonts = {
-        monospace = ["JetBrainsMono Nerd Font" "Twitter Color Emoji"];
+        monospace = ["JetBrainsMono NF SemiBold" "Twitter Color Emoji"];
         serif = ["Noto Serif" "Twitter Color Emoji"];
         sansSerif = ["Noto Sans" "Twitter Color Emoji"];
         emoji = ["Twitter Color Emoji"];
