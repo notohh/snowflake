@@ -48,6 +48,14 @@
       device = "192.168.1.199:/mnt/Sutoreji/nix-restic-data/tsuki";
       fsType = "nfs";
     };
+    "/nas/ISOS" = {
+      device = "192.168.1.199:/mnt/Sutoreji/ISOS";
+      fsType = "nfs";
+    };
+    "/nas/osu-backups" = {
+      device = "192.168.1.199:/mnt/Sutoreji/osu-backups";
+      fsType = "nfs";
+    };
   };
 
   swapDevices = [
