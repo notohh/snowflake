@@ -27,6 +27,7 @@
     unzip
     unrar
     p7zip
+    procs
   ];
 
   services = {
@@ -41,6 +42,17 @@
 
   programs = {
     bat.enable = true;
+    atuin = {
+      enable = true;
+      enableNushellIntegration = true;
+      settings = {
+        auto_sync = true;
+        update_check = true;
+        sync_frequency = "5m";
+        sync_address = "http://100.104.42.96:8888";
+        style = "full";
+      };
+    };
     git = {
       enable = true;
       delta.enable = true;
