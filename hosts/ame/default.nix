@@ -19,8 +19,10 @@
     xserver = {
       enable = true;
       displayManager.sddm.enable = true;
-      layout = "us";
-      xkbVariant = "";
+      xkb = {
+        layout = "us";
+        variant = "";
+      };
     };
   };
 

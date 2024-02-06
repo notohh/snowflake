@@ -1,6 +1,8 @@
 {modulesPath, ...}: {
   imports = [(modulesPath + "/profiles/qemu-guest.nix")];
 
+  zramSwap.enable = true;
+
   boot = {
     tmp.cleanOnBoot = true;
     loader.grub = {
