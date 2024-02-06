@@ -5,20 +5,16 @@
     packages = with pkgs; [
       corefonts
       nerdfonts
-      jetbrains-mono
       noto-fonts
       noto-fonts-cjk
       twitter-color-emoji
-      font-awesome
-      kochi-substitute
-      ipafont
     ];
 
     fontconfig = {
       enable = true;
       allowBitmaps = true;
       defaultFonts = {
-        monospace = ["JetBrainsMono NF SemiBold" "Twitter Color Emoji"];
+        monospace = ["JetBrainsMono NF Medium" "Twitter Color Emoji"];
         serif = ["Noto Serif" "Twitter Color Emoji"];
         sansSerif = ["Noto Sans" "Twitter Color Emoji"];
         emoji = ["Twitter Color Emoji"];
