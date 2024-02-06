@@ -10,12 +10,16 @@
   gtk = {
     enable = true;
     font = {
-      name = "Monaspace Krypton";
-      package = pkgs.monaspace;
+      name = "Noto Sans";
+      size = 10;
     };
     theme = {
       name = "Tokyonight-Dark-BL";
       package = pkgs.tokyo-night-gtk;
+    };
+    iconTheme = {
+      name = "Papirus";
+      package = pkgs.papirus-icon-theme;
     };
   };
 }
