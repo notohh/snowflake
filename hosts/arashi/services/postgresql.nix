@@ -48,6 +48,10 @@
         name = "miniflux";
         ensureDBOwnership = true;
       }
+      {
+        name = "atuin";
+        ensureDBOwnership = true;
+      }
     ];
     ensureDatabases = [
       "forgejo"
@@ -57,11 +61,21 @@
       "vaultwarden"
       "attic"
       "miniflux"
+      "atuin"
     ];
   };
   services.postgresqlBackup = {
     enable = true;
-    databases = ["forgejo" "hedgedoc" "grafana" "authelia" "vaultwarden" "attic" "miniflux"];
+    databases = [
+      "forgejo"
+      "hedgedoc"
+      "grafana"
+      "authelia"
+      "vaultwarden"
+      "attic"
+      "miniflux"
+      "atuin"
+    ];
     compression = "zstd";
     compressionLevel = 4;
     startAt = "*-*-* 23:00:00";
