@@ -4,8 +4,8 @@ alias zj = zellij
 alias zjd = zellij --layout ../.config/zellij/snowflake.kdl
 alias lg = lazygit
 alias ld = lazydocker
-alias l = eza -ughH --icons
-alias la = eza -alughH --git --icons
+alias ls = eza -l --icons --color always
+alias la = eza -alughHo --git --icons --color always
 alias calc = eva
 alias c = clear
 alias f = yazi
@@ -13,6 +13,7 @@ alias cat = bat --pager=never --plain
 alias rm = rm -i
 alias cp = cp -i
 alias mv = mv -i
+alias grep = rg
 alias build = nh os switch . --nom
 alias clean = sudo nh clean all
 alias deploy = nix run github:serokell/deploy-rs
@@ -30,8 +31,9 @@ alias dlcd = yt-dlp
 alias up = rpaste -s "https://i.flake.sh/" -e 1day
 alias shorten = rpaste -s "https://i.flake.sh/" -e 1day -u
 alias send = croc --relay "100.104.42.96:9009" send
+alias receive = croc --relay "100.104.42.96:9009"
+alias ps = procs
 alias tail = tspin
-alias grep = rg
 nitch
 
 $env.config = {
