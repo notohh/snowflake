@@ -47,25 +47,13 @@
             };
           };
         };
-        routers = {
+        routers = let
+          pqdn = "flake.sh";
+        in {
           api = {
             rule = "PathPrefix(`/api/`)";
             entrypoints = ["websecure"];
             service = "api@internal";
-          };
-          uptime-kuma = {
-            rule = "Host(`status.flake.sh`)";
-            entrypoints = ["websecure"];
-            service = "uptime-kuma";
-            tls.domains = [{main = "*.flake.sh";}];
-            tls.certresolver = "production";
-          };
-          conduit = {
-            rule = "Host(`matrix.flake.sh`)";
-            entrypoints = ["websecure"];
-            service = "conduit";
-            tls.domains = [{main = "*.flake.sh";}];
-            tls.certresolver = "production";
           };
           authelia = {
             rule = "Host(`passport.notohh.dev`)";
@@ -74,112 +62,132 @@
             tls.domains = [{main = "*.notohh.dev";}];
             tls.certresolver = "production";
           };
+          uptime-kuma = {
+            rule = "Host(`status.${pqdn}`)";
+            entrypoints = ["websecure"];
+            service = "uptime-kuma";
+            tls.domains = [{main = "*.${pqdn}";}];
+            tls.certresolver = "production";
+          };
+          conduit = {
+            rule = "Host(`matrix.${pqdn}`)";
+            entrypoints = ["websecure"];
+            service = "conduit";
+            tls.domains = [{main = "*.${pqdn}";}];
+            tls.certresolver = "production";
+          };
           foundryvtt = {
-            rule = "Host(`foundry.flake.sh`)";
+            rule = "Host(`foundry.${pqdn}`)";
             entrypoints = ["websecure"];
             service = "foundryvtt";
-            tls.domains = [{main = "*.flake.sh";}];
+            tls.domains = [{main = "*.${pqdn}";}];
             tls.certresolver = "production";
           };
           forgejo = {
-            rule = "Host(`git.flake.sh`)";
+            rule = "Host(`git.${pqdn}`)";
             entrypoints = ["websecure"];
             service = "forgejo";
-            tls.domains = [{main = "*.flake.sh";}];
+            tls.domains = [{main = "*.${pqdn}";}];
             tls.certresolver = "production";
             middlewares = "cors";
           };
           rustypaste = {
-            rule = "Host(`i.flake.sh`)";
+            rule = "Host(`i.${pqdn}`)";
             entrypoints = ["websecure"];
             service = "rustypaste";
-            tls.domains = [{main = "*.flake.sh";}];
+            tls.domains = [{main = "*.${pqdn}";}];
             tls.certresolver = "production";
           };
           grafana = {
-            rule = "Host(`metrics.flake.sh`)";
+            rule = "Host(`metrics.${pqdn}`)";
             entrypoints = ["websecure"];
             service = "grafana";
-            tls.domains = [{main = "*.flake.sh";}];
+            tls.domains = [{main = "*.${pqdn}";}];
             tls.certresolver = "production";
           };
           hedgedoc = {
-            rule = "Host(`scratch.flake.sh`)";
+            rule = "Host(`scratch.${pqdn}`)";
             entrypoints = ["websecure"];
             service = "hedgedoc";
-            tls.domains = [{main = "*.flake.sh";}];
+            tls.domains = [{main = "*.${pqdn}";}];
             tls.certresolver = "production";
           };
           vaultwarden = {
-            rule = "Host(`vault.flake.sh`)";
+            rule = "Host(`vault.${pqdn}`)";
             entrypoints = ["websecure"];
             service = "vaultwarden";
-            tls.domains = [{main = "*.flake.sh";}];
+            tls.domains = [{main = "*.${pqdn}";}];
             tls.certresolver = "production";
           };
           neko = {
-            rule = "Host(`neko.flake.sh`)";
+            rule = "Host(`neko.${pqdn}`)";
             entrypoints = ["websecure"];
             service = "neko";
-            tls.domains = [{main = "*.flake.sh";}];
+            tls.domains = [{main = "*.${pqdn}";}];
             tls.certresolver = "production";
           };
           justlog = {
-            rule = "Host(`logs.flake.sh`)";
+            rule = "Host(`logs.${pqdn}`)";
             entrypoints = ["websecure"];
             service = "justlog";
-            tls.domains = [{main = "*.flake.sh";}];
+            tls.domains = [{main = "*.${pqdn}";}];
             tls.certresolver = "production";
           };
           ntfy = {
-            rule = "Host(`ntfy.flake.sh`)";
+            rule = "Host(`ntfy.${pqdn}`)";
             entrypoints = ["websecure"];
             service = "ntfy-sh";
-            tls.domains = [{main = "*.flake.sh";}];
+            tls.domains = [{main = "*.${pqdn}";}];
             tls.certresolver = "production";
           };
           attic = {
-            rule = "Host(`cache.flake.sh`)";
+            rule = "Host(`cache.${pqdn}`)";
             entrypoints = ["websecure"];
             service = "attic";
-            tls.domains = [{main = "*.flake.sh";}];
+            tls.domains = [{main = "*.${pqdn}";}];
             tls.certresolver = "production";
           };
           minio = {
-            rule = "Host(`s3.flake.sh`)";
+            rule = "Host(`s3.${pqdn}`)";
             entrypoints = ["websecure"];
             service = "minio";
-            tls.domains = [{main = "*.flake.sh";}];
+            tls.domains = [{main = "*.${pqdn}";}];
             tls.certresolver = "production";
             middlewares = "cors-allow-all";
           };
           woodpecker = {
-            rule = "Host(`ci.flake.sh`)";
+            rule = "Host(`ci.${pqdn}`)";
             entrypoints = ["websecure"];
             service = "woodpecker";
-            tls.domains = [{main = "*.flake.sh";}];
+            tls.domains = [{main = "*.${pqdn}";}];
             tls.certresolver = "production";
           };
         };
-        services = {
-          forgejo.loadBalancer = {
-            passHostHeader = true;
-            servers = [{url = "http://100.121.201.47:3200";}];
-          };
-          uptime-kuma.loadBalancer.servers = [{url = "http://100.104.42.96:4000";}];
-          conduit.loadBalancer.servers = [{url = "http://100.121.201.47:6167";}];
-          authelia.loadBalancer.servers = [{url = "http://100.121.201.47:9091";}];
-          foundryvtt.loadBalancer.servers = [{url = "http://100.104.42.96:30000";}];
-          rustypaste.loadBalancer.servers = [{url = "http://100.121.201.47:8000";}];
-          grafana.loadBalancer.servers = [{url = "http://100.121.201.47:3100";}];
-          hedgedoc.loadBalancer.servers = [{url = "http://100.121.201.47:3300";}];
-          vaultwarden.loadBalancer.servers = [{url = "http://100.121.201.47:8222";}];
-          searxng.loadBalancer.servers = [{url = "http://100.121.201.47:8100";}];
-          neko.loadBalancer.servers = [{url = "http://100.104.42.96:8085";}];
-          justlog.loadBalancer.servers = [{url = "http://100.121.201.47:8025";}];
-          ntfy-sh.loadBalancer.servers = [{url = "http://100.104.42.96:8090";}];
-          attic.loadBalancer.servers = [{url = "http://100.104.42.96:8200";}];
+        services = let
+          sakuraIp = "100.121.201.47:";
+          soraIp = "100.104.42.96:";
+        in {
+          # sora
+          uptime-kuma.loadBalancer.servers = [{url = "http://${soraIp}4000";}];
+          foundryvtt.loadBalancer.servers = [{url = "http://${soraIp}30000";}];
+          ntfy-sh.loadBalancer.servers = [{url = "http://${soraIp}8090";}];
+          attic.loadBalancer.servers = [{url = "http://${soraIp}8200";}];
+
+          # sakura
+          forgejo.loadBalancer.servers = [{url = "http://${sakuraIp}3200";}];
+          conduit.loadBalancer.servers = [{url = "http://${sakuraIp}6167";}];
+          authelia.loadBalancer.servers = [{url = "http://${sakuraIp}9091";}];
+          rustypaste.loadBalancer.servers = [{url = "http://${sakuraIp}8000";}];
+          grafana.loadBalancer.servers = [{url = "http://${sakuraIp}3100";}];
+          hedgedoc.loadBalancer.servers = [{url = "http://${sakuraIp}3300";}];
+          vaultwarden.loadBalancer.servers = [{url = "http://${sakuraIp}8222";}];
+          searxng.loadBalancer.servers = [{url = "http://${sakuraIp}8100";}];
+          justlog.loadBalancer.servers = [{url = "http://${sakuraIp}8025";}];
+
+          # kaze
           minio.loadBalancer.servers = [{url = "http://100.69.79.81:9005";}];
+
+          # tsuru
           woodpecker.loadBalancer.servers = [{url = "http://100.82.146.40:8200";}];
         };
       };

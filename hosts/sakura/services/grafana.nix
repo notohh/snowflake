@@ -1,4 +1,7 @@
-_: {
+_: let
+  prometheusPort = "9090";
+  dbLogin = "grafana";
+in {
   services.grafana = {
     enable = true;
     settings = {
@@ -17,8 +20,8 @@ _: {
       database = {
         type = "postgres";
         host = "192.168.1.211:5432";
-        name = "grafana";
-        user = "grafana";
+        name = dbLogin;
+        user = dbLogin;
         ssl_mode = "disable";
       };
       panels = {
@@ -32,49 +35,49 @@ _: {
           {
             name = "Prometheus";
             type = "prometheus";
-            url = "http://localhost:9090";
+            url = "http://localhost:${prometheusPort}";
             orgId = 1;
           }
           {
             name = "Prometheus-kariru";
             type = "prometheus";
-            url = "http://100.126.229.95:9090";
+            url = "http://100.126.229.95:${prometheusPort}";
             orgId = 1;
           }
           {
             name = "Prometheus-yuki";
             type = "prometheus";
-            url = "http://100.108.113.89:9090";
+            url = "http://100.108.113.89:${prometheusPort}";
             orgId = 1;
           }
           {
             name = "Prometheus-arashi";
             type = "prometheus";
-            url = "http://100.94.214.100:9090";
+            url = "http://100.94.214.100:${prometheusPort}";
             orgId = 1;
           }
           {
             name = "Prometheus-sora";
             type = "prometheus";
-            url = "http://100.104.42.96:9090";
+            url = "http://100.104.42.96:${prometheusPort}";
             orgId = 1;
           }
           {
             name = "Prometheus-tsuru";
             type = "prometheus";
-            url = "http://100.82.146.40:9090";
+            url = "http://100.82.146.40:${prometheusPort}";
             orgId = 1;
           }
           {
             name = "Prometheus-kaze";
             type = "prometheus";
-            url = "http://100.69.79.81:9090";
+            url = "http://100.69.79.81:${prometheusPort}";
             orgId = 1;
           }
           {
             name = "Prometheus-haru";
             type = "prometheus";
-            url = "http://100.73.192.45:9090";
+            url = "http://100.73.192.45:${prometheusPort}";
             orgId = 1;
             jsonData = {
               graphiteVersion = "1.1";

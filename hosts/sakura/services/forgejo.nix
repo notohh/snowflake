@@ -2,7 +2,11 @@
   lib,
   config,
   ...
-}: {
+}: let
+  sshPort = 2222;
+  dbHost = "192.168.1.211";
+  dbLogin = "forgejo";
+in {
   sops.secrets.smtp2go-pwd = {owner = "forgejo";};
   networking.firewall.allowedTCPPorts = [2222];
   services.forgejo = {
@@ -27,8 +31,8 @@
         LANDING_PAGE = "/explore/repos";
         START_SSH_SERVER = true;
         SSH_DOMAIN = "git.flake.sh";
-        SSH_PORT = 2222;
-        SSH_LISTEN_PORT = 2222;
+        SSH_PORT = sshPort;
+        SSH_LISTEN_PORT = sshPort;
         SSH_LISTEN_HOST = "100.121.201.47";
       };
       session = {
@@ -39,15 +43,15 @@
       };
       database = {
         DB_TYPE = lib.mkForce "postgres";
-        HOST = "192.168.1.211:5432";
-        NAME = "forgejo";
-        USER = "forgejo";
-        PASSWD = "forgejo";
+        HOST = "${dbHost}:5432";
+        NAME = dbLogin;
+        USER = dbLogin;
+        PASSWD = dbLogin;
       };
       cache = {
         ENABLED = true;
         ADAPTER = lib.mkForce "redis";
-        HOST = "redis://:forgejo@100.94.214.100:6379";
+        HOST = "redis://:forgejo@${dbHost}:6379";
       };
       metrics = {
         ENABLED = true;

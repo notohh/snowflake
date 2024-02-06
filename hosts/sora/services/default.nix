@@ -14,6 +14,6 @@
     # ./terraria.nix
     # ./factorio.nix
     # ./minecraft.nix
-    ./foundryvtt.nix
+    # ./foundryvtt.nix
   ];
 }

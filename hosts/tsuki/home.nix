@@ -37,7 +37,6 @@
       distrobox
       vscode-fhs
       obsidian-wayland
-      supersonic-wayland
       jellyfin-mpv-shim
       virt-manager
       imv

@@ -2,7 +2,7 @@
   networking.firewall.allowedTCPPorts = [8888];
   services.atuin = {
     enable = true;
-    openRegistration = true;
+    openRegistration = false;
     openFirewall = true;
     host = "100.104.42.96";
     port = 8888;

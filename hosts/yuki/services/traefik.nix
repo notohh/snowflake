@@ -13,7 +13,9 @@
     enable = true;
     dynamicConfigOptions = {
       http = {
-        routers = {
+        routers = let
+          fqdn = "internal.flake.sh";
+        in {
           # local
           api = {
             rule = "PathPrefix(`/api/`)";
@@ -21,113 +23,115 @@
             service = "api@internal";
           };
           homepage = {
-            rule = "Host(`dashboard.internal.flake.sh`)";
+            rule = "Host(`dashboard.${fqdn}`)";
             entrypoints = ["websecure"];
             service = "homepage";
-            tls.domains = [{main = "*.internal.flake.sh";}];
+            tls.domains = [{main = "*.${fqdn}";}];
             tls.certresolver = "production";
           };
           stash = {
-            rule = "Host(`stash.internal.flake.sh`)";
+            rule = "Host(`stash.${fqdn}`)";
             entrypoints = ["websecure"];
             service = "stash";
-            tls.domains = [{main = "*.internal.flake.sh";}];
+            tls.domains = [{main = "*.${fqdn}";}];
             tls.certresolver = "production";
           };
           jellyfin = {
-            rule = "Host(`jellyfin.internal.flake.sh`)";
+            rule = "Host(`jellyfin.${fqdn}`)";
             entrypoints = ["websecure"];
             service = "jellyfin";
-            tls.domains = [{main = "*.internal.flake.sh";}];
+            tls.domains = [{main = "*.${fqdn}";}];
             tls.certresolver = "production";
           };
           jellyseerr = {
-            rule = "Host(`jellyseerr.internal.flake.sh`)";
+            rule = "Host(`jellyseerr.${fqdn}`)";
             entrypoints = ["websecure"];
             service = "jellyseerr";
-            tls.domains = [{main = "*.internal.flake.sh";}];
+            tls.domains = [{main = "*.${fqdn}";}];
             tls.certresolver = "production";
           };
           wallos = {
-            rule = "Host(`wallos.internal.flake.sh`)";
+            rule = "Host(`wallos.${fqdn}`)";
             entrypoints = ["websecure"];
             service = "wallos";
-            tls.domains = [{main = "*.internal.flake.sh";}];
+            tls.domains = [{main = "*.${fqdn}";}];
             tls.certresolver = "production";
           };
           hass = {
-            rule = "Host(`hass.internal.flake.sh`)";
+            rule = "Host(`hass.${fqdn}`)";
             entrypoints = ["websecure"];
             service = "hass";
-            tls.domains = [{main = "*.internal.flake.sh";}];
+            tls.domains = [{main = "*.${fqdn}";}];
             tls.certresolver = "production";
           };
           paperless = {
-            rule = "Host(`paperless.internal.flake.sh`)";
+            rule = "Host(`paperless.${fqdn}`)";
             entrypoints = ["websecure"];
             service = "paperless";
-            tls.domains = [{main = "*.internal.flake.sh";}];
+            tls.domains = [{main = "*.${fqdn}";}];
             tls.certresolver = "production";
           };
           miniflux = {
-            rule = "Host(`rss.internal.flake.sh`)";
+            rule = "Host(`rss.${fqdn}`)";
             entrypoints = ["websecure"];
             service = "miniflux";
-            tls.domains = [{main = "*.internal.flake.sh";}];
+            tls.domains = [{main = "*.${fqdn}";}];
             tls.certresolver = "production";
           };
           # kariru
           sonarr = {
-            rule = "Host(`sonarr.internal.flake.sh`)";
+            rule = "Host(`sonarr.${fqdn}`)";
             entryPoints = ["websecure"];
             service = "sonarr";
-            tls.domains = [{main = "*.internal.flake.sh";}];
+            tls.domains = [{main = "*.${fqdn}";}];
             tls.certresolver = "production";
           };
           radarr = {
-            rule = "Host(`radarr.internal.flake.sh`)";
+            rule = "Host(`radarr.${fqdn}`)";
             entryPoints = ["websecure"];
             service = "radarr";
-            tls.domains = [{main = "*.internal.flake.sh";}];
+            tls.domains = [{main = "*.${fqdn}";}];
             tls.certresolver = "production";
           };
           readarr = {
-            rule = "Host(`readarr.internal.flake.sh`)";
+            rule = "Host(`readarr.${fqdn}`)";
             entryPoints = ["websecure"];
             service = "readarr";
-            tls.domains = [{main = "*.internal.flake.sh";}];
+            tls.domains = [{main = "*.${fqdn}";}];
             tls.certresolver = "production";
           };
           lidarr = {
-            rule = "Host(`lidarr.internal.flake.sh`)";
+            rule = "Host(`lidarr.${fqdn}`)";
             entryPoints = ["websecure"];
             service = "lidarr";
-            tls.domains = [{main = "*.internal.flake.sh";}];
+            tls.domains = [{main = "*.${fqdn}";}];
             tls.certresolver = "production";
           };
           bazarr = {
-            rule = "Host(`bazarr.internal.flake.sh`)";
+            rule = "Host(`bazarr.${fqdn}`)";
             entryPoints = ["websecure"];
             service = "bazarr";
-            tls.domains = [{main = "*.internal.flake.sh";}];
+            tls.domains = [{main = "*.${fqdn}";}];
             tls.certresolver = "production";
           };
           whisparr = {
-            rule = "Host(`whisparr.internal.flake.sh`)";
+            rule = "Host(`whisparr.${fqdn}`)";
             entryPoints = ["websecure"];
             service = "whisparr";
-            tls.domains = [{main = "*.internal.flake.sh";}];
+            tls.domains = [{main = "*.${fqdn}";}];
             tls.certresolver = "production";
           };
           prowlarr = {
-            rule = "Host(`prowlarr.internal.flake.sh`)";
+            rule = "Host(`prowlarr.${fqdn}`)";
             entrypoints = ["websecure"];
             service = "prowlarr";
-            tls.domains = [{main = "*.internal.flake.sh";}];
+            tls.domains = [{main = "*.${fqdn}";}];
             tls.certresolver = "production";
           };
         };
-        services = {
+        services = let
+          kariruHost = "192.168.1.54:";
+        in {
           # local
           stash.loadBalancer.servers = [{url = "http://localhost:9999";}];
           homepage.loadBalancer.servers = [{url = "http://localhost:7676";}];
@@ -138,13 +142,13 @@
           paperless.loadBalancer.servers = [{url = "http://localhost:28981";}];
           miniflux.loadBalancer.servers = [{url = "http://localhost:9000";}];
           # kariru
-          sonarr.loadBalancer.servers = [{url = "http://192.168.1.54:8989";}];
-          radarr.loadBalancer.servers = [{url = "http://192.168.1.54:7878";}];
-          readarr.loadBalancer.servers = [{url = "http://192.168.1.54:8787";}];
-          lidarr.loadBalancer.servers = [{url = "http://192.168.1.54:8686";}];
-          bazarr.loadBalancer.servers = [{url = "http://192.168.1.54:6767";}];
-          whisparr.loadBalancer.servers = [{url = "http://192.168.1.54:6969";}];
-          prowlarr.loadBalancer.servers = [{url = "http://192.168.1.54:9696";}];
+          sonarr.loadBalancer.servers = [{url = "http://${kariruHost}8989";}];
+          radarr.loadBalancer.servers = [{url = "http://${kariruHost}7878";}];
+          readarr.loadBalancer.servers = [{url = "http://${kariruHost}8787";}];
+          lidarr.loadBalancer.servers = [{url = "http://${kariruHost}8686";}];
+          bazarr.loadBalancer.servers = [{url = "http://${kariruHost}6767";}];
+          whisparr.loadBalancer.servers = [{url = "http://${kariruHost}6969";}];
+          prowlarr.loadBalancer.servers = [{url = "http://${kariruHost}9696";}];
         };
       };
     };

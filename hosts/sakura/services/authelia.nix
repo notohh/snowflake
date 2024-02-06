@@ -8,16 +8,18 @@
       jwtSecretFile = config.sops.secrets.authelia-jwt.path;
       storageEncryptionKeyFile = config.sops.secrets.authelia-sek.path;
     };
-    settings = {
+    settings = let
+      pqdn = "notohh.dev";
+    in {
       log.level = "debug";
       theme = "dark";
       default_2fa_method = "totp";
-      default_redirection_url = "https://passport.notohh.dev/";
+      default_redirection_url = "https://passport.${pqdn}/";
       authentication_backend = {
         file.path = "/var/lib/authelia-default/user.yml";
       };
       session = {
-        domain = "notohh.dev";
+        domain = pqdn;
         expiration = 3600;
         inactivity = 300;
       };
@@ -38,7 +40,7 @@
         default_policy = "deny";
         rules = [
           {
-            domain = "notohh.dev";
+            domain = pqdn;
             policy = "bypass";
           }
         ];
@@ -51,13 +53,15 @@
       notifier.filesystem = {
         filename = "/var/lib/authelia-default/notif.txt";
       };
-      storage.postgres = {
+      storage.postgres = let
+        dbInfo = "authelia";
+      in {
         host = "192.168.1.211";
         port = 5432;
-        database = "authelia";
+        database = dbInfo;
         schema = "public";
-        username = "authelia";
-        password = "authelia";
+        username = dbInfo;
+        password = dbInfo;
       };
     };
   };

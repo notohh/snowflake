@@ -103,36 +103,38 @@
       };
       customDNS = {
         customTTL = "1h";
-        mapping = {
+        mapping = let
+          yukiIp = "192.168.1.98";
+        in {
           # infra
 
           "truenas.internal.flake.sh" = "192.168.1.199";
-          "hass.internal.flake.sh" = "192.168.1.98";
-          "dashboard.internal.flake.sh" = "192.168.1.98";
+          "hass.internal.flake.sh" = "${yukiIp}";
+          "dashboard.internal.flake.sh" = "${yukiIp}";
           "udm.internal.flake.sh" = "192.168.1.1";
           "pve.internal.flake.sh" = "192.168.1.37";
           "pbs.internal.flake.sh" = "192.168.1.38";
 
           # media
 
-          "jellyfin.internal.flake.sh" = "192.168.1.98";
-          "jellyseerr.internal.flake.sh" = "192.168.1.98";
-          "sonarr.internal.flake.sh" = "192.168.1.98";
-          "radarr.internal.flake.sh" = "192.168.1.98";
-          "readarr.internal.flake.sh" = "192.168.1.98";
-          "lidarr.internal.flake.sh" = "192.168.1.98";
-          "whisparr.internal.flake.sh" = "192.168.1.98";
-          "bazarr.internal.flake.sh" = "192.168.1.98";
-          "prowlarr.internal.flake.sh" = "192.168.1.98";
-          "stash.internal.flake.sh" = "192.168.1.98";
+          "jellyfin.internal.flake.sh" = "${yukiIp}";
+          "jellyseerr.internal.flake.sh" = "${yukiIp}";
+          "sonarr.internal.flake.sh" = "${yukiIp}";
+          "radarr.internal.flake.sh" = "${yukiIp}";
+          "readarr.internal.flake.sh" = "${yukiIp}";
+          "lidarr.internal.flake.sh" = "${yukiIp}";
+          "whisparr.internal.flake.sh" = "${yukiIp}";
+          "bazarr.internal.flake.sh" = "${yukiIp}";
+          "prowlarr.internal.flake.sh" = "${yukiIp}";
+          "stash.internal.flake.sh" = "${yukiIp}";
           "nextcloud.internal.flake.sh" = "192.168.1.199";
 
           # misc
 
-          "wallos.internal.flake.sh" = "192.168.1.98";
+          "wallos.internal.flake.sh" = "${yukiIp}";
           "synology.internal.flake.sh" = "192.168.1.71";
-          "paperless.internal.flake.sh" = "192.168.1.98";
-          "rss.internal.flake.sh" = "192.168.1.98";
+          "paperless.internal.flake.sh" = "${yukiIp}";
+          "rss.internal.flake.sh" = "${yukiIp}";
         };
       };
       redis = {
