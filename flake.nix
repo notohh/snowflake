@@ -11,6 +11,7 @@
     yazi.url = "github:sxyazi/yazi";
     helix.url = "github:helix-editor/helix";
     pre-commit-hooks.url = "github:cachix/pre-commit-hooks.nix";
+    wezterm.url = "github:notohh/wezterm?dir=nix&ref=nix-add-overlay";
     hyprland-plugins = {
       url = "github:hyprwm/hyprland-plugins";
       inputs.hyprland.follows = "hyprland";
