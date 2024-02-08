@@ -11,10 +11,10 @@ steps:
   update:
     image: nixos/nix
     commands: |
-       echo 'experimental-features = flakes nix-command' >> /etc/nix/nix.conf
-       echo "access-tokens = github.com=$${GH_PAT}" >> /etc/nix/nix.conf
-       nix flake update
-    secrets: [ gh_pat ]
+      echo 'experimental-features = flakes nix-command' >> /etc/nix/nix.conf
+      echo "access-tokens = github.com=$${GH_PAT}" >> /etc/nix/nix.conf
+      nix flake update
+    secrets: [gh_pat]
   push-changes:
     image: appleboy/drone-git-push
     settings:
