@@ -48,8 +48,9 @@
       settings = {
         auto_sync = true;
         update_check = true;
-        sync_frequency = "5m";
+        sync_frequency = "1h";
         sync_address = "http://100.104.42.96:8888";
+        secrets_filter = true;
         style = "full";
       };
     };
