@@ -79,7 +79,6 @@
           git
           sops
           #  alejandra
-          nixfmt-rfc-style
           statix
           deadnix
           yaml-language-server
