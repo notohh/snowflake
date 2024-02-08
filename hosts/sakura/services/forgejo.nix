@@ -35,6 +35,12 @@ in {
         SSH_LISTEN_PORT = sshPort;
         SSH_LISTEN_HOST = "100.121.201.47";
       };
+      "git.timeout" = {
+        DEFAULT = 3600;
+        MIGRATE = 3600;
+        MIRROR = 3600;
+        CLONE = 3600;
+      };
       session = {
         COOKIE_SECURE = true;
       };
