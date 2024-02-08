@@ -7,13 +7,9 @@ _: {
       autoPrune = {
         enable = true;
         dates = "weekly";
-        flags = [
-          "--all"
-        ];
+        flags = ["--all"];
       };
-      listenOptions = [
-        "/run/docker.sock"
-      ];
+      listenOptions = ["/run/docker.sock"];
     };
   };
 }
