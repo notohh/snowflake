@@ -1,4 +1,5 @@
-inputs: let
+inputs:
+let
   system = "x86_64-linux";
   sopsModule = inputs.sops-nix.nixosModules.sops;
   hmModule = inputs.home-manager.nixosModules.home-manager;
@@ -9,10 +10,13 @@ inputs: let
   atticModule = inputs.attic.nixosModules.atticd;
   nurModule = inputs.nur.nixosModules.nur;
   inherit (inputs.nixpkgs.lib) nixosSystem;
-in {
+in
+{
   tsuki = nixosSystem {
     inherit system;
-    specialArgs = {inherit inputs;};
+    specialArgs = {
+      inherit inputs;
+    };
     modules = [
       ./tsuki
       sopsModule
@@ -23,7 +27,9 @@ in {
         home-manager = {
           useGlobalPkgs = true;
           useUserPackages = true;
-          extraSpecialArgs = {inherit inputs;};
+          extraSpecialArgs = {
+            inherit inputs;
+          };
           users.notoh = {
             imports = [
               ./tsuki/home.nix
@@ -39,7 +45,9 @@ in {
   };
   sakura = nixosSystem {
     inherit system;
-    specialArgs = {inherit inputs;};
+    specialArgs = {
+      inherit inputs;
+    };
     modules = [
       ./sakura
       sopsModule
@@ -48,11 +56,11 @@ in {
         home-manager = {
           useGlobalPkgs = true;
           useUserPackages = true;
-          extraSpecialArgs = {inherit inputs;};
+          extraSpecialArgs = {
+            inherit inputs;
+          };
           users.notoh = {
-            imports = [
-              ./sakura/home.nix
-            ];
+            imports = [ ./sakura/home.nix ];
           };
         };
       }
@@ -60,7 +68,9 @@ in {
   };
   kariru = nixosSystem {
     inherit system;
-    specialArgs = {inherit inputs;};
+    specialArgs = {
+      inherit inputs;
+    };
     modules = [
       ./kariru
       sopsModule
@@ -69,11 +79,11 @@ in {
         home-manager = {
           useGlobalPkgs = true;
           useUserPackages = true;
-          extraSpecialArgs = {inherit inputs;};
+          extraSpecialArgs = {
+            inherit inputs;
+          };
           users.notoh = {
-            imports = [
-              ./kariru/home.nix
-            ];
+            imports = [ ./kariru/home.nix ];
           };
         };
       }
@@ -81,7 +91,9 @@ in {
   };
   yuki = nixosSystem {
     inherit system;
-    specialArgs = {inherit inputs;};
+    specialArgs = {
+      inherit inputs;
+    };
     modules = [
       ./yuki
       sopsModule
@@ -90,11 +102,11 @@ in {
         home-manager = {
           useGlobalPkgs = true;
           useUserPackages = true;
-          extraSpecialArgs = {inherit inputs;};
+          extraSpecialArgs = {
+            inherit inputs;
+          };
           users.notoh = {
-            imports = [
-              ./yuki/home.nix
-            ];
+            imports = [ ./yuki/home.nix ];
           };
         };
       }
@@ -102,7 +114,9 @@ in {
   };
   ame = nixosSystem {
     inherit system;
-    specialArgs = {inherit inputs;};
+    specialArgs = {
+      inherit inputs;
+    };
     modules = [
       ./ame
       sopsModule
@@ -111,7 +125,9 @@ in {
         home-manager = {
           useGlobalPkgs = true;
           useUserPackages = true;
-          extraSpecialArgs = {inherit inputs;};
+          extraSpecialArgs = {
+            inherit inputs;
+          };
           users.notoh = {
             imports = [
               ./ame/home.nix
@@ -125,7 +141,9 @@ in {
   };
   arashi = nixosSystem {
     inherit system;
-    specialArgs = {inherit inputs;};
+    specialArgs = {
+      inherit inputs;
+    };
     modules = [
       ./arashi
       sopsModule
@@ -134,11 +152,11 @@ in {
         home-manager = {
           useGlobalPkgs = true;
           useUserPackages = true;
-          extraSpecialArgs = {inherit inputs;};
+          extraSpecialArgs = {
+            inherit inputs;
+          };
           users.notoh = {
-            imports = [
-              ./arashi/home.nix
-            ];
+            imports = [ ./arashi/home.nix ];
           };
         };
       }
@@ -146,7 +164,9 @@ in {
   };
   sora = nixosSystem {
     inherit system;
-    specialArgs = {inherit inputs;};
+    specialArgs = {
+      inherit inputs;
+    };
     modules = [
       ./sora
       sopsModule
@@ -156,11 +176,11 @@ in {
         home-manager = {
           useGlobalPkgs = true;
           useUserPackages = true;
-          extraSpecialArgs = {inherit inputs;};
+          extraSpecialArgs = {
+            inherit inputs;
+          };
           users.notoh = {
-            imports = [
-              ./sora/home.nix
-            ];
+            imports = [ ./sora/home.nix ];
           };
         };
       }
@@ -168,7 +188,9 @@ in {
   };
   tsuru = nixosSystem {
     inherit system;
-    specialArgs = {inherit inputs;};
+    specialArgs = {
+      inherit inputs;
+    };
     modules = [
       ./tsuru
       sopsModule
@@ -177,11 +199,11 @@ in {
         home-manager = {
           useGlobalPkgs = true;
           useUserPackages = true;
-          extraSpecialArgs = {inherit inputs;};
+          extraSpecialArgs = {
+            inherit inputs;
+          };
           users.notoh = {
-            imports = [
-              ./tsuru/home.nix
-            ];
+            imports = [ ./tsuru/home.nix ];
           };
         };
       }
@@ -189,7 +211,9 @@ in {
   };
   haru = nixosSystem {
     inherit system;
-    specialArgs = {inherit inputs;};
+    specialArgs = {
+      inherit inputs;
+    };
     modules = [
       ./haru
       sopsModule
@@ -198,11 +222,11 @@ in {
         home-manager = {
           useGlobalPkgs = true;
           useUserPackages = true;
-          extraSpecialArgs = {inherit inputs;};
+          extraSpecialArgs = {
+            inherit inputs;
+          };
           users.notoh = {
-            imports = [
-              ./haru/home.nix
-            ];
+            imports = [ ./haru/home.nix ];
           };
         };
       }
@@ -210,7 +234,9 @@ in {
   };
   kaze = nixosSystem {
     inherit system;
-    specialArgs = {inherit inputs;};
+    specialArgs = {
+      inherit inputs;
+    };
     modules = [
       ./kaze
       sopsModule
@@ -219,11 +245,11 @@ in {
         home-manager = {
           useGlobalPkgs = true;
           useUserPackages = true;
-          extraSpecialArgs = {inherit inputs;};
+          extraSpecialArgs = {
+            inherit inputs;
+          };
           users.notoh = {
-            imports = [
-              ./kaze/home.nix
-            ];
+            imports = [ ./kaze/home.nix ];
           };
         };
       }

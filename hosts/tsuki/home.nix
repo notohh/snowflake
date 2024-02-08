@@ -1,8 +1,5 @@
+{ inputs, pkgs, ... }:
 {
-  inputs,
-  pkgs,
-  ...
-}: {
   imports = [
     ./services/swayidle.nix
     ../../home
@@ -54,8 +51,8 @@
       prismlauncher
       yuzu
       inputs.nix-gaming.packages.${pkgs.system}.osu-lazer-bin
-      (libsForQt5.callPackage ../../pkgs/chatterino7 {})
-      (callPackage ../../pkgs/jellyfin-rpc {})
+      (libsForQt5.callPackage ../../pkgs/chatterino7 { })
+      (callPackage ../../pkgs/jellyfin-rpc { })
     ];
     stateVersion = "23.05";
   };

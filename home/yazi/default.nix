@@ -1,10 +1,10 @@
+{ config, pkgs, ... }:
 {
-  config,
-  pkgs,
-  ...
-}: {
   xdg.configFile."yazi/init.lua".source = ./init.lua;
-  imports = [./keymap.nix ./openers.nix];
+  imports = [
+    ./keymap.nix
+    ./openers.nix
+  ];
 
   programs.yazi = {
     enable = true;
@@ -12,7 +12,11 @@
     enableNushellIntegration = true;
     settings = {
       manager = {
-        ratio = [1 3 3];
+        ratio = [
+          1
+          3
+          3
+        ];
         sort_by = "natural";
         sort_reverse = false;
         sort_dir_first = true;

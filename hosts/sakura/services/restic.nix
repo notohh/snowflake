@@ -1,10 +1,9 @@
+{ pkgs, config, ... }:
 {
-  pkgs,
-  config,
-  ...
-}: {
-  sops.secrets.restic-sakura = {sopsFile = ../../../secrets/restic/secrets.yaml;};
-  environment.systemPackages = [pkgs.restic];
+  sops.secrets.restic-sakura = {
+    sopsFile = ../../../secrets/restic/secrets.yaml;
+  };
+  environment.systemPackages = [ pkgs.restic ];
   services.restic = {
     backups = {
       sakura = {

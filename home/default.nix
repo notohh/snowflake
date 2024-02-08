@@ -1,4 +1,5 @@
-{pkgs, ...}: {
+{ pkgs, ... }:
+{
   imports = [
     ./helix
     ./neofetch
@@ -63,7 +64,11 @@
         key = "BD47506D475EE86D";
         signByDefault = true;
       };
-      ignores = ["*result*" ".direnv" "node_modules"];
+      ignores = [
+        "*result*"
+        ".direnv"
+        "node_modules"
+      ];
     };
     gh = {
       enable = true;
@@ -81,7 +86,7 @@
     zoxide = {
       enable = true;
       enableNushellIntegration = true;
-      options = ["--cmd cdd"];
+      options = [ "--cmd cdd" ];
     };
   };
 }

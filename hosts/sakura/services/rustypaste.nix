@@ -1,9 +1,10 @@
-{pkgs, ...}: {
-  environment.systemPackages = with pkgs; [rustypaste];
+{ pkgs, ... }:
+{
+  environment.systemPackages = with pkgs; [ rustypaste ];
 
   systemd.services.rustypaste = {
     enable = true;
-    wantedBy = ["multi-user.target"];
+    wantedBy = [ "multi-user.target" ];
     description = "A minimal file upload/pastebin service.";
     environment = {
       CONFIG = "/var/lib/rustypaste/config.toml";

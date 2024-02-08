@@ -1,4 +1,5 @@
-{pkgs, ...}: {
+{ pkgs, ... }:
+{
   documentation = {
     enable = true;
     doc.enable = false;

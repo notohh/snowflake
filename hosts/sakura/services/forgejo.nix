@@ -1,14 +1,14 @@
-{
-  lib,
-  config,
-  ...
-}: let
+{ lib, config, ... }:
+let
   sshPort = 2222;
   dbHost = "192.168.1.211";
   dbLogin = "forgejo";
-in {
-  sops.secrets.smtp2go-pwd = {owner = "forgejo";};
-  networking.firewall.allowedTCPPorts = [2222];
+in
+{
+  sops.secrets.smtp2go-pwd = {
+    owner = "forgejo";
+  };
+  networking.firewall.allowedTCPPorts = [ 2222 ];
   services.forgejo = {
     enable = true;
     stateDir = "/var/lib/forgejo";
@@ -78,7 +78,7 @@ in {
   services.fail2ban.jails.forgejo = {
     settings = {
       filter = "forgejo";
-      action = ''iptables-allports'';
+      action = "iptables-allports";
       mode = "aggressive";
       maxretry = 3;
       findtime = 3600;

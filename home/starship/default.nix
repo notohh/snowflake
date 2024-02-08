@@ -1,8 +1,5 @@
+{ config, lib, ... }:
 {
-  config,
-  lib,
-  ...
-}: {
   home.sessionVariables.STARSHIP_CACHE = "${config.xdg.cacheHome}/starship";
 
   programs.starship = {
@@ -40,9 +37,7 @@
         "$rust"
         "$golang"
       ];
-      right_format = lib.concatStrings [
-        "$nix_shell"
-      ];
+      right_format = lib.concatStrings [ "$nix_shell" ];
       character = {
         error_symbol = "[](bold red)";
         success_symbol = "[](bold teal)";
@@ -77,7 +72,7 @@
         impure_msg = "[impure shell](bold red)";
         pure_msg = "[pure shell](bold green)";
         unknown_msg = "[unknown shell](bold yellow)";
-        format = "via [ $state( \($name\))](bold teal)";
+        format = "via [ $state( ($name))](bold teal)";
       };
       git_branch = {
         symbol = "";

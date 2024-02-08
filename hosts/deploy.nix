@@ -7,7 +7,11 @@ inputs: {
         path = activate.nixos inputs.self.nixosConfigurations.sakura;
       };
       sshUser = "root";
-      sshOpts = ["-t" "-i" "~/.ssh/forgejo"];
+      sshOpts = [
+        "-t"
+        "-i"
+        "~/.ssh/forgejo"
+      ];
       magicRollback = true;
     };
     kariru = {
@@ -17,7 +21,11 @@ inputs: {
         path = activate.nixos inputs.self.nixosConfigurations.kariru;
       };
       sshUser = "root";
-      sshOpts = ["-t" "-i" "~/.ssh/forgejo"];
+      sshOpts = [
+        "-t"
+        "-i"
+        "~/.ssh/forgejo"
+      ];
       magicRollback = true;
     };
     yuki = {
@@ -27,7 +35,11 @@ inputs: {
         path = activate.nixos inputs.self.nixosConfigurations.yuki;
       };
       sshUser = "root";
-      sshOpts = ["-t" "-i" "~/.ssh/forgejo"];
+      sshOpts = [
+        "-t"
+        "-i"
+        "~/.ssh/forgejo"
+      ];
       magicRollback = true;
     };
     arashi = {
@@ -37,7 +49,11 @@ inputs: {
         path = activate.nixos inputs.self.nixosConfigurations.arashi;
       };
       sshUser = "root";
-      sshOpts = ["-t" "-i" "~/.ssh/forgejo"];
+      sshOpts = [
+        "-t"
+        "-i"
+        "~/.ssh/forgejo"
+      ];
       magicRollback = true;
     };
     sora = {
@@ -47,7 +63,11 @@ inputs: {
         path = activate.nixos inputs.self.nixosConfigurations.sora;
       };
       sshUser = "root";
-      sshOpts = ["-t" "-i" "~/.ssh/forgejo"];
+      sshOpts = [
+        "-t"
+        "-i"
+        "~/.ssh/forgejo"
+      ];
       magicRollback = true;
     };
     tsuru = {
@@ -57,7 +77,11 @@ inputs: {
         path = activate.nixos inputs.self.nixosConfigurations.tsuru;
       };
       sshUser = "root";
-      sshOpts = ["-t" "-i" "~/.ssh/forgejo"];
+      sshOpts = [
+        "-t"
+        "-i"
+        "~/.ssh/forgejo"
+      ];
       magicRollback = true;
     };
     haru = {
@@ -67,7 +91,11 @@ inputs: {
         path = activate.nixos inputs.self.nixosConfigurations.haru;
       };
       sshUser = "root";
-      sshOpts = ["-t" "-i" "~/.ssh/forgejo"];
+      sshOpts = [
+        "-t"
+        "-i"
+        "~/.ssh/forgejo"
+      ];
       magicRollback = true;
     };
     kaze = {
@@ -77,7 +105,11 @@ inputs: {
         path = activate.nixos inputs.self.nixosConfigurations.kaze;
       };
       sshUser = "root";
-      sshOpts = ["-t" "-i" "~/.ssh/forgejo"];
+      sshOpts = [
+        "-t"
+        "-i"
+        "~/.ssh/forgejo"
+      ];
       magicRollback = true;
     };
   };

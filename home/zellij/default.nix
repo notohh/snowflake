@@ -1,7 +1,5 @@
 _: {
-  imports = [
-    ./layouts.nix
-  ];
+  imports = [ ./layouts.nix ];
 
   programs.zellij = {
     enable = true;

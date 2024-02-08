@@ -1,4 +1,5 @@
-{inputs, ...}: {
+{ inputs, ... }:
+{
   nixpkgs = {
     overlays = [
       inputs.nur.overlay
@@ -26,13 +27,19 @@
 
   nix = {
     settings = {
-      extra-experimental-features = ["flakes" "nix-command"];
+      extra-experimental-features = [
+        "flakes"
+        "nix-command"
+      ];
       warn-dirty = false;
       auto-optimise-store = true;
       builders-use-substitutes = true;
       keep-outputs = true;
-      allowed-users = ["@wheel"];
-      trusted-users = ["root" "@wheel"];
+      allowed-users = [ "@wheel" ];
+      trusted-users = [
+        "root"
+        "@wheel"
+      ];
       substituters = [
         "https://cache.flake.sh/kyasshu"
         "https://hyprland.cachix.org"

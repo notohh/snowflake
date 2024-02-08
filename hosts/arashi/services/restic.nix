@@ -1,17 +1,14 @@
+{ pkgs, config, ... }:
 {
-  pkgs,
-  config,
-  ...
-}: {
-  sops.secrets.restic-arashi = {sopsFile = ../../../secrets/restic/secrets.yaml;};
-  environment.systemPackages = [pkgs.restic];
+  sops.secrets.restic-arashi = {
+    sopsFile = ../../../secrets/restic/secrets.yaml;
+  };
+  environment.systemPackages = [ pkgs.restic ];
   services.restic = {
     backups = {
       arashi = {
         user = "root";
-        paths = [
-          "/var/backup/"
-        ];
+        paths = [ "/var/backup/" ];
         pruneOpts = [
           "--keep-daily=7"
           "--keep-weekly=6"

@@ -1,7 +1,6 @@
-{...}: {
-  imports = [
-    ../../home
-  ];
+{ ... }:
+{
+  imports = [ ../../home ];
 
   systemd.user.startServices = "sd-switch";
   programs.home-manager.enable = true;

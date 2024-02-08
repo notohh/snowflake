@@ -41,50 +41,53 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
-  outputs = {
-    self,
-    nixpkgs,
-    pre-commit-hooks,
-    ...
-  } @ inputs: let
-    system = "x86_64-linux";
-    pkgs = import nixpkgs {
-      inherit system;
-    };
-  in {
-    checks = {
-      pre-commit-check = pre-commit-hooks.lib.${system}.run {
-        src = ./.;
-        hooks = {
-          stylua.enable = true;
-          eslint.enable = true;
-          statix.enable = true;
-          alejandra.enable = false;
-          deadnix = {
-            enable = true;
-            excludes = ["overlays.nix"];
-          };
-          prettier = {
-            enable = true;
-            files = "\\.(js|ts|md|json)$";
+  outputs =
+    {
+      self,
+      nixpkgs,
+      pre-commit-hooks,
+      ...
+    }@inputs:
+    let
+      system = "x86_64-linux";
+      pkgs = import nixpkgs { inherit system; };
+    in
+    {
+      checks = {
+        pre-commit-check = pre-commit-hooks.lib.${system}.run {
+          src = ./.;
+          hooks = {
+            stylua.enable = true;
+            eslint.enable = true;
+            statix.enable = true;
+            alejandra.enable = false;
+            deadnix = {
+              enable = true;
+              excludes = [ "overlays.nix" ];
+            };
+            prettier = {
+              enable = true;
+              files = "\\.(js|ts|md|json)$";
+            };
           };
         };
       };
+      devShells.${system}.default = pkgs.mkShell {
+        name = "snowflake";
+        inherit (self.checks.pre-commit-check) shellHook;
+        packages = with pkgs; [
+          git
+          sops
+          #  alejandra
+          nixfmt-rfc-style
+          statix
+          deadnix
+          yaml-language-server
+          lua-language-server
+        ];
+      };
+      #  formatter.${system} = pkgs.alejandra;
+      deploy = import ./hosts/deploy.nix inputs;
+      nixosConfigurations = import ./hosts inputs;
     };
-    devShells.${system}.default = pkgs.mkShell {
-      name = "snowflake";
-      inherit (self.checks.pre-commit-check) shellHook;
-      packages = with pkgs; [
-        git
-        sops
-        #  alejandra
-        nixfmt-rfc-style
-        yaml-language-server
-        lua-language-server
-      ];
-    };
-    #  formatter.${system} = pkgs.alejandra;
-    deploy = import ./hosts/deploy.nix inputs;
-    nixosConfigurations = import ./hosts inputs;
-  };
 }

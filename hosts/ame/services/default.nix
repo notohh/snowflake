@@ -1,5 +1,4 @@
-{...}: {
-  imports = [
-    ./restic.nix
-  ];
+{ ... }:
+{
+  imports = [ ./restic.nix ];
 }

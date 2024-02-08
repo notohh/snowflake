@@ -1,5 +1,8 @@
 _: {
-  networking.firewall.allowedTCPPorts = [6167 8448];
+  networking.firewall.allowedTCPPorts = [
+    6167
+    8448
+  ];
   services.matrix-conduit = {
     enable = true;
     settings = {
@@ -14,7 +17,7 @@ _: {
         max_request_size = 20000000;
         database_backend = "rocksdb";
         enable_lightning_bolt = false;
-        trusted_servers = ["matrix.org"];
+        trusted_servers = [ "matrix.org" ];
       };
     };
   };

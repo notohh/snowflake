@@ -1,8 +1,12 @@
-{pkgs, ...}: {
-  networking.firewall.allowedTCPPorts = [53 4000];
-  networking.firewall.allowedUDPPorts = [53];
+{ pkgs, ... }:
+{
+  networking.firewall.allowedTCPPorts = [
+    53
+    4000
+  ];
+  networking.firewall.allowedUDPPorts = [ 53 ];
 
-  environment.systemPackages = [pkgs.blocky];
+  environment.systemPackages = [ pkgs.blocky ];
 
   services.blocky = {
     enable = true;
@@ -72,25 +76,25 @@
             "https://zerodot1.gitlab.io/CoinBlockerLists/hosts_browser"
             "https://raw.githubusercontent.com/StevenBlack/hosts/master/alternates/fakenews-only/hosts"
           ];
-          catchall = [
-            "https://big.oisd.nl/domainswild"
-          ];
+          catchall = [ "https://big.oisd.nl/domainswild" ];
         };
-        whiteLists = let
-          customWhitelist = pkgs.writeText "misc.txt" ''
-            ax.phobos.apple.com.edgesuite.net
-            amp-api-edge.apps.apple.com
-            (\.|^)dscx\.akamaiedge\.net$
-            (\.|^)wac\.phicdn\.net$
-            *.flake.sh
-          '';
-        in {
-          ads = [
-            "https://raw.githubusercontent.com/anudeepND/whitelist/master/domains/whitelist.txt"
-            "https://raw.githubusercontent.com/anudeepND/whitelist/master/domains/optional-list.txt"
-          ];
-          misc = [customWhitelist];
-        };
+        whiteLists =
+          let
+            customWhitelist = pkgs.writeText "misc.txt" ''
+              ax.phobos.apple.com.edgesuite.net
+              amp-api-edge.apps.apple.com
+              (\.|^)dscx\.akamaiedge\.net$
+              (\.|^)wac\.phicdn\.net$
+              *.flake.sh
+            '';
+          in
+          {
+            ads = [
+              "https://raw.githubusercontent.com/anudeepND/whitelist/master/domains/whitelist.txt"
+              "https://raw.githubusercontent.com/anudeepND/whitelist/master/domains/optional-list.txt"
+            ];
+            misc = [ customWhitelist ];
+          };
         clientGroupsBlock = {
           default = [
             "ads"
@@ -103,39 +107,41 @@
       };
       customDNS = {
         customTTL = "1h";
-        mapping = let
-          yukiIp = "192.168.1.98";
-        in {
-          # infra
+        mapping =
+          let
+            yukiIp = "192.168.1.98";
+          in
+          {
+            # infra
 
-          "truenas.internal.flake.sh" = "192.168.1.199";
-          "hass.internal.flake.sh" = "${yukiIp}";
-          "dashboard.internal.flake.sh" = "${yukiIp}";
-          "udm.internal.flake.sh" = "192.168.1.1";
-          "pve.internal.flake.sh" = "192.168.1.37";
-          "pbs.internal.flake.sh" = "192.168.1.38";
+            "truenas.internal.flake.sh" = "192.168.1.199";
+            "hass.internal.flake.sh" = "${yukiIp}";
+            "dashboard.internal.flake.sh" = "${yukiIp}";
+            "udm.internal.flake.sh" = "192.168.1.1";
+            "pve.internal.flake.sh" = "192.168.1.37";
+            "pbs.internal.flake.sh" = "192.168.1.38";
 
-          # media
+            # media
 
-          "jellyfin.internal.flake.sh" = "${yukiIp}";
-          "jellyseerr.internal.flake.sh" = "${yukiIp}";
-          "sonarr.internal.flake.sh" = "${yukiIp}";
-          "radarr.internal.flake.sh" = "${yukiIp}";
-          "readarr.internal.flake.sh" = "${yukiIp}";
-          "lidarr.internal.flake.sh" = "${yukiIp}";
-          "whisparr.internal.flake.sh" = "${yukiIp}";
-          "bazarr.internal.flake.sh" = "${yukiIp}";
-          "prowlarr.internal.flake.sh" = "${yukiIp}";
-          "stash.internal.flake.sh" = "${yukiIp}";
-          "nextcloud.internal.flake.sh" = "192.168.1.199";
+            "jellyfin.internal.flake.sh" = "${yukiIp}";
+            "jellyseerr.internal.flake.sh" = "${yukiIp}";
+            "sonarr.internal.flake.sh" = "${yukiIp}";
+            "radarr.internal.flake.sh" = "${yukiIp}";
+            "readarr.internal.flake.sh" = "${yukiIp}";
+            "lidarr.internal.flake.sh" = "${yukiIp}";
+            "whisparr.internal.flake.sh" = "${yukiIp}";
+            "bazarr.internal.flake.sh" = "${yukiIp}";
+            "prowlarr.internal.flake.sh" = "${yukiIp}";
+            "stash.internal.flake.sh" = "${yukiIp}";
+            "nextcloud.internal.flake.sh" = "192.168.1.199";
 
-          # misc
+            # misc
 
-          "wallos.internal.flake.sh" = "${yukiIp}";
-          "synology.internal.flake.sh" = "192.168.1.71";
-          "paperless.internal.flake.sh" = "${yukiIp}";
-          "rss.internal.flake.sh" = "${yukiIp}";
-        };
+            "wallos.internal.flake.sh" = "${yukiIp}";
+            "synology.internal.flake.sh" = "192.168.1.71";
+            "paperless.internal.flake.sh" = "${yukiIp}";
+            "rss.internal.flake.sh" = "${yukiIp}";
+          };
       };
       redis = {
         address = "192.168.1.211:6381";

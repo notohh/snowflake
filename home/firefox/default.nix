@@ -1,4 +1,5 @@
-{pkgs, ...}: {
+{ pkgs, ... }:
+{
   programs.firefox = {
     enable = true;
     policies = {
@@ -42,7 +43,7 @@
                 ];
               }
             ];
-            definedAliases = ["@g"];
+            definedAliases = [ "@g" ];
           };
           "SearXNG" = {
             urls = [
@@ -56,7 +57,7 @@
                 ];
               }
             ];
-            definedAliases = ["@sx"];
+            definedAliases = [ "@sx" ];
           };
           "Nix Packages" = {
             urls = [
@@ -75,7 +76,7 @@
               }
             ];
             icon = "''${pkgs.nixos-icons}/share/icons/hicolor/scalable/apps/nix-snowflake.svg";
-            definedAliases = ["@np"];
+            definedAliases = [ "@np" ];
           };
           "Bing".metaData.hidden = true;
           "Google".metaData.hidden = true;
@@ -108,19 +109,19 @@
   xdg.mimeApps = {
     enable = true;
     defaultApplications = {
-      "x-scheme-handler/discord-409416265891971072" = ["discord-409416265891971072.desktop"];
-      "x-scheme-handler/discord-402572971681644545" = ["discord-402572971681644545.desktop"];
-      "x-scheme-handler/discord-696343075731144724" = ["discord-696343075731144724.desktop"];
-      "x-scheme-handler/http" = ["firefox.desktop"];
-      "x-scheme-handler/https" = ["firefox.desktop"];
-      "x-scheme-handler/chrome" = ["firefox.desktop"];
-      "text/html" = ["firefox.desktop"];
-      "application/x-extension-htm" = ["firefox.desktop"];
-      "application/x-extension-html" = ["firefox.desktop"];
-      "application/x-extension-shtml" = ["firefox.desktop"];
-      "application/xhtml+xml" = ["firefox.desktop"];
-      "application/x-extension-xhtml" = ["firefox.desktop"];
-      "application/x-extension-xht" = ["firefox.desktop"];
+      "x-scheme-handler/discord-409416265891971072" = [ "discord-409416265891971072.desktop" ];
+      "x-scheme-handler/discord-402572971681644545" = [ "discord-402572971681644545.desktop" ];
+      "x-scheme-handler/discord-696343075731144724" = [ "discord-696343075731144724.desktop" ];
+      "x-scheme-handler/http" = [ "firefox.desktop" ];
+      "x-scheme-handler/https" = [ "firefox.desktop" ];
+      "x-scheme-handler/chrome" = [ "firefox.desktop" ];
+      "text/html" = [ "firefox.desktop" ];
+      "application/x-extension-htm" = [ "firefox.desktop" ];
+      "application/x-extension-html" = [ "firefox.desktop" ];
+      "application/x-extension-shtml" = [ "firefox.desktop" ];
+      "application/xhtml+xml" = [ "firefox.desktop" ];
+      "application/x-extension-xhtml" = [ "firefox.desktop" ];
+      "application/x-extension-xht" = [ "firefox.desktop" ];
     };
   };
 }

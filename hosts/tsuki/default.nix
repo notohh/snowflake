@@ -3,7 +3,8 @@
   config,
   pkgs,
   ...
-}: {
+}:
+{
   imports = [
     inputs.nix-gaming.nixosModules.steamCompat
     inputs.nix-gaming.nixosModules.pipewireLowLatency
@@ -34,7 +35,7 @@
     };
     xserver = {
       enable = true;
-      videoDrivers = ["nvidia"];
+      videoDrivers = [ "nvidia" ];
       xkb = {
         layout = "us";
         variant = "";
@@ -56,9 +57,7 @@
     gamemode.enable = true;
     steam = {
       enable = true;
-      extraCompatPackages = [
-        inputs.nix-gaming.packages.${pkgs.system}.proton-ge
-      ];
+      extraCompatPackages = [ inputs.nix-gaming.packages.${pkgs.system}.proton-ge ];
     };
   };
 
@@ -71,7 +70,7 @@
     };
     opengl = {
       enable = true;
-      extraPackages = [pkgs.nvidia-vaapi-driver];
+      extraPackages = [ pkgs.nvidia-vaapi-driver ];
     };
     opentabletdriver = {
       enable = true;

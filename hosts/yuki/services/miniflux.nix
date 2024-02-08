@@ -1,9 +1,6 @@
+{ config, lib, ... }:
 {
-  config,
-  lib,
-  ...
-}: {
-  sops.secrets.miniflux = {};
+  sops.secrets.miniflux = { };
 
   services.miniflux = {
     enable = true;

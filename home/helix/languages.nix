@@ -1,8 +1,5 @@
+{ pkgs, lib, ... }:
 {
-  pkgs,
-  lib,
-  ...
-}: {
   programs.helix.languages = {
     language = with pkgs; [
       {
@@ -10,7 +7,7 @@
         auto-format = true;
         formatter = {
           command = lib.getExe alejandra;
-          args = ["-q"];
+          args = [ "-q" ];
         };
       }
       {
@@ -34,7 +31,7 @@
       };
       vscode-css-language-server = {
         command = "${nodePackages.vscode-css-languageserver-bin}/bin/css-languageserver";
-        args = ["--stdio"];
+        args = [ "--stdio" ];
       };
     };
   };

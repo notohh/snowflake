@@ -1,8 +1,5 @@
-{
-  pkgs,
-  inputs,
-  ...
-}: let
+{ pkgs, inputs, ... }:
+let
   dbus-hyprland-environment = pkgs.writeTextFile {
     name = "dbus-hyprland-environment";
     destination = "/bin/dbus-hyprland-environment";
@@ -13,8 +10,9 @@
       systemctl --user start pipewire wireplumber pipewire-media-session xdg-desktop-portal xdg-desktop-portal-hyprland
     '';
   };
-in {
-  imports = [./greetd.nix];
+in
+{
+  imports = [ ./greetd.nix ];
   environment = {
     systemPackages = with pkgs; [
       dbus-hyprland-environment

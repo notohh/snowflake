@@ -1,5 +1,1 @@
-_: {
-  imports = [
-    ./woodpecker.nix
-  ];
-}
+_: { imports = [ ./woodpecker.nix ]; }

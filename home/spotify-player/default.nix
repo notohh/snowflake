@@ -1,5 +1,6 @@
-{pkgs, ...}: {
-  home.packages = [pkgs.spotify-player];
+{ pkgs, ... }:
+{
+  home.packages = [ pkgs.spotify-player ];
   xdg.configFile."spotify-player/app.toml" = {
     text = ''
       theme = "tokyonight"

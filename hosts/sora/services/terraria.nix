@@ -1,9 +1,9 @@
 _: {
-  networking.firewall.allowedTCPPorts = [7777];
+  networking.firewall.allowedTCPPorts = [ 7777 ];
   virtualisation.oci-containers.containers.terraria = {
     image = "jacobsmile/tmodloader1.4:v2023.11.3.3";
-    ports = ["7777:7777"];
-    volumes = ["/var/lib/terraria/tmodloader:/data"];
+    ports = [ "7777:7777" ];
+    volumes = [ "/var/lib/terraria/tmodloader:/data" ];
     environment = {
       TMOD_MOTD = "forsen";
       TMOD_PASS = "forsen";

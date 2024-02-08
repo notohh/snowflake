@@ -1,4 +1,5 @@
-{pkgs, ...}: {
+{ pkgs, ... }:
+{
   home.pointerCursor = {
     package = pkgs.bibata-cursors;
     name = "Bibata-Modern-Classic";
@@ -12,7 +13,7 @@
     theme = {
       name = "Catppuccin-Mocha-Standard-Red-Dark";
       package = pkgs.catppuccin-gtk.override {
-        accents = ["red"];
+        accents = [ "red" ];
         size = "standard";
         variant = "mocha";
       };

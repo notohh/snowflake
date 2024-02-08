@@ -3,12 +3,18 @@
   pkgs,
   lib,
   ...
-}: let
-  compileSCSS = name: source: "${pkgs.runCommandLocal name {} ''
-    mkdir -p $out
-    ${lib.getExe pkgs.sassc} -t expanded '${source}' > $out/${name}.css
-  ''}/${name}.css";
-in {
+}:
+let
+  compileSCSS =
+    name: source:
+    "${
+      pkgs.runCommandLocal name { } ''
+        mkdir -p $out
+        ${lib.getExe pkgs.sassc} -t expanded '${source}' > $out/${name}.css
+      ''
+    }/${name}.css";
+in
+{
   programs.anyrun = {
     enable = true;
     config = {
@@ -17,7 +23,9 @@ in {
         dictionary
         websearch
       ];
-      width = {fraction = 0.3;};
+      width = {
+        fraction = 0.3;
+      };
       hideIcons = false;
       ignoreExclusiveZones = false;
       layer = "overlay";

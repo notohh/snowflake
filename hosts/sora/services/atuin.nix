@@ -1,5 +1,6 @@
-{lib, ...}: {
-  networking.firewall.allowedTCPPorts = [8888];
+{ lib, ... }:
+{
+  networking.firewall.allowedTCPPorts = [ 8888 ];
   services.atuin = {
     enable = true;
     openRegistration = false;

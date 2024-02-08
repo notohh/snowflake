@@ -5,7 +5,7 @@ _: {
       port = 3300;
       domain = "scratch.flake.sh";
       host = "100.121.201.47";
-      allowOrigin = ["scratch.flake.sh"];
+      allowOrigin = [ "scratch.flake.sh" ];
       allowAnonymous = true;
       allowFreeURL = true;
       allowEmailRegister = false;

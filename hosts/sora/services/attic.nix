@@ -1,18 +1,15 @@
+{ config, pkgs, ... }:
 {
-  config,
-  pkgs,
-  ...
-}: {
-  sops.secrets.attic = {};
+  sops.secrets.attic = { };
 
-  environment.systemPackages = [pkgs.attic];
+  environment.systemPackages = [ pkgs.attic ];
 
   services.atticd = {
     enable = true;
     credentialsFile = config.sops.secrets.attic.path;
     settings = {
       listen = "[::]:8200";
-      allowed-hosts = ["cache.flake.sh"];
+      allowed-hosts = [ "cache.flake.sh" ];
       database.url = "postgres://attic:attic@100.94.214.100:5432/attic";
       api-endpoint = "https://cache.flake.sh/";
       require-proof-of-possession = false;

@@ -1,5 +1,6 @@
-{pkgs, ...}: {
-  environment.systemPackages = [pkgs.ntfy-sh];
+{ pkgs, ... }:
+{
+  environment.systemPackages = [ pkgs.ntfy-sh ];
   services.ntfy-sh = {
     enable = true;
     settings = {

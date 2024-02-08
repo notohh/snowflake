@@ -1,10 +1,9 @@
+{ pkgs, config, ... }:
 {
-  pkgs,
-  config,
-  ...
-}: {
-  sops.secrets.restic-yuki = {sopsFile = ../../../secrets/restic/secrets.yaml;};
-  environment.systemPackages = [pkgs.restic];
+  sops.secrets.restic-yuki = {
+    sopsFile = ../../../secrets/restic/secrets.yaml;
+  };
+  environment.systemPackages = [ pkgs.restic ];
   services.restic = {
     backups = {
       yuki = {
@@ -15,9 +14,7 @@
           "/var/lib/private/jellyseerr"
           "/var/lib/private/homepage-dashboard"
         ];
-        exclude = [
-          "/home/notoh/docker/stash/data"
-        ];
+        exclude = [ "/home/notoh/docker/stash/data" ];
         pruneOpts = [
           "--keep-daily=7"
           "--keep-weekly=6"

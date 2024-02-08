@@ -1,4 +1,5 @@
-{pkgs, ...}: {
+{ pkgs, ... }:
+{
   fonts = {
     enableDefaultPackages = false;
     fontDir.enable = true;
@@ -14,10 +15,19 @@
       enable = true;
       allowBitmaps = true;
       defaultFonts = {
-        monospace = ["JetBrainsMono NF Medium" "Twitter Color Emoji"];
-        serif = ["Noto Serif" "Twitter Color Emoji"];
-        sansSerif = ["Noto Sans" "Twitter Color Emoji"];
-        emoji = ["Twitter Color Emoji"];
+        monospace = [
+          "JetBrainsMono NF Medium"
+          "Twitter Color Emoji"
+        ];
+        serif = [
+          "Noto Serif"
+          "Twitter Color Emoji"
+        ];
+        sansSerif = [
+          "Noto Sans"
+          "Twitter Color Emoji"
+        ];
+        emoji = [ "Twitter Color Emoji" ];
       };
       hinting = {
         enable = true;

@@ -4,7 +4,7 @@ _: {
     ./config.nix
   ];
 
-  nixpkgs.config.permittedInsecurePackages = ["openssl-1.1.1w"];
+  nixpkgs.config.permittedInsecurePackages = [ "openssl-1.1.1w" ];
 
   services.home-assistant = {
     enable = true;

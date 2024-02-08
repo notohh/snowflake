@@ -1,6 +1,7 @@
-{config, ...}: {
-  sops.secrets.woodpecker-server = {};
-  sops.secrets.woodpecker-agent-secret = {};
+{ config, ... }:
+{
+  sops.secrets.woodpecker-server = { };
+  sops.secrets.woodpecker-agent-secret = { };
   services.woodpecker-server = {
     enable = true;
     environment = {
@@ -31,6 +32,6 @@
       WOODPECKER_KEEPALIVE_MIN_TIME = "10s";
       WOODPECKER_HEALTHCHECK = "true";
     };
-    extraGroups = ["docker"];
+    extraGroups = [ "docker" ];
   };
 }

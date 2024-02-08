@@ -1,4 +1,5 @@
-{pkgs, ...}: {
+{ pkgs, ... }:
+{
   imports = [
     ../../home
     ../../home/anyrun
@@ -35,7 +36,7 @@
       wl-clipboard
       swww
       hyprpicker
-      (libsForQt5.callPackage ../../pkgs/chatterino7 {})
+      (libsForQt5.callPackage ../../pkgs/chatterino7 { })
     ];
     stateVersion = "23.05";
   };

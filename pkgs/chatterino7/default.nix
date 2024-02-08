@@ -26,8 +26,21 @@ stdenv.mkDerivation rec {
     fetchSubmodules = true;
   };
 
-  nativeBuildInputs = [cmake pkg-config wrapQtAppsHook];
-  buildInputs = [qtbase qtsvg qtmultimedia qtimageformats qttools boost openssl libsecret];
+  nativeBuildInputs = [
+    cmake
+    pkg-config
+    wrapQtAppsHook
+  ];
+  buildInputs = [
+    qtbase
+    qtsvg
+    qtmultimedia
+    qtimageformats
+    qttools
+    boost
+    openssl
+    libsecret
+  ];
 
   postInstall =
     ''
@@ -47,6 +60,6 @@ stdenv.mkDerivation rec {
     '';
     homepage = "https://github.com/SevenTV/chatterino7";
     license = licenses.mit;
-    maintainers = with maintainers; [notohh];
+    maintainers = with maintainers; [ notohh ];
   };
 }

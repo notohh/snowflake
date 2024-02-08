@@ -3,14 +3,16 @@
   lib,
   modulesPath,
   ...
-}: {
-  imports = [
-    (modulesPath + "/installer/scan/not-detected.nix")
-  ];
+}:
+{
+  imports = [ (modulesPath + "/installer/scan/not-detected.nix") ];
 
   boot = {
-    kernelModules = ["v4l2loopback" "kvm-intel"];
-    extraModulePackages = with config.boot.kernelPackages; [v4l2loopback.out];
+    kernelModules = [
+      "v4l2loopback"
+      "kvm-intel"
+    ];
+    extraModulePackages = with config.boot.kernelPackages; [ v4l2loopback.out ];
     loader = {
       systemd-boot = {
         enable = true;
@@ -22,8 +24,15 @@
       };
     };
     initrd = {
-      availableKernelModules = ["xhci_pci" "ahci" "nvme" "usb_storage" "usbhid" "sd_mod"];
-      kernelModules = [];
+      availableKernelModules = [
+        "xhci_pci"
+        "ahci"
+        "nvme"
+        "usb_storage"
+        "usbhid"
+        "sd_mod"
+      ];
+      kernelModules = [ ];
     };
   };
 
@@ -58,9 +67,7 @@
     };
   };
 
-  swapDevices = [
-    {device = "/dev/disk/by-uuid/2f5e2c64-99b8-4fa0-943c-c9dd45c84fdc";}
-  ];
+  swapDevices = [ { device = "/dev/disk/by-uuid/2f5e2c64-99b8-4fa0-943c-c9dd45c84fdc"; } ];
 
   networking.useDHCP = lib.mkDefault true;
 

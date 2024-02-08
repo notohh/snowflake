@@ -13,6 +13,6 @@ _: {
       currency = "USD";
       country = "US";
     };
-    default_config = {};
+    default_config = { };
   };
 }

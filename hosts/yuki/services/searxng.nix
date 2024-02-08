@@ -1,10 +1,7 @@
+{ pkgs, config, ... }:
 {
-  pkgs,
-  config,
-  ...
-}: {
-  sops.secrets.searxng-secret = {};
-  networking.firewall.allowedTCPPorts = [8100];
+  sops.secrets.searxng-secret = { };
+  networking.firewall.allowedTCPPorts = [ 8100 ];
   services.searx = {
     package = pkgs.searxng;
     enable = false;

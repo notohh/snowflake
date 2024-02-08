@@ -1,15 +1,16 @@
-{
-  pkgs,
-  config,
-  ...
-}: let
+{ pkgs, config, ... }:
+let
   configDir = "/home/notoh/snowflake/home/ags/config";
-in {
+in
+{
   programs.ags = {
     enable = true;
-    extraPackages = with pkgs; [libsoup_3 libdbusmenu-gtk3];
+    extraPackages = with pkgs; [
+      libsoup_3
+      libdbusmenu-gtk3
+    ];
   };
-  home.packages = with pkgs; [dart-sass];
+  home.packages = with pkgs; [ dart-sass ];
   xdg.configFile = {
     "ags".source = config.lib.file.mkOutOfStoreSymlink "${configDir}";
   };
