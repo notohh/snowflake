@@ -1,5 +1,4 @@
-{ ... }:
-{
+_: {
   imports = [ ../../home ];
 
   systemd.user.startServices = "sd-switch";
