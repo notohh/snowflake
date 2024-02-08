@@ -28,6 +28,7 @@
       volumes = [
         "/home/notoh/qbittorrent/config:/config"
         "/media/downloads:/downloads"
+        "/media/incomplete-downloads:/incomplete-downloads"
       ];
       extraOptions = ["--network=container:gluetun"];
     };
