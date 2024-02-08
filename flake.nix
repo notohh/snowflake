@@ -59,7 +59,7 @@
           stylua.enable = true;
           eslint.enable = true;
           statix.enable = true;
-          alejandra.enable = true;
+          alejandra.enable = false;
           deadnix = {
             enable = true;
             excludes = ["overlays.nix"];
@@ -77,12 +77,13 @@
       packages = with pkgs; [
         git
         sops
-        alejandra
+        #  alejandra
+        nixfmt-rfc-style
         yaml-language-server
         lua-language-server
       ];
     };
-    formatter.${system} = pkgs.alejandra;
+    #  formatter.${system} = pkgs.alejandra;
     deploy = import ./hosts/deploy.nix inputs;
     nixosConfigurations = import ./hosts inputs;
   };
