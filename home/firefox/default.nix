@@ -94,6 +94,7 @@
         darkreader
         mal-sync
         stylus
+        firefox-color
 
         #utility
         new-tab-override
@@ -101,7 +102,6 @@
         kagi-search
 
         #misc
-        tokyo-night-v2
       ];
     };
   };
