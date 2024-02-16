@@ -27,7 +27,7 @@
       };
       garbage-collection = {
         interval = "12 hours";
-        default-retention-period = "4 weeks";
+        default-retention-period = "8 weeks";
       };
       compression = {
         type = "zstd";
