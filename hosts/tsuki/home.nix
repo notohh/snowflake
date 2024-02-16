@@ -34,6 +34,7 @@
       pavucontrol
       rustdesk
       anki
+      tomato-c
       distrobox
       vscode-fhs
       obsidian-wayland
