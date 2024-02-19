@@ -75,7 +75,8 @@
       gestures = {
         workspace_swipe = false;
       };
-      "device:epic mouse V1" = {
+      device = {
+        name = "glorious-model-o-wireless";
         sensitivity = "-0.5";
       };
       misc = {
