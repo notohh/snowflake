@@ -1,9 +1,10 @@
 * {
-    transition: 200ms ease-out;
-    color: #cdd6f4;
-    font-family: Monaspace Krypton;
-    font-size: 1.0rem;
-  }
+  all: unset;
+  transition: 200ms ease-out;
+  color: #cdd6f4;
+  font-family: JetBrainsMono NF Medium;
+  font-size: 1.1rem;
+}
 
 #window,
 #match,
@@ -13,18 +14,25 @@
   background: transparent;
 }
 
-#match:selected {
-    background:#2ac3de;
-    border-radius: 5px;
+#main {
+  margin-top: 0.5rem;
 }
 
-box#main {
-    background: #1a1b26;
-    border: 1px solid #f7768e;
-    border-radius: 24px;
-    padding: 8px;
+#match:hover,
+#match:selected {
+  background: #45475a;
+  border-radius: 5px;
+  padding: 0.4rem
 }
 
 entry#entry {
- border-color: transparent;
+  border-color: transparent;
+  margin-top: 0.5rem;
+}
+
+box#main {
+  background: #1e1e2e;
+  border: 3px solid #f5c2e7;
+  border-radius: 12px;
+  padding: 0.3rem;
 }
