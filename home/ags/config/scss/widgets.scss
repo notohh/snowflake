@@ -1,8 +1,8 @@
-@import 'colors.scss';
+@import "colors.scss";
 
 @mixin widget {
-    color: $white
-};
+    color: $white;
+}
 
 .date {
     @include widget();
@@ -10,7 +10,7 @@
 
 .workspaces {
     @include widget();
-};
+}
 
 .media {
     @include widget();
