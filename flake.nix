@@ -12,6 +12,10 @@
     helix.url = "github:helix-editor/helix";
     pre-commit-hooks.url = "github:cachix/pre-commit-hooks.nix";
     wezterm.url = "github:notohh/wezterm?dir=nix&ref=nix-add-overlay";
+    hypridle.url = "github:hyprwm/hypridle";
+    hyprlock.url = "github:hyprwm/hyprlock?ref=nix";
+    hyprpicker.url = "github:hyprwm/hyprpicker";
+    xdg-portal-hyprland.url = "github:hyprwm/xdg-desktop-portal-hyprland";
     hyprland-plugins = {
       url = "github:hyprwm/hyprland-plugins";
       inputs.hyprland.follows = "hyprland";
