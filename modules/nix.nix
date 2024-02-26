@@ -5,6 +5,9 @@
       inputs.helix.overlays.default
       inputs.yazi.overlays.default
       inputs.wezterm.overlays.default
+      inputs.hypridle.overlays.default
+      inputs.hyprlock.overlays.default
+      inputs.hyprpicker.overlays.default
     ];
     config = {
       allowUnfree = true;
