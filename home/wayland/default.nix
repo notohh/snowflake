@@ -14,7 +14,7 @@
     '';
   };
 in {
-  imports = [./greetd.nix];
+  imports = [./services/greetd.nix];
   environment = {
     systemPackages = with pkgs; [
       dbus-hyprland-environment
@@ -25,8 +25,6 @@ in {
       satty
       wl-clipboard
       wlr-randr
-      swayidle
-      swaylock-effects
       hyprpicker
       swww
     ];
@@ -60,7 +58,7 @@ in {
     enable = true;
     extraPortals = with pkgs; [
       xdg-desktop-portal-gtk
-      inputs.hyprland.packages.${system}.xdg-desktop-portal-hyprland
+      inputs.xdg-portal-hyprland.packages.${pkgs.system}.default
     ];
     config = {
       common.default = "*";
