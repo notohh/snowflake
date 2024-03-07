@@ -13,7 +13,12 @@ _: {
       "move 850 360, title:^(RuneLite)$"
       "size 830 600, title:^(RuneLite)$"
       "size 1200 600, title:^(satty)$"
-      " fullscreen, title:^(cs2)$"
+      "idleinhibit focus, class:^(mpv)$"
+      "idleinhibit always, class:^(firefox)$, title:^(.*YouTube.*|.*Twitch.*)$"
+      "idleinhibit fullscreen, class:^(firefox)$"
+    ];
+    layerrule = [
+      "blur, ^(gtk-layer-shell|anyrun)$"
     ];
   };
 }
