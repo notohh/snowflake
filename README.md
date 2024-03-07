@@ -25,21 +25,21 @@
 
 ## :open_book: Table of contents
 
-- :house_with_garden: [home](src/branch/master/home)
-- :computer: [hosts](src/branch/master/hosts)
-  - :cloud_with_rain: [ame](src/branch/master/hosts/ame)
-  - :cloud_with_lightning_and_rain: [arashi](src/branch/master/hosts/arashi)
-  - :hibiscus: [haru](src/branch/master/hosts/haru)
-  - :satellite: [kariru](src/branch/master/hosts/kariru)
-  - :wind_chime: [kaze](src/branch/master/hosts/kaze)
-  - :cherry_blossom: [sakura](src/branch/master/hosts/sakura)
-  - :milky_way: [sora](src/branch/master/hosts/sora)
-  - :full_moon: [tsuki](src/branch/master/hosts/tsuki)
-  - :building_construction: [tsuru](src/branch/master/hosts/tsuru)
-  - :snowflake: [yuki](src/branch/master/hosts/yuki)
-- :electric_plug: [modules](src/branch/master/modules)
-- :package: [pkgs](src/branch/master/pkgs)
-- :lock: [secrets](src/branch/master/secrets)
+- :house_with_garden: [home](home)
+- :computer: [hosts](hosts)
+  - :cloud_with_rain: [ame](hosts/ame)
+  - :cloud_with_lightning_and_rain: [arashi](hosts/arashi)
+  - :hibiscus: [haru](hosts/haru)
+  - :satellite: [kariru](hosts/kariru)
+  - :wind_chime: [kaze](hosts/kaze)
+  - :cherry_blossom: [sakura](hosts/sakura)
+  - :milky_way: [sora](hosts/sora)
+  - :full_moon: [tsuki](hosts/tsuki)
+  - :building_construction: [tsuru](hosts/tsuru)
+  - :snowflake: [yuki](hosts/yuki)
+- :electric_plug: [modules](modules)
+- :package: [pkgs](pkgs)
+- :lock: [secrets](secrets)
 
 ## :spiral_notepad: Features
 
