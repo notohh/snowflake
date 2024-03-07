@@ -13,7 +13,7 @@
     pre-commit-hooks.url = "github:cachix/pre-commit-hooks.nix";
     wezterm.url = "github:notohh/wezterm?dir=nix&ref=nix-add-overlay";
     hypridle.url = "github:hyprwm/hypridle";
-    hyprlock.url = "github:hyprwm/hyprlock?ref=nix";
+    hyprlock.url = "github:hyprwm/hyprlock";
     hyprpicker.url = "github:hyprwm/hyprpicker";
     xdg-portal-hyprland.url = "github:hyprwm/xdg-desktop-portal-hyprland";
     hyprland-plugins = {
