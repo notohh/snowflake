@@ -8,6 +8,8 @@ inputs: let
   agsModule = inputs.ags.homeManagerModules.default;
   atticModule = inputs.attic.nixosModules.atticd;
   nurModule = inputs.nur.nixosModules.nur;
+  hypridleModule = inputs.hypridle.homeManagerModules.default;
+  hyprlockModule = inputs.hyprlock.homeManagerModules.default;
   inherit (inputs.nixpkgs.lib) nixosSystem;
 in {
   tsuki = nixosSystem {
@@ -31,6 +33,8 @@ in {
               nix-index-Module
               anyrunModule
               agsModule
+              hypridleModule
+              hyprlockModule
             ];
           };
         };
