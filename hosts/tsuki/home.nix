@@ -4,7 +4,6 @@
   ...
 }: {
   imports = [
-    ./services/swayidle.nix
     ../../home
     ../../home/firefox
     ../../home/ags
@@ -17,6 +16,8 @@
     ../../home/zellij
     ../../home/spotify-player
     ../../home/wayland/hyprland
+    ../../home/wayland/services/hypridle.nix
+    ../../home/wayland/programs/hyprlock.nix
   ];
 
   systemd.user.startServices = "sd-switch";
@@ -32,15 +33,15 @@
       thunderbird
       obs-studio
       pavucontrol
-      rustdesk
       anki
       tomato-c
       distrobox
+      gpg-tui
       vscode-fhs
       obsidian-wayland
-      jellyfin-mpv-shim
+      #     jellyfin-mpv-shim
       virt-manager
-      imv
+      #   imv
       mpv
       ffmpeg
       rustypaste-cli
@@ -51,7 +52,6 @@
       lutris
       mangohud
       bottles
-      runelite
       prismlauncher
       yuzu
       inputs.nix-gaming.packages.${pkgs.system}.osu-lazer-bin
@@ -108,6 +108,10 @@
         Hostname 100.92.145.147
         User notoh
         IdentityFile ~/.ssh/rpi4
+      Host rennypaste
+        Hostname 5.78.112.206
+        User notohh
+        IdentityFile ~/.ssh/renny-key
       Host pve
         Hostname 100.115.234.69
         User root

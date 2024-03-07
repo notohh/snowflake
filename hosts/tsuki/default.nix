@@ -20,6 +20,7 @@
 
   services = {
     pcscd.enable = true;
+    flatpak.enable = true;
     pipewire = {
       enable = true;
       alsa.enable = true;
@@ -27,7 +28,7 @@
       pulse.enable = true;
       wireplumber.enable = true;
       lowLatency = {
-        enable = true;
+        enable = false; # disabled due to upstream issue
         quantum = 64;
         rate = 48000;
       };
@@ -45,10 +46,8 @@
   security = {
     rtkit.enable = true;
     polkit.enable = true;
-    pam.services.swaylock = {
-      text = ''
-        auth include login
-      '';
+    pam = {
+      services.hyprlock = {};
     };
   };
 
