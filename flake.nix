@@ -15,6 +15,7 @@
     hypridle.url = "github:hyprwm/hypridle";
     hyprlock.url = "github:hyprwm/hyprlock";
     hyprpicker.url = "github:hyprwm/hyprpicker";
+    hyprcursor.url = "github:hyprwm/hyprcursor";
     xdg-portal-hyprland.url = "github:hyprwm/xdg-desktop-portal-hyprland";
     hyprland-plugins = {
       url = "github:hyprwm/hyprland-plugins";
