@@ -22,6 +22,7 @@ _: {
       }
     ];
     general = {
+      grace = 5;
       disable_loading_bar = false;
       hide_cursor = false;
       no_fade_in = false;
@@ -35,7 +36,7 @@ _: {
         };
         outline_thickness = 2;
 
-        outer_color = "rgb(1e1e2e)";
+        outer_color = "rgb(f5c2e7)";
         inner_color = "rgb(1e1e2e)";
         font_color = "rgb(cdd6f4)";
         placeholder_text = ''
