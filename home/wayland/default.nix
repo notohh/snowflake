@@ -26,6 +26,7 @@ in {
       wl-clipboard
       wlr-randr
       hyprpicker
+      hyprcursor
       swww
     ];
     sessionVariables = {
