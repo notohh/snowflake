@@ -53,7 +53,6 @@
       mangohud
       bottles
       prismlauncher
-      yuzu
       inputs.nix-gaming.packages.${pkgs.system}.osu-lazer-bin
       (libsForQt5.callPackage ../../pkgs/chatterino7 {})
       (callPackage ../../pkgs/jellyfin-rpc {})
