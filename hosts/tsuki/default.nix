@@ -5,7 +5,6 @@
   ...
 }: {
   imports = [
-    inputs.nix-gaming.nixosModules.steamCompat
     inputs.nix-gaming.nixosModules.pipewireLowLatency
     ./hardware.nix
     ./services
@@ -66,7 +65,7 @@
     nvidia = {
       powerManagement.enable = true;
       modesetting.enable = true;
-      package = config.boot.kernelPackages.nvidiaPackages.production;
+      package = config.boot.kernelPackages.nvidiaPackages.stable;
     };
     opengl = {
       enable = true;
