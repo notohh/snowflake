@@ -39,9 +39,9 @@
       gpg-tui
       vscode-fhs
       obsidian-wayland
-      #     jellyfin-mpv-shim
+      jellyfin-mpv-shim
       virt-manager
-      #   imv
+      imv
       mpv
       ffmpeg
       rustypaste-cli
