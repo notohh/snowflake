@@ -19,3 +19,7 @@ creation_rules:
     key_groups:
       - age:
           - *notoh
+  - path_regex: secrets/homepage/[^/]+\.yaml$
+    key_groups:
+      - age:
+          - *notoh
