@@ -21,8 +21,8 @@ stdenv.mkDerivation rec {
   src = fetchFromGitHub {
     owner = "SevenTV";
     repo = pname;
-    rev = "1132751f4ba4ae7306e0defd01fbaa467bbdb528";
-    sha256 = "sha256-/b1+4v09nDiATJlziedY/1S6Zq1iq45PPh37cwxznMQ=";
+    rev = "v${version}";
+    sha256 = "sha256-6F27GVknSwFDYARdkgE31Oufz557vBKrcDLo9csRWPA=";
     fetchSubmodules = true;
   };
 
@@ -40,6 +40,7 @@ stdenv.mkDerivation rec {
     '';
   meta = with lib; {
     description = "Chat client for twitch.tv";
+    mainProgram = "chatterino";
     longDescription = ''
       Chatterino7 is a fork of Chatterino 2.
       This fork mainly contains features that aren't accepted into Chatterino 2,
