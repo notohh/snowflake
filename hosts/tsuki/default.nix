@@ -41,7 +41,6 @@
       };
     };
   };
-
   security = {
     rtkit.enable = true;
     polkit.enable = true;
@@ -55,7 +54,7 @@
     steam = {
       enable = true;
       extraCompatPackages = [
-        inputs.nix-gaming.packages.${pkgs.system}.proton-ge
+        pkgs.proton-ge-bin
       ];
     };
   };
@@ -65,7 +64,7 @@
     nvidia = {
       powerManagement.enable = true;
       modesetting.enable = true;
-      package = config.boot.kernelPackages.nvidiaPackages.stable;
+      package = config.boot.kernelPackages.nvidiaPackages.beta;
     };
     opengl = {
       enable = true;
@@ -82,6 +81,6 @@
     dconf
     libvirt
     qemu_kvm
-    jdk17
+    zulu8
   ];
 }
