@@ -27,7 +27,7 @@
       };
       extraConfig = builtins.readFile ./user.js/betterfox.js;
       search = {
-        default = "Kagi";
+        default = "DuckDuckGo";
         force = true;
         engines = {
           "Kagi" = {
@@ -81,7 +81,7 @@
           "Google".metaData.hidden = true;
           "Amazon.com".metaData.hidden = true;
           "eBay".metaData.hidden = true;
-          "DuckDuckGo".metaData.hidden = true;
+          "DuckDuckGo".metaData.hidden = false;
         };
       };
       extensions = with pkgs.nur.repos.rycee.firefox-addons; [
@@ -99,7 +99,8 @@
         #utility
         new-tab-override
         libredirect
-        kagi-search
+        sponsorblock
+        return-youtube-dislikes
 
         #misc
       ];
