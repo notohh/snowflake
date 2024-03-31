@@ -10,6 +10,7 @@ inputs: let
   nurModule = inputs.nur.nixosModules.nur;
   hypridleModule = inputs.hypridle.homeManagerModules.default;
   hyprlockModule = inputs.hyprlock.homeManagerModules.default;
+  t480Module = inputs.nixos-hardware.nixosModules.lenovo-thinkpad-t480;
   inherit (inputs.nixpkgs.lib) nixosSystem;
 in {
   tsuki = nixosSystem {
@@ -111,6 +112,7 @@ in {
       ./ame
       sopsModule
       hmModule
+      t480Module
       {
         home-manager = {
           useGlobalPkgs = true;
