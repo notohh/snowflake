@@ -32,9 +32,18 @@
               trustForwardHeader = true;
             };
           };
+          redirect-flake-sh = {
+            redirectregex = {
+              regex = "^https?://flake\\.sh/(.*)";
+              replacement = "https://notohh.dev/";
+              permanent = false;
+            };
+          };
           redirect-to-https = {
-            redirectscheme.scheme = "https";
-            redirectscheme.permanent = true;
+            redirectscheme = {
+              scheme = "https";
+              permanent = true;
+            };
           };
           cors = {
             headers = {
@@ -60,6 +69,14 @@
             entrypoints = ["websecure"];
             service = "authelia";
             tls.domains = [{main = "*.notohh.dev";}];
+            tls.certresolver = "production";
+          };
+          flake-sh = {
+            rule = "Host(`${pqdn}`)";
+            entrypoints = ["websecure"];
+            service = "noop@internal";
+            middlewares = "redirect-flake-sh";
+            tls.domains = [{main = "*.${pqdn}";}];
             tls.certresolver = "production";
           };
           uptime-kuma = {
