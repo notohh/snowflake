@@ -8,9 +8,9 @@
     enable = true;
     enableTCPIP = true;
     package = pkgs.postgresql_14;
-    port = 5432;
     settings = {
       listen_addresses = lib.mkForce "*";
+      port = 5432;
       max_connections = "300";
       shared_buffers = "80MB";
     };
