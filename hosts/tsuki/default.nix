@@ -64,7 +64,12 @@
     nvidia = {
       powerManagement.enable = true;
       modesetting.enable = true;
-      package = config.boot.kernelPackages.nvidiaPackages.beta;
+      package = config.boot.kernelPackages.nvidiaPackages.stable.overrideAttrs {
+        src = pkgs.fetchurl {
+          url = "https://download.nvidia.com/XFree86/Linux-x86_64/535.171.04/NVIDIA-Linux-x86_64-535.171.04.run";
+          sha256 = "0yj38aljmnr0c533d4hl5xjf9b3xm620fix4cp6qlpf99cxn9wg8";
+        };
+      };
     };
     opengl = {
       enable = true;
