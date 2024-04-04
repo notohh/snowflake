@@ -33,7 +33,7 @@
       thunderbird
       obs-studio
       pavucontrol
-      anki
+      anki-bin
       tomato-c
       distrobox
       gpg-tui
@@ -53,6 +53,7 @@
       mangohud
       bottles
       prismlauncher
+      stellarium
       inputs.nix-gaming.packages.${pkgs.system}.osu-lazer-bin
       (libsForQt5.callPackage ../../pkgs/chatterino7 {})
       (callPackage ../../pkgs/jellyfin-rpc {})
