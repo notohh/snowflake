@@ -6,6 +6,7 @@
 }: {
   imports = [
     inputs.nix-gaming.nixosModules.pipewireLowLatency
+    inputs.nix-gaming.nixosModules.platformOptimizations
     ./hardware.nix
     ./services
     ./networking.nix
@@ -53,6 +54,7 @@
     gamemode.enable = true;
     steam = {
       enable = true;
+      platformOptimizations.enable = true;
       extraCompatPackages = [
         pkgs.proton-ge-bin
       ];
@@ -86,6 +88,6 @@
     dconf
     libvirt
     qemu_kvm
-    zulu8
+    zulu
   ];
 }
