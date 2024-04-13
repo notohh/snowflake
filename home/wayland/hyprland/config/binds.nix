@@ -5,6 +5,7 @@ _: {
       "$mainMod, Return, exec, wezterm"
       "$mainMod, Q, killactive,"
       "$mainMod, V, togglefloating,"
+      "$mainMod, F, fullscreen,"
       "$mainMod, R, exec, anyrun"
       "$mainMod, P, pseudo,"
       "$mainMod, J, togglesplit,"
