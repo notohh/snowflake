@@ -53,6 +53,7 @@
         secrets_filter = true;
         style = "full";
       };
+      flags = ["--disable-up-arrow"];
     };
     git = {
       enable = true;
