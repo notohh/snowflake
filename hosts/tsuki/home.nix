@@ -41,6 +41,7 @@
       obsidian-wayland
       jellyfin-mpv-shim
       virt-manager
+      qbittorrent
       imv
       mpv
       ffmpeg
