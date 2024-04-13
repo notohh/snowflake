@@ -18,6 +18,7 @@
     hyprcursor.url = "github:hyprwm/hyprcursor";
     xdg-portal-hyprland.url = "github:hyprwm/xdg-desktop-portal-hyprland";
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
+    atuin.url = "github:atuinsh/atuin";
     hyprland-plugins = {
       url = "github:hyprwm/hyprland-plugins";
       inputs.hyprland.follows = "hyprland";
