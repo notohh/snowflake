@@ -9,6 +9,7 @@
       inputs.hyprlock.overlays.default
       inputs.hyprpicker.overlays.default
       inputs.hyprcursor.overlays.default
+      inputs.atuin.overlays.default
     ];
     config = {
       allowUnfree = true;
