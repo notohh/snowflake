@@ -36,9 +36,8 @@
 
   systemd = {
     services.systemd-udevd.restartIfChanged = false;
-
     extraConfig = ''
-      DefaultTimeoutStopSec=10s
+      DefaultTimeoutStopSec=5s
     '';
   };
 
