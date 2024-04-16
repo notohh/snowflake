@@ -7,7 +7,7 @@
     ./hedgedoc.nix
     ./grafana.nix
     ./vaultwarden.nix
-    ./conduit.nix
+    # ./conduit.nix
     ./tailscale.nix
     ./justlog.nix
   ];
