@@ -10,7 +10,6 @@
     ./searxng.nix
     ./anki-sync-server.nix
     ./paperless.nix
-    ./miniflux.nix
     ./hydroxide.nix
   ];
 }

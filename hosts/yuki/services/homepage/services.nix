@@ -61,21 +61,6 @@ _: {
       ];
     }
     {
-      "News" = [
-        {
-          "Miniflux" = {
-            icon = "miniflux";
-            href = "https://rss.internal.flake.sh";
-            widget = {
-              type = "miniflux";
-              url = "";
-              key = "{{HOMEPAGE_VAR_MINIFLUX_KEY}}";
-            };
-          };
-        }
-      ];
-    }
-    {
       "Infra" = [
         {
           "Proxmox" = {
