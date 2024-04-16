@@ -10,6 +10,7 @@
   programs.hyprland.enable = true;
 
   services = {
+    displayManager.sddm.enable = true;
     pipewire = {
       enable = true;
       alsa.enable = true;
@@ -18,7 +19,6 @@
     };
     xserver = {
       enable = true;
-      displayManager.sddm.enable = true;
       xkb = {
         layout = "us";
         variant = "";
