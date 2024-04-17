@@ -32,6 +32,25 @@
         }
       ];
     };
+    ame = nixosSystem {
+      inherit specialArgs;
+      modules = [
+        ./ame
+        sopsModule
+        hmModule
+        t480Module
+        {
+          home-manager = {
+            useGlobalPkgs = true;
+            useUserPackages = true;
+            extraSpecialArgs = specialArgs;
+            users.notoh = {
+              imports = homeImports."notoh@ame";
+            };
+          };
+        }
+      ];
+    };
     sakura = nixosSystem {
       inherit specialArgs;
       modules = [
@@ -81,25 +100,6 @@
             extraSpecialArgs = specialArgs;
             users.notoh = {
               imports = homeImports."default";
-            };
-          };
-        }
-      ];
-    };
-    ame = nixosSystem {
-      inherit specialArgs;
-      modules = [
-        ./ame
-        sopsModule
-        hmModule
-        t480Module
-        {
-          home-manager = {
-            useGlobalPkgs = true;
-            useUserPackages = true;
-            extraSpecialArgs = specialArgs;
-            users.notoh = {
-              imports = homeImports."notoh@ame";
             };
           };
         }

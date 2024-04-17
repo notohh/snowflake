@@ -10,25 +10,24 @@
     inputs.hypridle.homeManagerModules.default
     inputs.hyprlock.homeManagerModules.default
     inputs.nix-index-database.hmModules.nix-index
-    ../common.nix
     ../../services
     ../../programs/ags
     ../../programs/anyrun
-    ../../programs/firefox
-    ../../programs/wezterm
-    ../../programs/zellij
+    ../../programs/browsers/firefox
+    ../../programs/browsers/chromium
+    ../../programs/terminal/wezterm
+    ../../programs/terminal/zellij
     ../../programs/gtk.nix
-    ../../programs/cava.nix
+    ../../programs/media/cava.nix
     ../../programs/mako.nix
-    ../../programs/spotify-player.nix
-    ../../programs/zathura.nix
+    ../../programs/media/spotify-player.nix
+    ../../programs/media/zathura.nix
     ../../wayland/hyprland
     ../../wayland/services/hypridle.nix
     ../../wayland/programs/hyprlock.nix
   ];
 
   home.packages = with pkgs; [
-    chromium
     discord
     signal-desktop
     thunderbird

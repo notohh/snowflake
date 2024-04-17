@@ -1,4 +1,8 @@
-{modulesPath, ...}: {
+{
+  modulesPath,
+  lib,
+  ...
+}: {
   imports = [(modulesPath + "/profiles/qemu-guest.nix")];
 
   zramSwap.enable = true;
@@ -26,4 +30,5 @@
       fsType = "vfat";
     };
   };
+  nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
 }

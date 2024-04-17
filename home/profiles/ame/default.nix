@@ -1,10 +1,28 @@
-{pkgs, ...}: {
+{
+  inputs,
+  pkgs,
+  ...
+}: {
   imports = [
-    ../common.nix
+    inputs.hyprland.homeManagerModules.default
+    inputs.anyrun.homeManagerModules.default
+    inputs.ags.homeManagerModules.default
+    inputs.nix-index-database.hmModules.nix-index
+    ../../services
+    ../../programs/ags
+    ../../programs/anyrun
+    ../../programs/browsers/firefox
+    ../../programs/browsers/chromium
+    ../../programs/terminal/wezterm
+    ../../programs/terminal/zellij
+    ../../programs/gtk.nix
+    ../../programs/media/cava.nix
+    ../../programs/mako.nix
+    ../../programs/media/spotify-player.nix
+    ../../programs/media/zathura.nix
   ];
 
   home.packages = with pkgs; [
-    chromium
     discord
     pavucontrol
     imv
@@ -20,7 +38,7 @@
     wl-clipboard
     swww
     hyprpicker
-    (libsForQt5.callPackage ../../pkgs/chatterino7 {})
+    (libsForQt5.callPackage ../../../pkgs/chatterino7 {})
   ];
   programs.ssh = {
     enable = true;

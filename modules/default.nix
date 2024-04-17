@@ -1,4 +1,4 @@
-{inputs, ...}: {
+_: {
   imports = [
     ./prometheus.nix
     ./security.nix
