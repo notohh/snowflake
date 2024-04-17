@@ -4,64 +4,42 @@
   ...
 }: {
   imports = [
-    ../../home
-    ../../home/firefox
-    ../../home/ags
-    ../../home/anyrun
-    ../../home/cava
-    ../../home/wezterm
-    ../../home/zathura
-    ../../home/gtk
-    ../../home/mako
-    ../../home/zellij
-    ../../home/spotify-player
-    ../../home/wayland/hyprland
-    ../../home/wayland/services/hypridle.nix
-    ../../home/wayland/programs/hyprlock.nix
+    inputs.hyprland.homeManagerModules.default
+    inputs.anyrun.homeManagerModules.default
+    inputs.ags.homeManagerModules.default
+    inputs.nix-index-database.hmModules.nix-index
+    ../../services
+    ../../programs/ags
+    ../../programs/anyrun
+    ../../programs/browsers/firefox
+    ../../programs/browsers/chromium
+    ../../programs/terminal/wezterm
+    ../../programs/terminal/zellij
+    ../../programs/gtk.nix
+    ../../programs/media/cava.nix
+    ../../programs/mako.nix
+    ../../programs/media/spotify-player.nix
+    ../../programs/media/zathura.nix
   ];
 
-  systemd.user.startServices = "sd-switch";
-  programs.home-manager.enable = true;
-
-  home = {
-    username = "notoh";
-    homeDirectory = "/home/notoh";
-    packages = with pkgs; [
-      chromium
-      discord
-      cinny-desktop
-      thunderbird
-      obs-studio
-      pavucontrol
-      anki-bin
-      tomato-c
-      distrobox
-      gpg-tui
-      vscode-fhs
-      obsidian-wayland
-      jellyfin-mpv-shim
-      virt-manager
-      qbittorrent
-      imv
-      mpv
-      ffmpeg
-      rustypaste-cli
-      gimp
-      cryptomator
-      ventoy-bin-full
-      wine
-      lutris
-      mangohud
-      bottles
-      prismlauncher
-      stellarium
-      inputs.nix-gaming.packages.${pkgs.system}.osu-lazer-bin
-      (libsForQt5.callPackage ../../pkgs/chatterino7 {})
-      (callPackage ../../pkgs/jellyfin-rpc {})
-    ];
-    stateVersion = "23.05";
-  };
-
+  home.packages = with pkgs; [
+    discord
+    pavucontrol
+    imv
+    mpv
+    rustypaste-cli
+    playerctl
+    obsidian
+    cryptomator
+    wayland
+    glib
+    grim
+    slurp
+    wl-clipboard
+    swww
+    hyprpicker
+    (libsForQt5.callPackage ../../../pkgs/chatterino7 {})
+  ];
   programs.ssh = {
     enable = true;
     extraConfig = ''
@@ -109,10 +87,6 @@
         Hostname 100.92.145.147
         User notoh
         IdentityFile ~/.ssh/rpi4
-      Host rennypaste
-        Hostname 5.78.112.206
-        User notohh
-        IdentityFile ~/.ssh/renny-key
       Host pve
         Hostname 100.115.234.69
         User root

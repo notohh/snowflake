@@ -1,238 +1,200 @@
-inputs: let
-  system = "x86_64-linux";
-  sopsModule = inputs.sops-nix.nixosModules.sops;
-  hmModule = inputs.home-manager.nixosModules.home-manager;
-  hyprlandModule = inputs.hyprland.homeManagerModules.default;
-  nix-index-Module = inputs.nix-index-database.hmModules.nix-index;
-  anyrunModule = inputs.anyrun.homeManagerModules.default;
-  agsModule = inputs.ags.homeManagerModules.default;
-  atticModule = inputs.attic.nixosModules.atticd;
-  nurModule = inputs.nur.nixosModules.nur;
-  hypridleModule = inputs.hypridle.homeManagerModules.default;
-  hyprlockModule = inputs.hyprlock.homeManagerModules.default;
-  t480Module = inputs.nixos-hardware.nixosModules.lenovo-thinkpad-t480;
-  inherit (inputs.nixpkgs.lib) nixosSystem;
-in {
-  tsuki = nixosSystem {
-    inherit system;
+{
+  inputs,
+  homeImports,
+  ...
+}: {
+  flake.nixosConfigurations = let
+    inherit (inputs.nixpkgs.lib) nixosSystem;
     specialArgs = {inherit inputs;};
-    modules = [
-      ./tsuki
-      sopsModule
-      hmModule
-      atticModule
-      nurModule
-      {
-        home-manager = {
-          useGlobalPkgs = true;
-          useUserPackages = true;
-          extraSpecialArgs = {inherit inputs;};
-          users.notoh = {
-            imports = [
-              ./tsuki/home.nix
-              hyprlandModule
-              nix-index-Module
-              anyrunModule
-              agsModule
-              hypridleModule
-              hyprlockModule
-            ];
+    sopsModule = inputs.sops-nix.nixosModules.sops;
+    hmModule = inputs.home-manager.nixosModules.home-manager;
+    atticModule = inputs.attic.nixosModules.atticd;
+    nurModule = inputs.nur.nixosModules.nur;
+    t480Module = inputs.nixos-hardware.nixosModules.lenovo-thinkpad-t480;
+  in {
+    tsuki = nixosSystem {
+      inherit specialArgs;
+      modules = [
+        ./tsuki
+        sopsModule
+        hmModule
+        atticModule
+        nurModule
+        {
+          home-manager = {
+            useGlobalPkgs = true;
+            useUserPackages = true;
+            extraSpecialArgs = specialArgs;
+            users.notoh = {
+              imports = homeImports."notoh@tsuki";
+            };
           };
-        };
-      }
-    ];
-  };
-  sakura = nixosSystem {
-    inherit system;
-    specialArgs = {inherit inputs;};
-    modules = [
-      ./sakura
-      sopsModule
-      hmModule
-      {
-        home-manager = {
-          useGlobalPkgs = true;
-          useUserPackages = true;
-          extraSpecialArgs = {inherit inputs;};
-          users.notoh = {
-            imports = [
-              ./sakura/home.nix
-            ];
+        }
+      ];
+    };
+    ame = nixosSystem {
+      inherit specialArgs;
+      modules = [
+        ./ame
+        sopsModule
+        hmModule
+        t480Module
+        {
+          home-manager = {
+            useGlobalPkgs = true;
+            useUserPackages = true;
+            extraSpecialArgs = specialArgs;
+            users.notoh = {
+              imports = homeImports."notoh@ame";
+            };
           };
-        };
-      }
-    ];
-  };
-  kariru = nixosSystem {
-    inherit system;
-    specialArgs = {inherit inputs;};
-    modules = [
-      ./kariru
-      sopsModule
-      hmModule
-      {
-        home-manager = {
-          useGlobalPkgs = true;
-          useUserPackages = true;
-          extraSpecialArgs = {inherit inputs;};
-          users.notoh = {
-            imports = [
-              ./kariru/home.nix
-            ];
+        }
+      ];
+    };
+    sakura = nixosSystem {
+      inherit specialArgs;
+      modules = [
+        ./sakura
+        sopsModule
+        hmModule
+        {
+          home-manager = {
+            useGlobalPkgs = true;
+            useUserPackages = true;
+            extraSpecialArgs = specialArgs;
+            users.notoh = {
+              imports = homeImports."default";
+            };
           };
-        };
-      }
-    ];
-  };
-  yuki = nixosSystem {
-    inherit system;
-    specialArgs = {inherit inputs;};
-    modules = [
-      ./yuki
-      sopsModule
-      hmModule
-      {
-        home-manager = {
-          useGlobalPkgs = true;
-          useUserPackages = true;
-          extraSpecialArgs = {inherit inputs;};
-          users.notoh = {
-            imports = [
-              ./yuki/home.nix
-            ];
+        }
+      ];
+    };
+    kariru = nixosSystem {
+      inherit specialArgs;
+      modules = [
+        ./kariru
+        sopsModule
+        hmModule
+        {
+          home-manager = {
+            useGlobalPkgs = true;
+            useUserPackages = true;
+            extraSpecialArgs = specialArgs;
+            users.notoh = {
+              imports = homeImports."default";
+            };
           };
-        };
-      }
-    ];
-  };
-  ame = nixosSystem {
-    inherit system;
-    specialArgs = {inherit inputs;};
-    modules = [
-      ./ame
-      sopsModule
-      hmModule
-      t480Module
-      {
-        home-manager = {
-          useGlobalPkgs = true;
-          useUserPackages = true;
-          extraSpecialArgs = {inherit inputs;};
-          users.notoh = {
-            imports = [
-              ./ame/home.nix
-              anyrunModule
-              agsModule
-            ];
+        }
+      ];
+    };
+    yuki = nixosSystem {
+      inherit specialArgs;
+      modules = [
+        ./yuki
+        sopsModule
+        hmModule
+        {
+          home-manager = {
+            useGlobalPkgs = true;
+            useUserPackages = true;
+            extraSpecialArgs = specialArgs;
+            users.notoh = {
+              imports = homeImports."default";
+            };
           };
-        };
-      }
-    ];
-  };
-  arashi = nixosSystem {
-    inherit system;
-    specialArgs = {inherit inputs;};
-    modules = [
-      ./arashi
-      sopsModule
-      hmModule
-      {
-        home-manager = {
-          useGlobalPkgs = true;
-          useUserPackages = true;
-          extraSpecialArgs = {inherit inputs;};
-          users.notoh = {
-            imports = [
-              ./arashi/home.nix
-            ];
+        }
+      ];
+    };
+    arashi = nixosSystem {
+      inherit specialArgs;
+      modules = [
+        ./arashi
+        sopsModule
+        hmModule
+        {
+          home-manager = {
+            useGlobalPkgs = true;
+            useUserPackages = true;
+            extraSpecialArgs = specialArgs;
+            users.notoh = {
+              imports = homeImports."default";
+            };
           };
-        };
-      }
-    ];
-  };
-  sora = nixosSystem {
-    inherit system;
-    specialArgs = {inherit inputs;};
-    modules = [
-      ./sora
-      sopsModule
-      atticModule
-      hmModule
-      {
-        home-manager = {
-          useGlobalPkgs = true;
-          useUserPackages = true;
-          extraSpecialArgs = {inherit inputs;};
-          users.notoh = {
-            imports = [
-              ./sora/home.nix
-            ];
+        }
+      ];
+    };
+    sora = nixosSystem {
+      inherit specialArgs;
+      modules = [
+        ./sora
+        sopsModule
+        atticModule
+        hmModule
+        {
+          home-manager = {
+            useGlobalPkgs = true;
+            useUserPackages = true;
+            extraSpecialArgs = specialArgs;
+            users.notoh = {
+              imports = homeImports."default";
+            };
           };
-        };
-      }
-    ];
-  };
-  tsuru = nixosSystem {
-    inherit system;
-    specialArgs = {inherit inputs;};
-    modules = [
-      ./tsuru
-      sopsModule
-      hmModule
-      {
-        home-manager = {
-          useGlobalPkgs = true;
-          useUserPackages = true;
-          extraSpecialArgs = {inherit inputs;};
-          users.notoh = {
-            imports = [
-              ./tsuru/home.nix
-            ];
+        }
+      ];
+    };
+    tsuru = nixosSystem {
+      inherit specialArgs;
+      modules = [
+        ./tsuru
+        sopsModule
+        hmModule
+        {
+          home-manager = {
+            useGlobalPkgs = true;
+            useUserPackages = true;
+            extraSpecialArgs = specialArgs;
+            users.notoh = {
+              imports = homeImports."default";
+            };
           };
-        };
-      }
-    ];
-  };
-  haru = nixosSystem {
-    inherit system;
-    specialArgs = {inherit inputs;};
-    modules = [
-      ./haru
-      sopsModule
-      hmModule
-      {
-        home-manager = {
-          useGlobalPkgs = true;
-          useUserPackages = true;
-          extraSpecialArgs = {inherit inputs;};
-          users.notoh = {
-            imports = [
-              ./haru/home.nix
-            ];
+        }
+      ];
+    };
+    haru = nixosSystem {
+      inherit specialArgs;
+      modules = [
+        ./haru
+        sopsModule
+        hmModule
+        {
+          home-manager = {
+            useGlobalPkgs = true;
+            useUserPackages = true;
+            extraSpecialArgs = specialArgs;
+            users.notoh = {
+              imports = homeImports."default";
+            };
           };
-        };
-      }
-    ];
-  };
-  kaze = nixosSystem {
-    inherit system;
-    specialArgs = {inherit inputs;};
-    modules = [
-      ./kaze
-      sopsModule
-      hmModule
-      {
-        home-manager = {
-          useGlobalPkgs = true;
-          useUserPackages = true;
-          extraSpecialArgs = {inherit inputs;};
-          users.notoh = {
-            imports = [
-              ./kaze/home.nix
-            ];
+        }
+      ];
+    };
+    kaze = nixosSystem {
+      inherit specialArgs;
+      modules = [
+        ./kaze
+        sopsModule
+        hmModule
+        {
+          home-manager = {
+            useGlobalPkgs = true;
+            useUserPackages = true;
+            extraSpecialArgs = specialArgs;
+            users.notoh = {
+              imports = homeImports."default";
+            };
           };
-        };
-      }
-    ];
+        }
+      ];
+    };
   };
 }

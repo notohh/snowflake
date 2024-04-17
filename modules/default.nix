@@ -1,6 +1,5 @@
-{inputs, ...}: {
+_: {
   imports = [
-    inputs.nh.nixosModules.default
     ./prometheus.nix
     ./security.nix
     ./users.nix
