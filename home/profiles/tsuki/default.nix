@@ -9,6 +9,7 @@
     inputs.ags.homeManagerModules.default
     inputs.hypridle.homeManagerModules.default
     inputs.hyprlock.homeManagerModules.default
+    inputs.hyprpaper.homeManagerModules.default
     inputs.nix-index-database.hmModules.nix-index
     ../../services
     ../../programs/ags
@@ -24,6 +25,7 @@
     ../../programs/media/zathura.nix
     ../../wayland/hyprland
     ../../wayland/services/hypridle.nix
+    ../../wayland/services/hyprpaper.nix
     ../../wayland/programs/hyprlock.nix
   ];
 
@@ -42,6 +44,7 @@
     jellyfin-mpv-shim
     virt-manager
     qbittorrent
+    hyprpicker
     imv
     mpv
     ffmpeg

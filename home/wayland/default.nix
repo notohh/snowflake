@@ -25,9 +25,6 @@ in {
       satty
       wl-clipboard
       wlr-randr
-      hyprpicker
-      hyprcursor
-      swww
     ];
     sessionVariables = {
       GBM_BACKEND = "nvidia-drm";
