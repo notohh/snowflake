@@ -4,63 +4,62 @@
   ...
 }: {
   imports = [
-    ../../home
-    ../../home/firefox
-    ../../home/ags
-    ../../home/anyrun
-    ../../home/cava
-    ../../home/wezterm
-    ../../home/zathura
-    ../../home/gtk
-    ../../home/mako
-    ../../home/zellij
-    ../../home/spotify-player
-    ../../home/wayland/hyprland
-    ../../home/wayland/services/hypridle.nix
-    ../../home/wayland/programs/hyprlock.nix
+    inputs.hyprland.homeManagerModules.default
+    inputs.anyrun.homeManagerModules.default
+    inputs.ags.homeManagerModules.default
+    inputs.hypridle.homeManagerModules.default
+    inputs.hyprlock.homeManagerModules.default
+    inputs.nix-index-database.hmModules.nix-index
+    ../common.nix
+    ../../services
+    ../../programs/ags
+    ../../programs/anyrun
+    ../../programs/firefox
+    ../../programs/wezterm
+    ../../programs/zellij
+    ../../programs/gtk.nix
+    ../../programs/cava.nix
+    ../../programs/mako.nix
+    ../../programs/spotify-player.nix
+    ../../programs/zathura.nix
+    ../../wayland/hyprland
+    ../../wayland/services/hypridle.nix
+    ../../wayland/programs/hyprlock.nix
   ];
 
-  systemd.user.startServices = "sd-switch";
-  programs.home-manager.enable = true;
-
-  home = {
-    username = "notoh";
-    homeDirectory = "/home/notoh";
-    packages = with pkgs; [
-      chromium
-      discord
-      cinny-desktop
-      thunderbird
-      obs-studio
-      pavucontrol
-      anki-bin
-      tomato-c
-      distrobox
-      gpg-tui
-      vscode-fhs
-      obsidian-wayland
-      jellyfin-mpv-shim
-      virt-manager
-      qbittorrent
-      imv
-      mpv
-      ffmpeg
-      rustypaste-cli
-      gimp
-      cryptomator
-      ventoy-bin-full
-      wine
-      lutris
-      mangohud
-      bottles
-      prismlauncher
-      stellarium
-      inputs.nix-gaming.packages.${pkgs.system}.osu-lazer-bin
-      (libsForQt5.callPackage ../../pkgs/chatterino7 {})
-      (callPackage ../../pkgs/jellyfin-rpc {})
-    ];
-    stateVersion = "23.05";
-  };
+  home.packages = with pkgs; [
+    chromium
+    discord
+    signal-desktop
+    thunderbird
+    obs-studio
+    pavucontrol
+    anki-bin
+    tomato-c
+    distrobox
+    gpg-tui
+    vscode-fhs
+    obsidian-wayland
+    jellyfin-mpv-shim
+    virt-manager
+    qbittorrent
+    imv
+    mpv
+    ffmpeg
+    rustypaste-cli
+    gimp
+    cryptomator
+    ventoy-bin-full
+    wine
+    lutris
+    mangohud
+    bottles
+    prismlauncher
+    stellarium
+    inputs.nix-gaming.packages.${pkgs.system}.osu-lazer-bin
+    (libsForQt5.callPackage ../../../pkgs/chatterino7 {})
+    (callPackage ../../../pkgs/jellyfin-rpc {})
+  ];
 
   programs.ssh = {
     enable = true;

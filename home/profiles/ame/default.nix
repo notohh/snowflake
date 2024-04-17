@@ -1,44 +1,27 @@
 {pkgs, ...}: {
   imports = [
-    ../../home
-    ../../home/anyrun
-    ../../home/firefox
-    ../../home/wezterm
-    ../../home/zathura
-    ../../home/zellij
-    ../../home/mako
-    ../../home/gtk/catppuccin-red.nix
+    ../common.nix
   ];
 
-  systemd.user.startServices = "sd-switch";
-  programs.home-manager.enable = true;
-
-  home = {
-    username = "notoh";
-    homeDirectory = "/home/notoh";
-    packages = with pkgs; [
-      chromium
-      discord
-      spotify-player
-      cinny-desktop
-      pavucontrol
-      imv
-      mpv
-      rustypaste-cli
-      playerctl
-      obsidian
-      cryptomator
-      wayland
-      glib
-      grim
-      slurp
-      wl-clipboard
-      swww
-      hyprpicker
-      (libsForQt5.callPackage ../../pkgs/chatterino7 {})
-    ];
-    stateVersion = "23.05";
-  };
+  home.packages = with pkgs; [
+    chromium
+    discord
+    pavucontrol
+    imv
+    mpv
+    rustypaste-cli
+    playerctl
+    obsidian
+    cryptomator
+    wayland
+    glib
+    grim
+    slurp
+    wl-clipboard
+    swww
+    hyprpicker
+    (libsForQt5.callPackage ../../pkgs/chatterino7 {})
+  ];
   programs.ssh = {
     enable = true;
     extraConfig = ''

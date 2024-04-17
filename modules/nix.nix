@@ -5,6 +5,7 @@
       inputs.helix.overlays.default
       inputs.yazi.overlays.default
       inputs.wezterm.overlays.default
+      inputs.hyprland.overlays.default
       inputs.hypridle.overlays.default
       inputs.hyprlock.overlays.default
       inputs.hyprpicker.overlays.default
@@ -20,7 +21,7 @@
     };
   };
 
-  nh = {
+  programs.nh = {
     enable = true;
     clean = {
       enable = true;

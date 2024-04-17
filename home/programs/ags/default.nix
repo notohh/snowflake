@@ -3,7 +3,7 @@
   config,
   ...
 }: let
-  configDir = "/home/notoh/snowflake/home/ags/config";
+  configDir = "/home/notoh/snowflake/homeo/programs/ags/config";
 in {
   programs.ags = {
     enable = true;
