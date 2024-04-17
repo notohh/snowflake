@@ -51,7 +51,6 @@
       imports = [
         inputs.pre-commit-hooks.flakeModule
         ./hosts
-        ./hosts/deploy.nix
         ./home/profiles
       ];
       systems = ["x86_64-linux"];
@@ -61,6 +60,7 @@
         ...
       }: {
         pre-commit = {
+          check.enable = true;
           settings = {
             excludes = ["flake.lock"];
             hooks = {
