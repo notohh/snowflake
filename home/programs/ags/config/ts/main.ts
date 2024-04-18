@@ -14,7 +14,7 @@ Utils.monitorFile(
   `${App.configDir}/style`,
 
   function () {
-    const scss = `${App.configDir}/style.scss`;
+    const scss = `${App.configDir}/main.scss`;
 
     const css = `./style.css`;
 
