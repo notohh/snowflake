@@ -1,15 +1,11 @@
 {
   "name": "snowflake-ags",
-  "version": "1.0.0",
-  "description": "snowflake ags",
+  "version": "0.0.1",
+  "description": "",
   "main": "config.js",
-  "repository": {
-    "type": "git",
-    "url": "https://git.flake.sh/notohh/snowflake"
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "notohh",
-  "license": "MIT",
-  "devDependencies": {
-    "eslint": "^8.56.0"
-  }
+  "license": "MIT"
 }
