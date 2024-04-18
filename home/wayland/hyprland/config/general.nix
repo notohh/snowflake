@@ -25,8 +25,8 @@
         gaps_in = 10;
         gaps_out = 20;
         border_size = 4;
-        "col.active_border" = "rgb(f7768e) rgb(2ac3de)";
-        "col.inactive_border" = "rgb(313244)";
+        "col.active_border" = "rgb(f7768e) rgb(c0caf5)";
+        "col.inactive_border" = "rgb(24283b)";
 
         layout = "dwindle";
       };

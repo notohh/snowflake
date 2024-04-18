@@ -3,12 +3,15 @@ _: {
     enable = true;
     ipc = true;
     splash = false;
-    preloads = ["~/Pictures/wallpapers/frieren.png"];
+    preloads = [
+      "~/Pictures/wallpapers/sparkle.png"
+      "~/Pictures/wallpapers/sparkle2.png"
+    ];
     wallpapers = [
-      "HDMI-A-1,~/Pictures/wallpapers/frieren.png"
-      "DP-1,~/Pictures/wallpapers/frieren.png"
-      "DP-2,~/Pictures/wallpapers/frieren.png"
-      "DP-3,~/Pictures/wallpapers/frieren.png"
+      "HDMI-A-1,~/Pictures/wallpapers/sparkle.png"
+      "DP-1,~/Pictures/wallpapers/sparkle.png"
+      "DP-2,~/Pictures/wallpapers/sparkle2.png"
+      "DP-3,~/Pictures/wallpapers/sparkle2.png"
     ];
   };
 }

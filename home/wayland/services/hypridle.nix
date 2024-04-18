@@ -11,11 +11,11 @@
     beforeSleepCmd = "${pkgs.systemd}/bin/loginctl lock-session";
     listeners = [
       {
-        timeout = 500;
+        timeout = 400;
         onTimeout = "${lib.getExe config.programs.hyprlock.package}";
       }
       {
-        timeout = 560;
+        timeout = 460;
         onTimeout = "${config.wayland.windowManager.hyprland.package}/bin/hyprctl dispatch dpms off";
         onResume = "${config.wayland.windowManager.hyprland.package}/bin/hyprctl dispatch dpms on";
       }
