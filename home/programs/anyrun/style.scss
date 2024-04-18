@@ -1,7 +1,7 @@
 * {
   all: unset;
   transition: 200ms ease-out;
-  color: #cdd6f4;
+  color: #c0caf5;
   font-family: JetBrainsMono NF Medium;
   font-size: 1.1rem;
 }
@@ -18,11 +18,15 @@
   margin-top: 0.5rem;
 }
 
+#match {
+  padding: 3px;
+  border-radius: 12px;
+}
+
 #match:hover,
 #match:selected {
   background: #45475a;
-  border-radius: 5px;
-  padding: 0.4rem
+  padding: 0.6rem;
 }
 
 entry#entry {
@@ -31,8 +35,8 @@ entry#entry {
 }
 
 box#main {
-  background: #1e1e2e;
-  border: 3px solid #f5c2e7;
-  border-radius: 12px;
+  background: #1a1b26;
+  border: 3px solid #f7768e;
+  border-radius: 10px;
   padding: 0.3rem;
 }

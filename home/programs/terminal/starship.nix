@@ -45,7 +45,7 @@
       ];
       character = {
         error_symbol = "[](bold red)";
-        success_symbol = "[](bold teal)";
+        success_symbol = "[](bold white)";
       };
       username = {
         show_always = false;
@@ -63,7 +63,7 @@
         truncation_length = 3;
         truncation_symbol = "…/";
         read_only = "🔒";
-        style = "teal";
+        style = "red";
         home_symbol = "";
       };
       directory.substitutions = {
@@ -77,14 +77,16 @@
         impure_msg = "[impure shell](bold red)";
         pure_msg = "[pure shell](bold green)";
         unknown_msg = "[unknown shell](bold yellow)";
-        format = "via [ $state( \($name\))](bold teal)";
+        format = "[$state( \($name\))](bold white)";
       };
       git_branch = {
         symbol = "";
         format = "[$symbol $branch ]($style)";
+        style = "white";
       };
       git_status = {
         format = "[$all_status$ahead_behind ]($style)";
+        style = "red";
       };
       golang = {
         symbol = " ";
