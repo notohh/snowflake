@@ -10,6 +10,7 @@
     ./programs/terminal/yazi
     ./programs/terminal/atuin.nix
     ./programs/terminal/bat.nix
+    ./programs/terminal/bottom.nix
     ./programs/terminal/starship.nix
     ./programs/terminal/zoxide.nix
     ./programs/direnv.nix
@@ -26,7 +27,6 @@
       eva
       fd
       du-dust
-      bottom
       gnupg
       ripgrep
       lazydocker
