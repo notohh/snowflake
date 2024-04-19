@@ -8,7 +8,7 @@
         "DP-3,1920x1080@144, 1400x0, auto" #top
       ];
       exec-once = [
-        "ags"
+        # "ags"
         "hyprpaper"
         "chatterino"
         "dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
