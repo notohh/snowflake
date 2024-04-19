@@ -20,13 +20,16 @@
       headerStyle = "boxedWidgets";
       disableCollape = true;
       favicon = "https://em-content.zobj.net/source/twitter/376/cloud_2601-fe0f.png";
-      background = "https://i.imgur.com/uU6Jbum.jpg";
       cardBlur = "md";
       theme = "dark";
       color = "gray";
       fiveColumns = true;
       statusStyle = "dot";
       hideVersion = true;
+      background = {
+        image = "https://i.imgur.com/YLX96sC.jpeg";
+        brightness = 75;
+      };
       providers = {
         openweathermap = "{{HOMEPAGE_VAR_OPENWEATHERMAP}}";
       };

@@ -5,10 +5,10 @@ _: {
       windowSize = "normal";
       gui.theme = {
         lightTheme = false;
-        activeBorderColor = ["#2ac3de" "bold"];
+        activeBorderColor = ["#c0caf5" "bold"];
         inactiveBorderColor = ["#f7768e"];
-        optionsTextColor = [" #c0caf5"];
-        selectedLineBgColor = ["#24283b"];
+        optionsTextColor = ["#f7768e"];
+        selectedLineBgColor = ["#565f89"];
         selectedRangeByColor = ["#24283b"];
         cherryPickedCommitBgColor = ["#94e2d5"];
         cherryPickedCommitFgColor = ["#89b4fa"];

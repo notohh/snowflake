@@ -2,23 +2,36 @@ _: {
   programs.hyprlock = {
     enable = true;
     backgrounds = let
-      wallpaperPath = "/home/notoh/Pictures/wallpapers/cweam.png";
+      verticalWallpaper = "/home/notoh/Pictures/wallpapers/sparkle.png";
+      horizontalWallpaper = "/home/notoh/Pictures/wallpapers/sparkle2.png";
     in [
       {
+        monitor = "HDMI-A-1";
+        path = verticalWallpaper;
+        blur_passes = 3;
+        blur_size = 4;
+        brightness = 0.5;
+      }
+      {
         monitor = "DP-1";
-        path = wallpaperPath;
+        path = verticalWallpaper;
+        blur_passes = 3;
+        blur_size = 4;
+        brightness = 0.5;
       }
       {
         monitor = "DP-2";
-        path = wallpaperPath;
+        path = horizontalWallpaper;
+        blur_passes = 3;
+        blur_size = 4;
+        brightness = 0.5;
       }
       {
         monitor = "DP-3";
-        path = wallpaperPath;
-      }
-      {
-        monitor = "HDMI-A-1";
-        path = wallpaperPath;
+        path = horizontalWallpaper;
+        blur_passes = 3;
+        blur_size = 4;
+        brightness = 0.5;
       }
     ];
     general = {
@@ -31,40 +44,57 @@ _: {
       {
         monitor = "DP-2";
         size = {
-          width = 300;
+          width = 350;
           height = 50;
         };
         outline_thickness = 2;
-
-        outer_color = "rgb(f5c2e7)";
-        inner_color = "rgb(1e1e2e)";
-        font_color = "rgb(cdd6f4)";
+        outer_color = "rgb(f7768e)";
+        inner_color = "rgb(1a1b26)";
+        font_color = "rgb(c0caf5)";
+        fail_color = "rgb(f7768e)";
+        fail_text = "<i>$FAIL <b>($ATTEMPTS)</b></i>";
+        check_color = "rgb(ff9e64)";
+        swap_font_color = false;
         placeholder_text = ''
-          <span foreground="##cdd6f4">Password...</span>
+          <i><span foreground="##c0caf5">Password...</span></i>
         '';
         fade_on_empty = false;
-        dots_spacing = 0.3;
+        dots_spacing = 0.5;
         dots_center = true;
+        shadow_passes = 3;
+        shadow_size = 1;
+        shadow_color = "rgba(00000099)";
+        shadow_boost = 1.0;
       }
     ];
     labels = [
       {
         monitor = "DP-2";
-        text = "Hi, $USER";
-        color = "rgb(1e1e2e)";
+        text = ''
+          Hi, <i><span foreground="##f7768e">$USER</span></i>
+        '';
+        color = "rgb(c0caf5)";
         valign = "center";
         halign = "center";
+        shadow_passes = 3;
+        shadow_size = 1;
+        shadow_color = "rgba(00000099)";
+        shadow_boost = 1.0;
       }
       {
         monitor = "DP-2";
         text = "$TIME";
-        color = "rgb(1e1e2e)";
+        color = "rgb(c0caf5)";
         position = {
           x = 0;
           y = 120;
         };
         valign = "center";
         halign = "center";
+        shadow_passes = 3;
+        shadow_size = 1;
+        shadow_color = "rgba(00000099)";
+        shadow_boost = 0.6;
       }
     ];
   };
