@@ -4,31 +4,36 @@
   cmake,
   pkg-config,
   fetchFromGitHub,
-  qtbase,
-  qtsvg,
-  qtmultimedia,
-  qtimageformats,
-  qttools,
+  qt6,
   boost,
   openssl,
-  wrapQtAppsHook,
   libsecret,
 }:
 stdenv.mkDerivation rec {
   pname = "chatterino7";
-  version = "7.4.6";
+  version = "7.5.0";
 
   src = fetchFromGitHub {
     owner = "SevenTV";
     repo = pname;
     rev = "v${version}";
-    sha256 = "sha256-6F27GVknSwFDYARdkgE31Oufz557vBKrcDLo9csRWPA=";
+    sha256 = "sha256-/L6X0/03e5wSa+cVlh1Tynz90sMEjSeJm4Ca07f7s18=";
     fetchSubmodules = true;
   };
 
-  nativeBuildInputs = [cmake pkg-config wrapQtAppsHook];
-  buildInputs = [qtbase qtsvg qtmultimedia qtimageformats qttools boost openssl libsecret];
-
+  nativeBuildInputs = [cmake pkg-config qt6.wrapQtAppsHook];
+  buildInputs = [
+    qt6.qtbase
+    qt6.qtsvg
+    qt6.qtimageformats
+    qt6.qttools
+    qt6.qt5compat
+    qt6.qtwayland
+    boost
+    openssl
+    libsecret
+  ];
+  cmakeFlags = ["-DBUILD_WITH_QT6=ON"];
   postInstall =
     ''
       mkdir -p "$out/bin"
