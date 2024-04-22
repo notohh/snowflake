@@ -1,8 +1,8 @@
 {
   disko.devices = {
     disk = {
-      vdb = {
-        device = "/dev/vda";
+      sda = {
+        device = "/dev/sda";
         type = "disk";
         content = {
           type = "gpt";
