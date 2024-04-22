@@ -4,18 +4,10 @@
   ...
 }: {
   imports = [
-    inputs.hyprland.homeManagerModules.default
-    inputs.anyrun.homeManagerModules.default
-    inputs.ags.homeManagerModules.default
-    inputs.hypridle.homeManagerModules.default
-    inputs.hyprlock.homeManagerModules.default
-    inputs.hyprpaper.homeManagerModules.default
-    inputs.nix-index-database.hmModules.nix-index
     ../../services
-    ../../programs/ags
     ../../programs/anyrun
+    ../../programs/ironbar
     ../../programs/browsers/firefox
-    ../../programs/browsers/chromium
     ../../programs/terminal/wezterm
     ../../programs/terminal/zellij
     ../../programs/gtk.nix
@@ -37,11 +29,8 @@
     pavucontrol
     anki-bin
     tomato-c
-    distrobox
-    gpg-tui
     vscode-fhs
     obsidian-wayland
-    jellyfin-mpv-shim
     virt-manager
     qbittorrent
     hyprpicker
@@ -53,14 +42,10 @@
     cryptomator
     ventoy-bin-full
     wine
-    lutris
-    mangohud
     bottles
     prismlauncher
-    stellarium
     inputs.nix-gaming.packages.${pkgs.system}.osu-lazer-bin
-    (libsForQt5.callPackage ../../../pkgs/chatterino7 {})
-    (callPackage ../../../pkgs/jellyfin-rpc {})
+    (callPackage ../../../pkgs/chatterino7 {})
   ];
 
   programs.ssh = {

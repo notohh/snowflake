@@ -9,6 +9,8 @@
     ${lib.getExe pkgs.sassc} -t expanded '${source}' > $out/${name}.css
   ''}/${name}.css";
 in {
+  imports = [inputs.anyrun.homeManagerModules.default];
+
   programs.anyrun = {
     enable = true;
     config = {

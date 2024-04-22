@@ -26,6 +26,7 @@
 
     $mainMod = SUPER
     bind = $mainMod, Q, exec, reboot
+    bind = $mainMod, Return, exec, ${lib.getExe pkgs.greetd.regreet}
 
     input {
       kb_layout = us

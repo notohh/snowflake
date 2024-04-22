@@ -19,6 +19,7 @@ _: {
     ];
     layerrule = [
       "blur, ^(gtk-layer-shell|anyrun)$"
+      "blur, ^(gtk-layer-shell|ironbar)$"
     ];
   };
 }

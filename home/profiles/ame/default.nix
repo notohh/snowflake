@@ -1,15 +1,9 @@
 {
-  inputs,
   pkgs,
   ...
 }: {
   imports = [
-    inputs.hyprland.homeManagerModules.default
-    inputs.anyrun.homeManagerModules.default
-    inputs.ags.homeManagerModules.default
-    inputs.nix-index-database.hmModules.nix-index
     ../../services
-    ../../programs/ags
     ../../programs/anyrun
     ../../programs/browsers/firefox
     ../../programs/browsers/chromium

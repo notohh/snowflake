@@ -13,7 +13,7 @@
     ./programs/terminal/bottom.nix
     ./programs/terminal/starship.nix
     ./programs/terminal/zoxide.nix
-    ./programs/direnv.nix
+    ./programs/terminal/direnv.nix
     ./programs/git.nix
   ];
 
@@ -39,6 +39,7 @@
       unrar
       p7zip
       procs
+      #  atac
     ];
     stateVersion = "23.05";
   };

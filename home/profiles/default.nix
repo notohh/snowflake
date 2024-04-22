@@ -1,7 +1,7 @@
 # stolen from fufexan
 {
-  self,
   inputs,
+  self,
   ...
 }: let
   extraSpecialArgs = {inherit inputs self;};

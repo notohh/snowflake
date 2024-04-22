@@ -1,4 +1,5 @@
-_: {
+{inputs, ...}: {
+  imports = [inputs.hyprpaper.homeManagerModules.default];
   services.hyprpaper = {
     enable = true;
     ipc = true;

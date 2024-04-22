@@ -1,9 +1,11 @@
 {
+  inputs,
   pkgs,
-  config,
   lib,
+  config,
   ...
 }: {
+  imports = [inputs.hypridle.homeManagerModules.default];
   services.hypridle = {
     enable = true;
     ignoreDbusInhibit = false;
