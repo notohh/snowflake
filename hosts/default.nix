@@ -11,6 +11,7 @@
     atticModule = inputs.attic.nixosModules.atticd;
     nurModule = inputs.nur.nixosModules.nur;
     t480Module = inputs.nixos-hardware.nixosModules.lenovo-thinkpad-t480;
+    diskoModule = inputs.disko.nixosModules.default;
   in {
     tsuki = nixosSystem {
       inherit specialArgs;
@@ -20,6 +21,7 @@
         hmModule
         atticModule
         nurModule
+        diskoModule
         {
           home-manager = {
             useGlobalPkgs = true;
