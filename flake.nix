@@ -67,7 +67,6 @@
       inputs.hyprland.follows = "hyprland";
     };
 
-    ags.url = "github:Aylur/ags";
     nix-gaming.url = "github:fufexan/nix-gaming";
     attic.url = "github:zhaofengli/attic";
     nur.url = "github:nix-community/NUR";
@@ -90,12 +89,12 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    nix-index-database = {
-      url = "github:Mic92/nix-index-database";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
     anyrun = {
       url = "github:Kirottu/anyrun";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    ironbar = {
+      url = "github:JakeStanger/ironbar";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
