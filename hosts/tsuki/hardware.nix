@@ -6,7 +6,7 @@
   ...
 }: {
   imports = [
-    inputs.disko.nixosModules.default
+    # ./disko-config.nix
     (modulesPath + "/installer/scan/not-detected.nix")
     #  ./disko-config.nix
   ];
