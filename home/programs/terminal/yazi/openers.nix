@@ -25,27 +25,27 @@
     opener = {
       text = [
         {
-          exec = ''hx "$@" '';
+          run = ''hx "$@" '';
           for = "linux";
         }
       ];
       image = [
         {
-          exec = ''imv "$@" '';
+          run = ''imv "$@" '';
           block = true;
           for = "linux";
         }
       ];
       video = [
         {
-          exec = ''mpv "$@" '';
+          run = ''mpv "$@" '';
           block = true;
           for = "linux";
         }
       ];
       reveal = [
         {
-          exec = ''${pkgs.exiftool}/bin/exiftool "$1";'';
+          run = ''${pkgs.exiftool}/bin/exiftool "$1";'';
           block = true;
         }
       ];
