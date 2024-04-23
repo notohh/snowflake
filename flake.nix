@@ -77,6 +77,7 @@
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
     atuin.url = "github:atuinsh/atuin";
     flake-parts.url = "github:hercules-ci/flake-parts";
+    stylix.url = "github:danth/stylix";
     deploy-rs = {
       url = "github:serokell/deploy-rs";
       inputs.nixpkgs.follows = "nixpkgs";
