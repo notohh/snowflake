@@ -5,6 +5,7 @@
   ...
 }: {
   imports = [
+    ./disko-config.nix
     (modulesPath + "/installer/scan/not-detected.nix")
   ];
 
@@ -18,7 +19,6 @@
       };
       efi = {
         canTouchEfiVariables = true;
-        efiSysMountPoint = "/boot/efi";
       };
     };
     initrd = {
@@ -30,7 +30,6 @@
   zramSwap = {
     enable = true;
     swapDevices = 1;
-    memoryPercent = 50;
     algorithm = "zstd";
   };
 
