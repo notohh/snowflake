@@ -1,7 +1,6 @@
 {...}: {
   imports = [
     ./languages.nix
-    ./themes/catppuccin_mocha.nix
     ./themes/tokyonight.nix
   ];
   programs.helix = {

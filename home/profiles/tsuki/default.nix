@@ -4,14 +4,15 @@
   ...
 }: {
   imports = [
+    ./stylix.nix
     ../../services
     ../../programs/anyrun
     ../../programs/ironbar
     ../../programs/browsers/firefox
     ../../programs/terminal/wezterm
     ../../programs/terminal/zellij
-    ../../programs/gtk.nix
     ../../programs/media/cava.nix
+    ../../programs/gtk.nix
     ../../programs/mako.nix
     ../../programs/media/spotify-player.nix
     ../../programs/media/zathura.nix
