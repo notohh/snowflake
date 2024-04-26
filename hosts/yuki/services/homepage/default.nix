@@ -27,7 +27,7 @@
       statusStyle = "dot";
       hideVersion = true;
       background = {
-        image = "https://i.imgur.com/YLX96sC.jpeg";
+        image = "https://i.imgur.com/Q8xIWP7.png";
         brightness = 75;
       };
       providers = {
