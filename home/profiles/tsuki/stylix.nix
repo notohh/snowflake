@@ -42,13 +42,7 @@
       terminal = 0.6;
     };
     targets = {
-      wezterm.enable = false;
-      helix.enable = false;
-      hyprland.enable = false;
-      firefox.enable = false;
-
       mako.enable = true;
-      gtk.enable = true;
       lazygit.enable = true;
       nushell.enable = true;
       yazi.enable = true;
