@@ -18,8 +18,7 @@ _: {
       "idleinhibit fullscreen, class:^(firefox)$"
     ];
     layerrule = [
-      "blur, ^(gtk-layer-shell|anyrun)$"
-      "blur, ^(gtk-layer-shell|ironbar)$"
+      "blur, ^(gtk-layer-shell|anyrun|eww|music-widget)$"
     ];
   };
 }
