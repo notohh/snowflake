@@ -1,0 +1,64 @@
+@import "./mixins.scss";
+@import "./colors.scss";
+
+.menubox {
+    border: 3px solid $background-highlight;
+    border-radius: 10px;
+    background-color: $background;
+}
+
+.menubox-header {
+    @include button-sizing;
+    font-size: 32px;
+    background-color: $background-highlight;
+    margin: 2rem;
+}
+
+.menubox-text {
+    @include button-sizing;
+    background-color: $background;
+}
+
+.menubox-widgets {
+    @include button-sizing();
+    background-color: $background-highlight;
+    margin: 2rem;
+    transition: all 100ms ease;
+    &:hover {
+        @include button-sizing();
+        background-color: $red;
+        transition: all 100ms ease;
+        color: $background-highlight;
+    }
+}
+
+.menu-widget {
+    font-size: 20px;
+    margin: 0.5rem 1.2rem 0.5rem 0.9rem;
+    padding-right: 0.3rem;
+    border-radius: 8px;
+    background-color: $background;
+}
+
+.cpu {
+    @include sysinfo();
+    color: $red;
+}
+
+.mem {
+    @include sysinfo();
+    color: $green;
+    font-size: 17px;
+}
+
+.storage {
+    @include sysinfo();
+    color: $blue;
+    font-size: 24px;
+}
+
+.info-box {
+    @include button-sizing;
+    background-color: $background-highlight;
+    margin: 2rem;
+}

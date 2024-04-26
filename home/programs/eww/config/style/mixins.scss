@@ -1,0 +1,23 @@
+@import "./colors.scss";
+
+@mixin workspace-font {
+    font-size: 20px;
+    font-weight: normal;
+}
+
+@mixin button-sizing {
+    margin: 10px;
+    border-radius: 16px;
+    padding: 10px 10px 10px 10px;
+    font-size: 32px;
+}
+
+@mixin sysinfo {
+    margin: 10px;
+    font-size: 24px;
+    background-color: $light-gray;
+}
+
+@mixin widget-border-radius {
+    border-radius: 8px;
+}

@@ -1,0 +1,16 @@
+(defwidget workspaces []
+  (box :class "workspaces"
+    :space-evenly true
+    :spacing 6
+    (button
+      :class "ws0"
+    :onclick "" " ")
+    (button
+      :class "ws1"
+    :onclick "" " ")
+    (button
+      :class "ws2"
+    :onclick "" " ")
+    (button
+      :class "ws3"
+    :onclick "" " ")))

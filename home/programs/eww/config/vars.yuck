@@ -1,0 +1,14 @@
+(deflisten musicArtist :initial "-" "playerctl --follow metadata --format '{{ artist }}'")
+(deflisten musicTitle :initial "-" "playerctl --follow metadata --format '{{title}}'")
+(deflisten musicCover "sh ~/.config/eww/scripts/get-music-cover.sh ~/.config/eww/cache_directory")
+
+
+(defpoll time :interval "60s"
+  :initial "initial-value"
+`date +%H:%M`)
+
+(defpoll date :interval "60s"
+  :initial "initial-value"
+`date +%D-%Y`)
+
+(defpoll uptime :interval "1s" "uptime | awk '{print $3}' | tr ',' ' '")

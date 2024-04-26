@@ -1,0 +1,21 @@
+(defwidget cpu []
+  (box
+    :spacing 5
+    (circular-progress
+      :class "sysinfo-cpu"
+      :start-at 0
+      :thickness 4
+      :clockwise true
+      :value {EWW_CPU.avg}
+      (label
+        :style "font-size: 13px; margin-right: 0.1rem;"
+      :text "󰍛"))
+    (circular-progress
+      :class "sysinfo-mem"
+      :start-at 0
+      :thickness 4
+      :clockwise true
+      :value {EWW_RAM.used_mem_perc}
+      (label
+        :style "font-size: 10px; margin-right: 0.3rem;"
+      :text ""))))

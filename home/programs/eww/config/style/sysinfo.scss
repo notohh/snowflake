@@ -1,0 +1,14 @@
+@import "./mixins.scss";
+@import "./colors.scss";
+
+.sysinfo-cpu {
+    @include sysinfo;
+    color: $red;
+    margin: 0.1rem;
+}
+
+.sysinfo-mem {
+    @include sysinfo;
+    color: $green;
+    margin: 0.1rem;
+}

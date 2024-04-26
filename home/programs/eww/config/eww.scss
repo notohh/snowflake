@@ -1,0 +1,24 @@
+* {
+    all: unset;
+}
+
+@import "./style/mixins.scss";
+@import "./style/menu.scss";
+@import "./style/music.scss";
+@import "./style/workspaces.scss";
+@import "./style/sysinfo.scss";
+
+.logo {
+    margin: 0.4rem 10rem 0.4rem 1rem;
+    border-radius: 8px;
+    background-color: $background;
+}
+
+.time {
+    font-size: 16px;
+    margin: 0.5rem 1.2rem 0.5rem 1rem;
+    padding-left: 0.4rem;
+    padding-right: 0.4rem;
+    border-radius: 8px;
+    background-color: $background;
+}

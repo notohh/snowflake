@@ -1,0 +1,27 @@
+@import "./mixins.scss";
+@import "./colors.scss";
+
+.workspaces {
+    @include widget-border-radius;
+    margin: 0.5rem 4rem 0.5rem 1rem;
+    padding-left: 1rem;
+    background-color: $background;
+}
+
+.ws0 {
+    color: $red;
+    @include workspace-font();
+}
+
+.ws1 {
+    color: $teal;
+    @include workspace-font();
+}
+.ws2 {
+    color: $cyan;
+    @include workspace-font();
+}
+.ws3 {
+    color: $blue;
+    @include workspace-font();
+}

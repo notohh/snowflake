@@ -1,0 +1,55 @@
+(defwidget bar-art []
+  (box
+    :space-evenly false
+    (box :class "music-cover"
+      :style "background-image:url('${musicCover}');")
+    (eventbox
+      :onclick "eww open music-widget"
+      (label :class "music"
+      :text "${musicTitle}"))))
+
+
+
+(defwidget music-widget []
+  (box :class "music-widget"
+    (box :class "music-cover-big"
+      :space-evenly false
+      :orientation "h"
+      :style "background-image:url('${musicCover}');")
+    (box
+      :orientation "v"
+      :space-evenly false
+      :spacing 0
+      (box
+        (button
+          :class "close-button"
+          :onclick "eww close music-widget"
+          (label :text "" :style "font-size: 18px; margin-right: 0.5rem;")))
+      (label :class "music-widget-title" :text "${musicTitle}")
+      (label :class "music-widget-title" :text "${musicArtist}")
+      (box :class "music-c")
+      (box :class "music-controls"
+        :valign "center"
+        (button :class "hover-play" :onclick "playerctl play" "")
+        (button :class "hover-pause" :onclick "playerctl pause" "")))))
+
+
+(defwidget music []
+  (box
+    (bar-art)))
+
+(defwindow music-widget
+  :monitor 2
+  :windowtype "dock"
+  :namespace "music-widget"
+  :geometry (geometry
+    :x "0"
+    :y "1.5%"
+    :width "42%"
+    :height "550px"
+  :anchor "top center")
+  :stacking "fg"
+  :windowtype "dock"
+  :wm-ignore true
+  :exclusive false
+  (music-widget))
