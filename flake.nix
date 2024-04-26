@@ -78,6 +78,7 @@
     atuin.url = "github:atuinsh/atuin";
     flake-parts.url = "github:hercules-ci/flake-parts";
     stylix.url = "github:danth/stylix";
+    eww.url = "github:elkowar/eww";
     deploy-rs = {
       url = "github:serokell/deploy-rs";
       inputs.nixpkgs.follows = "nixpkgs";
