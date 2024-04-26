@@ -14,9 +14,9 @@
   <img src="https://ci.flake.sh/api/badges/9/status.svg" alt="status-badge" />
 </a>
  <p></p>
-<img src="https://i.imgur.com/z1EFyMr.png"></img>
+<img src="https://i.imgur.com/s2zvbRt.png"></img>
 <p>
-  Screenshot updated: 2024-01-15 (bar is a heavy WIP)
+  Screenshot updated: 2024-04-26
 </p>
 <h4>
   :warning: this config is a constant WIP, 
