@@ -8,7 +8,7 @@
         "DP-3,1920x1080@144, 1400x0, auto" #top
       ];
       exec-once = [
-        # "ags"
+        "eww open bar"
         "hyprpaper"
         "chatterino"
         "dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
@@ -25,7 +25,7 @@
         gaps_in = 10;
         gaps_out = 20;
         border_size = 4;
-        "col.active_border" = "rgb(f7768e) rgb(c0caf5)";
+        "col.active_border" = "rgb(7dcfff) rgb(c0caf5)";
         "col.inactive_border" = "rgb(24283b)";
 
         layout = "dwindle";
