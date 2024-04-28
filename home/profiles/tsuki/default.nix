@@ -7,7 +7,7 @@
     ./stylix.nix
     ../../services
     ../../programs/anyrun
-    ../../programs/ironbar
+    ../../programs/eww
     ../../programs/browsers/firefox
     ../../programs/terminal/wezterm
     ../../programs/terminal/zellij
