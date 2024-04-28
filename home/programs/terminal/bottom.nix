@@ -9,7 +9,7 @@ _: {
         mem_as_value = true;
         enable_gpu = true;
         disable_advanced_kill = true;
-        unnormalized_cpu = true;
+        unnormalized_cpu = false;
         temperature_type = "c";
       };
     };
