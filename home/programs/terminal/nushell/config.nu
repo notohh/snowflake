@@ -9,7 +9,7 @@ alias la = eza -alughHo --git --icons --color always
 alias calc = eva
 alias c = clear
 alias f = yazi
-alias cat = bat --pager=never --plain
+alias cat = bat
 alias rm = rm -i
 alias cp = cp -i
 alias mv = mv -i
