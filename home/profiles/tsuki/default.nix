@@ -34,6 +34,7 @@
     obsidian-wayland
     virt-manager
     qbittorrent
+    miru
     hyprpicker
     imv
     mpv
