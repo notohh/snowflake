@@ -5,7 +5,6 @@
   imports = [
     ./programs/editors/helix
     ./programs/terminal/lazygit
-    ./programs/terminal/neofetch
     ./programs/terminal/nushell
     ./programs/terminal/yazi
     ./programs/terminal/atuin.nix
