@@ -11,11 +11,7 @@
     monitor = DP-2,2560x1440@144, 0x0, auto
     monitor = DP-3,disable
 
-    env = LIBVA_DRIVER_NAME,nvidia
     env = XDG_SESSION_TYPE,wayland
-    env = GBM_BACKEND,nvidia-drm
-    env = __GLX_VENDOR_LIBRARY_NAME,nvidia
-    env = WLR_NO_HARDWARE_CURSORS,1
 
     exec-once = ${pkgs.dbus}/bin/dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY XDG_CURRENT_DESKTOP HYPRLAND_INSTANCE_SIGNATURE
     exec-once = ${lib.getExe pkgs.greetd.regreet}; hyprctl dispatch exit
