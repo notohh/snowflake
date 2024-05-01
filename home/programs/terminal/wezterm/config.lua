@@ -3,11 +3,6 @@ local wezterm = require("wezterm")
 local config = {
 
 	front_end = "WebGpu",
-	webgpu_preferred_adapter = {
-		backend = "Vulkan",
-		device_type = "DiscreteGpu",
-		name = "NVIDIA GeForce GTX 1070 Ti",
-	},
 	color_scheme = "Tokyo Night",
 	enable_wayland = false,
 	font = wezterm.font("JetBrainsMono NF Medium"),
