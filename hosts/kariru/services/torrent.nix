@@ -2,7 +2,7 @@
   sops.secrets.gluetun = {};
   virtualisation.oci-containers.containers = {
     gluetun = {
-      image = "qmcgaw/gluetun@sha256:e15ede3ce007e3f6e3f6532c7d8d6051f4bb0dca4bb3c5edd7aa3316916e9990"; #v3.37.0
+      image = "qmcgaw/gluetun@sha256:5522794f5cce6d84bc7f06b1e3a3b836ede9100c64aec94543cb503bb2ecb72f"; #v3.38
       hostname = "gluetun";
       ports = [
         "8000:8000/tcp" # HTTP control server
@@ -17,7 +17,7 @@
       extraOptions = ["--cap-add=NET_ADMIN"];
     };
     qbittorrent = {
-      image = "linuxserver/qbittorrent@sha256:c388ef02586a7d37c708c63eef069025663f4ac99cd29c9480bc34018d8b4194"; # v4.6.3
+      image = "linuxserver/qbittorrent@sha256:a4a72bd8e7891ec1ba01cfc5cfcb34b4d7b78c47a05ed8966cd18bd44a016894"; # v4.6.4
       dependsOn = ["gluetun"];
       environment = {
         PUID = "1001";

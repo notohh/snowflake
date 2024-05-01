@@ -37,7 +37,7 @@
 
   virtualisation.oci-containers.containers = {
     whisparr = {
-      image = "ghcr.io/hotio/whisparr@sha256:88b91920b77339e2deda418960be28868df538413abea6cdddaf4013e43c4c0f"; # v3-3.0.0.425
+      image = "ghcr.io/hotio/whisparr@sha256:d66f5dc01af747881e25b8e72aa45de30fba672c16df897af69257704fb61fe4"; # v3-3.0.0.545
       ports = ["6969:6969"];
       volumes = [
         "/var/lib/whisparr:/config"
@@ -47,7 +47,7 @@
       extraOptions = ["--network=host"];
     };
     flaresolverr = {
-      image = "ghcr.io/flaresolverr/flaresolverr@sha256:213bb58aa341a0188e64ce2c21e1c5748b167c719828bc61dd904eb0fb1aec63"; # v3.3.13
+      image = "ghcr.io/flaresolverr/flaresolverr@sha256:5f5661db1e69a6f80ac24d47d9fa5580f6f741ee5ec967818396ae0dacecd7ea"; # v3.3.17
       ports = ["8191:8191"];
       extraOptions = ["--network=host"];
     };
