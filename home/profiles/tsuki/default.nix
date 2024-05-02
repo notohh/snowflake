@@ -46,6 +46,7 @@
     wine
     bottles
     prismlauncher
+    heroic
     inputs.nix-gaming.packages.${pkgs.system}.osu-lazer-bin
     (callPackage ../../../pkgs/chatterino7 {})
   ];
