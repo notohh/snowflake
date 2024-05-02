@@ -6,7 +6,6 @@
 }: {
   imports = [
     (modulesPath + "/installer/scan/not-detected.nix")
-    #  ./disko-config.nix
   ];
 
   boot = {
@@ -29,20 +28,19 @@
   };
 
   fileSystems = {
+    "/" = {
+      device = "/dev/disk/by-uuid/a423d32f-ac5d-4ea2-82fb-f94b05afce29";
+      fsType = "ext4";
+    };
+    "/boot/efi" = {
+      device = "/dev/disk/by-uuid/FEAF-138A";
+      fsType = "vfat";
+    };
     "/nas/restic" = {
       device = "192.168.1.199:/mnt/Sutoreji/nix-restic-data/tsuki";
       fsType = "nfs";
     };
-    "/nas/ISOS" = {
-      device = "192.168.1.199:/mnt/Sutoreji/ISOS";
-      fsType = "nfs";
-    };
-    "/nas/osu-backups" = {
-      device = "192.168.1.199:/mnt/Sutoreji/osu-backups";
-      fsType = "nfs";
-    };
   };
-
   networking.useDHCP = lib.mkDefault true;
 
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
