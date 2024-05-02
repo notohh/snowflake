@@ -1,6 +1,6 @@
 {pkgs, ...}: {
   home.packages = with pkgs; [
-    eww-wayland
+    eww
     playerctl
     imagemagick
   ];
