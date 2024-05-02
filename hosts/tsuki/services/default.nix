@@ -1,7 +1,7 @@
 {...}: {
   imports = [
     ./restic.nix
-    #   ./atticd.nix
+    ./atticd.nix
     ./hydroxide.nix
   ];
 }
