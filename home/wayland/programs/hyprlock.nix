@@ -14,21 +14,21 @@
         brightness = 0.5;
       }
       {
-        monitor = "DP-1";
+        monitor = "DP-3";
         path = verticalWallpaper;
         blur_passes = 3;
         blur_size = 4;
         brightness = 0.5;
       }
       {
-        monitor = "DP-2";
+        monitor = "DP-1";
         path = horizontalWallpaper;
         blur_passes = 3;
         blur_size = 4;
         brightness = 0.5;
       }
       {
-        monitor = "DP-3";
+        monitor = "DP-2";
         path = horizontalWallpaper;
         blur_passes = 3;
         blur_size = 4;

@@ -10,9 +10,9 @@
     ];
     wallpapers = [
       "HDMI-A-1,~/Pictures/wallpapers/sparkle3.png"
-      "DP-1,~/Pictures/wallpapers/sparkle3.png"
+      "DP-1,~/Pictures/wallpapers/sparkle4.png"
       "DP-2,~/Pictures/wallpapers/sparkle4.png"
-      "DP-3,~/Pictures/wallpapers/sparkle4.png"
+      "DP-3,~/Pictures/wallpapers/sparkle3.png"
     ];
   };
 }
