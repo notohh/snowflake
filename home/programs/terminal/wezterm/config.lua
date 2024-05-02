@@ -3,6 +3,12 @@ local wezterm = require("wezterm")
 local config = {
 
 	front_end = "WebGpu",
+	webgpu_preferred_adapter = {
+		backend = "Vulkan",
+		device_type = "DiscreteGpu",
+		name = "AMD Radeon RX 6750 XT (RADV NAVI22)",
+	},
+
 	color_scheme = "Tokyo Night",
 	enable_wayland = false,
 	font = wezterm.font("JetBrainsMono NF Medium"),
