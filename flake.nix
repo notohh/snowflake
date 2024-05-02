@@ -73,7 +73,6 @@
     yazi.url = "github:sxyazi/yazi";
     helix.url = "github:helix-editor/helix";
     pre-commit-hooks.url = "github:cachix/pre-commit-hooks.nix";
-    wezterm.url = "github:notohh/wezterm?dir=nix&ref=nix-add-overlay";
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
     atuin.url = "github:atuinsh/atuin";
     flake-parts.url = "github:hercules-ci/flake-parts";
