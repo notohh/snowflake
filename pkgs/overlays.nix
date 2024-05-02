@@ -7,17 +7,17 @@
       (final: prev: {
         spotify-player = prev.spotify-player.overrideAttrs (old: rec {
           pname = "spotify-player";
-          version = "0.17.0";
+          version = "0.18.1";
           src = prev.fetchFromGitHub {
             owner = "aome510";
             repo = pname;
             rev = "refs/tags/v${version}";
-            hash = "sha256-fGDIlkTaRg+J6YcP9iBcJFuYm9F0UOA+v/26hhdg9/o=";
+            hash = "sha256-3nPESnBWaxWjWMvRG7gbXt8FzuPlx2soOonCKom+tzA=";
           };
           cargoDeps = old.cargoDeps.overrideAttrs (lib.const {
             name = "spotify-player.tar.gz";
             inherit src;
-            outputHash = "sha256-6AdIU4Q5nxsZW9cRoRI/Zn7EQ3ZJ/EYSFfXIeatT8sY=";
+            outputHash = "sha256-fzFWSPRPWYSiBzbW7OWODahckuzFahdt09V5WKC3Pmo=";
           });
         });
       })

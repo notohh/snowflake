@@ -11,13 +11,13 @@
 }:
 stdenv.mkDerivation rec {
   pname = "chatterino7";
-  version = "7.5.0";
+  version = "7.5.1";
 
   src = fetchFromGitHub {
     owner = "SevenTV";
     repo = pname;
     rev = "v${version}";
-    sha256 = "sha256-/L6X0/03e5wSa+cVlh1Tynz90sMEjSeJm4Ca07f7s18=";
+    sha256 = "sha256-T0H+p9hyNd73gETwLilXN0uzcF75TJgx/LzHqnC099M=";
     fetchSubmodules = true;
   };
 
