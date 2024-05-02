@@ -4,7 +4,6 @@
       inputs.nur.overlay
       inputs.helix.overlays.default
       inputs.yazi.overlays.default
-      inputs.wezterm.overlays.default
       inputs.hyprland.overlays.default
       inputs.hypridle.overlays.default
       inputs.hyprlock.overlays.default
