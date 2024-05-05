@@ -38,7 +38,7 @@
       unrar
       p7zip
       procs
-      #  atac
+      atac
     ];
     stateVersion = "23.05";
   };
