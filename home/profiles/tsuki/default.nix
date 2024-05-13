@@ -23,7 +23,7 @@
   ];
 
   home.packages = with pkgs; [
-    discord
+    vesktop
     signal-desktop
     thunderbird
     obs-studio
