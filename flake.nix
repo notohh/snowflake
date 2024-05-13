@@ -55,7 +55,8 @@
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
 
-    hyprland.url = "github:hyprwm/Hyprland";
+    ### hypr
+    hyprland.url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
     hypridle.url = "github:hyprwm/hypridle";
     hyprlock.url = "github:hyprwm/hyprlock";
     hyprpicker.url = "github:hyprwm/hyprpicker";
@@ -67,6 +68,7 @@
       inputs.hyprland.follows = "hyprland";
     };
 
+    ### other stuff
     nix-gaming.url = "github:fufexan/nix-gaming";
     attic.url = "github:zhaofengli/attic";
     nur.url = "github:nix-community/NUR";
@@ -78,12 +80,9 @@
     flake-parts.url = "github:hercules-ci/flake-parts";
     stylix.url = "github:danth/stylix";
     eww.url = "github:elkowar/eww";
+    anyrun.url = "github:Kirottu/anyrun";
     deploy-rs = {
       url = "github:serokell/deploy-rs";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-    disko = {
-      url = "github:nix-community/disko";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     sops-nix = {
@@ -92,10 +91,6 @@
     };
     home-manager = {
       url = "github:nix-community/home-manager";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-    anyrun = {
-      url = "github:Kirottu/anyrun";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
