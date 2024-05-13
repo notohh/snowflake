@@ -6,20 +6,11 @@
   flake.nixosConfigurations = let
     inherit (inputs.nixpkgs.lib) nixosSystem;
     specialArgs = {inherit inputs;};
-    sopsModule = inputs.sops-nix.nixosModules.sops;
-    hmModule = inputs.home-manager.nixosModules.home-manager;
-    atticModule = inputs.attic.nixosModules.atticd;
-    nurModule = inputs.nur.nixosModules.nur;
-    t480Module = inputs.nixos-hardware.nixosModules.lenovo-thinkpad-t480;
   in {
     tsuki = nixosSystem {
       inherit specialArgs;
       modules = [
         ./tsuki
-        sopsModule
-        hmModule
-        atticModule
-        nurModule
         {
           home-manager = {
             useGlobalPkgs = true;
@@ -36,9 +27,6 @@
       inherit specialArgs;
       modules = [
         ./ame
-        sopsModule
-        hmModule
-        t480Module
         {
           home-manager = {
             useGlobalPkgs = true;
@@ -55,8 +43,6 @@
       inherit specialArgs;
       modules = [
         ./sakura
-        sopsModule
-        hmModule
         {
           home-manager = {
             useGlobalPkgs = true;
@@ -73,8 +59,6 @@
       inherit specialArgs;
       modules = [
         ./kariru
-        sopsModule
-        hmModule
         {
           home-manager = {
             useGlobalPkgs = true;
@@ -91,8 +75,6 @@
       inherit specialArgs;
       modules = [
         ./yuki
-        sopsModule
-        hmModule
         {
           home-manager = {
             useGlobalPkgs = true;
@@ -109,8 +91,6 @@
       inherit specialArgs;
       modules = [
         ./arashi
-        sopsModule
-        hmModule
         {
           home-manager = {
             useGlobalPkgs = true;
@@ -127,9 +107,6 @@
       inherit specialArgs;
       modules = [
         ./sora
-        sopsModule
-        atticModule
-        hmModule
         {
           home-manager = {
             useGlobalPkgs = true;
@@ -146,8 +123,6 @@
       inherit specialArgs;
       modules = [
         ./tsuru
-        sopsModule
-        hmModule
         {
           home-manager = {
             useGlobalPkgs = true;
@@ -164,8 +139,6 @@
       inherit specialArgs;
       modules = [
         ./haru
-        sopsModule
-        hmModule
         {
           home-manager = {
             useGlobalPkgs = true;
@@ -182,8 +155,6 @@
       inherit specialArgs;
       modules = [
         ./kaze
-        sopsModule
-        hmModule
         {
           home-manager = {
             useGlobalPkgs = true;

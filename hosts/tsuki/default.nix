@@ -9,6 +9,7 @@
     ./hardware.nix
     ./services
     ./networking.nix
+    ../common.nix
     ../../home/wayland
     ../../modules
     ../../modules/fonts.nix

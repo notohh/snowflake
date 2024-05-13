@@ -1,8 +1,11 @@
 {
+  inputs,
   config,
   pkgs,
   ...
 }: {
+  imports = [inputs.attic.nixosModules.atticd];
+
   sops.secrets.attic = {};
 
   environment.systemPackages = [pkgs.attic];

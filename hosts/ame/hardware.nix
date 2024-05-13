@@ -1,4 +1,5 @@
 {
+  inputs,
   config,
   lib,
   modulesPath,
@@ -6,6 +7,7 @@
 }: {
   imports = [
     (modulesPath + "/installer/scan/not-detected.nix")
+    inputs.nixos-hardware.nixosModules.lenovo-thinkpad-t480
   ];
 
   boot = {
@@ -18,11 +20,19 @@
       };
       efi = {
         canTouchEfiVariables = true;
+        efiSysMountPoint = "/boot/efi";
       };
     };
     initrd = {
       availableKernelModules = ["xhci_pci" "ahci" "usb_storage" "sd_mod"];
       kernelModules = [];
+    };
+  };
+
+  fileSystems = {
+    "/" = {
+      device = "/dev/disk/by-uuid";
+      fsType = "ext4";
     };
   };
 
