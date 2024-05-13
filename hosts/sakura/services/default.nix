@@ -9,6 +9,6 @@
     ./vaultwarden.nix
     # ./conduit.nix
     ./tailscale.nix
-    ./justlog.nix
+    ./rustlog.nix
   ];
 }

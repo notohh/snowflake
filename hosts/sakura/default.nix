@@ -3,10 +3,9 @@ _: {
     ./hardware.nix
     ./services
     ./networking.nix
+    ../common.nix
     ../../modules
   ];
-
-  services.snowflake-proxy.enable = true;
 
   users = {
     users.notoh.openssh.authorizedKeys.keys = [

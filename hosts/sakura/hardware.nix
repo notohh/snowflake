@@ -27,8 +27,8 @@
       device = "/dev/disk/by-uuid/db3e4722-35a6-44fb-8e4d-a75166b845cb";
       fsType = "ext4";
     };
-    "/home/notoh/justlog/logs" = {
-      device = "192.168.1.199:/mnt/Sutoreji/twitchlogs";
+    "/home/notoh/rustlog/clickhouse" = {
+      device = "192.168.1.199:/mnt/Sutoreji/twitchlogs-rustlog";
       fsType = "nfs";
     };
     "/nas/restic" = {
