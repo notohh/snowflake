@@ -4,11 +4,9 @@
       inputs.nur.overlay
       inputs.helix.overlays.default
       inputs.yazi.overlays.default
-      inputs.hyprland.overlays.default
       inputs.hypridle.overlays.default
       inputs.hyprlock.overlays.default
       inputs.hyprpicker.overlays.default
-      inputs.hyprcursor.overlays.default
       inputs.atuin.overlays.default
       inputs.eww.overlays.default
     ];
@@ -31,6 +29,7 @@
   };
 
   nix = {
+    channel.enable = false;
     settings = {
       extra-experimental-features = ["flakes" "nix-command"];
       warn-dirty = false;
@@ -38,6 +37,7 @@
       builders-use-substitutes = true;
       keep-outputs = true;
       keep-derivations = true;
+      flake-registry = "/etc/nix/registry.json";
       allowed-users = ["@wheel"];
       trusted-users = ["root" "@wheel"];
       substituters = [
