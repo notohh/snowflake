@@ -1,6 +1,14 @@
 @import "./mixins.scss";
 @import "./colors.scss";
 
+.menu-widget {
+    font-size: 20px;
+    margin: 0.5rem 1.2rem 0.5rem 1.5rem;
+    padding-right: 0.3rem;
+    border-radius: 8px;
+    background-color: $background;
+}
+
 .menubox {
     border: 3px solid $background-highlight;
     border-radius: 10px;
@@ -30,14 +38,6 @@
         transition: all 100ms ease;
         color: $background-highlight;
     }
-}
-
-.menu-widget {
-    font-size: 20px;
-    margin: 0.5rem 1.2rem 0.5rem 0.9rem;
-    padding-right: 0.3rem;
-    border-radius: 8px;
-    background-color: $background;
 }
 
 .cpu {

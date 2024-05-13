@@ -1,6 +1,6 @@
 (deflisten musicArtist :initial "-" "playerctl --follow metadata --format '{{ artist }}'")
 (deflisten musicTitle :initial "-" "playerctl --follow metadata --format '{{title}}'")
-(deflisten musicCover "sh ~/.config/eww/scripts/get-music-cover.sh ~/.config/eww/cache_directory")
+(deflisten musicCover "sh /home/notoh/snowflake/home/programs/eww/config/scripts/get-music-cover.sh /tmp/eww/cache_directory")
 
 
 (defpoll time :interval "60s"

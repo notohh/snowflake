@@ -56,18 +56,26 @@
     border: 3px solid $background-highlight;
 }
 
-.hover-play:hover {
-    background-color: $green;
-    transition: all 100ms ease-in;
-    color: $background-highlight;
+.hover-play {
+    transition: all 200ms ease;
     border-radius: 5px;
+    &:hover {
+        background-color: $green;
+        transition: all 200ms ease;
+        color: $background-highlight;
+        border-radius: 5px;
+    }
 }
 
-.hover-pause:hover {
-    background-color: $red;
-    transition: all 200ms ease-in;
-    color: $background-highlight;
+.hover-pause {
+    transition: all 200ms ease;
     border-radius: 5px;
+    &:hover {
+        background-color: $red;
+        transition: all 200ms ease;
+        color: $background-highlight;
+        border-radius: 5px;
+    }
 }
 
 .close-button {

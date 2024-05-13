@@ -33,7 +33,7 @@
 
 
 (defwindow bar
-  :monitor 2
+  :monitor 1
   :windowtype "dock"
   :geometry (geometry
     :x "0%"
