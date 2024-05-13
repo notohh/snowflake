@@ -6,6 +6,7 @@
       inputs.yazi.overlays.default
       inputs.hypridle.overlays.default
       inputs.hyprlock.overlays.default
+      inputs.hyprpaper.overlays.default
       inputs.hyprpicker.overlays.default
       inputs.atuin.overlays.default
       inputs.eww.overlays.default
