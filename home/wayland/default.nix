@@ -12,7 +12,6 @@
       slurp
       satty
       wl-clipboard
-      wlr-randr
     ];
     sessionVariables = {
       __GL_GSYNC_ALLOWED = "0";
@@ -24,8 +23,6 @@
       QT_WAYLAND_DISABLE_WINDOWDECORATION = "1";
       GDK_BACKEND = "wayland";
       MOZ_ENABLE_WAYLAND = "1";
-      WLR_BACKEND = "vulkan";
-      WLR_RENDERER = "vulkan";
       XCURSOR_SIZE = "24";
       NIXOS_OZONE_WL = "1";
       EDITOR = "hx";
