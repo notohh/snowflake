@@ -1,26 +1,25 @@
 {
-  inputs,
   pkgs,
   lib,
   config,
   ...
 }: {
-  imports = [inputs.hypridle.homeManagerModules.default];
   services.hypridle = {
     enable = true;
-    ignoreDbusInhibit = false;
-    lockCmd = lib.getExe config.programs.hyprlock.package;
-    beforeSleepCmd = "${pkgs.systemd}/bin/loginctl lock-session";
-    listeners = [
-      {
-        timeout = 400;
-        onTimeout = "${lib.getExe config.programs.hyprlock.package}";
-      }
-      {
-        timeout = 460;
-        onTimeout = "${config.wayland.windowManager.hyprland.package}/bin/hyprctl dispatch dpms off";
-        onResume = "${config.wayland.windowManager.hyprland.package}/bin/hyprctl dispatch dpms on";
-      }
-    ];
+    settings = {
+      ignoreDbusInhibit = false;
+      lockCmd = lib.getExe config.programs.hyprlock.package;
+      beforeSleepCmd = "${pkgs.systemd}/bin/loginctl lock-session";
+      listeners = [
+        {
+          timeout = 400;
+          onTimeout = "${lib.getExe config.programs.hyprlock.package}";
+        }
+        {
+          timeout = 460;
+          onTimeout = "${pkgs.systemd}/bin/systemctl suspend";
+        }
+      ];
+    };
   };
 }
