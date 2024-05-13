@@ -4,7 +4,6 @@ _: {
       "noshadow, floating:0"
       "float, title:^(Volume Control)$"
       "float, title:^(Picture in picture)$"
-      "float, title:^(Steam)$"
       "float, title:^(Friends List)$"
       "float, title:^(Cryptomator)$"
       "float, title:^(RuneLite)$"
