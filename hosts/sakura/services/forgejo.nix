@@ -12,10 +12,13 @@ in {
   services.forgejo = {
     enable = true;
     stateDir = "/var/lib/forgejo";
+    lfs.enable = true;
     settings = {
       service.DISABLE_REGISTRATION = true;
       DEFAULT.APP_NAME = "forgejo";
       log.LEVEL = "Debug";
+      packages.ENABLED = true;
+      federation.ENABLED = true;
       ui = {
         DEFAULT_THEME = "forgejo-dark";
         SHOW_USER_EMAIL = true;
@@ -42,7 +45,8 @@ in {
         CLONE = 3600;
       };
       session = {
-        COOKIE_SECURE = true;
+        PROVIDER = "redis";
+        PROVIDER_CONFIG = "redis://:forgejo@${dbHost}:6379";
       };
       security = {
         LOGIN_REMEMBER_DAYS = 14;
