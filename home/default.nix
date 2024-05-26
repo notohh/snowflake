@@ -39,6 +39,7 @@
       p7zip
       procs
       atac
+      navi
     ];
     stateVersion = "23.05";
   };
