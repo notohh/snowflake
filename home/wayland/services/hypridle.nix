@@ -1,27 +1,27 @@
 {
-  inputs,
   pkgs,
   lib,
   config,
   ...
 }: {
-  imports = [inputs.hypridle.homeManagerModules.default];
-  disabledModules = ["${inputs.home-manager}/modules/services/hypridle.nix"];
-
   services.hypridle = {
     enable = true;
-    ignoreDbusInhibit = false;
-    lockCmd = lib.getExe config.programs.hyprlock.package;
-    beforeSleepCmd = "${pkgs.systemd}/bin/loginctl lock-session";
-    listeners = [
-      {
-        timeout = 400;
-        onTimeout = "${lib.getExe config.programs.hyprlock.package}";
-      }
-      {
-        timeout = 460;
-        onTimeout = "${pkgs.systemd}/bin/systemctl suspend";
-      }
-    ];
+    settings = {
+      general = {
+        ignore_dbus_inhibit = false;
+        lock_cmd = lib.getExe config.programs.hyprlock.package;
+        before_sleep_cmd = "${pkgs.systemd}/bin/loginctl lock-session";
+      };
+      listener = [
+        {
+          timeout = 400;
+          on-timeout = "${lib.getExe config.programs.hyprlock.package}";
+        }
+        {
+          timeout = 460;
+          on-timeout = "${pkgs.systemd}/bin/systemctl suspend";
+        }
+      ];
+    };
   };
 }
