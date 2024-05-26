@@ -6,6 +6,7 @@
   imports = [
     inputs.nix-gaming.nixosModules.pipewireLowLatency
     inputs.nix-gaming.nixosModules.platformOptimizations
+    inputs.hyprland.nixosModules.default
     ./hardware.nix
     ./services
     ./networking.nix
@@ -17,6 +18,12 @@
   ];
 
   virtualisation.libvirtd.enable = true;
+
+  programs.hyprland = {
+    enable = true;
+    #  finalPackage = inputs.hyprland.packages.${pkgs.system}.default;
+    portalPackage = inputs.xdg-portal-hyprland.packages.${pkgs.system}.default;
+  };
 
   services = {
     pcscd.enable = true;
