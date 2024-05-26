@@ -10,7 +10,7 @@ local config = {
 	},
 
 	color_scheme = "Tokyo Night",
-	enable_wayland = false,
+	enable_wayland = true,
 	font = wezterm.font("JetBrainsMono NF Medium"),
 	font_size = 12.0,
 	window_background_opacity = 0.6,
