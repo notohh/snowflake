@@ -10,6 +10,7 @@
       inputs.hyprpicker.overlays.default
       inputs.atuin.overlays.default
       inputs.eww.overlays.default
+      inputs.wezterm.overlays.default
     ];
     config = {
       allowUnfree = true;
@@ -38,7 +39,6 @@
       builders-use-substitutes = true;
       keep-outputs = true;
       keep-derivations = true;
-      flake-registry = "/etc/nix/registry.json";
       allowed-users = ["@wheel"];
       trusted-users = ["root" "@wheel"];
       substituters = [
