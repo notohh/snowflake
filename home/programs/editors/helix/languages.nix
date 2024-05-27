@@ -83,15 +83,23 @@
           feature_paths = true;
         };
       };
+      rust-analyzer.config = {
+        checkOnSave.command = "clippy";
+        inlayHints = {
+          closingBraceHints.enable = false;
+          parameterHints.enable = false;
+          typeHints.enable = true;
+        };
+      };
       nil = {
         command = lib.getExe nil;
       };
-      vscode-css-language-server = {
-        command = "${nodePackages.vscode-css-languageserver-bin}/bin/css-languageserver";
+      vscode-css-language-server = with pkgs.nodePackages; {
+        command = lib.getExe vscode-css-languageserver-bin;
         args = ["--stdio"];
       };
       typescript-language-server = with pkgs.nodePackages; {
-        command = "${typescript-language-server}/bin/typescript-language-server";
+        command = lib.getExe typescript-language-server;
         args = ["--stdio"];
       };
       lua = {
@@ -104,14 +112,6 @@
       ruff = {
         command = lib.getExe ruff;
         args = ["server" "--preview"];
-      };
-      rust-analyzer.config = {
-        checkOnSave.command = "clippy";
-        inlayHints = {
-          closingBraceHints.enable = false;
-          parameterHints.enable = false;
-          typeHints.enable = true;
-        };
       };
     };
   };
