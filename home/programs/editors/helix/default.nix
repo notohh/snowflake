@@ -1,8 +1,9 @@
-{...}: {
+_: {
   imports = [
     ./languages.nix
     ./themes/tokyonight.nix
   ];
+
   programs.helix = {
     enable = true;
     defaultEditor = true;
