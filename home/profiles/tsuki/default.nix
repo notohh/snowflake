@@ -30,7 +30,6 @@
     pavucontrol
     anki-bin
     tomato-c
-    vscode-fhs
     obsidian-wayland
     virt-manager
     qbittorrent
@@ -47,6 +46,8 @@
     bottles
     prismlauncher
     heroic
+    r2modman
+
     inputs.nix-gaming.packages.${pkgs.system}.osu-lazer-bin
     (callPackage ../../../pkgs/chatterino7 {})
   ];
