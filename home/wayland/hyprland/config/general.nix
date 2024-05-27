@@ -24,14 +24,14 @@
       general = {
         gaps_in = 10;
         gaps_out = 20;
-        border_size = 4;
+        border_size = 0;
         "col.active_border" = "rgb(7dcfff) rgb(c0caf5)";
         "col.inactive_border" = "rgb(24283b)";
 
         layout = "dwindle";
       };
       decoration = {
-        rounding = 12;
+        rounding = 10;
         blur = {
           enabled = true;
           size = 6;
