@@ -1,5 +1,0 @@
-{
-  "yaml.schemas": {
-    "https://raw.githubusercontent.com/woodpecker-ci/woodpecker/main/pipeline/frontend/yaml/linter/schema/schema.json": "file:///home/notoh/snowflake/.woodpecker"
-  }
-}
