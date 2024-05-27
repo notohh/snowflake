@@ -72,7 +72,7 @@
     attic.url = "github:zhaofengli/attic";
     nur.url = "github:nix-community/NUR";
     yazi.url = "github:sxyazi/yazi";
-    helix.url = "github:helix-editor/helix";
+    helix.url = "github:SoraTenshi/helix/new-daily-driver";
     pre-commit-hooks.url = "github:cachix/pre-commit-hooks.nix";
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
     atuin.url = "github:atuinsh/atuin";
