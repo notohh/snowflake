@@ -30,7 +30,6 @@
     pavucontrol
     anki-bin
     tomato-c
-    obsidian-wayland
     virt-manager
     qbittorrent
     miru

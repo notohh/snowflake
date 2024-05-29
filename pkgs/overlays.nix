@@ -2,9 +2,6 @@
   nixpkgs = {
     overlays = [
       (final: prev: {
-        obsidian-wayland = prev.obsidian.override {electron = final.electron_24;};
-      })
-      (final: prev: {
         spotify-player = prev.spotify-player.overrideAttrs (old: rec {
           pname = "spotify-player";
           version = "0.18.2";
