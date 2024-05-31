@@ -41,6 +41,7 @@
         "$golang"
       ];
       right_format = lib.concatStrings [
+        "$direnv"
         "$nix_shell"
       ];
       character = {
@@ -54,7 +55,7 @@
       };
       hostname = {
         ssh_symbol = "🌐";
-        format = "[on $hostname $ssh_symbol]($style)";
+        format = "[$hostname $ssh_symbol]($style)";
         ssh_only = true;
         disabled = false;
       };
@@ -79,22 +80,29 @@
         unknown_msg = "[unknown shell](bold yellow)";
         format = "[$state( \($name\))](bold white)";
       };
+      direnv = {
+        disabled = false;
+        detect_files = [".envrc"];
+        style = "bold turquoise";
+      };
       git_branch = {
         symbol = "";
         format = "[$symbol $branch ]($style)";
-        style = "white";
+        style = "turquoise";
       };
       git_status = {
         format = "[$all_status$ahead_behind ]($style)";
         style = "red";
       };
       golang = {
-        symbol = " ";
+        symbol = "";
         format = "[$symbol ($version) ]($style)";
+        style = "teal";
       };
       rust = {
         symbol = "";
         format = "[$symbol ($version) ]($style)";
+        style = "orange";
       };
       time = {
         disabled = false;
