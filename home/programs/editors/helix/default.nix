@@ -2,13 +2,15 @@ _: {
   imports = [
     ./languages.nix
     ./themes/tokyonight.nix
+    ./themes/onedark.nix
+    ./themes/catppuccin_mocha.nix
   ];
 
   programs.helix = {
     enable = true;
     defaultEditor = true;
     settings = {
-      theme = "tokyonight";
+      theme = "onedark";
       editor = {
         auto-save = true;
         true-color = true;
@@ -24,9 +26,9 @@ _: {
           right = ["diagnostics" "selections" "position" "file-line-ending" "file-type" "version-control"];
           separator = "|";
           mode = {
-            normal = "NORMAL";
-            insert = "INSERT";
-            select = "SELECT";
+            normal = "NOR";
+            insert = "INS";
+            select = "SEL";
           };
         };
         cursor-shape = {

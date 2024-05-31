@@ -61,7 +61,7 @@ _: {
       "diff.delta" = {fg = orange;};
       "diff.minus" = {fg = red;};
 
-      "ui.background" = {fg = foreground;};
+      # "ui.background" = {fg = foreground;};
 
       "ui.cursor" = {modifiers = ["reversed"];};
       "ui.cursor.match" = {
@@ -69,27 +69,27 @@ _: {
         modifiers = ["bold"];
       };
       "ui.cursor.primary" = {modifiers = ["reversed"];};
-      "ui.cursorline.primary" = {bg = background_menu;};
+      # "ui.cursorline.primary" = {bg = background_menu;};
       "ui.help" = {
         fg = foreground;
-        bg = background_menu;
+        # bg = background_menu;
       };
       "ui.linenr" = {fg = foreground_gutter;};
       "ui.linenr.selected" = {fg = foreground;};
       "ui.menu" = {
         fg = foreground;
-        bg = background_menu;
+        # bg = background_menu;
       };
       "ui.menu.selected" = {bg = background_highlight;};
       "ui.popup" = {
         fg = foreground;
-        bg = background_menu;
+        # bg = background_menu;
       };
       "ui.selection" = {bg = background_highlight;};
       "ui.selection.primary" = {bg = background_highlight;};
       "ui.statusline" = {
         fg = foreground;
-        bg = background_menu;
+        #  bg = background_menu;
       };
       "ui.statusline.inactive" = {
         fg = foreground_gutter;
