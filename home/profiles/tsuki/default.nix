@@ -23,7 +23,9 @@
   ];
 
   home.packages = with pkgs; [
+    chromium
     vesktop
+    technorino
     signal-desktop
     thunderbird
     obs-studio
@@ -48,7 +50,8 @@
     r2modman
 
     inputs.nix-gaming.packages.${pkgs.system}.osu-lazer-bin
-    (callPackage ../../../pkgs/chatterino7 {})
+    (callPackage ../../../pkgs/passgen {})
+    (callPackage ../../../pkgs/forex {})
   ];
 
   programs.ssh = {
