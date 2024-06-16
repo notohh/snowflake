@@ -11,6 +11,7 @@
     ./anki-sync-server.nix
     ./paperless.nix
     ./hydroxide.nix
-    ./twitch-miner.nix
+    # ./twitch-miner.nix
+    ./botoh.nix
   ];
 }
