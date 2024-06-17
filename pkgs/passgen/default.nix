@@ -10,8 +10,8 @@ rustPlatform.buildRustPackage {
     domain = "git.flake.sh";
     owner = "notohh";
     repo = "passgen";
-    rev = "fa2181af70b5efa0376a5f6ffa937073b2201339";
-    sha256 = "sha256-E77mzceKBaXOjW/C/aHfUltt1Wb7RAzvJzhlgmbxkoE=";
+    rev = "4a01bd5faae893682e7011632bdda8f12c96ef49";
+    sha256 = "sha256-+a1B1Z/N7OsGTVmIBp/JJZYdvTerClHo7y1Bn419dlg=";
   };
 
   cargoSha256 = "sha256-A8W7Qz+8cy6sPjLBC5a4Brz+cCyGPeNM1f7oZ6pmfe0=";

@@ -13,6 +13,9 @@ in {
     enable = true;
     stateDir = "/var/lib/forgejo";
     lfs.enable = true;
+    secrets = {
+      mailer.PASSWD = config.sops.secrets.smtp2go-pwd.path;
+    };
     settings = {
       service.DISABLE_REGISTRATION = true;
       DEFAULT.APP_NAME = "forgejo";
@@ -77,7 +80,6 @@ in {
         USER = "forgejo-mailer";
       };
     };
-    mailerPasswordFile = config.sops.secrets.smtp2go-pwd.path;
   };
   services.fail2ban.jails.forgejo = {
     settings = {

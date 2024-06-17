@@ -29,7 +29,6 @@
     wl-clipboard
     swww
     hyprpicker
-    (libsForQt5.callPackage ../../../pkgs/chatterino7 {})
   ];
   programs.ssh = {
     enable = true;

@@ -11,7 +11,7 @@ local config = {
 
 	color_scheme = "Tokyo Night",
 	enable_wayland = true,
-	font = wezterm.font("Comic Code Ligatures"),
+	font = wezterm.font_with_fallback({ "Comic Code Ligatures", "JetBrainsMono NF Medium" }),
 	font_size = 12.0,
 	window_background_opacity = 0.6,
 	text_background_opacity = 1.0,

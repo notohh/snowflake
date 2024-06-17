@@ -46,7 +46,7 @@
     wine
     bottles
     prismlauncher
-    heroic
+    lutris
     r2modman
 
     inputs.nix-gaming.packages.${pkgs.system}.osu-lazer-bin
