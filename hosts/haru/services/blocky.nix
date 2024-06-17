@@ -83,6 +83,7 @@
             (\.|^)dscx\.akamaiedge\.net$
             (\.|^)wac\.phicdn\.net$
             *.flake.sh
+            *.clickhouse.com
           '';
         in {
           ads = [
