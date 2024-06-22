@@ -71,7 +71,7 @@
         preserve_split = true;
       };
       master = {
-        new_is_master = true;
+        new_status = "master";
       };
       gestures = {
         workspace_swipe = false;
