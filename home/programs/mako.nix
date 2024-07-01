@@ -7,6 +7,6 @@ _: {
     defaultTimeout = 5000;
     ignoreTimeout = true;
     anchor = "top-right";
-    output = "DP-2";
+    output = "DP-1";
   };
 }

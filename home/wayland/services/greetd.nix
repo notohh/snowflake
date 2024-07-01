@@ -7,8 +7,8 @@
   hyprlandGreetdConf = pkgs.writeText "hyprland-greetd-conf.conf" ''
 
     monitor = HDMI-A-1,disable
-    monitor = DP-1,disable
-    monitor = DP-2,2560x1440@144, 0x0, auto
+    monitor = DP-2,disable
+    monitor = DP-1,2560x1440@144, 0x0, auto
     monitor = DP-3,disable
 
     env = XDG_SESSION_TYPE,wayland

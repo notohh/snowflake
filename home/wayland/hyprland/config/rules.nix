@@ -14,6 +14,8 @@ _: {
       "size 1200 600, title:^(satty)$"
       "idleinhibit focus, class:^(mpv)$"
       "idleinhibit always, class:^(firefox)$, title:^(.*YouTube.*|.*Twitch.*)$"
+      "idleinhibit always, class:^(OBS Studio)$"
+      "idleinhibit always, class:^(Moonlight)$"
       "idleinhibit fullscreen, class:^(firefox)$"
     ];
     layerrule = [

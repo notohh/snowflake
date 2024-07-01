@@ -43,7 +43,7 @@ _: {
       };
       input-field = [
         {
-          monitor = "DP-2";
+          monitor = "DP-1";
           size = "350, 50";
           outline_thickness = 2;
           outer_color = "rgb(f7768e)";
@@ -67,7 +67,7 @@ _: {
       ];
       label = [
         {
-          monitor = "DP-2";
+          monitor = "DP-1";
           text = ''
             Hi, <i><span foreground="##f7768e">$USER</span></i>
           '';
@@ -80,7 +80,7 @@ _: {
           shadow_boost = 1.0;
         }
         {
-          monitor = "DP-2";
+          monitor = "DP-1";
           text = "$TIME";
           color = "rgb(c0caf5)";
           position = "0, 120";

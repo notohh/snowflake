@@ -39,7 +39,7 @@
     (bar-art)))
 
 (defwindow music-widget
-  :monitor 1
+  :monitor 0
   :windowtype "dock"
   :namespace "music-widget"
   :geometry (geometry
