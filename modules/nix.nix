@@ -28,7 +28,7 @@
   };
 
   nix = {
-    channel.enable = false;
+    channel.enable = true;
     settings = {
       extra-experimental-features = ["flakes" "nix-command"];
       warn-dirty = false;
