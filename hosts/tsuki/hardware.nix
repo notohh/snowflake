@@ -9,8 +9,7 @@
   ];
 
   boot = {
-    kernelModules = ["v4l2loopback" "kvm-amd"];
-    extraModulePackages = with config.boot.kernelPackages; [v4l2loopback.out];
+    kernelModules = ["kvm-amd"];
     loader = {
       systemd-boot = {
         enable = true;
