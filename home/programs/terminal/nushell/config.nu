@@ -36,6 +36,7 @@ alias receive = croc --relay "100.104.42.96:9009"
 alias ps = procs
 alias tail = tspin
 alias spotify = spotify_player
+alias atac =  atac --directory ~/.config/atac/
 nitch
 
 $env.config = {
