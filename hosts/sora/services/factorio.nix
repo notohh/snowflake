@@ -1,6 +1,7 @@
-_: {
+{pkgs, ...}: {
   services.factorio = {
-    enable = false;
+    enable = true;
+    package = pkgs.factorio-headless;
     public = false;
     lan = false;
     openFirewall = true;

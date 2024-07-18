@@ -11,7 +11,7 @@
 
     ### game servers
     # ./terraria.nix
-    # ./factorio.nix
+    ./factorio.nix
     # ./minecraft.nix
     # ./foundryvtt.nix
   ];
