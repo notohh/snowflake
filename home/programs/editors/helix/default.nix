@@ -31,6 +31,10 @@ _: {
             select = "SEL";
           };
         };
+        inline-diagnostics = {
+          cursor-line = "hint";
+          other-lines = "error";
+        };
         cursor-shape = {
           insert = "bar";
           normal = "block";

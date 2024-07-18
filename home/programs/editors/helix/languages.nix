@@ -94,10 +94,6 @@
       nil = {
         command = lib.getExe nil;
       };
-      vscode-css-language-server = with pkgs.nodePackages; {
-        command = lib.getExe vscode-css-languageserver-bin;
-        args = ["--stdio"];
-      };
       typescript-language-server = with pkgs.nodePackages; {
         command = lib.getExe typescript-language-server;
         args = ["--stdio"];
