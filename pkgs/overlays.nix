@@ -12,7 +12,7 @@
               owner = "2547techno";
               repo = "technorino";
               rev = "nightly-build";
-              sha256 = "sha256-PY+K1l29wwG8ddqTxOwkbKb8CQoOBwbOeCgn0VTDptM=";
+              hash = "sha256-PY+K1l29wwG8ddqTxOwkbKb8CQoOBwbOeCgn0VTDptM=";
             };
           });
       })
