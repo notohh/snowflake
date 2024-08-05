@@ -26,6 +26,8 @@
     chromium
     vesktop
     technorino
+    vscode-fhs
+    obsidian
     signal-desktop
     thunderbird
     obs-studio
@@ -48,10 +50,11 @@
     prismlauncher
     lutris
     r2modman
-
+    moonlight-qt
     inputs.nix-gaming.packages.${pkgs.system}.osu-lazer-bin
     (callPackage ../../../pkgs/passgen {})
     (callPackage ../../../pkgs/forex {})
+    (callPackage ../../../pkgs/cpm {})
   ];
 
   programs.ssh = {
