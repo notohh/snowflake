@@ -80,6 +80,11 @@
         name = "glorious-model-o-wireless";
         sensitivity = "-0.5";
       };
+      render = {
+        explicit_sync = 1;
+        explicit_sync_kms = 1;
+        direct_scanout = false;
+      };
       misc = {
         disable_hyprland_logo = true;
         mouse_move_enables_dpms = true;
