@@ -8,7 +8,7 @@
         openFirewall = true;
         port = 6379;
         bind = null;
-        databases = 16;
+        databases = 1;
         logLevel = "debug";
         requirePass = "forgejo";
         settings = {
@@ -20,7 +20,7 @@
         openFirewall = true;
         port = 6380;
         bind = null;
-        databases = 16;
+        databases = 1;
         logLevel = "debug";
         requirePass = "searxng";
         settings = {
@@ -32,7 +32,7 @@
         openFirewall = true;
         port = 6381;
         bind = null;
-        databases = 16;
+        databases = 1;
         logLevel = "debug";
         requirePass = "blocky";
         settings = {
@@ -44,7 +44,7 @@
         openFirewall = true;
         port = 6382;
         bind = null;
-        databases = 16;
+        databases = 1;
         logLevel = "debug";
         requirePass = "paperless-ngx";
         settings = {
