@@ -17,7 +17,7 @@ rustPlatform.buildRustPackage {
   nativeBuildInputs = [pkgs.pkg-config];
   buildInputs = [pkgs.openssl];
 
-  cargoSha256 = "sha256-j3FtsrxAvPX2UhMjtLXyWsmLEEn/ZQ6R9nH6PSG844c=";
+  cargoHash = "sha256-j3FtsrxAvPX2UhMjtLXyWsmLEEn/ZQ6R9nH6PSG844c=";
 
   meta = with lib; {
     description = "Chatterino Plugin Manager ";

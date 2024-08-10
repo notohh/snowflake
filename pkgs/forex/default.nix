@@ -18,7 +18,7 @@ rustPlatform.buildRustPackage {
   nativeBuildInputs = [pkgs.pkg-config];
   buildInputs = [pkgs.openssl];
 
-  cargoSha256 = "sha256-COWFG766DVWXbGm8raVSH1nBpsS5HdTat5BHzv7QR4o=";
+  cargoHash = "sha256-COWFG766DVWXbGm8raVSH1nBpsS5HdTat5BHzv7QR4o=";
 
   meta = with lib; {
     description = "a CLI currency converter, written in rust, for practice";

@@ -14,7 +14,7 @@ rustPlatform.buildRustPackage {
     sha256 = "sha256-+a1B1Z/N7OsGTVmIBp/JJZYdvTerClHo7y1Bn419dlg=";
   };
 
-  cargoSha256 = "sha256-A8W7Qz+8cy6sPjLBC5a4Brz+cCyGPeNM1f7oZ6pmfe0=";
+  cargoHash = "sha256-A8W7Qz+8cy6sPjLBC5a4Brz+cCyGPeNM1f7oZ6pmfe0=";
 
   meta = with lib; {
     description = "password generator for rust practice";
