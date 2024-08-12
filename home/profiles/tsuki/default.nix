@@ -51,6 +51,8 @@
     lutris
     r2modman
     moonlight-qt
+    kitty
+    tetrio-desktop
     inputs.nix-gaming.packages.${pkgs.system}.osu-lazer-bin
     (callPackage ../../../pkgs/passgen {})
     (callPackage ../../../pkgs/forex {})
