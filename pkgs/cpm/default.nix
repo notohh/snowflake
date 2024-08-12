@@ -23,7 +23,7 @@ rustPlatform.buildRustPackage {
     description = "Chatterino Plugin Manager ";
     mainProgram = "cpm";
     homepage = "https://github.com/2547techno/cpm";
-    license = licenses.mit;
+    license = licenses.gpl3;
     maintainers = with maintainers; [notohh];
   };
 }
