@@ -10,7 +10,7 @@
       inputs.hyprpicker.overlays.default
       inputs.atuin.overlays.default
       inputs.eww.overlays.default
-      inputs.wezterm.overlays.default
+      #     inputs.wezterm.overlays.default
     ];
     config = {
       allowUnfree = true;

@@ -80,7 +80,7 @@
     stylix.url = "github:danth/stylix";
     eww.url = "github:elkowar/eww";
     anyrun.url = "github:Kirottu/anyrun";
-    wezterm.url = "github:notohh/wezterm?dir=nix&ref=nix-add-overlay";
+    #  wezterm.url = "github:notohh/wezterm?dir=nix&ref=nix-add-overlay";
     deploy-rs = {
       url = "github:serokell/deploy-rs";
       inputs.nixpkgs.follows = "nixpkgs";
