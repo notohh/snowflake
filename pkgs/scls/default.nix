@@ -9,11 +9,11 @@ rustPlatform.buildRustPackage {
   src = fetchFromGitHub {
     owner = "estin";
     repo = "simple-completion-language-server";
-    rev = "3edd6209fffd204d689fb3b0afb0e51ad90f0af2";
-    hash = "sha256-iccwhZhwYLxjhCLj8kRLqlL1F9TjZ57BogqlbKgCsKM=";
+    rev = "232aab4775c35a5d79ce38aa81a6724007aa0b59";
+    hash = "sha256-gwBQu1xf4rmDbOzvxXzQsHJr4faOECmRwyT7MR+pPyI=";
   };
 
-  cargoHash = "sha256-nxLnlBfqcA64npPccuE00JxCLGi4eU9nWyU0PSVdKpE=";
+  cargoHash = "sha256-hwF3qSlv/wZhJh1kIxm/U0ZpnAZpiMzUe0OncGBlclk=";
 
   doCheck = false;
 
