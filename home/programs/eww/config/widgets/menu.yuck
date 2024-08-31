@@ -50,7 +50,7 @@
     )
     (box :class "menubox-widgets"
       :orientation "h"
-      (button :class "menubox-widgets text" :onclick "reboot now" "")
+      (button :class "menubox-widgets text" :onclick "reboot" "")
       (button :class "menubox-widgets text" :onclick "shutdown now" "")
       (button :class "menubox-widgets text" :onclick "eww close menu-window" "")))
 )
