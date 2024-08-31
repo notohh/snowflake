@@ -84,6 +84,7 @@
             (\.|^)wac\.phicdn\.net$
             *.flake.sh
             *.clickhouse.com
+            *.discord.com
           '';
         in {
           ads = [
