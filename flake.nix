@@ -81,6 +81,9 @@
     eww.url = "github:elkowar/eww";
     anyrun.url = "github:Kirottu/anyrun";
     #  wezterm.url = "github:notohh/wezterm?dir=nix&ref=nix-add-overlay";
+
+    botoh.url = "git+https://git.flake.sh/notohh/botoh";
+    zen-browser.url = "github:MarceColl/zen-browser-flake";
     deploy-rs = {
       url = "github:serokell/deploy-rs";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -93,6 +96,5 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    botoh.url = "git+https://git.flake.sh/notohh/botoh";
   };
 }
