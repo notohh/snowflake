@@ -8,7 +8,7 @@
     ../../services
     ../../programs/anyrun
     ../../programs/eww
-    ../../programs/browsers/firefox
+    # ../../programs/browsers/firefox
     ../../programs/terminal/wezterm
     ../../programs/terminal/zellij
     ../../programs/media/cava.nix
@@ -21,7 +21,6 @@
     ../../wayland/services/hyprpaper.nix
     ../../wayland/programs/hyprlock.nix
   ];
-
   home.packages = with pkgs; [
     chromium
     vesktop
@@ -53,7 +52,9 @@
     moonlight-qt
     kitty
     tetrio-desktop
+    waydroid
     inputs.nix-gaming.packages.${pkgs.system}.osu-lazer-bin
+    inputs.zen-browser.packages.${pkgs.system}.default
     (callPackage ../../../pkgs/passgen {})
     (callPackage ../../../pkgs/forex {})
     (callPackage ../../../pkgs/cpm {})
