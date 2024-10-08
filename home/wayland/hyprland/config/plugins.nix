@@ -3,16 +3,16 @@
   inputs,
   ...
 }: {
+  wayland.windowManager.hyprland.plugins = [
+    inputs.hyprland-plugins.packages.${pkgs.system}.csgo-vulkan-fix
+  ];
   wayland.windowManager.hyprland.settings = {
-    plugins = [
-      inputs.hyprland-plugins.packages.${pkgs.system}.hyprexpo
-    ];
     plugin = {
-      hyprexpo = {
-        columns = 3;
-        gap_size = 5;
-        bg_col = "rgb(111111)";
-        workspace_method = "center current";
+      csgo-vulkan-fix = {
+        res_w = 1280;
+        res_h = 1024;
+        class = "cs2";
+        fix_mouse = true;
       };
     };
   };
