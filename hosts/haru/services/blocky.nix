@@ -85,6 +85,7 @@
             *.flake.sh
             *.clickhouse.com
             *.discord.com
+            *.last.fm
           '';
         in {
           ads = [
