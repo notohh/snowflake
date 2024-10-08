@@ -17,8 +17,10 @@
     ../../pkgs/overlays.nix
   ];
 
-  virtualisation.libvirtd.enable = true;
-
+  virtualisation = {
+    libvirtd.enable = true;
+    waydroid.enable = true;
+  };
   programs.hyprland = {
     enable = true;
     #  finalPackage = inputs.hyprland.packages.${pkgs.system}.default;
@@ -28,6 +30,10 @@
   services = {
     pcscd.enable = true;
     flatpak.enable = true;
+    avahi = {
+      enable = true;
+      openFirewall = true;
+    };
     pipewire = {
       enable = true;
       alsa.enable = true;
@@ -86,5 +92,6 @@
     libvirt
     qemu_kvm
     zulu
+    zulu17
   ];
 }
