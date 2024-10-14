@@ -126,7 +126,7 @@ _: {
       }
       {
         on = [":"];
-        run = "shell --block";
+        run = "shell --block --interactive";
         desc = "run a blocking shell command";
       }
       {

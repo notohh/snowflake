@@ -3,7 +3,7 @@
   pkgs,
   ...
 }: {
-  xdg.configFile."yazi/init.lua".source = ./init.lua;
+  # xdg.configFile."yazi/init.lua".source = ./init.lua;
   imports = [./keymap.nix ./openers.nix];
 
   programs.yazi = {

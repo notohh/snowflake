@@ -9,8 +9,8 @@
     ./wallos.nix
     ./searxng.nix
     ./anki-sync-server.nix
-    ./paperless.nix
-    ./hydroxide.nix
+    # ./paperless.nix
+    # ./hydroxide.nix
     # ./twitch-miner.nix
     ./botoh.nix
   ];

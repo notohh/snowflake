@@ -53,8 +53,10 @@
     kitty
     tetrio-desktop
     waydroid
+    mousam
     inputs.nix-gaming.packages.${pkgs.system}.osu-lazer-bin
     inputs.zen-browser.packages.${pkgs.system}.default
+    inputs.hyprsysteminfo.packages.${pkgs.system}.default
     (callPackage ../../../pkgs/passgen {})
     (callPackage ../../../pkgs/forex {})
     (callPackage ../../../pkgs/cpm {})

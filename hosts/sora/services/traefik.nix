@@ -179,6 +179,13 @@
             tls.domains = [{main = "*.${pqdn}";}];
             tls.certresolver = "production";
           };
+          wastebin = {
+            rule = "Host(`paste.${pqdn}`)";
+            entrypoints = ["websecure"];
+            service = "wastebin";
+            tls.domains = [{main = "*.${pqdn}";}];
+            tls.certresolver = "production";
+          };
         };
         services = let
           sakuraIp = "100.121.201.47:";
@@ -200,6 +207,7 @@
           vaultwarden.loadBalancer.servers = [{url = "http://${sakuraIp}8222";}];
           searxng.loadBalancer.servers = [{url = "http://${sakuraIp}8100";}];
           justlog.loadBalancer.servers = [{url = "http://${sakuraIp}8025";}];
+          wastebin.loadBalancer.servers = [{url = "http://${sakuraIp}8088";}];
 
           # kaze
           minio.loadBalancer.servers = [{url = "http://100.69.79.81:9005";}];

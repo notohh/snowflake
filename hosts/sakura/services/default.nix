@@ -10,5 +10,6 @@
     # ./conduit.nix
     ./tailscale.nix
     ./rustlog.nix
+    ./wastebin.nix
   ];
 }

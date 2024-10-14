@@ -62,6 +62,7 @@
     hyprpicker.url = "github:hyprwm/hyprpicker";
     hyprpaper.url = "github:hyprwm/hyprpaper";
     xdg-portal-hyprland.url = "github:hyprwm/xdg-desktop-portal-hyprland";
+    hyprsysteminfo.url = "github:hyprwm/hyprsysteminfo";
     hyprland-plugins = {
       url = "github:hyprwm/hyprland-plugins";
       inputs.hyprland.follows = "hyprland";
@@ -83,7 +84,7 @@
     #  wezterm.url = "github:notohh/wezterm?dir=nix&ref=nix-add-overlay";
 
     botoh.url = "git+https://git.flake.sh/notohh/botoh";
-    zen-browser.url = "github:MarceColl/zen-browser-flake";
+    zen-browser.url = "github:fufexan/zen-browser-flake";
     deploy-rs = {
       url = "github:serokell/deploy-rs";
       inputs.nixpkgs.follows = "nixpkgs";

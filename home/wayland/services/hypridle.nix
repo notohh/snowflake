@@ -19,7 +19,7 @@
         }
         {
           timeout = 460;
-          on-timeout = "${pkgs.systemd}/bin/systemctl suspend";
+          on-timeout = "hyprctl dispatch dpms off";
         }
       ];
     };
