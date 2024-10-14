@@ -65,6 +65,10 @@
 
   programs = {
     gamemode.enable = true;
+    appimage = {
+      enable = true;
+      binfmt = true;
+    };
     steam = {
       enable = true;
       platformOptimizations.enable = true;
