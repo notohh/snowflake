@@ -1,5 +1,5 @@
 {pkgs, ...}: {
-  environment.systemPackages = [pkgs.attic];
+  environment.systemPackages = [pkgs.attic-client];
 
   systemd.services.atticd = {
     enable = true;
@@ -8,7 +8,7 @@
 
     serviceConfig = {
       User = "notoh";
-      ExecStart = "${pkgs.attic}/bin/attic watch-store kyasshu";
+      ExecStart = "${pkgs.attic-client}/bin/attic watch-store kyasshu";
       Restart = "always";
       RestartSec = 30;
     };

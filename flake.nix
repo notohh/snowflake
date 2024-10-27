@@ -63,6 +63,8 @@
     hyprpaper.url = "github:hyprwm/hyprpaper";
     xdg-portal-hyprland.url = "github:hyprwm/xdg-desktop-portal-hyprland";
     hyprsysteminfo.url = "github:hyprwm/hyprsysteminfo";
+    hyprsunset.url = "github:hyprwm/hyprsunset";
+    hyprpolkitagent.url = "github:hyprwm/hyprpolkitagent";
     hyprland-plugins = {
       url = "github:hyprwm/hyprland-plugins";
       inputs.hyprland.follows = "hyprland";
@@ -70,7 +72,6 @@
 
     ### other stuff
     nix-gaming.url = "github:fufexan/nix-gaming";
-    attic.url = "github:zhaofengli/attic";
     nur.url = "github:nix-community/NUR";
     yazi.url = "github:sxyazi/yazi";
     helix.url = "github:helix-editor/helix";
@@ -81,8 +82,6 @@
     stylix.url = "github:danth/stylix";
     eww.url = "github:elkowar/eww";
     anyrun.url = "github:Kirottu/anyrun";
-    #  wezterm.url = "github:notohh/wezterm?dir=nix&ref=nix-add-overlay";
-
     botoh.url = "git+https://git.flake.sh/notohh/botoh";
     zen-browser.url = "github:fufexan/zen-browser-flake";
     deploy-rs = {
@@ -95,6 +94,10 @@
     };
     home-manager = {
       url = "github:nix-community/home-manager";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    nixvim = {
+      url = "github:nix-community/nixvim";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };

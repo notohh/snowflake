@@ -1,18 +1,15 @@
 {
-  inputs,
   config,
   pkgs,
   ...
 }: {
-  imports = [inputs.attic.nixosModules.atticd];
-
   sops.secrets.attic = {};
 
-  environment.systemPackages = [pkgs.attic];
+  environment.systemPackages = [pkgs.attic-client];
 
   services.atticd = {
     enable = true;
-    credentialsFile = config.sops.secrets.attic.path;
+    environmentFile = config.sops.secrets.attic.path;
     settings = {
       listen = "[::]:8200";
       allowed-hosts = ["cache.flake.sh"];
