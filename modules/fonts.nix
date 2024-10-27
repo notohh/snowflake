@@ -6,7 +6,7 @@
       corefonts
       nerdfonts
       noto-fonts
-      noto-fonts-cjk
+      noto-fonts-cjk-sans
       twitter-color-emoji
     ];
 
