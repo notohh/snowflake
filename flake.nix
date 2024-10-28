@@ -83,7 +83,6 @@
     eww.url = "github:elkowar/eww";
     anyrun.url = "github:Kirottu/anyrun";
     botoh.url = "git+https://git.flake.sh/notohh/botoh";
-    zen-browser.url = "github:fufexan/zen-browser-flake";
     deploy-rs = {
       url = "github:serokell/deploy-rs";
       inputs.nixpkgs.follows = "nixpkgs";

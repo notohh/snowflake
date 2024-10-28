@@ -2037,22 +2037,6 @@
         "type": "github"
       }
     },
-    "nixpkgs_22": {
-      "locked": {
-        "lastModified": 1725634671,
-        "narHash": "sha256-v3rIhsJBOMLR8e/RNWxr828tB+WywYIoajrZKFM+0Gg=",
-        "owner": "nixos",
-        "repo": "nixpkgs",
-        "rev": "574d1eac1c200690e27b8eb4e24887f8df7ac27c",
-        "type": "github"
-      },
-      "original": {
-        "owner": "nixos",
-        "ref": "nixos-unstable",
-        "repo": "nixpkgs",
-        "type": "github"
-      }
-    },
     "nixpkgs_3": {
       "locked": {
         "lastModified": 1727634051,
@@ -2325,8 +2309,7 @@
         "sops-nix": "sops-nix",
         "stylix": "stylix",
         "xdg-portal-hyprland": "xdg-portal-hyprland",
-        "yazi": "yazi",
-        "zen-browser": "zen-browser"
+        "yazi": "yazi"
       }
     },
     "rust-analyzer-src": {
@@ -2926,24 +2909,6 @@
       "original": {
         "owner": "sxyazi",
         "repo": "yazi",
-        "type": "github"
-      }
-    },
-    "zen-browser": {
-      "inputs": {
-        "nixpkgs": "nixpkgs_22"
-      },
-      "locked": {
-        "lastModified": 1730078377,
-        "narHash": "sha256-OJL1P1rLD+O6BgITFJC/oapu6o+twvDsY6gBDmGR5nw=",
-        "owner": "fufexan",
-        "repo": "zen-browser-flake",
-        "rev": "6c22931e60beb805276a9eb31701047e6cb6afb2",
-        "type": "github"
-      },
-      "original": {
-        "owner": "fufexan",
-        "repo": "zen-browser-flake",
         "type": "github"
       }
     }

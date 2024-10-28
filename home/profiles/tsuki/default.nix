@@ -8,11 +8,12 @@
     ../../services
     ../../programs/anyrun
     ../../programs/eww
-    # ../../programs/browsers/firefox
+    ../../programs/browsers/firefox
     ../../programs/terminal/wezterm
     ../../programs/terminal/zellij
     ../../programs/media/cava.nix
     ../../programs/gtk.nix
+    ../../programs/qt.nix
     ../../programs/mako.nix
     ../../programs/media/spotify-player.nix
     ../../programs/media/zathura.nix
@@ -25,14 +26,12 @@
     chromium
     vesktop
     technorino
-    vscode-fhs
     obsidian
     signal-desktop
     thunderbird
     obs-studio
     pavucontrol
     anki-bin
-    tomato-c
     virt-manager
     qbittorrent
     miru
@@ -51,12 +50,11 @@
     r2modman
     moonlight-qt
     kitty
-    tetrio-desktop
     waydroid
     mousam
     inputs.nix-gaming.packages.${pkgs.system}.osu-lazer-bin
-    inputs.zen-browser.packages.${pkgs.system}.default
     inputs.hyprsysteminfo.packages.${pkgs.system}.default
+    inputs.hyprsunset.packages.${pkgs.system}.default
     (callPackage ../../../pkgs/passgen {})
     (callPackage ../../../pkgs/forex {})
     (callPackage ../../../pkgs/cpm {})
