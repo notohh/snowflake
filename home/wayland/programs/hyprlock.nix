@@ -72,6 +72,7 @@ _: {
             Hi, <i><span foreground="##f7768e">$USER</span></i>
           '';
           color = "rgb(c0caf5)";
+          position = "0, 60";
           valign = "center";
           halign = "center";
           shadow_passes = 3;
