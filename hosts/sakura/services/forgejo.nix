@@ -1,4 +1,5 @@
 {
+  pkgs,
   lib,
   config,
   ...
@@ -11,6 +12,7 @@ in {
   networking.firewall.allowedTCPPorts = [2222];
   services.forgejo = {
     enable = true;
+    package = pkgs.forgejo;
     stateDir = "/var/lib/forgejo";
     lfs.enable = true;
     secrets = {
