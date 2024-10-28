@@ -4,6 +4,7 @@
 
   imports = [
     ./programs/editors/helix
+    ./programs/editors/neovim
     ./programs/terminal/lazygit
     ./programs/terminal/nushell
     ./programs/terminal/yazi
