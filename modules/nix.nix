@@ -10,20 +10,10 @@
       inputs.hyprpicker.overlays.default
       inputs.atuin.overlays.default
       inputs.eww.overlays.default
-      #     inputs.wezterm.overlays.default
     ];
     config = {
       allowUnfree = true;
       permittedInsecurePackages = [];
-    };
-  };
-
-  programs.nh = {
-    enable = true;
-    clean = {
-      enable = true;
-      dates = "weekly";
-      extraArgs = "--keep-since 3d --keep 5";
     };
   };
 
@@ -34,6 +24,7 @@
       warn-dirty = false;
       auto-optimise-store = true;
       builders-use-substitutes = true;
+      download-buffer-size = 536870912;
       keep-outputs = true;
       keep-derivations = true;
       allowed-users = ["@wheel"];
@@ -56,6 +47,15 @@
         "viperml.cachix.org-1:qZhKBMTfmcLL+OG6fj/hzsMEedgKvZVFRRAhq7j8Vh8="
         "nix-community.cachix.org-1:mB9FSh9qf2dCimDSUo8Zy7bkq5CX+/rkCWyvRCYg3Fs="
       ];
+    };
+  };
+
+  programs.nh = {
+    enable = true;
+    clean = {
+      enable = true;
+      dates = "weekly";
+      extraArgs = "--keep-since 3d --keep 5";
     };
   };
 }
