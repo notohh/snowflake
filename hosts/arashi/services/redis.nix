@@ -16,7 +16,7 @@
         };
       };
       searxng = {
-        enable = true;
+        enable = false;
         openFirewall = true;
         port = 6380;
         bind = null;
@@ -40,7 +40,7 @@
         };
       };
       paperless-ngx = {
-        enable = true;
+        enable = false;
         openFirewall = true;
         port = 6382;
         bind = null;
