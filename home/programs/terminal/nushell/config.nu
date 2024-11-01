@@ -9,6 +9,7 @@ alias la = eza -alughHo --git --icons --color always
 alias calc = eva
 alias c = clear
 alias f = yazi
+alias v = nvim
 alias cat = bat
 alias rm = rm -i
 alias cp = cp -i
@@ -77,7 +78,7 @@ $env.config = {
     metric: true # true => KB, MB, GB (ISO standard), false => KiB, MiB, GiB (Windows standard)
     format: "auto" # b, kb, kib, mb, mib, gb, gib, tb, tib, pb, pib, eb, eib, zb, zib, auto
   }
-  footer_mode: "25" # always, never, number_of_rows, auto
+  footer_mode: "auto" # always, never, number_of_rows, auto
   float_precision: 2
   # buffer_editor: "emacs" # command that will be used to edit the current line buffer with ctrl+o, if unset fallback to $env.EDITOR and $env.VISUAL
   use_ansi_coloring: true
