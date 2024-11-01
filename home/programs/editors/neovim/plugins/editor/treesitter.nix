@@ -11,6 +11,13 @@
       toml
       xml
       yaml
+      rust
+      go
+      gomod
     ];
+    settings = {
+      highlight.enable = true;
+      indent.enable = false;
+    };
   };
 }

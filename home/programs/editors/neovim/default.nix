@@ -21,6 +21,23 @@
         command = "Neotree";
       }
     ];
+    keymaps = [
+      {
+        action = "<cmd>LazyGit<CR>";
+        key = "<C-l>";
+        mode = "n";
+      }
+      {
+        action = "<cmd>ToggleTerm<CR>";
+        key = "<C-t>";
+        mode = "n";
+      }
+      {
+        action = "<cmd>Telescope<CR>";
+        key = "<C-f>";
+        mode = "n";
+      }
+    ];
     extraConfigLua = ''
       vim.wo.relativenumber = true
     '';

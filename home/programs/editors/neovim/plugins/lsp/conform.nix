@@ -12,6 +12,21 @@
             "alejandra"
           ]
         ];
+        rust = [
+          [
+            "rustfmt"
+          ]
+        ];
+        go = [
+          [
+            "gofmt"
+          ]
+        ];
+        lua = [
+          [
+            "stylua"
+          ]
+        ];
       };
       format_on_save = ''
         function(bufnr)
@@ -48,6 +63,15 @@
       formatters = {
         alejandra = {
           commmand = "${lib.getExe pkgs.alejandra}";
+        };
+        rustfmt = {
+          commmand = "${lib.getExe pkgs.rustfmt}";
+        };
+        gofmt = {
+          commmand = "${lib.getExe pkgs.go}";
+        };
+        stylua = {
+          commmand = "${lib.getExe pkgs.stylua}";
         };
       };
     };

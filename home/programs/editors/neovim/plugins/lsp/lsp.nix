@@ -27,6 +27,13 @@ _: {
           installCargo = true;
           installRustc = true;
         };
+        gopls = {
+          enable = true;
+          autostart = true;
+        };
+        nushell = {
+          enable = true;
+        };
       };
     };
   };
