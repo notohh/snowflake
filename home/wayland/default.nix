@@ -21,7 +21,7 @@
       MOZ_ENABLE_WAYLAND = "1";
       XCURSOR_SIZE = "24";
       NIXOS_OZONE_WL = "1";
-      EDITOR = "hx";
+      EDITOR = "nvim";
       TERMINAL = "wezterm";
     };
     etc."greetd/environments".text = ''

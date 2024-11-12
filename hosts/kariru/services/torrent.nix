@@ -17,7 +17,7 @@
       extraOptions = ["--cap-add=NET_ADMIN"];
     };
     qbittorrent = {
-      image = "linuxserver/qbittorrent@sha256:a4a72bd8e7891ec1ba01cfc5cfcb34b4d7b78c47a05ed8966cd18bd44a016894"; # v4.6.4
+      image = "linuxserver/qbittorrent@sha256:d01b1df556154862eca982d0f2c420073e2e2959c309951fbfddd25525ea28ce"; # v5.0.0
       dependsOn = ["gluetun"];
       environment = {
         PUID = "1001";

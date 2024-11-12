@@ -52,6 +52,10 @@
         name = "atuin";
         ensureDBOwnership = true;
       }
+      {
+        name = "ec";
+        ensureDBOwnership = true;
+      }
     ];
     ensureDatabases = [
       "forgejo"
@@ -62,6 +66,7 @@
       "attic"
       "miniflux"
       "atuin"
+      "ec"
     ];
   };
   services.postgresqlBackup = {

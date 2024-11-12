@@ -62,9 +62,7 @@
     hyprpicker.url = "github:hyprwm/hyprpicker";
     hyprpaper.url = "github:hyprwm/hyprpaper";
     xdg-portal-hyprland.url = "github:hyprwm/xdg-desktop-portal-hyprland";
-    hyprsysteminfo.url = "github:hyprwm/hyprsysteminfo";
     hyprsunset.url = "github:hyprwm/hyprsunset";
-    hyprpolkitagent.url = "github:hyprwm/hyprpolkitagent";
     hyprland-plugins = {
       url = "github:hyprwm/hyprland-plugins";
       inputs.hyprland.follows = "hyprland";
@@ -97,6 +95,10 @@
     };
     nixvim = {
       url = "github:nix-community/nixvim";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    nezia-dotfiles = {
+      url = "github:nezia1/flocon";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };

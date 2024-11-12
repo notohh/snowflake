@@ -88,7 +88,6 @@
         # security
         bitwarden
         ublock-origin
-        canvasblocker
 
         #leisure
         darkreader
@@ -98,11 +97,9 @@
 
         #utility
         new-tab-override
-        libredirect
         sponsorblock
         return-youtube-dislikes
-
-        #misc
+        violentmonkey
       ];
     };
   };

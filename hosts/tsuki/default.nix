@@ -19,7 +19,7 @@
 
   virtualisation = {
     libvirtd.enable = true;
-    waydroid.enable = true;
+    waydroid.enable = false;
   };
   programs.hyprland = {
     enable = true;

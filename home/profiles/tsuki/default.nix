@@ -13,7 +13,6 @@
     ../../programs/terminal/zellij
     ../../programs/media/cava.nix
     ../../programs/gtk.nix
-    ../../programs/qt.nix
     ../../programs/mako.nix
     ../../programs/media/spotify-player.nix
     ../../programs/media/zathura.nix
@@ -28,7 +27,6 @@
     technorino
     obsidian
     signal-desktop
-    thunderbird
     obs-studio
     pavucontrol
     anki-bin
@@ -41,7 +39,7 @@
     ffmpeg
     rustypaste-cli
     gimp
-    cryptomator
+    # cryptomator
     ventoy-bin-full
     wine
     bottles
@@ -49,11 +47,8 @@
     lutris
     r2modman
     moonlight-qt
-    kitty
-    waydroid
-    mousam
+    inputs.nezia-dotfiles.packages.${pkgs.system}.bolt-launcher
     inputs.nix-gaming.packages.${pkgs.system}.osu-lazer-bin
-    inputs.hyprsysteminfo.packages.${pkgs.system}.default
     inputs.hyprsunset.packages.${pkgs.system}.default
     (callPackage ../../../pkgs/passgen {})
     (callPackage ../../../pkgs/forex {})

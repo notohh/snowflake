@@ -47,7 +47,6 @@
       lazygit.enable = true;
       nushell.enable = true;
       yazi.enable = true;
-      zellij.enable = true;
       bat.enable = true;
     };
   };

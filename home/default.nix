@@ -3,7 +3,7 @@
   programs.home-manager.enable = true;
 
   imports = [
-    ./programs/editors/helix
+    # ./programs/editors/helix
     ./programs/editors/neovim
     ./programs/terminal/lazygit
     ./programs/terminal/nushell
