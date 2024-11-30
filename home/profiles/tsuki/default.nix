@@ -14,7 +14,7 @@
     ../../programs/media/cava.nix
     ../../programs/gtk.nix
     ../../programs/mako.nix
-    ../../programs/media/spotify-player.nix
+    #../../programs/media/spotify-player.nix
     ../../programs/media/zathura.nix
     ../../wayland/hyprland
     ../../wayland/services/hypridle.nix
@@ -39,7 +39,7 @@
     ffmpeg
     rustypaste-cli
     gimp
-    # cryptomator
+    cryptomator
     ventoy-bin-full
     wine
     bottles
@@ -47,6 +47,10 @@
     lutris
     r2modman
     moonlight-qt
+    tokei
+    jellyfin-media-player
+    jellyfin-rpc
+    wlx-overlay-s
     inputs.nezia-dotfiles.packages.${pkgs.system}.bolt-launcher
     inputs.nix-gaming.packages.${pkgs.system}.osu-lazer-bin
     inputs.hyprsunset.packages.${pkgs.system}.default
