@@ -4,5 +4,6 @@
     ./atticd.nix
     ./hydroxide.nix
     ./sunshine.nix
+    ./wivrn.nix
   ];
 }
