@@ -9,6 +9,7 @@ _: {
       "$mainMod, R, exec, anyrun"
       "$mainMod, P, pseudo,"
       "$mainMod, J, togglesplit,"
+      "$mainMod, C, exec, hyprpicker | wl-copy"
       "$mainMod, left, movefocus, l"
       "$mainMod, right, movefocus, r"
       "$mainMod, up, movefocus, u"
@@ -34,9 +35,6 @@ _: {
       "$mainMod SHIFT, 8, movetoworkspace, 8"
       "$mainMod SHIFT, 9, movetoworkspace, 9"
       "$mainMod SHIFT, 0, movetoworkspace, 10"
-
-      "$mainMod, mouse_down, workspace, e+1"
-      "$mainMod, mouse_up, workspace, e-1"
     ];
     bindm = [
       "$mainMod, mouse:272, movewindow"

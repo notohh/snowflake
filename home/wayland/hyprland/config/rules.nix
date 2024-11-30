@@ -10,12 +10,13 @@ _: {
       "float, title:^(Lutris)$"
       "float, title:^(satty)$"
       "move 850 360, title:^(RuneLite)$"
-      "size 830 600, title:^(RuneLite)$"
+      # "size 800 560, title:^(RuneLite)$"
       "size 1200 600, title:^(satty)$"
       "idleinhibit focus, class:^(mpv)$"
       "idleinhibit always, class:^(firefox)$, title:^(.*YouTube.*|.*Twitch.*)$"
       "idleinhibit always, class:^(OBS Studio)$"
       "idleinhibit always, class:^(Moonlight)$"
+      "idleinhibit always, class:^(VRChat)$"
       "idleinhibit fullscreen, class:^(firefox)$"
     ];
     layerrule = [

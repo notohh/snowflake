@@ -38,15 +38,16 @@
           passes = 3;
           new_optimizations = true;
         };
+        shadow = {
+          enabled = true;
+          range = 60;
+          offset = "0 5";
+          render_power = 4;
+          color = "rgba(00000099)";
+        };
         inactive_opacity = 1.0;
         active_opacity = 1.0;
         fullscreen_opacity = 1.0;
-
-        drop_shadow = true;
-        shadow_range = 60;
-        shadow_offset = "0 5";
-        shadow_render_power = 4;
-        "col.shadow" = "rgba(00000099)";
       };
       animations = {
         enabled = true;
