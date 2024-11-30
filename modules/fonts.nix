@@ -4,7 +4,7 @@
     fontDir.enable = true;
     packages = with pkgs; [
       corefonts
-      nerdfonts
+      nerd-fonts.jetbrains-mono
       noto-fonts
       noto-fonts-cjk-sans
       twitter-color-emoji

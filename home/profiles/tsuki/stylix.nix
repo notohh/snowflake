@@ -13,7 +13,7 @@
     fonts = {
       monospace = {
         name = "JetBrainsMono NF Medium";
-        package = pkgs.nerdfonts;
+        package = pkgs.nerd-fonts.jetbrains-mono;
       };
       serif = {
         name = "Noto Serif";
