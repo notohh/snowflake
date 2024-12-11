@@ -34,6 +34,9 @@ _: {
         nushell = {
           enable = true;
         };
+        lua_ls = {
+          enable = true;
+        };
       };
     };
   };

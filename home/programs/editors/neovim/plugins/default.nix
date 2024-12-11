@@ -23,6 +23,7 @@ _: {
     ./ui/fidget.nix
     ./ui/dashboard.nix
     ./ui/toggleterm.nix
+    ./ui/whichkey.nix
   ];
   programs.nixvim.plugins.web-devicons.enable = true;
 }

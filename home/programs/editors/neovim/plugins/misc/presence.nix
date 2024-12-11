@@ -5,8 +5,11 @@
     ];
     extraConfigLua = ''
       require('cord').setup {
+        timer = {
+          interval = 500,
+        },
         editor = {
-          tooltip = 'Neovim'
+          tooltip = 'Neovim',
         },
         display = {
           show_time = true,

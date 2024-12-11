@@ -1,5 +1,3 @@
 _: {
-  programs.nixvim.plugins.autoclose = {
-    enable = true;
-  };
+  programs.nixvim.plugins.nvim-autopairs.enable = true;
 }
