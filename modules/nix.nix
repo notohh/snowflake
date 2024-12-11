@@ -1,7 +1,7 @@
 {inputs, ...}: {
   nixpkgs = {
     overlays = [
-      inputs.nur.overlay
+      inputs.nur.overlays.default
       inputs.helix.overlays.default
       inputs.yazi.overlays.default
       inputs.hypridle.overlays.default
