@@ -11,6 +11,7 @@
         "disk"
         "video"
         "docker"
+        "input"
       ];
     };
   };
