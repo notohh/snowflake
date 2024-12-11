@@ -5,5 +5,6 @@
     ./hydroxide.nix
     ./sunshine.nix
     ./wivrn.nix
+    ./rnnoise.nix
   ];
 }

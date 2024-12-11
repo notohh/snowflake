@@ -10,6 +10,9 @@
 
   boot = {
     kernelModules = ["kvm-amd"];
+    extraModulePackages = with config.boot.kernelPackages; [
+      v4l2loopback.out
+    ];
     loader = {
       systemd-boot = {
         enable = true;
@@ -25,6 +28,8 @@
       kernelModules = [];
     };
   };
+
+  hardware.wooting.enable = true;
 
   fileSystems = {
     "/" = {

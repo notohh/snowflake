@@ -41,7 +41,7 @@
       pulse.enable = true;
       wireplumber.enable = true;
       lowLatency = {
-        enable = false; # disabled due to upstream issue
+        enable = true;
         quantum = 64;
         rate = 48000;
       };
@@ -62,7 +62,6 @@
       services.hyprlock = {};
     };
   };
-
   programs = {
     gamemode.enable = true;
     appimage = {
