@@ -56,13 +56,35 @@
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
 
     ### hypr
-    hyprland.url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
+    hyprland = {
+      url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     hypridle.url = "github:hyprwm/hypridle";
-    hyprlock.url = "github:hyprwm/hyprlock";
-    hyprpicker.url = "github:hyprwm/hyprpicker";
-    hyprpaper.url = "github:hyprwm/hyprpaper";
-    hyprsunset.url = "github:hyprwm/hyprsunset";
-    hyprutils.url = "github:hyprwm/hyprutils";
+    hyprlock = {
+      url = "github:hyprwm/hyprlock";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.hyprutils.follows = "hyprutils";
+    };
+    hyprpicker = {
+      url = "github:hyprwm/hyprpicker";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.hyprutils.follows = "hyprutils";
+    };
+    hyprpaper = {
+      url = "github:hyprwm/hyprpaper";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.hyprutils.follows = "hyprutils";
+    };
+    hyprsunset = {
+      url = "github:hyprwm/hyprsunset";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.hyprutils.follows = "hyprutils";
+    };
+    hyprutils = {
+      url = "github:hyprwm/hyprutils";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     xdg-portal-hyprland = {
       url = "github:hyprwm/xdg-desktop-portal-hyprland";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -100,10 +122,6 @@
     };
     nixvim = {
       url = "github:nix-community/nixvim";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-    nezia-dotfiles = {
-      url = "github:nezia1/flocon";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
