@@ -63,6 +63,7 @@
     };
   };
   programs = {
+    dconf.enable = true;
     gamemode.enable = true;
     appimage = {
       enable = true;
@@ -91,7 +92,6 @@
 
   environment.systemPackages = with pkgs; [
     nil
-    dconf
     libvirt
     qemu_kvm
     zulu
