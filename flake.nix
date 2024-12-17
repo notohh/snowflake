@@ -108,6 +108,7 @@
     eww.url = "github:elkowar/eww";
     anyrun.url = "github:Kirottu/anyrun";
     botoh.url = "git+https://git.flake.sh/notohh/botoh";
+    conduwuit.url = "github:girlbossceo/conduwuit";
     deploy-rs = {
       url = "github:serokell/deploy-rs";
       inputs.nixpkgs.follows = "nixpkgs";
