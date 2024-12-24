@@ -1,3 +1,3 @@
 {
-  imports = [./gpg.nix];
+  imports = [./gpg.nix ./gammastep.nix];
 }
