@@ -18,7 +18,8 @@
       ];
     };
     rustlog = {
-      image = "ghcr.io/boring-nick/rustlog:master";
+      hostname = "rustlog";
+      image = "ghcr.io/boring-nick/rustlog@sha256:1c6ea8c13d8f154557a7430cdc70d3df89b1413a79c15293c73644e572ae0317";
       ports = ["8025:8025"];
       volumes = [
         "/home/notoh/rustlog/config.json:/config.json"
