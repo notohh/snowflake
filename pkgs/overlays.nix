@@ -11,8 +11,8 @@
             src = super.chatterino2.src.override {
               owner = "2547techno";
               repo = "technorino";
-              rev = "nightly-build";
-              hash = "sha256-PY+K1l29wwG8ddqTxOwkbKb8CQoOBwbOeCgn0VTDptM=";
+              rev = "f6d0bd19caddb9f8f433877020e64e18923bbc7a";
+              hash = "sha256-JTz/w8qtR59LVpuWbmiZDpwF+hepe78iCZ/3gi4O/Vc=";
             };
           });
       })
