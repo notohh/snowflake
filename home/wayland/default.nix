@@ -21,8 +21,9 @@
       MOZ_ENABLE_WAYLAND = "1";
       XCURSOR_SIZE = "24";
       NIXOS_OZONE_WL = "1";
-      EDITOR = "nvim";
+      EDITOR = "hx";
       TERMINAL = "wezterm";
+      # SDL_VIDEODRIVER = "wayland";
     };
     etc."greetd/environments".text = ''
       Hyprland
