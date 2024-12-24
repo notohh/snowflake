@@ -1,6 +1,6 @@
 _: {
   services.easyeffects = {
     enable = true;
-    preset = "tangzu_eq";
+    preset = "chu2_eq";
   };
 }
