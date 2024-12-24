@@ -76,11 +76,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
       inputs.hyprutils.follows = "hyprutils";
     };
-    hyprsunset = {
-      url = "github:hyprwm/hyprsunset";
-      inputs.nixpkgs.follows = "nixpkgs";
-      inputs.hyprutils.follows = "hyprutils";
-    };
+    # hyprsunset = {
+    #   url = "github:hyprwm/hyprsunset";
+    #   inputs.nixpkgs.follows = "nixpkgs";
+    #   inputs.hyprutils.follows = "hyprutils";
+    # };
     hyprutils = {
       url = "github:hyprwm/hyprutils";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -109,6 +109,10 @@
     anyrun.url = "github:Kirottu/anyrun";
     botoh.url = "git+https://git.flake.sh/notohh/botoh";
     conduwuit.url = "github:girlbossceo/conduwuit";
+    neptune = {
+      url = "github:uwu/neptune";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     deploy-rs = {
       url = "github:serokell/deploy-rs";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -119,10 +123,6 @@
     };
     home-manager = {
       url = "github:nix-community/home-manager";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-    nixvim = {
-      url = "github:nix-community/nixvim";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
