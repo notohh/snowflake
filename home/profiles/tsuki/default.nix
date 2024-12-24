@@ -16,6 +16,7 @@
     ../../programs/mako.nix
     #../../programs/media/spotify-player.nix
     ../../programs/media/zathura.nix
+    ../../programs/media/easyeffects.nix
     ../../wayland/hyprland
     ../../wayland/services/hypridle.nix
     ../../wayland/services/hyprpaper.nix
@@ -51,9 +52,15 @@
     jellyfin-media-player
     jellyfin-rpc
     wlx-overlay-s
-    inputs.nezia-dotfiles.packages.${pkgs.system}.bolt-launcher
+    losslesscut-bin
+    bolt-launcher
+    cinny-desktop
+    jetbrains.goland
+    distrobox
+    tidal-hifi
+    neptune
     inputs.nix-gaming.packages.${pkgs.system}.osu-lazer-bin
-    inputs.hyprsunset.packages.${pkgs.system}.default
+    # inputs.hyprsunset.packages.${pkgs.system}.default
     (callPackage ../../../pkgs/passgen {})
     (callPackage ../../../pkgs/forex {})
     (callPackage ../../../pkgs/cpm {})
