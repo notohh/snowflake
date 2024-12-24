@@ -42,7 +42,7 @@
         };
       }
       {
-        name = "javascript";
+        name = "typescript";
         auto-format = true;
         language-servers = [
           "scls"
@@ -52,8 +52,13 @@
           }
         ];
         formatter = with pkgs; {
-          command = lib.getExe biome;
-          args = ["format"];
+          command = lib.getExe deno;
+          args = [
+            "fmt"
+            "-"
+            "--ext"
+            "ts"
+          ];
         };
       }
       {
