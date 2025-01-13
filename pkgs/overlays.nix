@@ -4,7 +4,7 @@
       (self: super: {
         technorino =
           super.chatterino2.overrideAttrs
-          (oldAttrs: {
+          (old: {
             nativeBuildInputs = with super; [cmake pkg-config];
             buildInputs = with super; [qt6.wrapQtAppsHook qt6.qtbase qt6.qtsvg qt6.qtimageformats qt6.qttools qt6.qt5compat qt6.qtwayland boost openssl];
             cmakeFlags = ["-DBUILD_WITH_QT6=ON" "-DBUILD_WITH_QTKEYCHAIN=OFF"];
@@ -12,6 +12,7 @@
               owner = "2547techno";
               repo = "technorino";
               rev = "f6d0bd19caddb9f8f433877020e64e18923bbc7a";
+              tag = null;
               hash = "sha256-JTz/w8qtR59LVpuWbmiZDpwF+hepe78iCZ/3gi4O/Vc=";
             };
           });

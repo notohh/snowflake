@@ -10,6 +10,11 @@
 
   boot = {
     kernelModules = ["kvm-amd"];
+    kernelParams = [
+      "preempt=full"
+      "threadirqs"
+      "mitigations=off"
+    ];
     extraModulePackages = with config.boot.kernelPackages; [
       v4l2loopback.out
     ];
@@ -27,6 +32,11 @@
       availableKernelModules = ["xhci_pci" "ahci" "nvme" "usb_storage" "usbhid" "sd_mod"];
       kernelModules = [];
     };
+  };
+
+  services.scx = {
+    enable = true;
+    scheduler = "scx_lavd";
   };
 
   hardware.wooting.enable = true;

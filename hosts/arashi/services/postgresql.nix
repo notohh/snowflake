@@ -56,6 +56,10 @@
         name = "ec";
         ensureDBOwnership = true;
       }
+      {
+        name = "botoh";
+        ensureDBOwnership = true;
+      }
     ];
     ensureDatabases = [
       "forgejo"
@@ -67,6 +71,7 @@
       "miniflux"
       "atuin"
       "ec"
+      "botoh"
     ];
   };
   services.postgresqlBackup = {
@@ -80,6 +85,7 @@
       "attic"
       "miniflux"
       "atuin"
+      "botoh"
     ];
     compression = "zstd";
     compressionLevel = 4;

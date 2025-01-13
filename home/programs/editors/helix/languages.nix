@@ -1,9 +1,10 @@
 {
   pkgs,
   lib,
+  inputs,
   ...
 }: {
-  home.packages = [(pkgs.callPackage ../../../../pkgs/scls {})];
+  home.packages = [inputs.scls.defaultPackage.${pkgs.system}];
   programs.helix.languages = {
     language = with pkgs; [
       {

@@ -60,7 +60,11 @@
       url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    hypridle.url = "github:hyprwm/hypridle";
+    hypridle = {
+      url = "github:hyprwm/hypridle";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.hyprutils.follows = "hyprutils";
+    };
     hyprlock = {
       url = "github:hyprwm/hyprlock";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -76,11 +80,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
       inputs.hyprutils.follows = "hyprutils";
     };
-    # hyprsunset = {
-    #   url = "github:hyprwm/hyprsunset";
-    #   inputs.nixpkgs.follows = "nixpkgs";
-    #   inputs.hyprutils.follows = "hyprutils";
-    # };
+    hyprsunset = {
+      url = "github:hyprwm/hyprsunset";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.hyprutils.follows = "hyprutils";
+    };
     hyprutils = {
       url = "github:hyprwm/hyprutils";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -94,6 +98,10 @@
       url = "github:hyprwm/hyprland-plugins";
       inputs.hyprland.follows = "hyprland";
     };
+    hyprwayland-scanner = {
+      url = "github:hyprwm/hyprwayland-scanner";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
     ### other stuff
     nix-gaming.url = "github:fufexan/nix-gaming";
@@ -104,13 +112,15 @@
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
     atuin.url = "github:atuinsh/atuin";
     flake-parts.url = "github:hercules-ci/flake-parts";
-    stylix.url = "github:danth/stylix";
     eww.url = "github:elkowar/eww";
     anyrun.url = "github:Kirottu/anyrun";
     botoh.url = "git+https://git.flake.sh/notohh/botoh";
     conduwuit.url = "github:girlbossceo/conduwuit";
-    neptune = {
-      url = "github:uwu/neptune";
+    catppuccin.url = "github:catppuccin/nix";
+    nixpkgs-xr.url = "github:nix-community/nixpkgs-xr";
+    prismlauncher.url = "github:PrismLauncher/PrismLauncher";
+    home-manager = {
+      url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     deploy-rs = {
@@ -121,8 +131,8 @@
       url = "github:Mic92/sops-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    home-manager = {
-      url = "github:nix-community/home-manager";
+    scls = {
+      url = "github:estin/simple-completion-language-server";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };

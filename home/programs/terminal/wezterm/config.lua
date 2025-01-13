@@ -16,6 +16,7 @@ local config = {
 	window_background_opacity = 0.6,
 	text_background_opacity = 1.0,
 	enable_tab_bar = false,
+	max_fps = 144,
 	window_padding = { top = 20, bottom = 20, left = 20, right = 20 },
 }
 

@@ -38,6 +38,7 @@ alias ps = procs
 alias tail = tspin
 alias spotify = spotify_player
 alias atac =  atac --directory ~/.config/atac/
+alias zed = zeditor .
 nitch
 
 $env.config = {

@@ -4,17 +4,19 @@
   ...
 }: {
   imports = [
-    ./stylix.nix
+    inputs.catppuccin.homeManagerModules.catppuccin
     ../../services
     ../../programs/anyrun
     ../../programs/eww
+    ../../programs/hyprpanel.nix
     ../../programs/browsers/firefox
     ../../programs/terminal/wezterm
     ../../programs/terminal/zellij
+    ../../programs/editors/zed
     ../../programs/media/cava.nix
     ../../programs/gtk.nix
     ../../programs/mako.nix
-    #../../programs/media/spotify-player.nix
+    ../../programs/opencomposite.nix
     ../../programs/media/zathura.nix
     ../../programs/media/easyeffects.nix
     ../../wayland/hyprland
@@ -27,6 +29,7 @@
     vesktop
     technorino
     obsidian
+    vscode-fhs
     signal-desktop
     obs-studio
     pavucontrol
@@ -44,7 +47,6 @@
     ventoy-bin-full
     wine
     bottles
-    prismlauncher
     lutris
     r2modman
     moonlight-qt
@@ -54,18 +56,18 @@
     wlx-overlay-s
     losslesscut-bin
     bolt-launcher
-    cinny-desktop
-    jetbrains.goland
-    distrobox
-    tidal-hifi
-    neptune
+    mangohud
+    uxplay
+    drawio
     inputs.nix-gaming.packages.${pkgs.system}.osu-lazer-bin
+    inputs.prismlauncher.packages.${pkgs.system}.prismlauncher
     # inputs.hyprsunset.packages.${pkgs.system}.default
-    (callPackage ../../../pkgs/passgen {})
-    (callPackage ../../../pkgs/forex {})
-    (callPackage ../../../pkgs/cpm {})
   ];
-
+  catppuccin = {
+    enable = true;
+    flavor = "mocha";
+    accent = "pink";
+  };
   programs.ssh = {
     enable = true;
     extraConfig = ''

@@ -9,28 +9,7 @@
     enable = true;
     enableNushellIntegration = true;
     settings = {
-      palette = "tokyonight";
       add_newline = false;
-      palettes.tokyonight = {
-        red = "#f7768e";
-        orange = "#ff9e64";
-        yellow = "#e0af68";
-        light-green = "#9ece6a";
-        green = "#73daca";
-        turquoise = "#89ddff";
-        light-cyan = "#b4f9f8";
-        teal = "#2ac3de";
-        cyan = "#7dcfff";
-        blue = "#7aa2f7";
-        magenta = "#bb9af7";
-        white = "#c0caf5";
-        light-gray = "#9aa5ce";
-        parameters = "#cfc9c2";
-        comment = "#565f89";
-        black = "#414868";
-        foreground = "#a9b1d6";
-        background = "#1a1b26";
-      };
       format = lib.concatStrings [
         "$character"
         "$hostname"

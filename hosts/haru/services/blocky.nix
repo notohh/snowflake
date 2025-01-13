@@ -51,6 +51,10 @@
             "https://pgl.yoyo.org/adservers/serverlist.php?hostformat=hosts&showintro=0&mimetype=plaintext"
             "https://raw.githubusercontent.com/FadeMind/hosts.extras/master/UncheckyAds/hosts"
             "https://raw.githubusercontent.com/bigdargon/hostsVN/master/hosts"
+            "https://raw.githubusercontent.com/AdGoBye/AdGoBye-Blocklists/main/AGBBase.toml"
+            "https://raw.githubusercontent.com/AdGoBye/AdGoBye-Blocklists/main/AGBCommunity.toml"
+            "https://raw.githubusercontent.com/AdGoBye/AdGoBye-Blocklists/main/AGBUpsell.toml"
+            "https://raw.githubusercontent.com/AdGoBye/AdGoBye-Blocklists/main/AGBSupporters.toml"
           ];
           tracking = [
             "https://v.firebog.net/hosts/Easyprivacy.txt"

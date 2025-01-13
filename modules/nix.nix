@@ -8,21 +8,13 @@
       inputs.hyprlock.overlays.default
       inputs.hyprpaper.overlays.default
       inputs.hyprpicker.overlays.default
+      inputs.hyprwayland-scanner.overlays.default
       inputs.atuin.overlays.default
       inputs.eww.overlays.default
-      inputs.neptune.overlays.default
+      inputs.hyprpanel.overlay
     ];
     config = {
       allowUnfree = true;
-      permittedInsecurePackages = [
-        "dotnet-runtime-6.0.36"
-        "dotnet-sdk-wrapped-6.0.428"
-        "dotnet-sdk-6.0.428"
-        "aspnetcore-runtime-wrapped-6.0.36"
-        "aspnetcore-runtime-6.0.36"
-        "cinny-4.2.3"
-        "cinny-unwrapped-4.2.3"
-      ];
     };
   };
 
@@ -47,6 +39,7 @@
         "https://viperml.cachix.org"
         "https://nix-community.cachix.org"
         "https://attic.kennel.juneis.dog/conduwuit"
+        "https://prismlauncher.cachix.org"
       ];
       trusted-public-keys = [
         "cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY="
@@ -57,6 +50,7 @@
         "viperml.cachix.org-1:qZhKBMTfmcLL+OG6fj/hzsMEedgKvZVFRRAhq7j8Vh8="
         "nix-community.cachix.org-1:mB9FSh9qf2dCimDSUo8Zy7bkq5CX+/rkCWyvRCYg3Fs="
         "conduwuit:BbycGUgTISsltcmH0qNjFR9dbrQNYgdIAcmViSGoVTE="
+        "prismlauncher.cachix.org-1:9/n/FGyABA2jLUVfY+DEp4hKds/rwO+SCOtbOkDzd+c="
       ];
     };
   };

@@ -9,12 +9,6 @@ _: {
         bar_width = 2;
         bar_spacing = 3;
       };
-      color = {
-        gradient = 1;
-        gradient_count = 2;
-        gradient_color_2 = "'#f7768e'";
-        gradient_color_1 = "'#7dcfff'";
-      };
       smoothing = {
         monstercat = 1;
         waves = 1;

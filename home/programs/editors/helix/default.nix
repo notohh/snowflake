@@ -10,7 +10,6 @@ _: {
     enable = true;
     defaultEditor = true;
     settings = {
-      theme = "onedark";
       editor = {
         auto-save = true;
         true-color = true;
