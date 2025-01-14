@@ -11,10 +11,14 @@
       inputs.hyprwayland-scanner.overlays.default
       inputs.atuin.overlays.default
       inputs.eww.overlays.default
-      inputs.hyprpanel.overlay
     ];
     config = {
       allowUnfree = true;
+      permittedInsecurePackages = [
+        # for sonarr
+        "dotnet-sdk-6.0.428"
+        "aspnetcore-runtime-6.0.36"
+      ];
     };
   };
 
