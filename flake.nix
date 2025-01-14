@@ -119,6 +119,7 @@
     catppuccin.url = "github:catppuccin/nix";
     nixpkgs-xr.url = "github:nix-community/nixpkgs-xr";
     prismlauncher.url = "github:PrismLauncher/PrismLauncher";
+    flocon.url = "git+https://git.nezia.dev/nezia/flocon";
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
