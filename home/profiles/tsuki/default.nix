@@ -8,7 +8,6 @@
     ../../services
     ../../programs/anyrun
     ../../programs/eww
-    ../../programs/hyprpanel.nix
     ../../programs/browsers/firefox
     ../../programs/terminal/wezterm
     ../../programs/terminal/zellij
@@ -55,11 +54,13 @@
     jellyfin-rpc
     wlx-overlay-s
     losslesscut-bin
-    bolt-launcher
     mangohud
     uxplay
     drawio
+    inputs.zen.packages.${pkgs.system}.default
     inputs.nix-gaming.packages.${pkgs.system}.osu-lazer-bin
+    inputs.flocon.packages.${pkgs.system}.bolt-launcher
+    inputs.manga-tui.packages.${pkgs.system}.manga-tui
     inputs.prismlauncher.packages.${pkgs.system}.prismlauncher
     # inputs.hyprsunset.packages.${pkgs.system}.default
   ];
