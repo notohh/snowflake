@@ -120,6 +120,7 @@
     nixpkgs-xr.url = "github:nix-community/nixpkgs-xr";
     prismlauncher.url = "github:PrismLauncher/PrismLauncher";
     flocon.url = "git+https://git.nezia.dev/nezia/flocon";
+    manga-tui.url = "github:josueBarretogit/manga-tui";
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -134,6 +135,10 @@
     };
     scls = {
       url = "github:estin/simple-completion-language-server";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    zen = {
+      url = "github:youwen5/zen-browser-flake";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
