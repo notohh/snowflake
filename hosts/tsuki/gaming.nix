@@ -7,6 +7,9 @@
     inputs.nix-gaming.nixosModules.platformOptimizations
     inputs.nixpkgs-xr.nixosModules.nixpkgs-xr
   ];
+  environment.systemPackages = [
+    pkgs.android-tools # for wired wivrn
+  ];
   services = {
     wivrn = {
       enable = true;
@@ -15,6 +18,7 @@
       autoStart = true;
       monadoEnvironment = {
         U_PACING_COMP_MIN_TIME_MS = "8";
+        XRT_COMPOSITOR_COMPUTE = "1";
       };
     };
     monado = {
@@ -29,10 +33,6 @@
     };
   };
   programs = {
-    gamemode = {
-      enable = true;
-      enableRenice = true;
-    };
     gamescope = {
       enable = true;
       capSysNice = true;
