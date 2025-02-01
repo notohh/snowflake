@@ -1,4 +1,9 @@
-{inputs, ...}: {
+{
+  inputs,
+  config,
+  ...
+}: {
+  sops.secrets.github-token = {};
   nixpkgs = {
     overlays = [
       inputs.nur.overlays.default
@@ -57,6 +62,9 @@
         "prismlauncher.cachix.org-1:9/n/FGyABA2jLUVfY+DEp4hKds/rwO+SCOtbOkDzd+c="
       ];
     };
+    extraOptions = ''
+      !include ${config.sops.secrets.github-token.path}
+    '';
   };
 
   programs.nh = {
