@@ -90,6 +90,7 @@
             *.clickhouse.com
             *.discord.com
             *.last.fm
+            *.spotify.com
           '';
         in {
           ads = [
