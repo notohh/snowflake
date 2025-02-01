@@ -65,7 +65,7 @@
   programs = {
     hyprland = {
       enable = true;
-      withUWSM = true;
+      withUWSM = false;
       portalPackage = inputs.xdg-portal-hyprland.packages.${pkgs.system}.default;
     };
     corectrl.enable = true;
