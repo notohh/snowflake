@@ -91,6 +91,10 @@
         mouse_move_enables_dpms = true;
         key_press_enables_dpms = false;
       };
+      ecosystem = {
+        no_update_news = true;
+        no_donation_nag = true;
+      };
     };
     extraConfig = ''
       bind =, Print, exec, grim -g "$(slurp)" - | satty -f - --fullscreen --output-filename ~/Pictures/screenshots/$(date '+%Y%m%d-%H:%M:%S').png
