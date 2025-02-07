@@ -34,6 +34,28 @@
           });
         });
       })
+      (final: prev: {
+        vesktop = prev.vesktop.overrideAttrs (finalAttrs: oldAttrs: rec {
+          pname = "Vesktop";
+          version = "1.5.5";
+          src = prev.fetchFromGitHub {
+            owner = "Vencord";
+            repo = pname;
+            rev = "refs/tags/v${version}";
+            hash = "sha256-z2MKnCWDWUczoz39zzBYRB6wiSU1SRRHLpeUZeJqbLc=";
+          };
+          pnpmDeps = prev.pnpm_9.fetchDeps {
+            inherit
+              (finalAttrs)
+              pname
+              version
+              src
+              patches
+              ;
+            hash = "sha256-xn3yE2S6hfCijV+Edx3PYgGro8eF76/GqarOIRj9Tbg=";
+          };
+        });
+      })
     ];
   };
 }
