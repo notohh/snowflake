@@ -39,6 +39,7 @@ alias tail = tspin
 alias spotify = spotify_player
 alias atac =  atac --directory ~/.config/atac/
 alias zed = zeditor .
+alias generate-topology = nix build ".#topology.x86_64-linux.config.output"
 nitch
 
 $env.config = {
@@ -221,7 +222,7 @@ $env.config = {
             | where command =~ $buffer
             | each { |it| {value: $it.command description: $it.usage} }
         }
-      } 
+      }
   ]
   keybindings: [
     {
@@ -325,7 +326,7 @@ $env.config = {
       event: { send: menu name: commands_with_description }
     }
 
-     
+
   ]
 
 }
