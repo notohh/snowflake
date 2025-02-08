@@ -14,7 +14,6 @@
     ../../home/wayland
     ../../modules
     ../../modules/fonts.nix
-    ../../pkgs/overlays.nix
   ];
 
   virtualisation = {
