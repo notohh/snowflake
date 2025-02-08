@@ -24,7 +24,10 @@
               stylua.enable = true;
               statix.enable = true;
               alejandra.enable = true;
-              deadnix.enable = true;
+              deadnix = {
+                enable = true;
+                excludes = ["technorino.nix"];
+              };
               prettier = {
                 enable = true;
                 files = "\\.(js|ts|md|json)$";

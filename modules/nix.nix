@@ -16,6 +16,7 @@
       inputs.hyprwayland-scanner.overlays.default
       inputs.atuin.overlays.default
       inputs.eww.overlays.default
+      inputs.self.overlays.technorino
     ];
     config = {
       allowUnfree = true;
