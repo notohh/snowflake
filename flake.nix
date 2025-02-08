@@ -4,11 +4,12 @@
   outputs = inputs:
     inputs.flake-parts.lib.mkFlake {inherit inputs;} {
       imports = [
-        inputs.pre-commit-hooks.flakeModule
         ./hosts
         ./overlays
         ./hosts/deploy.nix
         ./home/profiles
+        ./modules/pre-commit.nix
+        ./modules/topology.nix
       ];
       systems = ["x86_64-linux"];
       perSystem = {
@@ -16,28 +17,6 @@
         pkgs,
         ...
       }: {
-        pre-commit = {
-          check.enable = true;
-          settings = {
-            excludes = ["flake.lock"];
-            hooks = {
-              stylua.enable = true;
-              statix.enable = true;
-              alejandra.enable = true;
-              deadnix = {
-                enable = true;
-                excludes = ["technorino.nix"];
-              };
-              prettier = {
-                enable = true;
-                files = "\\.(js|ts|md|json)$";
-                settings = {
-                  trailing-comma = "none";
-                };
-              };
-            };
-          };
-        };
         devShells.default = pkgs.mkShell {
           name = "snowflake";
           shellHook = config.pre-commit.installationScript;
@@ -135,6 +114,10 @@
     };
     zen = {
       url = "github:youwen5/zen-browser-flake";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    nix-topology = {
+      url = "github:oddlama/nix-topology";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
