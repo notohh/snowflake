@@ -3,7 +3,7 @@
   fetchFromGitHub,
   rustPlatform,
 }:
-rustPlatform.buildRustPackage rec {
+rustPlatform.buildRustPackage {
   pname = "jellyfin-rpc";
   version = "0.15.5";
 
