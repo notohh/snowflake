@@ -6,6 +6,7 @@
       imports = [
         inputs.pre-commit-hooks.flakeModule
         ./hosts
+        ./overlays
         ./hosts/deploy.nix
         ./home/profiles
       ];
@@ -23,10 +24,7 @@
               stylua.enable = true;
               statix.enable = true;
               alejandra.enable = true;
-              deadnix = {
-                enable = true;
-                excludes = ["overlays.nix"];
-              };
+              deadnix.enable = true;
               prettier = {
                 enable = true;
                 files = "\\.(js|ts|md|json)$";
@@ -88,11 +86,6 @@
     hyprutils = {
       url = "github:hyprwm/hyprutils";
       inputs.nixpkgs.follows = "nixpkgs";
-    };
-    xdg-portal-hyprland = {
-      url = "github:hyprwm/xdg-desktop-portal-hyprland";
-      inputs.nixpkgs.follows = "nixpkgs";
-      inputs.hyprutils.follows = "hyprutils";
     };
     hyprland-plugins = {
       url = "github:hyprwm/hyprland-plugins";
