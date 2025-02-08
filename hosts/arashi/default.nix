@@ -3,8 +3,8 @@
     ./hardware.nix
     ./services
     ./networking.nix
-    ../common.nix
-    ../../modules
+    ./topology.nix
+    ../common
   ];
 
   users = {

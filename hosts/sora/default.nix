@@ -3,8 +3,8 @@ _: {
     ./hardware.nix
     ./networking.nix
     ./services
-    ../common.nix
-    ../../modules
+    ./topology.nix
+    ../common
   ];
 
   services.snowflake-proxy.enable = true;
