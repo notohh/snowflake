@@ -10,10 +10,10 @@
     ./services
     ./networking.nix
     ./gaming.nix
-    ../common.nix
+    ./topology.nix
+    ../common
+    ../common/fonts.nix
     ../../home/wayland
-    ../../modules
-    ../../modules/fonts.nix
   ];
 
   virtualisation = {

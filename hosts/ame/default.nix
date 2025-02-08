@@ -3,9 +3,8 @@ _: {
     ./hardware.nix
     ./services
     ./networking.nix
-    ../common.nix
-    ../../modules
-    ../../modules/fonts.nix
+    ../common
+    ../common/fonts.nix
   ];
 
   programs.hyprland.enable = true;
