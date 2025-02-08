@@ -31,11 +31,22 @@
       openFirewall = true;
       capSysAdmin = true;
     };
+    ananicy = {
+      enable = true;
+      package = pkgs.ananicy-cpp;
+      rulesProvider = pkgs.ananicy-cpp;
+      extraRules = [
+        {
+          "name" = "gamescope";
+          "nice" = -20;
+        }
+      ];
+    };
   };
   programs = {
     gamescope = {
       enable = true;
-      capSysNice = true;
+      capSysNice = false;
       args = [
         "--expose-wayland"
         "--framerate-limit 144"

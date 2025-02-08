@@ -66,7 +66,7 @@
     hyprland = {
       enable = true;
       withUWSM = false;
-      portalPackage = inputs.xdg-portal-hyprland.packages.${pkgs.system}.default;
+      portalPackage = inputs.hyprland.packages.${pkgs.system}.xdg-desktop-portal-hyprland;
     };
     corectrl.enable = true;
     dconf.enable = true;

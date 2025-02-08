@@ -25,7 +25,7 @@
   ];
   home.packages = with pkgs; [
     chromium
-    vesktop
+    discord-canary
     technorino
     obsidian
     vscode-fhs

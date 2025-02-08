@@ -8,6 +8,7 @@ _: {
         7000 # uxplay
         7100 # uxplay
         7001 # uxplay
+        5173
       ];
       allowedUDPPorts = [
         7011 # uxplay

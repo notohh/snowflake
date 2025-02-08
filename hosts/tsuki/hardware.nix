@@ -15,9 +15,7 @@
       "threadirqs"
       "mitigations=off"
     ];
-    extraModulePackages = with config.boot.kernelPackages; [
-      v4l2loopback.out
-    ];
+    extraModulePackages = with config.boot.kernelPackages; [v4l2loopback.out];
     loader = {
       systemd-boot = {
         enable = true;
