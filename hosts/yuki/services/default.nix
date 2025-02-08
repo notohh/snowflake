@@ -11,6 +11,6 @@
     ./anki-sync-server.nix
     # ./paperless.nix
     # ./hydroxide.nix
-    ./botoh.nix
+    # ./botoh.nix
   ];
 }

@@ -8,7 +8,7 @@ _: {
     homeassistant = {
       name = "Home";
       time_zone = "America/New_York";
-      unit_system = "imperial";
+      unit_system = "us_customary";
       temperature_unit = "F";
       currency = "USD";
       country = "US";
