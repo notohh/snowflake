@@ -6,10 +6,9 @@
       imports = [
         ./hosts
         ./overlays
+        ./modules
         ./hosts/deploy.nix
         ./home/profiles
-        ./modules/pre-commit.nix
-        ./modules/topology.nix
       ];
       systems = ["x86_64-linux"];
       perSystem = {
