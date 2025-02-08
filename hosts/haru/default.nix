@@ -3,6 +3,7 @@
     ./hardware.nix
     ./services
     ./networking.nix
+    ./topology.nix
     ../common
   ];
 

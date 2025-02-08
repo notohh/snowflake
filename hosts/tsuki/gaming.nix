@@ -22,7 +22,7 @@
       };
     };
     monado = {
-      enable = true;
+      enable = false;
       highPriority = true;
     };
     sunshine = {
