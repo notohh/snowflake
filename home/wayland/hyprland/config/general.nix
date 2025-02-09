@@ -8,7 +8,7 @@
         "DP-1,2560x1440@144, 1080x1080, auto" #middle
       ];
       exec-once = [
-        "eww open bar"
+        "hyprpanel"
         "hyprpaper"
         "chatterino"
         "DiscordCanary"
@@ -23,7 +23,7 @@
       };
       general = {
         gaps_in = 10;
-        gaps_out = 20;
+        gaps_out = 15;
         border_size = 0;
         "col.active_border" = "rgb(7dcfff) rgb(c0caf5)";
         "col.inactive_border" = "rgb(24283b)";
