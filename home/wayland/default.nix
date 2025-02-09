@@ -1,5 +1,5 @@
 {pkgs, ...}: {
-  imports = [./services/greetd.nix];
+  imports = [./services/ly.nix];
   environment = {
     systemPackages = with pkgs; [
       wayland
@@ -25,15 +25,14 @@
       TERMINAL = "wezterm";
       # SDL_VIDEODRIVER = "wayland";
     };
-    etc."greetd/environments".text = ''
-      Hyprland
-    '';
   };
 
   services.dbus.enable = true;
   xdg.portal = {
     enable = true;
+    xdgOpenUsePortal = true;
     extraPortals = with pkgs; [
+      xdg-desktop-portal
       xdg-desktop-portal-gtk
     ];
     config = {
