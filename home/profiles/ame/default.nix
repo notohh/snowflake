@@ -8,7 +8,6 @@
     ../../programs/terminal/zellij
     # ../../programs/themes.nix
     ../../programs/media/cava.nix
-    ../../programs/mako.nix
     ../../programs/media/zathura.nix
   ];
 

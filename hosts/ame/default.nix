@@ -11,6 +11,7 @@ _: {
   programs.hyprland.enable = true;
 
   services = {
+    pulseaudio.enable = false;
     displayManager.sddm.enable = true;
     pipewire = {
       enable = true;
@@ -26,7 +27,5 @@ _: {
       };
     };
   };
-
-  hardware.pulseaudio.enable = false;
   security.rtkit.enable = true;
 }
