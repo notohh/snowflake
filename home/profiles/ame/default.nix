@@ -6,7 +6,7 @@
     ../../programs/browsers/chromium
     ../../programs/terminal/wezterm
     ../../programs/terminal/zellij
-    # ../../programs/gtk.nix
+    # ../../programs/themes.nix
     ../../programs/media/cava.nix
     ../../programs/mako.nix
     ../../programs/media/zathura.nix

@@ -13,7 +13,7 @@
     ../../programs/terminal/zellij
     ../../programs/editors/zed
     ../../programs/media/cava.nix
-    ../../programs/gtk.nix
+    ../../programs/themes.nix
     # ../../programs/opencomposite.nix
     ../../programs/media/zathura.nix
     ../../programs/media/easyeffects.nix
