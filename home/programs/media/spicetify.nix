@@ -8,11 +8,13 @@ in {
   imports = [inputs.spicetify-nix.homeManagerModules.default];
   programs.spicetify = {
     enable = true;
+    experimentalFeatures = true;
     enabledExtensions = with spicePkgs.extensions; [
       hidePodcasts
       beautifulLyrics
       fullAlbumDate
-      volumeProfiles
+      shuffle
     ];
+    theme = spicePkgs.themes.hazy;
   };
 }
