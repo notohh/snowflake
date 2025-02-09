@@ -14,9 +14,10 @@
   <img src="https://ci.flake.sh/api/badges/9/status.svg" alt="status-badge" />
 </a>
  <p></p>
-<img src="https://i.imgur.com/s2zvbRt.png"></img>
+<img src="https://i.imgur.com/HPfGlT3.png"></img>
+<img src="https://i.imgur.com/0jW7kPZ.png"></img>
 <p>
-  Screenshot updated: 2024-04-26
+  Screenshots updated: 2025-02-09
 </p>
 <h4>
   :warning: this config is a constant WIP,
