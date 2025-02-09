@@ -1,7 +1,0 @@
-(defwidget container []
-  (box
-    :class "container"
-    :orientation "h"
-    (children)
-  )
-)

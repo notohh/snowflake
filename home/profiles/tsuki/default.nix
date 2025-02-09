@@ -7,15 +7,14 @@
     inputs.catppuccin.homeManagerModules.catppuccin
     ../../services
     ../../programs/anyrun
-    ../../programs/eww
+    ../../programs/hyprpanel
     ../../programs/browsers/firefox
     ../../programs/terminal/wezterm
     ../../programs/terminal/zellij
     ../../programs/editors/zed
     ../../programs/media/cava.nix
     ../../programs/gtk.nix
-    ../../programs/mako.nix
-    ../../programs/opencomposite.nix
+    # ../../programs/opencomposite.nix
     ../../programs/media/zathura.nix
     ../../programs/media/easyeffects.nix
     ../../wayland/hyprland
