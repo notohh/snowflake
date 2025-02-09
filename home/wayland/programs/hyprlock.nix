@@ -3,8 +3,8 @@ _: {
     enable = true;
     settings = {
       background = let
-        verticalWallpaper = "/home/notoh/Pictures/wallpapers/sparkle.png";
-        horizontalWallpaper = "/home/notoh/Pictures/wallpapers/sparkle2.png";
+        verticalWallpaper = "/home/notoh/dev/assets/wallpapers/miku/miku2.png";
+        horizontalWallpaper = "/home/notoh/dev/assets/wallpapers/miku/miku.png";
       in [
         {
           monitor = "HDMI-A-1";

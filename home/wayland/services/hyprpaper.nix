@@ -1,20 +1,23 @@
 {pkgs, ...}: {
   home.packages = [pkgs.hyprpaper];
 
-  services.hyprpaper = {
+  services.hyprpaper = let
+    verticalWallpaper = "~/dev/assets/wallpapers/miku/miku2.png";
+    horizontalWallpaper = "~/dev/assets/wallpapers/miku/miku.png";
+  in {
     enable = true;
     settings = {
       ipc = true;
       splash = false;
       preload = [
-        "~/Pictures/wallpapers/sparkle3.png"
-        "~/Pictures/wallpapers/sparkle4.png"
+        verticalWallpaper
+        horizontalWallpaper
       ];
       wallpaper = [
-        "HDMI-A-1,~/Pictures/wallpapers/sparkle3.png"
-        "DP-1,~/Pictures/wallpapers/sparkle4.png"
-        "DP-2,~/Pictures/wallpapers/sparkle4.png"
-        "DP-3,~/Pictures/wallpapers/sparkle3.png"
+        "HDMI-A-1,${verticalWallpaper}"
+        "DP-1,${horizontalWallpaper}"
+        "DP-2,${horizontalWallpaper}"
+        "DP-3,${verticalWallpaper}"
       ];
     };
   };
