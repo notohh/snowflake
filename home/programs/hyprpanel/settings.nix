@@ -35,7 +35,7 @@ _: {
         shortcuts.enabled = false;
         powermenu = {
           avatar = {
-            image = "";
+            image = "/home/notoh/dev/assets/pfps/pfp2.jpg";
             name = "notohh";
           };
         };
