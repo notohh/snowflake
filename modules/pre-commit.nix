@@ -10,6 +10,7 @@
         stylua.enable = true;
         statix.enable = true;
         alejandra.enable = true;
+        flake-checker.enable = true;
         deadnix = {
           enable = true;
           excludes = ["technorino.nix"];
