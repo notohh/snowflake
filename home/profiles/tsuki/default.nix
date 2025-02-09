@@ -13,6 +13,7 @@
     ../../programs/terminal/zellij
     ../../programs/editors/zed
     ../../programs/media/cava.nix
+    ../../programs/media/spicetify.nix
     ../../programs/themes.nix
     # ../../programs/opencomposite.nix
     ../../programs/media/zathura.nix
