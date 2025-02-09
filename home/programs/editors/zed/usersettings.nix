@@ -7,6 +7,10 @@ _: {
     relative_line_numbers = true;
     hour_format = "hour24";
     shell = "nu";
+    theme = {
+      dark = "Catppuccin Mocha (pink)";
+      light = "Catppuccin Mocha (pink)";
+    };
     tabs = {
       file_icons = true;
       git_status = true;

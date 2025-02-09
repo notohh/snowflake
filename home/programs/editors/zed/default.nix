@@ -1,22 +1,29 @@
 {pkgs, ...}: {
   imports = [./usersettings.nix ./userkeymap.nix];
   programs.zed-editor = {
-    enable = false;
+    enable = true;
     package = pkgs.zed-editor.fhsWithPackages (pkgs: [pkgs.zlib pkgs.openssl]);
     extensions = [
+      # langs
       "html"
-      "catppuccin"
       "toml"
       "git-firefly"
       "latex"
       "svelte"
       "scss"
       "nix"
+      "nu"
+      "gosum"
+      "scls"
+
+      # misc
       "env"
       "discord-presence"
       "wakatime"
-      "nu"
-      "gosum"
+
+      # themes
+      "catppuccin"
+      "material-icon-theme"
     ];
   };
 }
