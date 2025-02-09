@@ -14,8 +14,8 @@
   <img src="https://ci.flake.sh/api/badges/9/status.svg" alt="status-badge" />
 </a>
  <p></p>
-<img src="https://i.imgur.com/HPfGlT3.png"></img>
-<img src="https://i.imgur.com/0jW7kPZ.png"></img>
+<img src="https://i.imgur.com/G34pKzL.png"></img>
+<img src="https://i.imgur.com/TbveB7E.png"></img>
 <p>
   Screenshots updated: 2025-02-09
 </p>
