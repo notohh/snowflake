@@ -17,6 +17,7 @@
       inputs.atuin.overlays.default
       inputs.eww.overlays.default
       inputs.self.overlays.technorino
+      inputs.hyprpanel.overlay
     ];
     config = {
       allowUnfree = true;
