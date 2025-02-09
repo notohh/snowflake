@@ -19,7 +19,7 @@
   Screenshot updated: 2024-04-26
 </p>
 <h4>
-  :warning: this config is a constant WIP, 
+  :warning: this config is a constant WIP,
   and will change constantly as i continue to learn about nix. stuff will be updated, restructed, added, and removed quite often. please also note that everything hosted here is what works best for me,   and could totally be ineffecient, or just a dead wrong way of doing something.</h4>
 </div>
 
@@ -38,6 +38,7 @@
   - :building_construction: [tsuru](hosts/tsuru)
   - :snowflake: [yuki](hosts/yuki)
 - :electric_plug: [modules](modules)
+- :airplane: [overlays](overlays)
 - :package: [pkgs](pkgs)
 - :lock: [secrets](secrets)
 
