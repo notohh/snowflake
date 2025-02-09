@@ -2,9 +2,16 @@ _: {
   programs.hyprpanel.settings = {
     bar = {
       launcher.autoDetectIcon = true;
+      clock = {
+        format = "%a %b %d  %H:%M";
+      };
       workspaces = {
         show_icons = true;
       };
+    };
+    notifications = {
+      monitor = 0;
+      active_monitor = false;
     };
     menus = {
       clock = {
@@ -36,6 +43,10 @@ _: {
     };
     theme = {
       bar.transparent = false;
+      osd = {
+        monitor = 0;
+        active_monitor = false;
+      };
       font = {
         name = "Inter";
         size = "17px";
