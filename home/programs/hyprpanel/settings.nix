@@ -1,12 +1,31 @@
-_: {
+{
+  pkgs,
+  inputs,
+  ...
+}: {
   programs.hyprpanel.settings = {
     bar = {
+      autoHide = "fullscreen";
       launcher.autoDetectIcon = true;
       clock = {
-        format = "%a %b %d  %H:%M";
+        format = "%m/%d/%y  %H:%M";
+      };
+      media = {
+        truncation = true;
+        truncation_size = 40;
       };
       workspaces = {
+        workspaces = 4;
         show_icons = true;
+        showWsIcons = false;
+        showApplicationIcons = false;
+        monitorSpecific = false;
+      };
+      customModules = {
+        hyprsunset = {
+          temperature = "3000k";
+        };
+        weather.unit = "metric";
       };
     };
     notifications = {
@@ -17,10 +36,10 @@ _: {
       clock = {
         time = {
           military = true;
-          hideSeconds = true;
+          hideSeconds = false;
         };
         weather = {
-          enabled = true;
+          enabled = false;
           key = "13b77bbcf0dc420782005246250902";
           unit = "metric";
           location = "New York";
@@ -34,6 +53,7 @@ _: {
         directories.enabled = false;
         shortcuts.enabled = false;
         powermenu = {
+          sleep = "${inputs.hyprland.packages.${pkgs.system}.hyprland}/bin/hyprctl dispatch dpms off";
           avatar = {
             image = "/home/notoh/dev/assets/pfps/pfp2.jpg";
             name = "notohh";
