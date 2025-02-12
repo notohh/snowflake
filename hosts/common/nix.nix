@@ -15,7 +15,6 @@
       inputs.hyprpicker.overlays.default
       inputs.hyprwayland-scanner.overlays.default
       inputs.atuin.overlays.default
-      inputs.eww.overlays.default
       inputs.self.overlays.technorino
       inputs.hyprpanel.overlay
     ];
@@ -49,7 +48,6 @@
         "https://anyrun.cachix.org"
         "https://viperml.cachix.org"
         "https://nix-community.cachix.org"
-        "https://attic.kennel.juneis.dog/conduwuit"
         "https://prismlauncher.cachix.org"
       ];
       trusted-public-keys = [
@@ -60,7 +58,6 @@
         "anyrun.cachix.org-1:pqBobmOjI7nKlsUMV25u9QHa9btJK65/C8vnO3p346s="
         "viperml.cachix.org-1:qZhKBMTfmcLL+OG6fj/hzsMEedgKvZVFRRAhq7j8Vh8="
         "nix-community.cachix.org-1:mB9FSh9qf2dCimDSUo8Zy7bkq5CX+/rkCWyvRCYg3Fs="
-        "conduwuit:BbycGUgTISsltcmH0qNjFR9dbrQNYgdIAcmViSGoVTE="
         "prismlauncher.cachix.org-1:9/n/FGyABA2jLUVfY+DEp4hKds/rwO+SCOtbOkDzd+c="
       ];
     };

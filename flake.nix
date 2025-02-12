@@ -86,13 +86,11 @@
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
     atuin.url = "github:atuinsh/atuin";
     flake-parts.url = "github:hercules-ci/flake-parts";
-    eww.url = "github:elkowar/eww";
     anyrun.url = "github:Kirottu/anyrun";
     botoh.url = "git+https://git.flake.sh/notohh/botoh";
     catppuccin.url = "github:catppuccin/nix";
     nixpkgs-xr.url = "github:nix-community/nixpkgs-xr";
     prismlauncher.url = "github:PrismLauncher/PrismLauncher";
-    flocon.url = "git+https://git.nezia.dev/nezia/flocon";
     manga-tui.url = "github:josueBarretogit/manga-tui";
     spicetify-nix.url = "github:Gerg-L/spicetify-nix";
     home-manager = {
@@ -121,6 +119,10 @@
     };
     hyprpanel = {
       url = "github:jas-singhfsu/hyprpanel";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    flocon = {
+      url = "git+https://git.nezia.dev/nezia/flocon";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
