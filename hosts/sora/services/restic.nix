@@ -21,7 +21,7 @@
           "--keep-weekly=6"
           "--keep-monthly=5"
         ];
-        repository = "s3:https://s3.flake.sh/restic-sora";
+        repository = "s3:https://s3.wasabisys.com/sora-restic";
         initialize = true;
         passwordFile = config.sops.secrets.restic-sora.path;
         environmentFile = config.sops.secrets.sora-s3.path;

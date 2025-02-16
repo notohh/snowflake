@@ -37,7 +37,7 @@
         type = "s3";
         region = "us-east-1";
         bucket = "kyasshu";
-        endpoint = "https://s3.flake.sh/";
+        endpoint = "https://s3.wasabisys.com";
       };
     };
   };

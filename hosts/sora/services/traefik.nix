@@ -164,14 +164,6 @@
             tls.domains = [{main = "*.${pqdn}";}];
             tls.certresolver = "production";
           };
-          minio = {
-            rule = "Host(`s3.${pqdn}`)";
-            entrypoints = ["websecure"];
-            service = "minio";
-            tls.domains = [{main = "*.${pqdn}";}];
-            tls.certresolver = "production";
-            middlewares = "cors-allow-all";
-          };
           woodpecker = {
             rule = "Host(`ci.${pqdn}`)";
             entrypoints = ["websecure"];
@@ -208,9 +200,6 @@
           searxng.loadBalancer.servers = [{url = "http://${sakuraIp}8100";}];
           justlog.loadBalancer.servers = [{url = "http://${sakuraIp}8025";}];
           wastebin.loadBalancer.servers = [{url = "http://${sakuraIp}8088";}];
-
-          # kaze
-          minio.loadBalancer.servers = [{url = "http://100.69.79.81:9005";}];
 
           # tsuru
           woodpecker.loadBalancer.servers = [{url = "http://100.82.146.40:8200";}];
