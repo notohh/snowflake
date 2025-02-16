@@ -10,5 +10,6 @@
     ./tailscale.nix
     ./rustlog.nix
     ./wastebin.nix
+    ./ganymede.nix
   ];
 }
