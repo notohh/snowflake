@@ -9,6 +9,7 @@ _: {
       "float, title:^(RuneLite)$"
       "float, title:^(Lutris)$"
       "float, title:^(satty)$"
+      "float, title:^(Postman)$"
       "move 850 360, title:^(RuneLite)$"
       # "size 800 560, title:^(RuneLite)$"
       "size 1200 600, title:^(satty)$"

@@ -57,6 +57,7 @@
     mangohud
     uxplay
     drawio
+    postman
     inputs.zen.packages.${pkgs.system}.default
     inputs.nix-gaming.packages.${pkgs.system}.osu-lazer-bin
     inputs.flocon.packages.${pkgs.system}.bolt-launcher
