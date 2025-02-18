@@ -21,15 +21,15 @@
       openFirewall = true;
     };
     bazarr = {
-      enable = true;
+      enable = false;
       openFirewall = true;
     };
     readarr = {
-      enable = true;
+      enable = false;
       openFirewall = true;
     };
     lidarr = {
-      enable = true;
+      enable = false;
       openFirewall = true;
     };
     sabnzbd.enable = true;
