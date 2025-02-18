@@ -43,6 +43,14 @@
       device = "192.168.1.199:/mnt/Sutoreji/paperless-ngx/paperless-media ";
       fsType = "nfs";
     };
+    "/var/lib/hoarder" = {
+      device = "192.168.1.199:/mnt/Sutoreji/hoarder ";
+      fsType = "nfs";
+    };
+    "/var/lib/immich" = {
+      device = "192.168.1.199:/mnt/Sutoreji/immich ";
+      fsType = "nfs";
+    };
   };
 
   swapDevices = [

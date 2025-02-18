@@ -128,6 +128,27 @@
             tls.domains = [{main = "*.${fqdn}";}];
             tls.certresolver = "production";
           };
+          ganymede = {
+            rule = "Host(`ganymede.${fqdn}`)";
+            entrypoints = ["websecure"];
+            service = "ganymede";
+            tls.domains = [{main = "*.${fqdn}";}];
+            tls.certresolver = "production";
+          };
+          hoarder = {
+            rule = "Host(`hoarder.${fqdn}`)";
+            entrypoints = ["websecure"];
+            service = "hoarder";
+            tls.domains = [{main = "*.${fqdn}";}];
+            tls.certresolver = "production";
+          };
+          immich = {
+            rule = "Host(`immich.${fqdn}`)";
+            entrypoints = ["websecure"];
+            service = "immich";
+            tls.domains = [{main = "*.${fqdn}";}];
+            tls.certresolver = "production";
+          };
         };
         services = let
           kariruHost = "192.168.1.54:";
@@ -141,6 +162,8 @@
           hass.loadBalancer.servers = [{url = "http://localhost:8123";}];
           paperless.loadBalancer.servers = [{url = "http://localhost:28981";}];
           miniflux.loadBalancer.servers = [{url = "http://localhost:9000";}];
+          hoarder.loadBalancer.servers = [{url = "http://localhost:3000";}];
+          immich.loadBalancer.servers = [{url = "http://localhost:2283";}];
           # kariru
           sonarr.loadBalancer.servers = [{url = "http://${kariruHost}8989";}];
           radarr.loadBalancer.servers = [{url = "http://${kariruHost}7878";}];
@@ -149,6 +172,8 @@
           bazarr.loadBalancer.servers = [{url = "http://${kariruHost}6767";}];
           whisparr.loadBalancer.servers = [{url = "http://${kariruHost}6969";}];
           prowlarr.loadBalancer.servers = [{url = "http://${kariruHost}9696";}];
+          # sakura
+          ganymede.loadBalancer.servers = [{url = "http://100.121.201.47:4000";}];
         };
       };
     };

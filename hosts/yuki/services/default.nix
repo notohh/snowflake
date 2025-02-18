@@ -7,10 +7,9 @@
     ./stash.nix
     ./jellyfin.nix
     ./wallos.nix
-    # ./searxng.nix
     ./anki-sync-server.nix
-    # ./paperless.nix
-    # ./hydroxide.nix
+    ./hoarder.nix
+    ./immich.nix
     # ./botoh.nix
   ];
 }

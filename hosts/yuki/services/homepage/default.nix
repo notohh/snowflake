@@ -27,7 +27,7 @@
       statusStyle = "dot";
       hideVersion = true;
       background = {
-        image = "https://i.imgur.com/Q8xIWP7.png";
+        image = "https://git.flake.sh/notohh/assets/raw/branch/main/wallpapers/miku/miku.png";
         brightness = 75;
       };
       providers = {
@@ -71,9 +71,9 @@
           };
         }
         {
-          "Storage" = {
+          "Misc apps" = {
             style = "row";
-            columns = 1;
+            columns = 2;
           };
         }
         {

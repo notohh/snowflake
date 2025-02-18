@@ -235,39 +235,6 @@ _: {
           };
         }
         {
-          "Readarr" = {
-            icon = "readarr";
-            href = "https://readarr.internal.flake.sh";
-            widget = {
-              type = "readarr";
-              url = "${kariruIp}8787";
-              key = "{{HOMEPAGE_VAR_READARR_KEY}}";
-            };
-          };
-        }
-        {
-          "Lidarr" = {
-            icon = "lidarr";
-            href = "https://lidarr.internal.flake.sh";
-            widget = {
-              type = "lidarr";
-              url = "${kariruIp}8686";
-              key = "{{HOMEPAGE_VAR_LIDARR_KEY}}";
-            };
-          };
-        }
-        {
-          "Bazarr" = {
-            icon = "bazarr";
-            href = "https://bazarr.internal.flake.sh";
-            widget = {
-              type = "bazarr";
-              url = "${kariruIp}6767";
-              key = "{{HOMEPAGE_VAR_BAZARR_KEY}}";
-            };
-          };
-        }
-        {
           "Prowlarr" = {
             icon = "prowlarr";
             href = "https://prowlarr.internal.flake.sh";
@@ -302,6 +269,17 @@ _: {
           };
         }
         {
+          "immich" = {
+            icon = "immich";
+            href = "https://immich.internal.flake.sh";
+            widget = {
+              type = "immich";
+              url = "http://192.168.1.98:2283";
+              key = "{{HOMEPAGE_VAR_IMMICH_KEY}}";
+            };
+          };
+        }
+        {
           "Whisparr" = {
             icon = "whisparr";
             href = "http://whisparr.internal.flake.sh/";
@@ -311,51 +289,6 @@ _: {
           "Servarr" = {
             icon = "servarr";
             href = "https://wiki.servarr.com/";
-          };
-        }
-      ];
-    }
-    {
-      "Storage" = [
-        {
-          "Nextcloud" = {
-            icon = "nextcloud";
-            href = "https://nextcloud.internal.flake.sh:9001";
-            widget = {
-              type = "nextcloud";
-              url = "https://192.168.1.199:9001";
-              username = "notoh";
-              password = "{{HOMEPAGE_VAR_NEXTCLOUD_PWD}}";
-            };
-          };
-        }
-        {
-          "Synology" = {
-            icon = "synology";
-            href = "https://synology.internal.flake.sh:5001/";
-            widget = {
-              type = "diskstation";
-              url = "https://192.168.1.71:5001";
-              username = "homepage";
-              password = "{{HOMEPAGE_VAR_SYNOLOGY_PWD}}";
-            };
-          };
-        }
-        {
-          "Paperless-ngx" = {
-            icon = "paperless-ngx";
-            href = "https://paperless.internal.flake.sh";
-            widget = {
-              type = "paperlessngx";
-              url = "http://100.108.113.89:28981";
-              key = "{{HOMEPAGE_VAR_PAPERLESS_KEY}}";
-            };
-          };
-        }
-        {
-          "Minio" = {
-            icon = "minio";
-            href = "http://100.69.79.81:9006/browser/";
           };
         }
       ];
@@ -372,18 +305,6 @@ _: {
           "Hetzner" = {
             icon = "hetzner";
             href = "https://accounts.hetzner.com/login";
-          };
-        }
-        {
-          "Backblaze" = {
-            icon = "backblaze";
-            href = "https://secure.backblaze.com";
-          };
-        }
-        {
-          "notohh.dev" = {
-            icon = "hugo";
-            href = "https://notohh.dev/";
           };
         }
         {
@@ -405,15 +326,21 @@ _: {
           };
         }
         {
-          "Hedgedoc" = {
-            icon = null;
-            href = "https://scratch.flake.sh";
+          "Hoarder" = {
+            icon = "hoarder";
+            href = "https://hoarder.internal.flake.sh";
           };
         }
         {
           "Wallos" = {
             icon = null;
             href = "https://wallos.internal.flake.sh";
+          };
+        }
+        {
+          "Ganymede" = {
+            icon = null;
+            href = "https://ganymede.internal.flake.sh";
           };
         }
       ];
