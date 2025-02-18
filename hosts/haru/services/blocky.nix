@@ -135,14 +135,15 @@
           "bazarr.internal.flake.sh" = "${yukiIp}";
           "prowlarr.internal.flake.sh" = "${yukiIp}";
           "stash.internal.flake.sh" = "${yukiIp}";
-          "nextcloud.internal.flake.sh" = "192.168.1.199";
+          "immich.internal.flake.sh" = "${yukiIp}";
 
           # misc
 
           "wallos.internal.flake.sh" = "${yukiIp}";
           "synology.internal.flake.sh" = "192.168.1.71";
           "paperless.internal.flake.sh" = "${yukiIp}";
-          "rss.internal.flake.sh" = "${yukiIp}";
+          "hoarder.internal.flake.sh" = "${yukiIp}";
+          "ganymede.internal.flake.sh" = "100.121.201.47";
         };
       };
       redis = {
