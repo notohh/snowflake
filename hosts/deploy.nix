@@ -71,16 +71,6 @@
         sshOpts = ["-t" "-i" "~/.ssh/forgejo"];
         magicRollback = true;
       };
-      kaze = {
-        hostname = "100.69.79.81";
-        profiles.system = {
-          user = "root";
-          path = activate.nixos inputs.self.nixosConfigurations.kaze;
-        };
-        sshUser = "root";
-        sshOpts = ["-t" "-i" "~/.ssh/forgejo"];
-        magicRollback = true;
-      };
     };
   };
 }

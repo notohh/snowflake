@@ -9,7 +9,7 @@ _: {
   environment.etc = {
     "resolv.conf".text = ''
       nameserver 192.168.1.103
-      nameserver 9.9.9.9
+      nameserver 1.1.1.1
     '';
   };
 }

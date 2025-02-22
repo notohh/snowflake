@@ -2,7 +2,7 @@
   networking = {
     hostName = "sora";
     nameservers = [
-      "9.9.9.9"
+      "1.1.1.1"
       "149.112.112.112"
     ];
     defaultGateway = "172.31.1.1";

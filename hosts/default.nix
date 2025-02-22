@@ -151,21 +151,5 @@
         }
       ];
     };
-    kaze = nixosSystem {
-      inherit specialArgs;
-      modules = [
-        ./kaze
-        {
-          home-manager = {
-            useGlobalPkgs = true;
-            useUserPackages = true;
-            extraSpecialArgs = specialArgs;
-            users.notoh = {
-              imports = homeImports."default";
-            };
-          };
-        }
-      ];
-    };
   };
 }

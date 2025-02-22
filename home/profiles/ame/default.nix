@@ -63,10 +63,6 @@
         Hostname 100.73.192.45
         User notoh
         IdentityFile ~/.ssh/haru
-      Host kaze
-        Hostname 100.69.79.81
-        User notoh
-        IdentityFile ~/.ssh/kaze
       Host basegbot
         HostName 100.83.81.116
         User basegbot

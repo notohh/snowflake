@@ -47,7 +47,6 @@
     wine
     bottles
     lutris
-    r2modman
     moonlight-qt
     tokei
     jellyfin-media-player
@@ -58,6 +57,7 @@
     uxplay
     drawio
     postman
+    gale
     inputs.zen.packages.${pkgs.system}.default
     inputs.nix-gaming.packages.${pkgs.system}.osu-lazer-bin
     inputs.flocon.packages.${pkgs.system}.bolt-launcher
@@ -105,10 +105,6 @@
         Hostname 100.73.192.45
         User notoh
         IdentityFile ~/.ssh/haru
-      Host kaze
-        Hostname 100.69.79.81
-        User notoh
-        IdentityFile ~/.ssh/kaze
       Host basegbot
         HostName 100.83.81.116
         User basegbot

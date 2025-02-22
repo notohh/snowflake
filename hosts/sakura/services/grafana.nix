@@ -69,12 +69,6 @@ in {
             orgId = 1;
           }
           {
-            name = "Prometheus-kaze";
-            type = "prometheus";
-            url = "http://100.69.79.81:${prometheusPort}";
-            orgId = 1;
-          }
-          {
             name = "Prometheus-haru";
             type = "prometheus";
             url = "http://100.73.192.45:${prometheusPort}";
