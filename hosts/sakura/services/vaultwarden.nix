@@ -26,7 +26,7 @@
       SMTP_FROM_NAME = "Vaultwarden";
       SMTP_USERNAME = "vaultwarden-mailer";
       SMTP_TIMEOUT = 15;
-      EXPERIMENTAL_CLIENT_FEATURE_FLAGS = "ssh-key-vault-item,ssh-agent";
+      EXPERIMENTAL_CLIENT_FEATURE_FLAGS = "autofill-v2,extension-refresh,ssh-key-vault-item,ssh-agent";
     };
     environmentFile = config.sops.secrets.vaultwarden-env.path;
   };
