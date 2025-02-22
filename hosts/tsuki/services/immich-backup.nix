@@ -7,8 +7,13 @@
     services.immich-backup = let
       homeDir = "/home/notoh";
     in {
-      script = ''
-        ${lib.getExe pkgs.immich-cli} upload --album-name "desktop screenshots" --recursive ${homeDir}/Pictures/screenshots
+      script = with pkgs; ''
+        echo $DISPLAY
+        export DISPLAY=:0.0
+        echo $DISPLAY
+        export DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus
+        ${lib.getExe immich-cli} upload --album-name "desktop screenshots" --recursive ${homeDir}/Pictures/screenshots
+        ${lib.getExe libnotify} --app-name "immich-backup" --urgency=low --icon=dialog-information "immich backup completed"
       '';
       serviceConfig = {
         Type = "oneshot";
