@@ -40,13 +40,17 @@ _: {
         disable_loading_bar = false;
         hide_cursor = false;
         no_fade_in = false;
+        ignore_empty_input = true;
+      };
+      animations = {
+        enabled = true;
       };
       input-field = [
         {
           monitor = "DP-1";
           size = "350, 50";
           outline_thickness = 2;
-          outer_color = "rgb(f7768e)";
+          outer_color = "rgb(f5c2e7)";
           inner_color = "rgb(1a1b26)";
           font_color = "rgb(c0caf5)";
           fail_color = "rgb(f7768e)";
@@ -69,7 +73,7 @@ _: {
         {
           monitor = "DP-1";
           text = ''
-            Hi, <i><span foreground="##f7768e">$USER</span></i>
+            Hi, <i><span foreground="##74c7ec">$USER</span></i>
           '';
           color = "rgb(c0caf5)";
           position = "0, 60";

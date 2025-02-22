@@ -96,8 +96,5 @@
         no_donation_nag = true;
       };
     };
-    extraConfig = ''
-      bind =, Print, exec, grim -g "$(slurp)" - | satty -f - --fullscreen --output-filename ~/Pictures/screenshots/$(date '+%Y%m%d-%H:%M:%S').png
-    '';
   };
 }

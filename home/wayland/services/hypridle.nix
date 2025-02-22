@@ -2,6 +2,7 @@
   pkgs,
   lib,
   config,
+  inputs,
   ...
 }: {
   services.hypridle = {
@@ -18,8 +19,8 @@
           on-timeout = "${lib.getExe config.programs.hyprlock.package}";
         }
         {
-          timeout = 460;
-          on-timeout = "hyprctl dispatch dpms off";
+          timeout = 450;
+          on-timeout = "${inputs.hyprland.packages.${pkgs.system}.hyprland}/bin/hyprctl dispatch dpms off";
         }
       ];
     };

@@ -4,9 +4,6 @@
     systemPackages = with pkgs; [
       wayland
       glib
-      grim
-      slurp
-      satty
       wl-clipboard
     ];
     sessionVariables = {
