@@ -5,7 +5,7 @@ _: {
   virtualisation.oci-containers.containers = {
     ganymede = {
       hostname = "ganymede";
-      image = "ghcr.io/zibbp/ganymede@sha256:3f7a93e4875b665cd6473cea99f35fc790facd1f6cfed7c3e6c34c65a405727f"; # 4.0.3
+      image = "ghcr.io/zibbp/ganymede@sha256:4654c1aafb98e53a619d24e2ea3b31d231242d7f7753a780931799ac7f6c2d2a"; # 4.0.4
       ports = ["4800:4800"];
       environment = {
         VIDEOS_DIR = "/data/videos";
