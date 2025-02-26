@@ -28,7 +28,7 @@
     discord-canary
     technorino
     obsidian
-    vscode-fhs
+    code-cursor
     signal-desktop
     obs-studio
     pavucontrol
@@ -41,7 +41,6 @@
     mpv
     ffmpeg
     rustypaste-cli
-    gimp
     cryptomator
     ventoy-bin-full
     wine
@@ -58,9 +57,11 @@
     drawio
     postman
     gale
+    krita
+    aseprite
+    bolt-launcher
     inputs.zen.packages.${pkgs.system}.default
     inputs.nix-gaming.packages.${pkgs.system}.osu-lazer-bin
-    inputs.flocon.packages.${pkgs.system}.bolt-launcher
     inputs.manga-tui.packages.${pkgs.system}.manga-tui
     inputs.prismlauncher.packages.${pkgs.system}.prismlauncher
     # inputs.hyprsunset.packages.${pkgs.system}.default
