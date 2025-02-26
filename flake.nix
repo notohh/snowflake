@@ -121,9 +121,5 @@
       url = "github:jas-singhfsu/hyprpanel";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    flocon = {
-      url = "git+https://git.nezia.dev/nezia/flocon";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
   };
 }
