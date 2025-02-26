@@ -1,7 +1,7 @@
 {pkgs, ...}: {
   imports = [./usersettings.nix ./userkeymap.nix];
   programs.zed-editor = {
-    enable = true;
+    enable = false;
     package = pkgs.zed-editor.fhsWithPackages (pkgs: [pkgs.zlib pkgs.openssl]);
     extensions = [
       # langs
