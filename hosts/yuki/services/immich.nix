@@ -13,5 +13,10 @@ _: {
     database = {
       createDB = true;
     };
+    settings = {
+      server = {
+        externalDomain = "https://immich.flake.sh";
+      };
+    };
   };
 }

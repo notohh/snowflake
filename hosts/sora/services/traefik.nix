@@ -178,6 +178,13 @@
             tls.domains = [{main = "*.${pqdn}";}];
             tls.certresolver = "production";
           };
+          immich-proxy = {
+            rule = "Host(`immich.${pqdn}`)";
+            entrypoints = ["websecure"];
+            service = "immich-proxy";
+            tls.domains = [{main = "*.${pqdn}";}];
+            tls.certresolver = "production";
+          };
         };
         services = let
           sakuraIp = "100.121.201.47:";
@@ -200,6 +207,7 @@
           searxng.loadBalancer.servers = [{url = "http://${sakuraIp}8100";}];
           justlog.loadBalancer.servers = [{url = "http://${sakuraIp}8025";}];
           wastebin.loadBalancer.servers = [{url = "http://${sakuraIp}8088";}];
+          immich-proxy.loadBalancer.servers = [{url = "http://${sakuraIp}2284";}];
 
           # tsuru
           woodpecker.loadBalancer.servers = [{url = "http://100.82.146.40:8200";}];
@@ -212,7 +220,7 @@
       api.insecure = false;
       global = {
         checkNewVersion = false;
-        sendAnonymousUsage = true;
+        sendAnonymousUsage = false;
       };
       entryPoints = {
         websecure = {
