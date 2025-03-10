@@ -25,7 +25,7 @@ in {
         ssl_mode = "disable";
       };
       panels = {
-        disable_sanitize_html = false;
+        disable_sanitize_html = true;
         enable_alpha = true;
       };
     };
