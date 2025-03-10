@@ -27,7 +27,6 @@
   services.dbus.enable = true;
   xdg.portal = {
     enable = true;
-    xdgOpenUsePortal = true;
     extraPortals = with pkgs; [
       xdg-desktop-portal
       xdg-desktop-portal-gtk
