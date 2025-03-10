@@ -78,21 +78,6 @@
     };
 
     ### other stuff
-    nix-gaming.url = "github:fufexan/nix-gaming";
-    nur.url = "github:nix-community/NUR";
-    yazi.url = "github:sxyazi/yazi";
-    helix.url = "github:helix-editor/helix";
-    pre-commit-hooks.url = "github:cachix/pre-commit-hooks.nix";
-    nixos-hardware.url = "github:NixOS/nixos-hardware/master";
-    atuin.url = "github:atuinsh/atuin";
-    flake-parts.url = "github:hercules-ci/flake-parts";
-    anyrun.url = "github:Kirottu/anyrun";
-    botoh.url = "git+https://git.flake.sh/notohh/botoh";
-    catppuccin.url = "github:catppuccin/nix";
-    nixpkgs-xr.url = "github:nix-community/nixpkgs-xr";
-    prismlauncher.url = "github:PrismLauncher/PrismLauncher";
-    manga-tui.url = "github:josueBarretogit/manga-tui";
-    spicetify-nix.url = "github:Gerg-L/spicetify-nix";
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -121,5 +106,20 @@
       url = "github:jas-singhfsu/hyprpanel";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    nix-gaming.url = "github:fufexan/nix-gaming";
+    nur.url = "github:nix-community/NUR";
+    yazi.url = "github:sxyazi/yazi";
+    helix.url = "github:helix-editor/helix";
+    pre-commit-hooks.url = "github:cachix/pre-commit-hooks.nix";
+    nixos-hardware.url = "github:NixOS/nixos-hardware/master";
+    atuin.url = "github:atuinsh/atuin";
+    flake-parts.url = "github:hercules-ci/flake-parts";
+    anyrun.url = "github:Kirottu/anyrun";
+    botoh.url = "git+https://git.flake.sh/notohh/botoh";
+    catppuccin.url = "github:catppuccin/nix";
+    nixpkgs-xr.url = "github:nix-community/nixpkgs-xr";
+    prismlauncher.url = "github:PrismLauncher/PrismLauncher";
+    manga-tui.url = "github:josueBarretogit/manga-tui";
+    spicetify-nix.url = "github:Gerg-L/spicetify-nix";
   };
 }
