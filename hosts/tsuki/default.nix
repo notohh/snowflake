@@ -23,6 +23,13 @@
   services = {
     pulseaudio.enable = false;
     pcscd.enable = true;
+    flatpak = {
+      enable = true;
+      packages = [
+        "io.github.Soundux"
+        "com.github.tchx84.Flatseal"
+      ];
+    };
     avahi = {
       enable = true;
       nssmdns4 = true;
