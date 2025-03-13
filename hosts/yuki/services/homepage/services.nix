@@ -145,6 +145,17 @@ _: {
           };
         }
         {
+          "Tailscale" = {
+            icon = "tailscale";
+            href = "https://login.tailscale.com/admin/machines";
+            widget = {
+              type = "tailscale";
+              deviceid = "{{HOMEPAGE_VAR_TAILSCALE_DEVICE_ID}}";
+              key = "{{HOMEPAGE_VAR_TAILSCALE_KEY}}";
+            };
+          };
+        }
+        {
           "Blocky" = {
             icon = "blocky";
             href = "http://192.168.1.103:4000";
@@ -158,11 +169,21 @@ _: {
           "Grafana" = {
             icon = "grafana";
             href = "https://metrics.flake.sh";
+            widget = {
+              type = "grafana";
+              url = "https://metrics.flake.sh";
+              username = "{{HOMEPAGE_VAR_GRAFANA_USER}}";
+              password = "{{HOMEPAGE_VAR_GRAFANA_PWD}}";
+            };
           };
         }
         {
           "Prometheus" = {
             icon = "prometheus";
+            widget = {
+              type = "prometheus";
+              url = "http://100.104.42.96:9090";
+            };
           };
         }
         {
@@ -258,24 +279,26 @@ _: {
           };
         }
         {
-          "SABnzbd" = {
-            icon = "sabnzbd";
-            href = "http://192.168.1.54:9292/sabnzbd/";
+          "Stash" = {
+            icon = "stash";
+            href = "https://stash.internal.flake.sh";
             widget = {
-              type = "sabnzbd";
-              url = "http://192.168.1.54:9292";
-              key = "{{HOMEPAGE_VAR_SABNZBD_KEY}}";
+              type = "stash";
+              url = "https://stash.internal.flake.sh";
+              key = "{{HOMEPAGE_VAR_STASH_KEY}}";
+              fields = ["scenes" "sceneSize" "performers"];
             };
           };
         }
         {
-          "immich" = {
+          "Immich" = {
             icon = "immich";
             href = "https://immich.internal.flake.sh";
             widget = {
               type = "immich";
-              url = "http://192.168.1.98:2283";
+              url = "https://immich.internal.flake.sh";
               key = "{{HOMEPAGE_VAR_IMMICH_KEY}}";
+              version = 2;
             };
           };
         }
@@ -305,12 +328,6 @@ _: {
           "Hetzner" = {
             icon = "hetzner";
             href = "https://accounts.hetzner.com/login";
-          };
-        }
-        {
-          "Stash" = {
-            icon = "stash";
-            href = "https://stash.internal.flake.sh";
           };
         }
         {

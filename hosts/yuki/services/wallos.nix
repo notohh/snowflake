@@ -1,6 +1,6 @@
 _: {
   virtualisation.oci-containers.containers.wallos = {
-    image = "bellamy/wallos@sha256:9ce55520e7bd3a5518a33f22590b2631b76559faadf1df68e1de4103dc6d60d7"; #v 2.46.0
+    image = "bellamy/wallos@sha256:34d1a92083bc4da561607d2b83bf58565754efed714bfe28196b6c3c9ba84031"; #v2.46.1
     ports = ["8282:80"];
     volumes = [
       "/home/notoh/docker/wallos/db:/var/www/html/db"

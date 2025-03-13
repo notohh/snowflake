@@ -93,34 +93,6 @@
             tls.domains = [{main = "*.${fqdn}";}];
             tls.certresolver = "production";
           };
-          readarr = {
-            rule = "Host(`readarr.${fqdn}`)";
-            entryPoints = ["websecure"];
-            service = "readarr";
-            tls.domains = [{main = "*.${fqdn}";}];
-            tls.certresolver = "production";
-          };
-          lidarr = {
-            rule = "Host(`lidarr.${fqdn}`)";
-            entryPoints = ["websecure"];
-            service = "lidarr";
-            tls.domains = [{main = "*.${fqdn}";}];
-            tls.certresolver = "production";
-          };
-          bazarr = {
-            rule = "Host(`bazarr.${fqdn}`)";
-            entryPoints = ["websecure"];
-            service = "bazarr";
-            tls.domains = [{main = "*.${fqdn}";}];
-            tls.certresolver = "production";
-          };
-          whisparr = {
-            rule = "Host(`whisparr.${fqdn}`)";
-            entryPoints = ["websecure"];
-            service = "whisparr";
-            tls.domains = [{main = "*.${fqdn}";}];
-            tls.certresolver = "production";
-          };
           prowlarr = {
             rule = "Host(`prowlarr.${fqdn}`)";
             entrypoints = ["websecure"];
@@ -149,6 +121,13 @@
             tls.domains = [{main = "*.${fqdn}";}];
             tls.certresolver = "production";
           };
+          shoko = {
+            rule = "Host(`shoko.${fqdn}`)";
+            entrypoints = ["websecure"];
+            service = "shoko";
+            tls.domains = [{main = "*.${fqdn}";}];
+            tls.certresolver = "production";
+          };
         };
         services = let
           kariruHost = "192.168.1.54:";
@@ -167,11 +146,8 @@
           # kariru
           sonarr.loadBalancer.servers = [{url = "http://${kariruHost}8989";}];
           radarr.loadBalancer.servers = [{url = "http://${kariruHost}7878";}];
-          readarr.loadBalancer.servers = [{url = "http://${kariruHost}8787";}];
-          lidarr.loadBalancer.servers = [{url = "http://${kariruHost}8686";}];
-          bazarr.loadBalancer.servers = [{url = "http://${kariruHost}6767";}];
-          whisparr.loadBalancer.servers = [{url = "http://${kariruHost}6969";}];
           prowlarr.loadBalancer.servers = [{url = "http://${kariruHost}9696";}];
+          shoko.loadBalancer.servers = [{url = "http://${kariruHost}8111";}];
           # sakura
           ganymede.loadBalancer.servers = [{url = "http://100.121.201.47:4000";}];
         };
