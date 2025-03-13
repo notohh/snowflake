@@ -18,6 +18,8 @@
     ../../programs/opencomposite.nix
     ../../programs/media/zathura.nix
     ../../programs/media/easyeffects.nix
+    ../../programs/media/mpv.nix
+    ../../programs/media/jellyfin-mpv-shim.nix
     ../../wayland/hyprland
     ../../wayland/services/hypridle.nix
     ../../wayland/services/hyprpaper.nix
@@ -25,7 +27,7 @@
   ];
   home.packages = with pkgs; [
     chromium
-    discord-canary
+    vesktop
     technorino
     obsidian
     code-cursor
@@ -38,8 +40,6 @@
     miru
     hyprpicker
     imv
-    mpv
-    ffmpeg
     rustypaste-cli
     cryptomator
     ventoy-bin-full
@@ -60,6 +60,7 @@
     krita
     aseprite
     bolt-launcher
+    cinny-desktop
     inputs.zen.packages.${pkgs.system}.default
     inputs.nix-gaming.packages.${pkgs.system}.osu-lazer-bin
     inputs.manga-tui.packages.${pkgs.system}.manga-tui
