@@ -1,6 +1,7 @@
 {
-  config,
+  inputs,
   pkgs,
+  config,
   ...
 }: {
   # xdg.configFile."yazi/init.lua".source = ./init.lua;
@@ -8,7 +9,7 @@
 
   programs.yazi = {
     enable = true;
-    package = pkgs.yazi;
+    package = inputs.yazi.packages.${pkgs.system}.default;
     enableNushellIntegration = true;
     settings = {
       manager = {

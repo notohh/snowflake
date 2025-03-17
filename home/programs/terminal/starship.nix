@@ -9,6 +9,7 @@
     enable = true;
     enableNushellIntegration = true;
     settings = {
+      command_timeout = 2000;
       add_newline = false;
       format = lib.concatStrings [
         "$character"

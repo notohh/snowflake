@@ -1,0 +1,5 @@
+{
+  "indexes": ["nixpkgs", "home-manager", "nur"],
+  "update_interval": "12h",
+  "enable_waiting_message": true
+}

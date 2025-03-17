@@ -1,6 +1,11 @@
-_: {
+{
+  inputs,
+  pkgs,
+  ...
+}: {
   programs.atuin = {
     enable = true;
+    package = inputs.atuin.packages.${pkgs.system}.default;
     enableNushellIntegration = true;
     settings = {
       auto_sync = true;
