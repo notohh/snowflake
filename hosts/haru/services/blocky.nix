@@ -113,6 +113,7 @@
         customTTL = "1h";
         mapping = let
           yukiIp = "192.168.1.98";
+          kariruIp = "192.168.1.54";
         in {
           # infra
 
@@ -129,13 +130,11 @@
           "jellyseerr.internal.flake.sh" = "${yukiIp}";
           "sonarr.internal.flake.sh" = "${yukiIp}";
           "radarr.internal.flake.sh" = "${yukiIp}";
-          "readarr.internal.flake.sh" = "${yukiIp}";
-          "lidarr.internal.flake.sh" = "${yukiIp}";
-          "whisparr.internal.flake.sh" = "${yukiIp}";
-          "bazarr.internal.flake.sh" = "${yukiIp}";
           "prowlarr.internal.flake.sh" = "${yukiIp}";
           "stash.internal.flake.sh" = "${yukiIp}";
           "immich.internal.flake.sh" = "${yukiIp}";
+          "komga.internal.flake.sh" = "${yukiIp}";
+          "shoko.internal.flake.sh" = "${kariruIp}";
 
           # misc
 
