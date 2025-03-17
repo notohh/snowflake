@@ -11,6 +11,7 @@
     ../../programs/browsers/firefox
     ../../programs/terminal/wezterm
     ../../programs/terminal/zellij
+    ../../programs/terminal/television
     ../../programs/editors/zed
     ../../programs/media/cava.nix
     ../../programs/media/spicetify.nix
@@ -29,7 +30,6 @@
     chromium
     vesktop
     technorino
-    obsidian
     code-cursor
     signal-desktop
     obs-studio
@@ -37,8 +37,6 @@
     anki-bin
     virt-manager
     qbittorrent
-    miru
-    hyprpicker
     imv
     rustypaste-cli
     cryptomator
@@ -58,14 +56,12 @@
     postman
     gale
     krita
-    aseprite
     bolt-launcher
     cinny-desktop
     inputs.zen.packages.${pkgs.system}.default
     inputs.nix-gaming.packages.${pkgs.system}.osu-lazer-bin
     inputs.manga-tui.packages.${pkgs.system}.manga-tui
     inputs.prismlauncher.packages.${pkgs.system}.prismlauncher
-    # inputs.hyprsunset.packages.${pkgs.system}.default
   ];
   catppuccin = {
     enable = true;
