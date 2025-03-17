@@ -6,16 +6,9 @@
   sops.secrets.github-token = {};
   nixpkgs = {
     overlays = [
+      inputs.self.overlays.technorino
       inputs.nur.overlays.default
       inputs.helix.overlays.default
-      inputs.yazi.overlays.default
-      inputs.hypridle.overlays.default
-      inputs.hyprlock.overlays.default
-      inputs.hyprpaper.overlays.default
-      inputs.hyprpicker.overlays.default
-      inputs.hyprwayland-scanner.overlays.default
-      inputs.atuin.overlays.default
-      inputs.self.overlays.technorino
       inputs.hyprpanel.overlay
     ];
     config = {
