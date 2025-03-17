@@ -1,5 +1,5 @@
 {config, ...}: {
-  networking.firewall.allowedTCPPorts = [80 443 8080];
+  networking.firewall.allowedTCPPorts = [80 443];
   sops.secrets.cloudflare-api-key = {};
   systemd.services.traefik = {
     environment = {
@@ -22,10 +22,10 @@
             entryPoints = ["websecure"];
             service = "api@internal";
           };
-          homepage = {
+          glance = {
             rule = "Host(`dashboard.${fqdn}`)";
             entrypoints = ["websecure"];
-            service = "homepage";
+            service = "glance";
             tls.domains = [{main = "*.${fqdn}";}];
             tls.certresolver = "production";
           };
@@ -128,13 +128,20 @@
             tls.domains = [{main = "*.${fqdn}";}];
             tls.certresolver = "production";
           };
+          komga = {
+            rule = "Host(`komga.${fqdn}`)";
+            entrypoints = ["websecure"];
+            service = "komga";
+            tls.domains = [{main = "*.${fqdn}";}];
+            tls.certresolver = "production";
+          };
         };
         services = let
           kariruHost = "192.168.1.54:";
         in {
           # local
           stash.loadBalancer.servers = [{url = "http://localhost:9999";}];
-          homepage.loadBalancer.servers = [{url = "http://localhost:7676";}];
+          glance.loadBalancer.servers = [{url = "http://localhost:7676";}];
           jellyfin.loadBalancer.servers = [{url = "http://localhost:8096";}];
           jellyseerr.loadBalancer.servers = [{url = "http://localhost:5055";}];
           wallos.loadBalancer.servers = [{url = "http://localhost:8282";}];
@@ -143,6 +150,7 @@
           miniflux.loadBalancer.servers = [{url = "http://localhost:9000";}];
           hoarder.loadBalancer.servers = [{url = "http://localhost:3000";}];
           immich.loadBalancer.servers = [{url = "http://localhost:2283";}];
+          komga.loadBalancer.servers = [{url = "http://localhost:8081";}];
           # kariru
           sonarr.loadBalancer.servers = [{url = "http://${kariruHost}8989";}];
           radarr.loadBalancer.servers = [{url = "http://${kariruHost}7878";}];
@@ -155,8 +163,8 @@
     };
     staticConfigOptions = {
       log.level = "DEBUG";
-      api.dashboard = true;
-      api.insecure = true;
+      api.dashboard = false;
+      api.insecure = false;
       global = {
         checkNewVersion = false;
         sendAnonymousUsage = false;
