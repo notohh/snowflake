@@ -35,77 +35,27 @@
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
 
     ### hypr
-    hyprland = {
-      url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-    hypridle = {
-      url = "github:hyprwm/hypridle";
-      inputs.nixpkgs.follows = "nixpkgs";
-      inputs.hyprutils.follows = "hyprutils";
-    };
-    hyprlock = {
-      url = "github:hyprwm/hyprlock";
-      inputs.nixpkgs.follows = "nixpkgs";
-      inputs.hyprutils.follows = "hyprutils";
-    };
-    hyprpicker = {
-      url = "github:hyprwm/hyprpicker";
-      inputs.nixpkgs.follows = "nixpkgs";
-      inputs.hyprutils.follows = "hyprutils";
-    };
-    hyprpaper = {
-      url = "github:hyprwm/hyprpaper";
-      inputs.nixpkgs.follows = "nixpkgs";
-      inputs.hyprutils.follows = "hyprutils";
-    };
-    hyprsunset = {
-      url = "github:hyprwm/hyprsunset";
-      inputs.nixpkgs.follows = "nixpkgs";
-      inputs.hyprutils.follows = "hyprutils";
-    };
-    hyprutils = {
-      url = "github:hyprwm/hyprutils";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
     hyprland-plugins = {
       url = "github:hyprwm/hyprland-plugins";
       inputs.hyprland.follows = "hyprland";
     };
-    hyprwayland-scanner = {
-      url = "github:hyprwm/hyprwayland-scanner";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    hyprland.url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
+    hypridle.url = "github:hyprwm/hypridle";
+    hyprlock.url = "github:hyprwm/hyprlock";
+    hyprpicker.url = "github:hyprwm/hyprpicker";
+    hyprpaper.url = "github:hyprwm/hyprpaper";
+    hyprsunset.url = "github:hyprwm/hyprsunset";
 
-    ### other stuff
+    ### everything else
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    deploy-rs = {
-      url = "github:serokell/deploy-rs";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-    sops-nix = {
-      url = "github:Mic92/sops-nix";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-    scls = {
-      url = "github:estin/simple-completion-language-server";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-    zen = {
-      url = "github:youwen5/zen-browser-flake";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-    nix-topology = {
-      url = "github:oddlama/nix-topology";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-    hyprpanel = {
-      url = "github:jas-singhfsu/hyprpanel";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    deploy-rs.url = "github:serokell/deploy-rs";
+    sops-nix.url = "github:Mic92/sops-nix";
+    hyprpanel.url = "github:jas-singhfsu/hyprpanel";
+    zen.url = "github:youwen5/zen-browser-flake";
+    scls.url = "github:estin/simple-completion-language-server";
     nix-gaming.url = "github:fufexan/nix-gaming";
     nur.url = "github:nix-community/NUR";
     yazi.url = "github:sxyazi/yazi";
@@ -121,6 +71,7 @@
     prismlauncher.url = "github:PrismLauncher/PrismLauncher";
     manga-tui.url = "github:josueBarretogit/manga-tui";
     spicetify-nix.url = "github:Gerg-L/spicetify-nix";
+    nix-topology.url = "github:oddlama/nix-topology";
     nix-flatpak.url = "github:gmodena/nix-flatpak";
   };
 }
