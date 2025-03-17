@@ -18,7 +18,6 @@
 
   virtualisation = {
     libvirtd.enable = true;
-    waydroid.enable = false;
   };
   services = {
     pulseaudio.enable = false;
