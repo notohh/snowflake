@@ -11,7 +11,7 @@
         "hyprpanel"
         "hyprpaper"
         "chatterino"
-        "DiscordCanary"
+        "vesktop"
         "dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
         "${pkgs.polkit_gnome}/libexec/polkit-gnome-authentication-agent-1"
       ];

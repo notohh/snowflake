@@ -29,6 +29,7 @@
       gnupg
       ripgrep
       lazydocker
+      ffmpeg
       yt-dlp
       nfs-utils
       dig
@@ -39,6 +40,7 @@
       p7zip
       procs
       navi
+      busybox
     ];
     stateVersion = "23.05";
   };

@@ -1,5 +1,3 @@
 {
-  imports = [
-    ./gpg.nix
-  ];
+  imports = [./gpg.nix];
 }

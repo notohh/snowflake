@@ -1,4 +1,8 @@
-{pkgs, ...}: {
+{
+  inputs,
+  pkgs,
+  ...
+}: {
   home.packages = [pkgs.hyprpaper];
 
   services.hyprpaper = let
@@ -6,6 +10,7 @@
     horizontalWallpaper = "~/dev/assets/wallpapers/miku/miku.png";
   in {
     enable = true;
+    package = inputs.hyprpaper.packages.${pkgs.system}.default;
     settings = {
       ipc = true;
       splash = false;

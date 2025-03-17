@@ -1,6 +1,11 @@
-_: {
+{
+  inputs,
+  pkgs,
+  ...
+}: {
   programs.hyprlock = {
     enable = true;
+    package = inputs.hyprlock.packages.${pkgs.system}.default;
     settings = {
       background = let
         verticalWallpaper = "/home/notoh/dev/assets/wallpapers/miku/miku2.png";

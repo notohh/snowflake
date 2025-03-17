@@ -1,9 +1,10 @@
 {
-  lib,
+  inputs,
   pkgs,
+  lib,
   ...
 }: {
-  wayland.windowManager.hyprland.settings = {
+  wayland.windowManager.hyprland.settings = with pkgs; {
     "$mainMod" = "SUPER";
     bind = [
       "$mainMod, Return, exec, wezterm"
@@ -13,13 +14,12 @@
       "$mainMod, R, exec, anyrun"
       "$mainMod, P, pseudo,"
       "$mainMod, J, togglesplit,"
-      "$mainMod, C, exec, hyprpicker | wl-copy"
+      "$mainMod, C, exec, ${lib.getExe inputs.hyprpicker.packages.${system}.default} | wl-copy"
       "$mainMod, left, movefocus, l"
       "$mainMod, right, movefocus, r"
       "$mainMod, up, movefocus, u"
       "$mainMod, down, movefocus, d"
-      '', Print, exec, ${lib.getExe pkgs.grim} -g "$(${lib.getExe pkgs.slurp})" - | ${lib.getExe pkgs.satty} -f - --fullscreen --output-filename ~/Pictures/screenshots/$(date '+%Y%m%d-%H:%M:%S').png''
-
+      '', Print, exec, ${lib.getExe grim} -g "$(${lib.getExe slurp})" - | ${lib.getExe satty} -f - --fullscreen --output-filename ~/Pictures/screenshots/$(date '+%Y%m%d-%H:%M:%S').png''
       "$mainMod, 1, workspace, 1"
       "$mainMod, 2, workspace, 2"
       "$mainMod, 3, workspace, 3"
