@@ -7,12 +7,11 @@
     ./attic.nix
     ./tailscale.nix
     ./croc.nix
-    ./glances.nix
 
     ### game servers
     # ./terraria.nix
     # ./factorio.nix
-    # ./minecraft.nix
+    ./minecraft.nix
     # ./foundryvtt.nix
   ];
 }
