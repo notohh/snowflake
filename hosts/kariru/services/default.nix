@@ -4,6 +4,7 @@
   imports = [
     ./restic.nix
     ./torrent.nix
+    ./syncthing.nix
   ];
 
   environment.systemPackages = [pkgs.recyclarr];
@@ -20,19 +21,6 @@
       enable = true;
       openFirewall = true;
     };
-    bazarr = {
-      enable = false;
-      openFirewall = true;
-    };
-    readarr = {
-      enable = false;
-      openFirewall = true;
-    };
-    lidarr = {
-      enable = false;
-      openFirewall = true;
-    };
-    sabnzbd.enable = false;
   };
 
   virtualisation.oci-containers.containers = {

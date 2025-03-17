@@ -13,6 +13,7 @@
         "6881:6881" #qb
         "6881:6881/udp" #qb
       ];
+      volumes = ["/srv/gluetun:/tmp/gluetun"];
       environmentFiles = [config.sops.secrets.gluetun.path];
       extraOptions = ["--cap-add=NET_ADMIN" "--device=/dev/net/tun:/dev/net/tun"];
     };
