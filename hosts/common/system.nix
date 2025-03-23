@@ -40,9 +40,4 @@
       DefaultTimeoutStopSec=5s
     '';
   };
-
-  system = {
-    autoUpgrade.enable = false;
-    stateVersion = "23.05"; # no touchy
-  };
 }

@@ -97,4 +97,9 @@
     zulu
     zulu17
   ];
+
+  system = {
+    autoUpgrade.enable = false;
+    stateVersion = "23.05";
+  };
 }
