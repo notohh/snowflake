@@ -1,4 +1,4 @@
-_: {
+{inputs, ...}: {
   imports = [
     ./hardware.nix
     ./services
@@ -6,13 +6,13 @@ _: {
     ./topology.nix
     ../common
     ../common/fonts.nix
+    inputs.nixos-cosmic.nixosModules.default
   ];
-
-  programs.hyprland.enable = true;
 
   services = {
     pulseaudio.enable = false;
-    displayManager.sddm.enable = true;
+    desktopManager.cosmic.enable = true;
+    displayManager.cosmic-greeter.enable = true;
     pipewire = {
       enable = true;
       alsa.enable = true;
@@ -27,5 +27,6 @@ _: {
       };
     };
   };
+  system.stateVersion = "23.05";
   security.rtkit.enable = true;
 }

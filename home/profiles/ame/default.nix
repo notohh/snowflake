@@ -1,32 +1,20 @@
-{pkgs, ...}: {
+{
+  inputs,
+  pkgs,
+  ...
+}: {
   imports = [
     ../../services
-    ../../programs/anyrun
-    ../../programs/browsers/firefox
-    ../../programs/browsers/chromium
-    ../../programs/terminal/wezterm
     ../../programs/terminal/zellij
-    # ../../programs/themes.nix
-    ../../programs/media/cava.nix
-    ../../programs/media/zathura.nix
   ];
 
   home.packages = with pkgs; [
-    discord
+    discord-canary
     pavucontrol
-    imv
-    mpv
-    rustypaste-cli
-    playerctl
-    obsidian
-    cryptomator
     wayland
     glib
-    grim
-    slurp
-    wl-clipboard
-    swww
-    hyprpicker
+    technorino
+    inputs.zen.packages.${pkgs.system}.default
   ];
   programs.ssh = {
     enable = true;

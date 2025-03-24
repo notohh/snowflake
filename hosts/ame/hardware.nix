@@ -31,16 +31,18 @@
 
   fileSystems = {
     "/" = {
-      device = "/dev/disk/by-uuid";
+      device = "/dev/disk/by-uuid/825f1188-82bd-4a1d-9434-6b5dd29041c3";
       fsType = "ext4";
+    };
+    "/boot/efi" = {
+      device = "/dev/disk/by-uuid/59C2-1D06";
+      fsType = "vfat";
     };
   };
 
-  zramSwap = {
-    enable = true;
-    swapDevices = 1;
-    algorithm = "zstd";
-  };
+  swapDevices = [
+    {device = "/dev/disk/by-uuid/d62dbf49-e51e-4823-a9cb-f2af486cd0f7";}
+  ];
 
   networking.useDHCP = lib.mkDefault true;
 
