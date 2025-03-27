@@ -4,8 +4,15 @@
   ...
 }: {
   imports = [
+    inputs.catppuccin.homeManagerModules.catppuccin
     ../../services
+    ../../programs/terminal/wezterm
     ../../programs/terminal/zellij
+    ../../programs/media/spicetify.nix
+    ../../programs/editors/zed
+    ../../programs/media/jellyfin-mpv-shim.nix
+    ../../programs/media/mpv.nix
+    ../../programs/media/easyeffects.nix
   ];
 
   home.packages = with pkgs; [
@@ -13,9 +20,16 @@
     pavucontrol
     wayland
     glib
+    jellyfin-media-player
     technorino
+    anki-bin
     inputs.zen.packages.${pkgs.system}.default
   ];
+  catppuccin = {
+    enable = true;
+    flavor = "mocha";
+    accent = "pink";
+  };
   programs.ssh = {
     enable = true;
     extraConfig = ''
