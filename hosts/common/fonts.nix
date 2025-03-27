@@ -8,13 +8,14 @@
       noto-fonts
       noto-fonts-cjk-sans
       twitter-color-emoji
+      maple-mono.NF
     ];
 
     fontconfig = {
       enable = true;
       allowBitmaps = true;
       defaultFonts = {
-        monospace = ["JetBrainsMono NF Medium" "Twitter Color Emoji"];
+        monospace = ["Maple Mono NF" "Twitter Color Emoji"];
         serif = ["Noto Serif" "Twitter Color Emoji"];
         sansSerif = ["Noto Sans" "Twitter Color Emoji"];
         emoji = ["Twitter Color Emoji"];
