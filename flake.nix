@@ -62,7 +62,6 @@
     helix.url = "github:helix-editor/helix";
     pre-commit-hooks.url = "github:cachix/pre-commit-hooks.nix";
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
-    atuin.url = "github:atuinsh/atuin";
     flake-parts.url = "github:hercules-ci/flake-parts";
     anyrun.url = "github:Kirottu/anyrun";
     botoh.url = "git+https://git.flake.sh/notohh/botoh";
