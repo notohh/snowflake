@@ -3,6 +3,7 @@
   homeImports,
   ...
 }: {
+  imports = [./deploy.nix];
   flake.nixosConfigurations = let
     inherit (inputs.nixpkgs.lib) nixosSystem;
     specialArgs = {inherit inputs;};

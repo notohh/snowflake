@@ -7,7 +7,6 @@
         ./hosts
         ./overlays
         ./modules
-        ./hosts/deploy.nix
         ./home/profiles
       ];
       systems = ["x86_64-linux"];
