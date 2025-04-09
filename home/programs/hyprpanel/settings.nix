@@ -4,6 +4,30 @@
   ...
 }: {
   programs.hyprpanel.settings = {
+    layout = {
+      "bar.layouts" = {
+        "0" = {
+          left = ["dashboard" "workspaces" "cava" "hyprsunset"];
+          middle = ["media"];
+          right = ["cpu" "ram" "volume" "clock" "weather" "systray" "notifications"];
+        };
+        "1" = {
+          left = [];
+          middle = [];
+          right = [];
+        };
+        "2" = {
+          left = [];
+          middle = [];
+          right = [];
+        };
+        "3" = {
+          left = [];
+          middle = [];
+          right = [];
+        };
+      };
+    };
     bar = {
       autoHide = "fullscreen";
       launcher.autoDetectIcon = true;
