@@ -10,7 +10,6 @@
     ./wastebin.nix
     ./ganymede.nix
     ./immich-proxy.nix
-    ./matrix.nix
     ./hedgedoc.nix
   ];
 }
