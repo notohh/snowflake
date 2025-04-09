@@ -1,4 +1,4 @@
-{inputs, ...}: {
+_: {
   imports = [
     ./hardware.nix
     ./services
@@ -6,18 +6,21 @@
     ./topology.nix
     ../common
     ../common/fonts.nix
-    inputs.nixos-cosmic.nixosModules.default
   ];
 
   services = {
     pulseaudio.enable = false;
-    desktopManager.cosmic.enable = true;
-    displayManager.cosmic-greeter.enable = true;
+    desktopManager.plasma6.enable = true;
+    displayManager.sddm.enable = true;
     pipewire = {
       enable = true;
       alsa.enable = true;
       alsa.support32Bit = true;
       pulse.enable = true;
+    };
+    scx = {
+      enable = true;
+      scheduler = "scx_lavd";
     };
     xserver = {
       enable = true;
@@ -26,7 +29,11 @@
         variant = "";
       };
     };
+    fprintd = {
+      enable = true;
+    };
   };
+
   system.stateVersion = "23.05";
   security.rtkit.enable = true;
 }
