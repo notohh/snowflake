@@ -1,6 +1,6 @@
 _: {
   wayland.windowManager.hyprland.settings = {
-    windowrulev2 = [
+    windowrule = [
       "noshadow, floating:0"
       "float, title:^(Volume Control)$"
       "float, title:^(Picture in picture)$"
