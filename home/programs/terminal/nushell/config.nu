@@ -28,6 +28,7 @@ alias send = croc --relay "100.104.42.96:9009" send
 alias receive = croc --relay "100.104.42.96:9009"
 alias ps = procs
 alias ts = tspin
+alias zed = zeditor .
 alias generate-topology = nix build ".#topology.x86_64-linux.config.output"
 
 nitch
