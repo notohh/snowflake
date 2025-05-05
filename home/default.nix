@@ -40,7 +40,6 @@
       p7zip
       procs
       navi
-      busybox
     ];
     stateVersion = "23.05";
   };
