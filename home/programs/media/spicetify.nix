@@ -9,6 +9,8 @@ in {
   programs.spicetify = {
     enable = true;
     experimentalFeatures = true;
+    wayland = true;
+    colorScheme = "Base";
     enabledExtensions = with spicePkgs.extensions; [
       hidePodcasts
       beautifulLyrics
