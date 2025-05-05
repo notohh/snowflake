@@ -7,7 +7,7 @@ _: {
     environment = {
       EULA = "TRUE";
       VERSION = "1.21.1";
-      MEMORY = "12G";
+      MEMORY = "6G";
       TYPE = "NEOFORGE";
     };
     volumes = ["/home/notoh/docker/modded-mc:/data:rw"];
