@@ -2,7 +2,7 @@ _: let
   storagePath = "/home/notoh/docker/stash";
 in {
   virtualisation.oci-containers.containers.stash = {
-    image = "stashapp/stash@sha256:28a04a0db254602c60af337e46770544f4b3f3e0cc0772603a673f6424336a61"; # v0.27.2
+    image = "stashapp/stash@sha256:645f6c15b079410d50d488dbeb247c92f25534094dad4e15d886e47648b897f7"; # v0.28.1
     ports = ["9999:9999"];
     environment = {
       STASH_STASH = "/data/";
