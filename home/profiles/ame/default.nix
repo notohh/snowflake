@@ -4,7 +4,7 @@
   ...
 }: {
   imports = [
-    inputs.catppuccin.homeManagerModules.catppuccin
+    inputs.catppuccin.homeModules.catppuccin
     ../../services
     ../../programs/terminal/wezterm
     ../../programs/terminal/zellij
@@ -23,6 +23,10 @@
     jellyfin-media-player
     technorino
     anki-bin
+    tutanota-desktop
+    moonlight-qt
+    signal-desktop
+    bolt-launcher
     inputs.zen.packages.${pkgs.system}.default
   ];
   catppuccin = {

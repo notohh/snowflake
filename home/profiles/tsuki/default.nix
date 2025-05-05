@@ -4,7 +4,7 @@
   ...
 }: {
   imports = [
-    inputs.catppuccin.homeManagerModules.catppuccin
+    inputs.catppuccin.homeModules.catppuccin
     ../../services
     ../../programs/anyrun
     ../../programs/hyprpanel
@@ -29,8 +29,8 @@
   home.packages = with pkgs; [
     chromium
     vesktop
+    discord-canary
     technorino
-    code-cursor
     signal-desktop
     obs-studio
     pavucontrol
@@ -58,12 +58,14 @@
     krita
     bolt-launcher
     cinny-desktop
+    tutanota-desktop
     inputs.zen.packages.${pkgs.system}.default
     inputs.nix-gaming.packages.${pkgs.system}.osu-lazer-bin
     inputs.manga-tui.packages.${pkgs.system}.manga-tui
     inputs.prismlauncher.packages.${pkgs.system}.prismlauncher
   ];
   catppuccin = {
+    mako.enable = false;
     enable = true;
     flavor = "mocha";
     accent = "pink";
