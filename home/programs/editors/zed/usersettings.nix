@@ -1,9 +1,9 @@
 _: {
   programs.zed-editor.userSettings = {
     ui_font_size = 16;
-    ui_font_family = "JetBrainsMono Nerd Font";
+    ui_font_family = "Maple Mono NF";
     buffer_font_size = 16;
-    buffer_font_family = "JetBrainsMono Nerd Font";
+    buffer_font_family = "Maple Mono NF";
     relative_line_numbers = true;
     hour_format = "hour24";
     shell = "nu";
@@ -31,6 +31,14 @@ _: {
         model = "gpt-4o";
       };
       version = "2";
+    };
+    diagnostics = {
+      inline = {
+        enabled = true;
+        update_debounce_ms = 150;
+        padding = 4;
+        max_severity = null;
+      };
     };
     languages = {
       Nix = {
