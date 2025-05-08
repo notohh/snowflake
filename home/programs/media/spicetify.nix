@@ -10,13 +10,13 @@ in {
     enable = true;
     experimentalFeatures = true;
     wayland = true;
-    colorScheme = "Base";
+    colorScheme = "mocha";
     enabledExtensions = with spicePkgs.extensions; [
-      hidePodcasts
       beautifulLyrics
+      hidePodcasts
       fullAlbumDate
       shuffle
     ];
-    theme = spicePkgs.themes.hazy;
+    theme = spicePkgs.themes.catppuccin;
   };
 }
