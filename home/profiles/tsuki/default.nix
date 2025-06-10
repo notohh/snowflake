@@ -29,18 +29,18 @@
   home.packages = with pkgs; [
     chromium
     vesktop
-    discord-canary
+    vscode-fhs
     technorino
     signal-desktop
     obs-studio
-    pavucontrol
+    pwvucontrol
     anki-bin
     virt-manager
     qbittorrent
     imv
     rustypaste-cli
     cryptomator
-    ventoy-bin-full
+    # ventoy-bin-full
     wine
     bottles
     lutris
@@ -59,6 +59,7 @@
     bolt-launcher
     cinny-desktop
     tutanota-desktop
+    distrobox
     inputs.zen.packages.${pkgs.system}.default
     inputs.nix-gaming.packages.${pkgs.system}.osu-lazer-bin
     inputs.manga-tui.packages.${pkgs.system}.manga-tui
@@ -66,6 +67,7 @@
   ];
   catppuccin = {
     mako.enable = false;
+    hyprlock.enable = false;
     enable = true;
     flavor = "mocha";
     accent = "pink";

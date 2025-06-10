@@ -17,7 +17,7 @@
 
   home.packages = with pkgs; [
     discord-canary
-    pavucontrol
+    pwvucontrol
     wayland
     glib
     jellyfin-media-player
