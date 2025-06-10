@@ -1,5 +1,5 @@
 {pkgs, ...}: {
-  networking.firewall.allowedTCPPorts = [9292 8111];
+  networking.firewall.allowedTCPPorts = [9292 8111 8085];
 
   imports = [
     ./restic.nix
@@ -21,6 +21,7 @@
       enable = true;
       openFirewall = true;
     };
+    sabnzbd.enable = true;
   };
 
   virtualisation.oci-containers.containers = {
