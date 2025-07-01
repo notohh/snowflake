@@ -22,6 +22,7 @@
             git
             sops
             alejandra
+            just
             yaml-language-server
             lua-language-server
           ];
