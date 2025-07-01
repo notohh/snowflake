@@ -9,6 +9,7 @@ _: {
         7100 # uxplay
         7001 # uxplay
         5173
+        5000 # twitch miner
       ];
       allowedUDPPorts = [
         7011 # uxplay

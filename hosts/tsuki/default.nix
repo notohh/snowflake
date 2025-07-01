@@ -27,6 +27,7 @@
       packages = [
         "io.github.Soundux"
         "com.github.tchx84.Flatseal"
+        "org.vinegarhq.Sober"
       ];
     };
     avahi = {
