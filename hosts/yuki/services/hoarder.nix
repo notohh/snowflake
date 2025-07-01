@@ -1,7 +1,7 @@
 {config, ...}: {
   sops.secrets.hoarder = {};
   services.meilisearch = {
-    enable = true;
+    enable = false;
     listenAddress = "0.0.0.0";
   };
   virtualisation.oci-containers.containers = {
