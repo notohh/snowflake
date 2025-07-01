@@ -56,7 +56,7 @@ input_bar_position = "top"
 # A list of builtin themes can be found in the `themes` directory of the television
 # repository. You may also create your own theme by creating a new file in a `themes`
 # directory in your configuration directory (see the `config.toml` location above).
-theme = "catppuccin"
+theme = "default"
 
 # Previewers settings
 # ----------------------------------------------------------------------------
@@ -72,7 +72,7 @@ theme = "TwoDark"
 #
 # Channel mode
 # ------------------------
-[keybindings.Channel]
+[keybindings]
 # Quit the application
 quit = ["esc", "ctrl-c"]
 # Scrolling through entries
@@ -101,46 +101,6 @@ toggle_help = "ctrl-g"
 toggle_preview = "ctrl-o"
 
 
-# Remote control mode
-# -------------------------------
-[keybindings.RemoteControl]
-# Quit the application
-quit = "esc"
-# Scrolling through entries
-select_next_entry = ["down", "ctrl-n", "ctrl-j"]
-select_prev_entry = ["up", "ctrl-p", "ctrl-k"]
-select_next_page = "pagedown"
-select_prev_page = "pageup"
-# Select an entry
-select_entry = "enter"
-# Toggle the remote control mode
-toggle_remote_control = "ctrl-r"
-# Toggle the help bar
-toggle_help = "ctrl-g"
-# Toggle the preview panel
-toggle_preview = "ctrl-o"
-
-
-# Send to channel mode
-# --------------------------------
-[keybindings.SendToChannel]
-# Quit the application
-quit = "esc"
-# Scrolling through entries
-select_next_entry = ["down", "ctrl-n", "ctrl-j"]
-select_prev_entry = ["up", "ctrl-p", "ctrl-k"]
-select_next_page = "pagedown"
-select_prev_page = "pageup"
-# Select an entry
-select_entry = "enter"
-# Toggle the send to channel mode
-toggle_send_to_channel = "ctrl-s"
-# Toggle the help bar
-toggle_help = "ctrl-g"
-# Toggle the preview panel
-toggle_preview = "ctrl-o"
-
-
 # Shell integration
 # ----------------------------------------------------------------------------
 #
@@ -148,6 +108,10 @@ toggle_preview = "ctrl-o"
 # your shell commands (as well as your shell history with <CTRL-R>).
 # E.g. typing `git checkout <CTRL-T>` will open television with a list of
 # branches to choose from.
+
+[shell_integration]
+# This specifies the default fallback channel if no other channel is matched.
+fallback_channel = "files"
 
 [shell_integration.channel_triggers]
 # Add your channel triggers here. Each key is a channel that will be triggered
