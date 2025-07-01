@@ -1,3 +1,6 @@
 _: {
-  imports = [./technorino.nix];
+  imports = [
+    ./technorino.nix
+    ./gale.nix
+  ];
 }
