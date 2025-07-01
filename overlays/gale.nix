@@ -1,13 +1,13 @@
 _: {
-  flake.overlays.gale = prev: {
-    gale = prev.gale.overrideAttrs (n: let
+  flake.overlays.gale = _final: prev: {
+    gale = prev.gale.overrideAttrs (n: _o: let
       version = "1.8.3";
     in {
       src = prev.fetchFromGitHub {
         inherit version;
         owner = "Kesomannen";
         repo = "gale";
-        rev = "1.8.3";
+        rev = version;
         hash = "sha256-tCtWPr5f37J+VfdpwIi6YoNaKS4LjBE9eLFuCuWBkPc=";
       };
       npmDeps = prev.fetchNpmDeps {
