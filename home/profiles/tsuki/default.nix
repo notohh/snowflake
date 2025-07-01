@@ -34,6 +34,7 @@
     signal-desktop
     obs-studio
     pwvucontrol
+    helvum
     anki-bin
     virt-manager
     qbittorrent
