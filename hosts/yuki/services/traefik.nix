@@ -64,20 +64,6 @@
             tls.domains = [{main = "*.${fqdn}";}];
             tls.certresolver = "production";
           };
-          paperless = {
-            rule = "Host(`paperless.${fqdn}`)";
-            entrypoints = ["websecure"];
-            service = "paperless";
-            tls.domains = [{main = "*.${fqdn}";}];
-            tls.certresolver = "production";
-          };
-          miniflux = {
-            rule = "Host(`rss.${fqdn}`)";
-            entrypoints = ["websecure"];
-            service = "miniflux";
-            tls.domains = [{main = "*.${fqdn}";}];
-            tls.certresolver = "production";
-          };
           # kariru
           sonarr = {
             rule = "Host(`sonarr.${fqdn}`)";
@@ -100,20 +86,6 @@
             tls.domains = [{main = "*.${fqdn}";}];
             tls.certresolver = "production";
           };
-          ganymede = {
-            rule = "Host(`ganymede.${fqdn}`)";
-            entrypoints = ["websecure"];
-            service = "ganymede";
-            tls.domains = [{main = "*.${fqdn}";}];
-            tls.certresolver = "production";
-          };
-          hoarder = {
-            rule = "Host(`hoarder.${fqdn}`)";
-            entrypoints = ["websecure"];
-            service = "hoarder";
-            tls.domains = [{main = "*.${fqdn}";}];
-            tls.certresolver = "production";
-          };
           immich = {
             rule = "Host(`immich.${fqdn}`)";
             entrypoints = ["websecure"];
@@ -121,17 +93,10 @@
             tls.domains = [{main = "*.${fqdn}";}];
             tls.certresolver = "production";
           };
-          shoko = {
-            rule = "Host(`shoko.${fqdn}`)";
+          navidrome = {
+            rule = "Host(`navidrome.${fqdn}`)";
             entrypoints = ["websecure"];
-            service = "shoko";
-            tls.domains = [{main = "*.${fqdn}";}];
-            tls.certresolver = "production";
-          };
-          komga = {
-            rule = "Host(`komga.${fqdn}`)";
-            entrypoints = ["websecure"];
-            service = "komga";
+            service = "navidrome";
             tls.domains = [{main = "*.${fqdn}";}];
             tls.certresolver = "production";
           };
@@ -146,18 +111,12 @@
           jellyseerr.loadBalancer.servers = [{url = "http://localhost:5055";}];
           wallos.loadBalancer.servers = [{url = "http://localhost:8282";}];
           hass.loadBalancer.servers = [{url = "http://localhost:8123";}];
-          paperless.loadBalancer.servers = [{url = "http://localhost:28981";}];
-          miniflux.loadBalancer.servers = [{url = "http://localhost:9000";}];
-          hoarder.loadBalancer.servers = [{url = "http://localhost:3000";}];
           immich.loadBalancer.servers = [{url = "http://localhost:2283";}];
-          komga.loadBalancer.servers = [{url = "http://localhost:8081";}];
+          navidrome.loadBalancer.servers = [{url = "http://localhost:4533";}];
           # kariru
           sonarr.loadBalancer.servers = [{url = "http://${kariruHost}8989";}];
           radarr.loadBalancer.servers = [{url = "http://${kariruHost}7878";}];
           prowlarr.loadBalancer.servers = [{url = "http://${kariruHost}9696";}];
-          shoko.loadBalancer.servers = [{url = "http://${kariruHost}8111";}];
-          # sakura
-          ganymede.loadBalancer.servers = [{url = "http://100.121.201.47:4000";}];
         };
       };
     };
