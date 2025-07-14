@@ -113,7 +113,6 @@
         customTTL = "1h";
         mapping = let
           yukiIp = "192.168.1.98";
-          kariruIp = "192.168.1.54";
         in {
           # infra
 
@@ -133,8 +132,6 @@
           "prowlarr.internal.flake.sh" = "${yukiIp}";
           "stash.internal.flake.sh" = "${yukiIp}";
           "immich.internal.flake.sh" = "${yukiIp}";
-          "komga.internal.flake.sh" = "${yukiIp}";
-          "shoko.internal.flake.sh" = "${kariruIp}";
 
           # misc
 
