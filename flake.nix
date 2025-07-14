@@ -64,7 +64,6 @@
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
     flake-parts.url = "github:hercules-ci/flake-parts";
     anyrun.url = "github:Kirottu/anyrun";
-    botoh.url = "git+https://git.flake.sh/notohh/botoh";
     catppuccin.url = "github:catppuccin/nix";
     nixpkgs-xr.url = "github:nix-community/nixpkgs-xr";
     prismlauncher.url = "github:PrismLauncher/PrismLauncher";
