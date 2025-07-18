@@ -14,5 +14,6 @@
     # ./factorio.nix
     # ./minecraft.nix
     # ./foundryvtt.nix
+    ./quakelive.nix
   ];
 }
