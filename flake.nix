@@ -51,9 +51,12 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    quickshell = {
+      url = "git+https://git.outfoxxed.me/outfoxxed/quickshell";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     deploy-rs.url = "github:serokell/deploy-rs";
     sops-nix.url = "github:Mic92/sops-nix";
-    hyprpanel.url = "github:jas-singhfsu/hyprpanel";
     zen.url = "github:youwen5/zen-browser-flake";
     scls.url = "github:estin/simple-completion-language-server";
     nix-gaming.url = "github:fufexan/nix-gaming";
