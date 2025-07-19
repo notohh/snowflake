@@ -1,19 +1,19 @@
 _: {
   flake.overlays.gale = _final: prev: {
     gale = prev.gale.overrideAttrs (n: _o: let
-      version = "1.8.3";
+      version = "1.8.6";
     in {
       src = prev.fetchFromGitHub {
         inherit version;
         owner = "Kesomannen";
         repo = "gale";
         rev = version;
-        hash = "sha256-tCtWPr5f37J+VfdpwIi6YoNaKS4LjBE9eLFuCuWBkPc=";
+        hash = "sha256-5xUBW9Owyeet8Jyc+7TQr6XQTbkopbJLeyI5c35iqr0=";
       };
-      npmDeps = prev.fetchNpmDeps {
-        hash = "sha256-vR66MdNbUzqklivSNqoklQ0CCdH1VfHcgiI+Y7MOkvA=";
-        name = "${n.pname}-${n.version}-npm-deps";
-        inherit (n) src;
+      pnpmDeps = prev.pnpm_10.fetchDeps {
+        hash = "sha256-QQXP/x7AjDtUpe6h+pC6vUsIAptv1kN/1MJZjHAIdMo=";
+        fetcherVersion = 1;
+        inherit (n) pname version src;
       };
       cargoDeps = prev.rustPlatform.fetchCargoVendor {
         inherit
@@ -23,7 +23,7 @@ _: {
           src
           cargoRoot
           ;
-        hash = "sha256-oAEzL4lEqF5lWVsnnDpOgGTtcQDUI0nuur72Gl49EGk=";
+        hash = "sha256-6yWRl9WAPJoqoXm0kLfZhEf7AYD6J//FlOmDxzeknFo=";
       };
     });
   };
