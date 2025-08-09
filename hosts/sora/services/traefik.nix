@@ -86,13 +86,6 @@
             tls.domains = [{main = "*.${pqdn}";}];
             tls.certresolver = "production";
           };
-          conduit = {
-            rule = "Host(`matrix.${pqdn}`)";
-            entrypoints = ["websecure"];
-            service = "conduit";
-            tls.domains = [{main = "*.${pqdn}";}];
-            tls.certresolver = "production";
-          };
           foundryvtt = {
             rule = "Host(`foundry.${pqdn}`)";
             entrypoints = ["websecure"];
@@ -133,13 +126,6 @@
             rule = "Host(`vault.${pqdn}`)";
             entrypoints = ["websecure"];
             service = "vaultwarden";
-            tls.domains = [{main = "*.${pqdn}";}];
-            tls.certresolver = "production";
-          };
-          neko = {
-            rule = "Host(`neko.${pqdn}`)";
-            entrypoints = ["websecure"];
-            service = "neko";
             tls.domains = [{main = "*.${pqdn}";}];
             tls.certresolver = "production";
           };
@@ -185,6 +171,13 @@
             tls.domains = [{main = "*.${pqdn}";}];
             tls.certresolver = "production";
           };
+          copyparty = {
+            rule = "Host(`f.${pqdn}`)";
+            entrypoints = ["websecure"];
+            service = "copyparty";
+            tls.domains = [{main = "*.${pqdn}";}];
+            tls.certresolver = "production";
+          };
         };
         services = let
           sakuraIp = "100.121.201.47:";
@@ -198,16 +191,15 @@
 
           # sakura
           forgejo.loadBalancer.servers = [{url = "http://${sakuraIp}3200";}];
-          conduit.loadBalancer.servers = [{url = "http://${sakuraIp}6167";}];
           authelia.loadBalancer.servers = [{url = "http://${sakuraIp}9091";}];
           rustypaste.loadBalancer.servers = [{url = "http://${sakuraIp}8000";}];
           grafana.loadBalancer.servers = [{url = "http://${sakuraIp}3100";}];
           hedgedoc.loadBalancer.servers = [{url = "http://${sakuraIp}3300";}];
           vaultwarden.loadBalancer.servers = [{url = "http://${sakuraIp}8222";}];
-          searxng.loadBalancer.servers = [{url = "http://${sakuraIp}8100";}];
           justlog.loadBalancer.servers = [{url = "http://${sakuraIp}8025";}];
           wastebin.loadBalancer.servers = [{url = "http://${sakuraIp}8088";}];
           immich-proxy.loadBalancer.servers = [{url = "http://${sakuraIp}2284";}];
+          copyparty.loadBalancer.servers = [{url = "http://${sakuraIp}3210";}];
 
           # tsuru
           woodpecker.loadBalancer.servers = [{url = "http://100.82.146.40:8200";}];
@@ -225,6 +217,9 @@
       entryPoints = {
         websecure = {
           address = ":443";
+          transport = {
+            respondingTimeouts.readTimeout = "0s";
+          };
         };
         web = {
           address = ":80";
