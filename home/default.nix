@@ -40,6 +40,7 @@
       p7zip
       procs
       navi
+      comma
     ];
     stateVersion = "23.05";
   };
