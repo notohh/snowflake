@@ -74,5 +74,6 @@
     spicetify-nix.url = "github:Gerg-L/spicetify-nix";
     nix-topology.url = "github:oddlama/nix-topology";
     nix-flatpak.url = "github:gmodena/nix-flatpak";
+    copyparty.url = "github:9001/copyparty";
   };
 }
