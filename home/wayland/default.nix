@@ -4,7 +4,7 @@
     systemPackages = with pkgs; [
       wayland
       glib
-      wl-clipboard
+      wl-clipboard-rs
     ];
     sessionVariables = {
       __GL_GSYNC_ALLOWED = "0";
