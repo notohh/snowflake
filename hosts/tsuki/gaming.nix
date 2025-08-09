@@ -5,7 +5,7 @@
 }: {
   imports = [
     inputs.nix-gaming.nixosModules.platformOptimizations
-    inputs.nixpkgs-xr.nixosModules.nixpkgs-xr
+    # inputs.nixpkgs-xr.nixosModules.nixpkgs-xr
   ];
   environment.systemPackages = [
     pkgs.android-tools # for wired wivrn
@@ -20,10 +20,6 @@
         U_PACING_COMP_MIN_TIME_MS = "8";
         XRT_COMPOSITOR_COMPUTE = "1";
       };
-    };
-    monado = {
-      enable = false;
-      highPriority = true;
     };
     sunshine = {
       enable = true;
@@ -57,7 +53,7 @@
       platformOptimizations.enable = true;
       extraCompatPackages = [
         pkgs.proton-ge-bin
-        pkgs.proton-ge-rtsp-bin
+        # pkgs.proton-ge-rtsp-bin
       ];
     };
   };
