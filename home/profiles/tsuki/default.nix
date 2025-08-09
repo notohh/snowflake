@@ -7,7 +7,6 @@
     inputs.catppuccin.homeModules.catppuccin
     ../../services
     ../../programs/anyrun
-    ../../programs/hyprpanel
     ../../programs/browsers/firefox
     ../../programs/terminal/wezterm
     ../../programs/terminal/zellij
@@ -16,7 +15,7 @@
     ../../programs/media/cava.nix
     ../../programs/media/spicetify.nix
     ../../programs/themes.nix
-    ../../programs/opencomposite.nix
+    ../../programs/openvr.nix
     ../../programs/media/zathura.nix
     ../../programs/media/easyeffects.nix
     ../../programs/media/mpv.nix
@@ -30,6 +29,7 @@
     chromium
     vesktop
     vscode-fhs
+    discord-canary
     technorino
     signal-desktop
     obs-studio
@@ -41,7 +41,7 @@
     imv
     rustypaste-cli
     cryptomator
-    # ventoy-bin-full
+    # ventoy
     wine
     bottles
     lutris
@@ -58,7 +58,6 @@
     gale
     krita
     bolt-launcher
-    cinny-desktop
     tutanota-desktop
     distrobox
     inputs.zen.packages.${pkgs.system}.default
@@ -127,6 +126,10 @@
         Hostname 192.168.1.199
         User root
         IdentityFile ~/.ssh/truenas
+      Host gemu
+        Hostname 100.93.189.27
+        User notohh
+        IdentityFile ~/.ssh/gemu
       Host git.flake.sh
         Hostname git.flake.sh
         User notohh
