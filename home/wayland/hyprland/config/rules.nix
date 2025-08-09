@@ -19,9 +19,12 @@ _: {
       "idleinhibit always, class:^(Moonlight)$"
       "idleinhibit always, class:^(VRChat)$"
       "idleinhibit fullscreen, class:^(firefox)$"
+      "immediate, class:^(quakelive_steam)$"
+      "size 2560 1440, class:^(quakelive_steam)$"
+      "immediate, class:^(cs2)$"
     ];
     layerrule = [
-      "blur, ^(gtk-layer-shell|anyrun|eww|music-widget)$"
+      "blur, ^(gtk-layer-shell|anyrun|)$"
     ];
   };
 }

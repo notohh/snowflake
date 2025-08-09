@@ -8,7 +8,6 @@
         "DP-1,2560x1440@144, 1080x1080, auto" #middle
       ];
       exec-once = [
-        "hyprpanel"
         "hyprpaper"
         "chatterino"
         "vesktop"
@@ -29,6 +28,7 @@
         "col.inactive_border" = "rgb(24283b)";
 
         layout = "dwindle";
+        allow_tearing = true;
       };
       decoration = {
         rounding = 10;
@@ -82,7 +82,7 @@
         sensitivity = "-0.5";
       };
       render = {
-        direct_scanout = false;
+        direct_scanout = 0;
       };
       misc = {
         disable_hyprland_logo = true;
@@ -92,6 +92,9 @@
       ecosystem = {
         no_update_news = true;
         no_donation_nag = true;
+      };
+      debug = {
+        disable_logs = false;
       };
     };
   };
