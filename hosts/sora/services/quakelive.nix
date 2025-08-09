@@ -63,6 +63,10 @@
         bloodrun|ffa
         houseofdecay|duel
         houseofdecay|ffa
+        lostworld|duel
+        lostworld|ffa
+        furiousheights|duel
+        furiousheights|ffa
       '';
     };
   };
