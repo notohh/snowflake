@@ -12,18 +12,6 @@
     style.name = "kvantum";
   };
 
-  catppuccin.gtk = {
-    enable = false;
-    flavor = "mocha";
-    accent = "pink";
-    gnomeShellTheme = false;
-    icon = {
-      enable = true;
-      flavor = "mocha";
-      accent = "pink";
-    };
-  };
-
   gtk = {
     enable = true;
     font = {
