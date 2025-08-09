@@ -36,8 +36,8 @@
 
   systemd = {
     services.systemd-udevd.restartIfChanged = false;
-    extraConfig = ''
-      DefaultTimeoutStopSec=5s
-    '';
+    settings.Manager = {
+      DefaultTimeoutStopSec = "5s";
+    };
   };
 }
