@@ -35,8 +35,8 @@
       device = "192.168.1.199:/mnt/Sutoreji/nix-restic-data/sakura";
       fsType = "nfs";
     };
-    "/nas/vods" = {
-      device = "192.168.1.199:/mnt/Sutoreji/vods";
+    "/nas/copyparty" = {
+      device = "192.168.1.199:/mnt/Sutoreji/copyparty";
       fsType = "nfs";
     };
   };

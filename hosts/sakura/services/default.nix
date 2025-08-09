@@ -8,8 +8,8 @@
     ./tailscale.nix
     ./rustlog.nix
     ./wastebin.nix
-    ./ganymede.nix
     ./immich-proxy.nix
     ./hedgedoc.nix
+    ./copyparty.nix
   ];
 }
