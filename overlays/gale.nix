@@ -1,14 +1,14 @@
 _: {
   flake.overlays.gale = _final: prev: {
     gale = prev.gale.overrideAttrs (n: _o: let
-      version = "1.8.6";
+      version = "1.9.2";
     in {
       src = prev.fetchFromGitHub {
         inherit version;
         owner = "Kesomannen";
         repo = "gale";
         rev = version;
-        hash = "sha256-5xUBW9Owyeet8Jyc+7TQr6XQTbkopbJLeyI5c35iqr0=";
+        hash = "sha256-AADU89Nxy7dpmamRdvCSe5ItwoVsRvgQocoMKs7qUZo=";
       };
       pnpmDeps = prev.pnpm_10.fetchDeps {
         hash = "sha256-QQXP/x7AjDtUpe6h+pC6vUsIAptv1kN/1MJZjHAIdMo=";
@@ -23,7 +23,7 @@ _: {
           src
           cargoRoot
           ;
-        hash = "sha256-6yWRl9WAPJoqoXm0kLfZhEf7AYD6J//FlOmDxzeknFo=";
+        hash = "sha256-+eSEOcmrY+3LpOssJzXHFQYKkvdacl5K6FPfcf7LTUQ=";
       };
     });
   };
