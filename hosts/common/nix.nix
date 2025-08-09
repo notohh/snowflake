@@ -10,7 +10,7 @@
       inputs.self.overlays.gale
       inputs.nur.overlays.default
       inputs.helix.overlays.default
-      inputs.hyprpanel.overlay
+      inputs.copyparty.overlays.default
     ];
     config = {
       allowUnfree = true;
@@ -18,6 +18,7 @@
         # for sonarr
         "dotnet-sdk-6.0.428"
         "aspnetcore-runtime-6.0.36"
+        "libsoup-2.74.3"
       ];
     };
   };
