@@ -21,7 +21,11 @@
       p = [3210 3211];
       no-robots = true;
       xff-hdr = "x-forwarded-for";
-      xff-src = "100.104.0.0/16";
+      xff-src = "100.104.42.96";
+      rproxy = 1;
+      shr = "/shared";
+      shr-adm = "suki, notohh, catsh";
+      theme = 2;
     };
     accounts = {
       notohh = {
@@ -36,11 +40,10 @@
     };
     volumes = {
       "/" = {
-        path = "/nas/copyparty";
+        path = "/nas/copyparty/root";
         access = {
           A = ["notohh, catsh"];
           rg = "*";
-          rwgd = "suki";
         };
         flags = {
           fk = 4;
@@ -48,6 +51,19 @@
           e2d = true;
           d2t = true;
           nohash = "\.iso$";
+          v = 3;
+        };
+      };
+      "/suki" = {
+        path = "/nas/copyparty/suki";
+        access = {
+          A = ["suki, notohh"];
+        };
+        flags = {
+          fk = 4;
+          scan = 60;
+          e2d = true;
+          d2t = true;
           v = 3;
         };
       };
