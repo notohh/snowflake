@@ -2,7 +2,7 @@ _: {
   imports = [
     ./restic.nix
     ./postgresql.nix
-    ./redis.nix
+    ./valkey.nix
     ./exporters.nix
   ];
 }

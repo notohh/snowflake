@@ -45,23 +45,11 @@
         ensureDBOwnership = true;
       }
       {
-        name = "miniflux";
-        ensureDBOwnership = true;
-      }
-      {
         name = "atuin";
         ensureDBOwnership = true;
       }
       {
-        name = "ec";
-        ensureDBOwnership = true;
-      }
-      {
-        name = "botoh";
-        ensureDBOwnership = true;
-      }
-      {
-        name = "ganymede";
+        name = "vikunja";
         ensureDBOwnership = true;
       }
     ];
@@ -72,11 +60,8 @@
       "authelia"
       "vaultwarden"
       "attic"
-      "miniflux"
       "atuin"
-      "ec"
-      "botoh"
-      "ganymede"
+      "vikunja"
     ];
   };
   services.postgresqlBackup = {
@@ -90,8 +75,7 @@
       "attic"
       "miniflux"
       "atuin"
-      "botoh"
-      "ganymede"
+      "vikunja"
     ];
     compression = "zstd";
     compressionLevel = 4;

@@ -15,14 +15,14 @@
           protected-mode = "no";
         };
       };
-      searxng = {
-        enable = false;
+      vikunja = {
+        enable = true;
         openFirewall = true;
         port = 6380;
         bind = null;
         databases = 1;
         logLevel = "debug";
-        requirePass = "searxng";
+        requirePass = "vikunja";
         settings = {
           protected-mode = "no";
         };
@@ -35,18 +35,6 @@
         databases = 1;
         logLevel = "debug";
         requirePass = "blocky";
-        settings = {
-          protected-mode = "no";
-        };
-      };
-      paperless-ngx = {
-        enable = false;
-        openFirewall = true;
-        port = 6382;
-        bind = null;
-        databases = 1;
-        logLevel = "debug";
-        requirePass = "paperless-ngx";
         settings = {
           protected-mode = "no";
         };
