@@ -4,7 +4,6 @@
   ...
 }: {
   imports = [
-    inputs.catppuccin.homeModules.catppuccin
     ../../services
     ../../programs/anyrun
     ../../programs/browsers/firefox
@@ -20,6 +19,7 @@
     ../../programs/media/easyeffects.nix
     ../../programs/media/mpv.nix
     ../../programs/media/jellyfin-mpv-shim.nix
+    ../../programs/media/lutris.nix
     ../../wayland/hyprland
     ../../wayland/services/hypridle.nix
     ../../wayland/services/hyprpaper.nix
@@ -30,7 +30,6 @@
     vesktop
     vscode-fhs
     discord-canary
-    technorino
     signal-desktop
     obs-studio
     pwvucontrol
@@ -42,16 +41,12 @@
     rustypaste-cli
     cryptomator
     # ventoy
-    wine
-    bottles
-    lutris
     moonlight-qt
     tokei
     jellyfin-media-player
     jellyfin-rpc
     wlx-overlay-s
     losslesscut-bin
-    mangohud
     uxplay
     drawio
     postman
@@ -60,18 +55,13 @@
     bolt-launcher
     tutanota-desktop
     distrobox
+    obsidian
     inputs.zen.packages.${pkgs.system}.default
     inputs.nix-gaming.packages.${pkgs.system}.osu-lazer-bin
     inputs.manga-tui.packages.${pkgs.system}.manga-tui
     inputs.prismlauncher.packages.${pkgs.system}.prismlauncher
+    inputs.technorino.packages.${pkgs.system}.default
   ];
-  catppuccin = {
-    mako.enable = false;
-    hyprlock.enable = false;
-    enable = true;
-    flavor = "mocha";
-    accent = "pink";
-  };
   programs.ssh = {
     enable = true;
     extraConfig = ''
