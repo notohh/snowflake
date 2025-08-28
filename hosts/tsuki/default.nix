@@ -68,14 +68,15 @@
     };
   };
   programs = {
+    corectrl.enable = true;
+    dconf.enable = true;
+    sniffnet.enable = true;
     hyprland = {
       enable = true;
       withUWSM = false;
       package = inputs.hyprland.packages.${pkgs.system}.hyprland;
       portalPackage = inputs.hyprland.packages.${pkgs.system}.xdg-desktop-portal-hyprland;
     };
-    corectrl.enable = true;
-    dconf.enable = true;
     appimage = {
       enable = true;
       binfmt = true;
