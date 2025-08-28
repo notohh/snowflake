@@ -63,7 +63,6 @@
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
     flake-parts.url = "github:hercules-ci/flake-parts";
     anyrun.url = "github:Kirottu/anyrun";
-    catppuccin.url = "github:catppuccin/nix";
     nixpkgs-xr.url = "github:nix-community/nixpkgs-xr";
     prismlauncher.url = "github:PrismLauncher/PrismLauncher";
     manga-tui.url = "github:josueBarretogit/manga-tui";
@@ -71,5 +70,7 @@
     nix-topology.url = "github:oddlama/nix-topology";
     nix-flatpak.url = "github:gmodena/nix-flatpak";
     copyparty.url = "github:9001/copyparty";
+
+    technorino.url = "git+https://github.com/2547techno/technorino?submodules=1";
   };
 }
