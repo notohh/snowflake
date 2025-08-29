@@ -33,12 +33,17 @@
         };
       };
       blocking = {
+        blockType = "nxDomain";
         loading = {
           strategy = "fast";
           concurrency = 8;
           refreshPeriod = "4h";
         };
-        blackLists = {
+        blackLists = let
+          customBlacklist = pkgs.writeText "custom.txt" ''
+            /fextralife.com/
+          '';
+        in {
           ads = [
             "https://blocklistproject.github.io/Lists/ads.txt"
             "https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts"
@@ -79,6 +84,7 @@
           catchall = [
             "https://big.oisd.nl/domainswild"
           ];
+          custom = [customBlacklist];
         };
         whiteLists = let
           customWhitelist = pkgs.writeText "misc.txt" ''
@@ -106,6 +112,7 @@
             "malicious"
             "misc"
             "catchall"
+            "custom"
           ];
         };
       };
