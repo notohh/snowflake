@@ -70,7 +70,6 @@
     nix-topology.url = "github:oddlama/nix-topology";
     nix-flatpak.url = "github:gmodena/nix-flatpak";
     copyparty.url = "github:9001/copyparty";
-
-    technorino.url = "git+https://github.com/2547techno/technorino?submodules=1";
+    technorino.url = "git+https://github.com/2547techno/technorino";
   };
 }
