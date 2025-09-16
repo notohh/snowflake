@@ -9,5 +9,6 @@
     ./anki-sync-server.nix
     ./immich.nix
     ./glance.nix
+    ./vikunja.nix
   ];
 }
