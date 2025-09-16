@@ -14,10 +14,7 @@
     config = {
       allowUnfree = true;
       permittedInsecurePackages = [
-        # for sonarr
-        "dotnet-sdk-6.0.428"
-        "aspnetcore-runtime-6.0.36"
-        "libsoup-2.74.3"
+        "qtwebengine-5.15.19"
       ];
     };
   };
@@ -43,10 +40,8 @@
         "https://viperml.cachix.org"
         "https://nix-community.cachix.org"
         "https://prismlauncher.cachix.org"
-        "https://cosmic.cachix.org"
         "https://yazi.cachix.org"
         "https://helix.cachix.org"
-        "https://catppuccin.cachix.org"
       ];
       trusted-public-keys = [
         "cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY="
@@ -57,10 +52,8 @@
         "viperml.cachix.org-1:qZhKBMTfmcLL+OG6fj/hzsMEedgKvZVFRRAhq7j8Vh8="
         "nix-community.cachix.org-1:mB9FSh9qf2dCimDSUo8Zy7bkq5CX+/rkCWyvRCYg3Fs="
         "prismlauncher.cachix.org-1:9/n/FGyABA2jLUVfY+DEp4hKds/rwO+SCOtbOkDzd+c="
-        "cosmic.cachix.org-1:Dya9IyXD4xdBehWjrkPv6rtxpmMdRel02smYzA85dPE="
         "yazi.cachix.org-1:Dcdz63NZKfvUCbDGngQDAZq6kOroIrFoyO064uvLh8k="
         "helix.cachix.org-1:ejp9KQpR1FBI2onstMQ34yogDm4OgU2ru6lIwPvuCVs="
-        "catppuccin.cachix.org-1:noG/4HkbhJb+lUAdKrph6LaozJvAeEEZj4N732IysmU="
       ];
     };
     extraOptions = ''
@@ -70,6 +63,7 @@
 
   programs.nh = {
     enable = true;
+    flake = "/home/notoh/snowflake";
     clean = {
       enable = true;
       dates = "weekly";
