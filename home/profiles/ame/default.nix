@@ -4,12 +4,10 @@
   ...
 }: {
   imports = [
-    inputs.catppuccin.homeModules.catppuccin
     ../../services
     ../../programs/terminal/wezterm
     ../../programs/terminal/zellij
     ../../programs/media/spicetify.nix
-    ../../programs/editors/zed
     ../../programs/media/jellyfin-mpv-shim.nix
     ../../programs/media/mpv.nix
     ../../programs/media/easyeffects.nix
@@ -21,7 +19,6 @@
     wayland
     glib
     jellyfin-media-player
-    technorino
     anki-bin
     tutanota-desktop
     moonlight-qt
@@ -29,13 +26,21 @@
     bolt-launcher
     inputs.zen.packages.${pkgs.system}.default
   ];
-  catppuccin = {
-    enable = true;
-    flavor = "mocha";
-    accent = "pink";
-  };
   programs.ssh = {
     enable = true;
+    enableDefaultConfig = false;
+    matchBlocks."*" = {
+      forwardAgent = false;
+      addKeysToAgent = "no";
+      compression = false;
+      serverAliveInterval = 0;
+      serverAliveCountMax = 3;
+      hashKnownHosts = false;
+      userKnownHostsFile = "~/.ssh/known_hosts";
+      controlMaster = "no";
+      controlPath = "~/.ssh/master-%r@%n:%p";
+      controlPersist = "no";
+    };
     extraConfig = ''
       Host sakura
         Hostname 100.121.201.47
