@@ -1,11 +1,8 @@
-{pkgs, ...}: {
-  catppuccin.kvantum = {
-    enable = true;
-    apply = true;
-    flavor = "mocha";
-    accent = "pink";
-  };
-
+{
+  pkgs,
+  config,
+  ...
+}: {
   qt = {
     enable = true;
     platformTheme.name = "kvantum";
@@ -14,6 +11,14 @@
 
   gtk = {
     enable = true;
+    theme = {
+      name = "Tokyonight-Dark";
+      package = pkgs.tokyonight-gtk-theme.override {iconVariants = ["Dark"];};
+    };
+    iconTheme = {
+      name = "Tokyonight-Dark";
+      inherit (config.gtk.theme) package;
+    };
     font = {
       name = "Inter";
       package = pkgs.google-fonts.override {fonts = ["Inter"];};
