@@ -10,13 +10,26 @@ in {
     enable = true;
     experimentalFeatures = true;
     wayland = true;
-    colorScheme = "mocha";
+    theme = {
+      name = "Blackout";
+      src = "${pkgs.fetchFromGitHub {
+        owner = "spicetify";
+        repo = "spicetify-themes";
+        rev = "726097a544172523cdae15da8d3c84032aec8c3b";
+        sha256 = "sha256-mQgkmbkgzfWlT1iv4jB/cw95v4q0/+57B9rgmezAY34=";
+      }}/Blackout";
+    };
+    colorScheme = "def";
     enabledExtensions = with spicePkgs.extensions; [
       beautifulLyrics
-      hidePodcasts
-      fullAlbumDate
       shuffle
+      fullAlbumDate
+      showQueueDuration
+      history
+      hidePodcasts
+      playNext
+      volumePercentage
+      lastfm
     ];
-    theme = spicePkgs.themes.catppuccin;
   };
 }
