@@ -11,7 +11,7 @@
       "$mainMod, Q, killactive,"
       "$mainMod, V, togglefloating,"
       "$mainMod, F, fullscreen,"
-      "$mainMod, R, exec, anyrun"
+      "$mainMod, R, exec, walker"
       "$mainMod, P, pseudo,"
       "$mainMod, J, togglesplit,"
       "$mainMod, C, exec, ${lib.getExe inputs.hyprpicker.packages.${system}.default} | wl-copy"

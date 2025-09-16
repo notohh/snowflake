@@ -5,7 +5,7 @@
 }: {
   imports = [
     ../../services
-    ../../programs/anyrun
+    ../../programs/walker.nix
     ../../programs/terminal/wezterm
     ../../programs/terminal/zellij
     ../../programs/terminal/television

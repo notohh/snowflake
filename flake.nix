@@ -22,6 +22,7 @@
             git
             sops
             alejandra
+            statix
             just
             yaml-language-server
             lua-language-server
@@ -62,7 +63,6 @@
     pre-commit-hooks.url = "github:cachix/pre-commit-hooks.nix";
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
     flake-parts.url = "github:hercules-ci/flake-parts";
-    anyrun.url = "github:Kirottu/anyrun";
     nixpkgs-xr.url = "github:nix-community/nixpkgs-xr";
     prismlauncher.url = "github:PrismLauncher/PrismLauncher";
     spicetify-nix.url = "github:Gerg-L/spicetify-nix";

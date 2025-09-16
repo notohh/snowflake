@@ -24,7 +24,7 @@ _: {
       "immediate, class:^(cs2)$"
     ];
     layerrule = [
-      "blur, ^(gtk-layer-shell|anyrun|)$"
+      "blur, ^(gtk-layer-shell|walker)$"
     ];
   };
 }
