@@ -1,5 +1,9 @@
-{inputs, ...}: {
-  networking.firewall.allowedTCPPorts = [3210 3211];
+{ inputs, ... }:
+{
+  networking.firewall.allowedTCPPorts = [
+    3210
+    3211
+  ];
   sops.secrets = {
     copyparty-passwd = {
       owner = "copyparty";
@@ -21,7 +25,10 @@
     enable = true;
     settings = {
       i = "0.0.0.0";
-      p = [3210 3211];
+      p = [
+        3210
+        3211
+      ];
       no-robots = true;
       xff-hdr = "x-forwarded-for";
       xff-src = "100.104.42.96";
@@ -48,7 +55,7 @@
       "/" = {
         path = "/nas/copyparty/root";
         access = {
-          A = ["notohh, catsh"];
+          A = [ "notohh, catsh" ];
           rg = "*";
         };
         flags = {
@@ -63,7 +70,7 @@
       "/suki" = {
         path = "/nas/copyparty/suki";
         access = {
-          A = ["suki, notohh, nam"];
+          A = [ "suki, notohh, nam" ];
         };
         flags = {
           fk = 4;

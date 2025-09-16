@@ -2,7 +2,8 @@
   pkgs,
   config,
   ...
-}: {
+}:
+{
   qt = {
     enable = true;
     platformTheme.name = "kvantum";
@@ -13,7 +14,7 @@
     enable = true;
     theme = {
       name = "Tokyonight-Dark";
-      package = pkgs.tokyonight-gtk-theme.override {iconVariants = ["Dark"];};
+      package = pkgs.tokyonight-gtk-theme.override { iconVariants = [ "Dark" ]; };
     };
     iconTheme = {
       name = "Tokyonight-Dark";
@@ -21,7 +22,7 @@
     };
     font = {
       name = "Inter";
-      package = pkgs.google-fonts.override {fonts = ["Inter"];};
+      package = pkgs.google-fonts.override { fonts = [ "Inter" ]; };
       size = 12;
     };
   };

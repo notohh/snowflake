@@ -2,7 +2,8 @@
   inputs,
   pkgs,
   ...
-}: {
+}:
+{
   imports = [
     inputs.nix-gaming.nixosModules.pipewireLowLatency
     inputs.hyprland.nixosModules.default
@@ -53,7 +54,7 @@
     };
     xserver = {
       enable = true;
-      videoDrivers = ["amdgpu"];
+      videoDrivers = [ "amdgpu" ];
       xkb = {
         layout = "us";
         variant = "";
@@ -64,7 +65,7 @@
     rtkit.enable = true;
     polkit.enable = true;
     pam = {
-      services.hyprlock = {};
+      services.hyprlock = { };
     };
   };
   programs = {

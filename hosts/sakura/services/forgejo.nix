@@ -3,13 +3,17 @@
   lib,
   config,
   ...
-}: let
+}:
+let
   sshPort = 2222;
   dbHost = "192.168.1.211";
   dbLogin = "forgejo";
-in {
-  sops.secrets.smtp2go-pwd = {owner = "forgejo";};
-  networking.firewall.allowedTCPPorts = [2222];
+in
+{
+  sops.secrets.smtp2go-pwd = {
+    owner = "forgejo";
+  };
+  networking.firewall.allowedTCPPorts = [ 2222 ];
   services.forgejo = {
     enable = true;
     package = pkgs.forgejo;

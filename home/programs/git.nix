@@ -9,7 +9,11 @@ _: {
         key = "BD47506D475EE86D";
         signByDefault = true;
       };
-      ignores = ["*result*" ".direnv" "node_modules"];
+      ignores = [
+        "*result*"
+        ".direnv"
+        "node_modules"
+      ];
     };
     gh = {
       enable = true;

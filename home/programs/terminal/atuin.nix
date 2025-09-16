@@ -10,6 +10,6 @@ _: {
       secrets_filter = true;
       style = "full";
     };
-    flags = ["--disable-up-arrow"];
+    flags = [ "--disable-up-arrow" ];
   };
 }

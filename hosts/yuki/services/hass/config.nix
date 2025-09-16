@@ -2,7 +2,7 @@ _: {
   services.home-assistant.config = {
     lovelace.mode = "yaml";
     http = {
-      server_host = ["0.0.0.0"];
+      server_host = [ "0.0.0.0" ];
       server_port = 8123;
     };
     homeassistant = {
@@ -13,6 +13,6 @@ _: {
       currency = "USD";
       country = "US";
     };
-    default_config = {};
+    default_config = { };
   };
 }

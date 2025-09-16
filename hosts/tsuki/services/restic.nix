@@ -2,15 +2,20 @@
   pkgs,
   config,
   ...
-}: {
-  sops.secrets.restic-tsuki = {sopsFile = ../../../secrets/restic/secrets.yaml;};
-  sops.secrets.restic-osu = {sopsFile = ../../../secrets/restic/secrets.yaml;};
-  environment.systemPackages = [pkgs.restic];
+}:
+{
+  sops.secrets.restic-tsuki = {
+    sopsFile = ../../../secrets/restic/secrets.yaml;
+  };
+  sops.secrets.restic-osu = {
+    sopsFile = ../../../secrets/restic/secrets.yaml;
+  };
+  environment.systemPackages = [ pkgs.restic ];
   services.restic = {
     backups = {
       tsuki = {
         user = "root";
-        paths = ["/home"];
+        paths = [ "/home" ];
         exclude = [
           "*.qcow2"
           "*.iso"
@@ -47,8 +52,8 @@
       };
       osu = {
         user = "root";
-        paths = ["/home/*/osu!"];
-        pruneOpts = ["--keep-last=2"];
+        paths = [ "/home/*/osu!" ];
+        pruneOpts = [ "--keep-last=2" ];
         initialize = true;
         repository = "/nas/osu-backups";
         passwordFile = config.sops.secrets.restic-osu.path;

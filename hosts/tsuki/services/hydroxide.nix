@@ -1,10 +1,14 @@
-{pkgs, ...}: {
-  environment.systemPackages = [pkgs.hydroxide];
-  networking.firewall.allowedTCPPorts = [1025 1143];
+{ pkgs, ... }:
+{
+  environment.systemPackages = [ pkgs.hydroxide ];
+  networking.firewall.allowedTCPPorts = [
+    1025
+    1143
+  ];
 
   systemd.services.hydroxide = {
     enable = true;
-    wantedBy = ["multi-user.target"];
+    wantedBy = [ "multi-user.target" ];
     description = "A third-party, open-source ProtonMail bridge";
 
     serviceConfig = {

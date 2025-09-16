@@ -2,8 +2,9 @@
   modulesPath,
   lib,
   ...
-}: {
-  imports = [(modulesPath + "/profiles/qemu-guest.nix")];
+}:
+{
+  imports = [ (modulesPath + "/profiles/qemu-guest.nix") ];
 
   zramSwap.enable = true;
 
@@ -15,8 +16,13 @@
       device = "nodev";
     };
     initrd = {
-      availableKernelModules = ["ata_piix" "uhci_hcd" "xen_blkfront" "vmw_pvscsi"];
-      kernelModules = ["nvme"];
+      availableKernelModules = [
+        "ata_piix"
+        "uhci_hcd"
+        "xen_blkfront"
+        "vmw_pvscsi"
+      ];
+      kernelModules = [ "nvme" ];
     };
   };
 

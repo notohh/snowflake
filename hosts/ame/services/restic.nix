@@ -2,10 +2,15 @@
   pkgs,
   config,
   ...
-}: {
-  sops.secrets.restic-ame = {sopsFile = ../../../secrets/restic/secrets.yaml;};
-  sops.secrets.ame-s3 = {sopsFile = ../../../secrets/s3/secrets.yaml;};
-  environment.systemPackages = [pkgs.restic];
+}:
+{
+  sops.secrets.restic-ame = {
+    sopsFile = ../../../secrets/restic/secrets.yaml;
+  };
+  sops.secrets.ame-s3 = {
+    sopsFile = ../../../secrets/s3/secrets.yaml;
+  };
+  environment.systemPackages = [ pkgs.restic ];
   services.restic = {
     backups = {
       ame = {

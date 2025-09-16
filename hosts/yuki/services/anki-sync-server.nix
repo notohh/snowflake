@@ -1,5 +1,6 @@
-{config, ...}: {
-  sops.secrets.anki-pwd = {};
+{ config, ... }:
+{
+  sops.secrets.anki-pwd = { };
   services.anki-sync-server = {
     enable = true;
     openFirewall = true;

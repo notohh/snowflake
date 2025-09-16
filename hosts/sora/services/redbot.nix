@@ -1,5 +1,5 @@
 _: {
-  sops.secrets.redbot-auth = {};
+  sops.secrets.redbot-auth = { };
   virtualisation.oci-containers.containers.redbot = {
     image = "phasecorex/red-discordbot";
     environment = {
@@ -11,6 +11,6 @@ _: {
     environmentFiles = [
       /run/secrets/redbot-auth
     ];
-    volumes = ["/home/notoh/docker/redbot:/data"];
+    volumes = [ "/home/notoh/docker/redbot:/data" ];
   };
 }

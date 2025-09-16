@@ -1,4 +1,5 @@
-{pkgs, ...}: {
+{ pkgs, ... }:
+{
   services.pipewire.extraConfig.pipewire."00-rnnoise.conf" = {
     "context.modules" = [
       {
@@ -21,7 +22,10 @@
               }
             ];
           };
-          "audio.position" = ["FL" "FR"];
+          "audio.position" = [
+            "FL"
+            "FR"
+          ];
           "capture.props" = {
             "node.name" = "capture.rnnoise_source";
             "node.passive" = true;

@@ -1,5 +1,5 @@
 _: {
-  networking.firewall.allowedTCPPorts = [3456];
+  networking.firewall.allowedTCPPorts = [ 3456 ];
   services.vikunja = {
     enable = true;
     frontendScheme = "https";

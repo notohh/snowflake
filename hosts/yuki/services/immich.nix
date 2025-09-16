@@ -1,5 +1,5 @@
 _: {
-  sops.secrets.immich = {};
+  sops.secrets.immich = { };
   services.immich = {
     enable = true;
     openFirewall = true;

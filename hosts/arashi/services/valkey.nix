@@ -1,5 +1,6 @@
-{pkgs, ...}: {
-  environment.systemPackages = [pkgs.redis-dump];
+{ pkgs, ... }:
+{
+  environment.systemPackages = [ pkgs.redis-dump ];
   services.redis = {
     package = pkgs.valkey;
     servers = {

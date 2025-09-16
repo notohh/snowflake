@@ -19,11 +19,26 @@ _: {
         completion-replace = true;
         soft-wrap.enable = true;
         idle-timeout = 1;
-        gutters = ["diff" "diagnostics" "line-numbers" "spacer"];
+        gutters = [
+          "diff"
+          "diagnostics"
+          "line-numbers"
+          "spacer"
+        ];
         statusline = {
-          left = ["mode" "spinner"];
-          center = ["file-name"];
-          right = ["diagnostics" "selections" "position" "file-line-ending" "file-type" "version-control"];
+          left = [
+            "mode"
+            "spinner"
+          ];
+          center = [ "file-name" ];
+          right = [
+            "diagnostics"
+            "selections"
+            "position"
+            "file-line-ending"
+            "file-type"
+            "version-control"
+          ];
           separator = "|";
           mode = {
             normal = "NOR";

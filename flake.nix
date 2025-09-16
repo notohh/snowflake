@@ -1,34 +1,36 @@
 {
   description = "snowflake";
 
-  outputs = inputs:
-    inputs.flake-parts.lib.mkFlake {inherit inputs;} {
+  outputs =
+    inputs:
+    inputs.flake-parts.lib.mkFlake { inherit inputs; } {
       imports = [
         ./hosts
         ./overlays
         ./modules
         ./home/profiles
       ];
-      systems = ["x86_64-linux"];
-      perSystem = {
-        config,
-        pkgs,
-        ...
-      }: {
-        devShells.default = pkgs.mkShell {
-          name = "snowflake";
-          shellHook = config.pre-commit.installationScript;
-          packages = with pkgs; [
-            sops
-            alejandra
-            statix
-            just
-            yaml-language-server
-            lua-language-server
-          ];
+      systems = [ "x86_64-linux" ];
+      perSystem =
+        {
+          config,
+          pkgs,
+          ...
+        }:
+        {
+          devShells.default = pkgs.mkShell {
+            name = "snowflake";
+            shellHook = config.pre-commit.installationScript;
+            packages = with pkgs; [
+              sops
+              statix
+              just
+              yaml-language-server
+              lua-language-server
+            ];
+          };
+          formatter = pkgs.nixfmt;
         };
-        formatter = pkgs.alejandra;
-      };
     };
 
   inputs = {

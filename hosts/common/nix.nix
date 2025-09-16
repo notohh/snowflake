@@ -2,8 +2,9 @@
   inputs,
   config,
   ...
-}: {
-  sops.secrets.github-token = {};
+}:
+{
+  sops.secrets.github-token = { };
   nixpkgs = {
     overlays = [
       inputs.self.overlays.gale
@@ -22,15 +23,21 @@
   nix = {
     channel.enable = true;
     settings = {
-      extra-experimental-features = ["flakes" "nix-command"];
+      extra-experimental-features = [
+        "flakes"
+        "nix-command"
+      ];
       warn-dirty = false;
       auto-optimise-store = true;
       builders-use-substitutes = true;
       download-buffer-size = 536870912;
       keep-outputs = true;
       keep-derivations = true;
-      allowed-users = ["@wheel"];
-      trusted-users = ["root" "@wheel"];
+      allowed-users = [ "@wheel" ];
+      trusted-users = [
+        "root"
+        "@wheel"
+      ];
       substituters = [
         "https://cache.nixos.org?priority=10"
         "https://cache.flake.sh/kyasshu"

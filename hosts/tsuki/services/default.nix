@@ -1,4 +1,5 @@
-{...}: {
+{ ... }:
+{
   imports = [
     ./restic.nix
     ./atticd.nix
