@@ -10,6 +10,9 @@
     copyparty-suki-passwd = {
       owner = "copyparty";
     };
+    copyparty-nam-passwd = {
+      owner = "copyparty";
+    };
   };
   imports = [
     inputs.copyparty.nixosModules.default
@@ -37,6 +40,9 @@
       suki = {
         passwordFile = "/run/secrets/copyparty-suki-passwd";
       };
+      nam = {
+        passwordFile = "/run/secrets/copyparty-nam-passwd";
+      };
     };
     volumes = {
       "/" = {
@@ -57,7 +63,7 @@
       "/suki" = {
         path = "/nas/copyparty/suki";
         access = {
-          A = ["suki, notohh"];
+          A = ["suki, notohh, nam"];
         };
         flags = {
           fk = 4;
