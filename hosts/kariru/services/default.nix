@@ -1,5 +1,5 @@
 {pkgs, ...}: {
-  networking.firewall.allowedTCPPorts = [9292 8111 8085];
+  networking.firewall.allowedTCPPorts = [9292 8111 8085 8181];
 
   imports = [
     ./restic.nix
@@ -26,7 +26,7 @@
 
   virtualisation.oci-containers.containers = {
     byparr = {
-      image = "ghcr.io/thephaseless/byparr@sha256:9f83a6f5e5cec22a70abf3401a23164295a4b2e1ced37264907c3512981e527a"; # v3.3.21
+      image = "ghcr.io/thephaseless/byparr@sha256:453ddd73debc110f42290d6d3b2bbe9b53c3ca7fed03beedd34538efdab46ea0"; # 2.0.0
       ports = ["8191:8191"];
       extraOptions = ["--network=host"];
     };
