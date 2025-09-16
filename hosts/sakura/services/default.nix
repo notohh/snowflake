@@ -6,7 +6,6 @@
     ./grafana.nix
     ./vaultwarden.nix
     ./tailscale.nix
-    ./rustlog.nix
     ./wastebin.nix
     ./immich-proxy.nix
     ./hedgedoc.nix

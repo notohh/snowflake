@@ -44,7 +44,6 @@
     hyprlock.url = "github:hyprwm/hyprlock";
     hyprpicker.url = "github:hyprwm/hyprpicker";
     hyprpaper.url = "github:hyprwm/hyprpaper";
-    hyprsunset.url = "github:hyprwm/hyprsunset";
 
     ### everything else
     home-manager = {

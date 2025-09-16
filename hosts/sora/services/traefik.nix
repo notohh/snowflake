@@ -129,13 +129,6 @@
             tls.domains = [{main = "*.${pqdn}";}];
             tls.certresolver = "production";
           };
-          justlog = {
-            rule = "Host(`logs.${pqdn}`)";
-            entrypoints = ["websecure"];
-            service = "justlog";
-            tls.domains = [{main = "*.${pqdn}";}];
-            tls.certresolver = "production";
-          };
           ntfy = {
             rule = "Host(`ntfy.${pqdn}`)";
             entrypoints = ["websecure"];
@@ -196,7 +189,6 @@
           grafana.loadBalancer.servers = [{url = "http://${sakuraIp}3100";}];
           hedgedoc.loadBalancer.servers = [{url = "http://${sakuraIp}3300";}];
           vaultwarden.loadBalancer.servers = [{url = "http://${sakuraIp}8222";}];
-          justlog.loadBalancer.servers = [{url = "http://${sakuraIp}8025";}];
           wastebin.loadBalancer.servers = [{url = "http://${sakuraIp}8088";}];
           immich-proxy.loadBalancer.servers = [{url = "http://${sakuraIp}2284";}];
           copyparty.loadBalancer.servers = [{url = "http://${sakuraIp}3210";}];
