@@ -1,5 +1,8 @@
 set shell := ["nu", "-c"]
 
+
+hostname := `hostname`
+
 default:
   @just --list\
 
@@ -9,13 +12,14 @@ up:
 upp input:
   nix flake update {{input}}
 
-switch:
+sw:
   nh os switch .
 
-build:
+bu:
   nh os boot .
 
 repl:
   nix repl -f flake:nixpkgs
 
-  
+vuln:
+	nix run github:nix-community/vulnix -- --system --json | nix run nixpkgs#jq '.[] .name'
