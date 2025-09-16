@@ -20,6 +20,7 @@
       NIXOS_OZONE_WL = "1";
       EDITOR = "hx";
       TERMINAL = "wezterm";
+      LD_LIBRARY_PATH = pkgs.lib.makeLibraryPath [pkgs.libpulseaudio];
       # SDL_VIDEODRIVER = "wayland";
     };
   };
