@@ -19,7 +19,6 @@
           name = "snowflake";
           shellHook = config.pre-commit.installationScript;
           packages = with pkgs; [
-            git
             sops
             alejandra
             statix
