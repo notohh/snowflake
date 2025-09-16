@@ -4,7 +4,7 @@
   ...
 }: {
   programs.hyprlock = {
-    enable = true;
+    enable = false;
     package = inputs.hyprlock.packages.${pkgs.system}.default;
     settings = {
       background = let
@@ -41,7 +41,6 @@
         }
       ];
       general = {
-        grace = 5;
         disable_loading_bar = false;
         hide_cursor = false;
         no_fade_in = false;
