@@ -75,7 +75,6 @@
             ];
             connections = {
               eth0 = mkConnection "sora" "eth0";
-              eth1 = mkConnection "kaze" "eth0";
             };
           };
         };
