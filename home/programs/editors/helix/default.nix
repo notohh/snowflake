@@ -10,6 +10,7 @@ _: {
     enable = true;
     defaultEditor = true;
     settings = {
+      theme = "tokyonight";
       editor = {
         auto-save = true;
         true-color = true;
