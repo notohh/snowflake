@@ -1,9 +1,10 @@
 {
   inputs,
   pkgs,
+  config,
   ...
 }: {
-  home.packages = [pkgs.hyprpaper];
+  home.packages = [config.services.hyprpaper.package];
 
   services.hyprpaper = let
     verticalWallpaper = "~/dev/assets/wallpapers/miku/miku2.png";
