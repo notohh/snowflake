@@ -2,7 +2,8 @@
   config,
   lib,
   ...
-}: {
+}:
+{
   home.sessionVariables.STARSHIP_CACHE = "${config.xdg.cacheHome}/starship";
 
   programs.starship = {
@@ -62,7 +63,7 @@
       };
       direnv = {
         disabled = false;
-        detect_files = [".envrc"];
+        detect_files = [ ".envrc" ];
         style = "bold turquoise";
       };
       git_branch = {

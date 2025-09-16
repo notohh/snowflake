@@ -8,6 +8,6 @@ _: {
       "/home/notoh/twitch-miner/logs:/usr/src/app/logs"
       "/home/notoh/twitch-miner/run.py:/usr/src/app/run.py:ro"
     ];
-    ports = ["5000:5000"];
+    ports = [ "5000:5000" ];
   };
 }

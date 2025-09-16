@@ -2,11 +2,12 @@
   pkgs,
   lib,
   ...
-}: {
+}:
+{
   # oneshot service to resize the main monitor
   systemd.services.fbset = {
     enable = true;
-    wantedBy = ["multi-user.target"];
+    wantedBy = [ "multi-user.target" ];
     unitConfig = {
       Description = "Framebuffer resolution";
       Before = "display-manager.service";

@@ -2,44 +2,47 @@
   inputs,
   pkgs,
   ...
-}: {
+}:
+{
   programs.hyprlock = {
     enable = false;
     package = inputs.hyprlock.packages.${pkgs.system}.default;
     settings = {
-      background = let
-        verticalWallpaper = "/home/notoh/dev/assets/wallpapers/miku/miku2.png";
-        horizontalWallpaper = "/home/notoh/dev/assets/wallpapers/miku/miku.png";
-      in [
-        {
-          monitor = "HDMI-A-1";
-          path = verticalWallpaper;
-          blur_passes = 3;
-          blur_size = 4;
-          brightness = 0.5;
-        }
-        {
-          monitor = "DP-3";
-          path = verticalWallpaper;
-          blur_passes = 3;
-          blur_size = 4;
-          brightness = 0.5;
-        }
-        {
-          monitor = "DP-1";
-          path = horizontalWallpaper;
-          blur_passes = 3;
-          blur_size = 4;
-          brightness = 0.5;
-        }
-        {
-          monitor = "DP-2";
-          path = horizontalWallpaper;
-          blur_passes = 3;
-          blur_size = 4;
-          brightness = 0.5;
-        }
-      ];
+      background =
+        let
+          verticalWallpaper = "/home/notoh/dev/assets/wallpapers/miku/miku2.png";
+          horizontalWallpaper = "/home/notoh/dev/assets/wallpapers/miku/miku.png";
+        in
+        [
+          {
+            monitor = "HDMI-A-1";
+            path = verticalWallpaper;
+            blur_passes = 3;
+            blur_size = 4;
+            brightness = 0.5;
+          }
+          {
+            monitor = "DP-3";
+            path = verticalWallpaper;
+            blur_passes = 3;
+            blur_size = 4;
+            brightness = 0.5;
+          }
+          {
+            monitor = "DP-1";
+            path = horizontalWallpaper;
+            blur_passes = 3;
+            blur_size = 4;
+            brightness = 0.5;
+          }
+          {
+            monitor = "DP-2";
+            path = horizontalWallpaper;
+            blur_passes = 3;
+            blur_size = 4;
+            brightness = 0.5;
+          }
+        ];
       general = {
         disable_loading_bar = false;
         hide_cursor = false;

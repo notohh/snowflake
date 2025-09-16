@@ -4,15 +4,16 @@
   lib,
   modulesPath,
   ...
-}: {
+}:
+{
   imports = [
     (modulesPath + "/installer/scan/not-detected.nix")
     inputs.nixos-hardware.nixosModules.lenovo-thinkpad-t480
   ];
 
   boot = {
-    kernelModules = ["kvm-intel"];
-    extraModulePackages = [];
+    kernelModules = [ "kvm-intel" ];
+    extraModulePackages = [ ];
     loader = {
       systemd-boot = {
         enable = true;
@@ -24,8 +25,13 @@
       };
     };
     initrd = {
-      availableKernelModules = ["xhci_pci" "ahci" "usb_storage" "sd_mod"];
-      kernelModules = [];
+      availableKernelModules = [
+        "xhci_pci"
+        "ahci"
+        "usb_storage"
+        "sd_mod"
+      ];
+      kernelModules = [ ];
     };
   };
 
@@ -41,7 +47,7 @@
   };
 
   swapDevices = [
-    {device = "/dev/disk/by-uuid/d62dbf49-e51e-4823-a9cb-f2af486cd0f7";}
+    { device = "/dev/disk/by-uuid/d62dbf49-e51e-4823-a9cb-f2af486cd0f7"; }
   ];
 
   networking.useDHCP = lib.mkDefault true;

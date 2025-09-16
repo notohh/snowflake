@@ -4,19 +4,20 @@
   lib,
   modulesPath,
   ...
-}: {
+}:
+{
   imports = [
     (modulesPath + "/installer/scan/not-detected.nix")
   ];
 
   boot = {
-    kernelModules = ["kvm-amd"];
+    kernelModules = [ "kvm-amd" ];
     kernelParams = [
       "preempt=full"
       "threadirqs"
       "mitigations=off"
     ];
-    extraModulePackages = with config.boot.kernelPackages; [v4l2loopback.out];
+    extraModulePackages = with config.boot.kernelPackages; [ v4l2loopback.out ];
     loader = {
       systemd-boot = {
         enable = true;
@@ -28,8 +29,15 @@
       };
     };
     initrd = {
-      availableKernelModules = ["xhci_pci" "ahci" "nvme" "usb_storage" "usbhid" "sd_mod"];
-      kernelModules = [];
+      availableKernelModules = [
+        "xhci_pci"
+        "ahci"
+        "nvme"
+        "usb_storage"
+        "usbhid"
+        "sd_mod"
+      ];
+      kernelModules = [ ];
     };
   };
 

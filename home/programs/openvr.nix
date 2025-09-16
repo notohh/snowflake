@@ -3,8 +3,10 @@
   config,
   lib,
   ...
-}: {
-  xdg.configFile."openxr/1/active_runtime.json".source = "${pkgs.wivrn}/share/openxr/1/openxr_wivrn.json";
+}:
+{
+  xdg.configFile."openxr/1/active_runtime.json".source =
+    "${pkgs.wivrn}/share/openxr/1/openxr_wivrn.json";
 
   xdg.configFile."openvr/openvrpaths.vrpath".text = with pkgs; ''
     {

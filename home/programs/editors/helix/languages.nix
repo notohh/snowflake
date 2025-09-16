@@ -3,32 +3,45 @@
   lib,
   inputs,
   ...
-}: {
-  home.packages = [inputs.scls.defaultPackage.${pkgs.system}];
+}:
+{
+  home.packages = [ inputs.scls.defaultPackage.${pkgs.system} ];
   programs.helix.languages = {
     language = with pkgs; [
       {
         name = "nix";
         auto-format = true;
-        language-servers = ["scls" "nil"];
+        language-servers = [
+          "scls"
+          "nil"
+        ];
         formatter = {
-          command = lib.getExe alejandra;
-          args = ["-q"];
+          command = lib.getExe nixfmt;
+          args = [ "-q" ];
         };
       }
       {
         name = "rust";
         auto-format = true;
-        language-servers = ["scls" "rust-analyzer"];
+        language-servers = [
+          "scls"
+          "rust-analyzer"
+        ];
         formatter = {
           command = lib.getExe rustfmt;
-          args = ["--edition" "2021"];
+          args = [
+            "--edition"
+            "2021"
+          ];
         };
       }
       {
         name = "lua";
         auto-format = true;
-        language-servers = ["scls" "lua-language-server"];
+        language-servers = [
+          "scls"
+          "lua-language-server"
+        ];
         formatter = {
           command = lib.getExe stylua;
         };
@@ -36,10 +49,16 @@
       {
         name = "python";
         auto-format = true;
-        language-servers = ["scls" "ruff"];
+        language-servers = [
+          "scls"
+          "ruff"
+        ];
         formatter = with pkgs; {
           command = lib.getExe ruff;
-          args = ["format" "-q"];
+          args = [
+            "format"
+            "-q"
+          ];
         };
       }
       {
@@ -49,7 +68,7 @@
           "scls"
           {
             name = "typescript-language-server";
-            except-features = ["format"];
+            except-features = [ "format" ];
           }
         ];
         formatter = with pkgs; {
@@ -65,19 +84,28 @@
       {
         name = "toml";
         auto-format = true;
-        language-servers = ["scls" "taplo"];
+        language-servers = [
+          "scls"
+          "taplo"
+        ];
         formatter = with pkgs; {
           command = lib.getExe taplo;
-          args = ["fmt" "-"];
+          args = [
+            "fmt"
+            "-"
+          ];
         };
       }
       {
         name = "json";
         auto-format = true;
-        language-servers = ["scls" "biome"];
+        language-servers = [
+          "scls"
+          "biome"
+        ];
         formatter = with pkgs; {
           command = lib.getExe biome;
-          args = ["format"];
+          args = [ "format" ];
         };
       }
     ];
@@ -102,18 +130,24 @@
       };
       typescript-language-server = with pkgs.nodePackages; {
         command = lib.getExe typescript-language-server;
-        args = ["--stdio"];
+        args = [ "--stdio" ];
       };
       lua = {
         command = lib.getExe lua-language-server;
       };
       taplo = {
         command = lib.getExe taplo;
-        args = ["lsp" "stdio"];
+        args = [
+          "lsp"
+          "stdio"
+        ];
       };
       ruff = {
         command = lib.getExe ruff;
-        args = ["server" "--preview"];
+        args = [
+          "server"
+          "--preview"
+        ];
       };
     };
   };

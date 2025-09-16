@@ -1,25 +1,42 @@
-{pkgs, ...}: {
+{ pkgs, ... }:
+{
   programs.yazi.settings = {
     open.rules = [
       {
         mime = "text/*";
-        use = ["edit" "reveal"];
+        use = [
+          "edit"
+          "reveal"
+        ];
       }
       {
         mime = "image/*";
-        use = ["image" "reveal"];
+        use = [
+          "image"
+          "reveal"
+        ];
       }
       {
         mime = "video/*";
-        use = ["play" "reveal"];
+        use = [
+          "play"
+          "reveal"
+        ];
       }
       {
         mime = "application/json";
-        use = ["edit" "reveal"];
+        use = [
+          "edit"
+          "reveal"
+        ];
       }
       {
         mime = "*";
-        use = ["edit" "open" "reveal"];
+        use = [
+          "edit"
+          "open"
+          "reveal"
+        ];
       }
     ];
     opener = {

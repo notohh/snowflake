@@ -1,20 +1,18 @@
-{inputs, ...}: {
+{ inputs, ... }:
+{
   imports = [
     inputs.pre-commit-hooks.flakeModule
   ];
   perSystem.pre-commit = {
     check.enable = true;
     settings = {
-      excludes = ["flake.lock"];
+      excludes = [ "flake.lock" ];
       hooks = {
         stylua.enable = true;
         statix.enable = true;
-        alejandra.enable = true;
+        nixfmt-rfc-style.enable = true;
         flake-checker.enable = true;
-        deadnix = {
-          enable = true;
-          excludes = ["technorino.nix"];
-        };
+        deadnix.enable = true;
         prettier = {
           enable = true;
           files = "\\.(js|ts|md|json)$";

@@ -2,8 +2,9 @@
   pkgs,
   lib,
   ...
-}: {
-  networking.firewall.allowedTCPPorts = [5432];
+}:
+{
+  networking.firewall.allowedTCPPorts = [ 5432 ];
   services.postgresql = {
     enable = true;
     enableTCPIP = true;

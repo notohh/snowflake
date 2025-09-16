@@ -19,6 +19,6 @@ rustPlatform.buildRustPackage {
     description = "Displays the content you're currently watching on Discord!";
     homepage = "https://github.com/Radiicall/jellyfin-rpc";
     license = licenses.gpl3;
-    maintainers = with maintainers; [notohh];
+    maintainers = with maintainers; [ notohh ];
   };
 }

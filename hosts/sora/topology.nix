@@ -5,7 +5,7 @@ _: {
       hardware.info = "Hetzner VPS";
       interfaces = {
         tailscale0 = {
-          addresses = ["100.104.42.96/32"];
+          addresses = [ "100.104.42.96/32" ];
           network = "tailscale0";
           type = "wireguard";
         };

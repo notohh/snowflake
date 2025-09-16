@@ -3,22 +3,34 @@
   lib,
   pkgs,
   ...
-}: {
-  sops.secrets.tsauth-sakura = {sopsFile = ../../../secrets/tailscale/secrets.yaml;};
-  environment.systemPackages = [pkgs.jq pkgs.tailscale];
+}:
+{
+  sops.secrets.tsauth-sakura = {
+    sopsFile = ../../../secrets/tailscale/secrets.yaml;
+  };
+  environment.systemPackages = [
+    pkgs.jq
+    pkgs.tailscale
+  ];
   services.tailscale = {
     useRoutingFeatures = lib.mkDefault "client";
   };
-  networking.firewall.allowedUDPPorts = [config.services.tailscale.port];
-  networking.firewall.trustedInterfaces = [config.services.tailscale.interfaceName];
+  networking.firewall.allowedUDPPorts = [ config.services.tailscale.port ];
+  networking.firewall.trustedInterfaces = [ config.services.tailscale.interfaceName ];
 
   systemd.services.tailscale-autoconnect = {
     description = "Automatic connection to Tailscale";
 
     # make sure tailscale is running before trying to connect to tailscale
-    after = ["network-pre.target" "tailscale.service"];
-    wants = ["network-pre.target" "tailscale.service"];
-    wantedBy = ["multi-user.target"];
+    after = [
+      "network-pre.target"
+      "tailscale.service"
+    ];
+    wants = [
+      "network-pre.target"
+      "tailscale.service"
+    ];
+    wantedBy = [ "multi-user.target" ];
 
     # set this service as a oneshot job
     serviceConfig.Type = "oneshot";

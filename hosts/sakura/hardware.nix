@@ -2,14 +2,15 @@
   lib,
   modulesPath,
   ...
-}: {
+}:
+{
   imports = [
     (modulesPath + "/profiles/qemu-guest.nix")
   ];
 
   boot = {
-    kernelModules = [];
-    extraModulePackages = [];
+    kernelModules = [ ];
+    extraModulePackages = [ ];
     loader.grub = {
       enable = true;
       configurationLimit = 5;
@@ -17,8 +18,15 @@
       useOSProber = false;
     };
     initrd = {
-      availableKernelModules = ["ata_piix" "uhci_hcd" "virtio_pci" "virtio_scsi" "sd_mod" "sr_mod"];
-      kernelModules = [];
+      availableKernelModules = [
+        "ata_piix"
+        "uhci_hcd"
+        "virtio_pci"
+        "virtio_scsi"
+        "sd_mod"
+        "sr_mod"
+      ];
+      kernelModules = [ ];
     };
   };
 
@@ -42,7 +50,7 @@
   };
 
   swapDevices = [
-    {device = "/dev/disk/by-uuid/c5afba13-f1af-4e7f-994b-f565c52d92fc";}
+    { device = "/dev/disk/by-uuid/c5afba13-f1af-4e7f-994b-f565c52d92fc"; }
   ];
 
   networking.useDHCP = lib.mkDefault true;

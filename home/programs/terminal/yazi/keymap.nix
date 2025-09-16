@@ -2,17 +2,17 @@ _: {
   programs.yazi.keymap = {
     manager.keymap = [
       {
-        on = ["<Esc>"];
+        on = [ "<Esc>" ];
         run = "escape";
         desc = "Exit visual mode; clear selected; or cancel search";
       }
       {
-        on = ["q"];
+        on = [ "q" ];
         run = "quit";
         desc = "Exit the process";
       }
       {
-        on = ["<C-q>"];
+        on = [ "<C-q>" ];
         run = "close";
         desc = "Close the current tab; or quit if it is last tab";
       }
@@ -20,59 +20,65 @@ _: {
       # Navigation
 
       {
-        on = ["<Up>"];
+        on = [ "<Up>" ];
         run = "arrow -1";
         desc = "Move cursor up";
       }
       {
-        on = ["<Down>"];
+        on = [ "<Down>" ];
         run = "arrow 1";
         desc = "Move cursor down";
       }
       {
-        on = ["<Left>"];
+        on = [ "<Left>" ];
         run = "leave";
         desc = "Go back to the parent directory";
       }
       {
-        on = ["<Right>"];
+        on = [ "<Right>" ];
         run = "enter";
         desc = "Enter the child directory";
       }
       {
-        on = ["g" "g"];
+        on = [
+          "g"
+          "g"
+        ];
         run = "arrow -99999999";
         desc = "Move cursor to the top";
       }
       {
-        on = ["G"];
+        on = [ "G" ];
         run = "arrow 99999999";
         desc = "Move cursor to the bottom";
       }
 
       # Selection
       {
-        on = ["<Space>"];
-        run = ["select --state=none" "arrow 1"];
+        on = [ "<Space>" ];
+        run = [
+          "select --state=none"
+          "arrow 1"
+        ];
         desc = "Toggle the current selection state";
       }
       {
-        on = ["i"];
+        on = [ "i" ];
         run = "visual_mode";
         desc = "Enter visual mode (selection mode)";
       }
       {
-        on = ["I"];
+        on = [ "I" ];
         run = "visual_mode --unset";
         desc = "Enter visual mode (unset mode)";
       }
       {
-        on = ["<C-a>"];
+        on = [ "<C-a>" ];
         run = "select_all --state=true";
         desc = "Select all files";
       }
       {
-        on = ["<C-r>"];
+        on = [ "<C-r>" ];
         run = "select_all --state=none";
         desc = "Inverse selection of all files";
       }
@@ -80,67 +86,67 @@ _: {
       # Operations
 
       {
-        on = ["<Enter>"];
+        on = [ "<Enter>" ];
         run = "open";
         desc = "Open selected file(s)";
       }
       {
-        on = ["y"];
+        on = [ "y" ];
         run = "yank";
         desc = "Copy selected file(s)";
       }
       {
-        on = ["x"];
+        on = [ "x" ];
         run = "yank --cut";
         desc = "Cut selected file(s)";
       }
       {
-        on = ["p"];
+        on = [ "p" ];
         run = "paste";
         desc = "Paste the file(s)";
       }
       {
-        on = ["P"];
+        on = [ "P" ];
         run = "paste --force";
         desc = "Paste the files (overwrite)";
       }
       {
-        on = ["d"];
+        on = [ "d" ];
         run = "remove --permanently";
         desc = "Permanently delete the file(s)";
       }
       {
-        on = ["D"];
+        on = [ "D" ];
         run = "remove --permanently";
         desc = "Permanently delete the files(s)";
       }
       {
-        on = ["a"];
+        on = [ "a" ];
         run = "create";
         desc = "create a file or directory (ends with / for directories)";
       }
       {
-        on = ["r"];
+        on = [ "r" ];
         run = "rename";
         desc = "rename a file or directory";
       }
       {
-        on = [":"];
+        on = [ ":" ];
         run = "shell --block --interactive";
         desc = "run a blocking shell command";
       }
       {
-        on = ["."];
+        on = [ "." ];
         run = "hidden toggle";
         desc = "toggle hidden files";
       }
       {
-        on = ["z"];
+        on = [ "z" ];
         run = "jump zoxide";
         desc = "jump to a directory using zoxide";
       }
       {
-        on = ["Z"];
+        on = [ "Z" ];
         run = "jump fzf";
         desc = "reveal files with fzf";
       }
@@ -148,17 +154,26 @@ _: {
       # Copy
 
       {
-        on = ["c" "c"];
+        on = [
+          "c"
+          "c"
+        ];
         run = "copy path";
         desc = "copy the absolute path";
       }
       {
-        on = ["c" "d"];
+        on = [
+          "c"
+          "d"
+        ];
         run = "copy dirname";
         desc = "copy parent directory path";
       }
       {
-        on = ["c" "f"];
+        on = [
+          "c"
+          "f"
+        ];
         run = "copy filename";
         desc = "copy file name";
       }
@@ -166,105 +181,105 @@ _: {
       # Find
 
       {
-        on = ["/"];
+        on = [ "/" ];
         run = "find";
       }
       {
-        on = ["?"];
+        on = [ "?" ];
         run = "find --previous";
       }
       {
-        on = ["n"];
+        on = [ "n" ];
         run = "find_arrow";
       }
       {
-        on = ["N"];
+        on = [ "N" ];
         run = "find_arrow --previous";
       }
       {
-        on = ["s"];
+        on = [ "s" ];
         run = "search fd";
       }
       {
-        on = ["S"];
+        on = [ "S" ];
         run = "search rg";
       }
       {
-        on = ["<C-s>"];
+        on = [ "<C-s>" ];
         run = "search none";
       }
 
       # Tabs
 
       {
-        on = ["t"];
+        on = [ "t" ];
         run = "tab_create --current";
         desc = "Create a new tab using the current path";
       }
 
       {
-        on = ["1"];
+        on = [ "1" ];
         run = "tab_switch 0";
         desc = "Switch to the first tab";
       }
       {
-        on = ["2"];
+        on = [ "2" ];
         run = "tab_switch 1";
         desc = "Switch to the second tab";
       }
       {
-        on = ["3"];
+        on = [ "3" ];
         run = "tab_switch 2";
         desc = "Switch to the third tab";
       }
       {
-        on = ["4"];
+        on = [ "4" ];
         run = "tab_switch 3";
         desc = "Switch to the fourth tab";
       }
       {
-        on = ["5"];
+        on = [ "5" ];
         run = "tab_switch 4";
         desc = "Switch to the fifth tab";
       }
       {
-        on = ["6"];
+        on = [ "6" ];
         run = "tab_switch 5";
         desc = "Switch to the sixth tab";
       }
       {
-        on = ["7"];
+        on = [ "7" ];
         run = "tab_switch 6";
         desc = "Switch to the seventh tab";
       }
       {
-        on = ["8"];
+        on = [ "8" ];
         run = "tab_switch 7";
         desc = "Switch to the eighth tab";
       }
       {
-        on = ["9"];
+        on = [ "9" ];
         run = "tab_switch 8";
         desc = "Switch to the ninth tab";
       }
 
       {
-        on = ["["];
+        on = [ "[" ];
         run = "tab_switch -1 --relative";
         desc = "Switch to the previous tab";
       }
       {
-        on = ["]"];
+        on = [ "]" ];
         run = "tab_switch 1 --relative";
         desc = "Switch to the next tab";
       }
       {
-        on = ["{"];
+        on = [ "{" ];
         run = "tab_swap -1";
         desc = "Swap the current tab with the previous tab";
       }
       {
-        on = ["}"];
+        on = [ "}" ];
         run = "tab_swap 1";
         desc = "Swap the current tab with the next tab";
       }
@@ -272,7 +287,7 @@ _: {
       # Tasks
 
       {
-        on = ["w"];
+        on = [ "w" ];
         run = "tasks_show";
         desc = "Show the tasks manager";
       }
@@ -280,7 +295,7 @@ _: {
       # Help
 
       {
-        on = ["~"];
+        on = [ "~" ];
         run = "help";
         desc = "Open help";
       }

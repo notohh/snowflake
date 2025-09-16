@@ -14,8 +14,8 @@ rustPlatform.buildRustPackage {
     sha256 = "sha256-uk2ltAPx8HxmVUhIIzAcQ6s4cTmsFmPOq0h/kSHMUzw=";
   };
 
-  nativeBuildInputs = [pkgs.pkg-config];
-  buildInputs = [pkgs.openssl];
+  nativeBuildInputs = [ pkgs.pkg-config ];
+  buildInputs = [ pkgs.openssl ];
 
   cargoHash = "sha256-j3FtsrxAvPX2UhMjtLXyWsmLEEn/ZQ6R9nH6PSG844c=";
 
@@ -24,6 +24,6 @@ rustPlatform.buildRustPackage {
     mainProgram = "cpm";
     homepage = "https://github.com/2547techno/cpm";
     license = licenses.gpl3;
-    maintainers = with maintainers; [notohh];
+    maintainers = with maintainers; [ notohh ];
   };
 }

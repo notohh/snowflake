@@ -32,7 +32,6 @@
   - :cloud_with_lightning_and_rain: [arashi](hosts/arashi)
   - :hibiscus: [haru](hosts/haru)
   - :satellite: [kariru](hosts/kariru)
-  - :wind_chime: [kaze](hosts/kaze)
   - :cherry_blossom: [sakura](hosts/sakura)
   - :milky_way: [sora](hosts/sora)
   - :full_moon: [tsuki](hosts/tsuki)
@@ -51,7 +50,7 @@
 - multiple fully declarative self hosted services (and some containerized ones, with a docker backend)
 - wayland config for hyprland
 - custom packages not found in nixpkgs
-- linted & styled with [alejandra](https://github.com/kamadorueda/alejandra), [deadnix](https://github.com/astro/deadnix), and [statix](https://github.com/nerdypepper/statix)
+- linted & styled with [nixfmt](https://github.com/NixOS/nixfmt), [deadnix](https://github.com/astro/deadnix), and [statix](https://github.com/nerdypepper/statix)
 
 ## :busts_in_silhouette: Credit
 

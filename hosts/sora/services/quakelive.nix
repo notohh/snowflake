@@ -1,5 +1,6 @@
-{pkgs, ...}: {
-  networking.firewall.allowedUDPPorts = [27960];
+{ pkgs, ... }:
+{
+  networking.firewall.allowedUDPPorts = [ 27960 ];
   services.redis = {
     package = pkgs.valkey;
     servers = {
@@ -19,7 +20,7 @@
   };
   virtualisation.oci-containers.containers.quakelive = {
     image = "jamesla/quakelive:latest";
-    ports = ["27960:27960/udp"];
+    ports = [ "27960:27960/udp" ];
     environment = {
       ACCESS = ''
         76561198058253495|admin

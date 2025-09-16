@@ -1,8 +1,9 @@
 {
-  inputs,
   pkgs,
+  inputs,
   ...
-}: {
+}:
+{
   imports = [
     ../../services
     ../../programs/walker.nix
@@ -22,44 +23,47 @@
     ../../wayland/services/hyprpaper.nix
     ../../wayland/programs/hyprlock.nix
   ];
-  home.packages = with pkgs; let
-    inherit (inputs.prismlauncher.packages.${pkgs.system}) prismlauncher;
-    zen = inputs.zen.packages.${pkgs.system}.default;
-    osu = inputs.nix-gaming.packages.${pkgs.system}.osu-lazer-bin;
-    technorino = inputs.technorino.packages.${pkgs.system}.default;
-  in [
-    chromium
-    zen
-    vscode-fhs
-    vscodium-fhs
-    (discord-canary.override {
-      withOpenASAR = true;
-      withVencord = true;
-    })
-    signal-desktop
-    obs-studio
-    pwvucontrol
-    helvum
-    anki-bin
-    virt-manager
-    qbittorrent
-    imv
-    rustypaste-cli
-    cryptomator
-    moonlight-qt
-    tokei
-    jellyfin-rpc
-    losslesscut-bin
-    uxplay
-    postman
-    gale
-    bolt-launcher
-    tutanota-desktop
-    obsidian
-    osu
-    prismlauncher
-    technorino
-  ];
+  home.packages =
+    with pkgs;
+    let
+      inherit (inputs.prismlauncher.packages.${pkgs.system}) prismlauncher;
+      zen = inputs.zen.packages.${pkgs.system}.default;
+      osu = inputs.nix-gaming.packages.${pkgs.system}.osu-lazer-bin;
+      technorino = inputs.technorino.packages.${pkgs.system}.default;
+    in
+    [
+      chromium
+      zen
+      vscode-fhs
+      vscodium-fhs
+      (discord-canary.override {
+        withOpenASAR = true;
+        withVencord = true;
+      })
+      signal-desktop
+      obs-studio
+      pwvucontrol
+      helvum
+      anki-bin
+      virt-manager
+      qbittorrent
+      imv
+      rustypaste-cli
+      cryptomator
+      moonlight-qt
+      tokei
+      jellyfin-rpc
+      losslesscut-bin
+      uxplay
+      postman
+      gale
+      bolt-launcher
+      tutanota-desktop
+      obsidian
+      osu
+      prismlauncher
+      technorino
+    ];
   programs.ssh = {
     enable = true;
     enableDefaultConfig = false;
@@ -147,19 +151,19 @@
     mimeApps = {
       enable = true;
       defaultApplications = {
-        "x-scheme-handler/discord-409416265891971072" = ["discord-409416265891971072.desktop"];
-        "x-scheme-handler/discord-402572971681644545" = ["discord-402572971681644545.desktop"];
-        "x-scheme-handler/discord-696343075731144724" = ["discord-696343075731144724.desktop"];
-        "x-scheme-handler/http" = ["zen.desktop"];
-        "x-scheme-handler/https" = ["zen.desktop"];
-        "x-scheme-handler/chrome" = ["zen.desktop"];
-        "text/html" = ["zen.desktop"];
-        "application/x-extension-htm" = ["zen.desktop"];
-        "application/x-extension-html" = ["zen.desktop"];
-        "application/x-extension-shtml" = ["zen.desktop"];
-        "application/xhtml+xml" = ["zen.desktop"];
-        "application/x-extension-xhtml" = ["zen.desktop"];
-        "application/x-extension-xht" = ["zen.desktop"];
+        "x-scheme-handler/discord-409416265891971072" = [ "discord-409416265891971072.desktop" ];
+        "x-scheme-handler/discord-402572971681644545" = [ "discord-402572971681644545.desktop" ];
+        "x-scheme-handler/discord-696343075731144724" = [ "discord-696343075731144724.desktop" ];
+        "x-scheme-handler/http" = [ "zen.desktop" ];
+        "x-scheme-handler/https" = [ "zen.desktop" ];
+        "x-scheme-handler/chrome" = [ "zen.desktop" ];
+        "text/html" = [ "zen.desktop" ];
+        "application/x-extension-htm" = [ "zen.desktop" ];
+        "application/x-extension-html" = [ "zen.desktop" ];
+        "application/x-extension-shtml" = [ "zen.desktop" ];
+        "application/xhtml+xml" = [ "zen.desktop" ];
+        "application/x-extension-xhtml" = [ "zen.desktop" ];
+        "application/x-extension-xht" = [ "zen.desktop" ];
       };
     };
   };

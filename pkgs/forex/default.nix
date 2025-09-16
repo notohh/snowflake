@@ -15,8 +15,8 @@ rustPlatform.buildRustPackage {
     sha256 = "sha256-d/iyg/tFF3N0I6LCSFU4U1vBzpz60s2FnT0GB4AuihE=";
   };
 
-  nativeBuildInputs = [pkgs.pkg-config];
-  buildInputs = [pkgs.openssl];
+  nativeBuildInputs = [ pkgs.pkg-config ];
+  buildInputs = [ pkgs.openssl ];
 
   cargoHash = "sha256-COWFG766DVWXbGm8raVSH1nBpsS5HdTat5BHzv7QR4o=";
 
@@ -25,6 +25,6 @@ rustPlatform.buildRustPackage {
     mainProgram = "forex";
     homepage = "https://git.flake.sh/notohh/forex";
     license = licenses.mit;
-    maintainers = with maintainers; [notohh];
+    maintainers = with maintainers; [ notohh ];
   };
 }

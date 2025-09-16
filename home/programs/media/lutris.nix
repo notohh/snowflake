@@ -2,7 +2,8 @@
   pkgs,
   osConfig,
   ...
-}: {
+}:
+{
   programs.lutris = {
     enable = true;
     extraPackages = with pkgs; [

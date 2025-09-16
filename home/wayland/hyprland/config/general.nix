@@ -1,11 +1,12 @@
-{pkgs, ...}: {
+{ pkgs, ... }:
+{
   wayland.windowManager.hyprland = {
     settings = {
       monitor = [
-        "HDMI-A-1,1920x1080@60, 3640x560, auto, transform, 3" #right
-        "DP-3,1920x1080@60, 0x560, auto, transform, 1" #left
-        "DP-2,1920x1080@144, 1400x0, auto" #top
-        "DP-1,2560x1440@144, 1080x1080, auto" #middle
+        "HDMI-A-1,1920x1080@60, 3640x560, auto, transform, 3" # right
+        "DP-3,1920x1080@60, 0x560, auto, transform, 1" # left
+        "DP-2,1920x1080@144, 1400x0, auto" # top
+        "DP-1,2560x1440@144, 1080x1080, auto" # middle
       ];
       exec-once = [
         "hyprpaper"

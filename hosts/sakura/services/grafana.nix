@@ -1,7 +1,9 @@
-_: let
+_:
+let
   prometheusPort = "9090";
   dbLogin = "grafana";
-in {
+in
+{
   services.grafana = {
     enable = true;
     settings = {

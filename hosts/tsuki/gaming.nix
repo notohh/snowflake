@@ -2,7 +2,8 @@
   pkgs,
   inputs,
   ...
-}: {
+}:
+{
   imports = [
     inputs.nix-gaming.nixosModules.platformOptimizations
     # inputs.nixpkgs-xr.nixosModules.nixpkgs-xr

@@ -24,8 +24,12 @@ _: {
           {
             type = "light";
             entity = "light.living_room";
-            tap_action = {action = "toggle";};
-            hold_action = {action = "Default action";};
+            tap_action = {
+              action = "toggle";
+            };
+            hold_action = {
+              action = "Default action";
+            };
             style = {
               top = "72.8%";
               left = "75.3%";
@@ -34,8 +38,12 @@ _: {
           {
             type = "light";
             entity = "light.hall_light";
-            tap_action = {action = "toggle";};
-            hold_action = {action = "Default action";};
+            tap_action = {
+              action = "toggle";
+            };
+            hold_action = {
+              action = "Default action";
+            };
             style = {
               top = "72.8%";
               left = "75.3%";
@@ -49,8 +57,12 @@ _: {
           {
             type = "light";
             entity = "light.master_bedroom_lamp";
-            tap_action = {action = "toggle";};
-            hold_action = {action = "Default action";};
+            tap_action = {
+              action = "toggle";
+            };
+            hold_action = {
+              action = "Default action";
+            };
             style = {
               top = "72.8%";
               left = "75.3%";
@@ -66,8 +78,12 @@ _: {
             entity = "light.bedroom_1";
             show_state = true;
             show_icon = true;
-            tap_action = {action = "toggle";};
-            hold_action = {action = "Default action";};
+            tap_action = {
+              action = "toggle";
+            };
+            hold_action = {
+              action = "Default action";
+            };
             style = {
               top = "72.8%";
               left = "75.3%";
@@ -78,8 +94,12 @@ _: {
             entity = "light.light_panels_58_6c_84";
             show_state = true;
             show_icon = true;
-            tap_action = {action = "toggle";};
-            hold_action = {action = "Default action";};
+            tap_action = {
+              action = "toggle";
+            };
+            hold_action = {
+              action = "Default action";
+            };
             style = {
               top = "72.8%";
               left = "75.3%";

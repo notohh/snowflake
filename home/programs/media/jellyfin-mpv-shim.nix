@@ -1,5 +1,6 @@
-{pkgs, ...}: {
-  home.packages = [pkgs.jellyfin-mpv-shim];
+{ pkgs, ... }:
+{
+  home.packages = [ pkgs.jellyfin-mpv-shim ];
   xdg.configFile."jellyfin-mpv-shim/conf.json".text = ''
     {
           "allow_transcode_to_h265": false,

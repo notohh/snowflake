@@ -21,6 +21,6 @@ rustPlatform.buildRustPackage {
     mainProgram = "passgen";
     homepage = "https://git.flake.sh/notohh/passgen";
     license = licenses.mit;
-    maintainers = with maintainers; [notohh];
+    maintainers = with maintainers; [ notohh ];
   };
 }

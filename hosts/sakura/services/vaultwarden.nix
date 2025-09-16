@@ -2,8 +2,9 @@
   pkgs,
   config,
   ...
-}: {
-  sops.secrets.vaultwarden-env = {};
+}:
+{
+  sops.secrets.vaultwarden-env = { };
   services.vaultwarden = {
     enable = true;
     package = pkgs.vaultwarden-postgresql;
