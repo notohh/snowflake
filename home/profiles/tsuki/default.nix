@@ -6,17 +6,14 @@
   imports = [
     ../../services
     ../../programs/anyrun
-    ../../programs/browsers/firefox
     ../../programs/terminal/wezterm
     ../../programs/terminal/zellij
     ../../programs/terminal/television
-    ../../programs/editors/zed
     ../../programs/media/cava.nix
     ../../programs/media/spicetify.nix
     ../../programs/themes.nix
     ../../programs/openvr.nix
     ../../programs/media/zathura.nix
-    ../../programs/media/easyeffects.nix
     ../../programs/media/mpv.nix
     ../../programs/media/jellyfin-mpv-shim.nix
     ../../programs/media/lutris.nix
@@ -25,11 +22,20 @@
     ../../wayland/services/hyprpaper.nix
     ../../wayland/programs/hyprlock.nix
   ];
-  home.packages = with pkgs; [
+  home.packages = with pkgs; let
+    inherit (inputs.prismlauncher.packages.${pkgs.system}) prismlauncher;
+    zen = inputs.zen.packages.${pkgs.system}.default;
+    osu = inputs.nix-gaming.packages.${pkgs.system}.osu-lazer-bin;
+    technorino = inputs.technorino.packages.${pkgs.system}.default;
+  in [
     chromium
-    vesktop
+    zen
     vscode-fhs
-    discord-canary
+    vscodium-fhs
+    (discord-canary.override {
+      withOpenASAR = true;
+      withVencord = true;
+    })
     signal-desktop
     obs-studio
     pwvucontrol
@@ -40,30 +46,35 @@
     imv
     rustypaste-cli
     cryptomator
-    # ventoy
     moonlight-qt
     tokei
-    jellyfin-media-player
     jellyfin-rpc
-    wlx-overlay-s
     losslesscut-bin
     uxplay
-    drawio
     postman
     gale
-    krita
     bolt-launcher
     tutanota-desktop
-    distrobox
     obsidian
-    inputs.zen.packages.${pkgs.system}.default
-    inputs.nix-gaming.packages.${pkgs.system}.osu-lazer-bin
-    inputs.manga-tui.packages.${pkgs.system}.manga-tui
-    inputs.prismlauncher.packages.${pkgs.system}.prismlauncher
-    inputs.technorino.packages.${pkgs.system}.default
+    osu
+    prismlauncher
+    technorino
   ];
   programs.ssh = {
     enable = true;
+    enableDefaultConfig = false;
+    matchBlocks."*" = {
+      forwardAgent = false;
+      addKeysToAgent = "no";
+      compression = false;
+      serverAliveInterval = 0;
+      serverAliveCountMax = 3;
+      hashKnownHosts = false;
+      userKnownHostsFile = "~/.ssh/known_hosts";
+      controlMaster = "no";
+      controlPath = "~/.ssh/master-%r@%n:%p";
+      controlPersist = "no";
+    };
     extraConfig = ''
       Host sakura
         Hostname 100.121.201.47
@@ -130,5 +141,26 @@
         User notohh
         IdentityFile ~/.ssh/notohh-git
     '';
+  };
+  xdg = {
+    configFile."mimeapps.list".force = true;
+    mimeApps = {
+      enable = true;
+      defaultApplications = {
+        "x-scheme-handler/discord-409416265891971072" = ["discord-409416265891971072.desktop"];
+        "x-scheme-handler/discord-402572971681644545" = ["discord-402572971681644545.desktop"];
+        "x-scheme-handler/discord-696343075731144724" = ["discord-696343075731144724.desktop"];
+        "x-scheme-handler/http" = ["zen.desktop"];
+        "x-scheme-handler/https" = ["zen.desktop"];
+        "x-scheme-handler/chrome" = ["zen.desktop"];
+        "text/html" = ["zen.desktop"];
+        "application/x-extension-htm" = ["zen.desktop"];
+        "application/x-extension-html" = ["zen.desktop"];
+        "application/x-extension-shtml" = ["zen.desktop"];
+        "application/xhtml+xml" = ["zen.desktop"];
+        "application/x-extension-xhtml" = ["zen.desktop"];
+        "application/x-extension-xht" = ["zen.desktop"];
+      };
+    };
   };
 }
