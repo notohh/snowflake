@@ -65,7 +65,6 @@
     anyrun.url = "github:Kirottu/anyrun";
     nixpkgs-xr.url = "github:nix-community/nixpkgs-xr";
     prismlauncher.url = "github:PrismLauncher/PrismLauncher";
-    manga-tui.url = "github:josueBarretogit/manga-tui";
     spicetify-nix.url = "github:Gerg-L/spicetify-nix";
     nix-topology.url = "github:oddlama/nix-topology";
     nix-flatpak.url = "github:gmodena/nix-flatpak";
