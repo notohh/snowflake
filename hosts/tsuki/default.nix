@@ -5,7 +5,6 @@
 }:
 {
   imports = [
-    inputs.nix-gaming.nixosModules.pipewireLowLatency
     inputs.hyprland.nixosModules.default
     ./hardware.nix
     ./services
@@ -46,11 +45,6 @@
       alsa.support32Bit = true;
       pulse.enable = true;
       wireplumber.enable = true;
-      lowLatency = {
-        enable = true;
-        quantum = 64;
-        rate = 48000;
-      };
     };
     xserver = {
       enable = true;
@@ -98,7 +92,6 @@
     libvirt
     qemu_kvm
     zulu
-    zulu17
   ];
 
   system = {
