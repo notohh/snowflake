@@ -1,9 +1,10 @@
-{ pkgs, ... }:
+{ inputs, pkgs, ... }:
 {
   systemd.user.startServices = "sd-switch";
   programs.home-manager.enable = true;
 
   imports = [
+    inputs.nix-index-database.homeModules.nix-index
     ./programs/editors/helix
     ./programs/terminal/lazygit
     ./programs/terminal/nushell
@@ -15,6 +16,7 @@
     ./programs/terminal/zoxide.nix
     ./programs/terminal/direnv.nix
     ./programs/git.nix
+    ./programs/tealdeer.nix
   ];
 
   home = {
@@ -40,9 +42,8 @@
       unrar
       p7zip
       procs
-      navi
-      comma
     ];
     stateVersion = "23.05";
   };
+  programs.nix-index-database.comma.enable = true;
 }
