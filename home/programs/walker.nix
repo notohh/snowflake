@@ -1,7 +1,7 @@
 _: {
   services.walker = {
     enable = true;
-    systemd.enable = true;
+    systemd.enable = false;
     settings = {
       app_launch_prefix = "";
       as_window = false;
