@@ -71,9 +71,7 @@ function Status:size()
 
 	local style = self.style()
 	return ui.Line({
-		ui.Span(" " .. ya.readable_size(h:size() or h.cha.length) .. " ")
-			:fg(style.bg)
-			:bg(THEME.status.separator_style.bg),
+		ui.Span(" " .. ya.readable_size(h:size() or h.cha.length) .. " "):fg(style.bg):bg(THEME.status.separator_style.bg),
 		ui.Span(THEME.status.separator_close):fg(THEME.status.separator_style.fg),
 	})
 end
