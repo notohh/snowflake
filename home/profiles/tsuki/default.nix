@@ -29,19 +29,17 @@
       inherit (inputs.prismlauncher.packages.${pkgs.system}) prismlauncher;
       zen = inputs.zen.packages.${pkgs.system}.default;
       osu = inputs.nix-gaming.packages.${pkgs.system}.osu-lazer-bin;
-      technorino = inputs.technorino.packages.${pkgs.system}.default;
+      technorino = inputs.technorino.packages.${pkgs.system}.package;
     in
     [
       chromium
       zen
-      vscode-fhs
       vscodium-fhs
       (discord-canary.override {
         withOpenASAR = true;
         withVencord = true;
       })
       signal-desktop
-      obs-studio
       pwvucontrol
       helvum
       anki-bin
@@ -63,6 +61,7 @@
       osu
       prismlauncher
       technorino
+      krita
     ];
   programs.ssh = {
     enable = true;
