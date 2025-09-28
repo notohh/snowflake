@@ -76,6 +76,17 @@
       enable = true;
       binfmt = true;
     };
+    obs-studio = {
+      enable = true;
+      enableVirtualCamera = true;
+      plugins = with pkgs.obs-studio-plugins; [
+        wlrobs
+        obs-pipewire-audio-capture
+        obs-vaapi
+        obs-gstreamer
+        obs-vkcapture
+      ];
+    };
   };
   hardware = {
     graphics = {
@@ -93,7 +104,6 @@
     qemu_kvm
     zulu
   ];
-
   system = {
     autoUpgrade.enable = false;
     stateVersion = "23.05";
