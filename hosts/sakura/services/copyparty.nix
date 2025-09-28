@@ -11,9 +11,6 @@
     copyparty-catsh-passwd = {
       owner = "copyparty";
     };
-    copyparty-suki-passwd = {
-      owner = "copyparty";
-    };
     copyparty-nam-passwd = {
       owner = "copyparty";
     };
@@ -44,9 +41,6 @@
       catsh = {
         passwordFile = "/run/secrets/copyparty-catsh-passwd";
       };
-      suki = {
-        passwordFile = "/run/secrets/copyparty-suki-passwd";
-      };
       nam = {
         passwordFile = "/run/secrets/copyparty-nam-passwd";
       };
@@ -64,19 +58,6 @@
           e2d = true;
           d2t = true;
           nohash = "\.iso$";
-          v = 3;
-        };
-      };
-      "/suki" = {
-        path = "/nas/copyparty/suki";
-        access = {
-          A = [ "suki, notohh, nam" ];
-        };
-        flags = {
-          fk = 4;
-          scan = 60;
-          e2d = true;
-          d2t = true;
           v = 3;
         };
       };
