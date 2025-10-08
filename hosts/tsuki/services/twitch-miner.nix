@@ -1,6 +1,6 @@
 _: {
   virtualisation.oci-containers.containers.twitch-miner = {
-    image = "rdavidoff/twitch-channel-points-miner-v2@sha256:abf28a9118635382b42ea52d223389bee10025dee6fd86606df0d27ba8f39ce1";
+    image = "rdavidoff/twitch-channel-points-miner-v2@sha256:03a46627173caab35afeba99451f55bb74229a732ccbf8458d3aa5016503d5cd"; # 2.0.0
     hostname = "twitch-miner";
     volumes = [
       "/home/notoh/twitch-miner/analytics:/usr/src/app/analytics"
