@@ -3,7 +3,7 @@ _: {
     gale = prev.gale.overrideAttrs (
       n: _:
       let
-        version = "1.9.7";
+        version = "1.10.0";
       in
       {
         src = prev.fetchFromGitHub {
@@ -11,10 +11,10 @@ _: {
           owner = "Kesomannen";
           repo = "gale";
           rev = version;
-          hash = "sha256-XEc8h7A1q+WfPl2HojFt2oIlAnNswq3X0o6jMZrEjCQ=";
+          hash = "sha256-SnPYuMYdoY69CWMztuDxw0ohRDU2uECNhBs46hLg+eA=";
         };
         pnpmDeps = prev.pnpm_10.fetchDeps {
-          hash = "sha256-QQXP/x7AjDtUpe6h+pC6vUsIAptv1kN/1MJZjHAIdMo=";
+          hash = "sha256-DYhPe59qfsSjyMIN31RL0mrHfmE6/I1SF+XutettkO8=";
           fetcherVersion = 1;
           inherit (n) pname version src;
         };
@@ -25,7 +25,7 @@ _: {
             src
             cargoRoot
             ;
-          hash = "sha256-zaTbb1+JK9mA9Tvnatw8lse5PBhKknDM48mN/sWLQ6w=";
+          hash = "sha256-tWQRYD6hMU7cvtelGryLdpfoEnUKYt7yYNwHTFZ4pLw=";
         };
       }
     );
