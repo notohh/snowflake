@@ -35,10 +35,6 @@
       device = "/dev/disk/by-uuid/833959fb-de9d-4820-aa22-e6ce8bce6f6c";
       fsType = "ext4";
     };
-    "/home/notoh/docker/stash/data" = {
-      device = "192.168.1.199:/mnt/Sutoreji/stash";
-      fsType = "nfs";
-    };
     "/media" = {
       device = "192.168.1.199:/mnt/Sutoreji/media";
       fsType = "nfs";
@@ -47,16 +43,8 @@
       device = "192.168.1.199:/mnt/Sutoreji/nix-restic-data/yuki";
       fsType = "nfs";
     };
-    "/var/lib/paperless-ngx/media" = {
-      device = "192.168.1.199:/mnt/Sutoreji/paperless-ngx/paperless-media ";
-      fsType = "nfs";
-    };
-    "/var/lib/hoarder" = {
-      device = "192.168.1.199:/mnt/Sutoreji/hoarder ";
-      fsType = "nfs";
-    };
     "/var/lib/immich" = {
-      device = "192.168.1.199:/mnt/Sutoreji/immich ";
+      device = "192.168.1.199:/mnt/Sutoreji/immich";
       fsType = "nfs";
     };
   };
