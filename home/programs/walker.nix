@@ -4,7 +4,6 @@
   programs.walker = {
     enable = true;
     runAsService = true;
-
     config = {
       providers.default = [
         "desktopapplications"
