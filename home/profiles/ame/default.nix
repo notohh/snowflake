@@ -15,17 +15,21 @@
   ];
 
   home.packages = with pkgs; [
-    discord-canary
+    (discord-canary.override {
+      withOpenASAR = true;
+      withVencord = true;
+    })
     pwvucontrol
     wayland
     glib
-    jellyfin-media-player
+    delfin
     anki-bin
     tutanota-desktop
     moonlight-qt
     signal-desktop
     bolt-launcher
     inputs.zen.packages.${pkgs.system}.default
+    inputs.technorino.packages.${pkgs.system}.package
   ];
   programs.ssh = {
     enable = true;
