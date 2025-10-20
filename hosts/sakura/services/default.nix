@@ -11,5 +11,6 @@
     ./immich-proxy.nix
     ./hedgedoc.nix
     ./copyparty.nix
+    ./syncthing.nix
   ];
 }
