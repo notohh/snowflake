@@ -1,10 +1,15 @@
 _: {
   programs = {
+    delta = {
+      enable = true;
+      enableGitIntegration = true;
+    };
     git = {
       enable = true;
-      delta.enable = true;
-      userEmail = "github@notohh.dev";
-      userName = "notohh";
+      settings = {
+        user.email = "github@notohh.dev";
+        user.name = "notohh";
+      };
       signing = {
         key = "BD47506D475EE86D";
         signByDefault = true;
