@@ -1,8 +1,5 @@
 set shell := ["nu", "-c"]
 
-
-hostname := `hostname`
-
 default:
   @just --list\
 
