@@ -75,5 +75,6 @@
     copyparty.url = "github:9001/copyparty";
     technorino.url = "git+https://github.com/2547techno/technorino";
     walker.url = "github:abenz1267/walker";
+    stylix.url = "github:nix-community/stylix";
   };
 }
