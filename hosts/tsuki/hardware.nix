@@ -11,6 +11,7 @@
   ];
 
   boot = {
+    kernelPackages = lib.mkForce pkgs.linuxPackages_xanmod_latest;
     kernelModules = [ "kvm-amd" ];
     kernelParams = [
       "preempt=full"
@@ -41,13 +42,11 @@
     };
   };
 
-  services.scx = {
-    enable = true;
-    package = pkgs.scx.rustscheds;
-    scheduler = "scx_lavd";
+  hardware = {
+    wooting.enable = true;
+    cpu.amd.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
+    amdgpu.overdrive.enable = true;
   };
-
-  hardware.wooting.enable = true;
 
   fileSystems = {
     "/" = {
@@ -78,5 +77,4 @@
 
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
   powerManagement.cpuFreqGovernor = lib.mkDefault "performance";
-  hardware.cpu.amd.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
 }

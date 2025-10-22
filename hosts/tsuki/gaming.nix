@@ -41,17 +41,10 @@
     };
   };
   programs = {
-    gamescope = {
-      enable = true;
-      capSysNice = false;
-      args = [
-        "--expose-wayland"
-        "--framerate-limit 144"
-      ];
-    };
     steam = {
       enable = true;
       platformOptimizations.enable = true;
+      gamescopeSession.enable = true;
       extraCompatPackages = [
         pkgs.proton-ge-bin
         # pkgs.proton-ge-rtsp-bin

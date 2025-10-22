@@ -21,7 +21,13 @@
   };
   services = {
     pulseaudio.enable = false;
+    lact.enable = true;
     pcscd.enable = true;
+    scx = {
+      enable = true;
+      package = pkgs.scx.rustscheds;
+      scheduler = "scx_lavd";
+    };
     flatpak = {
       enable = true;
       packages = [
@@ -64,7 +70,6 @@
     };
   };
   programs = {
-    corectrl.enable = true;
     dconf.enable = true;
     sniffnet.enable = true;
     hyprland = {
