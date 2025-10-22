@@ -5,6 +5,7 @@
 }:
 {
   imports = [
+    ./stylix.nix
     ../../services
     ../../programs/walker.nix
     ../../programs/terminal/wezterm
@@ -12,7 +13,6 @@
     ../../programs/terminal/television
     ../../programs/media/cava.nix
     ../../programs/media/spicetify.nix
-    ../../programs/themes.nix
     ../../programs/openvr.nix
     ../../programs/media/zathura.nix
     ../../programs/media/mpv.nix
