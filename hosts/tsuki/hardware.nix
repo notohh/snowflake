@@ -13,10 +13,18 @@
   boot = {
     kernelPackages = lib.mkForce pkgs.linuxPackages_xanmod_latest;
     kernelModules = [ "kvm-amd" ];
+    consoleLogLevel = 3;
     kernelParams = [
+      "quiet"
+      "splash"
       "preempt=full"
       "threadirqs"
       "mitigations=off"
+      "boot.shell_on_fail"
+      "loglevel=3"
+      "rd.systemd.show_status=false"
+      "rd.udev.log_level=3"
+      "udev.log_priority=3"
     ];
     extraModulePackages = with config.boot.kernelPackages; [ v4l2loopback.out ];
     loader = {
@@ -30,6 +38,7 @@
       };
     };
     initrd = {
+      verbose = false;
       availableKernelModules = [
         "xhci_pci"
         "ahci"
@@ -40,8 +49,20 @@
       ];
       kernelModules = [ ];
     };
+    plymouth = {
+      enable = true;
+      theme = "liquid";
+      themePackages = with pkgs; [
+        (adi1090x-plymouth-themes.override {
+          selected_themes = [ "liquid" ];
+        })
+      ];
+      extraConfig = ''
+        DeviceScale=0
+        ShowDelay=0
+      '';
+    };
   };
-
   hardware = {
     wooting.enable = true;
     cpu.amd.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
