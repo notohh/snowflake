@@ -13,6 +13,8 @@
         "chatterino"
         "DiscordCanary"
         "dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
+        "music-discord-rpc"
+        "jellyfin-rpc"
         "${pkgs.polkit_gnome}/libexec/polkit-gnome-authentication-agent-1"
       ];
       input = {
@@ -74,10 +76,6 @@
       };
       master = {
         new_status = "master";
-      };
-      device = {
-        name = "glorious-model-o-wireless";
-        sensitivity = "-0.5";
       };
       render = {
         direct_scanout = 0;
