@@ -8,12 +8,12 @@
     ./stylix.nix
     ../../services
     ../../programs/walker.nix
+    ../../programs/openvr.nix
     ../../programs/terminal/wezterm
     ../../programs/terminal/zellij
     ../../programs/terminal/television
     ../../programs/media/cava.nix
     ../../programs/media/spicetify.nix
-    ../../programs/openvr.nix
     ../../programs/media/zathura.nix
     ../../programs/media/mpv.nix
     ../../programs/media/jellyfin-mpv-shim.nix
@@ -62,6 +62,7 @@
       prismlauncher
       technorino
       krita
+      music-discord-rpc
     ];
   programs.ssh = {
     enable = true;
