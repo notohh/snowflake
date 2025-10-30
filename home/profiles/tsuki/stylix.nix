@@ -41,6 +41,7 @@
     targets = {
       fontconfig.enable = true;
       gtk.enable = true;
+      qt.enable = true;
       lazygit.enable = true;
       nushell.enable = true;
       yazi.enable = true;
