@@ -6,7 +6,6 @@
 {
   imports = [
     inputs.nix-gaming.nixosModules.platformOptimizations
-    # inputs.nixpkgs-xr.nixosModules.nixpkgs-xr
   ];
   environment.systemPackages = [
     pkgs.android-tools # for wired wivrn
@@ -43,11 +42,11 @@
   programs = {
     steam = {
       enable = true;
+      package = pkgs.steam-millennium;
       platformOptimizations.enable = true;
       gamescopeSession.enable = true;
       extraCompatPackages = [
         pkgs.proton-ge-bin
-        # pkgs.proton-ge-rtsp-bin
       ];
     };
   };

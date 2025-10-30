@@ -11,6 +11,7 @@
       inputs.nur.overlays.default
       inputs.helix.overlays.default
       inputs.copyparty.overlays.default
+      inputs.millennium.overlays.default
     ];
     config = {
       allowUnfree = true;
