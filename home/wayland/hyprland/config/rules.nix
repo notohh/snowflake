@@ -20,6 +20,7 @@ _: {
       "idleinhibit always, class:^(steam_app_)(.*)$"
       "immediate, class:^(steam_app_)(.*)$"
       "immediate, class:^(cs2)$"
+      "immediate, class:^(osu!)$"
     ];
     layerrule = [
       "blur, ^(gtk-layer-shell|walker)$"
