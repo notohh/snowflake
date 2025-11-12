@@ -58,8 +58,11 @@
     };
     deploy-rs.url = "github:serokell/deploy-rs";
     sops-nix.url = "github:Mic92/sops-nix";
-    zen.url = "github:youwen5/zen-browser-flake";
-    scls.url = "github:estin/simple-completion-language-server";
+    zen = {
+      url = "github:0xc000022070/zen-browser-flake/beta";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    # scls.url = "github:estin/simple-completion-language-server";
     nix-gaming.url = "github:fufexan/nix-gaming";
     nur.url = "github:nix-community/NUR";
     yazi.url = "github:sxyazi/yazi";
