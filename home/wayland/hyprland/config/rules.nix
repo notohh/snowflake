@@ -21,6 +21,7 @@ _: {
       "immediate, class:^(steam_app_)(.*)$"
       "immediate, class:^(cs2)$"
       "immediate, class:^(osu!)$"
+      "noscreenshare, class:^(Signal)$"
     ];
     layerrule = [
       "blur, ^(gtk-layer-shell|walker)$"
