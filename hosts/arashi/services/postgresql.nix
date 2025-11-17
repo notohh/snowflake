@@ -50,7 +50,7 @@
         ensureDBOwnership = true;
       }
       {
-        name = "vikunja";
+        name = "romm";
         ensureDBOwnership = true;
       }
     ];
@@ -62,7 +62,7 @@
       "vaultwarden"
       "attic"
       "atuin"
-      "vikunja"
+      "romm"
     ];
   };
   services.postgresqlBackup = {
@@ -76,7 +76,7 @@
       "attic"
       "miniflux"
       "atuin"
-      "vikunja"
+      "romm"
     ];
     compression = "zstd";
     compressionLevel = 4;
