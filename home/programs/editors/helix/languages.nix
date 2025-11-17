@@ -1,18 +1,15 @@
 {
   pkgs,
   lib,
-  inputs,
   ...
 }:
 {
-  home.packages = [ inputs.scls.defaultPackage.${pkgs.system} ];
   programs.helix.languages = {
     language = with pkgs; [
       {
         name = "nix";
         auto-format = true;
         language-servers = [
-          "scls"
           "nil"
         ];
         formatter = {
@@ -24,7 +21,6 @@
         name = "rust";
         auto-format = true;
         language-servers = [
-          "scls"
           "rust-analyzer"
         ];
         formatter = {
@@ -39,7 +35,6 @@
         name = "lua";
         auto-format = true;
         language-servers = [
-          "scls"
           "lua-language-server"
         ];
         formatter = {
@@ -50,7 +45,6 @@
         name = "python";
         auto-format = true;
         language-servers = [
-          "scls"
           "ruff"
         ];
         formatter = with pkgs; {
@@ -65,7 +59,6 @@
         name = "typescript";
         auto-format = true;
         language-servers = [
-          "scls"
           {
             name = "typescript-language-server";
             except-features = [ "format" ];
@@ -85,7 +78,6 @@
         name = "toml";
         auto-format = true;
         language-servers = [
-          "scls"
           "taplo"
         ];
         formatter = with pkgs; {
@@ -100,7 +92,6 @@
         name = "json";
         auto-format = true;
         language-servers = [
-          "scls"
           "biome"
         ];
         formatter = with pkgs; {
@@ -110,13 +101,6 @@
       }
     ];
     language-server = with pkgs; {
-      scls = {
-        command = "simple-completion-language-server";
-        config = {
-          feature_snippets = true;
-          feature_paths = true;
-        };
-      };
       rust-analyzer.config = {
         checkOnSave.command = "clippy";
         inlayHints = {
