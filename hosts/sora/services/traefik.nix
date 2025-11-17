@@ -179,6 +179,13 @@
               tls.domains = [ { main = "*.${pqdn}"; } ];
               tls.certresolver = "production";
             };
+            owncast = {
+              rule = "Host(`video.${pqdn}`)";
+              entrypoints = [ "websecure" ];
+              service = "owncast";
+              tls.domains = [ { main = "*.${pqdn}"; } ];
+              tls.certresolver = "production";
+            };
           };
         services =
           let
@@ -205,6 +212,7 @@
 
             # tsuru
             woodpecker.loadBalancer.servers = [ { url = "http://100.82.146.40:8200"; } ];
+            owncast.loadBalancer.servers = [ { url = "http://100.127.30.116:8100"; } ];
           };
       };
     };
