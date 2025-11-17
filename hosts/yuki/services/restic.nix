@@ -16,7 +16,6 @@
           "/home/notoh/docker"
           "/var/lib/jellyfin"
           "/var/lib/private/jellyseerr"
-          "/var/lib/private/homepage-dashboard"
         ];
         exclude = [
           "/home/notoh/docker/stash/data"

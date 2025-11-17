@@ -39,12 +39,24 @@
       device = "192.168.1.199:/mnt/Sutoreji/media";
       fsType = "nfs";
     };
+    "/stash-media" = {
+      device = "192.168.1.199:/mnt/Sutoreji/stash";
+      fsType = "nfs";
+    };
     "/nas/restic" = {
       device = "192.168.1.199:/mnt/Sutoreji/nix-restic-data/yuki";
       fsType = "nfs";
     };
     "/var/lib/immich" = {
       device = "192.168.1.199:/mnt/Sutoreji/immich";
+      fsType = "nfs";
+    };
+    "/var/lib/romm" = {
+      device = "192.168.1.199:/mnt/Sutoreji/romm";
+      fsType = "nfs";
+    };
+    "/var/lib/stash" = {
+      device = "192.168.1.199:/mnt/Sutoreji/stash-data";
       fsType = "nfs";
     };
   };
