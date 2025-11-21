@@ -9,15 +9,17 @@
     ../../services
     ../../programs/walker.nix
     ../../programs/openvr.nix
-    ../../programs/terminal/wezterm
+    ../../programs/ghostty.nix
     ../../programs/terminal/zellij
     ../../programs/terminal/television
+    ../../programs/editors/zed
     ../../programs/media/cava.nix
     ../../programs/media/spicetify.nix
     ../../programs/media/zathura.nix
     ../../programs/media/mpv.nix
     ../../programs/media/jellyfin-mpv-shim.nix
     ../../programs/media/lutris.nix
+    ../../programs/media/easyeffects.nix
     ../../wayland/hyprland
     ../../wayland/services/hypridle.nix
     ../../wayland/services/hyprpaper.nix
@@ -28,13 +30,12 @@
     let
       inherit (inputs.prismlauncher.packages.${pkgs.system}) prismlauncher;
       zen = inputs.zen.packages.${pkgs.system}.default;
-      osu = inputs.nix-gaming.packages.${pkgs.system}.osu-lazer-bin;
+      osu = inputs.nix-gaming.packages.${pkgs.system}.osu-lazer-tachyon-bin;
       technorino = inputs.technorino.packages.${pkgs.system}.package;
     in
     [
       chromium
       zen
-      vscodium-fhs
       (discord-canary.override {
         withOpenASAR = true;
         withVencord = true;
@@ -44,7 +45,6 @@
       helvum
       anki-bin
       virt-manager
-      qbittorrent
       imv
       rustypaste-cli
       cryptomator
@@ -63,6 +63,10 @@
       technorino
       krita
       music-discord-rpc
+      calibre
+      ficsit-cli
+      coppwr
+      (pkgs.callPackage ../../../pkgs/discord-presence-lsp { })
     ];
   programs.ssh = {
     enable = true;
@@ -146,25 +150,40 @@
         IdentityFile ~/.ssh/notohh-git
     '';
   };
-  xdg = {
-    configFile."mimeapps.list".force = true;
-    mimeApps = {
-      enable = true;
-      defaultApplications = {
-        "x-scheme-handler/discord-409416265891971072" = [ "discord-409416265891971072.desktop" ];
-        "x-scheme-handler/discord-402572971681644545" = [ "discord-402572971681644545.desktop" ];
-        "x-scheme-handler/discord-696343075731144724" = [ "discord-696343075731144724.desktop" ];
-        "x-scheme-handler/http" = [ "zen.desktop" ];
-        "x-scheme-handler/https" = [ "zen.desktop" ];
-        "x-scheme-handler/chrome" = [ "zen.desktop" ];
-        "text/html" = [ "zen.desktop" ];
-        "application/x-extension-htm" = [ "zen.desktop" ];
-        "application/x-extension-html" = [ "zen.desktop" ];
-        "application/x-extension-shtml" = [ "zen.desktop" ];
-        "application/xhtml+xml" = [ "zen.desktop" ];
-        "application/x-extension-xhtml" = [ "zen.desktop" ];
-        "application/x-extension-xht" = [ "zen.desktop" ];
-      };
+  xdg.mimeApps =
+    let
+      value =
+        let
+          zen = inputs.zen.packages.${pkgs.system}.default;
+        in
+        zen.meta.desktopFileName;
+
+      associations = builtins.listToAttrs (
+        map
+          (name: {
+            inherit name value;
+          })
+          [
+            "application/x-extension-shtml"
+            "application/x-extension-xhtml"
+            "application/x-extension-html"
+            "application/x-extension-xht"
+            "application/x-extension-htm"
+            "x-scheme-handler/unknown"
+            "x-scheme-handler/mailto"
+            "x-scheme-handler/chrome"
+            "x-scheme-handler/about"
+            "x-scheme-handler/https"
+            "x-scheme-handler/http"
+            "application/xhtml+xml"
+            "application/json"
+            "text/plain"
+            "text/html"
+          ]
+      );
+    in
+    {
+      associations.added = associations;
+      defaultApplications = associations;
     };
-  };
 }
