@@ -6,8 +6,6 @@
 {
   imports = [ (modulesPath + "/profiles/qemu-guest.nix") ];
 
-  zramSwap.enable = true;
-
   boot = {
     tmp.cleanOnBoot = true;
     loader.grub = {
@@ -35,6 +33,14 @@
       device = "/dev/disk/by-uuid/B793-1B2C";
       fsType = "vfat";
     };
+
   };
+
+  zramSwap = {
+    enable = true;
+    swapDevices = 1;
+    algorithm = "zstd";
+  };
+
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
 }

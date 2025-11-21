@@ -44,9 +44,11 @@
     };
   };
 
-  swapDevices = [
-    { device = "/dev/disk/by-uuid/e9eb4b6a-e9a1-4616-8c82-349d2f38d140"; }
-  ];
+  zramSwap = {
+    enable = true;
+    swapDevices = 1;
+    algorithm = "zstd";
+  };
 
   networking.useDHCP = lib.mkDefault true;
 

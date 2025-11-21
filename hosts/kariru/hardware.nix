@@ -39,19 +39,17 @@
       device = "192.168.1.199:/mnt/Sutoreji/media";
       fsType = "nfs";
     };
-    "/stash" = {
-      device = "192.168.1.199:/mnt/Sutoreji/stash";
-      fsType = "nfs";
-    };
     "/nas/restic" = {
       device = "192.168.1.199:/mnt/Sutoreji/nix-restic-data/kariru";
       fsType = "nfs";
     };
   };
 
-  swapDevices = [
-    { device = "/dev/disk/by-uuid/f28bad28-ae14-4aa7-85c5-47abe46bae56"; }
-  ];
+  zramSwap = {
+    enable = true;
+    swapDevices = 1;
+    algorithm = "zstd";
+  };
 
   networking.useDHCP = lib.mkDefault true;
 
