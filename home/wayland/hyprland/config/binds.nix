@@ -8,7 +8,7 @@
   wayland.windowManager.hyprland.settings = with pkgs; {
     "$mainMod" = "SUPER";
     bind = [
-      "$mainMod, Return, exec, wezterm"
+      "$mainMod, Return, exec, ghostty"
       "$mainMod, Q, killactive,"
       "$mainMod, V, togglefloating,"
       "$mainMod, F, fullscreen,"

@@ -1,30 +1,35 @@
 _: {
   wayland.windowManager.hyprland.settings = {
     windowrule = [
-      "noshadow, floating:0"
-      "float, title:^(Volume Control)$"
-      "float, title:^(Picture in picture)$"
-      "float, title:^(Friends List)$"
-      "float, title:^(Cryptomator)$"
-      "float, title:^(RuneLite)$"
-      "float, title:^(Lutris)$"
-      "float, title:^(satty)$"
-      "float, title:^(Postman)$"
-      "move 850 360, title:^(RuneLite)$"
-      # "size 800 560, title:^(RuneLite)$"
-      "size 1200 600, title:^(satty)$"
-      "idleinhibit focus, class:^(mpv)$"
-      "idleinhibit always, class:^(firefox)$, title:^(.*YouTube.*|.*Twitch.*)$"
-      "idleinhibit always, class:^(com.obsproject.Studio)$"
-      "idleinhibit always, class:^(com.moonlight_stream.Moonlight)$"
-      "idleinhibit always, class:^(steam_app_)(.*)$"
-      "immediate, class:^(steam_app_)(.*)$"
-      "immediate, class:^(cs2)$"
-      "immediate, class:^(osu!)$"
-      "noscreenshare, class:^(Signal)$"
+      # float
+      "float on, match:title ^(Volume Control)$"
+      "float on, match:title ^(Picture in picture)"
+      "float on, match:title ^(Friends List)"
+      "float on, match:title ^(Cryptomator)"
+      "float on, match:title ^(RuneLite)$"
+      "float on, match:title ^(Lutris)$"
+      "float on, match:title ^(satty)$"
+      "float on, match:title ^(Postman)$"
+
+      # idle_inhibit
+      "idle_inhibit focus, match:class ^(mpv)$"
+      "idle_inhibit always, match:class ^(firefox)$, match:title ^(.*YouTube.*|.*Twitch.*)$"
+      "idle_inhibit always, match:class ^(com.obsproject.Studio)$"
+      "idle_inhibit always, match:class ^(com.moonlight_stream.Moonlight)$"
+      "idle_inhibit always, match:class ^(steam_app_)(.*)$"
+
+      #immediate
+      "immediate on, match:class ^(steam_app_)(.*)$"
+      "immediate on, match:class ^(cs2)$"
+      "immediate on, match:class ^(osu!)$"
+
+      #misc
+      "move 850 360, match:title ^(RuneLite)$"
+      "size 1200 600, match:title ^(satty)$"
+      "no_screen_share on, match:class ^(Signal)$"
     ];
     layerrule = [
-      "blur, ^(gtk-layer-shell|walker)$"
+      "blur on, match:class ^(gtk-layer-shell|walker)$"
     ];
   };
 }
