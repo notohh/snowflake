@@ -6,7 +6,7 @@
 {
   imports = [
     ../../services
-    ../../programs/terminal/wezterm
+    ../../programs/ghostty.nix
     ../../programs/terminal/zellij
     ../../programs/media/spicetify.nix
     ../../programs/media/jellyfin-mpv-shim.nix
@@ -22,7 +22,6 @@
     pwvucontrol
     wayland
     glib
-    delfin
     anki-bin
     tutanota-desktop
     moonlight-qt
