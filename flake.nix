@@ -8,6 +8,7 @@
         ./hosts
         ./overlays
         ./modules
+        ./pkgs
         ./home/profiles
       ];
       systems = [ "x86_64-linux" ];
