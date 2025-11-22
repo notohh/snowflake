@@ -7,23 +7,20 @@ _: {
     enable = true;
     extensions = [
       # langs
-      "html"
       "toml"
       "git-firefly"
-      "latex"
-      "svelte"
       "scss"
       "nix"
       "nu"
       "gosum"
-      "scls"
       "lua"
       "mermaid"
+      "editorconfig"
+      "just"
 
       # misc
       "env"
       "discord-presence"
-      "wakatime"
 
       # themes
       "tokyo-night"
