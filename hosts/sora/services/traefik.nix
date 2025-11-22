@@ -1,6 +1,14 @@
 { config, ... }:
 {
-  sops.secrets.cloudflare-api-key = { };
+  sops.secrets = {
+    cloudflare-api-key = { };
+    traefik-oidc-id = {
+      owner = "traefik";
+    };
+    traefik-oidc-secret = {
+      owner = "traefik";
+    };
+  };
   networking.firewall.allowedTCPPorts = [
     80
     443
@@ -32,10 +40,20 @@
       };
       http = {
         middlewares = {
-          authelia = {
-            forwardauth = {
-              address = "http://100.121.201.47:9091/api/verify?rd=https://passport.notohh.dev/";
-              trustForwardHeader = true;
+          forgejo-oidc-auth = {
+            plugin = {
+              traefik-oidc-auth = {
+                Provider = {
+                  Url = "https://passport.notohh.dev";
+                  ClientId = "${config.sops.secrets.traefik-oidc-id.path}";
+                  ClientSecret = "${config.sops.secrets.traefik-oidc-secret.path}";
+                };
+                Scopes = [
+                  "openid"
+                  "profile"
+                  "email"
+                ];
+              };
             };
           };
           redirect-flake-sh = {
@@ -72,10 +90,10 @@
               entrypoints = [ "websecure" ];
               service = "api@internal";
             };
-            authelia = {
+            pocketid = {
               rule = "Host(`passport.notohh.dev`)";
               entrypoints = [ "websecure" ];
-              service = "authelia";
+              service = "pocketid";
               tls.domains = [ { main = "*.notohh.dev"; } ];
               tls.certresolver = "production";
             };
@@ -209,6 +227,7 @@
             wastebin.loadBalancer.servers = [ { url = "http://${sakuraIp}8088"; } ];
             immich-proxy.loadBalancer.servers = [ { url = "http://${sakuraIp}2284"; } ];
             copyparty.loadBalancer.servers = [ { url = "http://${sakuraIp}3210"; } ];
+            pocketid.loadBalancer.servers = [ { url = "http://${sakuraIp}1411"; } ];
 
             # tsuru
             woodpecker.loadBalancer.servers = [ { url = "http://100.82.146.40:8200"; } ];
@@ -217,9 +236,17 @@
       };
     };
     staticConfigOptions = {
-      log.level = "DEBUG";
+      log.level = "INFO";
       api.dashboard = false;
       api.insecure = false;
+      experimental = {
+        plugins = {
+          traefik-oidc-auth = {
+            moduleName = "github.com/sevensolutions/traefik-oidc-auth";
+            version = "v0.17.0";
+          };
+        };
+      };
       global = {
         checkNewVersion = false;
         sendAnonymousUsage = false;

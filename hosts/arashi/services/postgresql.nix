@@ -53,6 +53,10 @@
         name = "romm";
         ensureDBOwnership = true;
       }
+      {
+        name = "pocketid";
+        ensureDBOwnership = true;
+      }
     ];
     ensureDatabases = [
       "forgejo"
@@ -63,6 +67,7 @@
       "attic"
       "atuin"
       "romm"
+      "pocketid"
     ];
   };
   services.postgresqlBackup = {
@@ -77,6 +82,7 @@
       "miniflux"
       "atuin"
       "romm"
+      "pocketid"
     ];
     compression = "zstd";
     compressionLevel = 4;

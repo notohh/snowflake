@@ -12,5 +12,6 @@
     ./hedgedoc.nix
     ./copyparty.nix
     ./syncthing.nix
+    ./pocketid.nix
   ];
 }
