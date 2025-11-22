@@ -8,6 +8,7 @@
   nixpkgs = {
     overlays = [
       inputs.self.overlays.gale
+      inputs.self.overlays.default
       inputs.nur.overlays.default
       inputs.helix.overlays.default
       inputs.copyparty.overlays.default

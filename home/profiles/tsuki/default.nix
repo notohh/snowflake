@@ -66,7 +66,8 @@
       calibre
       ficsit-cli
       coppwr
-      (pkgs.callPackage ../../../pkgs/discord-presence-lsp { })
+      wayscriber
+      discord-presence-lsp
     ];
   programs.ssh = {
     enable = true;
