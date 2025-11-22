@@ -6,7 +6,7 @@
   ...
 }:
 rustPlatform.buildRustPackage rec {
-  name = "wayscriber";
+  pname = "wayscriber";
   version = "v0.7.0";
   src = fetchFromGitHub {
     owner = "devmobasa";
