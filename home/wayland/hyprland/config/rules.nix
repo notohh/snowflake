@@ -29,7 +29,8 @@ _: {
       "no_screen_share on, match:class ^(Signal)$"
     ];
     layerrule = [
-      "blur on, match:class ^(gtk-layer-shell|walker)$"
+      "blur on, match:namespace ^(gtk-layer-shell|walker)$"
+      "blur off, match:namespace ^(wayscriber|selection|satty)$"
     ];
   };
 }

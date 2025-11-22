@@ -16,6 +16,7 @@
       "$mainMod, P, pseudo,"
       "$mainMod, J, togglesplit,"
       "$mainMod, C, exec, ${lib.getExe inputs.hyprpicker.packages.${system}.default} | wl-copy"
+      "$mainMod, Tab, exec, wayscriber -a"
       "$mainMod, left, movefocus, l"
       "$mainMod, right, movefocus, r"
       "$mainMod, up, movefocus, u"
