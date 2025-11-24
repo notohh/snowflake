@@ -11,9 +11,6 @@
     copyparty-catsh-passwd = {
       owner = "copyparty";
     };
-    copyparty-nam-passwd = {
-      owner = "copyparty";
-    };
   };
   imports = [
     inputs.copyparty.nixosModules.default
@@ -31,7 +28,7 @@
       xff-src = "100.104.42.96";
       rproxy = 1;
       shr = "/shared";
-      shr-adm = "suki, notohh, catsh";
+      shr-adm = "notohh, catsh";
       theme = 2;
     };
     accounts = {
@@ -40,9 +37,6 @@
       };
       catsh = {
         passwordFile = "/run/secrets/copyparty-catsh-passwd";
-      };
-      nam = {
-        passwordFile = "/run/secrets/copyparty-nam-passwd";
       };
     };
     volumes = {
