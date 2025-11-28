@@ -15,7 +15,7 @@
         "dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
         "music-discord-rpc"
         "jellyfin-rpc"
-        "${pkgs.polkit_gnome}/libexec/polkit-gnome-authentication-agent-1"
+        "${pkgs.hyprpolkitagent}/libexec/hyprpolkitagent"
       ];
       input = {
         kb_layout = "us";
