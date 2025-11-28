@@ -1,10 +1,13 @@
-_: {
+{ pkgs, ... }:
+{
   imports = [
     ./settings.nix
     ./keymap.nix
   ];
+  home.packages = [ pkgs.zed-discord-presence ];
   programs.zed-editor = {
     enable = true;
+    mutableUserSettings = false;
     extensions = [
       # langs
       "toml"
@@ -23,7 +26,7 @@ _: {
       "discord-presence"
 
       # themes
-      "tokyo-night"
+      "one-dark-pro-enhanced"
       "material-icon-theme"
     ];
   };

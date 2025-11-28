@@ -5,7 +5,7 @@
     enable = true;
     autoEnable = false;
     polarity = "dark";
-    base16Scheme = "${pkgs.base16-schemes}/share/themes/tokyo-night-dark.yaml";
+    base16Scheme = "${pkgs.base16-schemes}/share/themes/onedark-dark.yaml";
     fonts = {
       monospace = {
         name = "Maple Mono NF";
@@ -47,6 +47,8 @@
       yazi.enable = true;
       zellij.enable = true;
       bat.enable = true;
+      ghostty.enable = false;
+      starship.enable = true;
     };
   };
 }

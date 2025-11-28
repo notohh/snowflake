@@ -5,12 +5,12 @@
     ui_font_family = "Maple Mono NF";
     buffer_font_size = 16;
     buffer_font_family = "Maple Mono NF";
-    relative_line_numbers = true;
+    relative_line_numbers = "enabled";
     hour_format = "hour24";
-    shell = "nu";
+    load_direnv = "shell_hook";
     theme = {
-      dark = "Tokyo Night";
-      light = "Tokyo Night";
+      dark = "One Dark Pro Night Flat";
+      light = "One Dark Pro Night Flat";
     };
     icon_theme = "Material Icon Theme";
     tabs = {
@@ -18,21 +18,23 @@
       git_status = true;
     };
     indent_guides = {
-      enable = true;
+      enabled = true;
     };
     inlay_hints = {
-      enable = true;
+      enabled = true;
     };
     telemetry = {
       diagnostics = false;
       metrics = false;
     };
-    assistant = {
+    agent = {
       default_model = {
         provider = "copilot_chat";
         model = "gpt-4o";
       };
-      version = "2";
+    };
+    terminal = {
+      shell = "system";
     };
     diagnostics = {
       inline = {
