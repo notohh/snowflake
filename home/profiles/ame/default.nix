@@ -26,8 +26,8 @@
     moonlight-qt
     signal-desktop
     bolt-launcher
-    inputs.zen.packages.${pkgs.system}.default
-    inputs.technorino.packages.${pkgs.system}.package
+    inputs.zen.packages.${pkgs.stdenv.hostPlatform.system}.default
+    inputs.technorino.packages.${pkgs.stdenv.hostPlatform.system}.package
   ];
   programs.ssh = {
     enable = true;

@@ -26,10 +26,10 @@
   home.packages =
     with pkgs;
     let
-      inherit (inputs.prismlauncher.packages.${pkgs.system}) prismlauncher;
-      zen = inputs.zen.packages.${pkgs.system}.default;
-      osu = inputs.nix-gaming.packages.${pkgs.system}.osu-lazer-tachyon-bin;
-      technorino = inputs.technorino.packages.${pkgs.system}.package;
+      inherit (inputs.prismlauncher.packages.${pkgs.stdenv.hostPlatform.system}) prismlauncher;
+      zen = inputs.zen.packages.${pkgs.stdenv.hostPlatform.system}.default;
+      osu = inputs.nix-gaming.packages.${pkgs.stdenv.hostPlatform.system}.osu-lazer-tachyon-bin;
+      technorino = inputs.technorino.packages.${pkgs.stdenv.hostPlatform.system}.package;
     in
     [
       chromium
@@ -153,7 +153,7 @@
     let
       value =
         let
-          zen = inputs.zen.packages.${pkgs.system}.default;
+          zen = inputs.zen.packages.${pkgs.stdenv.hostPlatform.system}.default;
         in
         zen.meta.desktopFileName;
 

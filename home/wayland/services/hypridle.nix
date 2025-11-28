@@ -8,7 +8,7 @@
 {
   services.hypridle = {
     enable = true;
-    package = inputs.hypridle.packages.${pkgs.system}.default;
+    package = inputs.hypridle.packages.${pkgs.stdenv.hostPlatform.system}.default;
     settings = {
       general = {
         ignore_dbus_inhibit = false;
@@ -22,7 +22,9 @@
         }
         {
           timeout = 450;
-          on-timeout = "${inputs.hyprland.packages.${pkgs.system}.hyprland}/bin/hyprctl dispatch dpms off";
+          on-timeout = "${
+            inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland
+          }/bin/hyprctl dispatch dpms off";
         }
       ];
     };
