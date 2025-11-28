@@ -104,6 +104,7 @@
               *.discord.com
               *.last.fm
               *.spotify.com
+              *.bunkr.ru
             '';
           in
           {
