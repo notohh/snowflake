@@ -34,6 +34,8 @@ _: {
     };
   };
 
+  hardware.bluetooth.enable = true;
+
   system.stateVersion = "23.05";
   security.rtkit.enable = true;
 }
