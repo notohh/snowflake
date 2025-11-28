@@ -9,7 +9,6 @@
     ../../programs/ghostty.nix
     ../../programs/terminal/zellij
     ../../programs/media/spicetify.nix
-    ../../programs/media/jellyfin-mpv-shim.nix
     ../../programs/media/mpv.nix
     ../../programs/media/easyeffects.nix
   ];
