@@ -6,7 +6,6 @@
 {
   imports = [
     inputs.hyprland.nixosModules.default
-    inputs.nix-gaming.nixosModules.pipewireLowLatency
     ./hardware.nix
     ./services
     ./networking.nix
@@ -53,11 +52,6 @@
       alsa.support32Bit = true;
       pulse.enable = true;
       wireplumber.enable = true;
-      lowLatency = {
-        enable = true;
-        quantum = 64;
-        rate = 48000;
-      };
     };
     xserver = {
       enable = true;
@@ -77,7 +71,15 @@
   };
   programs = {
     dconf.enable = true;
-    sniffnet.enable = true;
+    corectrl.enable = true;
+    nix-ld = {
+      # for zed patching
+      enable = true;
+      libraries = with pkgs; [
+        zlib
+        openssl
+      ];
+    };
     hyprland = {
       enable = true;
       withUWSM = false;
