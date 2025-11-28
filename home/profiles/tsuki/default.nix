@@ -7,7 +7,7 @@
   imports = [
     ./stylix.nix
     ../../services
-    ../../programs/walker.nix
+    ../../programs/vicinae.nix
     ../../programs/openvr.nix
     ../../programs/ghostty.nix
     ../../programs/terminal/zellij
@@ -17,9 +17,7 @@
     ../../programs/media/spicetify.nix
     ../../programs/media/zathura.nix
     ../../programs/media/mpv.nix
-    ../../programs/media/jellyfin-mpv-shim.nix
     ../../programs/media/lutris.nix
-    ../../programs/media/easyeffects.nix
     ../../wayland/hyprland
     ../../wayland/services/hypridle.nix
     ../../wayland/services/hyprpaper.nix
@@ -36,6 +34,7 @@
     [
       chromium
       zen
+      vesktop
       (discord-canary.override {
         withOpenASAR = true;
         withVencord = true;
@@ -67,7 +66,6 @@
       ficsit-cli
       coppwr
       wayscriber
-      discord-presence-lsp
     ];
   programs.ssh = {
     enable = true;
@@ -184,6 +182,7 @@
       );
     in
     {
+      enable = true;
       associations.added = associations;
       defaultApplications = associations;
     };

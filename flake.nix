@@ -77,8 +77,8 @@
     nix-flatpak.url = "github:gmodena/nix-flatpak";
     copyparty.url = "github:9001/copyparty";
     technorino.url = "git+https://github.com/2547techno/technorino";
-    walker.url = "github:abenz1267/walker";
     stylix.url = "github:nix-community/stylix";
-    millennium.url = "git+https://github.com/SteamClientHomebrew/Millennium?rev=34823f7bac7f5c89dac95a60be3d73af631d4494";
+    millennium.url = "git+https://github.com/SteamClientHomebrew/Millennium";
+    vicinae.url = "github:vicinaehq/vicinae";
   };
 }
