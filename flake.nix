@@ -28,6 +28,8 @@
               just
               yaml-language-server
               lua-language-server
+              stylua
+              kdePackages.qtdeclarative
             ];
           };
           formatter = pkgs.nixfmt;
@@ -61,12 +63,23 @@
       url = "github:0xc000022070/zen-browser-flake/beta";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    technorino = {
+      url = "git+https://github.com/2547techno/technorino";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    helix = {
+      url = "github:helix-editor/helix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    nix4nvchad = {
+      url = "github:nix-community/nix4nvchad";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     deploy-rs.url = "github:serokell/deploy-rs";
     sops-nix.url = "github:Mic92/sops-nix";
     nix-gaming.url = "github:fufexan/nix-gaming";
     nur.url = "github:nix-community/NUR";
     yazi.url = "github:sxyazi/yazi";
-    helix.url = "github:helix-editor/helix";
     pre-commit-hooks.url = "github:cachix/pre-commit-hooks.nix";
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
     flake-parts.url = "github:hercules-ci/flake-parts";
@@ -76,9 +89,9 @@
     nix-topology.url = "github:oddlama/nix-topology";
     nix-flatpak.url = "github:gmodena/nix-flatpak";
     copyparty.url = "github:9001/copyparty";
-    technorino.url = "git+https://github.com/2547techno/technorino";
     stylix.url = "github:nix-community/stylix";
     millennium.url = "git+https://github.com/SteamClientHomebrew/Millennium";
     vicinae.url = "github:vicinaehq/vicinae";
+    awakened-poe-flake.url = "git+https://git.flake.sh/notohh/awakened-poe-flake";
   };
 }
