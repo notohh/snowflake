@@ -5,6 +5,7 @@
     enable = true;
     autoEnable = false;
     polarity = "dark";
+    enableReleaseChecks = false;
     base16Scheme = "${pkgs.base16-schemes}/share/themes/onedark-dark.yaml";
     fonts = {
       monospace = {

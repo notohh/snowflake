@@ -9,10 +9,10 @@
     ../../services
     ../../programs/vicinae.nix
     ../../programs/openvr.nix
-    ../../programs/ghostty.nix
+    ../../programs/editors/nvchad
     ../../programs/terminal/zellij
+    ../../programs/terminal/ghostty.nix
     ../../programs/terminal/television
-    ../../programs/editors/zed
     ../../programs/media/cava.nix
     ../../programs/media/spicetify.nix
     ../../programs/media/zathura.nix
@@ -26,15 +26,17 @@
   home.packages =
     with pkgs;
     let
-      inherit (inputs.prismlauncher.packages.${pkgs.stdenv.hostPlatform.system}) prismlauncher;
-      zen = inputs.zen.packages.${pkgs.stdenv.hostPlatform.system}.default;
-      osu = inputs.nix-gaming.packages.${pkgs.stdenv.hostPlatform.system}.osu-lazer-tachyon-bin;
-      technorino = inputs.technorino.packages.${pkgs.stdenv.hostPlatform.system}.package;
+      inherit (pkgs.stdenv.hostPlatform) system;
+      inherit (inputs.prismlauncher.packages.${system}) prismlauncher;
+      inherit (inputs.awakened-poe-flake.packages.${system}) awakened-poe-trade;
+      inherit (inputs.awakened-poe-flake.packages.${system}) exiled-exchange-2;
+      zen = inputs.zen.packages.${system}.default;
+      osu = inputs.nix-gaming.packages.${system}.osu-lazer-tachyon-bin;
+      technorino = inputs.technorino.packages.${system}.package;
     in
     [
       chromium
       zen
-      vesktop
       (discord-canary.override {
         withOpenASAR = true;
         withVencord = true;
@@ -53,7 +55,7 @@
       losslesscut-bin
       uxplay
       postman
-      gale
+      # gale
       bolt-launcher
       tutanota-desktop
       obsidian
@@ -62,10 +64,11 @@
       technorino
       krita
       music-discord-rpc
-      calibre
-      ficsit-cli
       coppwr
       wayscriber
+      rusty-path-of-building
+      awakened-poe-trade
+      exiled-exchange-2
     ];
   programs.ssh = {
     enable = true;
