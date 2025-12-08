@@ -15,7 +15,7 @@
     ./programs/terminal/starship.nix
     ./programs/terminal/zoxide.nix
     ./programs/terminal/direnv.nix
-    ./programs/git.nix
+    ./programs/terminal/git.nix
     ./programs/tealdeer.nix
   ];
 

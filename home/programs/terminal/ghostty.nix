@@ -4,7 +4,7 @@ _: {
     settings = {
       theme = "Atom One Dark";
       font-family = "Maple Mono NF";
-      background-opacity = 0.4;
+      background-opacity = 1;
       window-padding-x = 16;
       window-padding-y = 16;
       window-padding-balance = true;
@@ -12,6 +12,7 @@ _: {
       clipboard-read = "allow";
       clipboard-write = "allow";
       clipboard-trim-trailing-spaces = true;
+      background = "#1E222A";
     };
   };
 }
