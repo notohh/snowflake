@@ -99,10 +99,10 @@
               tls.domains = [ { main = "*.${fqdn}"; } ];
               tls.certresolver = "production";
             };
-            navidrome = {
-              rule = "Host(`navidrome.${fqdn}`)";
+            romm = {
+              rule = "Host(`romm.${fqdn}`)";
               entrypoints = [ "websecure" ];
-              service = "navidrome";
+              service = "romm";
               tls.domains = [ { main = "*.${fqdn}"; } ];
               tls.certresolver = "production";
             };
@@ -120,7 +120,7 @@
             wallos.loadBalancer.servers = [ { url = "http://localhost:8282"; } ];
             hass.loadBalancer.servers = [ { url = "http://localhost:8123"; } ];
             immich.loadBalancer.servers = [ { url = "http://localhost:2283"; } ];
-            navidrome.loadBalancer.servers = [ { url = "http://localhost:4533"; } ];
+            romm.loadBalancer.servers = [ { url = "http://localhost:8080"; } ];
             # kariru
             sonarr.loadBalancer.servers = [ { url = "http://${kariruHost}8989"; } ];
             radarr.loadBalancer.servers = [ { url = "http://${kariruHost}7878"; } ];

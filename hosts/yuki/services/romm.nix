@@ -9,7 +9,7 @@
     in
     {
       romm = {
-        image = "rommapp/romm@sha256:1895c339b3c7ca62d52f809f5e4c747d78fc8291ea5ee88b3b57df84acf33449";
+        image = "rommapp/romm@sha256:dc3ecc73445d6258ceaea621881544dd6aa98dd5853f8f39dac967e3a70fcb78"; # 4.5.0-beta.3
         ports = [ "8080:8080" ];
         environmentFiles = [ config.sops.secrets.romm-env.path ];
         environment = {
