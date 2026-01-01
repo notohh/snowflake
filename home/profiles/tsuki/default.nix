@@ -8,8 +8,6 @@
     ./stylix.nix
     ../../services
     ../../programs/vicinae.nix
-    ../../programs/openvr.nix
-    ../../programs/editors/nvchad
     ../../programs/terminal/zellij
     ../../programs/terminal/ghostty.nix
     ../../programs/terminal/television
@@ -19,8 +17,6 @@
     ../../programs/media/mpv.nix
     ../../programs/media/lutris.nix
     ../../wayland/hyprland
-    ../../wayland/services/hypridle.nix
-    ../../wayland/services/hyprpaper.nix
     ../../wayland/programs/hyprlock.nix
   ];
   home.packages =
@@ -30,6 +26,7 @@
       inherit (inputs.prismlauncher.packages.${system}) prismlauncher;
       inherit (inputs.awakened-poe-flake.packages.${system}) awakened-poe-trade;
       inherit (inputs.awakened-poe-flake.packages.${system}) exiled-exchange-2;
+      inherit (inputs.awww.packages.${system}) awww;
       zen = inputs.zen.packages.${system}.default;
       osu = inputs.nix-gaming.packages.${system}.osu-lazer-tachyon-bin;
       technorino = inputs.technorino.packages.${system}.package;
@@ -37,28 +34,20 @@
     [
       chromium
       zen
-      (discord-canary.override {
-        withOpenASAR = true;
-        withVencord = true;
-      })
+      vesktop
       signal-desktop
       pwvucontrol
-      helvum
       anki-bin
       virt-manager
       imv
       rustypaste-cli
       cryptomator
       moonlight-qt
-      tokei
       jellyfin-rpc
       losslesscut-bin
       uxplay
-      postman
       # gale
       bolt-launcher
-      tutanota-desktop
-      obsidian
       osu
       prismlauncher
       technorino
@@ -69,6 +58,8 @@
       rusty-path-of-building
       awakened-poe-trade
       exiled-exchange-2
+      awww
+      wlx-overlay-s
     ];
   programs.ssh = {
     enable = true;
