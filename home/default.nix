@@ -28,7 +28,7 @@
       eza
       eva
       fd
-      dust
+      dua
       gnupg
       ripgrep
       lazydocker

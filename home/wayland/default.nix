@@ -3,7 +3,6 @@
   imports = [ ./services/ly.nix ];
   environment = {
     systemPackages = with pkgs; [
-      wayland
       glib
       wl-clipboard-rs
     ];
