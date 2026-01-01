@@ -11,7 +11,6 @@
   ];
 
   boot = {
-    kernelPackages = lib.mkForce pkgs.linuxPackages_xanmod_latest;
     kernelModules = [ "kvm-amd" ];
     consoleLogLevel = 3;
     kernelParams = [

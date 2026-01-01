@@ -16,6 +16,7 @@
       defaultRuntime = true;
       openFirewall = true;
       autoStart = true;
+      steam.importOXRRuntimes = true;
       monadoEnvironment = {
         U_PACING_COMP_MIN_TIME_MS = "8";
         XRT_COMPOSITOR_COMPUTE = "1";
@@ -42,9 +43,9 @@
   programs = {
     steam = {
       enable = true;
-      package = pkgs.steam-millennium;
       platformOptimizations.enable = true;
       gamescopeSession.enable = true;
+      protontricks.enable = true;
       extraCompatPackages = [
         pkgs.proton-ge-bin
       ];

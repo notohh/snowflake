@@ -34,7 +34,6 @@
         "io.github.Soundux"
         "com.github.tchx84.Flatseal"
         "org.vinegarhq.Sober"
-        "dev.goats.xivlauncher"
       ];
     };
     avahi = {
@@ -71,7 +70,6 @@
   };
   programs = {
     dconf.enable = true;
-    corectrl.enable = true;
     nix-ld = {
       # for zed patching
       enable = true;
