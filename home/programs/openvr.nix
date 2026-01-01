@@ -1,14 +1,13 @@
 {
   pkgs,
   config,
-  lib,
   ...
 }:
 {
   xdg.configFile."openxr/1/active_runtime.json".source =
     "${pkgs.wivrn}/share/openxr/1/openxr_wivrn.json";
 
-  xdg.configFile."openvr/openvrpaths.vrpath".text = with pkgs; ''
+  xdg.configFile."openvr/openvrpaths.vrpath".text = ''
     {
       "config" :
       [
@@ -22,7 +21,7 @@
       ],
       "runtime" :
       [
-        "${lib.getExe xrizer}"
+        "${pkgs.opencomposite}/lib/opencomposite"
       ],
       "version" : 1
     }

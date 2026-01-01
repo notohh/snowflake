@@ -27,11 +27,6 @@ alias receive = croc --relay "100.104.42.96:9009"
 alias ps = procs
 alias ts = tspin
 alias generate-topology = nix build ".#topology.x86_64-linux.config.output"
-alias pob2 = job spawn {rusty-path-of-building poe2}
-alias pob1 = job spawn {rusty-path-of-building poe1}
-alias apt = job spawn {awakened-poe-trade --sandbox}
-alias ee2 = job spawn {exiled-exchange-2}
-
 nitch
 
 $env.config = {

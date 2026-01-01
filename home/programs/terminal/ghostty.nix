@@ -4,7 +4,7 @@ _: {
     settings = {
       theme = "Atom One Dark";
       font-family = "Maple Mono NF";
-      background-opacity = 1;
+      background-opacity = 0.4;
       window-padding-x = 16;
       window-padding-y = 16;
       window-padding-balance = true;
