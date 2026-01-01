@@ -150,14 +150,12 @@
             "prowlarr.internal.flake.sh" = "${yukiIp}";
             "stash.internal.flake.sh" = "${yukiIp}";
             "immich.internal.flake.sh" = "${yukiIp}";
+            "romm.internal.flake.sh" = "${yukiIp}";
 
             # misc
 
             "wallos.internal.flake.sh" = "${yukiIp}";
             "synology.internal.flake.sh" = "192.168.1.71";
-            "paperless.internal.flake.sh" = "${yukiIp}";
-            "hoarder.internal.flake.sh" = "${yukiIp}";
-            "ganymede.internal.flake.sh" = "100.121.201.47";
           };
       };
       redis = {
