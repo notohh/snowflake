@@ -29,7 +29,6 @@
               yaml-language-server
               lua-language-server
               stylua
-              kdePackages.qtdeclarative
             ];
           };
           formatter = pkgs.nixfmt;
@@ -48,11 +47,10 @@
     hypridle.url = "github:hyprwm/hypridle";
     hyprlock.url = "github:hyprwm/hyprlock";
     hyprpicker.url = "github:hyprwm/hyprpicker";
-    hyprpaper.url = "github:hyprwm/hyprpaper";
 
     ### everything else
     home-manager = {
-      url = "github:nix-community/home-manager";
+      url = "github:nix-community/home-manager/master";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     nix-index-database = {
@@ -71,10 +69,6 @@
       url = "github:helix-editor/helix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    nix4nvchad = {
-      url = "github:nix-community/nix4nvchad";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
     deploy-rs.url = "github:serokell/deploy-rs";
     sops-nix.url = "github:Mic92/sops-nix";
     nix-gaming.url = "github:fufexan/nix-gaming";
@@ -90,8 +84,8 @@
     nix-flatpak.url = "github:gmodena/nix-flatpak";
     copyparty.url = "github:9001/copyparty";
     stylix.url = "github:nix-community/stylix";
-    millennium.url = "git+https://github.com/SteamClientHomebrew/Millennium";
     vicinae.url = "github:vicinaehq/vicinae";
     awakened-poe-flake.url = "git+https://git.flake.sh/notohh/awakened-poe-flake";
+    awww.url = "git+https://codeberg.org/LGFae/awww";
   };
 }
