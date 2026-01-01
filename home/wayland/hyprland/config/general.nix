@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ inputs, pkgs, ... }:
 {
   wayland.windowManager.hyprland = {
     settings = {
@@ -8,15 +8,25 @@
         "DP-2,1920x1080@144, 1400x0, auto" # top
         "DP-1,2560x1440@144, 1080x1080, auto" # middle
       ];
-      exec-once = [
-        "hyprpaper"
-        "chatterino"
-        "DiscordCanary"
-        "dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
-        "music-discord-rpc"
-        "jellyfin-rpc"
-        "${pkgs.hyprpolkitagent}/libexec/hyprpolkitagent"
-      ];
+      exec-once =
+        let
+          inherit (pkgs.stdenv.hostPlatform) system;
+          inherit (inputs.awww.packages.${system}) awww;
+          wpDir = "/home/notoh/dev/assets/wallpapers/";
+        in
+        [
+
+          "chatterino"
+          "vesktop"
+          "dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
+          "music-discord-rpc"
+          "jellyfin-rpc"
+          "${pkgs.hyprpolkitagent}/libexec/hyprpolkitagent"
+          "${awww}/bin/awww-daemon"
+          "${awww}/bin/awww img -o DP-1,DP-2 ${wpDir}mahou/Mahou.Tsukai.no.Yoru.full.3538207.jpg --transition-type center --transition-fps 144"
+          "${awww}/bin/awww img -o DP-3,HDMI-A-1 ${wpDir}mahou/Kuonji.Alice.1024.4265428.webp --transition-type center --transition-fps 144"
+          "vicinae server"
+        ];
       input = {
         kb_layout = "us";
         follow_mouse = 1;

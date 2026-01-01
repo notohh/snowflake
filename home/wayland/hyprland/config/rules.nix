@@ -17,11 +17,9 @@ _: {
       "idle_inhibit always, match:class ^(firefox)$, match:title ^(.*YouTube.*|.*Twitch.*)$"
       "idle_inhibit always, match:class ^(com.obsproject.Studio)$"
       "idle_inhibit always, match:class ^(com.moonlight_stream.Moonlight)$"
-      "idle_inhibit always, match:class ^(steam_app_)(.*)$"
 
       # immediate
 
-      "immediate on, match:class ^(steam_app_)(.*)$"
       "immediate on, match:class ^(cs2)$"
       "immediate on, match:class ^(osu!)$"
 
@@ -30,6 +28,12 @@ _: {
       "move 850 360, match:title ^(RuneLite)$"
       "size 1200 600, match:title ^(satty)$"
       "no_screen_share on, match:class ^(Signal)"
+
+      # steam
+      "tag +steamapps, match:class ^(steam_app_)(.*)$"
+      "immediate on, match:tag steamapps"
+      "monitor DP-1, match:tag steamapps"
+      "idle_inhibit always, match:tag steamapps"
 
       # poe
 
@@ -50,6 +54,11 @@ _: {
       "pin on, match:tag apt"
       "render_unfocused on, match:tag apt"
       "size 100% 100%, match:tag apt"
+
+      # factorio
+      "tag +factorio match:class ^(factorio)$"
+      "fullscreen on, match:tag factorio"
+      "monitor DP-1, match:tag factorio"
     ];
     layerrule = [
       "blur on, match:namespace ^(gtk-layer-shell)$"
