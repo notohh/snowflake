@@ -18,7 +18,7 @@
       "splash"
       "preempt=full"
       "threadirqs"
-      "mitigations=off"
+      "mitigations=auto"
       "boot.shell_on_fail"
       "loglevel=3"
       "rd.systemd.show_status=false"
