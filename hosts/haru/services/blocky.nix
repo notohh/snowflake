@@ -105,6 +105,8 @@
               *.last.fm
               *.spotify.com
               *.bunkr.ru
+              *.gofile.io
+              spade.twitch.tv
             '';
           in
           {
