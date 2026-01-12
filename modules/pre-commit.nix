@@ -10,7 +10,7 @@
       hooks = {
         stylua.enable = true;
         statix.enable = true;
-        nixfmt-rfc-style.enable = true;
+        nixfmt.enable = true;
         flake-checker.enable = true;
         deadnix.enable = true;
         prettier = {
