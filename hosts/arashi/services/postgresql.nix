@@ -57,6 +57,10 @@
         name = "pocketid";
         ensureDBOwnership = true;
       }
+      {
+        name = "koito";
+        ensureDBOwnership = true;
+      }
     ];
     ensureDatabases = [
       "forgejo"
@@ -68,6 +72,7 @@
       "atuin"
       "romm"
       "pocketid"
+      "koito"
     ];
   };
   services.postgresqlBackup = {
@@ -83,6 +88,7 @@
       "atuin"
       "romm"
       "pocketid"
+      "koito"
     ];
     compression = "zstd";
     compressionLevel = 4;

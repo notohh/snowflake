@@ -106,6 +106,20 @@
               tls.domains = [ { main = "*.${fqdn}"; } ];
               tls.certresolver = "production";
             };
+            koito = {
+              rule = "Host(`fm.${fqdn}`)";
+              entrypoints = [ "websecure" ];
+              service = "koito";
+              tls.domains = [ { main = "*.${fqdn}"; } ];
+              tls.certresolver = "production";
+            };
+            multiscrobbler = {
+              rule = "Host(`scrobble.${fqdn}`)";
+              entrypoints = [ "websecure" ];
+              service = "multiscrobbler";
+              tls.domains = [ { main = "*.${fqdn}"; } ];
+              tls.certresolver = "production";
+            };
           };
         services =
           let
@@ -121,6 +135,8 @@
             hass.loadBalancer.servers = [ { url = "http://localhost:8123"; } ];
             immich.loadBalancer.servers = [ { url = "http://localhost:2283"; } ];
             romm.loadBalancer.servers = [ { url = "http://localhost:8080"; } ];
+            koito.loadBalancer.servers = [ { url = "http://localhost:4110"; } ];
+            multiscrobbler.loadBalancer.servers = [ { url = "http://localhost:9078"; } ];
             # kariru
             sonarr.loadBalancer.servers = [ { url = "http://${kariruHost}8989"; } ];
             radarr.loadBalancer.servers = [ { url = "http://${kariruHost}7878"; } ];

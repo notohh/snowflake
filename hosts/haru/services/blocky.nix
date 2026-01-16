@@ -107,6 +107,7 @@
               *.bunkr.ru
               *.gofile.io
               spade.twitch.tv
+              pixeldrain.com
             '';
           in
           {
@@ -153,6 +154,8 @@
             "stash.internal.flake.sh" = "${yukiIp}";
             "immich.internal.flake.sh" = "${yukiIp}";
             "romm.internal.flake.sh" = "${yukiIp}";
+            "fm.internal.flake.sh" = "${yukiIp}";
+            "scrobble.internal.flake.sh" = "${yukiIp}";
 
             # misc
 

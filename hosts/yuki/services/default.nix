@@ -10,5 +10,7 @@ _: {
     ./glance.nix
     ./romm.nix
     ./stash.nix
+    ./koito.nix
+    ./multiscrobbler.nix
   ];
 }
