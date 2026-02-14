@@ -153,9 +153,6 @@
             "prowlarr.internal.flake.sh" = "${yukiIp}";
             "stash.internal.flake.sh" = "${yukiIp}";
             "immich.internal.flake.sh" = "${yukiIp}";
-            "romm.internal.flake.sh" = "${yukiIp}";
-            "fm.internal.flake.sh" = "${yukiIp}";
-            "scrobble.internal.flake.sh" = "${yukiIp}";
 
             # misc
 

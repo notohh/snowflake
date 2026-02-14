@@ -99,27 +99,6 @@
               tls.domains = [ { main = "*.${fqdn}"; } ];
               tls.certresolver = "production";
             };
-            romm = {
-              rule = "Host(`romm.${fqdn}`)";
-              entrypoints = [ "websecure" ];
-              service = "romm";
-              tls.domains = [ { main = "*.${fqdn}"; } ];
-              tls.certresolver = "production";
-            };
-            koito = {
-              rule = "Host(`fm.${fqdn}`)";
-              entrypoints = [ "websecure" ];
-              service = "koito";
-              tls.domains = [ { main = "*.${fqdn}"; } ];
-              tls.certresolver = "production";
-            };
-            multiscrobbler = {
-              rule = "Host(`scrobble.${fqdn}`)";
-              entrypoints = [ "websecure" ];
-              service = "multiscrobbler";
-              tls.domains = [ { main = "*.${fqdn}"; } ];
-              tls.certresolver = "production";
-            };
           };
         services =
           let
