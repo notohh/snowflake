@@ -27,7 +27,10 @@
       enable = true;
       openFirewall = true;
     };
-    sabnzbd.enable = true;
+    sabnzbd = {
+      enable = true;
+      allowConfigWrite = true;
+    };
   };
 
   virtualisation.oci-containers.containers = {

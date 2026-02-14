@@ -15,7 +15,7 @@
         paths = [
           "/var/lib/radarr"
           "/var/lib/sonarr"
-          "/var/lib/whisparr"
+          "/var/lib/sabnzbd"
           "/var/lib/private/prowlarr"
         ];
         pruneOpts = [

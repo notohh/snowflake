@@ -10,9 +10,14 @@
         "8888:8888/tcp" # HTTP proxy
         "8388:8388/tcp" # Shadowsocks
         "8388:8388/udp" # Shadowsocks
-        "8080:8080" # qb
-        "6881:6881" # qb
-        "6881:6881/udp" # qb
+
+        # qb
+        "8080:8080"
+        "6881:6881"
+        "6881:6881/udp"
+
+        # slskd
+        "5030:5030"
       ];
       volumes = [ "/srv/gluetun:/tmp/gluetun" ];
       environmentFiles = [ config.sops.secrets.gluetun.path ];
@@ -34,6 +39,19 @@
         "/home/notoh/qbittorrent/config:/config"
         "/media/downloads:/downloads"
         "/media/incomplete-downloads:/incomplete-downloads"
+      ];
+      extraOptions = [ "--network=container:gluetun" ];
+    };
+    slskd = {
+      image = "slskd/slskd@sha256:bcf9820dab68e21d2bba8ebb1ffd583d71fcba542a50a1e998119f69b7b498fe"; # v0.24.3
+      dependsOn = [ "gluetun" ];
+      environment = {
+        SLSKD_REMOTE_CONFIGURATION = "true";
+      };
+      volumes = [
+        "/var/lib/slskd:/app"
+        "/media/downloads/slskd:/app/downloads"
+        "/media/incomplete-downloads/slskd:/app/incomplete"
       ];
       extraOptions = [ "--network=container:gluetun" ];
     };
