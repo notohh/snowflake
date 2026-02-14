@@ -32,9 +32,9 @@
       technorino = inputs.technorino.packages.${system}.package;
     in
     [
+      discord-canary
       chromium
       zen
-      vesktop
       signal-desktop
       pwvucontrol
       anki-bin
@@ -46,7 +46,7 @@
       jellyfin-rpc
       losslesscut-bin
       uxplay
-      # gale
+      gale
       bolt-launcher
       osu
       prismlauncher
@@ -59,7 +59,9 @@
       awakened-poe-trade
       exiled-exchange-2
       awww
-      wlx-overlay-s
+      wayvr
+      fladder
+      mumble
     ];
   programs.ssh = {
     enable = true;
@@ -81,22 +83,27 @@
         Hostname 100.121.201.47
         User notoh
         IdentityFile ~/.ssh/sakura
+        SetEnv TERM=xterm
       Host kariru
         Hostname 100.126.229.95
         User notoh
         IdentityFile ~/.ssh/kariru
+        SetEnv TERM=xterm
       Host yuki
         Hostname 100.108.113.89
         User notoh
         IdentityFile ~/.ssh/yuki
+        SetEnv TERM=xterm
       Host arashi
         Hostname 100.94.214.100
         User notoh
         IdentityFile ~/.ssh/arashi
+        SetEnv TERM=xterm
       Host sora
         Hostname 100.104.42.96
         User notoh
         IdentityFile ~/.ssh/sora
+        SetEnv TERM=xterm
       Host daphbot
         Hostname 100.109.118.139
         User root
@@ -128,10 +135,10 @@
         Hostname 192.168.1.199
         User root
         IdentityFile ~/.ssh/truenas
-      Host gemu
-        Hostname 100.93.189.27
-        User notohh
-        IdentityFile ~/.ssh/gemu
+      Host fishnet
+        Hostname 192.168.1.215
+        User notoh
+        IdentityFile ~/.ssh/fishnet
       Host git.flake.sh
         Hostname git.flake.sh
         User notohh
