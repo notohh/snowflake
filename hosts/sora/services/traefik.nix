@@ -141,13 +141,6 @@
               tls.domains = [ { main = "*.${pqdn}"; } ];
               tls.certresolver = "production";
             };
-            hedgedoc = {
-              rule = "Host(`scratch.${pqdn}`)";
-              entrypoints = [ "websecure" ];
-              service = "hedgedoc";
-              tls.domains = [ { main = "*.${pqdn}"; } ];
-              tls.certresolver = "production";
-            };
             vaultwarden = {
               rule = "Host(`vault.${pqdn}`)";
               entrypoints = [ "websecure" ];
@@ -169,24 +162,10 @@
               tls.domains = [ { main = "*.${pqdn}"; } ];
               tls.certresolver = "production";
             };
-            woodpecker = {
-              rule = "Host(`ci.${pqdn}`)";
-              entrypoints = [ "websecure" ];
-              service = "woodpecker";
-              tls.domains = [ { main = "*.${pqdn}"; } ];
-              tls.certresolver = "production";
-            };
             wastebin = {
               rule = "Host(`paste.${pqdn}`)";
               entrypoints = [ "websecure" ];
               service = "wastebin";
-              tls.domains = [ { main = "*.${pqdn}"; } ];
-              tls.certresolver = "production";
-            };
-            immich-proxy = {
-              rule = "Host(`immich.${pqdn}`)";
-              entrypoints = [ "websecure" ];
-              service = "immich-proxy";
               tls.domains = [ { main = "*.${pqdn}"; } ];
               tls.certresolver = "production";
             };
@@ -222,15 +201,12 @@
             authelia.loadBalancer.servers = [ { url = "http://${sakuraIp}9091"; } ];
             rustypaste.loadBalancer.servers = [ { url = "http://${sakuraIp}8000"; } ];
             grafana.loadBalancer.servers = [ { url = "http://${sakuraIp}3100"; } ];
-            hedgedoc.loadBalancer.servers = [ { url = "http://${sakuraIp}3300"; } ];
             vaultwarden.loadBalancer.servers = [ { url = "http://${sakuraIp}8222"; } ];
             wastebin.loadBalancer.servers = [ { url = "http://${sakuraIp}8088"; } ];
-            immich-proxy.loadBalancer.servers = [ { url = "http://${sakuraIp}2284"; } ];
             copyparty.loadBalancer.servers = [ { url = "http://${sakuraIp}3210"; } ];
             pocketid.loadBalancer.servers = [ { url = "http://${sakuraIp}1411"; } ];
 
             # tsuru
-            woodpecker.loadBalancer.servers = [ { url = "http://100.82.146.40:8200"; } ];
             owncast.loadBalancer.servers = [ { url = "http://100.127.30.116:8100"; } ];
           };
       };

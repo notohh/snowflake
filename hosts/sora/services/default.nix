@@ -7,7 +7,7 @@ _: {
     ./attic.nix
     ./tailscale.nix
     ./croc.nix
-    ./redbot.nix
+    ./mumble.nix
 
     ### game servers
     # ./terraria.nix
