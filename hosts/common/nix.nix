@@ -7,7 +7,7 @@
   sops.secrets.github-token = { };
   nixpkgs = {
     overlays = [
-      inputs.self.overlays.gale
+      # inputs.self.overlays.gale
       inputs.self.overlays.default
       inputs.nur.overlays.default
       inputs.helix.overlays.default

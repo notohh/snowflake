@@ -16,7 +16,11 @@ _: {
         pnpmDeps = prev.pnpm_10.fetchDeps {
           hash = "sha256-DYhPe59qfsSjyMIN31RL0mrHfmE6/I1SF+XutettkO8=";
           fetcherVersion = 1;
-          inherit (n) pname version src;
+          inherit (n)
+            pname
+            version
+            src
+            ;
         };
         cargoDeps = prev.rustPlatform.fetchCargoVendor {
           inherit (n)
