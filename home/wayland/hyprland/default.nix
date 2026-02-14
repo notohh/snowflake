@@ -9,7 +9,7 @@
     ./config/general.nix
     ./config/binds.nix
     ./config/rules.nix
-    ./config/plugins.nix
+    # ./config/plugins.nix
   ];
   wayland.windowManager.hyprland = {
     enable = true;

@@ -20,7 +20,6 @@ _: {
 
       # immediate
 
-      "immediate on, match:class ^(cs2)$"
       "immediate on, match:class ^(osu!)$"
 
       # misc
@@ -59,6 +58,10 @@ _: {
       "tag +factorio match:class ^(factorio)$"
       "fullscreen on, match:tag factorio"
       "monitor DP-1, match:tag factorio"
+
+      # cs2
+      "tag +cs2 match:class ^(cs2)$"
+      "immediate on, match:tag cs2"
     ];
     layerrule = [
       "blur on, match:namespace ^(gtk-layer-shell)$"

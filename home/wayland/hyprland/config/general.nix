@@ -22,6 +22,7 @@
           "music-discord-rpc"
           "jellyfin-rpc"
           "${pkgs.hyprpolkitagent}/libexec/hyprpolkitagent"
+          "streamcontroller -b"
           "${awww}/bin/awww-daemon"
           "${awww}/bin/awww img -o DP-1,DP-2 ${wpDir}mahou/Mahou.Tsukai.no.Yoru.full.3538207.jpg --transition-type center --transition-fps 144"
           "${awww}/bin/awww img -o DP-3,HDMI-A-1 ${wpDir}mahou/Kuonji.Alice.1024.4265428.webp --transition-type center --transition-fps 144"
