@@ -106,7 +106,7 @@
       };
     };
     input = {
-      focus-follows-mouse.enable = false;
+      focus-follows-mouse.enable = true;
       mouse = {
         enable = true;
         accel-profile = "flat";
