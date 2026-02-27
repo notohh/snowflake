@@ -42,6 +42,7 @@
       unrar
       p7zip
       procs
+      fastfetch
     ];
     stateVersion = "23.05";
   };
