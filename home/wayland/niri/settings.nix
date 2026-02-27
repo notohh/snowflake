@@ -123,6 +123,7 @@
     ### binds
     binds =
       let
+        inherit (pkgs.hostPlatform.system) system;
         inherit (config.lib.niri.actions)
           spawn
           spawn-sh
@@ -131,6 +132,7 @@
           toggle-overview
           focus-column-right
           focus-column-left
+          toggle-window-floating
           ;
       in
       {
@@ -140,13 +142,15 @@
         "Mod+Escape".action = toggle-overview;
         "Mod+WheelScrollUp".action = focus-column-right;
         "Mod+WheelScrollDown".action = focus-column-left;
+        "Mod+V".action = toggle-window-floating;
 
         # spawn acts
         "Mod+Tab".action = spawn "wayscriber" "-a";
         "Mod+Return".action = spawn "ghostty";
+        "Mod+C".action = spawn-sh "${lib.getExe inputs.hyprpicker.packages.${system}.default} | wl-copy";
         "Print".action =
           with pkgs;
-          spawn-sh ''${lib.getExe grim} -g "$(${lib.getExe slurp})" - | ${lib.getExe satty} -f - --fullscreen --output-filename ~/Pictures/screenshots/$(date '+%Y%m%d-%H:%M:%S').png '';
+          spawn-sh ''${lib.getExe grim} -g "$(${lib.getExe slurp})" - | ${lib.getExe satty} -f - --fullscreen --output-filename ~/Pictures/screenshots/$(date '+%Y%m%d-%H:%M:%S').png'';
         "Mod+R".action =
           spawn-sh "${lib.getExe config.programs.noctalia-shell.package} ipc call launcher toggle";
       };
