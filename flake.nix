@@ -37,8 +37,6 @@
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
-
-    ### everything else
     home-manager = {
       url = "github:nix-community/home-manager/master";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -82,7 +80,5 @@
     awakened-poe-flake.url = "git+https://git.flake.sh/notohh/awakened-poe-flake";
     awww.url = "git+https://codeberg.org/LGFae/awww";
     niri.url = "github:sodiboo/niri-flake";
-    hyprpicker.url = "github:hyprwm/hyprpicker";
-
   };
 }
