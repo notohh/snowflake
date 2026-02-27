@@ -99,6 +99,13 @@
               tls.domains = [ { main = "*.${fqdn}"; } ];
               tls.certresolver = "production";
             };
+            beszel = {
+              rule = "Host(`monitor.${fqdn}`)";
+              entrypoints = [ "websecure" ];
+              service = "beszel";
+              tls.domains = [ { main = "*.${fqdn}"; } ];
+              tls.certresolver = "production";
+            };
           };
         services =
           let
@@ -113,9 +120,7 @@
             wallos.loadBalancer.servers = [ { url = "http://localhost:8282"; } ];
             hass.loadBalancer.servers = [ { url = "http://localhost:8123"; } ];
             immich.loadBalancer.servers = [ { url = "http://localhost:2283"; } ];
-            romm.loadBalancer.servers = [ { url = "http://localhost:8080"; } ];
-            koito.loadBalancer.servers = [ { url = "http://localhost:4110"; } ];
-            multiscrobbler.loadBalancer.servers = [ { url = "http://localhost:9078"; } ];
+            beszel.loadBalancer.servers = [ { url = "http://localhost:3002"; } ];
             # kariru
             sonarr.loadBalancer.servers = [ { url = "http://${kariruHost}8989"; } ];
             radarr.loadBalancer.servers = [ { url = "http://${kariruHost}7878"; } ];

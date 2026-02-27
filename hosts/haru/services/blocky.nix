@@ -143,6 +143,7 @@
             "udm.internal.flake.sh" = "192.168.1.1";
             "pve.internal.flake.sh" = "192.168.1.37";
             "pbs.internal.flake.sh" = "192.168.1.38";
+            "monitor.internal.flake.sh" = "${yukiIp}";
 
             # media
 
