@@ -8,12 +8,12 @@
 }:
 rustPlatform.buildRustPackage rec {
   pname = "wayscriber";
-  version = "v0.8.7";
+  version = "v0.9.11";
   src = fetchFromGitHub {
     owner = "devmobasa";
     repo = "wayscriber";
     rev = version;
-    sha256 = "sha256-CJ3UleMFk033zuz507KIhHkVRRayh6Z+OdaREhFs0GM=";
+    sha256 = "sha256-HoIa1uVk5Z+kmDxpFJl3Yjek1BVJvWrSdA4L3rJEv6o=";
   };
 
   nativeBuildInputs = [ pkgs.pkg-config ];
@@ -22,7 +22,7 @@ rustPlatform.buildRustPackage rec {
     libxkbcommon
   ];
 
-  cargoHash = "sha256-cLV7NRQGK2jjCBOeTNe86ESV4TG0vTYJu3K5aQHQrXo=";
+  cargoHash = "sha256-vpJeFO363fFyoHcF0JYru4nhC5um2jmZscdTC/S/egQ=";
 
   meta = with lib; {
     description = ''
