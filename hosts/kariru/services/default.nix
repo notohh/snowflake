@@ -28,7 +28,7 @@
       openFirewall = true;
     };
     sabnzbd = {
-      enable = true;
+      enable = false;
       allowConfigWrite = true;
     };
   };

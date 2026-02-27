@@ -9,5 +9,6 @@ _: {
     ./immich.nix
     ./glance.nix
     ./stash.nix
+    ./beszel-hub.nix
   ];
 }

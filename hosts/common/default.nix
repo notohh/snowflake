@@ -6,7 +6,6 @@
     inputs.nur.modules.nixos.default
     inputs.nix-topology.nixosModules.default
     inputs.nix-flatpak.nixosModules.nix-flatpak
-    ./prometheus.nix
     ./security.nix
     ./users.nix
     ./nix.nix
@@ -15,5 +14,6 @@
     ./virtualisation.nix
     ./sops.nix
     ./time.nix
+    ./beszel-agent.nix
   ];
 }
