@@ -38,16 +38,6 @@
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
 
-    ### hypr
-    # hyprland-plugins = {
-    #   url = "github:hyprwm/hyprland-plugins";
-    #   inputs.hyprland.follows = "hyprland";
-    # };
-    # hyprland.url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
-    # hypridle.url = "github:hyprwm/hypridle";
-    # hyprlock.url = "github:hyprwm/hyprlock";
-    hyprpicker.url = "github:hyprwm/hyprpicker";
-
     ### everything else
     home-manager = {
       url = "github:nix-community/home-manager/master";
@@ -92,5 +82,7 @@
     awakened-poe-flake.url = "git+https://git.flake.sh/notohh/awakened-poe-flake";
     awww.url = "git+https://codeberg.org/LGFae/awww";
     niri.url = "github:sodiboo/niri-flake";
+    hyprpicker.url = "github:hyprwm/hyprpicker";
+
   };
 }

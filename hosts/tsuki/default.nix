@@ -4,7 +4,6 @@
 }:
 {
   imports = [
-    # inputs.hyprland.nixosModules.default
     ./hardware.nix
     ./services
     ./networking.nix
@@ -78,13 +77,6 @@
         openssl
       ];
     };
-    # hyprland = {
-    #   enable = false;
-    #   withUWSM = false;
-    #   package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
-    #   portalPackage =
-    #     inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.xdg-desktop-portal-hyprland;
-    # };
     appimage = {
       enable = true;
       binfmt = true;
