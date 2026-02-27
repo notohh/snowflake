@@ -1,6 +1,6 @@
 { pkgs, ... }:
 {
-  imports = [ ./services/greetd.nix ];
+  imports = [ ../services/greetd.nix ];
   environment = {
     systemPackages = with pkgs; [
       glib
