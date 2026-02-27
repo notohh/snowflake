@@ -123,7 +123,6 @@
     ### binds
     binds =
       let
-        inherit (pkgs.hostPlatform.system) system;
         inherit (config.lib.niri.actions)
           spawn
           spawn-sh
@@ -147,7 +146,7 @@
         # spawn acts
         "Mod+Tab".action = spawn "wayscriber" "-a";
         "Mod+Return".action = spawn "ghostty";
-        "Mod+C".action = spawn-sh "${lib.getExe inputs.hyprpicker.packages.${system}.default} | wl-copy";
+        "Mod+C".action = spawn-sh "${lib.getExe pkgs.hyprpicker} | wl-copy";
         "Print".action =
           with pkgs;
           spawn-sh ''${lib.getExe grim} -g "$(${lib.getExe slurp})" - | ${lib.getExe satty} -f - --fullscreen --output-filename ~/Pictures/screenshots/$(date '+%Y%m%d-%H:%M:%S').png'';
