@@ -15,10 +15,11 @@
 <p>
   Screenshots updated: 2026-02-27
 </p>
-<h4>
-  :warning: this config is a constant WIP,
-  and will change constantly as i continue to learn about nix. stuff will be updated, restructed, added, and removed quite often. please also note that everything hosted here is what works best for me,   and could totally be ineffecient, or just a dead wrong way of doing something.</h4>
 </div>
+
+> [!WARNING]
+> this config is a constant WIP, and will change constantly as i continue to learn about nix.
+> stuff will be updated, restructed, added, and removed quite often. please also note that everything hosted here is what works best for me, and could totally be ineffecient, or just a dead wrong way of doing something.
 
 ## :open_book: Table of contents
 
