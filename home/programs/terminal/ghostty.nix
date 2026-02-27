@@ -2,9 +2,8 @@ _: {
   programs.ghostty = {
     enable = true;
     settings = {
-      theme = "Atom One Dark";
       font-family = "Maple Mono NF";
-      background-opacity = 0.4;
+      background-opacity = 0.7;
       window-padding-x = 16;
       window-padding-y = 16;
       window-padding-balance = true;

@@ -1,11 +1,10 @@
 {
-  inputs,
   pkgs,
   ...
 }:
 {
   imports = [
-    inputs.hyprland.nixosModules.default
+    # inputs.hyprland.nixosModules.default
     ./hardware.nix
     ./services
     ./networking.nix
@@ -79,13 +78,13 @@
         openssl
       ];
     };
-    hyprland = {
-      enable = true;
-      withUWSM = false;
-      package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
-      portalPackage =
-        inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.xdg-desktop-portal-hyprland;
-    };
+    # hyprland = {
+    #   enable = false;
+    #   withUWSM = false;
+    #   package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
+    #   portalPackage =
+    #     inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.xdg-desktop-portal-hyprland;
+    # };
     appimage = {
       enable = true;
       binfmt = true;

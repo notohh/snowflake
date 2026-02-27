@@ -36,7 +36,7 @@ _: {
 
       # poe
 
-      "tag +poe, match:class ^(steam_app_238960|steam_app_2694490) "
+      "tag +poe, match:class ^(steam_app_238960|steam_app_2694490)$"
       "tag +apt, match:title ^(Awakened PoE Trade|Exiled Exchange 2)$"
 
       "fullscreen on, match:tag poe"

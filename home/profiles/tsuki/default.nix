@@ -7,7 +7,8 @@
   imports = [
     ./stylix.nix
     ../../services
-    ../../programs/vicinae.nix
+    ../../wayland/niri
+    ../../programs/noctalia.nix
     ../../programs/terminal/zellij
     ../../programs/terminal/ghostty.nix
     ../../programs/terminal/television
@@ -16,8 +17,6 @@
     ../../programs/media/zathura.nix
     ../../programs/media/mpv.nix
     ../../programs/media/lutris.nix
-    ../../wayland/hyprland
-    ../../wayland/programs/hyprlock.nix
   ];
   home.packages =
     with pkgs;
@@ -61,7 +60,7 @@
       awww
       wayvr
       fladder
-      mumble
+      imagemagick
     ];
   programs.ssh = {
     enable = true;

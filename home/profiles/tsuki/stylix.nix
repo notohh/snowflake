@@ -48,7 +48,7 @@
       yazi.enable = true;
       zellij.enable = true;
       bat.enable = true;
-      ghostty.enable = false;
+      ghostty.enable = true;
       starship.enable = true;
     };
   };

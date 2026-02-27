@@ -1,6 +1,6 @@
 { pkgs, ... }:
 {
-  imports = [ ./services/ly.nix ];
+  imports = [ ./services/greetd.nix ];
   environment = {
     systemPackages = with pkgs; [
       glib
@@ -28,6 +28,7 @@
     enable = true;
     extraPortals = with pkgs; [
       xdg-desktop-portal-gtk
+      xdg-desktop-portal-gnome
     ];
     config = {
       common.default = "*";
