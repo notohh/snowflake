@@ -10,14 +10,10 @@
   <img src="https://img.shields.io/static/v1.svg?style=for-the-badge&label=License&message=MIT&colorA=313244&colorB=cba6f7&logo=unlicense&logoColor=ca9ee6&"/>
  <p></p>
 <img src="https://builtwithnix.org/badge.svg">
-<a href="https://ci.flake.sh/repos/9" target="_blank">
-  <img src="https://ci.flake.sh/api/badges/9/status.svg" alt="status-badge" />
-</a>
  <p></p>
-<img src="https://i.imgur.com/G34pKzL.png"></img>
-<img src="https://i.imgur.com/TbveB7E.png"></img>
+<img src="https://files.catbox.moe/5uhcyn.png"></img>
 <p>
-  Screenshots updated: 2025-02-09
+  Screenshots updated: 2026-02-27
 </p>
 <h4>
   :warning: this config is a constant WIP,
