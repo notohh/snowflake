@@ -11,7 +11,7 @@
  <p></p>
 <img src="https://builtwithnix.org/badge.svg">
  <p></p>
-<img src="https://files.catbox.moe/5uhcyn.png"></img>
+<img src="https://i.imgur.com/iKXiqBe.jpeg"></img>
 <p>
   Screenshots updated: 2026-02-27
 </p>
@@ -44,7 +44,7 @@
 - multi-system home-manager setup
 - secrets provisioning with [sops-nix](https://github.com/Mic92/sops-nix)
 - multiple fully declarative self hosted services (and some containerized ones, with a docker backend)
-- wayland config for hyprland
+- declarative wayland config for [niri](https://git.flake.sh/notohh/snowflake/src/branch/master/home/wayland/niri) (and [hyprland](https://git.flake.sh/notohh/snowflake/src/branch/master/home/wayland/hyprland))
 - custom packages not found in nixpkgs
 - linted & styled with [nixfmt](https://github.com/NixOS/nixfmt), [deadnix](https://github.com/astro/deadnix), and [statix](https://github.com/nerdypepper/statix)
 
