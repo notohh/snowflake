@@ -4,6 +4,25 @@
 
   programs.noctalia-shell = {
     enable = true;
+    plugins = {
+      sources = [
+        {
+          enabled = true;
+          name = "Official Noctalia Plugins";
+          url = "https://github.com/noctalia-dev/noctalia-plugins";
+        }
+      ];
+      states = {
+        weather-indicator = {
+          enabled = true;
+          sourceUrl = "https://github.com/noctalia-dev/noctalia-plugins";
+        };
+        tailscale = {
+          enabled = true;
+          sourceUrl = "https://github.com/noctalia-dev/noctalia-plugins";
+        };
+      };
+    };
     settings = {
       wallpaper.enabled = false;
       general = {
@@ -64,7 +83,13 @@
           ];
           right = [
             {
+              id = "plugin:tailscale";
+            }
+            {
               id = "SystemMonitor";
+            }
+            {
+              id = "plugin:weather-indicator";
             }
             {
               id = "Clock";
