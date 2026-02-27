@@ -21,6 +21,10 @@
           enabled = true;
           sourceUrl = "https://github.com/noctalia-dev/noctalia-plugins";
         };
+        catwalk = {
+          enabled = true;
+          sourceUrl = "https://github.com/noctalia-dev/noctalia-plugins";
+        };
       };
     };
     settings = {
@@ -70,6 +74,9 @@
           ];
           center = [
             {
+              id = "plugin:catwalk";
+            }
+            {
               id = "MediaMini";
               hideWhenIdle = false;
               maxWidth = 300;
@@ -84,9 +91,6 @@
           right = [
             {
               id = "plugin:tailscale";
-            }
-            {
-              id = "SystemMonitor";
             }
             {
               id = "plugin:weather-indicator";
