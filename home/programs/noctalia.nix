@@ -67,7 +67,6 @@
               id = "SystemMonitor";
             }
             {
-
               id = "Clock";
               formatHorizontal = "HH:mm";
               formatVertical = "HH mm";
