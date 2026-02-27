@@ -15,6 +15,7 @@
     enable = true;
     package = inputs.yazi.packages.${pkgs.stdenv.hostPlatform.system}.default;
     enableNushellIntegration = true;
+    shellWrapperName = "y";
     settings = {
       manager = {
         ratio = [
