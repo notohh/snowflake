@@ -132,6 +132,13 @@
           focus-column-right
           focus-column-left
           toggle-window-floating
+          maximize-window-to-edges
+          focus-workspace-up
+          focus-workspace-down
+          move-window-to-workspace-up
+          move-window-to-workspace-down
+          move-column-left
+          move-column-right
           ;
       in
       {
@@ -142,6 +149,15 @@
         "Mod+WheelScrollUp".action = focus-column-right;
         "Mod+WheelScrollDown".action = focus-column-left;
         "Mod+V".action = toggle-window-floating;
+        "Mod+M".action = maximize-window-to-edges;
+
+        # workspace movement
+        "Mod+K".action = focus-workspace-up;
+        "Mod+J".action = focus-workspace-down;
+        "Mod+Shift+K".action = move-window-to-workspace-up;
+        "Mod+Shift+J".action = move-window-to-workspace-down;
+        "Mod+Shift+H".action = move-column-left;
+        "Mod+Shift+L".action = move-column-right;
 
         # spawn acts
         "Mod+Tab".action = spawn "wayscriber" "-a";
