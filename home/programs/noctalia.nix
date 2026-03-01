@@ -44,6 +44,7 @@
         enabled = true;
         monitors = [ "DP-1" ];
       };
+      dock.enabled = false;
       bar = {
         density = "spacious";
         barType = "simple";

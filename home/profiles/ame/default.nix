@@ -6,7 +6,7 @@
 {
   imports = [
     ../../services
-    ../../programs/ghostty.nix
+    ../../programs/terminal/ghostty.nix
     ../../programs/terminal/zellij
     ../../programs/media/spicetify.nix
     ../../programs/media/mpv.nix
