@@ -73,10 +73,10 @@
       in
       [
         {
-          argv = [ "chatterino" ];
+          sh = "chatterino";
         }
         {
-          argv = [ "${awww}/bin/awww-daemon" ];
+          sh = "${awww}/bin/awww-daemon";
         }
         {
           sh = "streamcontroller -b";
@@ -196,6 +196,15 @@
       {
         matches = [ { app-id = "com.gabm.satty"; } ];
         open-floating = true;
+      }
+      {
+        matches = [ { app-id = "^(steam_app_)(.*)$"; } ];
+        open-on-output = "DP-1";
+        open-fullscreen = true;
+      }
+      {
+        matches = [ { app-id = "gamescope"; } ];
+        open-on-output = "DP-1";
       }
       {
         geometry-corner-radius =
