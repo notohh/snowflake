@@ -76,7 +76,6 @@
     nix-flatpak.url = "github:gmodena/nix-flatpak";
     copyparty.url = "github:9001/copyparty";
     stylix.url = "github:nix-community/stylix";
-    vicinae.url = "github:vicinaehq/vicinae";
     awakened-poe-flake.url = "git+https://git.flake.sh/notohh/awakened-poe-flake";
     awww.url = "git+https://codeberg.org/LGFae/awww";
     niri.url = "github:sodiboo/niri-flake";
