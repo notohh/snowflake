@@ -123,6 +123,7 @@
     ### binds
     binds =
       let
+        noctalia-pkg = config.programs.noctalia-shell.package;
         inherit (config.lib.niri.actions)
           spawn
           spawn-sh
@@ -163,11 +164,17 @@
         "Mod+Tab".action = spawn "wayscriber" "-a";
         "Mod+Return".action = spawn "ghostty";
         "Mod+C".action = spawn-sh "${lib.getExe pkgs.hyprpicker} | wl-copy";
+        "Mod+Shift+R".action =
+          spawn-sh ''gpu-screen-recorder -w DP-1 -f 60 -r 60 -c mp4 -a "default_output|default_input" -o ~/Videos/replays & sleep 2 && ${lib.getExe noctalia-pkg} ipc call toast send '{"title": "Replay buffer started", "body": "Started GSR process"}' || ${lib.getExe noctalia-pkg} ipc call toast send '{"title": "Replay buffer failed", "body": "Replay buffer failed to start"' '';
+        "Mod+Shift+S".action =
+          spawn-sh ''killall -SIGUSR1 gpu-screen-recorder && ${lib.getExe noctalia-pkg} ipc call toast send '{"title": "Replay saved", "body": "Replay buffer dumped"}' || ${lib.getExe noctalia-pkg} ipc call toast send '{"title": "Failed to save replay", "body": "Replay buffer failed to dump (is the GSR process running?)"}' '';
+        "Mod+Ctrl+R".action =
+          spawn-sh ''killall -SIGINT gpu-screen-recorder && ${lib.getExe noctalia-pkg} ipc call toast send '{"title": "GSR killed", "body": "Killed GSR process"}' || ${lib.getExe noctalia-pkg} ipc call toast send '{"title": "GSR process failed to die", "body": "Failed to kill GSR process (is it running?)"}' '';
         "Print".action =
           with pkgs;
-          spawn-sh ''${lib.getExe grim} -g "$(${lib.getExe slurp})" - | ${lib.getExe satty} -f - --fullscreen --output-filename ~/Pictures/screenshots/$(date '+%Y%m%d-%H:%M:%S').png'';
-        "Mod+R".action =
-          spawn-sh "${lib.getExe config.programs.noctalia-shell.package} ipc call launcher toggle";
+          with lib;
+          spawn-sh ''${getExe grim} -g "$(${getExe slurp})" - | ${getExe satty} -f - --fullscreen --output-filename ~/Pictures/screenshots/$(date '+%Y%m%d-%H:%M:%S').png'';
+        "Mod+R".action = spawn-sh "${lib.getExe noctalia-pkg} ipc call launcher toggle";
       };
     ### window rules
     window-rules = [

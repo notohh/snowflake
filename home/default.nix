@@ -43,6 +43,8 @@
       p7zip
       procs
       fastfetch
+      killall
+      util-linux
     ];
     stateVersion = "23.05";
   };
