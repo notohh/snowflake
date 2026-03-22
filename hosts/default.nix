@@ -9,6 +9,11 @@
     let
       inherit (inputs.nixpkgs.lib) nixosSystem;
       specialArgs = { inherit inputs; };
+      hmOpts = {
+        useGlobalPkgs = true;
+        useUserPackages = true;
+        extraSpecialArgs = specialArgs;
+      };
     in
     {
       tsuki = nixosSystem {
@@ -16,13 +21,8 @@
         modules = [
           ./tsuki
           {
-            home-manager = {
-              useGlobalPkgs = true;
-              useUserPackages = true;
-              extraSpecialArgs = specialArgs;
-              users.notoh = {
-                imports = homeImports."notoh@tsuki";
-              };
+            home-manager = hmOpts // {
+              users.notoh.imports = homeImports."notoh@tsuki";
             };
           }
         ];
@@ -32,13 +32,8 @@
         modules = [
           ./ame
           {
-            home-manager = {
-              useGlobalPkgs = true;
-              useUserPackages = true;
-              extraSpecialArgs = specialArgs;
-              users.notoh = {
-                imports = homeImports."notoh@ame";
-              };
+            home-manager = hmOpts // {
+              users.notoh.imports = homeImports."notoh@ame";
             };
           }
         ];
@@ -48,13 +43,8 @@
         modules = [
           ./sakura
           {
-            home-manager = {
-              useGlobalPkgs = true;
-              useUserPackages = true;
-              extraSpecialArgs = specialArgs;
-              users.notoh = {
-                imports = homeImports."default";
-              };
+            home-manager = hmOpts // {
+              users.notoh.imports = homeImports."default";
             };
           }
         ];
@@ -64,13 +54,8 @@
         modules = [
           ./kariru
           {
-            home-manager = {
-              useGlobalPkgs = true;
-              useUserPackages = true;
-              extraSpecialArgs = specialArgs;
-              users.notoh = {
-                imports = homeImports."default";
-              };
+            home-manager = hmOpts // {
+              users.notoh.imports = homeImports."default";
             };
           }
         ];
@@ -80,13 +65,8 @@
         modules = [
           ./yuki
           {
-            home-manager = {
-              useGlobalPkgs = true;
-              useUserPackages = true;
-              extraSpecialArgs = specialArgs;
-              users.notoh = {
-                imports = homeImports."default";
-              };
+            home-manager = hmOpts // {
+              users.notoh.imports = homeImports."default";
             };
           }
         ];
@@ -96,13 +76,8 @@
         modules = [
           ./arashi
           {
-            home-manager = {
-              useGlobalPkgs = true;
-              useUserPackages = true;
-              extraSpecialArgs = specialArgs;
-              users.notoh = {
-                imports = homeImports."default";
-              };
+            home-manager = hmOpts // {
+              users.notoh.imports = homeImports."default";
             };
           }
         ];
@@ -112,13 +87,8 @@
         modules = [
           ./sora
           {
-            home-manager = {
-              useGlobalPkgs = true;
-              useUserPackages = true;
-              extraSpecialArgs = specialArgs;
-              users.notoh = {
-                imports = homeImports."default";
-              };
+            home-manager = hmOpts // {
+              users.notoh.imports = homeImports."default";
             };
           }
         ];
@@ -128,13 +98,8 @@
         modules = [
           ./tsuru
           {
-            home-manager = {
-              useGlobalPkgs = true;
-              useUserPackages = true;
-              extraSpecialArgs = specialArgs;
-              users.notoh = {
-                imports = homeImports."default";
-              };
+            home-manager = hmOpts // {
+              users.notoh.imports = homeImports."default";
             };
           }
         ];
@@ -144,13 +109,8 @@
         modules = [
           ./haru
           {
-            home-manager = {
-              useGlobalPkgs = true;
-              useUserPackages = true;
-              extraSpecialArgs = specialArgs;
-              users.notoh = {
-                imports = homeImports."default";
-              };
+            home-manager = hmOpts // {
+              users.notoh.imports = homeImports."default";
             };
           }
         ];
