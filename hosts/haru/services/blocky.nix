@@ -108,6 +108,7 @@
               *.gofile.io
               spade.twitch.tv
               pixeldrain.com
+              onionfarms.com
             '';
           in
           {
@@ -148,7 +149,7 @@
             # media
 
             "jellyfin.internal.flake.sh" = "${yukiIp}";
-            "jellyseerr.internal.flake.sh" = "${yukiIp}";
+            "seerr.internal.flake.sh" = "${yukiIp}";
             "sonarr.internal.flake.sh" = "${yukiIp}";
             "radarr.internal.flake.sh" = "${yukiIp}";
             "prowlarr.internal.flake.sh" = "${yukiIp}";
