@@ -3,7 +3,7 @@
   sops.secrets.gluetun = { };
   virtualisation.oci-containers.containers = {
     gluetun = {
-      image = "qmcgaw/gluetun@sha256:6b54856716d0de56e5bb00a77029b0adea57284cf5a466f23aad5979257d3045"; # v3.41.0
+      image = "qmcgaw/gluetun@sha256:1a5bf4b4820a879cdf8d93d7ef0d2d963af56670c9ebff8981860b6804ebc8ab"; # v3.41.1
       hostname = "gluetun";
       ports = [
         "8000:8000/tcp" # HTTP control server
@@ -27,7 +27,7 @@
       ];
     };
     qbittorrent = {
-      image = "linuxserver/qbittorrent@sha256:95114034a7f74672b76f795f6938921b0ca795f85b59b48691035dc66714f34c"; # v5.1.4
+      image = "linuxserver/qbittorrent@sha256:a89108b1bf43de072a35a59a3ee41b97b564538faae5cbb3f6c803aa7f5fd9f7"; # v5.1.4
       dependsOn = [ "gluetun" ];
       environment = {
         PUID = "1001";
@@ -39,19 +39,6 @@
         "/home/notoh/qbittorrent/config:/config"
         "/media/downloads:/downloads"
         "/media/incomplete-downloads:/incomplete-downloads"
-      ];
-      extraOptions = [ "--network=container:gluetun" ];
-    };
-    slskd = {
-      image = "slskd/slskd@sha256:bcf9820dab68e21d2bba8ebb1ffd583d71fcba542a50a1e998119f69b7b498fe"; # v0.24.3
-      dependsOn = [ "gluetun" ];
-      environment = {
-        SLSKD_REMOTE_CONFIGURATION = "true";
-      };
-      volumes = [
-        "/var/lib/slskd:/app"
-        "/media/downloads/slskd:/app/downloads"
-        "/media/incomplete-downloads/slskd:/app/incomplete"
       ];
       extraOptions = [ "--network=container:gluetun" ];
     };

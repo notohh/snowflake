@@ -27,10 +27,6 @@
       enable = true;
       openFirewall = true;
     };
-    sabnzbd = {
-      enable = false;
-      allowConfigWrite = true;
-    };
   };
 
   virtualisation.oci-containers.containers = {
@@ -40,7 +36,7 @@
       extraOptions = [ "--network=host" ];
     };
     shoko = {
-      image = "ghcr.io/shokoanime/server@sha256:1be8caa29de78dc14082ad0d672a9a4ef809adf5ceef33bbfad9d0262ff452c6"; # v5.2.1
+      image = "ghcr.io/shokoanime/server@sha256:b841f8249c9edfba102e4072e2b2a3eae4179e5dd553f29e11b9898a44f1e836"; # v5.3.3
       ports = [ "8111:8111" ];
       environment = {
         PUID = "1000";
@@ -54,5 +50,19 @@
       ];
       extraOptions = [ "--network=host" ];
     };
+    # sabnzbd = {
+    #   image = "linuxserver/sabnzbd";
+    #   ports = [ "9292:9292" ];
+    #   environment = {
+    #     PUID = "1000";
+    #     PGID = "1000";
+    #   };
+    #   volumes = [
+    #     "/var/lib/sabnzbd:/config"
+    #     "/media/downloads:/media/downloads"
+    #     "/media/incomplete-downloads:/media/incomplete-downloads"
+    #   ];
+    #   extraOptions = [ "--network=host" ];
+    # };
   };
 }
