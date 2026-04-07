@@ -7,7 +7,6 @@ _: {
     ./wallos.nix
     ./anki-sync-server.nix
     ./immich.nix
-    ./glance.nix
     ./stash.nix
     ./beszel-hub.nix
   ];
