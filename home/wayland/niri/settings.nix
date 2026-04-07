@@ -17,7 +17,7 @@
           refresh = 60.0;
         };
         position = {
-          x = 3640;
+          x = 3000;
           y = 560;
         };
         transform.rotation = 270;
@@ -26,9 +26,9 @@
       # middle
       "DP-1" = {
         mode = {
-          width = 2560;
-          height = 1440;
-          refresh = 164.958;
+          width = 1920;
+          height = 1080;
+          refresh = 280.000;
         };
         position = {
           x = 1080;
@@ -44,7 +44,7 @@
           refresh = 144.001;
         };
         position = {
-          x = 1400;
+          x = 1080;
           y = 0;
         };
         scale = 1;
@@ -80,9 +80,6 @@
         }
         {
           sh = "streamcontroller -b";
-        }
-        {
-          sh = "music-discord-rpc";
         }
         {
           sh = "noctalia-shell";
@@ -165,7 +162,7 @@
         "Mod+Return".action = spawn "ghostty";
         "Mod+C".action = spawn-sh "${lib.getExe pkgs.hyprpicker} | wl-copy";
         "Mod+Shift+R".action =
-          spawn-sh ''gpu-screen-recorder -w DP-1 -f 60 -r 60 -c mp4 -a "default_output|default_input" -o ~/Videos/replays & sleep 2 && ${lib.getExe noctalia-pkg} ipc call toast send '{"title": "Replay buffer started", "body": "Started GSR process"}' || ${lib.getExe noctalia-pkg} ipc call toast send '{"title": "Replay buffer failed", "body": "Replay buffer failed to start"' '';
+          spawn-sh ''gpu-screen-recorder -w DP-1 -f 60 -r 60 -c mp4 -a "default_output|default_input" -o ~/Videos/replays -df yes -bm cbr -q 20000 & sleep 2 && ${lib.getExe noctalia-pkg} ipc call toast send '{"title": "Replay buffer started", "body": "Started GSR process"}' || ${lib.getExe noctalia-pkg} ipc call toast send '{"title": "Replay buffer failed", "body": "Replay buffer failed to start"' '';
         "Mod+Shift+S".action =
           spawn-sh ''killall -SIGUSR1 gpu-screen-recorder && ${lib.getExe noctalia-pkg} ipc call toast send '{"title": "Replay saved", "body": "Replay buffer dumped"}' || ${lib.getExe noctalia-pkg} ipc call toast send '{"title": "Failed to save replay", "body": "Replay buffer failed to dump (is the GSR process running?)"}' '';
         "Mod+Ctrl+R".action =
@@ -183,7 +180,7 @@
         open-floating = true;
       }
       {
-        matches = [ { app-id = "discord"; } ];
+        matches = [ { app-id = "vesktop"; } ];
         open-on-output = "DP-3";
         open-maximized = true;
       }
