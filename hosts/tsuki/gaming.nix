@@ -13,7 +13,6 @@
   services = {
     wivrn = {
       enable = true;
-      defaultRuntime = true;
       openFirewall = true;
       autoStart = true;
       steam.importOXRRuntimes = true;

@@ -70,14 +70,6 @@
     dconf.enable = true;
     streamcontroller.enable = true;
     gpu-screen-recorder.enable = true;
-    nix-ld = {
-      # for zed patching
-      enable = true;
-      libraries = with pkgs; [
-        zlib
-        openssl
-      ];
-    };
     appimage = {
       enable = true;
       binfmt = true;

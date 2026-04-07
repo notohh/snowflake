@@ -11,7 +11,10 @@
   ];
 
   boot = {
-    kernelModules = [ "kvm-amd" ];
+    kernelModules = [
+      "kvm-amd"
+      "ntsync"
+    ];
     consoleLogLevel = 3;
     kernelParams = [
       "quiet"
