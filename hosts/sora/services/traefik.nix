@@ -1,4 +1,4 @@
-{ config, ... }:
+{ config, lib, ... }:
 {
   sops.secrets = {
     cloudflare-api-key = { };
@@ -112,13 +112,6 @@
               tls.domains = [ { main = "*.${pqdn}"; } ];
               tls.certresolver = "production";
             };
-            foundryvtt = {
-              rule = "Host(`foundry.${pqdn}`)";
-              entrypoints = [ "websecure" ];
-              service = "foundryvtt";
-              tls.domains = [ { main = "*.${pqdn}"; } ];
-              tls.certresolver = "production";
-            };
             forgejo = {
               rule = "Host(`git.${pqdn}`)";
               entrypoints = [ "websecure" ];
@@ -131,13 +124,6 @@
               rule = "Host(`i.${pqdn}`)";
               entrypoints = [ "websecure" ];
               service = "rustypaste";
-              tls.domains = [ { main = "*.${pqdn}"; } ];
-              tls.certresolver = "production";
-            };
-            grafana = {
-              rule = "Host(`metrics.${pqdn}`)";
-              entrypoints = [ "websecure" ];
-              service = "grafana";
               tls.domains = [ { main = "*.${pqdn}"; } ];
               tls.certresolver = "production";
             };
@@ -176,38 +162,51 @@
               tls.domains = [ { main = "*.${pqdn}"; } ];
               tls.certresolver = "production";
             };
-            owncast = {
-              rule = "Host(`video.${pqdn}`)";
-              entrypoints = [ "websecure" ];
-              service = "owncast";
-              tls.domains = [ { main = "*.${pqdn}"; } ];
-              tls.certresolver = "production";
-            };
           };
         services =
+          with builtins;
+          with lib;
           let
-            sakuraIp = "100.121.201.47:";
-            soraIp = "100.104.42.96:";
+            inherit (config.services)
+              uptime-kuma
+              ntfy-sh
+              atticd
+              forgejo
+              vaultwarden
+              wastebin
+              pocket-id
+              ;
+            sakuraIp = "100.121.201.47";
+            soraIp = "100.104.42.96";
           in
           {
             # sora
-            uptime-kuma.loadBalancer.servers = [ { url = "http://${soraIp}4000"; } ];
-            foundryvtt.loadBalancer.servers = [ { url = "http://${soraIp}30000"; } ];
-            ntfy-sh.loadBalancer.servers = [ { url = "http://${soraIp}8090"; } ];
-            attic.loadBalancer.servers = [ { url = "http://${soraIp}8200"; } ];
+            uptime-kuma.loadBalancer.servers = [
+              { url = "http://${soraIp}:${uptime-kuma.settings.PORT}"; }
+            ];
+            ntfy-sh.loadBalancer.servers = [
+              { url = "http://${soraIp}:${last (splitString ":" ntfy-sh.settings.listen-http)}"; }
+            ];
+            attic.loadBalancer.servers = [
+              { url = "http://${soraIp}:${last (splitString ":" atticd.settings.listen)}"; }
+            ];
 
             # sakura
-            forgejo.loadBalancer.servers = [ { url = "http://${sakuraIp}3200"; } ];
-            authelia.loadBalancer.servers = [ { url = "http://${sakuraIp}9091"; } ];
-            rustypaste.loadBalancer.servers = [ { url = "http://${sakuraIp}8000"; } ];
-            grafana.loadBalancer.servers = [ { url = "http://${sakuraIp}3100"; } ];
-            vaultwarden.loadBalancer.servers = [ { url = "http://${sakuraIp}8222"; } ];
-            wastebin.loadBalancer.servers = [ { url = "http://${sakuraIp}8088"; } ];
-            copyparty.loadBalancer.servers = [ { url = "http://${sakuraIp}3210"; } ];
-            pocketid.loadBalancer.servers = [ { url = "http://${sakuraIp}1411"; } ];
+            rustypaste.loadBalancer.servers = [ { url = "http://${sakuraIp}:8000"; } ];
 
-            # tsuru
-            owncast.loadBalancer.servers = [ { url = "http://100.127.30.116:8100"; } ];
+            copyparty.loadBalancer.servers = [ { url = "http://${sakuraIp}:3210"; } ];
+            forgejo.loadBalancer.servers = [
+              { url = "http://${sakuraIp}:${toString forgejo.settings.server.HTTP_PORT}"; }
+            ];
+            vaultwarden.loadBalancer.servers = [
+              { url = "http://${sakuraIp}:${toString vaultwarden.config.ROCKET_PORT}"; }
+            ];
+            wastebin.loadBalancer.servers = [
+              { url = "http://${sakuraIp}:${last (splitString ":" wastebin.settings.WASTEBIN_ADDRESS_PORT)}"; }
+            ];
+            pocketid.loadBalancer.servers = [
+              { url = "http://${sakuraIp}:${toString pocket-id.settings.PORT or 1411}"; }
+            ];
           };
       };
     };
@@ -243,11 +242,6 @@
         };
         ssh = {
           address = ":2222";
-        };
-      };
-      metrics = {
-        prometheus = {
-          addServicesLabels = true;
         };
       };
       certificatesResolvers = {

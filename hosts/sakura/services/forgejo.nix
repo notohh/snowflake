@@ -37,7 +37,7 @@ in
         DEFAULT_ACTIONS_URL = "https://code.forgejo.org";
       };
       server = {
-        HTTP_PORT = 3200;
+        HTTP_PORT = 3000;
         DOMAIN = "git.flake.sh";
         ROOT_URL = "https://git.flake.sh";
         LANDING_PAGE = "/explore/repos";
@@ -90,7 +90,7 @@ in
   services.fail2ban.jails.forgejo = {
     settings = {
       filter = "forgejo";
-      action = ''iptables-allports'';
+      action = "iptables-allports";
       mode = "aggressive";
       maxretry = 3;
       findtime = 3600;

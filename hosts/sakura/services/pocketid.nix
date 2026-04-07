@@ -8,6 +8,7 @@
     user = "pocket-id";
     environmentFile = config.sops.secrets.pocketid-env.path;
     settings = {
+      PORT = 1411;
       TRUST_PROXY = true;
       APP_URL = "https://passport.notohh.dev";
       ANALYTICS_DISABLED = true;

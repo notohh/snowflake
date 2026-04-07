@@ -4,6 +4,7 @@ _: {
     settings = {
       WASTEBIN_TITLE = "wastebin";
       WASTEBIN_BASE_URL = "https://paste.flake.sh";
+      WASTEBIN_ADDRESS_PORT = "[::]:8088";
     };
   };
 }
