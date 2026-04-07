@@ -49,10 +49,10 @@
               tls.domains = [ { main = "*.${fqdn}"; } ];
               tls.certresolver = "production";
             };
-            jellyseerr = {
-              rule = "Host(`jellyseerr.${fqdn}`)";
+            seerr = {
+              rule = "Host(`seerr.${fqdn}`)";
               entrypoints = [ "websecure" ];
-              service = "jellyseerr";
+              service = "seerr";
               tls.domains = [ { main = "*.${fqdn}"; } ];
               tls.certresolver = "production";
             };
@@ -116,7 +116,7 @@
             stash.loadBalancer.servers = [ { url = "http://localhost:9999"; } ];
             glance.loadBalancer.servers = [ { url = "http://localhost:7676"; } ];
             jellyfin.loadBalancer.servers = [ { url = "http://localhost:8096"; } ];
-            jellyseerr.loadBalancer.servers = [ { url = "http://localhost:5055"; } ];
+            seerr.loadBalancer.servers = [ { url = "http://localhost:5055"; } ];
             wallos.loadBalancer.servers = [ { url = "http://localhost:8282"; } ];
             hass.loadBalancer.servers = [ { url = "http://localhost:8123"; } ];
             immich.loadBalancer.servers = [ { url = "http://localhost:2283"; } ];
