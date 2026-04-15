@@ -5,7 +5,6 @@
     inputs.home-manager.nixosModules.home-manager
     inputs.nur.modules.nixos.default
     inputs.nix-topology.nixosModules.default
-    inputs.nix-flatpak.nixosModules.nix-flatpak
     ./security.nix
     ./users.nix
     ./nix.nix

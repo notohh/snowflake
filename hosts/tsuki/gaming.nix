@@ -34,16 +34,21 @@
       extraRules = [
         {
           "name" = "gamescope";
-          "nice" = -20;
+          "nice" = -10;
+        }
+        {
+          "name" = "cs2";
+          "nice" = -15;
         }
       ];
     };
   };
   programs = {
+    gamemode.enable = true;
+    gamescope.enable = true;
     steam = {
       enable = true;
       platformOptimizations.enable = true;
-      gamescopeSession.enable = true;
       extraCompatPackages = [
         pkgs.proton-ge-bin
       ];

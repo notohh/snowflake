@@ -33,7 +33,6 @@ in
       hidePodcasts
       playNext
       volumePercentage
-      lastfm
     ];
   };
 }

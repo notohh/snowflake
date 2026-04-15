@@ -38,7 +38,7 @@
       };
       colorSchemes = {
         darkMode = true;
-        predefinedScheme = "Rosey AMOLED";
+        predefinedScheme = "Monochrome";
       };
       notifications = {
         enabled = true;

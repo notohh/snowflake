@@ -13,6 +13,7 @@ _: {
       signing = {
         key = "BD47506D475EE86D";
         signByDefault = true;
+        format = "openpgp";
       };
       ignores = [
         "*result*"

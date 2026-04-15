@@ -35,21 +35,6 @@
       ports = [ "8191:8191" ];
       extraOptions = [ "--network=host" ];
     };
-    shoko = {
-      image = "ghcr.io/shokoanime/server@sha256:b841f8249c9edfba102e4072e2b2a3eae4179e5dd553f29e11b9898a44f1e836"; # v5.3.3
-      ports = [ "8111:8111" ];
-      environment = {
-        PUID = "1000";
-        PGID = "1000";
-        TZ = "Etc/UTC";
-      };
-      volumes = [
-        "/var/lib/shoko:/home/shoko/.shoko"
-        "/media/anime:/media/anime"
-        "/media/anime-movies:/media/anime-movies"
-      ];
-      extraOptions = [ "--network=host" ];
-    };
     # sabnzbd = {
     #   image = "linuxserver/sabnzbd";
     #   ports = [ "9292:9292" ];

@@ -12,7 +12,6 @@
     ../../programs/terminal/zellij
     ../../programs/terminal/ghostty.nix
     ../../programs/terminal/television
-    ../../programs/media/cava.nix
     ../../programs/media/spicetify.nix
     ../../programs/media/zathura.nix
     ../../programs/media/mpv.nix
@@ -31,7 +30,7 @@
       technorino = inputs.technorino.packages.${system}.package;
     in
     [
-      discord-canary
+      vesktop
       chromium
       zen
       signal-desktop
@@ -51,7 +50,6 @@
       prismlauncher
       technorino
       krita
-      music-discord-rpc
       coppwr
       wayscriber
       rusty-path-of-building
@@ -107,37 +105,34 @@
         Hostname 100.109.118.139
         User root
         IdentityFile ~/.ssh/daphbot
+        SetEnv TERM=xterm
       Host tsuru
         Hostname 100.82.146.40
         User notoh
         IdentityFile ~/.ssh/tsuru
+        SetEnv TERM=xterm
       Host haru
         Hostname 100.73.192.45
         User notoh
         IdentityFile ~/.ssh/haru
-      Host basegbot
-        HostName 100.83.81.116
-        User basegbot
-        IdentityFile ~/.ssh/basegbot
+        SetEnv TERM=xterm
       Host rpi4
         Hostname 100.92.145.147
         User notoh
         IdentityFile ~/.ssh/rpi4
-      Host rennypaste
-        Hostname 5.78.112.206
-        User notohh
-        IdentityFile ~/.ssh/renny-key
-      Host pve
+       Host pve
         Hostname 100.115.234.69
         User root
       Host truenas
         Hostname 192.168.1.199
         User root
         IdentityFile ~/.ssh/truenas
+       	SetEnv TERM=xterm
       Host fishnet
         Hostname 192.168.1.215
         User notoh
         IdentityFile ~/.ssh/fishnet
+        SetEnv TERM=xterm
       Host git.flake.sh
         Hostname git.flake.sh
         User notohh
@@ -151,12 +146,7 @@
   };
   xdg.mimeApps =
     let
-      value =
-        let
-          zen = inputs.zen.packages.${pkgs.stdenv.hostPlatform.system}.default;
-        in
-        zen.meta.desktopFileName;
-
+      value = "zen-beta.desktop";
       associations = builtins.listToAttrs (
         map
           (name: {

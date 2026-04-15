@@ -185,6 +185,11 @@
         open-maximized = true;
       }
       {
+        matches = [ { app-id = "seanime-denshi"; } ];
+        open-on-output = "DP-1";
+        open-maximized = true;
+      }
+      {
         matches = [ { app-id = "com.chatterino."; } ];
         open-on-output = "HDMI-A-1";
         open-maximized = true;

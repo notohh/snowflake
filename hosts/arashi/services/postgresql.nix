@@ -50,15 +50,7 @@
         ensureDBOwnership = true;
       }
       {
-        name = "romm";
-        ensureDBOwnership = true;
-      }
-      {
         name = "pocketid";
-        ensureDBOwnership = true;
-      }
-      {
-        name = "koito";
         ensureDBOwnership = true;
       }
     ];
@@ -70,9 +62,7 @@
       "vaultwarden"
       "attic"
       "atuin"
-      "romm"
       "pocketid"
-      "koito"
     ];
   };
   services.postgresqlBackup = {
@@ -86,9 +76,7 @@
       "attic"
       "miniflux"
       "atuin"
-      "romm"
       "pocketid"
-      "koito"
     ];
     compression = "zstd";
     compressionLevel = 4;

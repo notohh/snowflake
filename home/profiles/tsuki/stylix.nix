@@ -6,7 +6,7 @@
     autoEnable = false;
     polarity = "dark";
     enableReleaseChecks = false;
-    base16Scheme = "${pkgs.base16-schemes}/share/themes/onedark-dark.yaml";
+    base16Scheme = "${pkgs.base16-schemes}/share/themes/black-metal-dark-funeral.yaml";
     fonts = {
       monospace = {
         name = "Maple Mono NF";

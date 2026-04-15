@@ -112,7 +112,7 @@
       nil = {
         command = lib.getExe nil;
       };
-      typescript-language-server = with pkgs.nodePackages; {
+      typescript-language-server = {
         command = lib.getExe typescript-language-server;
         args = [ "--stdio" ];
       };

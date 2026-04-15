@@ -1,6 +1,5 @@
 {
   modulesPath,
-  lib,
   ...
 }:
 {
@@ -41,6 +40,4 @@
     swapDevices = 1;
     algorithm = "zstd";
   };
-
-  nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
 }

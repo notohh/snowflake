@@ -25,14 +25,7 @@
       enable = true;
       package = pkgs.scx.rustscheds;
       scheduler = "scx_lavd";
-    };
-    flatpak = {
-      enable = true;
-      packages = [
-        "io.github.Soundux"
-        "com.github.tchx84.Flatseal"
-        "org.vinegarhq.Sober"
-      ];
+      extraArgs = [ "--performance" ];
     };
     avahi = {
       enable = true;

@@ -11,6 +11,7 @@
   ];
 
   boot = {
+    kernelPackages = lib.mkForce pkgs.cachyosKernels.linuxPackages-cachyos-latest;
     kernelModules = [
       "kvm-amd"
       "ntsync"
@@ -66,7 +67,6 @@
     };
   };
   hardware = {
-    wooting.enable = true;
     cpu.amd.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
     amdgpu.overdrive.enable = true;
   };
@@ -97,7 +97,5 @@
   };
 
   networking.useDHCP = lib.mkDefault true;
-
-  nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
   powerManagement.cpuFreqGovernor = lib.mkDefault "performance";
 }

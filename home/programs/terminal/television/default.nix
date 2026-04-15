@@ -1,10 +1,10 @@
 { pkgs, ... }:
 {
-  home.packages = with pkgs; [
-    television
-    nix-search-tv
-  ];
-  xdg.configFile."television/config.toml".source = ./config.toml;
-  # xdg.configFile."television/default_channels.toml".source = ./config.toml;
-  xdg.configFile."nix-search-tv/config.json".source = ./config.json;
+  home.packages = [ pkgs.nix-search-tv ];
+  programs = {
+    nix-search-tv.enableTelevisionIntegration = true;
+    television = {
+      enable = true;
+    };
+  };
 }

@@ -5,7 +5,7 @@ in
 {
   environment.systemPackages = [ pkgs.gallery-dl ];
   virtualisation.oci-containers.containers.stash = {
-    image = "stashapp/stash@sha256:4cac18873ea052f03510602d9e1a9b29e6241a393a111479010292b7a1e28a5e"; # v0.30.1
+    image = "stashapp/stash@sha256:df744af5a0c976e2ec671052ecc1f8a9aa757fa12b8f9930b59910b7295f0da6"; # v0.31.1
     ports = [ "9999:9999" ];
     environment = {
       STASH_STASH = "/data/";
