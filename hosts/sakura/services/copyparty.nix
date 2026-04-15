@@ -1,4 +1,5 @@
-_: {
+{ inputs, ... }:
+{
   networking.firewall.allowedTCPPorts = [
     3210
     3211
@@ -11,6 +12,9 @@ _: {
       owner = "copyparty";
     };
   };
+  imports = [
+    inputs.copyparty.nixosModules.default
+  ];
   services.copyparty = {
     enable = true;
     settings = {
