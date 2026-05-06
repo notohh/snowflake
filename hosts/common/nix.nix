@@ -18,9 +18,6 @@
     ];
     config = {
       allowUnfree = true;
-      permittedInsecurePackages = [
-        "qtwebengine-5.15.19"
-      ];
     };
     hostPlatform = lib.mkDefault "x86_64-linux";
   };
@@ -53,6 +50,7 @@
         "https://yazi.cachix.org"
         "https://helix.cachix.org"
         "https://attic.xuyh0120.win/lantian"
+        "https://niri.cachix.org"
       ];
       trusted-public-keys = [
         "cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY="
@@ -64,6 +62,7 @@
         "yazi.cachix.org-1:Dcdz63NZKfvUCbDGngQDAZq6kOroIrFoyO064uvLh8k="
         "helix.cachix.org-1:ejp9KQpR1FBI2onstMQ34yogDm4OgU2ru6lIwPvuCVs="
         "lantian:EeAUQ+W+6r7EtwnmYjeVwx5kOGEBpjlBfPlzGlTNvHc="
+        "niri.cachix.org-1:Wv0OmO7PsuocRKzfDoJ3mulSl7Z6oezYhGhR+3W2964="
       ];
     };
     extraOptions = ''

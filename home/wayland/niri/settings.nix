@@ -176,7 +176,15 @@
     ### window rules
     window-rules = [
       {
-        matches = [ { app-id = "net-runelite-client-RuneLite"; } ];
+        matches = [ { app-id = "zen-beta"; } ];
+        open-maximized = true;
+      }
+      {
+        matches = [ { app-id = "spotify"; } ];
+        open-maximized = true;
+      }
+      {
+        matches = [ { app-id = "com.gabm.satty"; } ];
         open-floating = true;
       }
       {
@@ -187,11 +195,6 @@
       {
         matches = [ { app-id = "seanime-denshi"; } ];
         open-on-output = "DP-1";
-        open-maximized = true;
-      }
-      {
-        matches = [ { app-id = "com.chatterino."; } ];
-        open-on-output = "HDMI-A-1";
         open-maximized = true;
       }
       {
@@ -206,6 +209,7 @@
         matches = [ { app-id = "com.gabm.satty"; } ];
         open-floating = true;
       }
+      ### games
       {
         matches = [ { app-id = "^(steam_app_)(.*)$"; } ];
         open-on-output = "DP-1";
@@ -213,6 +217,16 @@
       }
       {
         matches = [ { app-id = "gamescope"; } ];
+        open-on-output = "DP-1";
+      }
+      {
+        matches = [ { app-id = "dota2"; } ];
+        open-on-output = "DP-1";
+        open-fullscreen = true;
+      }
+      {
+        matches = [ { app-id = "net-runelite-client-RuneLite"; } ];
+        open-floating = true;
         open-on-output = "DP-1";
       }
       {
