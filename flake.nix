@@ -49,10 +49,6 @@
       url = "github:0xc000022070/zen-browser-flake/beta";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    technorino = {
-      url = "git+https://github.com/2547techno/technorino";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
     helix = {
       url = "github:helix-editor/helix";
       inputs.nixpkgs.follows = "nixpkgs";
