@@ -15,7 +15,6 @@
     ../../programs/media/spicetify.nix
     ../../programs/media/zathura.nix
     ../../programs/media/mpv.nix
-    ../../programs/media/lutris.nix
   ];
   home.packages =
     with pkgs;
@@ -27,7 +26,6 @@
       inherit (inputs.awww.packages.${system}) awww;
       zen = inputs.zen.packages.${system}.default;
       osu = inputs.nix-gaming.packages.${system}.osu-lazer-tachyon-bin;
-      technorino = inputs.technorino.packages.${system}.package;
     in
     [
       vesktop
@@ -48,7 +46,6 @@
       bolt-launcher
       osu
       prismlauncher
-      technorino
       krita
       coppwr
       wayscriber
@@ -59,6 +56,7 @@
       wayvr
       fladder
       imagemagick
+      wootility
     ];
   programs.ssh = {
     enable = true;
