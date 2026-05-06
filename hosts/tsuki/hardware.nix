@@ -67,6 +67,7 @@
     };
   };
   hardware = {
+    wooting.enable = true;
     cpu.amd.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
     amdgpu.overdrive.enable = true;
   };

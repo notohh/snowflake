@@ -1,5 +1,13 @@
 _: {
   networking = {
+    resolvconf = {
+      enable = true;
+      extraOptions = [
+        "nameserver 192.168.1.103"
+        "nameserver 1.1.1.1"
+        "options edns0"
+      ];
+    };
     networkmanager.enable = true;
     hostName = "tsuki";
     firewall = {
@@ -17,12 +25,5 @@ _: {
         6000 # uxplay
       ];
     };
-  };
-  environment.etc = {
-    "resolv.conf".text = ''
-      nameserver 192.168.1.103
-      nameserver 1.1.1.1
-      options edns0
-    '';
   };
 }
