@@ -2,10 +2,14 @@
 {
   networking = {
     hostName = "sora";
-    nameservers = [
-      "1.1.1.1"
-      "149.112.112.112"
-    ];
+    resolvconf = {
+      enable = true;
+      extraOptions = [
+        "nameserver 1.1.1.1"
+        "nameserver 149.112.112.112"
+        "options edns0"
+      ];
+    };
     defaultGateway = "172.31.1.1";
     defaultGateway6 = {
       address = "";

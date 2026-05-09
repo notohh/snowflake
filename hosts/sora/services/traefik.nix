@@ -162,6 +162,13 @@
               tls.domains = [ { main = "*.${pqdn}"; } ];
               tls.certresolver = "production";
             };
+            owncast = {
+              rule = "Host(`video.${pqdn}`)";
+              entrypoints = [ "websecure" ];
+              service = "owncast";
+              tls.domains = [ { main = "*.${pqdn}"; } ];
+              tls.certresolver = "production";
+            };
           };
         services =
           with builtins;
@@ -207,6 +214,7 @@
             pocketid.loadBalancer.servers = [
               { url = "http://${sakuraIp}:${toString pocket-id.settings.PORT or 1411}"; }
             ];
+            owncast.loadBalancer.servers = [ { url = "http://100.127.30.116:8100"; } ];
           };
       };
     };
