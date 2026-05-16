@@ -67,7 +67,6 @@
     flake-parts.url = "github:hercules-ci/flake-parts";
     nixpkgs-xr.url = "github:nix-community/nixpkgs-xr";
     prismlauncher.url = "github:PrismLauncher/PrismLauncher";
-    spicetify-nix.url = "github:Gerg-L/spicetify-nix";
     nix-topology.url = "github:oddlama/nix-topology";
     copyparty.url = "github:9001/copyparty";
     stylix.url = "github:nix-community/stylix";

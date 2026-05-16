@@ -12,7 +12,6 @@
     ../../programs/terminal/zellij
     ../../programs/terminal/ghostty.nix
     ../../programs/terminal/television
-    ../../programs/media/spicetify.nix
     ../../programs/media/zathura.nix
     ../../programs/media/mpv.nix
   ];
@@ -57,6 +56,7 @@
       fladder
       imagemagick
       wootility
+      spotify
     ];
   programs.ssh = {
     enable = true;
