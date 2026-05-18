@@ -7,6 +7,7 @@
 
   boot = {
     tmp.cleanOnBoot = true;
+    kernelParams = [ "net.ifnames=0" ];
     loader.grub = {
       efiSupport = true;
       efiInstallAsRemovable = true;

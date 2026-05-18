@@ -2,36 +2,24 @@
 {
   networking = {
     hostName = "sora";
-    resolvconf = {
-      enable = true;
-      extraOptions = [
-        "nameserver 1.1.1.1"
-        "nameserver 149.112.112.112"
-        "options edns0"
+    useDHCP = false;
+    nameservers = [
+      "1.1.1.1"
+      "149.112.112.112"
+    ];
+    usePredictableInterfaceNames = lib.mkForce false;
+    interfaces.eth0 = {
+      ipv4.addresses = [
+        {
+          address = "5.161.102.107";
+          prefixLength = 32;
+        }
       ];
     };
-    defaultGateway = "172.31.1.1";
-    defaultGateway6 = {
-      address = "";
+
+    defaultGateway = {
+      address = "172.31.1.1";
       interface = "eth0";
-    };
-    dhcpcd.enable = false;
-    usePredictableInterfaceNames = lib.mkForce false;
-    interfaces = {
-      eth0 = {
-        ipv4.addresses = [
-          {
-            address = "5.161.102.107";
-            prefixLength = 32;
-          }
-        ];
-        ipv4.routes = [
-          {
-            address = "172.31.1.1";
-            prefixLength = 32;
-          }
-        ];
-      };
     };
   };
   services.udev.extraRules = ''
