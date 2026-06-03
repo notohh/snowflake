@@ -70,6 +70,10 @@
     wooting.enable = true;
     cpu.amd.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
     amdgpu.overdrive.enable = true;
+    graphics = {
+      enable = true;
+      enable32Bit = true;
+    };
   };
 
   fileSystems = {
