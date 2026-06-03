@@ -8,7 +8,6 @@
     ../../services
     ../../programs/terminal/ghostty.nix
     ../../programs/terminal/zellij
-    ../../programs/media/spicetify.nix
     ../../programs/media/mpv.nix
     ../../programs/media/easyeffects.nix
   ];
@@ -27,12 +26,11 @@
     signal-desktop
     bolt-launcher
     inputs.zen.packages.${pkgs.stdenv.hostPlatform.system}.default
-    inputs.technorino.packages.${pkgs.stdenv.hostPlatform.system}.package
   ];
   programs.ssh = {
     enable = true;
     enableDefaultConfig = false;
-    matchBlocks."*" = {
+    settings."*" = {
       forwardAgent = false;
       addKeysToAgent = "no";
       compression = false;

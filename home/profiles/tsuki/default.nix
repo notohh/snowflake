@@ -30,6 +30,7 @@
       vesktop
       chromium
       zen
+      zed-editor-fhs
       signal-desktop
       pwvucontrol
       anki-bin
@@ -61,7 +62,7 @@
   programs.ssh = {
     enable = true;
     enableDefaultConfig = false;
-    matchBlocks."*" = {
+    settings."*" = {
       forwardAgent = false;
       addKeysToAgent = "no";
       compression = false;
