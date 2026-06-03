@@ -9,6 +9,7 @@
   ];
   environment.systemPackages = [
     pkgs.android-tools # for wired wivrn
+    pkgs.mangohud
   ];
   services = {
     wivrn = {
