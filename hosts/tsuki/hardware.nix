@@ -73,6 +73,9 @@
     graphics = {
       enable = true;
       enable32Bit = true;
+      extraPackages = [
+        pkgs.low_latency_layer
+      ];
     };
   };
 
