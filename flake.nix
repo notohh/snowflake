@@ -37,6 +37,7 @@
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    low-latency-layer.url = "github:NixOS/nixpkgs/pull/523475/head";
     home-manager = {
       url = "github:nix-community/home-manager/master";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -54,7 +55,16 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     noctalia = {
-      url = "github:noctalia-dev/noctalia-shell";
+      url = "github:noctalia-dev/noctalia-shell/legacy-v4";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    niri-package = {
+      url = "github:urayde/niri";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    niri = {
+      url = "github:sodiboo/niri-flake";
+      inputs.niri-unstable.follows = "niri-package";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     deploy-rs.url = "github:serokell/deploy-rs";
@@ -72,7 +82,7 @@
     stylix.url = "github:nix-community/stylix";
     awakened-poe-flake.url = "git+https://git.flake.sh/notohh/awakened-poe-flake";
     awww.url = "git+https://codeberg.org/LGFae/awww";
-    niri.url = "github:sodiboo/niri-flake";
     nix-cachyos-kernel.url = "github:xddxdd/nix-cachyos-kernel";
+    chaotic.url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
   };
 }
