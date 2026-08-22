@@ -109,6 +109,7 @@
               spade.twitch.tv
               pixeldrain.com
               onionfarms.com
+              c2ru-b.cdn.cr
             '';
           in
           {
