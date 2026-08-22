@@ -7,9 +7,10 @@
   imports = [
     inputs.nix-gaming.nixosModules.platformOptimizations
   ];
-  environment.systemPackages = [
-    pkgs.android-tools # for wired wivrn
-    pkgs.mangohud
+  environment.systemPackages = with pkgs; [
+    inputs.nix-gaming.packages.${pkgs.hostPlatform.system}.wine-discord-ipc-bridge
+    android-tools # for wired wivrn
+    mangohud
   ];
   services = {
     wivrn = {
@@ -52,6 +53,7 @@
       platformOptimizations.enable = true;
       extraCompatPackages = [
         pkgs.proton-ge-bin
+        pkgs.proton-cachyos_x86_64_v3
       ];
     };
   };

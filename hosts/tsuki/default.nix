@@ -1,9 +1,11 @@
 {
+  inputs,
   pkgs,
   ...
 }:
 {
   imports = [
+    inputs.nix-gaming.nixosModules.pipewireLowLatency
     ./hardware.nix
     ./services
     ./networking.nix
@@ -21,6 +23,7 @@
     pulseaudio.enable = false;
     lact.enable = true;
     pcscd.enable = true;
+    flatpak.enable = true;
     scx = {
       enable = true;
       package = pkgs.scx.rustscheds;
@@ -42,6 +45,11 @@
       alsa.support32Bit = true;
       pulse.enable = true;
       wireplumber.enable = true;
+      lowLatency = {
+        enable = true;
+        quantum = 64;
+        rate = 48000;
+      };
     };
     xserver = {
       enable = true;
@@ -51,6 +59,25 @@
         variant = "";
       };
     };
+    udev.packages = with pkgs; [
+      (writeTextFile {
+        name = "70-vaxee.rules";
+        destination = "/etc/udev/rules.d/70-vaxee.rules";
+        text = ''
+          KERNEL=="hidraw*", SUBSYSTEM=="hidraw", ATTRS{idVendor}=="3057", MODE="0660", GROUP="input", TAG+="uaccess"
+          SUBSYSTEM=="usb", ATTRS{idVendor}=="3057", MODE="0660", GROUP="input", TAG+="uaccess"
+        '';
+      })
+      (writeTextFile {
+        name = "70-jds-element-iv.rules";
+        destination = "/etc/udev/rules.d/70-jds-element-iv.rules";
+        text = ''
+          SUBSYSTEM=="usb", ATTR{idVendor}=="152a", ATTR{idProduct}=="88fa", TAG+="uaccess"
+          SUBSYSTEM=="usb", ATTR{idVendor}=="152a", ATTR{idProduct}=="88fc", TAG+="uaccess"
+          KERNEL=="ttyACM*", ATTRS{idVendor}=="152a", ATTRS{idProduct}=="88fa", MODE="0660"
+        '';
+      })
+    ];
   };
   security = {
     rtkit.enable = true;
@@ -63,6 +90,12 @@
     dconf.enable = true;
     streamcontroller.enable = true;
     gpu-screen-recorder.enable = true;
+    nix-ld = {
+      enable = true;
+      libraries = [
+        pkgs.wrangler
+      ];
+    };
     appimage = {
       enable = true;
       binfmt = true;
