@@ -27,7 +27,7 @@
       osu = inputs.nix-gaming.packages.${system}.osu-lazer-tachyon-bin;
     in
     [
-      vesktop
+      discord-canary
       chromium
       zen
       zed-editor-fhs
@@ -58,6 +58,7 @@
       imagemagick
       wootility
       spotify
+      faugus-launcher
     ];
   programs.ssh = {
     enable = true;

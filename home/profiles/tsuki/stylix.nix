@@ -1,6 +1,14 @@
 { inputs, pkgs, ... }:
 {
   imports = [ inputs.stylix.homeModules.stylix ];
+  home.pointerCursor = {
+    enable = true;
+    name = "phinger-cursors-light";
+    package = pkgs.phinger-cursors;
+    size = 16;
+    gtk.enable = true;
+    x11.enable = true;
+  };
   stylix = {
     enable = true;
     autoEnable = false;
@@ -30,11 +38,6 @@
         popups = 12;
         terminal = 12;
       };
-    };
-    cursor = {
-      name = "Bibata-Modern-Classic";
-      package = pkgs.bibata-cursors;
-      size = 24;
     };
     opacity = {
       terminal = 0.6;
