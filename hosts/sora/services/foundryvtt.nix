@@ -2,7 +2,7 @@ _: {
   sops.secrets.foundry-username = { };
   sops.secrets.foundry-password = { };
   virtualisation.oci-containers.containers.foundryvtt = {
-    image = "felddy/foundryvtt@sha256:be4927bcf119eefea33a7acc4a60bdc8ee5ae32a35e72912e8d8c2d0f06bd1c7";
+    image = "felddy/foundryvtt@sha256:097f876d9c79f074380e219bf93753fa1916f31624637776fcf23c2dd3bb07fa"; # 14.364
     volumes = [ "/var/lib/foundryvtt:/data:rw" ];
     environment = {
       CONTAINER_PRESERVE_CONFIG = "true";

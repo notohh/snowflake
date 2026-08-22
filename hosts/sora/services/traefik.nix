@@ -90,6 +90,13 @@
               entrypoints = [ "websecure" ];
               service = "api@internal";
             };
+            foundryvtt = {
+              rule = "Host(`foundry.${pqdn}`)";
+              entrypoints = [ "websecure" ];
+              service = "foundryvtt";
+              tls.domains = [ { main = "*.${pqdn}"; } ];
+              tls.certresolver = "production";
+            };
             pocketid = {
               rule = "Host(`passport.notohh.dev`)";
               entrypoints = [ "websecure" ];
@@ -188,6 +195,7 @@
           in
           {
             # sora
+            foundryvtt.loadBalancer.servers = [ { url = "http://${soraIp}:30000"; } ];
             uptime-kuma.loadBalancer.servers = [
               { url = "http://${soraIp}:${uptime-kuma.settings.PORT}"; }
             ];
