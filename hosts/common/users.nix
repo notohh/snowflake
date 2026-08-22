@@ -13,6 +13,8 @@
         "video"
         "docker"
         "input"
+        "uucp"
+        "dialout"
       ];
     };
   };
