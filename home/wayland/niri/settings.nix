@@ -162,7 +162,7 @@
         "Mod+Return".action = spawn "ghostty";
         "Mod+C".action = spawn-sh "${lib.getExe pkgs.hyprpicker} | wl-copy";
         "Mod+Shift+R".action =
-          spawn-sh ''gpu-screen-recorder -w DP-1 -f 60 -r 60 -c mp4 -a "default_output|default_input" -o ~/Videos/replays -df yes -bm cbr -q 20000 & sleep 2 && ${lib.getExe noctalia-pkg} ipc call toast send '{"title": "Replay buffer started", "body": "Started GSR process"}' || ${lib.getExe noctalia-pkg} ipc call toast send '{"title": "Replay buffer failed", "body": "Replay buffer failed to start"' '';
+          spawn-sh ''gpu-screen-recorder -w portal -f 120 -r 60 -c mp4 -a "default_output|alsa_input.usb-R__DE_RODECaster_Duo_IR0059186-00.analog-stereo" -o ~/Videos/replays -df yes -bm cbr -q 30000 -fm content & sleep 2 && ${lib.getExe noctalia-pkg} ipc call toast send '{"title": "Replay buffer started", "body": "Started GSR process"}' || ${lib.getExe noctalia-pkg} ipc call toast send '{"title": "Replay buffer failed", "body": "Replay buffer failed to start"' '';
         "Mod+Shift+S".action =
           spawn-sh ''killall -SIGUSR1 gpu-screen-recorder && ${lib.getExe noctalia-pkg} ipc call toast send '{"title": "Replay saved", "body": "Replay buffer dumped"}' || ${lib.getExe noctalia-pkg} ipc call toast send '{"title": "Failed to save replay", "body": "Replay buffer failed to dump (is the GSR process running?)"}' '';
         "Mod+Ctrl+R".action =
@@ -211,13 +211,25 @@
       }
       ### games
       {
+        matches = [ { app-id = "gamescope"; } ];
+        open-on-output = "DP-1";
+        open-fullscreen = true;
+      }
+      {
         matches = [ { app-id = "^(steam_app_)(.*)$"; } ];
         open-on-output = "DP-1";
         open-fullscreen = true;
       }
       {
-        matches = [ { app-id = "gamescope"; } ];
+        matches = [ { app-id = "steam_app_1454400"; } ];
+        open-on-output = "DP-2";
+        open-floating = true;
+        open-fullscreen = false;
+      }
+      {
+        matches = [ { app-id = "cs2"; } ];
         open-on-output = "DP-1";
+        open-fullscreen = true;
       }
       {
         matches = [ { app-id = "dota2"; } ];
@@ -228,6 +240,17 @@
         matches = [ { app-id = "net-runelite-client-RuneLite"; } ];
         open-floating = true;
         open-on-output = "DP-1";
+      }
+      {
+        matches = [ { app-id = "Project Zomboid"; } ];
+        open-on-output = "DP-1";
+        open-fullscreen = true;
+      }
+      {
+        matches = [ { title = "BongoCat"; } ];
+        open-floating = true;
+        opacity = 0.5;
+        draw-border-with-background = false;
       }
       {
         geometry-corner-radius =
