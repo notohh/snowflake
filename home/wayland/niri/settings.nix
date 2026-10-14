@@ -17,7 +17,7 @@
           refresh = 60.0;
         };
         position = {
-          x = 3000;
+          x = 3640;
           y = 560;
         };
         transform.rotation = 270;
@@ -26,9 +26,9 @@
       # middle
       "DP-1" = {
         mode = {
-          width = 1920;
-          height = 1080;
-          refresh = 280.000;
+          width = 2560;
+          height = 1440;
+          refresh = 164.958;
         };
         position = {
           x = 1080;
@@ -44,7 +44,7 @@
           refresh = 144.001;
         };
         position = {
-          x = 1080;
+          x = 1400;
           y = 0;
         };
         scale = 1;
@@ -209,17 +209,25 @@
         matches = [ { app-id = "com.gabm.satty"; } ];
         open-floating = true;
       }
+      {
+        matches = [ { app-id = "io.github.Faugus.faugus-launcher"; } ];
+        open-maximized = true;
+      }
+      {
+        matches = [ { title = "Battle.net"; } ];
+        open-floating = true;
+      }
       ### games
       {
         matches = [ { app-id = "gamescope"; } ];
         open-on-output = "DP-1";
         open-fullscreen = true;
       }
-      {
-        matches = [ { app-id = "^(steam_app_)(.*)$"; } ];
-        open-on-output = "DP-1";
-        open-fullscreen = true;
-      }
+      # {
+      #   matches = [ { app-id = "^(steam_app_)(?!default$)(.*)$"; } ];
+      #   open-on-output = "DP-1";
+      #   open-fullscreen = true;
+      # }
       {
         matches = [ { app-id = "steam_app_1454400"; } ];
         open-on-output = "DP-2";
@@ -251,6 +259,10 @@
         open-floating = true;
         opacity = 0.5;
         draw-border-with-background = false;
+      }
+      {
+        matches = [ { app-id = "wowb.exe"; } ];
+        open-on-output = "DP-1";
       }
       {
         geometry-corner-radius =
