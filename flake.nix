@@ -67,7 +67,10 @@
       inputs.niri-unstable.follows = "niri-package";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    deploy-rs.url = "github:serokell/deploy-rs";
+    deploy-rs = {
+      url = "github:serokell/deploy-rs";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     sops-nix.url = "github:Mic92/sops-nix";
     nix-gaming.url = "github:fufexan/nix-gaming";
     nur.url = "github:nix-community/NUR";
@@ -84,5 +87,6 @@
     awww.url = "git+https://codeberg.org/LGFae/awww";
     nix-cachyos-kernel.url = "github:xddxdd/nix-cachyos-kernel";
     chaotic.url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
+    xwayland-satellite.url = "github:Supreeeme/xwayland-satellite";
   };
 }
