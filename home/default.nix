@@ -42,7 +42,7 @@
       unrar
       p7zip
       procs
-      fastfetch
+      fetch
       killall
       util-linux
     ];
