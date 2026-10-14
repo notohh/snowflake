@@ -3,12 +3,10 @@ _: {
     ./lovelace.nix
     ./config.nix
   ];
-
-  nixpkgs.config.permittedInsecurePackages = [ "openssl-1.1.1w" ];
+  networking.firewall.allowedTCPPorts = [ 8123 ];
 
   services.home-assistant = {
     enable = true;
-    openFirewall = true;
     extraComponents = [
       "default_config"
       "met"
