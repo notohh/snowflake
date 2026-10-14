@@ -59,6 +59,9 @@
       wootility
       spotify
       faugus-launcher
+      clonehero
+      curseforge
+      onlyoffice-desktopeditors
     ];
   programs.ssh = {
     enable = true;

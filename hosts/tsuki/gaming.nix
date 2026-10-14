@@ -11,6 +11,7 @@
     inputs.nix-gaming.packages.${pkgs.hostPlatform.system}.wine-discord-ipc-bridge
     android-tools # for wired wivrn
     mangohud
+    wine64Packages.staging
   ];
   services = {
     wivrn = {
