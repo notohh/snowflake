@@ -207,11 +207,12 @@ $env.config = {
       name: completion_menu
       modifier: none
       keycode: tab
-      mode: vi_normal
+      mode: [vi_normal vi_insert]
       event: {
         until: [
           { send: menu name: completion_menu }
           { send: menunext }
+          { edit: complete }
         ]
       }
     }
