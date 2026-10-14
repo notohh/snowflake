@@ -9,8 +9,8 @@
   nixpkgs = {
     overlays = [
       inputs.self.overlays.default
+      inputs.self.overlays.faugus-launcher
       inputs.nur.overlays.default
-      inputs.helix.overlays.default
       inputs.copyparty.overlays.default
       inputs.niri.overlays.niri
       inputs.nix-cachyos-kernel.overlays.default
